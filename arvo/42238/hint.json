@@ -1,0 +1,10 @@
+{
+    "src/core/parser/sdp/sdp_helpr_funcs.c": {
+        "entities": [
+            "function_find_sdp_line_delimiter"
+        ],
+        "lines": [
+            794
+        ]
+    }
+}

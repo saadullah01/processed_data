@@ -1,0 +1,26 @@
+Project: MapServer
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Project: mapserver
+Fuzzing Engine: afl
+Fuzz Target: mapfuzzer
+Job Type: afl_asan_mapserver
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x6290000001ff
+Crash State:
+  msyylex
+  loadMapInternal
+  msLoadMap
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mapfuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4792134909952000 is verified as fixed

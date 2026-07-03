@@ -1,0 +1,27 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_ps2write_fuzzer
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000001000
+Crash State:
+  names_string_ref
+  zfont_glyph_name
+  pdfi_ttf_glyph_name
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fix committed upstream
+
+ClusterFuzz testcase 6581616931110912 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

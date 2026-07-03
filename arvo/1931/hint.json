@@ -1,0 +1,10 @@
+{
+    "gdal/ogr/ogrsf_frmts/ntf/ntffilereader.cpp": {
+        "entities": [
+            "method_NTFFileReader::Open"
+        ],
+        "lines": [
+            469
+        ]
+    }
+}

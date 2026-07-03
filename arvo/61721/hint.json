@@ -1,0 +1,12 @@
+{
+    "Objects/funcobject.c": {
+        "entities": [
+            "function__PyFunction_FromConstructor",
+            "function_PyFunction_NewWithQualName"
+        ],
+        "lines": [
+            131,
+            207
+        ]
+    }
+}

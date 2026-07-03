@@ -1,0 +1,60 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6317995799740416
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  pdf_lookup_page_obj
+  pdf_load_page_imp
+  fz_load_chapter_page
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=202302270611:202302280610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6317995799740416
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Fixed by http://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=9054d993d2b035c78e61b54a8bd5515bb494e042;hp=14fe6e23252fa475016df7120a6c70d28bf85c3f"""
+
+-- Comment 3: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer pdf_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """ClusterFuzz testcase 6317995799740416 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=202303010605:202303020621
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

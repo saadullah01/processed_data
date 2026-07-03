@@ -1,0 +1,47 @@
+Project: libxml2
+Fuzzing Engine: honggfuzz
+Fuzz Target: html
+Job Type: honggfuzz_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 1
+Crash Address: 0x621000007900
+Crash State:
+  xmlParserPrintFileContextInternal
+  xmlReportError
+  __xmlRaiseError
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_libxml2&range=202006240141:202006250141
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4858748979118080
+
+I just retested and commit https://gitlab.gnome.org/GNOME/libxml2/-/commit/13ba5b619a153f240320eb92b59158d657bdeb3a fixes the issue for me locally but for some reason, OSS-Fuzz doesn't agree.
+
+Maybe it’s a configuration difference?  What if you switch to libICU for encoding?
+
+Here's how I build libxml2 on macOS 10.14 to check the fuzzer test case that reproduces this issue:
+
+CC="xcrun -sdk macosx.internal clang" CFLAGS="-g -fsanitize=fuzzer-no-link,address,undefined -fno-sanitize-recover=all -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION" LDFLAGS="-fsanitize=fuzzer,address,undefined -fno-sanitize-recover=all" ./configure --prefix=/usr --without-iconv --with-icu --without-lzma --without-python --with-zlib
+
+ClusterFuzz testcase 4858748979118080 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_libxml2&range=202007060144:202007070145
+
+In my local testing, this issue was actually fixed by this commit, which was the fix for Issue 23716:
+
+https://gitlab.gnome.org/GNOME/libxml2/-/commit/477c7f6affcb665305b333f92ce0a782325b4156
+
+Clusterfuzz also agrees:  https://oss-fuzz.com/revisions?job=honggfuzz_asan_libxml2&range=202007060144:202007070145
+
+Even if I back out 13ba5b619a153f240320eb92b59158d657bdeb3a locally (on or after commit 477c7f6affcb665305b333f92ce0a782325b4156, including 741b0d0a8b9bbee67d68af022cb3137c74e9cd0f), this test case is still fixed.
+
+Issue 24055 resurfaced this crash with a new test case.
+
+The complete fix requires:
+
+https://gitlab.gnome.org/GNOME/libxml2/-/commit/13ba5b619a153f240320eb92b59158d657bdeb3a
+https://gitlab.gnome.org/GNOME/libxml2/-/commit/3f18e7486d5feb8ae41911ce3c122e05641a4c3d
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,22 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7f8b486f5840
+Crash State:
+  strncat
+  pdf_cmap_open_file
+  pdfi_read_cmap
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

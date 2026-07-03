@@ -1,0 +1,12 @@
+{
+    "opcodes/v850-dis.c": {
+        "entities": [
+            "function_disassemble"
+        ],
+        "lines": [
+            1,
+            132,
+            79
+        ]
+    }
+}

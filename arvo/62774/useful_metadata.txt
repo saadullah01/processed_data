@@ -1,0 +1,13 @@
+Project: harfbuzz
+Fuzzing Engine: afl
+Fuzz Target: hb-subset-fuzzer
+Job Type: afl_asan_harfbuzz
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x61e000001646
+Crash State:
+  OT::cvar::decompile_tuple_variations
+  OT::cvar::subset
+  bool _try_subset<OT::cvar>
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

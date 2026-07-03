@@ -1,0 +1,26 @@
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: compress_yuv_fuzzer
+Job Type: libfuzzer_msan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  compress_yuv.cc
+  compress_yuv.cc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 4909354476699648
+
+ClusterFuzz testcase 4909354476699648 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

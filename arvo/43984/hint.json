@@ -1,0 +1,11 @@
+{
+    "base/gsicc_cache.c": {
+        "entities": [
+            "function_gsicc_cache_new"
+        ],
+        "lines": [
+            109,
+            118
+        ]
+    }
+}

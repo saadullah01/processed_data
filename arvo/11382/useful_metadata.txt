@@ -1,0 +1,25 @@
+Project: libgit2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzer: libFuzzer_libgit2_objects_fuzzer
+Fuzz target binary: objects_fuzzer
+Job Type: libfuzzer_asan_libgit2
+Platform Id: linux
+Crash Address: 0x603000000231
+Crash State:
+  git__strntol64
+  git__strntol32
+  parse_mode
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer objects_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201811140242:201811150238.
+
+ClusterFuzz testcase 5667317078294528 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

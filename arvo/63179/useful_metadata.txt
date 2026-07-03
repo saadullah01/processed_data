@@ -1,0 +1,22 @@
+Project: ndpi
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 11
+Severity: High
+
+Project: ndpi
+Fuzzing Engine: afl
+Fuzz Target: fuzz_serialization
+Job Type: afl_asan_ndpi
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 11
+Crash Address: 0x619000001324
+Crash State:
+  ndpi_snprintf
+  ndpi_serialize_string_int32
+  fuzz_serialization.cpp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

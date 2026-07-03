@@ -1,0 +1,28 @@
+{
+    "cpp/src/parquet/level_conversion.cc": {
+        "entities": [
+            "function_DefRepLevelsToListInfo"
+        ],
+        "lines": [
+            65,
+            35,
+            105,
+            23,
+            92
+        ]
+    },
+    "cpp/src/parquet/level_conversion.h": {
+        "entities": [
+            "struct_ValidityBitmapInputOutput"
+        ],
+        "lines": [
+            138
+        ]
+    },
+    "testing": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

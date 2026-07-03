@@ -1,0 +1,10 @@
+{
+    "libheif/context.cc": {
+        "entities": [
+            "function_HeifContext::interpret_heif_file"
+        ],
+        "lines": [
+            969
+        ]
+    }
+}

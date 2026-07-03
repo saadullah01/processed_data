@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibGfx/ImageFormats/ILBMLoader.cpp": {
+        "entities": [
+            "function_decode_bmhd_chunk"
+        ],
+        "lines": [
+            300
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: api
+Job Type: libfuzzer_msan_libxml2
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  api.c
+  xmlSearchNsByHref
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

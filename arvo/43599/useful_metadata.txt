@@ -1,0 +1,42 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Detailed Report: 
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x62cff74a7f56
+Crash State:
+  pdfi_count_cff_index
+  pdfi_read_cff_font
+  pdfi_load_font
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 
+Reproducer Testcase: 
+Issue filed automatically.
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer gstoraster_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+Fix committed upstream.
+
+Comment 4:
+ClusterFuzz testcase 6395648855900160 is verified as fixed
+
+Comment 5:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

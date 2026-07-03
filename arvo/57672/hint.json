@@ -1,0 +1,10 @@
+{
+    "src/vm.c": {
+        "entities": [
+            "function_mrb_env_unshare"
+        ],
+        "lines": [
+            395
+        ]
+    }
+}

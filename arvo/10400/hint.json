@@ -1,0 +1,27 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "coders/png.c": {
+        "entities": [],
+        "lines": [
+            5060,
+            5023
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

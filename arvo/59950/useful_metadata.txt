@@ -1,0 +1,23 @@
+Project: libdwarf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_set_frame_all
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x605ffde00049
+Crash State:
+  _dwarf_exec_frame_instr
+  _dwarf_get_fde_info_for_a_pc_row
+  dwarf_get_fde_info_for_all_regs3
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6613067367317504 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

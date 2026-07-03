@@ -1,0 +1,17 @@
+{
+    "code/AssetLib/Obj/ObjFileMtlImporter.cpp": {
+        "entities": [
+            "function_ObjFileMtlImporter::load",
+            "method_ObjFileMtlImporter::load"
+        ],
+        "lines": [
+            162,
+            197,
+            232,
+            173,
+            240,
+            145,
+            126
+        ]
+    }
+}

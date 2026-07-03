@@ -1,0 +1,10 @@
+{
+    "third_party/libertiff/libertiff.hpp": {
+        "entities": [
+            "class_Image"
+        ],
+        "lines": [
+            1525
+        ]
+    }
+}

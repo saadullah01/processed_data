@@ -1,0 +1,21 @@
+Project: libdwarf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 2
+Severity: High
+
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_stack_frame_access
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 2
+Crash Address: 0x61000000044a
+Crash State:
+  dwarf_dealloc
+  _dwarf_fde_destructor
+  tdestroy_free_node
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

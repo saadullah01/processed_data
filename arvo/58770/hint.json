@@ -1,0 +1,12 @@
+{
+    "code/AssetLib/NDO/NDOLoader.cpp": {
+        "entities": [
+            "method_NDOImporter::InternReadFile",
+            "function_NDOImporter::InternReadFile"
+        ],
+        "lines": [
+            160,
+            52
+        ]
+    }
+}

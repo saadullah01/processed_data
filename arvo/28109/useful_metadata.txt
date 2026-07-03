@@ -1,0 +1,22 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzShell
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x0000026a30d0
+Crash State:
+  Bad-cast to AST::BarewordLiteral from Shell::AST::Glob
+  Shell::Parser::parse_glob
+  Shell::Parser::parse_string_composite
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High

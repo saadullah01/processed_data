@@ -1,0 +1,65 @@
+{
+    "src/trace_processor/fuchsia_trace_parser.cc": {
+        "entities": [
+            "function_FuchsiaTraceParser::ParseTracePacket"
+        ],
+        "lines": [
+            322,
+            131,
+            168,
+            74,
+            298,
+            308,
+            149,
+            121,
+            282,
+            95
+        ]
+    },
+    "src/trace_processor/fuchsia_trace_tokenizer.cc": {
+        "entities": [
+            "function_FuchsiaTraceTokenizer::ParseRecord"
+        ],
+        "lines": [
+            288,
+            387,
+            228,
+            327,
+            296,
+            265,
+            429,
+            208,
+            305,
+            347,
+            246,
+            376,
+            187,
+            316
+        ]
+    },
+    "src/trace_processor/fuchsia_trace_utils.cc": {
+        "entities": [
+            "class_RecordCursor"
+        ],
+        "lines": [
+            114,
+            31
+        ]
+    },
+    "src/trace_processor/fuchsia_trace_utils.h": {
+        "entities": [],
+        "lines": [
+            40,
+            22,
+            191
+        ]
+    },
+    "src/trace_processor/trace_database_integrationtest.cc": {
+        "entities": [
+            "function_Clusterfuzz14767"
+        ],
+        "lines": [
+            151
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+Project: arrow
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Project: arrow
+Fuzzing Engine: libFuzzer
+Fuzz Target: arrow-ipc-stream-fuzz
+Job Type: libfuzzer_asan_arrow
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x6030000006c0
+Crash State:
+  arrow::Status arrow::Result<std::__1::unique_ptr<arrow::Buffer, std::__1::defaul
+  arrow::ipc::ArrayLoader::GetBuffer
+  arrow::ipc::ArrayLoader::Visit
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 202310260627:202310270615
+
+Reproducer Testcase: 6522701499727872
+
+ClusterFuzz testcase 6522701499727872 is verified as fixed in 202311270612:202311280619
+
+This bug has been fixed. It has been opened to the public.

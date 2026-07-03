@@ -1,0 +1,11 @@
+{
+    "src/cmsio0.c": {
+        "entities": [
+            "function__cmsReadHeader"
+        ],
+        "lines": [
+            805,
+            783
+        ]
+    }
+}

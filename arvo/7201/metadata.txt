@@ -1,0 +1,180 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5381937934893056
+
+Project: skia
+Fuzzer: libFuzzer_skia_api_raster_n32_canvas
+Fuzz target binary: api_raster_n32_canvas
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  SkConicCoeff::eval
+  SkConic::evalAt
+  SkConic::evalAt
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201803210615:201803220608
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5381937934893056
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """Can confirm this repros at ToT:
+
+out/MSAN/fuzz -t api -n RasterN32Canvas -b ~/Downloads/clusterfuzz-testcase-minimized-api_raster_n32_canvas-5381937934893056
+
+==55893==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x144b83b in (anonymous namespace)::SkNx<2, float>::operator/((anonymous namespace)::SkNx<2, float> const&) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/../opts/SkNx_sse.h:51:55
+    #1 0x144b83b in (anonymous namespace)::SkConicCoeff::eval(float) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkGeometry.h:368
+    #2 0x144b83b in SkConic::evalAt(float) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkGeometry.cpp:1077
+    #3 0x144b83b in SkConic::evalAt(float, SkPoint*, SkPoint*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkGeometry.cpp:1106
+    #4 0x145c6e0 in compute_pos_tan(SkPoint const*, unsigned int, float, SkPoint*, SkPoint*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPathMeasure.cpp:455:56
+    #5 0x145d330 in SkPathMeasure::getSegment(float, float, SkPath*, bool) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPathMeasure.cpp:653:9
+    #6 0x1a3ae41 in SkDiscretePathEffect::filterPath(SkPath*, SkPath const&, SkStrokeRec*, SkRect const*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/effects/SkDiscretePathEffect.cpp:102:18
+    #7 0x14029c0 in SkPaint::getFillPath(SkPath const&, SkPath*, SkRect const*, float) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPaint.cpp:1486:37
+    #8 0x125d93b in SkDraw::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool, bool, SkBlitter*, SkInitOnceData*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDraw.cpp:1123:25
+    #9 0x11e0065 in SkDraw::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDraw.h:58:15
+    #10 0x11e0065 in SkBitmapDevice::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:328
+    #11 0x11df646 in SkBitmapDevice::drawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:304:11
+    #12 0x11bd69e in SkCanvas::onDrawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2000:23
+    #13 0x11b0262 in SkCanvas::drawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:1656:11
+    #14 0xeb987c in fuzz_canvas(Fuzz*, SkCanvas*, int) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/FuzzCanvas.cpp:1299:25
+    #15 0xec819e in fuzz_RasterN32Canvas(Fuzz*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/FuzzCanvas.cpp:1711:5
+    #16 0xf2b762 in fuzz_api(sk_sp<SkData>) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:204:13
+    #17 0xf2b762 in fuzz_file(char const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:118
+    #18 0xf2a4e6 in main /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:90:16
+    #19 0x7f7774b332b0 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x202b0)
+    #20 0xe41029 in _start (/usr/local/google/home/kjlubick/skia/skia/out/MSAN/fuzz+0xe41029)
+
+  Uninitialized value was stored to memory at
+    #0 0x145c852 in SkConic::SkConic(SkPoint const&, SkPoint const&, SkPoint const&, float) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkGeometry.h:231:12
+    #1 0x145c852 in compute_pos_tan(SkPoint const*, unsigned int, float, SkPoint*, SkPoint*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPathMeasure.cpp:455
+    #2 0x145d330 in SkPathMeasure::getSegment(float, float, SkPath*, bool) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPathMeasure.cpp:653:9
+    #3 0x1a3ae41 in SkDiscretePathEffect::filterPath(SkPath*, SkPath const&, SkStrokeRec*, SkRect const*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/effects/SkDiscretePathEffect.cpp:102:18
+    #4 0x14029c0 in SkPaint::getFillPath(SkPath const&, SkPath*, SkRect const*, float) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPaint.cpp:1486:37
+    #5 0x125d93b in SkDraw::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool, bool, SkBlitter*, SkInitOnceData*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDraw.cpp:1123:25
+    #6 0x11e0065 in SkDraw::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDraw.h:58:15
+    #7 0x11e0065 in SkBitmapDevice::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:328
+    #8 0x11df646 in SkBitmapDevice::drawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:304:11
+    #9 0x11bd69e in SkCanvas::onDrawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2000:23
+    #10 0x11b0262 in SkCanvas::drawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:1656:11
+    #11 0xeb987c in fuzz_canvas(Fuzz*, SkCanvas*, int) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/FuzzCanvas.cpp:1299:25
+    #12 0xec819e in fuzz_RasterN32Canvas(Fuzz*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/FuzzCanvas.cpp:1711:5
+    #13 0xf2b762 in fuzz_api(sk_sp<SkData>) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:204:13
+    #14 0xf2b762 in fuzz_file(char const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:118
+    #15 0xf2a4e6 in main /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:90:16
+    #16 0x7f7774b332b0 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x202b0)
+
+  Uninitialized value was created by a heap allocation
+    #0 0xe622a5 in __interceptor_realloc /tmp/tmpt5tVDi/llvm/projects/compiler-rt/lib/msan/msan_interceptors.cc:847
+    #1 0x19a198a in sk_realloc_throw(void*, unsigned long) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/ports/SkMemory_malloc.cpp:55:35
+    #2 0x1459d48 in SkTDArray<SkPoint>::resizeStorageToAtLeast(int) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/private/../private/SkTDArray.h:368:22
+    #3 0x1459d48 in SkTDArray<SkPoint>::setCount(int) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/private/../private/SkTDArray.h:140
+    #4 0x1459d48 in SkTDArray<SkPoint>::adjustCount(int) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/private/../private/SkTDArray.h:353
+    #5 0x1459d48 in SkTDArray<SkPoint>::append(int, SkPoint const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/private/../private/SkTDArray.h:166
+    #6 0x1459d48 in SkPathMeasure::buildSegments() /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPathMeasure.cpp:324
+    #7 0x145b865 in SkPathMeasure::getLength() /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPathMeasure.cpp:513:15
+    #8 0x1a3ab40 in SkDiscretePathEffect::filterPath(SkPath*, SkPath const&, SkStrokeRec*, SkRect const*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/effects/SkDiscretePathEffect.cpp:91:35
+    #9 0x14029c0 in SkPaint::getFillPath(SkPath const&, SkPath*, SkRect const*, float) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkPaint.cpp:1486:37
+    #10 0x125d93b in SkDraw::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool, bool, SkBlitter*, SkInitOnceData*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDraw.cpp:1123:25
+    #11 0x11e0065 in SkDraw::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDraw.h:58:15
+    #12 0x11e0065 in SkBitmapDevice::drawPath(SkPath const&, SkPaint const&, SkMatrix const*, bool) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:328
+    #13 0x11df646 in SkBitmapDevice::drawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:304:11
+    #14 0x11bd69e in SkCanvas::onDrawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2000:23
+    #15 0x11b0262 in SkCanvas::drawOval(SkRect const&, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:1656:11
+    #16 0xeb987c in fuzz_canvas(Fuzz*, SkCanvas*, int) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/FuzzCanvas.cpp:1299:25
+    #17 0xec819e in fuzz_RasterN32Canvas(Fuzz*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/FuzzCanvas.cpp:1711:5
+    #18 0xf2b762 in fuzz_api(sk_sp<SkData>) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:204:13
+    #19 0xf2b762 in fuzz_file(char const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:118
+    #20 0xf2a4e6 in main /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:90:16
+    #21 0x7f7774b332b0 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x202b0)
+
+Adding Cary because I see some PathMeasure things in the stack trace"""
+
+-- Comment 3: """Still reproducing at ToT:
+out/MSAN/fuzz -t api -n RasterN32Canvas -b ~/Downloads/clusterfuzz-testcase-minimized-api_raster_n32_canvas-5381937934893056"""
+
+-- Comment 4: """Mike, can you look at this one?"""
+
+-- Comment 5: """The following revision refers to this bug:
+  https://skia.googlesource.com/skia/+/c4e384e5ad85250920cac6e8ee0e2a14b69d67e0
+
+commit c4e384e5ad85250920cac6e8ee0e2a14b69d67e0
+Author: Mike Reed <reed@google.com>
+Date: Thu Apr 19 16:07:14 2018
+
+check if we fail to eval the conic in pathmeasure
+
+Bug: oss-fuzz:7201
+Change-Id: I9d40225b7827239d2a229dc056f7f2caa8a4eb31
+Reviewed-on: https://skia-review.googlesource.com/122420
+Reviewed-by: Cary Clark <caryclark@google.com>
+Commit-Queue: Mike Reed <reed@google.com>
+
+[modify] https://crrev.com/c4e384e5ad85250920cac6e8ee0e2a14b69d67e0/src/core/SkPathMeasure.cpp
+"""
+
+-- Comment 6: """ClusterFuzz has detected this issue as fixed in range 201804190630:201804200632.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5381937934893056
+
+Project: skia
+Fuzzer: libFuzzer_skia_api_raster_n32_canvas
+Fuzz target binary: api_raster_n32_canvas
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  SkConicCoeff::eval
+  SkConic::evalAt
+  SkConic::evalAt
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201803210615:201803220608
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201804190630:201804200632
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5381937934893056
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 7: """ClusterFuzz testcase 5381937934893056 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 8: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

@@ -1,0 +1,13 @@
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_ubsan_gpac
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  gf_sdp_info_parse
+  rtpin_load_sdp
+  rtpin_process
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

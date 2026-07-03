@@ -1,0 +1,12 @@
+{
+    "src/librawspeed/decoders/ArwDecoder.cpp": {
+        "entities": [
+            "method_ArwDecoder::decodeRawInternal",
+            "method_ArwDecoder::DecodeARW"
+        ],
+        "lines": [
+            179,
+            247
+        ]
+    }
+}

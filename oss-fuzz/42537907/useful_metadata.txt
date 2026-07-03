@@ -1,0 +1,29 @@
+gpac:fuzz_probe_analyze: Stack-buffer-overflow in gf_hevc_parse_nalu_bs
+
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_asan_gpac
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7eb7a1221860
+Crash State:
+  gf_hevc_parse_nalu_bs
+  gf_inspect_dump_nalu_internal
+  inspect_process
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Project
+gpac

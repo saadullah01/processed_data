@@ -1,0 +1,22 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  gstate_clone_core
+  gs_gsave
+  gs_output_page
+
+Sanitizer: address (ASAN)
+
+Fix committed upstream
+
+ClusterFuzz testcase 5571707845345280 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

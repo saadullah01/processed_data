@@ -1,0 +1,14 @@
+{
+    "src/njs_lexer.c": {
+        "entities": [],
+        "lines": [
+            864
+        ]
+    },
+    "src/test/njs_unit_test.c": {
+        "entities": [],
+        "lines": [
+            33
+        ]
+    }
+}

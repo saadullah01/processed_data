@@ -1,0 +1,10 @@
+{
+    "libyarmodules/pe.c": {
+        "entities": [
+            "function_pe_parse_exports"
+        ],
+        "lines": [
+            1011
+        ]
+    }
+}

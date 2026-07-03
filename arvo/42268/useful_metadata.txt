@@ -1,0 +1,36 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Memcpy-param-overlap
+Severity: Medium
+
+Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x631000054979,0x631000054980) and [0x63100005497f, 0x631000054986)
+Crash State:
+  pdfi_set_input_stream
+  zPDFstream
+  gs_interpret
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer gstoraster_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+Upstream fix committed.
+
+Comment 4:
+ClusterFuzz testcase 4781511948238848 is verified as fixed.
+
+Comment 5:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

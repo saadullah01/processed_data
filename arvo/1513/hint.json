@@ -1,0 +1,15 @@
+{
+    "libavcodec/h264_cavlc.c": {
+        "entities": [
+            "function_decode_residual",
+            "function_ff_h264_decode_init_vlc"
+        ],
+        "lines": [
+            384,
+            364,
+            374,
+            248,
+            570
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-openpgp.c": {
+        "entities": [
+            "function_pgp_calculate_and_store_fingerprint"
+        ],
+        "lines": [
+            2781
+        ]
+    }
+}

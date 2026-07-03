@@ -1,0 +1,132 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42538169
+OSS Fuzz
+42538169
+php:php-fuzz-execute: Crash in i_zval_ptr_dtor
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(3)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-UndefinedBehaviorSanitizer
+ClusterFuzz
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Sep 11, 2024 01:34AM
+Detailed Report: https://oss-fuzz.com/testcase?key=4860195954556928
+
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_ubsan_php
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x569798ffa010
+Crash State:
+  i_zval_ptr_dtor
+  zho_it_dtor
+  zend_objects_store_del
+ 
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_php&range=202408290601:202408310625
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4860195954556928
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on issues here are not monitored.
+COMMENTS
+All comments
+Oldest first
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #2
+Sep 18, 2024 03:50AM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 4860195954556928 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_php&range=202409170625:202409180616
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+is...@google.com<is...@google.com> #3
+Sep 18, 2024 03:50AM
+This issue was migrated from crbug.com/oss-fuzz/71382?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+dm...@gmail.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+ni...@gmail.com
+si...@gmail.com
+sm...@gmail.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+--
+Project
+php
+Reported
+Sep 11, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

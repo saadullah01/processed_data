@@ -1,0 +1,35 @@
+Comment 1:
+Project: open62541
+Fuzzer: libFuzzer_open62541_fuzz_binary_message
+Fuzz target binary: fuzz_binary_message
+Job Type: libfuzzer_ubsan_open62541
+Platform Id: linux
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: undefined (UBSAN)
+Regressed: 201811160414:201811180356
+Reproducer Testcase: 5712315752644608
+
+Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201811200351:201811210400.
+Project: open62541
+Fuzzer: libFuzzer_open62541_fuzz_binary_message
+Fuzz target binary: fuzz_binary_message
+Job Type: libfuzzer_ubsan_open62541
+Platform Id: linux
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: undefined (UBSAN)
+Regressed: 201811160414:201811180356
+Fixed: 201811200351:201811210400
+Reproducer Testcase: 5712315752644608
+
+Comment 3:
+ClusterFuzz testcase 5712315752644608 is verified as fixed, so closing issue as verified.
+
+Comment 4:
+Fixed in commit 947c4814d8738056d010629819977166905cc156

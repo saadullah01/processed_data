@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-piv.c": {
+        "entities": [
+            "function_piv_cache_internal_data"
+        ],
+        "lines": [
+            1021
+        ]
+    }
+}

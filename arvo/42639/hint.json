@@ -1,0 +1,10 @@
+{
+    "bfd/elfxx-mips.c": {
+        "entities": [
+            "function__bfd_mips_elf_section_from_shdr"
+        ],
+        "lines": [
+            7387
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000ceff800d
+Crash State:
+  gx_restrict_Pattern
+  gs_setcolor
+  pdfi_gs_setrgbcolor
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fix committed upstream
+
+ClusterFuzz testcase 6595842935488512 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

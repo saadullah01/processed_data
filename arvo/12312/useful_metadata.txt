@@ -1,0 +1,34 @@
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-shape-fuzzer
+Fuzz target binary: hb-shape-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x613000000350
+Crash State:
+  BEInt<unsigned short, 2>::operator unsigned short
+  OT::IntType<unsigned short, 2u>::operator unsigned int
+  OT::OffsetTo<OT::UnsizedOffsetListOf<AAT::Lookup<OT::IntType<unsigned short, 2u>
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_harfbuzz&range=201812010220:201812020220
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5631444412530688
+
+Fixed in https://github.com/harfbuzz/harfbuzz/commit/7a6686a589ed6bf17a5af0b8012501e4d4ee2ded
+
+ClusterFuzz has detected this issue as fixed in range 201901140305:201901150314.
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x613000000350
+Crash State:
+  BEInt<unsigned short, 2>::operator unsigned short
+  OT::IntType<unsigned short, 2u>::operator unsigned int
+  OT::OffsetTo<OT::UnsizedOffsetListOf<AAT::Lookup<OT::IntType<unsigned short, 2u>
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_harfbuzz&range=201812010220:201812020220
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_harfbuzz&range=201901140305:201901150314
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5631444412530688
+
+ClusterFuzz testcase 5631444412530688 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

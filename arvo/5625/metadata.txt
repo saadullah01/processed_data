@@ -1,0 +1,95 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=4641263824404480
+
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize
+Fuzz target binary: image_filter_deserialize
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  sse2::blit_row_s32a_opaque
+  Sprite_D32_S32::blitRect
+  SkDraw::drawSprite
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201801230629:201801232054
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4641263824404480
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """Marking as duplicate since I found this earlier with the proto fuzzer."""
+
+-- Comment 3: """Testcase 4641263824404480 is a top crash on ClusterFuzz for linux platform. Please prioritize fixing this crash.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """ClusterFuzz testcase 4641263824404480 is still reproducing on tip-of-tree build (trunk).
+
+If this testcase was not reproducible locally or unworkable, ignore this notification and we will file another bug soon with hopefully a better and workable testcase.
+
+Otherwise, if this is not intended to be fixed (e.g. this is an intentional crash), please add ClusterFuzz-Ignore label to prevent future bug filing with similar crash stacktrace."""
+
+-- Comment 5: """Removing duplicate since this is still reproducing on atleast 02/06 which is after the fix of duped bug. I clicked Redo to retry checking if this is fixed."""
+
+-- Comment 6: """ClusterFuzz has detected this issue as fixed in range 201802060525:201802070019.
+
+Detailed report: https://oss-fuzz.com/testcase?key=4641263824404480
+
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize
+Fuzz target binary: image_filter_deserialize
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  sse2::blit_row_s32a_opaque
+  Sprite_D32_S32::blitRect
+  SkDraw::drawSprite
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201801230629:201801232054
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201802060525:201802070019
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4641263824404480
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 7: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

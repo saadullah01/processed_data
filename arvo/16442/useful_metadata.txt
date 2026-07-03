@@ -1,0 +1,36 @@
+Project: wireshark
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_ubsan_wireshark
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000ffff04ff
+Crash State:
+  fuzzshark_ip_proto-udp
+  g_hash_table_lookup
+  dissect_tls
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+Looks like this issue has been filed wrong.
+
+The crash state is 
+
+Crash State:	
+fuzzshark_ip
+g_hash_table_lookup
+dissect_tls
+
+and the fuzz target is fuzzshark_ip, according to the report on oss-fuzz. The issue title is wrong as well, since the report reads "UNKNOWN READ · fuzzshark_ip".
+
+The report is correct, I recently started interpreting the "data" parameter in the TLS dissector since v3.1.1rc0-144-gede7be3440.
+
+The reason why the TLS dissector gets called through SCTP is this line in ssl_association_add:
+
+        dissector_add_uint("sctp.port", port, main_handle);
+
+I'll work on a fix.
+
+ClusterFuzz testcase 5177656848416768 is verified as fixed in the referenced revisions range.
+
+This bug has been fixed for 30 days. It has been opened to the public.

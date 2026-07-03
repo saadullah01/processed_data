@@ -1,0 +1,24 @@
+Project: krb5
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Use-after-poison READ 4
+Severity: High
+
+Project: krb5
+Fuzzing Engine: afl
+Fuzz Target: Fuzz_pac
+Job Type: afl_asan_krb5
+Platform Id: linux
+Crash Type: Use-after-poison READ 4
+Crash Address: 0x7f398fefd00f
+Crash State:
+  krb5_pac_parse
+  Fuzz_pac.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer Fuzz_pac from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5701449295724544 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

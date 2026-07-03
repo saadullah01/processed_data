@@ -1,0 +1,10 @@
+{
+    "src/lib/ndpi_main.c": {
+        "entities": [
+            "function_ndpi_add_ip_risk_mask"
+        ],
+        "lines": [
+            4151
+        ]
+    }
+}

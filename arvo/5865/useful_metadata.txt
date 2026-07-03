@@ -1,0 +1,45 @@
+-- Comment 1:
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fz_is_empty_irect
+  fz_intersect_irect
+  fz_draw_clip_path
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201801220544:201801230546
+
+Reproducer Testcase: 5771535236202496
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201803150417:201803160415.
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  fz_is_empty_irect
+  fz_intersect_irect
+  fz_draw_clip_path
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201801220544:201801230546
+Fixed: 201803150417:201803160415
+
+Reproducer Testcase: 5771535236202496
+
+-- Comment 3:
+ClusterFuzz testcase 5771535236202496 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "src/pkcs15init/pkcs15-lib.c": {
+        "entities": [
+            "function_sc_pkcs15init_rmdir"
+        ],
+        "lines": [
+            708
+        ]
+    }
+}

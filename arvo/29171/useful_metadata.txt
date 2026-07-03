@@ -1,0 +1,25 @@
+Project: c-blosc2
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: High
+
+Project: c-blosc2
+Fuzzing Engine: afl
+Fuzz Target: decompress_chunk_fuzzer
+Job Type: afl_asan_c-blosc2
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x607fffffffd9
+Crash State:
+  blosc_d
+  do_job
+  blosc_run_decompression_with_context
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer decompress_chunk_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4727058852872192 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

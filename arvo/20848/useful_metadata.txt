@@ -1,0 +1,33 @@
+-- Comment 1:
+Detailed Report: https://oss-fuzz.com/testcase?key=5115371025858560
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_bfd
+Job Type: libfuzzer_ubsan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000023d4257b
+Crash State:
+  _bfd_vms_lib_archive_p
+  bfd_check_format_matches
+  fuzz_bfd.c
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_binutils&range=201912170318:201912190318
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5115371025858560
+
+Issue filed automatically.
+
+-- Comment 2:
+ClusterFuzz testcase 5115371025858560 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_binutils&range=202002230259:202002250258
+
+-- Comment 3:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

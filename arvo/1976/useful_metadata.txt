@@ -1,0 +1,17 @@
+Project: libxml2
+Fuzzer: libFuzzer_libxml2_xml_read_memory_fuzzer
+Fuzz target binary: libxml2_xml_read_memory_fuzzer
+Job Type: libfuzzer_msan_libxml2
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  xmlValidateRef
+  xmlWalkValidateList
+  xmlListWalk
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201706071646:201706081648.
+
+ClusterFuzz testcase 5884925003694080 is verified as fixed, so closing issue.

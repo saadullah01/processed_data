@@ -1,0 +1,21 @@
+Project: open62541
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: open62541
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_json_decode
+Job Type: libfuzzer_msan_open62541
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  jumpOverRec
+  jumpOverRec
+  jumpOverRec
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201908212158:201908230343
+Reproducer Testcase: 5769092627955712

@@ -1,0 +1,36 @@
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x00000e24f45c
+Crash State:
+  dissect_gtpv2_ie_common
+  dissect_gtpv2
+  dissect_gtpv2
+Sanitizer: address (ASAN)
+
+This issue was already detected by the Wireshark fuzzbot
+and fixed (regressed in v2.5.0rc0-1222-gbe3b1291d4, fixed in v2.5.0rc0-1240-g83cb6ff625)
+
+Testcase 5241250057814016 is a top crash on ClusterFuzz for linux platform. Please prioritize fixing this crash.
+
+ClusterFuzz has detected this issue as fixed in range 201710020414:201710030415
+
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x00000e24f45c
+Crash State:
+  dissect_gtpv2_ie_common
+  dissect_gtpv2
+  dissect_gtpv2
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5241250057814016 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

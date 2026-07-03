@@ -1,0 +1,26 @@
+{
+    "Makefile.am": {
+        "entities": [],
+        "lines": [
+            826
+        ]
+    },
+    "libarchive/archive_read_support_format_rar.c": {
+        "entities": [
+            "function_archive_read_format_rar_read_data"
+        ],
+        "lines": [
+            1027
+        ]
+    },
+    "libarchive/test/test_read_format_rar.c": {
+        "entities": [],
+        "lines": [
+            3779
+        ]
+    },
+    "libarchive/test/test_read_format_rar_ppmd_use_after_free2.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

@@ -1,0 +1,35 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_AAC_FIXED_fuzzer: Use-of-uninitialized-value in clip_output_fixed
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_AAC_FIXED_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  clip_output_fixed
+  spectral_to_sample
+  aac_decode_frame_int
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5001538727116800 is verified as fixed
+
+Type
+Vulnerability
+
+Priority
+P2
+
+Severity
+S2
+
+Status
+Fixed (Verified)
+
+Project
+ffmpeg

@@ -1,0 +1,35 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+-- Comment 1: """Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_bmpmono_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  chunk_free_object
+  read_xref_stream_entries
+  pdfi_read_xref_stream_dict
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202212180609:202212190619
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5361473184727040"""
+
+-- Comment 2: """I'm afraid I'm going to have to wait for Chris again for this one. I cannot reproduce the problem, and in fact I cannot even see how the execution could reach the point of the error. For me it exits with an error before getting there.
+
+I do see a different potential problem, which I will fix, but I don't see how it could affect this report."""
+
+-- Comment 3: """Fixed upstream https://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=1b5facd696e036ce738b93505ffd5ad03f0cb63c"""
+
+-- Comment 4: """ClusterFuzz testcase 5361473184727040 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202301030603:202301040607"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

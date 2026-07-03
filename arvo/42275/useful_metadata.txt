@@ -1,0 +1,22 @@
+Project: tint
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: tint
+Fuzzing Engine: libFuzzer
+Fuzz Target: tint_spv_reader_hlsl_writer_fuzzer
+Job Type: libfuzzer_asan_i386_tint
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0xf5e09e34
+Crash State:
+  tint::resolver::Resolver::ValidateStorageClassLayout
+  tint::resolver::Resolver::ValidateStorageClassLayout
+  tint::resolver::Resolver::ValidateStorageClassLayout
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

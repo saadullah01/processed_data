@@ -1,0 +1,10 @@
+{
+    "tsk/fs/ext2fs.c": {
+        "entities": [
+            "function_ext4_load_attrs_inline"
+        ],
+        "lines": [
+            637
+        ]
+    }
+}

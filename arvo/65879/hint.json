@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibAudio/WavLoader.cpp": {
+        "entities": [
+            "method_WavLoaderPlugin::load_wav_info_block"
+        ],
+        "lines": [
+            298
+        ]
+    }
+}

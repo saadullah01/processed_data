@@ -1,0 +1,22 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: xml
+Job Type: libfuzzer_ubsan_libxml2
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x000000000018
+Crash State:
+  Bad-cast to xmlStartTag' (aka 'struct _xmlStartTag')xmlParseElement
+  xmlParseDocument
+  xmlDoRead
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5561715401031680 is verified as fixed
+
+Duplicate of 34108 (short-lived regression).
+
+This bug has been fixed. It has been opened to the public.

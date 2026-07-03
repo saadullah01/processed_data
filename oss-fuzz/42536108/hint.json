@@ -1,0 +1,10 @@
+{
+    "miniz_zip.c": {
+        "entities": [
+            "function_mz_stat64"
+        ],
+        "lines": [
+            790
+        ]
+    }
+}

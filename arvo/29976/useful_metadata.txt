@@ -1,0 +1,21 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_frame_fuzzer
+Job Type: libfuzzer_asan_c-blosc2
+Platform Id: linux
+Crash Address: 0x6080000000f9
+Crash State:
+  blosc_getitem
+  get_coffset
+  frame_get_lazychunk
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5963546544439296 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

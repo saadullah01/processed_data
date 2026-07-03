@@ -1,0 +1,10 @@
+{
+    "binutils/readelf.c": {
+        "entities": [
+            "function_print_dynamic_symbol"
+        ],
+        "lines": [
+            12049
+        ]
+    }
+}

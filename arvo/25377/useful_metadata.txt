@@ -1,0 +1,24 @@
+Project: nginx
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: nginx
+Fuzzing Engine: honggfuzz
+Fuzz Target: http_request_fuzzer
+Job Type: honggfuzz_asan_nginx
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x62100117e288
+Crash State:
+  ngx_http_free_request
+  http_request_fuzzer.cc
+  HonggfuzzPersistentLoop
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer http_request_fuzzer from making much progress. Fixing this will allow more bugs to be found.

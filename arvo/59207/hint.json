@@ -1,0 +1,26 @@
+{
+    "include/mupdf/pdf/xref.h": {
+        "entities": [],
+        "lines": [
+            93,
+            175
+        ]
+    },
+    "source/pdf/pdf-xref.c": {
+        "entities": [
+            "function_pdf_get_xref_entry_aux",
+            "function_pdf_cache_object",
+            "function_pdf_get_xref_entry",
+            "function_pdf_load_obj_stm"
+        ],
+        "lines": [
+            2497,
+            2019,
+            2091,
+            2509,
+            2033,
+            312,
+            2136
+        ]
+    }
+}

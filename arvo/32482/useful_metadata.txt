@@ -1,0 +1,25 @@
+Project: lxc
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-lxc-config-read
+Job Type: libfuzzer_msan_lxc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  lxc_trim_whitespace_in_place
+  set_config_time_offset_boot
+  parse_line
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz-lxc-config-read from making much progress. Fixing this will allow more bugs to be found."
+
+"ClusterFuzz testcase 5612499358580736 is verified as fixed"
+
+"This bug has been fixed. It has been opened to the public."

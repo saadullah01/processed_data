@@ -1,0 +1,42 @@
+Comment 1:
+Project: librawspeed
+Fuzzer: afl_librawspeed_LJpegDecompressorFuzzer
+Fuzz target binary: LJpegDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x7fe025cdd000
+Crash State:
+  rawspeed::unroll_loop_t<void rawspeed::LJpegDecompressor::decodeN<4>
+  void rawspeed::LJpegDecompressor::decodeN<4>
+  rawspeed::AbstractLJpegDecompressor::decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201711230639:201711240641
+
+Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201712020623:201712030636.
+
+Project: librawspeed
+Fuzzer: afl_librawspeed_LJpegDecompressorFuzzer
+Fuzz target binary: LJpegDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x7fe025cdd000
+Crash State:
+  rawspeed::unroll_loop_t<void rawspeed::LJpegDecompressor::decodeN<4>
+  void rawspeed::LJpegDecompressor::decodeN<4>
+  rawspeed::AbstractLJpegDecompressor::decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201711230639:201711240641
+Fixed: 201712020623:201712030636

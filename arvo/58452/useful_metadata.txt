@@ -1,0 +1,21 @@
+Project: faad2
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: faad2
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_decode
+Job Type: libfuzzer_msan_faad2
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  lt_update_state
+  reconstruct_channel_pair
+  decode_cpe
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_decode from making much progress. Fixing this will allow more bugs to be found.

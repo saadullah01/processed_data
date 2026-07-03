@@ -1,0 +1,11 @@
+{
+    "src/utils/token.c": {
+        "entities": [
+            "function_gf_token_get_line"
+        ],
+        "lines": [
+            100,
+            86
+        ]
+    }
+}

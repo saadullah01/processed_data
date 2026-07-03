@@ -1,0 +1,10 @@
+{
+    "bfd/vms-misc.c": {
+        "entities": [
+            "function__bfd_vms_save_counted_string"
+        ],
+        "lines": [
+            163
+        ]
+    }
+}

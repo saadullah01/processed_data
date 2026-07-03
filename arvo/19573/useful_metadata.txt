@@ -1,0 +1,24 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_bfd
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x6210002f7ce0
+Crash State:
+  xcoff64_slurp_armap
+  xcoff64_archive_p
+  bfd_check_format_matches
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5127251264012288 is verified as fixed

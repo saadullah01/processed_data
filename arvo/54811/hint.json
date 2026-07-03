@@ -1,0 +1,10 @@
+{
+    "subprojects/gst-plugins-base/gst/typefind/gsttypefindfunctions.c": {
+        "entities": [
+            "function_xml_check_first_element_from_data"
+        ],
+        "lines": [
+            538
+        ]
+    }
+}

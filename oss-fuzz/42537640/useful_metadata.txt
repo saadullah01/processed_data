@@ -1,0 +1,18 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_VP7_fuzzer: Use-of-uninitialized-value in vp7_h_loop_filter_simple_c
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VP7_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  vp7_h_loop_filter_simple_c
+  vp7_filter_mb_row
+  vp7_decode_mb_row_sliced
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,28 @@
+Detailed Report: https://oss-fuzz.com/testcase?key=5673701324423168
+
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_ubsan_gpac
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  hevc_parse_short_term_ref_pic_set
+  gf_hevc_read_sps_bs_internal
+  gf_hevc_parse_nalu_bs
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_gpac&range=202312170603:202312200621
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5673701324423168
+
+ClusterFuzz testcase 5673701324423168 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_gpac&range=202401170602:202401180602
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,22 @@
+Project: sudo
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: sudoers
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_policy
+Job Type: libfuzzer_asan_sudoers
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x55b0ab1f5490
+Crash State:
+  sudo_user_free
+  sudoers_policy_close
+  fuzz_policy.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

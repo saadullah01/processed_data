@@ -1,0 +1,38 @@
+Issue 42537879
+gpsd:FuzzPacket: Use-of-uninitialized-value in packet_parse
+
+Reproducible ClusterFuzz Stability-Memory-MemorySanitizer ClusterFuzz-Verified STATUS UPDATE
+
+Project: gpsd
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzPacket
+Job Type: libfuzzer_msan_gpsd
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  packet_parse
+  FuzzPacket.c
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4885185915584512 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Access: Default access
+
+Code Changes
+--
+
+Pending Code Changes
+--
+
+Project: gpsd

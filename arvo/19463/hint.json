@@ -1,0 +1,10 @@
+{
+    "lib/fuzzing/fuzz_ndr_X.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            251
+        ]
+    }
+}

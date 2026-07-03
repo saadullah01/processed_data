@@ -1,0 +1,10 @@
+{
+    "src/hb-face.cc": {
+        "entities": [
+            "function__hb_face_builder_data_reference_blob"
+        ],
+        "lines": [
+            690
+        ]
+    }
+}

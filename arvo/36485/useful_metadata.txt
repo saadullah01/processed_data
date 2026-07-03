@@ -1,0 +1,21 @@
+Project: libjxl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Container-overflow READ 8
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: djxl_fuzzer
+Job Type: libfuzzer_asan_libjxl
+Platform Id: linux
+Crash Address: 0x61c000000490
+Crash State:
+  jxl::InvSqueeze
+  jxl::Transform::Inverse
+  jxl::Image::undo_transforms
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4513089314750464 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

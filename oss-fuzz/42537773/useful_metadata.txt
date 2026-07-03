@@ -1,0 +1,29 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_RV30_fuzzer: Use-of-uninitialized-value in rv30_loop_filter
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_RV30_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  rv30_loop_filter
+  rv34_decode_slice
+  ff_rv34_decode_frame
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Project
+ffmpeg

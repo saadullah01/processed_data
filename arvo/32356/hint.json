@@ -1,0 +1,10 @@
+{
+    "src/isomedibox_funcs.c": {
+        "entities": [
+            "function_gf_isom_box_array_read_ex"
+        ],
+        "lines": [
+            1728
+        ]
+    }
+}

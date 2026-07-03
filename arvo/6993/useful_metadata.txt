@@ -1,0 +1,30 @@
+Project: gdal
+Fuzzer: afl_gdal_vector_translate_fuzzer
+Fuzz target binary: gdal_vector_translate_fuzzer
+Job Type: afl_asan_gdal
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6150001ea208
+Crash State:
+  SHPRewindObject
+  SHPWriteOGRObject
+  SHPWriteOGRFeature
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fixed in trunk and branches/2.2
+Old bug
+
+ClusterFuzz has detected this issue as fixed in range 201803170607:201803180610.
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6150001ea208
+Crash State:
+  SHPRewindObject
+  SHPWriteOGRObject
+  SHPWriteOGRFeature
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6224342158409728 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

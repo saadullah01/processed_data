@@ -1,0 +1,15 @@
+Project: libavc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+Fuzz Target: mvc_dec_fuzzer
+Job Type: honggfuzz_asan_libavc
+Platform Id: linux
+Crash Address: 0x79e644fa306c
+Crash State:
+  ih264d_sev
+  ih264d_parse_fgc
+  ih264d_parse_sei_payload
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

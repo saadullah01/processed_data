@@ -1,0 +1,24 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_psdcmyk_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x6311000ab8c8
+Crash State:
+  pdfi_read_cff_font
+  pdfi_load_font_buffer
+  pdfi_load_font
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 5553984474841088
+
+Fixed in
+
+This bug has been fixed. It has been opened to the public.
+
+ClusterFuzz testcase 5553984474841088 is verified as fixed

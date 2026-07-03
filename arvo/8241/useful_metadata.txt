@@ -1,0 +1,20 @@
+Project: openssl
+Fuzzer: afl_openssl_server
+Fuzz target binary: server
+Job Type: afl_asan_openssl
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x616000001e80
+Crash State:
+  ssl_get_prev_session
+  tls_early_post_process_client_hello
+  tls_post_process_client_hello
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201805120417:201805130415.
+
+ClusterFuzz testcase 5673171989561344 is verified as fixed, so closing issue as verified.

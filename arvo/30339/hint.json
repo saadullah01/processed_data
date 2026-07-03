@@ -1,0 +1,30 @@
+{
+    "wolfcrypt/src/sp_int.c": {
+        "entities": [
+            "function_sp_mul_2d",
+            "function__sp_mul",
+            "function__sp_sqr",
+            "function_sp_mod"
+        ],
+        "lines": [
+            4768,
+            9512,
+            9525,
+            4781
+        ]
+    },
+    "wolfcrypt/src/wolfmath.c": {
+        "entities": [
+            "function_mp_cond_copy"
+        ],
+        "lines": [
+            99
+        ]
+    },
+    "wolfssl/wolfcrypt/sp_int.h": {
+        "entities": [],
+        "lines": [
+            376
+        ]
+    }
+}

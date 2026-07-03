@@ -1,0 +1,14 @@
+{
+    "fuzz/oplist-crashes/clusterfuzz-testcase-minimized-oplist_fuzzer-4716194114699264": {
+        "entities": [],
+        "lines": []
+    },
+    "src/oplist.c": {
+        "entities": [
+            "function_node_from_openstep"
+        ],
+        "lines": [
+            715
+        ]
+    }
+}

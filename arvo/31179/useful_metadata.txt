@@ -1,0 +1,28 @@
+Project: leptonica
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: flipdetect_fuzzer
+Job Type: libfuzzer_msan_leptonica
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  makeOrientDecision
+  pixOrientCorrect
+  flipdetect_fuzzer.cc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6264120678678528 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

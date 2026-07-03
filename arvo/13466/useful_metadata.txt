@@ -1,0 +1,41 @@
+Project: capstone
+Fuzzer: libFuzzer_capstone_fuzz_disasmnext
+Fuzz target binary: fuzz_disasmnext
+Job Type: libfuzzer_msan_capstone
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  printOperand
+  X86_Intel_printInst
+  cs_disasm
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_disasmnext from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201903050452:201903070442.
+
+Project: capstone
+Fuzzer: libFuzzer_capstone_fuzz_disasmnext
+Fuzz target binary: fuzz_disasmnext
+Job Type: libfuzzer_msan_capstone
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  printOperand
+  X86_Intel_printInst
+  cs_disasm
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5687796902133760 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "source/fitz/unzip.c": {
+        "entities": [
+            "function_read_zip_entry"
+        ],
+        "lines": [
+            546
+        ]
+    }
+}

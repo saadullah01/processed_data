@@ -1,0 +1,49 @@
+{
+    "source/fitz/draw-device.c": {
+        "entities": [
+            "function_fz_draw_clip_stroke_path",
+            "function_fz_draw_stroke_path",
+            "function_fz_bound_path_accurate",
+            "function_fz_draw_clip_path",
+            "function_fz_draw_fill_path"
+        ],
+        "lines": [
+            644,
+            708,
+            773,
+            3078,
+            716,
+            687,
+            624,
+            851,
+            636
+        ]
+    },
+    "source/fitz/draw-imp.h": {
+        "entities": [],
+        "lines": [
+            421
+        ]
+    },
+    "source/fitz/draw-path.c": {
+        "entities": [
+            "function_fz_flatten_fill_path",
+            "function_fz_flatten_stroke_path",
+            "function_do_flatten_stroke"
+        ],
+        "lines": [
+            1416,
+            1481,
+            298,
+            263
+        ]
+    },
+    "source/fitz/draw-rasterize.c": {
+        "entities": [
+            "function_fz_reset_rasterizer"
+        ],
+        "lines": [
+            235
+        ]
+    }
+}

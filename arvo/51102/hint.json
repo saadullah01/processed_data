@@ -1,0 +1,11 @@
+{
+    "src/hunspell/suggestmgr.cxx": {
+        "entities": [
+            "function_SuggestMgr::SuggestMgr"
+        ],
+        "lines": [
+            128,
+            119
+        ]
+    }
+}

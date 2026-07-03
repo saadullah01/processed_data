@@ -1,0 +1,10 @@
+{
+    "src/lib/libdwarf/dwarf_form.c": {
+        "entities": [
+            "function__dwarf_internal_global_formref_b"
+        ],
+        "lines": [
+            783
+        ]
+    }
+}

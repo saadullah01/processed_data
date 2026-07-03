@@ -1,0 +1,19 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_dwarf
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x62d000044438
+Crash State:
+  bfd_getb32
+  mmo_scan
+  mmo_object_p
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

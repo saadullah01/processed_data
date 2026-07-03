@@ -1,0 +1,53 @@
+Project: libxslt
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5656808252768256
+
+Project: libxslt
+Fuzzing Engine: afl
+Fuzz Target: xpath
+Job Type: afl_asan_libxslt
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60300000131f
+Crash State:
+  xsltFormatNumberConversion
+  xsltFormatNumberFunction
+  xmlXPathCompOpEval
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=afl_asan_libxslt&revision=201909130325
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5656808252768256
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz testcase 5656808252768256 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_libxslt&range=201909150329:201909160333
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """Fixed here: https://gitlab.gnome.org/GNOME/libxslt/commit/e1f8d2e6eb1167fd51eb5b8c99d2d40c37299897
+
+Also see: https://gitlab.gnome.org/GNOME/libxslt/commit/4fcf6f564cf7ec300be5d47aa82bb168916a64b0"""
+
+-- Comment 4: """Thanks Nick!"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

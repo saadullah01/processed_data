@@ -1,0 +1,10 @@
+{
+    "mrbgems/mruby-sprintf/src/sprintf.c": {
+        "entities": [
+            "function_get_num"
+        ],
+        "lines": [
+            259
+        ]
+    }
+}

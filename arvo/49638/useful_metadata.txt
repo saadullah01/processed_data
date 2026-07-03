@@ -1,0 +1,25 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_process_packet
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6040000000b8
+Crash State:
+  dissect_softether_ip_port
+  ndpi_search_softether
+  check_ndpi_detection_func
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5187721726918656 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

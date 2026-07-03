@@ -1,0 +1,12 @@
+{
+    "encoder/ixheaace_sbr_main.c": {
+        "entities": [
+            "function_ixheaace_initialize_sbr_defaults",
+            "function_ixheaace_adjust_sbr_settings"
+        ],
+        "lines": [
+            581,
+            503
+        ]
+    }
+}

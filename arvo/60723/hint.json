@@ -1,0 +1,10 @@
+{
+    "liblouis/lou_translateString.c": {
+        "entities": [
+            "function_swapReplace"
+        ],
+        "lines": [
+            478
+        ]
+    }
+}

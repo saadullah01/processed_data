@@ -1,0 +1,10 @@
+{
+    "libvips/foreign/pdfiumload.c": {
+        "entities": [
+            "function_vips_foreign_load_pdf_header"
+        ],
+        "lines": [
+            481
+        ]
+    }
+}

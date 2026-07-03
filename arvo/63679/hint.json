@@ -1,0 +1,19 @@
+{
+    "cpp/src/arrow/ipc/reader.cc": {
+        "entities": [
+            "class_ArrayLoader"
+        ],
+        "lines": [
+            388,
+            254
+        ]
+    },
+    "docs/source/developers/cpp/fuzzing.rst": {
+        "entities": [],
+        "lines": [
+            101,
+            36,
+            85
+        ]
+    }
+}

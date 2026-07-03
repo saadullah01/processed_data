@@ -1,0 +1,19 @@
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_process_packet
+Job Type: libfuzzer_msan_ndpi
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ndpi_strncasestr
+  check_content_type_and_change_protocol
+  ndpi_search_http_tcp
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_process_packet from making much progress.
+
+ClusterFuzz testcase 4900050231230464 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

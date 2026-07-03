@@ -1,0 +1,10 @@
+{
+    "av1/common/thread_common.c": {
+        "entities": [
+            "function_foreach_rest_unit_in_planes_mt"
+        ],
+        "lines": [
+            716
+        ]
+    }
+}

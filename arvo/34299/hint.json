@@ -1,0 +1,18 @@
+{
+    "src/libespeak-ng/readclause.c": {
+        "entities": [
+            "function_ReadClause"
+        ],
+        "lines": [
+            614
+        ]
+    },
+    "tests/ssml/malformed-tag1.expected": {
+        "entities": [],
+        "lines": []
+    },
+    "tests/ssml/malformed-tag1.ssml": {
+        "entities": [],
+        "lines": []
+    }
+}

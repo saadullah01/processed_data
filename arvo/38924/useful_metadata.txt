@@ -1,0 +1,30 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_msan_mruby
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  mrb_decode_insn
+  gen_getupvar
+  codegen
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+Comment 2:
+Fixed by f85c50543b4ec93f327b9b064ea193493b046766 and 2083d99392ada4081c574abe6939d18685a2c917
+
+Comment 3:
+ClusterFuzz testcase 6234969891012608 is verified as fixed
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.

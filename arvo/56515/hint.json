@@ -1,0 +1,10 @@
+{
+    "fuzz/fuzz_type_object/fuzz_type_object.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            85
+        ]
+    }
+}

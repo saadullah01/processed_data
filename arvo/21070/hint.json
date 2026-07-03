@@ -1,0 +1,10 @@
+{
+    "src/core/thread/energy_scan_server.cpp": {
+        "entities": [
+            "function_EnergyScanServer::HandleScanResult"
+        ],
+        "lines": [
+            140
+        ]
+    }
+}

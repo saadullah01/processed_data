@@ -1,0 +1,19 @@
+Project: mapserver
+Fuzzing Engine: afl
+Fuzz Target: mapfuzzer
+Job Type: afl_asan_mapserver
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x606000005f1c
+Crash State:
+  msyy_switch_to_buffer
+  msyycleanup_includes
+  msLoadMap
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+fix in https://github.com/MapServer/MapServer/pull/6854
+
+ClusterFuzz testcase 4592302307016704 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_mapserver&range=202304090602:202304100602
+
+This bug has been fixed. It has been opened to the public.

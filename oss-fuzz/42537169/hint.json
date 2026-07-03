@@ -1,0 +1,10 @@
+{
+    "src/flac/decode.c": {
+        "entities": [
+            "function_metadata_callback"
+        ],
+        "lines": [
+            1590
+        ]
+    }
+}

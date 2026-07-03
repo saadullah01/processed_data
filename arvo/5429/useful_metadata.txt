@@ -1,0 +1,24 @@
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_sun_fuzzer
+Fuzz target binary: encoder_sun_fuzzer
+Job Type: libfuzzer_asan_imagemagick
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x7f2b2dfff850
+Crash State:
+  SetGrayscaleImage
+  QuantizeImage
+  SetImageType
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201801200543:201801210542.
+
+ClusterFuzz testcase 6102915199533056 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

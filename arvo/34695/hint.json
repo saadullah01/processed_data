@@ -1,0 +1,10 @@
+{
+    "lib/fribidi-bidi.c": {
+        "entities": [
+            "function_fribidi_get_par_embedding_levels_ex"
+        ],
+        "lines": [
+            707
+        ]
+    }
+}

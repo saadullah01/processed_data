@@ -1,0 +1,22 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60e0000006fa
+Crash State:
+  asn1_get_real
+  dissect_ber_real
+  try_dissect_unknown_ber
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

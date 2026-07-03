@@ -1,0 +1,18 @@
+Project: elfutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-dwfl-core
+Job Type: libfuzzer_asan_i386_elfutils
+Platform Id: linux
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0xf7954800
+Crash State:
+  dwfl_segment_report_module
+  dwfl_core_file_report
+  fuzz-dwfl-core.c
+Sanitizer: address (ASAN)
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz-dwfl-core from making much progress. Fixing this will allow more bugs to be found."
+
+ClusterFuzz testcase 5824270901575680 is verified as fixed
+
+"This bug has been fixed. It has been opened to the public."

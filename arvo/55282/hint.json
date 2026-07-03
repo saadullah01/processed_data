@@ -1,0 +1,12 @@
+{
+    "libblkid/src/superblocks/bcache.c": {
+        "entities": [
+            "function_probe_bcachefs_sb_fields"
+        ],
+        "lines": [
+            168,
+            186,
+            178
+        ]
+    }
+}

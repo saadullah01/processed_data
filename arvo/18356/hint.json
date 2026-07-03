@@ -1,0 +1,22 @@
+{
+    "src/patch_parse.c": {
+        "entities": [
+            "function_parse_header_path_buf"
+        ],
+        "lines": [
+            69
+        ]
+    },
+    "tests/patch/parse.c": {
+        "entities": [],
+        "lines": [
+            149
+        ]
+    },
+    "tests/patch/patch_common.h": {
+        "entities": [],
+        "lines": [
+            906
+        ]
+    }
+}

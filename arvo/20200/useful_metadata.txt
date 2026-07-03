@@ -1,0 +1,22 @@
+Project: poppler
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: poppler
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  BaseCryptStream::BaseCryptStream
+  DecryptStream::DecryptStream
+  Parser::getObj
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

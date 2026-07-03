@@ -1,0 +1,11 @@
+{
+    "resip/stack/Uri.cxx": {
+        "entities": [
+            "method_Uri::getAorInternal"
+        ],
+        "lines": [
+            793,
+            835
+        ]
+    }
+}

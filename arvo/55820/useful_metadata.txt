@@ -1,0 +1,24 @@
+Project: mosquitto
+Fuzzing Engine: libFuzzer
+Fuzz Target: broker_fuzz_test_config
+Job Type: libfuzzer_asan_mosquitto
+Platform Id: linux
+
+Crash Type: Invalid-free
+Crash Address: 0x619000000588
+Crash State:
+  mosquitto__free
+  config__bridge_cleanup
+  config__cleanup
+
+Sanitizer: address (ASAN)
+
+Regressed: 202302080617:202302090603
+
+Reproducer Testcase ID: 5164270372651008
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5164270372651008 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

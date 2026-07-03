@@ -1,0 +1,10 @@
+{
+    "src/core/thread/mle_tlvs.hpp": {
+        "entities": [
+            "class_RouteTlv"
+        ],
+        "lines": [
+            603
+        ]
+    }
+}

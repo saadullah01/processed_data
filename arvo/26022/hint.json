@@ -1,0 +1,20 @@
+{
+    "xinclude.c": {
+        "entities": [
+            "function_xmlXIncludeAddTxt",
+            "function_xinclude_multibyte_fallback",
+            "function_xmlXIncludeFreeContext",
+            "struct__xmlXIncludeCtxt",
+            "function_xmlXIncludeLoadTxt"
+        ],
+        "lines": [
+            72,
+            393,
+            1935,
+            785,
+            1845,
+            764,
+            798
+        ]
+    }
+}

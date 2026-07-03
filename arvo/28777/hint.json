@@ -1,0 +1,10 @@
+{
+    "fuzzing/format_command_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            48
+        ]
+    }
+}

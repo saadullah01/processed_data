@@ -1,0 +1,26 @@
+{
+    "src/io/gml.c": {
+        "entities": [
+            "function_igraph_read_graph_gml",
+            "function_igraph_i_gml_toreal"
+        ],
+        "lines": [
+            479,
+            68,
+            85,
+            437
+        ]
+    },
+    "tests/regression/igraph_read_graph_gml_invalid_inputs.c": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            64
+        ]
+    },
+    "tests/regression/invalid3.gml": {
+        "entities": [],
+        "lines": []
+    }
+}

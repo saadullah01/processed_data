@@ -1,0 +1,26 @@
+{
+    "fuzz/qtest/fuzz.test": {
+        "entities": [
+            "variable_@fuzzers"
+        ],
+        "lines": [
+            21
+        ]
+    },
+    "libqpdf/QPDFWriter.cc": {
+        "entities": [
+            "function_QPDFWriter::preserveObjectStreams",
+            "method_QPDFWriter::preserveObjectStreams"
+        ],
+        "lines": [
+            1944,
+            1975
+        ]
+    },
+    "qpdf/qpdf.testcov": {
+        "entities": [],
+        "lines": [
+            600
+        ]
+    }
+}

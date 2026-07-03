@@ -1,0 +1,20 @@
+Project: libxml2
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Fuzz Target: xml
+Job Type: afl_asan_libxml2
+Platform Id: linux
+Crash Address: 0x6040000006d8
+Crash State:
+  xmlRemoveID
+  xmlFreeProp
+  xmlFreeNodeList
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5482530362949632 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

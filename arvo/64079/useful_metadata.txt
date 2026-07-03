@@ -1,0 +1,18 @@
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzICCProfile
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000032ae2490
+Crash State:
+  Gfx::ICC::MultiLocalizedUnicodeTagData::from_bytes
+  Gfx::ICC::read_tag
+  Gfx::ICC::read_tag_table
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5420727253467136 is verified as fixed

@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-dns.c": {
+        "entities": [
+            "function_add_rr_to_tree"
+        ],
+        "lines": [
+            1504
+        ]
+    }
+}

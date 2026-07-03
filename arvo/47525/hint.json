@@ -1,0 +1,10 @@
+{
+    "src/libFLAC/stream_decoder.c": {
+        "entities": [
+            "function_read_metadata_"
+        ],
+        "lines": [
+            1525
+        ]
+    }
+}

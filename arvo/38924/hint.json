@@ -1,0 +1,10 @@
+{
+    "mrbgems/mruby-compiler/core/codegen.c": {
+        "entities": [
+            "function_mrb_last_insn"
+        ],
+        "lines": [
+            467
+        ]
+    }
+}

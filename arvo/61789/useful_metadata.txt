@@ -1,0 +1,22 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_dec_fuzzer
+Job Type: libfuzzer_ubsan_libxaac
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  ixheaacd_calc_m1m2_NUMBER
+  ixheaacd_heaac_mps_apply
+  ixheaacd_dec_execute
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

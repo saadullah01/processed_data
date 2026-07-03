@@ -1,0 +1,10 @@
+{
+    "opcodes/arc-dis.c": {
+        "entities": [
+            "function_find_format"
+        ],
+        "lines": [
+            414
+        ]
+    }
+}

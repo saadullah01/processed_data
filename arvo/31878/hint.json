@@ -1,0 +1,44 @@
+{
+    "src/bits.c": {
+        "entities": [
+            "function_bit_utf8_to_TV"
+        ],
+        "lines": [
+            2459,
+            2549
+        ]
+    },
+    "src/bits.h": {
+        "entities": [
+            "function_bit_utf8_to_TV"
+        ],
+        "lines": [
+            292
+        ]
+    },
+    "src/dwg_api.c": {
+        "entities": [
+            "function_dwg_add_u8_input"
+        ],
+        "lines": [
+            22160,
+            22145
+        ]
+    },
+    "src/in_json.c": {
+        "entities": [
+            "function_json_string"
+        ],
+        "lines": [
+            353
+        ]
+    },
+    "src/objects.c": {
+        "entities": [
+            "function_hash"
+        ],
+        "lines": [
+            92
+        ]
+    }
+}

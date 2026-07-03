@@ -1,0 +1,10 @@
+{
+    "cranelift/fuzzgen/src/function_generator.rs": {
+        "entities": [
+            "variable_OPCODE_SIGNATURES"
+        ],
+        "lines": [
+            1051
+        ]
+    }
+}

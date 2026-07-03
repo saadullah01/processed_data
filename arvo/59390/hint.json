@@ -1,0 +1,14 @@
+{
+    "source/fitz/load-bmp.c": {
+        "entities": [
+            "function_fz_load_bmp_subimage",
+            "function_fz_load_bmp_subimage_count"
+        ],
+        "lines": [
+            1318,
+            1302,
+            1262,
+            1271
+        ]
+    }
+}

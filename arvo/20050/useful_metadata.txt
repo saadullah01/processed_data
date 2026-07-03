@@ -1,0 +1,19 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_disassemble
+Job Type: afl_asan_binutils
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7fff2240d888
+Crash State:
+  buffer_read_memory
+  fetch_data
+  bit_extract
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

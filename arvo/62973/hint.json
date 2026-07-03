@@ -1,0 +1,13 @@
+{
+    "src/bits.c": {
+        "entities": [
+            "function_bit_TV_to_utf8"
+        ],
+        "lines": [
+            3274,
+            3194,
+            3205,
+            3253
+        ]
+    }
+}

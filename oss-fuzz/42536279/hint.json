@@ -1,0 +1,12 @@
+{
+    "decoder/svc/isvcd_parse_slice.c": {
+        "entities": [
+            "function_isvcd_parse_decode_slice",
+            "function_isvcd_parse_decode_slice_ext_nal"
+        ],
+        "lines": [
+            2004,
+            766
+        ]
+    }
+}

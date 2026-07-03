@@ -1,0 +1,33 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_EATGQ_fuzzer: Use-of-uninitialized-value in tgq_decode_frame
+
+ClusterFuzz
+Stability-Memory-MemorySanitizer
+Reproducible
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_EATGQ_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  tgq_decode_frame
+  ff_decode_receive_frame_internal
+  decode_receive_frame_internal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5607656650244096 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

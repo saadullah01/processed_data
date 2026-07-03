@@ -1,0 +1,18 @@
+{
+    "parser/parse_content.c": {
+        "entities": [
+            "function_parse_content_length"
+        ],
+        "lines": [
+            267
+        ]
+    },
+    "parser/test/test_parser.c": {
+        "entities": [
+            "variable_tset"
+        ],
+        "lines": [
+            167
+        ]
+    }
+}

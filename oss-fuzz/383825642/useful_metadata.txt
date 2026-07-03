@@ -1,0 +1,35 @@
+Issue: 383825642
+
+ffmpeg:ffmpeg_DEMUXER_fuzzer: Use-of-uninitialized-value in av_strdup
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_DEMUXER_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  av_strdup
+  av_dict_set
+  ff_metadata_conv
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 5380168801124352
+
+Comments:
+Verified: ClusterFuzz testcase 5380168801124352 is verified as fixed.
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+
+Reported: Dec 13, 2024
+Disclosure: Mar 13, 2025
+Project: ffmpeg

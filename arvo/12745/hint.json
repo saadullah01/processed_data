@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-srvloc.c": {
+        "entities": [
+            "function_unicode_to_bytes"
+        ],
+        "lines": [
+            441
+        ]
+    }
+}

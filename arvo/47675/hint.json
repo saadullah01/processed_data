@@ -1,0 +1,12 @@
+{
+    "src/libopensc/card-cardos.c": {
+        "entities": [
+            "function_cardos_list_files"
+        ],
+        "lines": [
+            496,
+            547,
+            525
+        ]
+    }
+}

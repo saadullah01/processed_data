@@ -1,0 +1,11 @@
+{
+    "src/is_json.c": {
+        "entities": [
+            "function_json_parse_const"
+        ],
+        "lines": [
+            32,
+            327
+        ]
+    }
+}

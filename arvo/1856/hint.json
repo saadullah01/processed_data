@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-layout-gsubgpos-private.hh": {
+        "entities": [
+            "function_apply_lookup"
+        ],
+        "lines": [
+            1002
+        ]
+    }
+}

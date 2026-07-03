@@ -1,0 +1,50 @@
+Issue 42537575
+
+ffmpeg:ffmpeg_AV_CODEC_ID_RV40_fuzzer: Use-of-uninitialized-value in ff_er_frame_end
+
+Vulnerability
+P2
+Stability-Memory-MemorySanitizer
+ClusterFuzz
+Reproducible
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_RV40_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_er_frame_end
+  finish_frame
+  ff_rv34_decode_frame
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This bug has been fixed. It has been opened to the public.
+
+Type
+Vulnerability
+
+Priority
+P2
+
+Severity
+S2
+
+Status
+Fixed (Verified)
+
+Code Changes
+--
+
+Pending Code Changes
+--
+
+Project
+ffmpeg

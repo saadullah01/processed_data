@@ -1,0 +1,28 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+Severity: Medium
+
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_ndpi_reader
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  check_content_type_and_change_protocol
+  process_response
+  ndpi_check_http_tcp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5778695863009280 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

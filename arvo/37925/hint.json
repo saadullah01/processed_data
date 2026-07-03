@@ -1,0 +1,18 @@
+{
+    "AK/Error.h": {
+        "entities": [
+            "method_ErrorOr::ErrorOr"
+        ],
+        "lines": [
+            56
+        ]
+    },
+    "AK/RefPtr.h": {
+        "entities": [
+            "function_adopt_nonnull_ref_or_enomem"
+        ],
+        "lines": [
+            353
+        ]
+    }
+}

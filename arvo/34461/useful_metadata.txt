@@ -1,0 +1,35 @@
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: xml
+Job Type: afl_asan_libxml2
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x60c0000058c8
+Crash State:
+  xmlAddNextSibling
+  xmlXIncludeCopyRange
+  xmlXIncludeCopyXPointer
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+"The root cause here appears to be that both xmlAddNextSibling() and xmlAddChild() may optionally free their second argument (the `tmp` xmlNodePtr passed in) and return a different xmlNodePtr, or these functions may not free `tmp` and return the same pointer value.
+
+In a nutshell, any code that ignores the return value of xmlAddNextSibling() or xmlAddChild()—and tries to use their second argument after they're called—could have the same use-after-free bug found in the attached test case.
+
+I see various functions in tree.c, xinclude.c and xpointer.c could all potentially have this same bug."
+
+"That's correct. But all of this can only happen when an XML_TEXT_NODE is added. That means functions like xmlXPtrBuildRangeNodeList should be safe."
+
+"Hi Nick, Does this look correct?
+
+Although the first set of changes in xmlXPtrBuildRangeNodeList() in xpointer.c may not be strictly necessary, they seem like they are still correct.
+
+Also, I couldn't rule out the second change to xpointer.c via brief source code inspection.
+
+Note that you do not need to credit me for this patch as the changes are mechanical."
+
+"Note:  Apple assigned this issue to CVE-2021-30801 internally.  (I'm checking to see why the Mitre database still says "reserved".)"
+
+"Fix merged to libxml2 upstream here:"
+
+"ClusterFuzz testcase 5302431933136896 is verified as fixed"

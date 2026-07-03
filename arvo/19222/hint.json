@@ -1,0 +1,11 @@
+{
+    "src/libopensc/card-coolkey.c": {
+        "entities": [
+            "function_coolkey_v0_get_attribute_data"
+        ],
+        "lines": [
+            523,
+            532
+        ]
+    }
+}

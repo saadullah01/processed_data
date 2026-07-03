@@ -1,0 +1,24 @@
+{
+    "librpc/ndr/ndr_cab.c": {
+        "entities": [
+            "function_ndr_pull_folder_cfdata"
+        ],
+        "lines": [
+            369
+        ]
+    },
+    "librpc/ndr/ndr_compression.c": {
+        "entities": [
+            "function_generic_mszip_init",
+            "function_ndr_push_compression_state_init",
+            "function_ndr_pull_compression_state_init"
+        ],
+        "lines": [
+            1025,
+            1129,
+            977,
+            1109,
+            1045
+        ]
+    }
+}

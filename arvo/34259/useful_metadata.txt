@@ -1,0 +1,17 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_frame_fuzzer
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  frame_get_vlmetalayers
+  frame_to_schunk
+  blosc2_schunk_from_buffer
+
+Sanitizer: address (ASAN)

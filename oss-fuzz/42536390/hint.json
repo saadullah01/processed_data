@@ -1,0 +1,16 @@
+{
+    "src/libical/icaltypes.c": {
+        "entities": [
+            "function_icalreqstattype_as_string_r",
+            "function_icalreqstattype_from_string"
+        ],
+        "lines": [
+            171,
+            140
+        ]
+    },
+    "test-datfuzz42536390": {
+        "entities": [],
+        "lines": []
+    }
+}

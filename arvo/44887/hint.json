@@ -1,0 +1,10 @@
+{
+    "parser/msg_parser.c": {
+        "entities": [
+            "function_parse_msg"
+        ],
+        "lines": [
+            724
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "arch/X86/X86ATTInstPrinter.c": {
+        "entities": [
+            "function_printanymem"
+        ],
+        "lines": [
+            788
+        ]
+    },
+    "arch/X86/X86IntelInstPrinter.c": {
+        "entities": [
+            "function_printanymem"
+        ],
+        "lines": [
+            1006
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+Project: gpac
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: gpac
+Fuzzing Engine: afl
+Fuzz Target: fuzz_parse
+Job Type: afl_asan_gpac
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x6040000000a8
+Crash State:
+  gf_isom_box_del
+  gf_isom_box_array_reset
+  gf_isom_box_array_del
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

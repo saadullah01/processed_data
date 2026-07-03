@@ -1,0 +1,10 @@
+{
+    "deprecated/stb.h": {
+        "entities": [
+            "function_stb__splitpath_raw"
+        ],
+        "lines": [
+            2423
+        ]
+    }
+}

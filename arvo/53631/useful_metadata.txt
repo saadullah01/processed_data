@@ -1,0 +1,15 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Fuzz Target: fuzz_pkcs15init
+Job Type: afl_asan_opensc
+Platform Id: linux
+Crash Address: 0x7fff892add30
+Crash State:
+  msc_zero_object
+  msc_create_object
+  muscle_create_directory
+Recommended Security Severity: High

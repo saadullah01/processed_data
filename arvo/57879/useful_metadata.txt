@@ -1,0 +1,28 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_nm
+Job Type: libfuzzer_ubsan_binutils
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  insert_arange_in_trie
+  insert_arange_in_trie
+  insert_arange_in_trie
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5122798795489280 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,20 @@
+libjpeg-turbo:compress_fuzzer: Use-of-uninitialized-value in encode_mcu_huff
+
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: compress_fuzzer
+Job Type: libfuzzer_msan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  encode_mcu_huff
+  compress_data
+  process_data_simple_main
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4654214175850496

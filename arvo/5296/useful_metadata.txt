@@ -1,0 +1,16 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-IiqDecoder
+Fuzz target binary: TiffDecoderFuzzer-IiqDecoder
+Job Type: libfuzzer_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Container-overflow READ 8
+Crash Address: 0x612000000750
+Crash State:
+  rawspeed::Spline<unsigned short, void>::prepare
+  rawspeed::Spline<unsigned short, void>::Spline
+  rawspeed::IiqDecoder::CorrectQuadrantMultipliersCombined
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

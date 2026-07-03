@@ -1,0 +1,16 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: xml
+Job Type: libfuzzer_asan_i386_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0xf5100404
+Crash State:
+  xmlRemoveID
+  xmlFreeProp
+  xmlFreeNodeList
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

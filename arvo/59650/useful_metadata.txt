@@ -1,0 +1,20 @@
+Project: PcapPlusPlus
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: pcapplusplus
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzTarget
+Job Type: libfuzzer_asan_pcapplusplus
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x605000018d29
+Crash State:
+  IPv4Layer.h
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

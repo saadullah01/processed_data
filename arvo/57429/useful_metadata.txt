@@ -1,0 +1,15 @@
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_die_cu_attrs
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+Crash Type: Invalid-free
+Crash Address: 0x604000000165
+Crash State:
+  fuzz_die_cu_attrs.c
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 4845537731149824 is verified as fixed
+
+This bug has been fixed.
+It has been opened to the public.

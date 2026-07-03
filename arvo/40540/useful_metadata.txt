@@ -1,0 +1,21 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+Crash Address: 0x62a00101714b
+Crash State:
+  bool OT::OffsetTo<OT::ClipBox, OT::IntType<unsigned int, 3u>, true>::serialize_c
+  OT::ClipList::serialize_clip_records
+  OT::ClipList::subset
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6254792024915968 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

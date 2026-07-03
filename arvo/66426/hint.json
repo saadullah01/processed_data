@@ -1,0 +1,12 @@
+{
+    "src/string.c": {
+        "entities": [
+            "function_memsearch_swar"
+        ],
+        "lines": [
+            636,
+            601,
+            620
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "src/demosaic/misc_demosaic.cpp": {
+        "entities": [
+            "function_LibRaw::pre_interpolate"
+        ],
+        "lines": [
+            47
+        ]
+    },
+    "src/demosaic/xtrans_demosaic.cpp": {
+        "entities": [
+            "function_LibRaw::xtrans_interpolate"
+        ],
+        "lines": [
+            36
+        ]
+    },
+    "src/postprocessing/dcraw_process.cpp": {
+        "entities": [
+            "function_LibRaw::dcraw_process"
+        ],
+        "lines": [
+            33
+        ]
+    },
+    "src/preprocessing/raw2image.cpp": {
+        "entities": [
+            "function_LibRaw::raw2image_ex",
+            "function_LibRaw::raw2image",
+            "function_LibRaw::raw2image_start"
+        ],
+        "lines": [
+            384,
+            41,
+            78
+        ]
+    }
+}

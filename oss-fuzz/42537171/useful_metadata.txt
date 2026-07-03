@@ -1,0 +1,30 @@
+mupdf:pdf_fuzzer: Heap-buffer-overflow in pdf_show_path
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x51d000001288
+Crash State:
+  pdf_show_path
+  pdf_run_xobject
+  begin_softmask
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Reproducer Testcase: testcase_id=5075793001119744
+
+ClusterFuzz testcase 5075793001119744 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: mupdf

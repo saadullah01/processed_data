@@ -1,0 +1,10 @@
+{
+    "fuzz/transform.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            139
+        ]
+    }
+}

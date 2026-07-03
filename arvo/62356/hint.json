@@ -1,0 +1,10 @@
+{
+    "src/packet_analysis/protocol/ieee802_11/IEEE802_11.cc": {
+        "entities": [
+            "method_IEEE802_11Analyzer::AnalyzePacket"
+        ],
+        "lines": [
+            105
+        ]
+    }
+}

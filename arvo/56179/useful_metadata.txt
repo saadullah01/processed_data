@@ -1,0 +1,22 @@
+Project: elfutils
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: elfutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-libdw
+Job Type: libfuzzer_msan_elfutils
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  check_section
+  dwarf_begin_elf
+  load_dw
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Comment 3:
+ClusterFuzz testcase 6538272475316224 is verified as fixed

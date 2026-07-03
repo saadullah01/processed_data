@@ -1,0 +1,13 @@
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_tool_metaflac
+Job Type: libfuzzer_asan_i386_flac
+Platform Id: linux
+Crash Type: Heap-use-after-free WRITE 4
+Crash Address: 0xf1f03ac0
+Crash State:
+  parse_options
+  append_new_operation
+  parse_options
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

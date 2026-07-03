@@ -1,0 +1,92 @@
+Project: libxml2
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=6187774258446336
+
+Project: libxml2
+Fuzzer: libFuzzer_libxml2_xml_read_memory_fuzzer
+Fuzz target binary: libxml2_xml_read_memory_fuzzer
+Job Type: libfuzzer_ubsan_libxml2
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  xmlAddDefAttrs
+  xmlParseAttributeListDecl
+  xmlParseMarkupDecl
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_libxml2&range=201705081857:201705091638
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6187774258446336
+
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This issue will be fixed by resolving this upstream bug:
+
+Bug 766828 - xmlParseStartTag2() contains typo when checking for default definitions for an attribute in a namespace
+<https://bugzilla.gnome.org/show_bug.cgi?id=766828>
+
+The problem here is a sloppy definition of a two-dimensional array.  Fixing the definition of the 2D array (and cleaning up the code that uses it) fixes this UBSan warning.
+"""
+
+-- Comment 3: """The UBSan error is fixed here:
+
+https://git.gnome.org/browse/libxml2/commit/?id=474967241cdcce6d3a2fd356079571eee794ec12
+"""
+
+-- Comment 4: """ClusterFuzz has detected this issue as fixed in range 201705312014:201706011641.
+
+Detailed report: https://oss-fuzz.com/testcase?key=6187774258446336
+
+Project: libxml2
+Fuzzer: libFuzzer_libxml2_xml_read_memory_fuzzer
+Fuzz target binary: libxml2_xml_read_memory_fuzzer
+Job Type: libfuzzer_ubsan_libxml2
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  xmlAddDefAttrs
+  xmlParseAttributeListDecl
+  xmlParseMarkupDecl
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_libxml2&range=201705081857:201705091638
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_libxml2&range=201705312014:201706011641
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6187774258446336
+
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 5: """ClusterFuzz testcase 6187774258446336 is verified as fixed, so closing issue.
+
+If this is incorrect, please add ClusterFuzz-Wrong label and re-open the issue."""
+
+-- Comment 6: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

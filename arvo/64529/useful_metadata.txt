@@ -1,0 +1,22 @@
+Project: radare2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 11
+Severity: High
+
+Project: radare2
+Fuzzing Engine: libFuzzer
+Fuzz Target: ia_fuzz
+Job Type: libfuzzer_asan_radare2
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 11
+Crash Address: 0x7b0fcd36e5e8
+Crash State:
+  io_memory_read
+  r_io_plugin_read
+  r_io_desc_read
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

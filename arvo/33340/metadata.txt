@@ -1,0 +1,56 @@
+Project: libjpeg-turbo
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5975135522783232
+
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: libjpeg_turbo_fuzzer
+Job Type: libfuzzer_asan_i386_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0xf1f01514
+Crash State:
+  decode_mcu_fast
+  decode_mcu
+  consume_data
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_libjpeg-turbo&range=202104150602:202104160630
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5975135522783232
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Unreleased regression caused by my tinkering in order to fix https://bugzilla.mozilla.org/show_bug.cgi?id=1050342.  The regression should now be fixed."""
+
+-- Comment 3: """ClusterFuzz testcase 5975135522783232 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_libjpeg-turbo&range=202104160630:202104170634
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

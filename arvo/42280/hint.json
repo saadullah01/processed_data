@@ -1,0 +1,14 @@
+{
+    "psi/zpdfops.c": {
+        "entities": [
+            "function_zPDFpageinfo",
+            "function_zPDFinfo",
+            "function_zPDFdrawpage"
+        ],
+        "lines": [
+            721,
+            626,
+            901
+        ]
+    }
+}

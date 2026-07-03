@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibGfx/Font/OpenType/Cmap.cpp": {
+        "entities": [
+            "method_Cmap::subtable"
+        ],
+        "lines": [
+            68
+        ]
+    }
+}

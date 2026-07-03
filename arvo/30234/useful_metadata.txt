@@ -1,0 +1,28 @@
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6060000005e0
+Crash State:
+  cil_destroy_block
+  cil_destroy_data
+  cil_tree_node_destroy
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_selinux&range=202102020612:202102030619
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5008737565802496
+
+This was already fixed in https://github.com/SELinuxProject/selinux/commit/eba0ffee01ee11bb4fc3f6505d9cf69693088621 (which comes right after the last commit which was tested, https://github.com/SELinuxProject/selinux/commit/1048f8d329a0e34a2529b3376fb085c5e6b3db0d).
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer secilc-fuzzer from making much progress.
+
+ClusterFuzz testcase 5008737565802496 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_selinux&range=202102030619:202102040000
+
+This bug has been fixed for 30 days. It has been opened to the public.

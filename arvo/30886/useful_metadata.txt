@@ -1,0 +1,20 @@
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x631000060820
+Crash State:
+  heredoc_remove_indent
+  parse_string
+  parser_yylex
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed by 94fb86f89b131814201596d301f584dfe4547526
+
+ClusterFuzz testcase 4690812988424192 is verified as fixed

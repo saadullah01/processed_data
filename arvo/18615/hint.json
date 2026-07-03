@@ -1,0 +1,10 @@
+{
+    "opcodes/tic30-dis.c": {
+        "entities": [
+            "function_print_branch"
+        ],
+        "lines": [
+            606
+        ]
+    }
+}

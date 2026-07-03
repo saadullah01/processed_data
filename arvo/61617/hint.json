@@ -1,0 +1,10 @@
+{
+    "gpsd/packet.c": {
+        "entities": [
+            "function_packet_parse"
+        ],
+        "lines": [
+            2358
+        ]
+    }
+}

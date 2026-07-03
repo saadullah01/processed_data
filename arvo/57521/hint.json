@@ -1,0 +1,10 @@
+{
+    "parserInternals.c": {
+        "entities": [
+            "function_xmlSwitchInputEncoding"
+        ],
+        "lines": [
+            1234
+        ]
+    }
+}

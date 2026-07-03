@@ -1,0 +1,10 @@
+{
+    "libr/bin/format/mach0/mach0.c": {
+        "entities": [
+            "function_walk_exports"
+        ],
+        "lines": [
+            2277
+        ]
+    }
+}

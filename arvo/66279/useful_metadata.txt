@@ -1,0 +1,26 @@
+Project: leptonica
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: Medium
+
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: pixa_recog_fuzzer
+Job Type: libfuzzer_asan_leptonica
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6150000040a8
+Crash State:
+  bmfGetWidth
+  bmfGetWordWidths
+  bmfGetLineStrings
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+The problem is fixed in commit f86cdab
+
+ClusterFuzz testcase 5324785533911040 is verified as fixed

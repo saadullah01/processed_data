@@ -1,0 +1,23 @@
+opensc:fuzz_pkcs15init: Heap-buffer-overflow in pgp_calculate_and_store_fingerprint
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15init
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x502000009038
+Crash State:
+  pgp_calculate_and_store_fingerprint
+  pgp_parse_and_set_pubkey_output
+  pgp_gen_key
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)

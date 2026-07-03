@@ -1,0 +1,16 @@
+Project: wolfssl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-disable-fastmath
+Platform Id: linux
+Crash Address: 0x7fffaaf2dba8
+Crash State:
+  Sha512Update
+  wc_Sha512Update
+  edNUMBER_sign_msg
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

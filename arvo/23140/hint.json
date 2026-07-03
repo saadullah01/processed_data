@@ -1,0 +1,14 @@
+{
+    "Zend/tests/attributes/018_fatal_error_in_argument.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_attributes.c": {
+        "entities": [
+            "function_zend_add_attribute"
+        ],
+        "lines": [
+            113
+        ]
+    }
+}

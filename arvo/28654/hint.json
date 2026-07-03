@@ -1,0 +1,10 @@
+{
+    "libsepol/cil/src/cil_build_ast.c": {
+        "entities": [
+            "function___cil_fill_constraint_leaf_expr"
+        ],
+        "lines": [
+            2713
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "src/librawspeed/decompressors/SamsungV0Decompressor.cpp": {
+        "entities": [
+            "function_SamsungV0Decompressor::decompressStrip",
+            "method_SamsungV0Decompressor::decompressStrip"
+        ],
+        "lines": [
+            176,
+            125
+        ]
+    }
+}

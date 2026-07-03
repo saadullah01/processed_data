@@ -1,0 +1,10 @@
+{
+    "libxslt/pattern.c": {
+        "entities": [
+            "function_xsltCompMatchAdd"
+        ],
+        "lines": [
+            301
+        ]
+    }
+}

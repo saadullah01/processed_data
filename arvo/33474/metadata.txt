@@ -1,0 +1,55 @@
+Project: geos
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-use-after-scope READ 8
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=4566878358994944
+
+Project: geos
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_geo2
+Job Type: libfuzzer_asan_geos
+Platform Id: linux
+
+Crash Type: Stack-use-after-scope READ 8
+Crash Address: 0x7fff77725a18
+Crash State:
+  geos::operation::overlayng::EdgeNodingBuilder::add
+  geos::operation::overlayng::EdgeNodingBuilder::build
+  geos::operation::overlayng::OverlayNG::computeEdgeOverlay
+  
+Sanitizer: address (ASAN)
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_asan_geos&revision=202104200620
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4566878358994944
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_geo2 from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """ClusterFuzz testcase 4566878358994944 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_geos&range=202108240610:202108260603
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

@@ -1,0 +1,10 @@
+{
+    "src/nxt_sockaddr.c": {
+        "entities": [
+            "function_nxt_sockaddr_inet_parse"
+        ],
+        "lines": [
+            732
+        ]
+    }
+}

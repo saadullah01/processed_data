@@ -1,0 +1,18 @@
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzJPGLoader
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x7ffe49a3fba8
+Crash State:
+  Bad-cast to AK::Array<AK::TypeErasedParameter, 0>Gfx::read_start_of_scan
+  Gfx::decode_jpg
+  Gfx::load_jpg_impl
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5187720287748096 is verified as fixed

@@ -1,0 +1,10 @@
+{
+    "prog/fuzzing/pix4_fuzzer.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            28
+        ]
+    }
+}

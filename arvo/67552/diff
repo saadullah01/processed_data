@@ -1,0 +1,31 @@
+From ad9a5637f9fa35dc380d0718af3c8c1a81f6c0b0 Mon Sep 17 00:00:00 2001
+From: Nick Wellnhofer <wellnhofer@aevum.de>
+Date: Fri, 22 Mar 2024 19:37:12 +0100
+Subject: [PATCH] tree: Fix uninitialized value in xmlSearchNsSafe
+
+Short-lived regression.
+---
+ tree.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/tree.c b/tree.c
+index b28f224fd..2a5dbe0be 100644
+--- a/tree.c
++++ b/tree.c
+@@ -5954,10 +5954,11 @@ xmlSearchNsSafe(xmlNodePtr node, const xmlChar *prefix,
+     xmlNodePtr orig = node;
+     xmlNodePtr parent;
+ 
+-    if ((out == NULL) ||
+-        (node == NULL) || (node->type == XML_NAMESPACE_DECL))
++    if (out == NULL)
+         return(1);
+     *out = NULL;
++    if ((node == NULL) || (node->type == XML_NAMESPACE_DECL))
++        return(1);
+ 
+     doc = node->doc;
+ 
+-- 
+GitLab
+

@@ -1,0 +1,35 @@
+Project: libvips
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Detailed Report: https://oss-fuzz.com/testcase?key=6448429389447168
+Project: libvips
+Fuzzing Engine: honggfuzz
+Fuzz Target: thumbnail_fuzzer
+Job Type: honggfuzz_asan_libvips
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x60600000497c
+Crash State:
+  HeifContext::interpret_heif_file
+  HeifContext::read
+  heif_context_read_from_reader
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_libvips&range=202306020620:202306030607
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6448429389447168
+
+Looks like the same libheif problem as https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=59823 and fixed by https://github.com/strukturag/libheif/pull/903 (this is not in any published version of libheif).
+
+ClusterFuzz testcase 6448429389447168 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_libvips&range=202310030620:202310040617
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

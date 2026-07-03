@@ -1,0 +1,18 @@
+Project: mosquitto
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 2
+Severity: High
+Project: mosquitto
+Fuzzing Engine: libFuzzer
+Fuzz Target: broker_fuzz_test_config
+Job Type: libfuzzer_asan_mosquitto
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 2
+Crash Address: 0x611000000180
+Crash State:
+  config__read_file_core
+  config__read_file
+  config__read
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

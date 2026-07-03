@@ -1,0 +1,13 @@
+Project: lwan
+Fuzzing Engine: libFuzzer
+Fuzz Target: template_fuzzer
+Job Type: libfuzzer_asan_lwan
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6130000001c0
+Crash State:
+  post_process_template
+  parser_shutdown
+  parse_string
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

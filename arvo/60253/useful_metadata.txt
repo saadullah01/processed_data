@@ -1,0 +1,35 @@
+Project: libjpeg-turbo.2.1.x
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: transform_fuzzer_2_0_x
+Job Type: libfuzzer_msan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  encode_one_block
+  encode_mcu_huff
+  compress_output
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+This is reproducible, but as near as I can figure, it's an MSan false positive.  The variable it is reporting as uninitialized is definitely initialized.  valgrind doesn't complain, which lends more credence to this being an MSan false positive.  Note that this issue is only reproducible in the 2.1.x and 2.0.x branches, not in the main (3.0.x) branch.  The issue was exposed because of https://github.com/libjpeg-turbo/libjpeg-turbo/commit/19f9d8f0fd9d753a7af3d5b4d58e20f9d752f5c0, which modified the transform fuzzer so that it executes all transforms rather than aborting if the first transform fails.
+
+Comment 3:
+I was finally able to massage MSan and make it give me usable information.  The issue is not a false positive.  It is a legitimate issue in the C Huffman encoder that is only exposed because we can't use the libjpeg-turbo SIMD extensions with MSan.  (Normally the Huffman encoder is SIMD-accelerated on x86 and Arm CPUs, so the C Huffman encoder is never used.)  The issue is in fact reproducible in 3.0.x but wasn't reproducing because of a bug in the transform fuzzer as well as some changes in the 3.0.x version of the fuzzer that were meant to improve coverage.  The issue has been fixed in the main (3.0.x), 2.1.x, and 2.0.x branches.
+
+Comment 4:
+ClusterFuzz testcase 6750311948353536 is verified as fixed.
+
+Comment 5:
+This bug has been fixed. It has been opened to the public.

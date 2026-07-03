@@ -1,0 +1,10 @@
+{
+    "encoder/iusace_enc_fac.c": {
+        "entities": [
+            "function_iusace_fd_encode_fac"
+        ],
+        "lines": [
+            523
+        ]
+    }
+}

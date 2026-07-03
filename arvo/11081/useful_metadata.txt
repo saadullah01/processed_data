@@ -1,0 +1,26 @@
+Project: harfbuzz
+Fuzzer: afl_harfbuzz_hb-subset-fuzzer
+Fuzz target binary: hb-subset-fuzzer
+Job Type: afl_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x61a000000bc9
+Crash State:
+  BEInt<unsigned short, 2>::set
+  OT::Script::subset
+  void OT::OffsetTo<OT::Script, OT::IntType<unsigned short, 2u>, true>::serialize_
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed range: 201809070138:201809080140
+Testcase id: 5725847365877760
+
+ClusterFuzz has detected this issue as fixed in range 201810230142:201810260144
+Fixed range: 201810230142:201810260144
+
+ClusterFuzz testcase 5725847365877760 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

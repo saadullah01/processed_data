@@ -1,0 +1,11 @@
+{
+    "src/core/parser/parse_content.c": {
+        "entities": [
+            "function_parse_content_length"
+        ],
+        "lines": [
+            219,
+            235
+        ]
+    }
+}

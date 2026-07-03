@@ -1,0 +1,16 @@
+Project: postgis
+Fuzzing Engine: libFuzzer
+Fuzz Target: wkb_import_fuzzer
+Job Type: libfuzzer_ubsan_postgis
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000001c8b000
+Crash State:
+  double_from_wkb_state
+  ptarray_from_wkb_state
+  lwline_from_wkb_state
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

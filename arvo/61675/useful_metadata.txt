@@ -1,0 +1,15 @@
+Project: exiv2
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Container-overflow WRITE {*}
+Severity: High
+Fuzz Target: fuzz-read-print-write
+Job Type: honggfuzz_asan_exiv2
+Platform Id: linux
+Crash Address: 0x7e8ce115b802
+Crash State:
+  libbrotlidec.so.1
+  BrotliDecoderDecompressStream
+  Exiv2::BmffImage::brotliUncompress
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

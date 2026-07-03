@@ -1,0 +1,25 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_process_packet
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x61a100000687
+Crash State:
+  ndpi_search_quic
+  check_ndpi_detection_func
+  ndpi_check_flow_func
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_process_packet from making much progress. Fixing this will allow more bugs to be found."
+
+ClusterFuzz testcase 4992218834796544 is verified as fixed.
+
+"This bug has been fixed. It has been opened to the public."

@@ -1,0 +1,15 @@
+{
+    "src/bits.c": {
+        "entities": [
+            "function_bit_utf8_to_TV"
+        ],
+        "lines": [
+            2532,
+            2502,
+            2471,
+            2545,
+            2487,
+            2523
+        ]
+    }
+}

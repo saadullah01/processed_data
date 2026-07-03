@@ -1,0 +1,13 @@
+{
+    "xinclude.c": {
+        "entities": [
+            "function_xmlXIncludeIncludeNode",
+            "function_xmlXIncludeLoadFallback"
+        ],
+        "lines": [
+            1984,
+            2255,
+            2240
+        ]
+    }
+}

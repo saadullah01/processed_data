@@ -1,0 +1,10 @@
+{
+    "gdal/ogr/ogrsf_frmts/dxf/ogrdxf_leader.cpp": {
+        "entities": [
+            "method_OGRDXFLayer::TranslateLEADER"
+        ],
+        "lines": [
+            263
+        ]
+    }
+}

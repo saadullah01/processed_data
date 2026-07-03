@@ -1,0 +1,12 @@
+{
+    "epan/dissectors/packet-ieee80211.c": {
+        "entities": [
+            "function_dissect_ieee80211_common",
+            "function_add_tagged_field"
+        ],
+        "lines": [
+            14336,
+            17169
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+Project: S2OPC
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 8
+
+Project: s2opc
+Fuzzing Engine: libFuzzer
+Fuzz Target: decode_fuzzer
+Job Type: libfuzzer_asan_s2opc
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 8
+Crash Address: 0x00000066f0f0
+Crash State:
+  ReadVariantArrayBuiltInType
+  SOPC_Variant_Read_Internal
+  SOPC_EncodeableObject_Decode
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5133645480263680 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "libsepol/cil/src/cil_build_ast.c": {
+        "entities": [
+            "function_cil_destroy_blockinherit"
+        ],
+        "lines": [
+            300
+        ]
+    }
+}

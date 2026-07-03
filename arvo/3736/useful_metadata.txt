@@ -1,0 +1,25 @@
+Project: open62541
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Fuzzer: afl_open62541_fuzz_binary_message
+Fuzz target binary: fuzz_binary_message
+Job Type: afl_asan_open62541
+Platform Id: linux
+Crash Address: 0x603000002b18
+Crash State:
+  Service_FindServers
+  processMSG
+  processSecureChannelMessage
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Fixed in https://github.com/open62541/open62541/pull/1297
+
+Fixed: range 201711020609:201711030556
+
+ClusterFuzz testcase 6694854395428864 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

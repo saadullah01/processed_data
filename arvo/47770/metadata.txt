@@ -1,0 +1,55 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5361215464931328
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  gx_device_finalize
+  alloc_restore_step_in
+  dorestore
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202205310603:202206010605
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5361215464931328
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """I cannot reproduce this outside the oss-fuzz environment, and I can't debug inside the environment, and it's not the kind of that lends itself to instrumenting with printfs, so I'm giving up for now."""
+
+-- Comment 3: """Fix committed upstream."""
+
+-- Comment 4: """ClusterFuzz testcase 5361215464931328 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202206200600:202206210602
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

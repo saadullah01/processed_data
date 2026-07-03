@@ -1,0 +1,10 @@
+{
+    "lib/src/gainmapmetadata.cpp": {
+        "entities": [
+            "function_streamReadU32"
+        ],
+        "lines": [
+            41
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "tiny_gltf.h": {
+        "entities": [
+            "function_TinyGLTF::LoadFromString"
+        ],
+        "lines": [
+            5803
+        ]
+    }
+}

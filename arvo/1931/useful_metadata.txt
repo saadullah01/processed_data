@@ -1,0 +1,46 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_shape_fuzzer
+Fuzz target binary: shape_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  NTFRecord::GetField
+  NTFFileReader::ProcessGeometry3D
+  NTFFileReader::ProcessGeometry
+
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201705271645:201705291647
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4813983888441344
+
+Fixed in trunk https://trac.osgeo.org/gdal/changeset/38692 , branches/2.2 https://trac.osgeo.org/gdal/changeset/38693 and branches/2.1 https://trac.osgeo.org/gdal/changeset/38694
+
+ClusterFuzz has detected this issue as fixed in range 201705291647:201705301648.
+
+Project: gdal
+Fuzzer: libFuzzer_gdal_shape_fuzzer
+Fuzz target binary: shape_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  NTFRecord::GetField
+  NTFFileReader::ProcessGeometry3D
+  NTFFileReader::ProcessGeometry
+
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201705271645:201705291647
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201705291647:201705301648
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4813983888441344
+
+ClusterFuzz testcase 4813983888441344 is verified as fixed, so closing issue.
+
+This bug has been fixed for 30 days. It has been opened to the public.

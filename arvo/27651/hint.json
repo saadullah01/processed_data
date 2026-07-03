@@ -1,0 +1,10 @@
+{
+    "src/stat.cc": {
+        "entities": [
+            "method_OpenTypeSTAT::Parse"
+        ],
+        "lines": [
+            186
+        ]
+    }
+}

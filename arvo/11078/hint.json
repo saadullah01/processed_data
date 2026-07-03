@@ -1,0 +1,29 @@
+{
+    "src/librawspeed/common/Optional.h": {
+        "entities": [
+            "class_Optional"
+        ],
+        "lines": [
+            41
+        ]
+    },
+    "src/librawspeed/decompressors/VC5Decompressor.cpp": {
+        "entities": [
+            "function_VC5Decompressor::parseLargeCodeblock",
+            "method_VC5Decompressor::parseVC5"
+        ],
+        "lines": [
+            605,
+            574,
+            455
+        ]
+    },
+    "src/librawspeed/decompressors/VC5Decompressor.h": {
+        "entities": [
+            "class_VC5Decompressor"
+        ],
+        "lines": [
+            105
+        ]
+    }
+}

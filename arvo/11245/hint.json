@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-kern-table.hh": {
+        "entities": [
+            "method_KernSubTableFormat3::sanitize"
+        ],
+        "lines": [
+            441
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x6040000000c0
+Crash State:
+  dynapi_set_helper
+  dwg_dynapi_entity_set_value
+  dxf_blocks_read
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

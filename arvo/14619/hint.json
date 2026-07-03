@@ -1,0 +1,11 @@
+{
+    "src/ua_types_encoding_json.c": {
+        "entities": [
+            "function_searchObjectForKeyRec"
+        ],
+        "lines": [
+            2253,
+            2287
+        ]
+    }
+}

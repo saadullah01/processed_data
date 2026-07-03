@@ -1,0 +1,29 @@
+{
+    "libr/bin/format/elf/elf.c": {
+        "entities": [
+            "function_read_reloc",
+            "function_populate_relocs_record_from_section",
+            "function_populate_relocs_record"
+        ],
+        "lines": [
+            2736,
+            2562,
+            2650,
+            2717
+        ]
+    },
+    "libr/bin/p/bin_elf.inc": {
+        "entities": [
+            "function_reloc_convert"
+        ],
+        "lines": [
+            648
+        ]
+    },
+    "test/db/formats/elf/elf-relro": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

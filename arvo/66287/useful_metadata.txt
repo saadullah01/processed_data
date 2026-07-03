@@ -1,0 +1,16 @@
+Project: upx
+Fuzzing Engine: libFuzzer
+Fuzz Target: test_packed_file_fuzzer
+Job Type: libfuzzer_asan_upx
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000157f8d
+Crash State:
+  PackLinuxElf32::adjABS
+  PackLinuxElf32::un_asl_dynsym
+  PackLinuxElf32::un_shlib_1
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

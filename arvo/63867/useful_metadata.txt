@@ -1,0 +1,43 @@
+Project: cryptofuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: libecc
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-libecc
+Job Type: libfuzzer_msan_libecc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fp_uninit
+  cryptofuzz::module::libecc::OpECC_ValidatePubkey
+  cryptofuzz::ExecutorBase<bool, cryptofuzz::operation::ECC_ValidatePubkey>::callM
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_libecc&range=202311020611:202311040620
+
+Comment 2:
+Hi,
+
+This issue seems to be related to a missing "x.magic = y.magic = WORD(0)" in https://github.com/guidovranken/cryptofuzz/blob/d1710d9f9c643ef8df1b79ab4d874f133647154b/modules/libecc/module.cpp#L443 when declaring the two local variables.
+
+Regards,
+
+Comment 3:
+Thanks. Should be fixed with https://github.com/guidovranken/cryptofuzz/commit/ed5b4655ba6f1a641bc340322874d720f4494baf
+
+Comment 4:
+ClusterFuzz testcase 5460901268160512 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_libecc&range=202311040620:202311050618
+
+Comment 5:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

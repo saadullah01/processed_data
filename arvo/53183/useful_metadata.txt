@@ -1,0 +1,13 @@
+Project: mruby
+Fuzzing Engine: honggfuzz
+Fuzz Target: mruby_fuzzer
+Job Type: honggfuzz_asan_mruby
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash State:
+  mrb_str_format
+  mrb_f_sprintf
+  mrb_vm_exec
+Sanitizer: address (ASAN)
+Fixed by 6bcbfed8bb955a4412e0ca79da0244f97076ba18
+ClusterFuzz testcase 5435851484299264 is verified as fixed

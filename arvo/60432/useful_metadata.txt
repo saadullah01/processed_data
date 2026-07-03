@@ -1,0 +1,19 @@
+Project: dav1d
+Fuzzing Engine: libFuzzer
+Fuzz Target: dav1d_fuzzer_mt
+Job Type: libfuzzer_asan_i386_dav1d
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  dav1d_pal_pred_16bpc_ssse3.w32
+  decode_b
+  decode_sb
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 4518112928858112 is verified as fixed
+
+This bug has been fixed.
+It has been opened to the public.

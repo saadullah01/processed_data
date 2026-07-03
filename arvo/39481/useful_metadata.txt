@@ -1,0 +1,24 @@
+Project: libvips
+Fuzzing Engine: honggfuzz
+Fuzz Target: mosaic_fuzzer
+Job Type: honggfuzz_asan_libvips
+Platform Id: linux
+
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x6210000462b0,0x6210000462bd) and [0x6210000462bc, 0x6210000462c9)
+Crash State:
+  vips_foreign_load_jxl_header
+  vips_foreign_load_build
+  vips_foreign_load_jxl_build
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mosaic_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5889145076056064 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

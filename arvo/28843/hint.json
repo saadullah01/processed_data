@@ -1,0 +1,11 @@
+{
+    "src/libopensc/pkcs15-oberthur.c": {
+        "entities": [
+            "function_sc_oberthur_read_file"
+        ],
+        "lines": [
+            304,
+            313
+        ]
+    }
+}

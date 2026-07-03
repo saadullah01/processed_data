@@ -1,0 +1,55 @@
+{
+    "configure.ac": {
+        "entities": [],
+        "lines": [
+            1880,
+            6042
+        ]
+    },
+    "src/internal.c": {
+        "entities": [
+            "function_DoSessionTicket",
+            "function_DecodePrivateKey",
+            "function_GetCurveByOID",
+            "function_CheckCurveId"
+        ],
+        "lines": [
+            24777,
+            21114,
+            24763,
+            21125
+        ]
+    },
+    "src/tls.c": {
+        "entities": [
+            "function_TLSX_PopulateSupportedGroups",
+            "function_TLSX_ValidateSupportedCurves"
+        ],
+        "lines": [
+            9958,
+            9926,
+            4359,
+            9938,
+            4340
+        ]
+    },
+    "wolfcrypt/src/ecc.c": {
+        "entities": [],
+        "lines": [
+            75,
+            179
+        ]
+    },
+    "wolfssl/wolfcrypt/ecc.h": {
+        "entities": [],
+        "lines": [
+            93
+        ]
+    },
+    "wolfssl/wolfcrypt/settings.h": {
+        "entities": [],
+        "lines": [
+            1749
+        ]
+    }
+}

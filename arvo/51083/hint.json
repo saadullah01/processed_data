@@ -1,0 +1,16 @@
+{
+    "src/io/WKTReader.cpp": {
+        "entities": [
+            "function_WKTReader::read"
+        ],
+        "lines": [
+            49
+        ]
+    },
+    "tests/unit/io/WKTReaderTest.cpp": {
+        "entities": [],
+        "lines": [
+            389
+        ]
+    }
+}

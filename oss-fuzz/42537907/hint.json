@@ -1,0 +1,12 @@
+{
+    "src/media_tools/av_parsers.c": {
+        "entities": [
+            "function_gf_hevc_compute_ref_list"
+        ],
+        "lines": [
+            7563,
+            7588,
+            7549
+        ]
+    }
+}

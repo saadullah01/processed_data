@@ -1,0 +1,28 @@
+Project: wavpack
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer
+Job Type: libfuzzer_msan_wavpack
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  WavpackDeleteTagItem
+  WavpackAppendTagItem
+  fuzzer.cc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+Fixed in commit: c4e193f3a360817eb097fb54f2f9f84d5dda7112
+
+This issue has existed since at least version 4.40.0, but was not a vulnerability because the accessed values were always discarded.
+
+ClusterFuzz testcase 5730671461138432 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

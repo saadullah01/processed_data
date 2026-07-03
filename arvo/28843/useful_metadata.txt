@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x615000001dc0
+Crash State:
+  sc_file_valid
+  sc_file_free
+  sc_oberthur_read_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

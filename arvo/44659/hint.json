@@ -1,0 +1,10 @@
+{
+    "qemu/target/i386/unicorn.c": {
+        "entities": [
+            "function_x86_reg_reset"
+        ],
+        "lines": [
+            69
+        ]
+    }
+}

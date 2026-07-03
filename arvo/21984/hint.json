@@ -1,0 +1,10 @@
+{
+    "src/decoder_allocators.hpp": {
+        "entities": [
+            "method_resize"
+        ],
+        "lines": [
+            58
+        ]
+    }
+}

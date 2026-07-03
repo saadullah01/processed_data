@@ -1,0 +1,13 @@
+{
+    "epan/dissectors/packet-dof.c": {
+        "entities": [
+            "function_DOFObjectID_GetClassSize",
+            "function_OALMarshal_UncompressValue"
+        ],
+        "lines": [
+            3902,
+            3861,
+            3894
+        ]
+    }
+}

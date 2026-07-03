@@ -1,0 +1,18 @@
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  fz_paint_triangle
+  do_paint_tri
+  fz_process_shade_type4
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201801220544:201801230546
+Reproducer Testcase ID: 5637305931923456
+
+ClusterFuzz has detected this issue as fixed in range 201808140529:201808150520.
+
+ClusterFuzz testcase 5637305931923456 is verified as fixed.

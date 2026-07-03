@@ -1,0 +1,21 @@
+Project: net-snmp
+Fuzzing Engine: afl
+Fuzz Target: snmp_config_fuzzer
+Job Type: afl_asan_net-snmp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x61100000003f
+Crash State:
+  read_config
+  snmp_config_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer snmp_config_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5986401836466176 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

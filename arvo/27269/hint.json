@@ -1,0 +1,10 @@
+{
+    "src/p2p/p2p.c": {
+        "entities": [
+            "function_p2p_copy_client_info"
+        ],
+        "lines": [
+            446
+        ]
+    }
+}

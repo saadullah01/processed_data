@@ -1,0 +1,22 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzJs
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x62d000197ba0
+Crash State:
+  AK::NonnullOwnPtr<JS::IndexedPropertyStorage>::operator->
+  JS::IndexedProperties::array_like_size
+  JS::IndexedProperties::append
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

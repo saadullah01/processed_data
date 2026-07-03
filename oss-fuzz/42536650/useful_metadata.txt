@@ -1,0 +1,26 @@
+htslib:hts_open_fuzzer: Segv on unknown address in process_one_read
+
+Project: htslib
+Fuzzing Engine: libFuzzer
+Fuzz Target: hts_open_fuzzer
+Job Type: libfuzzer_asan_htslib
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  process_one_read
+  cram_encode_container
+  cram_flush_container_mt
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 6517415765147648 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: htslib

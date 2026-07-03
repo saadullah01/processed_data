@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decompressors/VC5Decompressor.cpp": {
+        "entities": [
+            "method_VC5Decompressor::Wavelet::HighPassBand::decode"
+        ],
+        "lines": [
+            544
+        ]
+    }
+}

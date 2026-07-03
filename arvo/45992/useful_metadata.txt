@@ -1,0 +1,15 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x629ff033a118
+Crash State:
+  s_RLE_process
+  cmd_put_bits
+  clist_copy_mono
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Fix committed upstream 38b3bde1293ea8b6064bd6c2a1ed60171adea82b
+ClusterFuzz testcase 5009065605988352 is verified as fixed

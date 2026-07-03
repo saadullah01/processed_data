@@ -1,0 +1,10 @@
+{
+    "fuzz/ssl_ctx_api.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            479
+        ]
+    }
+}

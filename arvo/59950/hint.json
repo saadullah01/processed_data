@@ -1,0 +1,29 @@
+{
+    "src/lib/libdwarf/dwarf_frame.c": {
+        "entities": [
+            "function__dwarf_exec_frame_instr",
+            "function__dwarf_get_fde_info_for_a_pc_row"
+        ],
+        "lines": [
+            512,
+            2411
+        ]
+    },
+    "src/lib/libdwarf/dwarf_frame2.c": {
+        "entities": [
+            "function__dwarf_read_cie_fde_prefix",
+            "function__dwarf_create_cie_from_after_start",
+            "function__dwarf_create_fde_from_after_start"
+        ],
+        "lines": [
+            1219,
+            933,
+            1158,
+            967,
+            1066,
+            1170,
+            1330,
+            855
+        ]
+    }
+}

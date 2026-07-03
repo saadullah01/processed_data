@@ -1,0 +1,16 @@
+{
+    "optimize.c": {
+        "entities": [
+            "function_opt_cleanup",
+            "function_opt_init"
+        ],
+        "lines": [
+            2051,
+            2183,
+            2249,
+            2193,
+            2258,
+            2206
+        ]
+    }
+}

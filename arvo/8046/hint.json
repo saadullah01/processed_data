@@ -1,0 +1,27 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "coders/xpm.c": {
+        "entities": [],
+        "lines": [
+            162,
+            389
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

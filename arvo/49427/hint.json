@@ -1,0 +1,10 @@
+{
+    "mrbgems/mruby-compiler/core/codegen.c": {
+        "entities": [
+            "function_new_litbn"
+        ],
+        "lines": [
+            1027
+        ]
+    }
+}

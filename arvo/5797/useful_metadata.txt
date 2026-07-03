@@ -1,0 +1,11 @@
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_xc_fuzzer
+Fuzz target binary: encoder_xc_fuzzer
+Job Type: libfuzzer_asan_imagemagick
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x6030000004a1
+Crash State:
+  string
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

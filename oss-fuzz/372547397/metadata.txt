@@ -1,0 +1,136 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 372547397
+OSS Fuzz
+372547397
+htslib:hts_open_fuzzer: Heap-buffer-overflow in cram_encode_container
+Hotlists (3)
+Mark as Duplicate
+Comments
+(3)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(7)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTION87...@developer.gserviceaccount.com created issue #1
+Oct 9, 2024 04:31PM
+Detailed Report: https://oss-fuzz.com/testcase?key=6584661238677504
+
+Project: htslib
+Fuzzing Engine: libFuzzer
+Fuzz Target: hts_open_fuzzer
+Job Type: libfuzzer_asan_htslib
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x503000008088
+Crash State:
+  cram_encode_container
+  cram_flush_container_mt
+  cram_put_bam_seq
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_htslib&range=202410060623:202410090603
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6584661238677504
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #2
+Oct 19, 2024 02:20AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 6584661238677504 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_htslib&range=202410160603:202410180638
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+pe...@google.com<pe...@google.com> #3
+Oct 19, 2024 08:41AM
+
+This bug has been fixed. It has been opened to the public.
+
+Add comment
+Comment
+Issue metadata
+Reporter
+87...@developer.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+aw...@sanger.ac.uk
+jk...@sanger.ac.uk
+rm...@sanger.ac.uk
+vo...@sanger.ac.uk
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Jan 7, 2025
+Project
+htslib
+Reported
+Oct 9, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

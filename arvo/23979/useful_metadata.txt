@@ -1,0 +1,14 @@
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-use-after-scope READ 8
+Crash Address: 0x7fff51971930
+Crash State:
+  coolkey_apdu_io
+  coolkey_rsa_op
+  coolkey_compute_crypt
+
+Sanitizer: address (ASAN)

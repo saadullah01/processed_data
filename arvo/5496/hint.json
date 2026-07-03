@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-xref.c": {
+        "entities": [
+            "function_pdf_load_version"
+        ],
+        "lines": [
+            587
+        ]
+    }
+}

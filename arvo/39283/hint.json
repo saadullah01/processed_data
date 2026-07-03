@@ -1,0 +1,146 @@
+{
+    "Zend/Optimizer/block_pass.c": {
+        "entities": [
+            "function_assemble_code_blocks"
+        ],
+        "lines": [
+            1119
+        ]
+    },
+    "Zend/Optimizer/dfa_pass.c": {
+        "entities": [
+            "function_zend_ssa_remove_nops"
+        ],
+        "lines": [
+            235
+        ]
+    },
+    "Zend/Optimizer/nop_removal.c": {
+        "entities": [
+            "function_zend_optimizer_nop_removal"
+        ],
+        "lines": [
+            89
+        ]
+    },
+    "Zend/Optimizer/zend_optimizer.h": {
+        "entities": [
+            "struct_zend_script"
+        ],
+        "lines": [
+            86
+        ]
+    },
+    "Zend/tests/early_binding_unreachable.inc": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/tests/early_binding_unreachable.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_compile.c": {
+        "entities": [],
+        "lines": [
+            1322
+        ]
+    },
+    "Zend/zend_compile.h": {
+        "entities": [],
+        "lines": [
+            791
+        ]
+    },
+    "Zend/zend_inheritance.c": {
+        "entities": [
+            "function_zend_try_early_bind"
+        ],
+        "lines": [
+            3029
+        ]
+    },
+    "Zend/zend_inheritance.h": {
+        "entities": [],
+        "lines": [
+            34
+        ]
+    },
+    "ext/opcache/ZendAccelerator.c": {
+        "entities": [
+            "function_preload_link",
+            "function_opcache_compile_file",
+            "function_cache_script_in_shared_memory",
+            "function_accel_preload",
+            "function_cache_script_in_file_cache",
+            "function_preload_compile_file",
+            "function_preload_optimize"
+        ],
+        "lines": [
+            4195,
+            4522,
+            1488,
+            1810,
+            4210,
+            3604,
+            4023,
+            1471
+        ]
+    },
+    "ext/opcache/ZendAccelerator.h": {
+        "entities": [
+            "struct_zend_persistent_script"
+        ],
+        "lines": [
+            109,
+            118
+        ]
+    },
+    "ext/opcache/zend_accelerator_util_funcs.c": {
+        "entities": [
+            "function_zend_accel_load_script",
+            "function_free_persistent_script"
+        ],
+        "lines": [
+            225,
+            259,
+            21,
+            71
+        ]
+    },
+    "ext/opcache/zend_accelerator_util_funcs.h": {
+        "entities": [],
+        "lines": [
+            30
+        ]
+    },
+    "ext/opcache/zend_file_cache.c": {
+        "entities": [
+            "function_zend_file_cache_serialize",
+            "function_zend_file_cache_unserialize"
+        ],
+        "lines": [
+            1680,
+            889,
+            1667,
+            911
+        ]
+    },
+    "ext/opcache/zend_persist.c": {
+        "entities": [
+            "function_zend_accel_script_persist"
+        ],
+        "lines": [
+            1332,
+            1278
+        ]
+    },
+    "ext/opcache/zend_persist_calc.c": {
+        "entities": [
+            "function_zend_accel_script_persist_calc"
+        ],
+        "lines": [
+            568,
+            606
+        ]
+    }
+}

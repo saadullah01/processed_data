@@ -1,0 +1,10 @@
+{
+    "libspectre/ps.c": {
+        "entities": [
+            "function_psscan"
+        ],
+        "lines": [
+            371
+        ]
+    }
+}

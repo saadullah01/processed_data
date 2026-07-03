@@ -1,0 +1,22 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_dec_fuzzer
+Job Type: libfuzzer_msan_libxaac
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ixheaacd_cos_sin_mod
+  ixheaacd_fwd_modulation
+  ixheaacd_cplx_anal_qmffilt
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

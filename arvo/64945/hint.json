@@ -1,0 +1,10 @@
+{
+    "src/fmt_fp.c": {
+        "entities": [
+            "function_mrb_format_float"
+        ],
+        "lines": [
+            319
+        ]
+    }
+}

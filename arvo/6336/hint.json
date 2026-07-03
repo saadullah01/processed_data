@@ -1,0 +1,13 @@
+{
+    "epan/crypt/airpdcap.c": {
+        "entities": [
+            "function_AirPDcapTDLSDeriveKey",
+            "function_AirPDcapDecryptWPABroadcastKey"
+        ],
+        "lines": [
+            2202,
+            444,
+            2263
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+Project: jbig2dec
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: jbig2dec
+Fuzzing Engine: libFuzzer
+Fuzz Target: jbig2_fuzzer
+Job Type: libfuzzer_msan_jbig2dec
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  jbig2_decode_mmr_line
+  jbig2_decode_halftone_mmr
+  jbig2_decode_gray_scale_image
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

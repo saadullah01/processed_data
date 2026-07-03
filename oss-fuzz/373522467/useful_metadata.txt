@@ -1,0 +1,25 @@
+Issue 373522467
+
+wasmtime:cranelift-fuzzgen: Segv on unknown address in cranelift_filetests::function_runner::Trampoline::call::hb2e77cf3a13ebaf4
+
+Project: wasmtime
+Fuzzing Engine: libFuzzer
+Fuzz Target: cranelift-fuzzgen
+Job Type: libfuzzer_asan_wasmtime
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  cranelift_filetests::function_runner::Trampoline::call::hb2e77cf3a13ebaf4
+  cranelift_fuzzgen::_::run::hdb2f75e19950661f
+
+Sanitizer: address (ASAN)
+
+Reproducer Testcase: 6434594980691968
+
+ClusterFuzz testcase 6434594980691968 is verified as fixed.
+
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)

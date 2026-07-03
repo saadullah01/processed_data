@@ -1,0 +1,22 @@
+Project: libraw
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: libraw
+Fuzzing Engine: libFuzzer
+Fuzz Target: libraw_fuzzer
+Job Type: libfuzzer_asan_libraw
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7f2fd1edd7e0
+Crash State:
+  LibRaw::parseCR3
+  LibRaw::parseCR3
+  LibRaw::parseCR3
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

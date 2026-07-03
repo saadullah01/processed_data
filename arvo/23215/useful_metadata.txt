@@ -1,0 +1,26 @@
+Detailed Report: https://oss-fuzz.com/testcase?key=4813264046522368
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6160000011da
+Crash State:
+  piv_cache_internal_data
+  piv_select_file
+  sc_select_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_opensc&range=202001170236:202001171610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4813264046522368
+
+ClusterFuzz testcase 4813264046522368 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_opensc&range=202006090318:202006100320
+
+This bug has been fixed for 30 days. It has been opened to the public.

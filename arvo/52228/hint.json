@@ -1,0 +1,10 @@
+{
+    "binutils/objdump.c": {
+        "entities": [
+            "function_load_specific_debug_section"
+        ],
+        "lines": [
+            4163
+        ]
+    }
+}

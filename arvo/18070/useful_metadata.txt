@@ -1,0 +1,28 @@
+Project: usrsctp
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: usrsctp
+Fuzzing Engine: afl
+Fuzz Target: fuzzer_connect
+Job Type: afl_asan_usrsctp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x611000371180
+Crash State:
+  sctp_handle_asconf
+  sctp_process_control
+  sctp_common_input_processing
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer_connect from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5665964259016704 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

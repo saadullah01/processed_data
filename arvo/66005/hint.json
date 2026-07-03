@@ -1,0 +1,10 @@
+{
+    "src/ietf/rtsp_session.c": {
+        "entities": [
+            "function_RTSP_UnpackURL"
+        ],
+        "lines": [
+            72
+        ]
+    }
+}

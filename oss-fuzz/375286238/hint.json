@@ -1,0 +1,10 @@
+{
+    "libavcodec/huffyuvdec.c": {
+        "entities": [
+            "function_decode_gray_bitstream"
+        ],
+        "lines": [
+            783
+        ]
+    }
+}

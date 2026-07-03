@@ -1,0 +1,23 @@
+Project: dav1d
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: dav1d
+Fuzzing Engine: libFuzzer
+Fuzz Target: dav1d_fuzzer_mt
+Job Type: libfuzzer_msan_dav1d
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  wiener_c
+  lr_stripe
+  lr_sbrow
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5977550264860672 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

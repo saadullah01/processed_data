@@ -1,0 +1,24 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x62d1000be438
+Crash State:
+  pdfi_read_cff_font
+  pdfi_load_font
+  pdfi_read_type0_font
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: (URL omitted)
+Reproducer Testcase: (URL omitted)
+Issue filed automatically.
+
+Fix committed upstream
+
+ClusterFuzz testcase 6111748510318592 is verified as fixed in (URL omitted)
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

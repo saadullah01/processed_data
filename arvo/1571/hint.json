@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-gsm_rlcmac.c": {
+        "entities": [
+            "struct_Ext_Channel_Request_desc_t"
+        ],
+        "lines": [
+            3055
+        ]
+    }
+}

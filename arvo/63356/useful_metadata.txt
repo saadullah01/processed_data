@@ -1,0 +1,20 @@
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  inflate
+  read_zip_entry
+  fz_try_read_archive_entry
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 4779110762938368
+
+Fixed upstream by commit: a5dca1a30b1beda46cff7334b2d68c82b0bbbe59
+
+ClusterFuzz testcase 4779110762938368 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

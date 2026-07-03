@@ -1,0 +1,20 @@
+{
+    "parser/msg_parser.c": {
+        "entities": [
+            "function_get_hdr_field"
+        ],
+        "lines": [
+            247
+        ]
+    },
+    "parser/test/test_parser.c": {
+        "entities": [
+            "function_test_parse_msg",
+            "variable_tset"
+        ],
+        "lines": [
+            173,
+            151
+        ]
+    }
+}

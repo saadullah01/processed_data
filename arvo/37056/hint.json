@@ -1,0 +1,13 @@
+{
+    "plugins/sudoers/editor.c": {
+        "entities": [
+            "function_find_editor",
+            "function_resolve_editor"
+        ],
+        "lines": [
+            259,
+            187,
+            151
+        ]
+    }
+}

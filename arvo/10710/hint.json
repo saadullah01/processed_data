@@ -1,0 +1,10 @@
+{
+    "ovn/lib/lex.c": {
+        "entities": [
+            "function_lex_parse_hex_integer"
+        ],
+        "lines": [
+            332
+        ]
+    }
+}

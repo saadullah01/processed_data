@@ -1,0 +1,12 @@
+{
+    "libyarmodules/pe/pe.c": {
+        "entities": [
+            "function_pe_parse_debug_directory"
+        ],
+        "lines": [
+            280,
+            354,
+            336
+        ]
+    }
+}

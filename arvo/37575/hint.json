@@ -1,0 +1,10 @@
+{
+    "libexif/apple/exif-mnote-data-apple.c": {
+        "entities": [
+            "function_exif_mnote_data_apple_load"
+        ],
+        "lines": [
+            139
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "NEWS": {
+        "entities": [],
+        "lines": [
+            5
+        ]
+    },
+    "Zend/tests/attributes/ossfuzz371445205.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_API.c": {
+        "entities": [
+            "function_object_init_with_constructor"
+        ],
+        "lines": [
+            1879
+        ]
+    }
+}

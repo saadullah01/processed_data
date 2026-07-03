@@ -1,0 +1,15 @@
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x61910000050d
+Crash State:
+  fz_new_buffer_from_copied_data
+  bmp_read_color_profile
+  bmp_read_image
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+ClusterFuzz testcase 6195811620618240 is verified as fixed
+Fixed upstream by

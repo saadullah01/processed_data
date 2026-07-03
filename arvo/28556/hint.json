@@ -1,0 +1,12 @@
+{
+    "src/core/meshcop/meshcop_tlvs.cpp": {
+        "entities": [
+            "function_ChannelMaskTlv::GetChannelMask",
+            "method_ChannelMaskBaseTlv::IsValid"
+        ],
+        "lines": [
+            257,
+            183
+        ]
+    }
+}

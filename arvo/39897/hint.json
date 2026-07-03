@@ -1,0 +1,11 @@
+{
+    "parser/parse_to.c": {
+        "entities": [
+            "function_parse_to_param"
+        ],
+        "lines": [
+            232,
+            453
+        ]
+    }
+}

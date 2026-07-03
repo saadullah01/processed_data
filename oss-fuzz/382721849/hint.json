@@ -1,0 +1,10 @@
+{
+    "liblouis/compileTranslationTable.c": {
+        "entities": [
+            "function_parseChars"
+        ],
+        "lines": [
+            1390
+        ]
+    }
+}

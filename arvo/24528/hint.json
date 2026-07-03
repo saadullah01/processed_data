@@ -1,0 +1,45 @@
+{
+    "src/librekey/key_store_g10.cpp": {
+        "entities": [
+            "function_parse_protected_seckey",
+            "function_g10_parse_seckey"
+        ],
+        "lines": [
+            892,
+            965,
+            814
+        ]
+    },
+    "src/librepgp/stream-armor.cpp": {
+        "entities": [
+            "function_armor_read_trailer",
+            "function_armor_str_to_data_type",
+            "function_armor_parse_headers"
+        ],
+        "lines": [
+            620,
+            196,
+            453
+        ]
+    },
+    "src/librepgp/stream-parse.cpp": {
+        "entities": [
+            "function_cleartext_parse_headers"
+        ],
+        "lines": [
+            1004
+        ]
+    },
+    "src/tests/dattest_stream_armor/too_short_header.asc": {
+        "entities": [],
+        "lines": []
+    },
+    "src/tests/ffi.cpp": {
+        "entities": [
+            "function_test_ffi_dearmor_edge_cases"
+        ],
+        "lines": [
+            4689
+        ]
+    }
+}

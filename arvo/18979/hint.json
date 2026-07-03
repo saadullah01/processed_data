@@ -1,0 +1,22 @@
+{
+    "src/lib/openjp2/pi.c": {
+        "entities": [
+            "function_opj_pi_next_pcrl",
+            "function_opj_pi_next_cprl",
+            "function_opj_pi_next_rpcl"
+        ],
+        "lines": [
+            376,
+            508,
+            639
+        ]
+    },
+    "src/lib/openjp2/pi.h": {
+        "entities": [
+            "struct_opj_pi_iterator_t"
+        ],
+        "lines": [
+            102
+        ]
+    }
+}

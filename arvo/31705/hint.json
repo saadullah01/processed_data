@@ -1,0 +1,10 @@
+{
+    "blosc/frame.c": {
+        "entities": [
+            "function_frame_get_lazychunk"
+        ],
+        "lines": [
+            2032
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "opcodes/ns32k-dis.c": {
+        "entities": [
+            "function_print_insn_ns32k"
+        ],
+        "lines": [
+            734
+        ]
+    }
+}

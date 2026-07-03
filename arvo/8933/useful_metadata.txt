@@ -1,0 +1,31 @@
+Project: freetype2
+Fuzzer: libFuzzer_freetype2_ftfuzzer
+Fuzz target binary: ftfuzzer
+Job Type: libfuzzer_asan_freetype2
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6210000061df
+Crash State:
+  tt_face_palette_set
+  tt_face_load_cpal
+  sfnt_load_face
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+A bug in new code.  Fixed in git.
+
+ClusterFuzz has detected this issue as fixed in range 201806160536:201806170524.
+
+Project: freetype2
+Fuzzer: libFuzzer_freetype2_ftfuzzer
+Fuzz target binary: ftfuzzer
+Job Type: libfuzzer_asan_freetype2
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6210000061df
+Crash State:
+  tt_face_palette_set
+  tt_face_load_cpal
+  sfnt_load_face
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

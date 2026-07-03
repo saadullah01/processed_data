@@ -1,0 +1,16 @@
+Project: libavif
+Fuzzing Engine: libFuzzer
+Fuzz Target: avif_decode_fuzzer
+Job Type: libfuzzer_asan_libavif
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x602000000098
+Crash State:
+  avifFileTypeIsCompatible
+  avifDecoderParse
+  avif_decode_fuzzer.cc
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

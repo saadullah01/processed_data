@@ -1,0 +1,24 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pxlmono_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x63100b5671d8
+Crash State:
+  pdfi_repair_file
+  pdfi_read_xref_stream_dict
+  pdfi_read_xref
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer gs_device_pxlmono_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Fix committed upstream
+
+ClusterFuzz testcase 4942714512211968 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

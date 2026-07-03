@@ -1,0 +1,29 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000003ca0
+Crash State:
+  pdfi_dict_get
+  pdfi_dict_get_int
+  pdfi_read_bare_object
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+ClusterFuzz testcase 5222632268627968 is verified as fixed
+
+Comment 3:
+This bug has been fixed. It has been opened to the public.

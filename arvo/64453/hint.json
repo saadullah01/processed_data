@@ -1,0 +1,10 @@
+{
+    "source/fitz/load-bmp.c": {
+        "entities": [
+            "function_bmp_read_color_profile"
+        ],
+        "lines": [
+            806
+        ]
+    }
+}

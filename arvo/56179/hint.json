@@ -1,0 +1,11 @@
+{
+    "libelf/gnuhash_xlate.h": {
+        "entities": [
+            "function_elf_cvt_gnuhash"
+        ],
+        "lines": [
+            1,
+            36
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+Project: libxml2
+Fuzzer: afl_libxml2_xml_reader_for_file_fuzzer
+Fuzz target binary: libxml2_xml_reader_for_file_fuzzer
+Job Type: afl_asan_libxml2
+Platform Id: linux
+Crash Type: Bad-free
+Crash Address: 0x619000000fdf
+Crash State:
+  xmlFreeNode
+  xmlTextReaderStartElementNs
+  xmlParseStartTag2
+Sanitizer: address (ASAN)
+Regressed range: 201811210442:201811212032
+Reproducer Testcase ID: 5767146915758080
+Fixed range: 201811220438:201811230440

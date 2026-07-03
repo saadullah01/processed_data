@@ -1,0 +1,12 @@
+{
+    "base/gsmchunk.c": {
+        "entities": [
+            "function_chunk_obj_alloc",
+            "function_chunk_free_object"
+        ],
+        "lines": [
+            803,
+            1118
+        ]
+    }
+}

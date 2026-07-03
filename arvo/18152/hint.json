@@ -1,0 +1,11 @@
+{
+    "sam.c": {
+        "entities": [
+            "function_bam_read1"
+        ],
+        "lines": [
+            576,
+            537
+        ]
+    }
+}

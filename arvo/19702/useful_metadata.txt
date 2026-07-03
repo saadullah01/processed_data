@@ -1,0 +1,28 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_ubsan_binutils
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  get_number_of_operands
+  print_insn_crx
+  fuzz_disassemble.c
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: range=201912170318:201912190318
+
+ClusterFuzz testcase 5713122702917632 is verified as fixed (range=201912260317:201912270320)
+
+This bug has been fixed for 30 days. It has been opened to the public.

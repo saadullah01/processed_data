@@ -1,0 +1,18 @@
+{
+    "source/html/html-doc.c": {
+        "entities": [
+            "function_htdoc_open_document_with_buffer"
+        ],
+        "lines": [
+            246
+        ]
+    },
+    "source/html/office.c": {
+        "entities": [
+            "function_process_office_document"
+        ],
+        "lines": [
+            971
+        ]
+    }
+}

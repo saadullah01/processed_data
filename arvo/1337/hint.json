@@ -1,0 +1,10 @@
+{
+    "libavcodec/aacps.c": {
+        "entities": [
+            "function_stereo_processing"
+        ],
+        "lines": [
+            975
+        ]
+    }
+}

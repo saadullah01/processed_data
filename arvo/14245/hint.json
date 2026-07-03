@@ -1,0 +1,37 @@
+{
+    "autotests/karchivetest.cpp": {
+        "entities": [],
+        "lines": [
+            757
+        ]
+    },
+    "autotests/karchivetest.h": {
+        "entities": [
+            "class_KArchiveTest"
+        ],
+        "lines": [
+            74
+        ]
+    },
+    "src/karchive.cpp": {
+        "entities": [
+            "function_KArchivePrivate::findOrCreate",
+            "method_KArchiveDirectory::entry",
+            "function_KArchiveDirectory::KArchiveDirectory"
+        ],
+        "lines": [
+            50,
+            819,
+            780,
+            471
+        ]
+    },
+    "src/karchivedirectory.h": {
+        "entities": [
+            "class_KArchiveDirectory"
+        ],
+        "lines": [
+            127
+        ]
+    }
+}

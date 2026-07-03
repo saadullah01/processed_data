@@ -1,0 +1,10 @@
+{
+    "g10/mainproc.c": {
+        "entities": [
+            "function_proc_plaintext"
+        ],
+        "lines": [
+            827
+        ]
+    }
+}

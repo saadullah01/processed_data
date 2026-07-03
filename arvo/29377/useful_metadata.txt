@@ -1,0 +1,21 @@
+- Project: igraph
+- Fuzzing Engine: honggfuzz
+- Fuzz Target: read_gml_fuzzer
+- Job Type: honggfuzz_asan_igraph
+- Platform Id: linux
+- Crash Type: Heap-use-after-free READ 8
+- Crash Address: 0x606000006d60
+- Crash State:
+  igraph_read_graph_gml
+  read_gml_fuzzer.c
+  igraph_i_gml_destroy_attrs
+- Sanitizer: address (ASAN)
+- Recommended Security Severity: High
+
+- This crash occurs very frequently on linux platform and is likely preventing the fuzzer read_gml_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+- Fixed in 883bd139af3775d7f90f144c9038a6cb9a28f309 ; oss-fuzz did not pick up the most recent revision so far. Hopefully it will soon.
+
+- ClusterFuzz testcase 4664686297612288 is verified as fixed.
+
+- This bug has been fixed for 30 days. It has been opened to the public.

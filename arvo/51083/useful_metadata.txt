@@ -1,0 +1,15 @@
+Project: geos
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_geo2
+Job Type: libfuzzer_asan_geos
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x6150004b9318
+Crash State:
+  std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<geos::geom::Coor
+  geos::geomgraph::NodeMap::addNode
+  geos::operation::overlay::OverlayOp::copyPoints
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+ClusterFuzz testcase 6314252360613888 is verified as fixed
+This bug has been fixed. It has been opened to the public.

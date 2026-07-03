@@ -1,0 +1,17 @@
+libjpeg-turbo:compress12_fuzzer: Use-of-uninitialized-value in compress12.cc
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: compress12_fuzzer
+Job Type: libfuzzer_msan_libjpeg-turbo
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  compress12.cc
+  compress12.cc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

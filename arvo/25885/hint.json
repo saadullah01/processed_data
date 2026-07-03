@@ -1,0 +1,10 @@
+{
+    "src/libopensc/pkcs15-itacns.c": {
+        "entities": [
+            "function_hextoint"
+        ],
+        "lines": [
+            379
+        ]
+    }
+}

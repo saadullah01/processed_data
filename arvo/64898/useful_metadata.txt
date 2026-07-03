@@ -1,0 +1,15 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+Fuzz Target: fuzz_pkcs15init
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+Crash Address: 0x6150000046e8
+Crash State:
+  authentic_emu_update_tokeninfo
+  sc_pkcs15init_update_tokeninfo
+  sc_pkcs15init_update_lastupdate
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

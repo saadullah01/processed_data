@@ -1,0 +1,37 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_vector_translate_fuzzer
+Fuzz target binary: gdal_vector_translate_fuzzer
+Job Type: libfuzzer_ubsan_gdal
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x000007ba7d80
+Crash State:
+  Bad-cast to OGRMultiPolygon from OGRGeometryCollection
+  OGRMultiPolygon* cpl::down_cast<OGRMultiPolygon*, OGRGeometry>
+  OGRCreateMultiPatch
+
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High
+Regressed: 201803290615:201803300612
+Reproducer Testcase ID: 4755222246195200
+
+Fixed per commit: 459dca6392fd5ad0e3d3f0ee9930e61bddbf795b
+master only
+
+Test added per commit: 405ce034bed0b345405334a110c6a5cd4054ca45
+
+ClusterFuzz has detected this issue as fixed in range 201803300612:201804010603
+
+Crash Type: Bad-cast
+Crash Address: 0x000007ba7d80
+Crash State:
+  Bad-cast to OGRMultiPolygon from OGRGeometryCollection
+  OGRMultiPolygon* cpl::down_cast<OGRMultiPolygon*, OGRGeometry>
+  OGRCreateMultiPatch
+
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High
+Regressed: 201803290615:201803300612
+Fixed: 201803300612:201804010603
+Reproducer Testcase ID: 4755222246195200

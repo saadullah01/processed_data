@@ -1,0 +1,11 @@
+{
+    "mrbgems/mruby-bigint/core/bigint.c": {
+        "entities": [
+            "function_mpz_init_set_str"
+        ],
+        "lines": [
+            730,
+            751
+        ]
+    }
+}

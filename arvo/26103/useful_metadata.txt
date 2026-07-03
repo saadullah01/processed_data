@@ -1,0 +1,19 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffe9ae35ae2
+Crash State:
+  fuzz_reader_transmit
+  sc_single_transmit
+  sc_transmit
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

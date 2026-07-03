@@ -1,0 +1,22 @@
+Project: lwan
+Fuzzer: afl_lwan_request_fuzzer
+Fuzz target binary: request_fuzzer
+Job Type: afl_asan_lwan
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x0000011fc1bf
+Crash State:
+  parse_headers
+  parse_http_request
+  fuzz_parse_http_request
+Sanitizer: address (ASAN)
+Regressed: 201904100132:201904110128
+Reproducer Testcase ID: 5717480481226752
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer request_fuzzer from making much progress.
+
+ClusterFuzz has detected this issue as fixed in range 201904170136:201904171529.
+
+ClusterFuzz testcase 5717480481226752 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,23 @@
+Project: libdwarf
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_die_cu_attrs_loclist
+Job Type: libfuzzer_asan_libdwarf
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60c00000047e
+Crash State:
+  _dwarf_read_loc_expr_op
+  _dwarf_fill_in_locdesc_op_c
+  _dwarf_original_expression_build
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6737086749999104 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

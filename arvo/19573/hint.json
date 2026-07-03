@@ -1,0 +1,18 @@
+{
+    "bfd/coff-rs6000.c": {
+        "entities": [
+            "function__bfd_xcoff_slurp_armap"
+        ],
+        "lines": [
+            1220
+        ]
+    },
+    "bfd/coff64-rs6000.c": {
+        "entities": [
+            "function_xcoff64_slurp_armap"
+        ],
+        "lines": [
+            1893
+        ]
+    }
+}

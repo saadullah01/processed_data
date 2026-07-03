@@ -1,0 +1,85 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 2
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5742878135943168
+
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7f56cdf649e6
+Crash State:
+  cdma2k_message_HANDOFF_DIR
+  cdma2k_message_decode
+  dissect_cdma2k
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_wireshark&range=201811060219:201811070219
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5742878135943168
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """ClusterFuzz has detected this issue as fixed in range 201812030255:201812040256.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5742878135943168
+
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7f56cdf649e6
+Crash State:
+  cdma2k_message_HANDOFF_DIR
+  cdma2k_message_decode
+  dissect_cdma2k
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_wireshark&range=201811060219:201811070219
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_wireshark&range=201812030255:201812040256
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5742878135943168
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 3: """ClusterFuzz testcase 5742878135943168 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

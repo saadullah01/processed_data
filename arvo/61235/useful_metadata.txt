@@ -1,0 +1,21 @@
+Project: jq
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: jq_fuzz_compile
+Job Type: libfuzzer_asan_jq
+Platform Id: linux
+
+Crash Address:
+Crash State:
+  decUnitCompare
+  decCompare
+  decCompareOp
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5359579771568128 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,16 @@
+{
+    "src/fuzzer/mode_padding.cpp": {
+        "entities": [
+            "function_ref_oneandzero_unpad"
+        ],
+        "lines": [
+            62
+        ]
+    },
+    "src/tests/datpad.vec": {
+        "entities": [],
+        "lines": [
+            102
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "src/decode.c": {
+        "entities": [
+            "function_decode_preR13_entities"
+        ],
+        "lines": [
+            6945,
+            6916
+        ]
+    }
+}

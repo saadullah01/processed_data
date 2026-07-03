@@ -1,0 +1,13 @@
+{
+    "src/protocols/tacacs/decode.c": {
+        "entities": [
+            "function_tacacs_decode_field",
+            "function_tacacs_decode_args"
+        ],
+        "lines": [
+            186,
+            91,
+            100
+        ]
+    }
+}

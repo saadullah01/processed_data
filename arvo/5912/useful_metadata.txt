@@ -1,0 +1,40 @@
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fz_drop_imp
+  fz_drop_stream
+  pdf_open_raw_filter
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=201802010620:201802020613
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4806586980630528
+
+This was reported upstream at https://bugs.ghostscript.com/show_bug.cgi?id=698986
+
+Fixed in http://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=dca5cca4e129ab1e424ec86f5ceb325e7ee3d8cd;hp=86b5034359a45254e1f07eca84469db0d44005ad
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fz_drop_imp
+  fz_drop_stream
+  pdf_open_raw_filter
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=201802010620:201802020613
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=201802060652:201802070139
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4806586980630528

@@ -1,0 +1,10 @@
+{
+    "lib/jxl/modular/transform/squeeze.cc": {
+        "entities": [
+            "function_InvSqueeze"
+        ],
+        "lines": [
+            295
+        ]
+    }
+}

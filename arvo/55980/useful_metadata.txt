@@ -1,0 +1,29 @@
+Project: libxml2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Comment 1:
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: xml
+Job Type: libfuzzer_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x621000009d00
+Crash State:
+  xmlParseTryOrFinish
+  xmlParseChunk
+  xml.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+ClusterFuzz testcase 6734554313654272 is verified as fixed
+
+Comment 3:
+This bug has been fixed. It has been opened to the public.

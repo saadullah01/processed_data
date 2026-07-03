@@ -1,0 +1,23 @@
+Project: opensips
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 9
+Severity: Medium
+
+Project: opensips
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_uri_parser
+Job Type: libfuzzer_asan_opensips
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 9
+Crash Address: 0x603000000176
+Crash State:
+  parse_uri
+  fuzz_uri_parser.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_uri_parser from making much progress. Fixing this will allow more bugs to be found.
+
+Severity: Medium (although the "urn:" overflow is possible, it will most often overflow PKG or SHM memory, which will never lead to a crash)
+Fix availability: 3.1.8+, 3.2.5+

@@ -1,0 +1,10 @@
+{
+    "src/hunspell/affixmgr.cxx": {
+        "entities": [
+            "function_AffixMgr::compound_check"
+        ],
+        "lines": [
+            1879
+        ]
+    }
+}

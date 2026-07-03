@@ -1,0 +1,19 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 5
+Severity: High
+
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 5
+Crash Address: 0x607000000700
+Crash State:
+  dissect_rf4ce_nwk_common
+  dissect_rf4ce_nwk_heur
+  dissector_try_heuristic
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

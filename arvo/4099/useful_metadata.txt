@@ -1,0 +1,20 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzer: libFuzzer_harfbuzz_hb-fuzzer
+Fuzz target binary: hb-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+Crash Address:
+Crash State:
+  hb_buffer_t::_unsafe_to_break_set_mask
+  apply_stch
+  postprocess_glyphs_arabic
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Fixed in commit: c4f4c0a2faab0635dd2ab3078243994ad3066287
+This was a short-lived issue.  Was not released in any releases.

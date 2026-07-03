@@ -1,0 +1,19 @@
+Project: sudo
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+
+Project: sudoers
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_sudoers
+Job Type: libfuzzer_asan_sudoers
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  expand_include
+  push_include
+  sudoersparse
+  
+Sanitizer: address (ASAN)

@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ieee1905.c": {
+        "entities": [
+            "function_ieee1905_fragment_hash"
+        ],
+        "lines": [
+            8315
+        ]
+    }
+}

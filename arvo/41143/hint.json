@@ -1,0 +1,17 @@
+{
+    "cpp/src/arrow/array/validate.cc": {
+        "entities": [
+            "method_ValidateArrayImpl::ValidateOffsets",
+            "struct_ValidateArrayImpl"
+        ],
+        "lines": [
+            564
+        ]
+    },
+    "testing": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

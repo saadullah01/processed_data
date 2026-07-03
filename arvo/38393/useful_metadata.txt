@@ -1,0 +1,22 @@
+Project: file
+Fuzzing Engine: libFuzzer
+Fuzz Target: magic_fuzzer
+Job Type: libfuzzer_asan_i386_file
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x02353d80
+Crash State:
+  cdf_read_property_info
+  cdf_unpack_summary_info
+  cdf_check_summary_info
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer magic_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5677554623709184 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

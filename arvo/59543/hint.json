@@ -1,0 +1,10 @@
+{
+    "encoder/ih264e_process.c": {
+        "entities": [
+            "function_ih264e_process_thread"
+        ],
+        "lines": [
+            2621
+        ]
+    }
+}

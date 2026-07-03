@@ -1,0 +1,22 @@
+Project: hdf5
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: hdf5
+Fuzzing Engine: libFuzzer
+Fuzz Target: h5_extended_fuzzer
+Job Type: libfuzzer_ubsan_hdf5
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x353535323352
+Crash State:
+  H5FL__blk_gc_list
+  H5FL_garbage_coll
+  H5FL_term_package
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,25 @@
+gpac:fuzz_m2ts_probe: Heap-use-after-free in gf_m2ts_demux_del
+
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_m2ts_probe
+Job Type: libfuzzer_asan_gpac
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x51300000004c
+Crash State:
+  gf_m2ts_demux_del
+  gf_m2ts_probe_buffer
+  gf_m2ts_probe_file
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5758952853274624 is verified as fixed
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)

@@ -1,0 +1,27 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Use-of-uninitialized-value in ff_hevc_hls_filter
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_hevc_hls_filter
+  ff_hevc_hls_filters
+  decode_nal_units
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5427736120721408 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

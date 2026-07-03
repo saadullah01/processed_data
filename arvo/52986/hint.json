@@ -1,0 +1,10 @@
+{
+    "devices/vector/gdevpdtb.c": {
+        "entities": [
+            "function_pdf_base_font_alloc"
+        ],
+        "lines": [
+            329
+        ]
+    }
+}

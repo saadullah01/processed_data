@@ -1,0 +1,10 @@
+{
+    "gdal/ogr/ogrsf_frmts/avc/avc_bin.cpp": {
+        "entities": [
+            "function__AVCBinReadOpenTable"
+        ],
+        "lines": [
+            2088
+        ]
+    }
+}

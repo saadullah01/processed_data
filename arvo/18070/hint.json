@@ -1,0 +1,11 @@
+{
+    "usrsctplib/netinet/sctp_asconf.c": {
+        "entities": [
+            "function_sctp_process_asconf_delete_ip"
+        ],
+        "lines": [
+            34,
+            343
+        ]
+    }
+}

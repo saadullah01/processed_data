@@ -1,0 +1,10 @@
+{
+    "libxslt/xslt.c": {
+        "entities": [
+            "function_xsltPreprocessStylesheet"
+        ],
+        "lines": [
+            3498
+        ]
+    }
+}

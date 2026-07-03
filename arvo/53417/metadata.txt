@@ -1,0 +1,58 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6447569450696704
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs15init
+Job Type: afl_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7f6c904a84e0
+Crash State:
+  sc_path_print
+  sc_select_file
+  sc_pkcs15init_rmdir
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_opensc&range=202203080601:202203090601
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6447569450696704
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 3: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """ClusterFuzz testcase 6447569450696704 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_opensc&range=202303030626:202303040600
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

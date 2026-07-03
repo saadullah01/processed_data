@@ -1,0 +1,11 @@
+{
+    "src/lib/lwan-config.c": {
+        "entities": [
+            "function_lex_multiline_string"
+        ],
+        "lines": [
+            337,
+            289
+        ]
+    }
+}

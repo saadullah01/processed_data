@@ -1,0 +1,15 @@
+{
+    "xmlreader.c": {
+        "entities": [
+            "function_xmlTextReaderValidateEntity"
+        ],
+        "lines": [
+            1033,
+            1004,
+            1486,
+            1071,
+            1049,
+            1086
+        ]
+    }
+}

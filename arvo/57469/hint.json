@@ -1,0 +1,12 @@
+{
+    "HTMLparser.c": {
+        "entities": [
+            "function_htmlParseSystemLiteral",
+            "function_htmlParsePubidLiteral"
+        ],
+        "lines": [
+            3065,
+            3010
+        ]
+    }
+}

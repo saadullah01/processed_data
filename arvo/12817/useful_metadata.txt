@@ -1,0 +1,16 @@
+Project: libarchive
+Fuzzer: afl_libarchive_fuzzer
+Fuzz target binary: libarchive_fuzzer
+Job Type: afl_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x615000000a00
+Crash State:
+  read_bits_16
+  decode_number
+  parse_tables
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,10 @@
+{
+    "src/kar.cpp": {
+        "entities": [
+            "function_KAr::openArchive"
+        ],
+        "lines": [
+            164
+        ]
+    }
+}

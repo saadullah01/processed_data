@@ -1,0 +1,15 @@
+Project: hoextdown
+Fuzzing Engine: afl
+Fuzz Target: hoedown_fuzzer
+Job Type: afl_asan_hoextdown
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6060000003c0
+Crash State:
+  is_codefence
+  parse_listitem
+  parse_definition
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+ClusterFuzz testcase 4826354641272832 is verified as fixed
+This bug has been fixed for 30 days. It has been opened to the public.

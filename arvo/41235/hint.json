@@ -1,0 +1,10 @@
+{
+    "lib/jxl/dec_ans.h": {
+        "entities": [
+            "method_CheckANSFinalState"
+        ],
+        "lines": [
+            235
+        ]
+    }
+}

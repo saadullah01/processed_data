@@ -1,0 +1,20 @@
+Project: cpython3
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_sre_match
+Job Type: libfuzzer_msan_cpython3
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  _PyFunction_FromConstructor
+  PyEval_EvalCode
+  exec_code_in_module
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_cpython3&range=202308220602:202308230613
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5086904889245696
+Issue filed automatically.
+https://github.com/python/cpython/pull/108296#issuecomment-1690683228 is the regressor, I have left a comment
+ClusterFuzz testcase 5086904889245696 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_cpython3&range=202308230613:202308240620
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

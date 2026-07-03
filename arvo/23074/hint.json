@@ -1,0 +1,11 @@
+{
+    "opcodes/cgen-dis.c": {
+        "entities": [
+            "function_hash_insn_array"
+        ],
+        "lines": [
+            1,
+            100
+        ]
+    }
+}

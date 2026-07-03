@@ -1,0 +1,33 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_WMAVOICE_fuzzer: Use-of-uninitialized-value in synth_superframe
+
+Reproducible
+Stability-Memory-MemorySanitizer
+ClusterFuzz
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_WMAVOICE_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  synth_superframe
+  wmavoice_decode_packet
+  decode_receive_frame_internal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 4806127362048000
+
+ClusterFuzz testcase 4806127362048000 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

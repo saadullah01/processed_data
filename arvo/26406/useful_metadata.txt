@@ -1,0 +1,28 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_fuzzer
+Job Type: libfuzzer_msan_c-blosc2
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  tinfl_decompress
+  mz_inflate
+  mz_uncompress
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This looks like a possible memory sanitizer bug in miniz.
+
+ClusterFuzz testcase 4921954995535872 is verified as fixed.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

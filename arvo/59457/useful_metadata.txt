@@ -1,0 +1,21 @@
+Project: openexr
+Fuzzing Engine: afl
+Fuzz Target: openexr_exrcorecheck_fuzzer
+Job Type: afl_asan_openexr
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x606000000120
+Crash State:
+  LossyDctDecoder_execute
+  DwaCompressor_uncompress
+  internal_exr_undo_dwaa
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer openexr_exrcorecheck_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4597177545261056 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

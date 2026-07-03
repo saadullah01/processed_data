@@ -1,0 +1,21 @@
+Project: libsndfile
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: libsndfile
+Fuzzing Engine: libFuzzer
+Fuzz Target: sndfile_fuzzer
+Job Type: libfuzzer_asan_libsndfile
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x629000004a04
+Crash State:
+  psf_binheader_readf
+  wavlike_read_cart_chunk
+  wav_read_header
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer sndfile_fuzzer from making much progress. Fixing this will allow more bugs to be found.

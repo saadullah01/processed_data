@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/stun.c": {
+        "entities": [
+            "function_ndpi_int_check_stun"
+        ],
+        "lines": [
+            314
+        ]
+    }
+}

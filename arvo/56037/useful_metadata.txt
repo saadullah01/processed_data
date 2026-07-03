@@ -1,0 +1,18 @@
+Project: libgit2
+Fuzzing Engine: honggfuzz
+Fuzz Target: download_refs_fuzzer
+Job Type: honggfuzz_asan_libgit2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x631000038a20
+Crash State:
+  set_data
+  ref_pkt
+  git_pkt_parse_line
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer download_refs_fuzzer from making much progress.

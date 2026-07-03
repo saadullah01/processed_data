@@ -1,0 +1,11 @@
+{
+    "src/pkcs15init/pkcs15-lib.c": {
+        "entities": [
+            "function_sc_pkcs15init_delete_by_path"
+        ],
+        "lines": [
+            625,
+            588
+        ]
+    }
+}

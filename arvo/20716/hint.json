@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-dnie.c": {
+        "entities": [
+            "function_dnie_uncompress"
+        ],
+        "lines": [
+            944
+        ]
+    }
+}

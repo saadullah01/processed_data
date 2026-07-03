@@ -1,0 +1,28 @@
+Project: libdwarf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_rng
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x60400000013c
+Crash State:
+  _dwarf_memcpy_noswap_bytes
+  dwarf_get_rnglist_offset_index_value
+  fuzz_rng.c
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5974595378479104 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

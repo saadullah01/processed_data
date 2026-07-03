@@ -1,0 +1,12 @@
+{
+    "src/in_dxf.c": {
+        "entities": [
+            "function_new_object"
+        ],
+        "lines": [
+            10856,
+            10877,
+            11200
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "fuzzing/color_conversion_fuzzer.cc": {
+        "entities": [
+            "function_read_plane",
+            "function_read_plane_interleaved"
+        ],
+        "lines": [
+            64,
+            87
+        ]
+    }
+}

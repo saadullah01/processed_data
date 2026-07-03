@@ -1,0 +1,18 @@
+Project: leptonica
+Fuzzing Engine: honggfuzz
+Fuzz Target: ccbord_fuzzer
+Job Type: honggfuzz_asan_leptonica
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x612000000924
+Crash State:
+  findNextBorderPixel
+  pixGetHoleBorder
+  pixGetCCBorders
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+believe it is fixed: Check pix boundary when looking for the next pixel.

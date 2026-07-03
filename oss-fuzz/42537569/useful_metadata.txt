@@ -1,0 +1,18 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_APAC_fuzzer: Use-of-uninitialized-value in get_code
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_APAC_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  get_code
+  apac_decode
+  decode_receive_frame_internal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

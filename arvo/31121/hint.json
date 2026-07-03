@@ -1,0 +1,27 @@
+{
+    "epan/dissectors/packet-vj-comp.c": {
+        "entities": [
+            "function_proto_register_vjc",
+            "function_dissect_vjc_uncomp",
+            "function_dissect_vjc_comp"
+        ],
+        "lines": [
+            384,
+            768,
+            354,
+            578,
+            293,
+            391,
+            329,
+            377,
+            269,
+            238,
+            398,
+            50,
+            406,
+            280,
+            249,
+            90
+        ]
+    }
+}

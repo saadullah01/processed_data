@@ -1,0 +1,90 @@
+{
+    "quickjs-libc.c": {
+        "entities": [
+            "function_worker_func"
+        ],
+        "lines": [
+            3274,
+            3300
+        ]
+    },
+    "quickjs.c": {
+        "entities": [
+            "function_JS_RunModule",
+            "struct_JSRuntime",
+            "function_js_parse_program",
+            "function_js_evaluate_module",
+            "function_JS_WriteModule",
+            "function_JS_EvalFunctionInternal",
+            "function_js_dynamic_import_job",
+            "function_JS_ReadModule",
+            "function___JS_EvalInternal",
+            "enum_JSPromiseStateEnum",
+            "struct_JSFunctionDef",
+            "function_js_new_module_def",
+            "function_js_dynamic_import",
+            "struct_JSModuleDef",
+            "function_js_free_module_def",
+            "function_js_mark_module_def",
+            "function_js_parse_unary",
+            "function_js_free_modules",
+            "function_js_link_module",
+            "function_js_parse_statement_or_decl"
+        ],
+        "lines": [
+            26754,
+            19716,
+            2192,
+            789,
+            2202,
+            283,
+            35226,
+            27941,
+            27949,
+            1198,
+            26173,
+            27841,
+            33217,
+            46148,
+            24774,
+            26703,
+            35153,
+            33373,
+            27614,
+            34142,
+            27872,
+            46178,
+            26724,
+            27624,
+            33387,
+            33260,
+            27888,
+            27764,
+            33396,
+            765
+        ]
+    },
+    "quickjs.h": {
+        "entities": [],
+        "lines": [
+            902,
+            831
+        ]
+    },
+    "run-test262.c": {
+        "entities": [
+            "function_eval_buf"
+        ],
+        "lines": [
+            1196,
+            1174,
+            1183
+        ]
+    },
+    "test262.conf": {
+        "entities": [],
+        "lines": [
+            195
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  htab_find_with_hash
+  print_insn32
+  print_insn_nds32
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

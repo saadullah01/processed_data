@@ -1,0 +1,17 @@
+{
+    "src/function/aggregate/distributive/bitstring_agg.cpp": {
+        "entities": [
+            "struct_BitStringAggOperation",
+            "function_BitStringAggOperation::GetRange"
+        ],
+        "lines": [
+            162,
+            93,
+            6
+        ]
+    },
+    "test/fuzzer/sqlsmith/bitstring_agg_overflow.test": {
+        "entities": [],
+        "lines": []
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "lib/compress/zstd_compress.c": {
+        "entities": [
+            "function_ZSTD_entropyCompressSeqStore_internal",
+            "function_ZSTD_compressSequences_internal",
+            "function_ZSTD_entropyCompressSeqStore",
+            "function_ZSTD_compressSequences"
+        ],
+        "lines": [
+            2595,
+            6182,
+            6214,
+            2702,
+            6159,
+            2639,
+            6259,
+            6231,
+            6203
+        ]
+    },
+    "lib/compress/zstd_compress_internal.h": {
+        "entities": [
+            "function_ZSTD_rleCompressBlock",
+            "function_ZSTD_noCompressBlock"
+        ],
+        "lines": [
+            513,
+            523
+        ]
+    },
+    "lib/compress/zstd_compress_literals.c": {
+        "entities": [
+            "function_ZSTD_noCompressLiterals",
+            "function_ZSTD_compressLiterals"
+        ],
+        "lines": [
+            41,
+            106
+        ]
+    }
+}

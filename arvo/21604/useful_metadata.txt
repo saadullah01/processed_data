@@ -1,0 +1,30 @@
+Project: poppler
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free WRITE 4
+Severity: High
+
+Project: poppler
+Fuzzing Engine: honggfuzz
+Fuzz Target: pdf_fuzzer
+Job Type: honggfuzz_asan_poppler
+Platform Id: linux
+
+Crash Type: Heap-use-after-free WRITE 4
+Crash Address: 0x608000007ac8
+Crash State:
+  int std::__1::__cxx_atomic_fetch_sub<int>
+  std::__1::__atomic_base<int, true>::operator--
+  Object::free
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5672947982532608 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

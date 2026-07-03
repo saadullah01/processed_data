@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decoders/RawDecoder.cpp": {
+        "entities": [
+            "method_RawDecoder::decodeUncompressed"
+        ],
+        "lines": [
+            66
+        ]
+    }
+}

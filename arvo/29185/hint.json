@@ -1,0 +1,10 @@
+{
+    "wolfcrypt/src/sp_int.c": {
+        "entities": [
+            "function_sp_mont_norm"
+        ],
+        "lines": [
+            12290
+        ]
+    }
+}

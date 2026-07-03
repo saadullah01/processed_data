@@ -1,0 +1,58 @@
+Project: selinux
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6604237280772096
+
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x612000000bc8
+Crash State:
+  cil_classorder_to_policydb
+  __cil_policydb_init
+  cil_binary_create_allocated_pdb
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_asan_selinux&revision=202101090604
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6604237280772096
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 3: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """ClusterFuzz testcase 6604237280772096 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_selinux&range=202105041800:202105050000
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

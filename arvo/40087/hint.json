@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/quic.c": {
+        "entities": [
+            "function_decrypt_initial_packet"
+        ],
+        "lines": [
+            985
+        ]
+    }
+}

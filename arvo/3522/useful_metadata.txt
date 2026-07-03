@@ -1,0 +1,27 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: zstd
+Fuzzer: libFuzzer_zstd_block_round_trip
+Fuzz target binary: block_round_trip
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x62a000005ae8
+Crash State:
+  ZSTD_storeLastLiterals
+  ZSTD_compressBlock_internal
+  ZSTD_compressContinue_internal
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+If the srcSize is 2^n + 1, then ZSTD_adjustCParams() will give a window log of n, which means that the source has to be split up into a block of 2^n and a block of 1. It can only effect users of the block API, since the frame APIs will limit the block sizes correctly. *Technically* it is an incorrect usage of the block API, but the behavior is surprising, since the user already checked that the size is less than 128 KiB.
+
+* I will fix the bug in the ZSTD_adjustCParams() function.
+* I will also change the block compression API to return an error code if the source size is too large, which will make the API slightly more user friendly.

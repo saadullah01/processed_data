@@ -1,0 +1,30 @@
+Project: skia
+Fuzzer: libFuzzer_skia_animated_image_decode
+Fuzz target binary: animated_image_decode
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  SkAnimatedImage::decodeNextFrame
+  SkAnimatedImage::SkAnimatedImage
+  SkAnimatedImage::Make
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+Fixed in https://skia-review.googlesource.com/c/skia/+/106930
+
+ClusterFuzz has detected this issue as fixed in range 201802130706:201802140700.
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  SkAnimatedImage::decodeNextFrame
+  SkAnimatedImage::SkAnimatedImage
+  SkAnimatedImage::Make
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201802130706:201802140700
+
+ClusterFuzz testcase 5526593989509120 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

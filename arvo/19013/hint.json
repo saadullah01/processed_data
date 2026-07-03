@@ -1,0 +1,11 @@
+{
+    "src/lib/lwan-template.c": {
+        "entities": [
+            "function_post_process_template"
+        ],
+        "lines": [
+            1004,
+            1030
+        ]
+    }
+}

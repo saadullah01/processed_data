@@ -1,0 +1,10 @@
+{
+    "buf.c": {
+        "entities": [
+            "function_xmlBufResetInput"
+        ],
+        "lines": [
+            1017
+        ]
+    }
+}

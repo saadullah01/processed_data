@@ -1,0 +1,20 @@
+Project: yara
+Fuzzer: libFuzzer_yara_rules_fuzzer
+Fuzz target binary: rules_fuzzer
+Job Type: libfuzzer_ubsan_yara
+Platform Id: linux
+Crash Type: Incorrect-function-pointer-type
+Crash Address:
+Crash State:
+  _start
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+Regressed: 201710300450:201710310453
+Reproducer Testcase: 4674537548414976
+
+ClusterFuzz has detected this issue as fixed in range 201710310453:201711010018
+Fixed: 201710310453:201711010018
+
+ClusterFuzz testcase 4674537548414976 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

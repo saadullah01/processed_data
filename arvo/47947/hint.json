@@ -1,0 +1,10 @@
+{
+    "src/io/edgelist.c": {
+        "entities": [
+            "function_igraph_read_graph_edgelist"
+        ],
+        "lines": [
+            90
+        ]
+    }
+}

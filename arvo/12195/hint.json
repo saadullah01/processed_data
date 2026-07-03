@@ -1,0 +1,23 @@
+{
+    "coders/tiff.c": {
+        "entities": [],
+        "lines": [
+            1,
+            3251,
+            3132,
+            3433
+        ]
+    },
+    "magick/memory.h": {
+        "entities": [],
+        "lines": [
+            46
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    }
+}

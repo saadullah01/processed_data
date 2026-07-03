@@ -1,0 +1,19 @@
+{
+    "src/libraw_datastream.cpp": {
+        "entities": [
+            "method_LibRaw_buffer_datastream::gets"
+        ],
+        "lines": [
+            432,
+            422
+        ]
+    },
+    "src/metadatmisc_parsers.cpp": {
+        "entities": [
+            "function_LibRaw::parse_rollei"
+        ],
+        "lines": [
+            304
+        ]
+    }
+}

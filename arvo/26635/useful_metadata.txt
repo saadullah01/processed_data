@@ -1,0 +1,16 @@
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_bfd
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 12
+Crash Address: 0x615000000280
+Crash State:
+  _bfd_vms_save_sized_string
+  _bfd_vms_save_counted_string
+  _bfd_vms_slurp_eisd
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+ClusterFuzz testcase 5191938237792256 is verified as fixed
+This bug has been fixed for 30 days. It has been opened to the public.

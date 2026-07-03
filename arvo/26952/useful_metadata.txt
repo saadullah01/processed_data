@@ -1,0 +1,22 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: wireshark
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-double-free
+Crash Address: 0x611001797e80
+Crash State:
+  wmem_simple_free_all
+  wmem_leave_packet_scope
+  fuzzshark.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

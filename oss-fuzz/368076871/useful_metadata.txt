@@ -1,0 +1,26 @@
+mruby:mruby_fuzzer: Segv on unknown address in udiv
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  udiv
+  mrb_bint_mod
+  mrb_vm_exec
+
+Sanitizer: address (ASAN)
+
+Fixed by 51fd0657226248a99536f6c13f557f76d1c78f99
+
+ClusterFuzz testcase 4764129607352320 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: mruby

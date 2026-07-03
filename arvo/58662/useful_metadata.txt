@@ -1,0 +1,15 @@
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_i386_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0xf307cefa
+Crash State:
+  void sort_r_simple<>
+  bool OT::ClassDef::serialize<hb_sorted_array_t<hb_pair_t<unsigned int, unsigned 
+  OT::ClassDef_remap_and_serialize
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

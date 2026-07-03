@@ -1,0 +1,14 @@
+{
+    "source/fitz/draw-device.c": {
+        "entities": [
+            "function_fz_draw_clip_stroke_path",
+            "function_fz_draw_clip_path"
+        ],
+        "lines": [
+            827,
+            843,
+            763,
+            751
+        ]
+    }
+}

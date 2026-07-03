@@ -1,0 +1,20 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_process_packet
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffda36b6980
+Crash State:
+  tlsCheckUncommonALPN
+  processClientServerHello
+  processTLSBlock
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

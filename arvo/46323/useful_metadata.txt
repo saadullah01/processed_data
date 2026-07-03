@@ -1,0 +1,32 @@
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: xml
+Job Type: afl_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x61500003d618
+Crash State:
+  xmlFreeNodeList
+  xmlXIncludeDoProcess
+  xmlXIncludeProcessTreeFlagsData
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+A local git-bisect reveals that this regressed with the following commit:
+
+$ git bisect good
+7618a3b15947cd28a060bde24992f8a96256d7d4 is the first bad commit
+commit 7618a3b15947cd28a060bde24992f8a96256d7d4
+Author: Nick Wellnhofer <>
+Date:   Sun Feb 6 21:11:38 2022 +0100
+
+    Make xmlStaticCopyNode non-recursive
+
+ tree.c | 41 +++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 39 insertions(+), 2 deletions(-)
+
+This should be fixed here:
+41afa89fc94a6b1cef0d0cb19263875ecf08adb6

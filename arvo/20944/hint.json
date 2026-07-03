@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-glyf-table.hh": {
+        "entities": [
+            "struct_glyf"
+        ],
+        "lines": [
+            847
+        ]
+    }
+}

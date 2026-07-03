@@ -1,0 +1,15 @@
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_miff_fuzzer
+Fuzz target binary: encoder_miff_fuzzer
+Job Type: libfuzzer_msan_imagemagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ParseGeometry
+  IsGeometry
+  GetPathComponent
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+ClusterFuzz has detected this issue as fixed in range 201801270531:201801280529.
+ClusterFuzz testcase 5690482123341824 is verified as fixed, so closing issue as verified.

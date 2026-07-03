@@ -1,0 +1,11 @@
+{
+    "lib/fuzzing/fuzz_lzxpress_round_trip.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            27,
+            38
+        ]
+    }
+}

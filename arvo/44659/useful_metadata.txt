@@ -1,0 +1,15 @@
+Project: unicorn
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_emu_x86_32
+Job Type: libfuzzer_asan_unicorn
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x62e100014ea6
+Crash State:
+  pcmpxstrx
+  helper_pcmpestri_xmm_x86_64
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

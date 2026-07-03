@@ -1,0 +1,10 @@
+{
+    "src/tiffio.c": {
+        "entities": [
+            "function_pixReadFromTiffStream"
+        ],
+        "lines": [
+            618
+        ]
+    }
+}

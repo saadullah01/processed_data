@@ -1,0 +1,22 @@
+Project: perfetto
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: perfetto
+Fuzzer: libFuzzer_perfetto_trace_processor_fuzzer
+Fuzz target binary: trace_processor_fuzzer
+Job Type: libfuzzer_asan_perfetto
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x62d000020d70
+Crash State:
+  perfetto::trace_processor::fuchsia_trace_utils::ReadTimestamp
+  perfetto::trace_processor::FuchsiaTraceParser::ParseTracePacket
+  perfetto::trace_processor::TraceSorter::SortAndExtractEventsBeyondWindow
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

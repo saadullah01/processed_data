@@ -1,0 +1,16 @@
+Project: arduinojson
+Fuzzing Engine: libFuzzer
+Fuzz Target: json_fuzzer
+Job Type: libfuzzer_msan_arduinojson
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  void ArduinoJsonNUMBER_71::Utf8::encodeCodepoint<ArduinoJsonNUMBER_71::StringCop
+  ArduinoJsonNUMBER_71::JsonDeserializer<ArduinoJsonNUMBER_71::BoundedReader<unsig
+  ArduinoJsonNUMBER_71::JsonDeserializer<ArduinoJsonNUMBER_71::BoundedReader<unsig
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,38 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: skia
+Fuzzer: libFuzzer_skia_path_deserialize
+Fuzz target binary: path_deserialize
+Job Type: libfuzzer_asan_skia
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x603000000114
+Crash State:
+  SkPath::moveTo
+  SkPath::readFromMemory_EQ4
+  SkPath::readFromMemory
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 5078673775394816
+
+The following revision refers to this bug:
+  commit 61e30b2e81fe8d02d20978daeff28bc06ba584e7
+
+add checks for enough data in path deserialization
+
+[modify] src/core/SkPath_serial.cpp
+
+Bug: oss-fuzz:6501
+Change-Id: Ie77d57268947be2cc56f846ce21f154e0d469112
+
+ClusterFuzz has detected this issue as fixed in range 201802220715:201802230716
+
+ClusterFuzz testcase 5078673775394816 is verified as fixed, so closing issue as verified.

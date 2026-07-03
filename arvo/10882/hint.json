@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ositp.c": {
+        "entities": [
+            "function_ositp_decode_CR_CC"
+        ],
+        "lines": [
+            1576
+        ]
+    }
+}

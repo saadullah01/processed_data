@@ -1,0 +1,10 @@
+{
+    "libsepol/src/policydb_validate.c": {
+        "entities": [
+            "function_validate_cond_list"
+        ],
+        "lines": [
+            881
+        ]
+    }
+}

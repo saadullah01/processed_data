@@ -1,0 +1,28 @@
+{
+    "bfd/cofflink.c": {
+        "entities": [
+            "function__bfd_coff_link_input_bfd"
+        ],
+        "lines": [
+            1382
+        ]
+    },
+    "bfd/linker.c": {
+        "entities": [
+            "function_unwrap_hash_lookup",
+            "function_bfd_wrapped_link_hash_lookup"
+        ],
+        "lines": [
+            618,
+            532
+        ]
+    },
+    "binutils/dlltool.c": {
+        "entities": [
+            "function_scan_filtered_symbols"
+        ],
+        "lines": [
+            1481
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+Project: libraw
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 4
+Severity: High
+
+Project: libraw
+Fuzzing Engine: libFuzzer
+Fuzz Target: libraw_fuzzer
+Job Type: libfuzzer_asan_libraw
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7ffd50eac900
+Crash State:
+  LibRaw::xtrans_interpolate
+  LibRaw::dcraw_process
+  libraw_fuzzer.cc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libraw_fuzzer from making much progress. Fixing this will allow more bugs to be found.

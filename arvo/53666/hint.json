@@ -1,0 +1,24 @@
+{
+    "src/include/k5-unicode.h": {
+        "entities": [],
+        "lines": [
+            127
+        ]
+    },
+    "src/lib/krb5/krb/chpw.c": {
+        "entities": [
+            "function_krb5_chpw_message"
+        ],
+        "lines": [
+            493,
+            477
+        ]
+    },
+    "src/lib/krb5/unicode/ucstr.c": {
+        "entities": [],
+        "lines": [
+            18,
+            100
+        ]
+    }
+}

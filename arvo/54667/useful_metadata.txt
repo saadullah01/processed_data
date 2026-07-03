@@ -1,0 +1,22 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: High
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_addr2line
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x611000101078
+Crash State:
+  parse_module
+  _bfd_vms_find_nearest_line
+  find_address_in_section
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

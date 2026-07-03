@@ -1,0 +1,10 @@
+{
+    "lib/compress/zstd_compress.c": {
+        "entities": [
+            "function_ZSTD_adjustCParams_internal"
+        ],
+        "lines": [
+            651
+        ]
+    }
+}

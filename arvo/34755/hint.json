@@ -1,0 +1,10 @@
+{
+    "src/ucl_parser.c": {
+        "entities": [
+            "function_ucl_expand_variable"
+        ],
+        "lines": [
+            520
+        ]
+    }
+}

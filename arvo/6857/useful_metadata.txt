@@ -1,0 +1,41 @@
+Project: gdal
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: gdal
+Fuzzer: libFuzzer_gdal_isce_fuzzer
+Fuzz target binary: isce_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x604000000790
+Crash State:
+  CSLFetchNameValue
+  ISCEDataset::Open
+  GDALOpenEx
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: 201803110652:201803120550
+
+ClusterFuzz has detected this issue as fixed in range 201803120550:201803130552.
+Project: gdal
+Fuzzer: libFuzzer_gdal_isce_fuzzer
+Fuzz target binary: isce_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x604000000790
+Crash State:
+  CSLFetchNameValue
+  ISCEDataset::Open
+  GDALOpenEx
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: 201803110652:201803120550
+Fixed: 201803120550:201803130552
+
+ClusterFuzz testcase 6042195917275136 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

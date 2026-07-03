@@ -1,0 +1,22 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_translate_fuzzer
+Fuzz target binary: gdal_translate_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x7ffbbbb6b9d8
+Crash State:
+  CPLErr GDALResampleChunk32R_ConvolutionT<float, false>
+  GDALResampleChunk32R_Convolution
+  GDALRasterBand::RasterIOResampled
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase ID: 5641758948982784
+Issue filed automatically.
+
+Fixed per changeset 40653 + 40654.
+Old bug
+
+Crash detected as fixed in range 201711060657:201711070642.
+ClusterFuzz testcase 5641758948982784 is verified as fixed, so closing issue as verified.
+This bug has been fixed for 30 days. It has been opened to the public.

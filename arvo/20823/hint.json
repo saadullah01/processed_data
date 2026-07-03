@@ -1,0 +1,19 @@
+{
+    "src/include/ndpi_main.h": {
+        "entities": [],
+        "lines": [
+            131
+        ]
+    },
+    "src/lib/protocols/netbios.c": {
+        "entities": [
+            "function_ndpi_int_netbios_add_connection",
+            "function_ndpi_netbios_name_interpret"
+        ],
+        "lines": [
+            46,
+            80,
+            38
+        ]
+    }
+}

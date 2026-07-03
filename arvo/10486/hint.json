@@ -1,0 +1,10 @@
+{
+    "src/buffer.c": {
+        "entities": [
+            "function_ssh_buffer_unpack_va"
+        ],
+        "lines": [
+            1074
+        ]
+    }
+}

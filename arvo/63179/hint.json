@@ -1,0 +1,11 @@
+{
+    "src/lib/ndpi_serializer.c": {
+        "entities": [
+            "function_ndpi_serialize_string_int32"
+        ],
+        "lines": [
+            1496,
+            1512
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+Project: wireshark
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzshark_ip
+Job Type: libfuzzer_ubsan_wireshark
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  dissect_tcpopt_sack
+  call_dissector_through_handle
+  call_dissector_work
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

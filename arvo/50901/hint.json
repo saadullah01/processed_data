@@ -1,0 +1,11 @@
+{
+    "src/quicktimevideo.cpp": {
+        "entities": [
+            "method_QuickTimeVideo::tagDecoder"
+        ],
+        "lines": [
+            568,
+            620
+        ]
+    }
+}

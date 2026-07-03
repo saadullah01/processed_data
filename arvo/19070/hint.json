@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ieee1722.c": {
+        "entities": [
+            "function_dissect_1722_acf_lin"
+        ],
+        "lines": [
+            2832
+        ]
+    }
+}

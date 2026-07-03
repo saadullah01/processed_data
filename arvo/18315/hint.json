@@ -1,0 +1,10 @@
+{
+    "opcodes/rx-dis.c": {
+        "entities": [
+            "function_print_insn_rx"
+        ],
+        "lines": [
+            216
+        ]
+    }
+}

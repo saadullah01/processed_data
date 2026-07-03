@@ -1,0 +1,19 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzJPEGLoader
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+Crash Type: Bad-cast
+Crash Address: 0x7ffcef172f88
+Crash State:
+  Bad-cast to AK::Array<AK::TypeErasedParameter, 0>Gfx::read_start_of_scan
+  Gfx::parse_header
+  Gfx::decode_header
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High

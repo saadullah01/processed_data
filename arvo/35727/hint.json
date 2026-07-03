@@ -1,0 +1,10 @@
+{
+    "mrbgems/mruby-compiler/core/codegen.c": {
+        "entities": [
+            "function_genjmp2"
+        ],
+        "lines": [
+            444
+        ]
+    }
+}

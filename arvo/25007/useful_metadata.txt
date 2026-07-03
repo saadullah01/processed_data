@@ -1,0 +1,14 @@
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  dissect_btavdtp
+  call_dissector_work
+  dissector_try_uint_new
+
+Sanitizer: address (ASAN)

@@ -1,0 +1,14 @@
+{
+    "test/api/fonts/clusterfuzz-testcase-minimized-hb-set-fuzzer-6255224052514816": {
+        "entities": [],
+        "lines": []
+    },
+    "test/fuzzing/hb-set-fuzzer.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            33
+        ]
+    }
+}

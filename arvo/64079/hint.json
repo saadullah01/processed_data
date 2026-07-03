@@ -1,0 +1,12 @@
+{
+    "Userland/Libraries/LibGfx/ICC/TagTypes.cpp": {
+        "entities": [
+            "function_MultiLocalizedUnicodeTagData",
+            "function_MultiLocalizedUnicodeTagData::from_bytes"
+        ],
+        "lines": [
+            715,
+            694
+        ]
+    }
+}

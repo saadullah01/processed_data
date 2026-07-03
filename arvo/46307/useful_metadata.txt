@@ -1,0 +1,16 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x7f2d8489b4d8
+Crash State:
+  template_compose_group
+  compose_group_nonknockout_noblend_general
+  pdf14_compose_group
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

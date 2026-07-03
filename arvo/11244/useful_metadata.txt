@@ -1,0 +1,43 @@
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_asan_poppler
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x62e000000438
+Crash State:
+  XRefEntry::setFlag
+  Parser::makeStream
+  Parser::getObj
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer pdf_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201811030258:201811040300.
+
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_asan_poppler
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x62e000000438
+Crash State:
+  XRefEntry::setFlag
+  Parser::makeStream
+  Parser::getObj
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5721577681846272 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

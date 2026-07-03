@@ -1,0 +1,74 @@
+{
+    "encoder/drc_src/impd_drc_api.c": {
+        "entities": [
+            "function_impd_drc_enc_init"
+        ],
+        "lines": [
+            274
+        ]
+    },
+    "encoder/drc_src/impd_drc_enc.c": {
+        "entities": [
+            "function_impd_drc_gain_enc_init"
+        ],
+        "lines": [
+            192
+        ]
+    },
+    "encoder/drc_src/impd_drc_gain_calculator.c": {
+        "entities": [
+            "function_impd_drc_stft_drc_gain_calc_init"
+        ],
+        "lines": [
+            392,
+            18,
+            428
+        ]
+    },
+    "encoder/iusace_enc_main.c": {
+        "entities": [
+            "function_iusace_enc_init"
+        ],
+        "lines": [
+            557
+        ]
+    },
+    "encoder/ixheaace_api.c": {
+        "entities": [
+            "function_ia_usac_enc_init",
+            "function_ixheaace_init",
+            "function_ixheaace_create"
+        ],
+        "lines": [
+            3515,
+            3548,
+            1917,
+            3563
+        ]
+    },
+    "encoder/ixheaace_error_codes.h": {
+        "entities": [
+            "enum_ixheaace_error_codes"
+        ],
+        "lines": [
+            99
+        ]
+    },
+    "fuzzer/xaac_enc_fuzzer.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            382
+        ]
+    },
+    "test/encoder/ixheaace_error.c": {
+        "entities": [
+            "function_ia_enhaacplus_enc_error_handler_init"
+        ],
+        "lines": [
+            82,
+            260
+        ]
+    }
+}

@@ -1,0 +1,83 @@
+Project: icu
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5638982021152768
+
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: collator_rulebased_fuzzer
+Job Type: libfuzzer_msan_icu
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  isMatchAtCPBoundary
+  u_strFindFirst_66
+  icu_66::UnicodeString::indexOf
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_icu&range=201912111909:201912120345
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5638982021152768
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 3: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """Please reassign this bug to me and please also give me right to change the status."""
+
+-- Comment 5: """Also, I have no privilege to see the detail of https://oss-fuzz.com/testcase?key=5638982021152768"""
+
+-- Comment 6: """upstream bug https://unicode-org.atlassian.net/browse/ICU-20684"""
+
+-- Comment 7: """I somehow have no permission to change the Status or Owner of this bugs (and other ICU related security bugs). Can someone tell me how can I get such permission?"""
+
+-- Comment 8: """It fail on line 48
+ 42 static inline UBool
+  43 isMatchAtCPBoundary(const UChar *start, const UChar *match, const UChar *matchLimit, const UChar *limit) {
+  44     if(U16_IS_TRAIL(*match) && start!=match && U16_IS_LEAD(*(match-1))) {
+  45         /* the leading edge of the match is in the middle of a surrogate pair */
+  46         return FALSE;
+  47     }
+  48     if(U16_IS_LEAD(*(matchLimit-1)) && match!=limit && U16_IS_TRAIL(*matchLimit)) {
+  49         /* the trailing edge of the match is in the middle of a surrogate pair */
+  50         return FALSE;
+  51     }
+  52     return TRUE;
+  53 }
+"""
+
+-- Comment 9: """Fix is in https://github.com/unicode-org/icu/pull/1203 now"""
+
+-- Comment 10: """ClusterFuzz testcase 5638982021152768 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_icu&range=202007290256:202007292158
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

@@ -1,0 +1,13 @@
+Project: knot-dns
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_zscanner
+Job Type: libfuzzer_asan_knot-dns
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 2
+Crash Address: 0x7fff5e964a80
+Crash State:
+  parse
+  zs_parse_all
+  fuzz_zscanner.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

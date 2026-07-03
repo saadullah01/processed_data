@@ -1,0 +1,10 @@
+{
+    "src/mux/muxread.c": {
+        "entities": [
+            "function_WebPMuxCreateInternal"
+        ],
+        "lines": [
+            223
+        ]
+    }
+}

@@ -1,0 +1,129 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 371445205
+OSS Fuzz
+371445205
+php:php-fuzz-execute: Heap-use-after-free in attr_free
+Hotlists (3)
+Mark as Duplicate
+Comments
+(2)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(7)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTION87...@developer.gserviceaccount.com created issue #1
+Oct 7, 2024 02:30AM
+Detailed Report: https://oss-fuzz.com/testcase?key=5198251902435328
+
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_asan_i386_php
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0xf442c9e4
+Crash State:
+  attr_free
+  zend_hash_destroy
+  zend_hash_release
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_php&range=202406100613:202406110617
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5198251902435328
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+COMMENTS
+All comments
+Oldest first
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #2
+Oct 12, 2024 02:14AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 5198251902435328 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_php&range=202410100605:202410110609
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+Add comment
+Comment
+Issue metadata
+Reporter
+87...@developer.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+dm...@gmail.com
+gi...@derickrethans.nl
+ni...@gmail.com
+si...@gmail.com
+sm...@gmail.com
+st...@php.net
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+--
+Project
+php
+Reported
+Oct 12, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

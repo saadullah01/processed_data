@@ -1,0 +1,11 @@
+{
+    "src/funcs.c": {
+        "entities": [
+            "function_file_regexec"
+        ],
+        "lines": [
+            27,
+            509
+        ]
+    }
+}

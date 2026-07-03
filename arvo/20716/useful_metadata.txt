@@ -1,0 +1,21 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6030000ac6a1
+Crash State:
+  dnie_read_binary
+  sc_read_binary
+  sc_read_binary
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

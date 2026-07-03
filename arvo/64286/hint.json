@@ -1,0 +1,28 @@
+{
+    "decoder/mvc/imvcd_api.c": {
+        "entities": [
+            "function_imvcd_view_decode"
+        ],
+        "lines": [
+            731
+        ]
+    },
+    "decoder/mvc/imvcd_api_utils.c": {
+        "entities": [],
+        "lines": [
+            391
+        ]
+    },
+    "decoder/mvc/imvcd_api_utils.h": {
+        "entities": [],
+        "lines": [
+            53
+        ]
+    },
+    "decoder/mvc/imvcd_defs.h": {
+        "entities": [],
+        "lines": [
+            34
+        ]
+    }
+}

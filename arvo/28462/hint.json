@@ -1,0 +1,11 @@
+{
+    "libsepol/cil/src/cil_resolve_ast.c": {
+        "entities": [
+            "function_cil_print_recursive_blockinherit"
+        ],
+        "lines": [
+            2360,
+            2347
+        ]
+    }
+}

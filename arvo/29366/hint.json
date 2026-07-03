@@ -1,0 +1,14 @@
+{
+    "src/ssl.c": {
+        "entities": [
+            "function_wolfSSL_HMAC_Init",
+            "function_wolfSSL_HMAC_CTX_new"
+        ],
+        "lines": [
+            33536,
+            33297,
+            33650,
+            33629
+        ]
+    }
+}

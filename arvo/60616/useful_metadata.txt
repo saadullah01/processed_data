@@ -1,0 +1,17 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_decode
+Crash Type: Heap-double-free
+Crash Address: 0x606000000020
+Crash State:
+  sc_pkcs15_free_object_content
+  sc_pkcs15_free_object
+  fuzz_pkcs15_decode.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

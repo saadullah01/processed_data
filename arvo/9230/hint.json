@@ -1,0 +1,12 @@
+{
+    "epan/dissectors/packet-dns.c": {
+        "entities": [
+            "function_expand_dns_name"
+        ],
+        "lines": [
+            1226,
+            1252,
+            1238
+        ]
+    }
+}

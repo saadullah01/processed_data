@@ -1,0 +1,19 @@
+Project: libxml2
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: html
+Job Type: afl_asan_libxml2
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x619000014498
+Crash State:
+  xmlDictLookupInternal
+  xmlDictLookup
+  htmlParseNameComplex
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

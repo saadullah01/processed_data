@@ -1,0 +1,26 @@
+Project: gpsd
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzPacket
+Job Type: libfuzzer_asan_gpsd
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7ffc9eabe128
+Crash State:
+  crc24q_check
+  packet_parse
+  FuzzPacket.c
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer FuzzPacket from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6730139151761408 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

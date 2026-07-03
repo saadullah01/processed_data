@@ -1,0 +1,29 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Comment 1:
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_ubsan_mruby
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  str_init_embed
+  str_new
+  mrb_str_new
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+Fixed by 8a67a26104a70b666c5e209a5fb3b0733cfbb3d8
+
+Comment 3:
+ClusterFuzz testcase 6467888865476608 is verified as fixed
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.

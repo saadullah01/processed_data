@@ -1,0 +1,11 @@
+{
+    "decoder/ihevcd_parse_slice_header.c": {
+        "entities": [
+            "function_ihevcd_parse_slice_header"
+        ],
+        "lines": [
+            493,
+            477
+        ]
+    }
+}

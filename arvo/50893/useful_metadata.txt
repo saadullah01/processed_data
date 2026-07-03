@@ -1,0 +1,31 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+-- Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_xpswrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x611000031d78
+Crash State:
+  xps_tifsSeekProc
+  TIFFRewriteDirectory
+  TIFFFlush
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+-- Comment 2:
+Fix committed upstream
+
+-- Comment 3:
+ClusterFuzz testcase 5528151987453952 is verified as fixed
+
+-- Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

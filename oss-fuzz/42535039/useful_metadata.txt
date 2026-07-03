@@ -1,0 +1,33 @@
+ghostscript:gs_device_tiffsep1_fuzzer: Crash in mem_planar_put_image_slow
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_tiffsep1_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x532000031790
+Crash State:
+  mem_planar_put_image_slow
+  pdf14_cmykspot_put_image
+  gx_update_pdf14_compositor
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4915684629872640 is verified as fixed
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+Project
+ghostscript

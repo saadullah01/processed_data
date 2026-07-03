@@ -1,0 +1,24 @@
+Project: radare2
+Fuzzer: libFuzzer_radare2_ia_fuzz
+Fuzz target binary: ia_fuzz
+Job Type: libfuzzer_asan_radare2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x62600031dda0
+Crash State:
+  sdb_free
+  ns_free
+  sdb_ns_free
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ia_fuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201903130120:201903140120.
+
+ClusterFuzz testcase 5637729364213760 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,31 @@
+Issue 370131946
+mruby:mruby_fuzzer: Crash in mrb_check_frozen
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_ubsan_mruby
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x060f0000002c
+Crash State:
+  mrb_check_frozen
+  mrb_str_cat
+  mrb_vm_exec
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Fixed by 1f5ba7e01d01450f29d78092856d925652917010
+
+ClusterFuzz testcase 5091637825437696 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: mruby

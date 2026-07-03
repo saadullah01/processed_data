@@ -1,0 +1,10 @@
+{
+    "parser/parse_uri.c": {
+        "entities": [
+            "function_parse_uri"
+        ],
+        "lines": [
+            666
+        ]
+    }
+}

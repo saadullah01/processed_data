@@ -1,0 +1,10 @@
+{
+    "bfd/tekhex.c": {
+        "entities": [
+            "function_pass_over"
+        ],
+        "lines": [
+            512
+        ]
+    }
+}

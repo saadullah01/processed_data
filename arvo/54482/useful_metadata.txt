@@ -1,0 +1,22 @@
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x617000005b81
+Crash State:
+  hb_map_iter_t<hb_map_iter_t<hb_range_iter_t<unsigned int, unsigned int>, hb_map_
+  bool OT::DeviceRecord::serialize<hb_map_iter_t<hb_map_iter_t<hb_range_iter_t<uns
+  OT::hdmx::subset
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4877336988483584 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

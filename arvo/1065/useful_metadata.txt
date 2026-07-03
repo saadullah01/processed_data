@@ -1,0 +1,26 @@
+Project: file
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: file
+Fuzzer: libFuzzer_file_magic_fuzzer
+Fuzz target binary: magic_fuzzer
+Job Type: libfuzzer_msan_file
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  match
+  file_softmagic
+  mget
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201704071630:201704081630
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  match
+  file_softmagic
+  mget
+Sanitizer: memory (MSAN)

@@ -1,0 +1,17 @@
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_decode
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x01007fff8000
+Crash State:
+  sc_pkcs15_decode_pubkey_ec
+  sc_pkcs15_decode_pubkey
+  fuzz_pkcs15_decode.c
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5015048570929152 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

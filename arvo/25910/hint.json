@@ -1,0 +1,18 @@
+{
+    "include/avif/internal.h": {
+        "entities": [],
+        "lines": [
+            21
+        ]
+    },
+    "src/read.c": {
+        "entities": [
+            "function_avifParse"
+        ],
+        "lines": [
+            2048,
+            2067,
+            2031
+        ]
+    }
+}

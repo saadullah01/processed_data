@@ -1,0 +1,22 @@
+Project: php-src
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_msan_php
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  ini_parse
+  zend_parse_ini_string
+  zif_parse_ini_string
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

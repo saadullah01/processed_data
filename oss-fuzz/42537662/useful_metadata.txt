@@ -1,0 +1,28 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_VC1_fuzzer: Use-of-uninitialized-value in guess_mv
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VC1_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+ guess_mv
+ ff_er_frame_end
+ vc1_decode_frame
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducible
+ClusterFuzz-Verified
+
+Issue metadata:
+ Type: Vulnerability
+ Priority: P2
+ Severity: S2
+ Status: Fixed (Verified)
+ Project: ffmpeg

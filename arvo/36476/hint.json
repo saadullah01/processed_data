@@ -1,0 +1,12 @@
+{
+    "src/tpm2/NVMarshal.c": {
+        "entities": [
+            "function_INDEX_ORDERLY_RAM_Unmarshal",
+            "function_INDEX_ORDERLY_RAM_Marshal"
+        ],
+        "lines": [
+            4269,
+            4311
+        ]
+    }
+}

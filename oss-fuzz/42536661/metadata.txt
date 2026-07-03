@@ -1,0 +1,143 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42536661
+OSS Fuzz
+42536661
+libarchive:libarchive_fuzzer: Heap-use-after-free in archive_read_data
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(5)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+ClusterFuzz
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Jul 2, 2024 08:24AM
+Detailed Report: https://oss-fuzz.com/testcase?key=6260810997891072
+
+Project: libarchive
+Fuzzing Engine: libFuzzer
+Fuzz Target: libarchive_fuzzer
+Job Type: libfuzzer_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ {*}
+Crash Address: 0x7a62a91bfb35
+Crash State:
+  archive_read_data
+  libarchive_fuzzer.cc
+  process_head_file
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libarchive&range=202407010624:202407020609
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6260810997891072
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Jul 3, 2024 06:20AM
+[Empty comment from Monorail migration]
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #3
+Jul 7, 2024 01:10AM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 6260810997891072 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libarchive&range=202407050600:202407060609
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+[Deleted User]<[Deleted User]> #4
+Jul 7, 2024 06:10AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+is...@google.com<is...@google.com> #5
+Jul 7, 2024 06:10AM
+This issue was migrated from crbug.com/oss-fuzz/70024?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+jo...@googlemail.com
+ki...@gmail.com
+ma...@matuska.org
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Sep 30, 2024
+Project
+libarchive
+Reported
+Jul 2, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

@@ -1,0 +1,11 @@
+{
+    "src/libopensc/pkcs15-coolkey.c": {
+        "entities": [
+            "function_sc_pkcs15emu_coolkey_init"
+        ],
+        "lines": [
+            596,
+            663
+        ]
+    }
+}

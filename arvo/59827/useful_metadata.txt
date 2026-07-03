@@ -1,0 +1,22 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_msan_mruby
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  obj_free
+  incremental_gc
+  mrb_full_gc
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

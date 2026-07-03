@@ -1,0 +1,22 @@
+Project: arrow
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: arrow
+Fuzzing Engine: afl
+Fuzz Target: arrow-ipc-stream-fuzz
+Job Type: afl_asan_arrow
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x619000000ee4
+Crash State:
+  void arrow::internal::TransferBitmap<
+  arrow::ConcatenateBitmaps
+  arrow::ConcatenateImpl::Concatenate
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,10 @@
+{
+    "src/metadatmisc_parsers.cpp": {
+        "entities": [
+            "function_LibRaw::parse_rollei"
+        ],
+        "lines": [
+            304
+        ]
+    }
+}

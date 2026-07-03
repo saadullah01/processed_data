@@ -1,0 +1,32 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_objcopy
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  cache_bwrite
+  bfd_bwrite
+  coff_write_object_contents
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_binutils&range=202110270607:202110290601
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6020938102079488
+
+ClusterFuzz testcase 6020938102079488 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_binutils&range=202110290601:202111020603
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

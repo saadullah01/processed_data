@@ -1,0 +1,44 @@
+Issue 388571282
+
+gdal:gdal_fuzzer: Heap-buffer-overflow in void std::__1::vector<unsigned short, std::__1::allocator<unsigned short>>::__co
+
+Project: gdal
+Fuzzing Engine: libFuzzer
+Fuzz Target: gdal_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x516000006c00
+
+Crash State:
+  void std::__1::vector<unsigned short, std::__1::allocator<unsigned short>>::__co
+  void std::__1::vector<unsigned short, std::__1::allocator<unsigned short>>::__in
+  std::__1::vector<unsigned short, std::__1::allocator<unsigned short>> GDAL_liber
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Comment #2:
+fixed per eb8421312b9b53c818766cc997edb8f455572b23
+
+Comment #3:
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 4670068138508288 is verified as fixed.
+
+Comment #4:
+This bug has been fixed. It has been opened to the public.
+
+Issue metadata:
+Reporter: 87...@developer.gserviceaccount.com
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Assignee: cl...@appspot.gserviceaccount.com
+Verifier: cl...@appspot.gserviceaccount.com
+Collaborators: co...@oss-fuzz.com
+CC: ar...@gmail.com, at...@thinkspatial.com.au, bi...@gmail.com, bj...@gmail.com, ev...@gmail.com, ju...@gmail.com, ma...@loskot.net, ny...@gmail.com, sc...@gmail.com, uy...@gmail.com
+
+Project: gdal

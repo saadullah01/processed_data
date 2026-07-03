@@ -1,0 +1,17 @@
+{
+    "httpdocs/dist": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "src/IEC104Stats.cpp": {
+        "entities": [
+            "method_IEC104Stats::processPacket",
+            "function_IEC104Stats::processPacket"
+        ],
+        "lines": [
+            241
+        ]
+    }
+}

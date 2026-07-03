@@ -1,0 +1,24 @@
+{
+    "src/shaders/SkPictureShader.cpp": {
+        "entities": [
+            "method_SkPictureShader::onMakeContext",
+            "method_SkPictureShader::refBitmapShader",
+            "function_SkPictureShader::asFragmentProcessor"
+        ],
+        "lines": [
+            382,
+            171,
+            301,
+            270
+        ]
+    },
+    "src/shaders/SkPictureShader.h": {
+        "entities": [
+            "method_SkPictureShader::refBitmapShader",
+            "method_refBitmapShader"
+        ],
+        "lines": [
+            46
+        ]
+    }
+}

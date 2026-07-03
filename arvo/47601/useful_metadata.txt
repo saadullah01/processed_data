@@ -1,0 +1,36 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+-- Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x631000060830
+Crash State:
+  pdfi_dict_get_no_store_R_inner
+  pdfi_dict_get_no_store_R_key
+  pdfi_find_resource
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+-- Comment 2:
+Fix committed upstream
+
+-- Comment 3:
+ClusterFuzz testcase 5107213951172608 is verified as fixed
+
+-- Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

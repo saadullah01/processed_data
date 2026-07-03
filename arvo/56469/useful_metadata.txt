@@ -1,0 +1,30 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  pdf_lookup_page_obj
+  pdf_load_page_imp
+  fz_load_chapter_page
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Fixed by
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer pdf_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6317995799740416 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

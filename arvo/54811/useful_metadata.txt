@@ -1,0 +1,24 @@
+Project: gstreamer
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: gstreamer
+Fuzzing Engine: libFuzzer
+Fuzz Target: typefind
+Job Type: libfuzzer_asan_gstreamer
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x615000002080
+Crash State:
+  xml_check_first_element_from_data
+  dash_mpd_type_find
+  gst_type_find_factory_call_function
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer typefind from making much progress. Fixing this will allow more bugs to be found.

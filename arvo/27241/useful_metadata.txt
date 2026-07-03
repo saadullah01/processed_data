@@ -1,0 +1,30 @@
+-- Comment 1:
+Project: fluent-bit
+Fuzzing Engine: libFuzzer
+Fuzz Target: flb-it-fuzz-strp_fuzzer_OSSFUZZ
+Job Type: libfuzzer_asan_fluent-bit
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60300000011f
+Crash State:
+  _flb_strptime
+  flb_strptime
+  strp_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer flb-it-fuzz-strp_fuzzer_OSSFUZZ from making much progress. Fixing this will allow more bugs to be found.
+
+-- Comment 3:
+ClusterFuzz testcase 5663333098979328 is verified as fixed
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,10 @@
+{
+    "splash/SplashFTFont.cc": {
+        "entities": [
+            "function_SplashFTFont::getGlyphPath"
+        ],
+        "lines": [
+            397
+        ]
+    }
+}

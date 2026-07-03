@@ -1,0 +1,24 @@
+Project: gpac
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_asan_gpac
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7f922080182a
+Crash State:
+  RTSP_UnpackURL
+  gf_rtsp_session_new
+  rtpin_rtsp_new
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 4835096515379200 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,19 @@
+Project: faad2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 4
+Severity: High
+
+Project: faad2
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_decode
+Job Type: libfuzzer_asan_faad2
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7ffeaccd4a80
+Crash State:
+  pns_decode
+  reconstruct_channel_pair
+  decode_cpe
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

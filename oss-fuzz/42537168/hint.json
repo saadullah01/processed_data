@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-op-run.c": {
+        "entities": [
+            "function_nest_layer_clip"
+        ],
+        "lines": [
+            211
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "examples/dp_renderer_placebo.c": {
+        "entities": [
+            "function_placebo_release_pic",
+            "function_placebo_alloc_pic"
+        ],
+        "lines": [
+            371,
+            382
+        ]
+    }
+}

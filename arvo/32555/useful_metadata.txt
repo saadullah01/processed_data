@@ -1,0 +1,21 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x61b000000644
+Crash State:
+  BEInt<unsigned short, 2>::operator unsigned short
+  OT::IntType<unsigned short, 2u>::operator unsigned int
+  OT::RangeRecord::intersects
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

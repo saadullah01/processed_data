@@ -1,0 +1,18 @@
+{
+    "plugins/sudoers/stubs.c": {
+        "entities": [
+            "function_set_cmnd_path"
+        ],
+        "lines": [
+            84
+        ]
+    },
+    "plugins/sudoers/testsudoers.c": {
+        "entities": [
+            "function_set_cmnd_path"
+        ],
+        "lines": [
+            502
+        ]
+    }
+}

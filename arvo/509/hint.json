@@ -1,0 +1,10 @@
+{
+    "src/truetype/ttobjs.c": {
+        "entities": [
+            "function_tt_size_reset"
+        ],
+        "lines": [
+            1
+        ]
+    }
+}

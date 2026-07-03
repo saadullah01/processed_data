@@ -1,0 +1,10 @@
+{
+    "src/packet_analysis/protocol/vlan/VLAN.cc": {
+        "entities": [
+            "method_VLANAnalyzer::AnalyzePacket"
+        ],
+        "lines": [
+            38
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "libheif/heif_colorconversion.cc": {
+        "entities": [
+            "method_Op_RGB_to_YCbCr<Pixel>::convert_colorspace"
+        ],
+        "lines": [
+            692
+        ]
+    }
+}

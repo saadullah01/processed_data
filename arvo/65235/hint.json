@@ -1,0 +1,11 @@
+{
+    "src/media_tools/webvtt.c": {
+        "entities": [
+            "function_gf_webvtt_parser_parse_internal"
+        ],
+        "lines": [
+            933,
+            949
+        ]
+    }
+}

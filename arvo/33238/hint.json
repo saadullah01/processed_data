@@ -1,0 +1,10 @@
+{
+    "code/Common/FileSystemFilter.h": {
+        "entities": [
+            "class_FileSystemFilter"
+        ],
+        "lines": [
+            300
+        ]
+    }
+}

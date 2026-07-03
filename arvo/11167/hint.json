@@ -1,0 +1,18 @@
+{
+    "src/tree.c": {
+        "entities": [
+            "function_git_tree__parse_raw",
+            "function_parse_mode"
+        ],
+        "lines": [
+            394,
+            356
+        ]
+    },
+    "tests/object/tree/parse.c": {
+        "entities": [],
+        "lines": [
+            109
+        ]
+    }
+}

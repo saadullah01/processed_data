@@ -1,0 +1,10 @@
+{
+    "src/mat73.c": {
+        "entities": [
+            "function_Mat_H5ReadFieldNames"
+        ],
+        "lines": [
+            623
+        ]
+    }
+}

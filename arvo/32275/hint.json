@@ -1,0 +1,10 @@
+{
+    "src/in_dxf.c": {
+        "entities": [
+            "function_dxf_objects_read"
+        ],
+        "lines": [
+            12282
+        ]
+    }
+}

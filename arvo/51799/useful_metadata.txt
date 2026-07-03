@@ -1,0 +1,19 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_objcopy
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  htab_find_slot
+  _bfd_archive_close_and_cleanup
+  bfd_close_all_done
+
+Sanitizer: address (ASAN)

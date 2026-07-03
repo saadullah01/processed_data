@@ -1,0 +1,18 @@
+{
+    "parser.c": {
+        "entities": [
+            "function_xmlParseCharDataComplex"
+        ],
+        "lines": [
+            4666
+        ]
+    },
+    "parserInternals.c": {
+        "entities": [
+            "function_xmlNextChar"
+        ],
+        "lines": [
+            400
+        ]
+    }
+}

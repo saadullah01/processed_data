@@ -1,0 +1,19 @@
+Project: php-src
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-execute
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6120000145c0
+Crash State:
+  zend_gc_delref
+  i_zval_ptr_dtor
+  zval_ptr_dtor
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

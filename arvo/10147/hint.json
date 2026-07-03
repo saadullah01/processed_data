@@ -1,0 +1,36 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "coders/dcm.c": {
+        "entities": [
+            "function_funcDCM_PhotometricInterpretation"
+        ],
+        "lines": [
+            3688,
+            3033
+        ]
+    },
+    "coders/jnx.c": {
+        "entities": [],
+        "lines": [
+            123,
+            156
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

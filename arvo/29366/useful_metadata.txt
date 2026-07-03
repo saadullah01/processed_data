@@ -1,0 +1,26 @@
+Project: wolfssl
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-openssl-api
+Job Type: libfuzzer_msan_wolfssl
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  wc_HmacFree
+  wolfSSL_HMAC_cleanup
+  cryptofuzz::module::wolfCrypt_OpenSSL_detail::OpHMAC_HMAC
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Issue manually filed by: guidovranken
+
+ZD 11458

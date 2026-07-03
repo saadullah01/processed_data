@@ -1,0 +1,30 @@
+Detailed Report: https://oss-fuzz.com/testcase?key=5747280156295168
+
+Project: harfbuzz
+Fuzzing Engine: afl
+Fuzz Target: hb-subset-fuzzer
+Job Type: afl_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x0000009190c0
+Crash State:
+  hb_array_t<OT::IntType<unsigned char, 1u> const> hb_array_t<OT::IntType<unsigned
+  OT::UnsizedArrayOf<OT::IntType<unsigned char, 1u> >::copy
+  OT::SBIXGlyph::copy
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_harfbuzz&range=202001230413:202001240419
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5747280156295168
+
+Issue filed automatically.
+
+Fixed in: https://github.com/harfbuzz/harfbuzz/pull/2128
+
+ClusterFuzz testcase 5747280156295168 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_harfbuzz&range=202001240419:202001250426
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,25 @@
+From 5e97ef560034cb0ae2aec9613a5ff7695b1704c5 Mon Sep 17 00:00:00 2001
+From: Kristian Evers <kristianevers@gmail.com>
+Date: Sat, 9 Sep 2017 11:16:40 +0200
+Subject: [PATCH] Tested for wrong indices before array lookup. Fixes #566.
+
+---
+ src/PJ_unitconvert.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/PJ_unitconvert.c b/src/PJ_unitconvert.c
+index 27672c8d07..49bb655669 100644
+--- a/src/PJ_unitconvert.c
++++ b/src/PJ_unitconvert.c
+@@ -309,9 +309,9 @@ static PJ_OBS reverse_obs(PJ_OBS obs, PJ *P) {
+     /* delegate unit conversion of physical dimensions to the 3D function */
+     out.coo.lpz = reverse_3d(obs.coo.xyz, P);
+ 
+-    if (Q->t_in_id >= 0)
+-        out.coo.xyzt.t = time_units[Q->t_out_id].t_in( obs.coo.xyzt.t );
+     if (Q->t_out_id >= 0)
++        out.coo.xyzt.t = time_units[Q->t_out_id].t_in( obs.coo.xyzt.t );
++    if (Q->t_in_id >= 0)
+         out.coo.xyzt.t = time_units[Q->t_in_id].t_out( out.coo.xyzt.t );
+ 
+     return out;

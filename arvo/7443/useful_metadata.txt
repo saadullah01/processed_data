@@ -1,0 +1,35 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: skia
+Fuzzer: libFuzzer_skia_api_raster_n32_canvas
+Fuzz target binary: api_raster_n32_canvas
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  void arith_span<true>
+  ArithmeticImageFilterImpl::drawForeground
+  ArithmeticImageFilterImpl::onFilterImage
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201803210615:201803220608
+
+Reproducer Testcase ID: 5667288297504768
+
+"This does not seem to repro at ToT after https://skia-review.googlesource.com/c/skia/+/119145 has landed... We'll see if oss-fuzz detects it as fixed when it rolls ahead tonight."
+
+ClusterFuzz has detected this issue as fixed in range 201804060625:201804070620.
+
+Fixed: 201804060625:201804070620
+
+ClusterFuzz testcase 5667288297504768 is verified as fixed.
+
+This bug has been fixed for 30 days. It has been opened to the public.

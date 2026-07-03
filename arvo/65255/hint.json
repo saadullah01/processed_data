@@ -1,0 +1,12 @@
+{
+    "src/media_tools/av_parsers.c": {
+        "entities": [
+            "function_vvc_parse_slice",
+            "function_vvc_get_ctb_info_in_slice"
+        ],
+        "lines": [
+            11792,
+            11651
+        ]
+    }
+}

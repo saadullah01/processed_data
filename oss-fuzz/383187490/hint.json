@@ -1,0 +1,12 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "function_PackLinuxElf32::elf_lookup",
+            "method_PackLinuxElf64::elf_lookup"
+        ],
+        "lines": [
+            8737,
+            8650
+        ]
+    }
+}

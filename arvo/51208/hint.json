@@ -1,0 +1,26 @@
+{
+    "src/apps/testapps/testCellToLocalIj.c": {
+        "entities": [
+            "function_h3ToLocalIj"
+        ],
+        "lines": [
+            272
+        ]
+    },
+    "src/h3lib/lib/coordijk.c": {
+        "entities": [
+            "function__unitIjkToDigit"
+        ],
+        "lines": [
+            245
+        ]
+    },
+    "src/h3lib/lib/localij.c": {
+        "entities": [
+            "function_localIjkToCell"
+        ],
+        "lines": [
+            317
+        ]
+    }
+}

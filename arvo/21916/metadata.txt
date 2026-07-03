@@ -1,0 +1,75 @@
+Project: jsoncpp
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5702838429941760
+
+Project: jsoncpp
+Fuzzing Engine: afl
+Fuzz Target: jsoncpp_fuzzer
+Job Type: afl_asan_jsoncpp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6020000000b4
+Crash State:
+  Json::OurReader::parse
+  Json::OurCharReader::parse
+  fuzz.cpp
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_jsoncpp&range=202004280207:202004290210
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5702838429941760
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer jsoncpp_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """So i was digging into this to improve the Fuzzer , the frequent crash is due to 
+https://github.com/open-source-parsers/jsoncpp/blob/2cb16b35dcfe0703272c9bbe777ad09546846a04/src/lib_json/json_reader.cpp#L1277
+
+TL;DR skipBOM is assuming that you have at least 3 bytes available to read.
+
+Here the program is assuming that there are 3 bytes available in the buffer, however when you use an input of size 4-6 bytes,  the first 4 bytes are used to generate builder._settings and the rest are sent to the reader->parse, now in this the skipBom() function is called and it tries to read outside the buffer and causes the overflow, 
+Reproducing steps ->
+1) Any 4 byte input
+2) 5 byte input with 5th byte being equal to \xEF (as strncmp will break if 5th byte is not equal to \xEF)
+3) 6 byte input with 5th and 6th byte being equal to \xEF \xBB
+ 
+Possible fix -> Adding a check condition before comparing strings. """
+
+-- Comment 4: """Awesome, thanks for doing the digging into this. I'll push up a fix to the external repo."""
+
+-- Comment 5: """Wait, I see you pushed up a fix and it got landed. Awesome, thanks for doing that."""
+
+-- Comment 6: """ClusterFuzz testcase 5702838429941760 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_jsoncpp&range=202005290214:202005291923
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 7: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

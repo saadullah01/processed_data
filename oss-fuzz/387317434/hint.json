@@ -1,0 +1,10 @@
+{
+    "libvips/foreign/tiff2vips.c": {
+        "entities": [
+            "function_rtiff_read_tile"
+        ],
+        "lines": [
+            2316
+        ]
+    }
+}

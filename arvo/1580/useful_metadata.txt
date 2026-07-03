@@ -1,0 +1,35 @@
+Comment 1:
+Project: gdal
+Fuzzer: libFuzzer_gdal_ogr_fuzzer
+Fuzz target binary: ogr_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x60400000e7e0,0x60400000e7f0) and [0x60400000e7e8, 0x60400000e7f8)
+Crash State:
+  KML::unregisterLayerIfMatchingThisNode
+  KMLNode::eliminateEmpty
+  KMLVector::findLayers
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+Fixed in trunk changeset 38352 , branches/2.2 changeset 38353 and branches/2.1 changeset 38354
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201705141650:201705151647.
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x60400000e7e0,0x60400000e7f0) and [0x60400000e7e8, 0x60400000e7f8)
+Crash State:
+  KML::unregisterLayerIfMatchingThisNode
+  KMLNode::eliminateEmpty
+  KMLVector::findLayers
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Fixed: range 201705141650:201705151647
+
+Comment 4:
+ClusterFuzz testcase 5115360233652224 is verified as fixed, so closing issue.
+
+Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.

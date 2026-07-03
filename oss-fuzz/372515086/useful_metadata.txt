@@ -1,0 +1,29 @@
+h3:fuzzerPolygonToCellsExperimental: Heap-buffer-overflow in polygonToCellsExperimental
+
+Project: h3
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzerPolygonToCellsExperimental
+Job Type: libfuzzer_asan_h3
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x5030000002a0
+Crash State:
+  polygonToCellsExperimental
+  fuzzerPolygonToCellsExperimental.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 4869048531222528 is verified as fixed.
+
+Fixed in pull request 934
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: h3

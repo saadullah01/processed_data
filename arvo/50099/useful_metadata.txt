@@ -1,0 +1,29 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Detailed Report:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_ps2write_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x62d000076e10
+Crash State:
+  pdfi_read_cff_dict
+  pdfi_read_cff_dict
+  pdfi_read_cff_font
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fix committed upstream
+
+ClusterFuzz testcase 5610170981416960 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

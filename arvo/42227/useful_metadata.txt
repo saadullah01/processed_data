@@ -1,0 +1,23 @@
+Project: lcms
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Global-buffer-overflow WRITE {*}
+
+Project: lcms
+Fuzzing Engine: honggfuzz
+Fuzz Target: cmsIT8_load_fuzzer
+Job Type: honggfuzz_asan_lcms
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow WRITE {*}
+Crash Address: 0x000000636efc
+Crash State:
+  InStringSymbol
+  InSymbol
+  ParseIT8
+
+Sanitizer: address (ASAN)
+
+Regressed: range 202112100604:202112110610
+
+Reproducer Testcase ID: 6523238677610496

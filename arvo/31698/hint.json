@@ -1,0 +1,20 @@
+{
+    "Userland/Libraries/LibCrypto/ASN1/DER.cpp": {
+        "entities": [
+            "method_Decoder::decode_bit_string"
+        ],
+        "lines": [
+            176
+        ]
+    },
+    "Userland/Libraries/LibCrypto/PK/RSA.h": {
+        "entities": [
+            "class_RSAPublicKey",
+            "class_RSAPrivateKey"
+        ],
+        "lines": [
+            66,
+            31
+        ]
+    }
+}

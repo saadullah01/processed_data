@@ -1,0 +1,13 @@
+{
+    "src/string.c": {
+        "entities": [
+            "function_mrb_str_len_to_dbl"
+        ],
+        "lines": [
+            10,
+            2491,
+            2515,
+            2539
+        ]
+    }
+}

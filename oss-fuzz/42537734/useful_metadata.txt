@@ -1,0 +1,24 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_WEBP_fuzzer: Use-of-uninitialized-value in decode_entropy_coded_image
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_WEBP_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  decode_entropy_coded_image
+  vp8_lossless_decode_frame
+  webp_decode_frame
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5544067620995072 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

@@ -1,0 +1,11 @@
+{
+    "modules/libecc/module.cpp": {
+        "entities": [
+            "function_libecc::OpECC_ValidatePubkey"
+        ],
+        "lines": [
+            481,
+            413
+        ]
+    }
+}

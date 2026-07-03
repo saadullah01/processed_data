@@ -1,0 +1,156 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42536348
+OSS Fuzz
+42536348
+unit:fuzz_json: Heap-buffer-overflow in nxt_sockaddr_parse_optport
+1
+Hotlists (5)
+Mark as Duplicate
+Comments
+(8)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+ClusterFuzz
+Stability-Memory-AddressSanitizer
+Reproducible
+Fuzz-Blocker
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Jun 18, 2024 09:19AM
+Detailed Report: https://oss-fuzz.com/testcase?key=4875165201137664
+
+Project: unit
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_json
+Job Type: libfuzzer_asan_unit
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x51200000093f
+Crash State:
+  nxt_sockaddr_parse_optport
+  nxt_sockaddr_parse
+  nxt_conf_vldt_listener
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_unit&range=202406170622:202406180617
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4875165201137664
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Jun 19, 2024 06:21AM
+[Empty comment from Monorail migration]
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #3
+Jun 23, 2024 07:33AM
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_json from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #4
+Aug 15, 2024 10:03AM
+[Empty comment from Monorail migration]
+[Deleted User]<[Deleted User]> #5
+Sep 9, 2024 06:00AM
+This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #6
+Sep 10, 2024 11:58PM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 4875165201137664 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_unit&range=202408260619:202408270618
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+[Deleted User]<[Deleted User]> #7
+Sep 11, 2024 06:16AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+is...@google.com<is...@google.com> #8
+Sep 11, 2024 06:16AM
+This issue was migrated from crbug.com/oss-fuzz/69744?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+an...@gmail.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+xi...@gmail.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Sep 16, 2024
+Project
+unit
+Reported
+Jun 18, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

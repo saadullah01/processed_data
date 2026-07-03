@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_file.c": {
+        "entities": [
+            "function_pdfi_Flate_filter"
+        ],
+        "lines": [
+            329,
+            315
+        ]
+    }
+}

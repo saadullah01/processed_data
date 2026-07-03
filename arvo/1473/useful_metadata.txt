@@ -1,0 +1,19 @@
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_DVBSUB_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_DVBSUB_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  dvbsub_parse_clut_segment
+  dvbsub_decode
+  avcodec_decode_subtitle2
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201705101624:201705111623.
+
+ClusterFuzz testcase 5768907824562176 is verified as fixed, so closing issue.
+
+This bug has been fixed for 30 days. It has been opened to the public.

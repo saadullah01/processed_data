@@ -1,0 +1,20 @@
+Project: libdwarf
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_init_path
+Job Type: honggfuzz_asan_libdwarf
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x00000064d0c1
+Crash State:
+  _dwarf_pathjoinl
+  _dwarf_construct_linkedto_path
+  dwarf_gnu_debuglink
+Sanitizer: address (ASAN)
+Regressed: 202204290611:202204300608
+Reproducer Testcase: 6727387238236160
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_init_path from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6727387238236160 is verified as fixed in 202207230601:202207240605
+
+This bug has been fixed. It has been opened to the public.

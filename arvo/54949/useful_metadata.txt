@@ -1,0 +1,19 @@
+Project: libplist
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: libplist
+Fuzzing Engine: afl
+Fuzz Target: oplist_fuzzer
+Job Type: afl_asan_libplist
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x6050000000e0
+Crash State:
+  plist_free_node
+  plist_free
+  oplist_fuzzer.cc
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_annot.c": {
+        "entities": [
+            "function_pdfi_annot_draw"
+        ],
+        "lines": [
+            3879
+        ]
+    }
+}

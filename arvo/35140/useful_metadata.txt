@@ -1,0 +1,19 @@
+Project: njs
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: njs
+Fuzzing Engine: libFuzzer
+Fuzz Target: njs_process_script_fuzzer
+Job Type: libfuzzer_asan_njs
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x6180bebecbce
+Crash State:
+  njs_string_new
+  njs_array_string_add
+  njs_string_split_part_add
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

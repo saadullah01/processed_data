@@ -1,0 +1,17 @@
+Project: libbpf
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ {*}
+
+Project: libbpf
+Fuzzing Engine: libFuzzer
+Fuzz Target: bpf-object-fuzzer
+Job Type: libfuzzer_asan_libbpf
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ {*}
+Crash Address: 0x00000064bb2c
+Crash State:
+  btf_new
+  btf__new
+  bpf_object__init_btf
+Sanitizer: address (ASAN)

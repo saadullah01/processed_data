@@ -1,0 +1,49 @@
+{
+    "cpp/src/arrow/ipc/dictionary.cc": {
+        "entities": [
+            "function_DictionaryMemo::GetDictionary",
+            "function_ResolveDictionaries",
+            "struct_DictionaryResolver",
+            "struct_DictionaryMemo::Impl",
+            "method_DictionaryMemo::GetDictionary"
+        ],
+        "lines": [
+            192,
+            166,
+            302,
+            143,
+            335,
+            282
+        ]
+    },
+    "cpp/src/arrow/ipc/dictionary.h": {
+        "entities": [
+            "method_DictionaryMemo::GetDictionary",
+            "method_AddDictionaryDelta",
+            "class_DictionaryMemo"
+        ],
+        "lines": [
+            152,
+            129,
+            110
+        ]
+    },
+    "cpp/src/arrow/ipc/reader.cc": {
+        "entities": [
+            "function_LoadRecordBatchSubset",
+            "function_ReadDictionary"
+        ],
+        "lines": [
+            469,
+            711
+        ]
+    },
+    "cpp/src/arrow/testing/json_internal.cc": {
+        "entities": [
+            "function_ReadRecordBatch"
+        ],
+        "lines": [
+            1625
+        ]
+    }
+}

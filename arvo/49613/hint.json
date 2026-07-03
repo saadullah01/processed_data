@@ -1,0 +1,18 @@
+{
+    "src/dynapi.c": {
+        "entities": [
+            "function_dynapi_set_helper"
+        ],
+        "lines": [
+            14273
+        ]
+    },
+    "src/gen-dynapi.pl": {
+        "entities": [
+            "function_out_classes"
+        ],
+        "lines": [
+            3111
+        ]
+    }
+}

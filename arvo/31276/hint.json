@@ -1,0 +1,18 @@
+{
+    "p11-kit/rpc-client.c": {
+        "entities": [
+            "function_proto_read_attribute_array"
+        ],
+        "lines": [
+            241
+        ]
+    },
+    "p11-kit/rpc-server.c": {
+        "entities": [
+            "function_proto_read_attribute_array"
+        ],
+        "lines": [
+            323
+        ]
+    }
+}

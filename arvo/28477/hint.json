@@ -1,0 +1,24 @@
+{
+    "glib/gdatetime.c": {
+        "entities": [
+            "function_g_date_time_new",
+            "function_get_iso8601_seconds"
+        ],
+        "lines": [
+            1,
+            1180,
+            1565
+        ]
+    },
+    "glib/tests/gdatetime.c": {
+        "entities": [
+            "function_test_GDateTime_new_from_iso8601",
+            "function_test_GDateTime_new_full"
+        ],
+        "lines": [
+            1,
+            497,
+            1157
+        ]
+    }
+}

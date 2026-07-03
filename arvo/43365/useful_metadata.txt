@@ -1,0 +1,19 @@
+Project: zstd
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 1
+
+Project: zstd
+Fuzzing Engine: honggfuzz
+Fuzz Target: simple_compress
+Job Type: honggfuzz_asan_zstd
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x000000970924
+Crash State:
+  ZSTD_compressBlock_opt0
+  ZSTD_compressBlock_btopt
+  ZSTD_buildSeqStore
+
+Sanitizer: address (ASAN)

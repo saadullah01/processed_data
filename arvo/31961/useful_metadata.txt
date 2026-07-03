@@ -1,0 +1,23 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow WRITE 4
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_disassemble
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow WRITE 4
+Crash Address: 0x000004061c1c
+Crash State:
+  print_insn
+  print_insn_i386
+  fuzz_disassemble.c
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 6165148176875520 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

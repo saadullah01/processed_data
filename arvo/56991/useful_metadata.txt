@@ -1,0 +1,13 @@
+Project: mruby
+Fuzzing Engine: honggfuzz
+Fuzz Target: mruby_proto_fuzzer
+Job Type: honggfuzz_asan_mruby
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x62f00001c530
+Crash State:
+  mrb_gc_mark
+  mrb_gc_mark_iv
+  gc_mark_children
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

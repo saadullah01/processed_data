@@ -1,0 +1,48 @@
+Project: librawspeed
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1:
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-ThreefrDecoder
+Fuzz target binary: TiffDecoderFuzzer-ThreefrDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  _start
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201709170515:201709180518.
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-ThreefrDecoder
+Fuzz target binary: TiffDecoderFuzzer-ThreefrDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  _start
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 
+Fixed: 201709170515:201709180518

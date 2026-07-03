@@ -1,0 +1,10 @@
+{
+    "base/gxchar.c": {
+        "entities": [
+            "function_gx_default_text_begin"
+        ],
+        "lines": [
+            168
+        ]
+    }
+}

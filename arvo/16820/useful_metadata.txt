@@ -1,0 +1,33 @@
+Project: libvips
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Comment 1:
+Fuzzing Engine: libFuzzer
+Fuzz Target: jpegsave_file_fuzzer
+Job Type: libfuzzer_ubsan_libvips
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  make_hI
+  tables_init
+  g_once_impl
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+Comment 2:
+Should we add a conditional to ensure k > 0 before libvips/colour/UCS2LCh.c:L133 ? Alternatively start the for loop with k = 1 rather than 0?
+
+Comment 3:
+You're right, I think start with k=1 is the best fix.
+
+Comment 4:
+ClusterFuzz testcase 5651968818675712 is verified as fixed.
+
+Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.
+- Your friendly Sheriffbot

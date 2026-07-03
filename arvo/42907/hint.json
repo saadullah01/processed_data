@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_font0.c": {
+        "entities": [
+            "function_pdfi_read_type0_font"
+        ],
+        "lines": [
+            280
+        ]
+    }
+}

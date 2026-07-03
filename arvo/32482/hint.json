@@ -1,0 +1,11 @@
+{
+    "src/lxc/string_utils.c": {
+        "entities": [
+            "function_lxc_safe_int64_residual"
+        ],
+        "lines": [
+            691,
+            677
+        ]
+    }
+}

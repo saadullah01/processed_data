@@ -1,0 +1,31 @@
+Project: openvswitch
+Fuzzer: libFuzzer_openvswitch_odp_target
+Fuzz target binary: odp_target
+Job Type: libfuzzer_asan_openvswitch
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffdfe53d818
+Crash State:
+  nullable_memcpy
+  nsh_key_to_attr
+  parse_odp_push_nsh_action
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer odp_target from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201811150326:201811160321.
+
+Project: openvswitch
+Fuzzer: libFuzzer_openvswitch_odp_target
+Fuzz target binary: odp_target
+Job Type: libfuzzer_asan_openvswitch
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffdfe53d818
+Crash State:
+  nullable_memcpy
+  nsh_key_to_attr
+  parse_odp_push_nsh_action
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,46 @@
+Project: capstonenext
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1:
+Project: capstone
+Fuzzer: libFuzzer_capstone_fuzz_disasmnext
+Fuzz target binary: fuzz_disasmnext
+Job Type: libfuzzer_msan_capstone
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  X86_Intel_printInst
+  cs_disasm
+  fuzz_disasm.c
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201902260418:201902270431
+Reproducer Testcase: testcase_id=5755434785308672
+Issue filed automatically.
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201903020427:201903030423.
+Project: capstone
+Fuzzer: libFuzzer_capstone_fuzz_disasmnext
+Fuzz target binary: fuzz_disasmnext
+Job Type: libfuzzer_msan_capstone
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  X86_Intel_printInst
+  cs_disasm
+  fuzz_disasm.c
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201902260418:201902270431
+Fixed: 201903020427:201903030423
+Reproducer Testcase: testcase_id=5755434785308672
+
+-- Comment 3:
+ClusterFuzz testcase 5755434785308672 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,90 @@
+Project: mupdf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 4
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5267574158786560
+
+Project: mupdf
+Fuzzer: afl_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: afl_asan_mupdf
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7f86eb165ec0
+Crash State:
+  pdf_lookup_cmap_full
+  pdf_remap_cmap_range
+  pdf_remap_cmap
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201801181639:201801190545
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5267574158786560
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """ClusterFuzz has detected this issue as fixed in range 201801240607:201801250607.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5267574158786560
+
+Project: mupdf
+Fuzzer: afl_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: afl_asan_mupdf
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7f86eb165ec0
+Crash State:
+  pdf_lookup_cmap_full
+  pdf_remap_cmap_range
+  pdf_remap_cmap
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201801181639:201801190545
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201801240607:201801250607
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5267574158786560
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 3: """ClusterFuzz testcase 5267574158786560 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """Reported upstream at https://bugs.ghostscript.com/show_bug.cgi?id=698884
+
+After analysis it was found that the fix was already provided by https://bugs.ghostscript.com/show_bug.cgi?id=698883
+
+Fixed in http://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=f597300439e62f5e921f0d7b1e880b5c1a1f1607;hp=093fc3b098dc5fadef5d8ad4b225db9fb124758b
+
+That code change depends on https://bugs.ghostscript.com/show_bug.cgi?id=698888
+
+Fixed in http://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=71ceebcf56e682504da22c4035b39a2d451e8ffd;hp=7f82c01523505052615492f8e220f4348ba46995"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

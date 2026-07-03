@@ -1,0 +1,62 @@
+Project: upx
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6224811378409472
+
+Project: upx
+Fuzzing Engine: afl
+Fuzz Target: test_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x7cbde07ff39d
+Crash State:
+  ucl_nrv2b_decompress_safe_le32
+  upx_ucl_decompress
+  upx_decompress
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=afl_asan_upx&revision=202401030626
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6224811378409472
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer test_packed_file_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """Fixed on branch devel4 by commit e01e98dcf220bb2349400e2ac43d63d9f8e8b47c  .
+https://github.com/upx/upx/issues/761
+"""
+
+-- Comment 4: """ClusterFuzz testcase 6224811378409472 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_upx&range=202401130623:202401140628
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

@@ -1,0 +1,10 @@
+{
+    "src/tests/fuzzing/fuzz_card.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            61
+        ]
+    }
+}

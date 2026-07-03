@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_colour.c": {
+        "entities": [
+            "function_pdfi_create_indexed"
+        ],
+        "lines": [
+            2092
+        ]
+    }
+}

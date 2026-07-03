@@ -1,0 +1,29 @@
+libical:libical_extended_fuzzer: Heap-use-after-free in icalreqstattype_as_string_r
+
+Project: libical
+Fuzzing Engine: libFuzzer
+Fuzz Target: libical_extended_fuzzer
+Job Type: libfuzzer_asan_libical
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 2
+Crash Address: 0x611000000400
+Crash State:
+  icalreqstattype_as_string_r
+  icalvalue_as_ical_string_r
+  icalproperty_get_value_as_string
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Reproducer Testcase: 4669019872690176
+
+Comment:
+  "This crash occurs very frequently on linux platform and is likely preventing the fuzzer libical_extended_fuzzer from making much progress. Fixing this will allow more bugs to be found."
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+
+ClusterFuzz testcase 4669019872690176 is verified as fixed.

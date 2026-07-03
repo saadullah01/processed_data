@@ -1,0 +1,10 @@
+{
+    "src/ots.cc": {
+        "entities": [
+            "function_Font::DropVariations"
+        ],
+        "lines": [
+            1015
+        ]
+    }
+}

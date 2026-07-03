@@ -1,0 +1,18 @@
+{
+    "src/ua_types_encoding_json.c": {
+        "entities": [
+            "function_addMultiArrayContentJSON",
+            "function_encodeJsonStructure",
+            "function_ArrStart",
+            "function_ObjStart",
+            "function_decodeJsonStructure"
+        ],
+        "lines": [
+            1124,
+            1382,
+            108,
+            3153,
+            121
+        ]
+    }
+}

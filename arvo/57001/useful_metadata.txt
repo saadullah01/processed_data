@@ -1,0 +1,13 @@
+Project: assimp
+Fuzzing Engine: afl
+Fuzz Target: assimp_fuzzer
+Job Type: afl_asan_assimp
+Platform Id: linux
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7fc6664ab0ec
+Crash State:
+  Assimp::SortByPTypeProcess::Execute
+  Assimp::BaseProcess::ExecuteOnScene
+  Assimp::Importer::ApplyPostProcessing
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

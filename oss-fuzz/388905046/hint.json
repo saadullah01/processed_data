@@ -1,0 +1,11 @@
+{
+    "src/btf.c": {
+        "entities": [
+            "function_btf_ext_parse_info"
+        ],
+        "lines": [
+            3034,
+            3015
+        ]
+    }
+}

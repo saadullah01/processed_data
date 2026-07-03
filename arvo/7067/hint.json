@@ -1,0 +1,47 @@
+{
+    "fuzz/librawspeed/decompressors/Cr2Decompressor.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            44
+        ]
+    },
+    "src/librawspeed/decoders/Cr2Decoder.cpp": {
+        "entities": [
+            "function_Cr2Decoder::decodeOldFormat",
+            "function_Cr2Decoder::decodeNewFormat",
+            "method_Cr2Decoder::decodeOldFormat",
+            "method_Cr2Decoder::decodeNewFormat"
+        ],
+        "lines": [
+            129,
+            40,
+            169,
+            148,
+            91
+        ]
+    },
+    "src/librawspeed/decompressors/Cr2Decompressor.cpp": {
+        "entities": [
+            "function_Cr2Decompressor::decodeN_X_Y",
+            "method_Cr2Decompressor::decodeScan",
+            "method_Cr2Decompressor::decode"
+        ],
+        "lines": [
+            115,
+            163,
+            198,
+            55
+        ]
+    },
+    "src/librawspeed/decompressors/Cr2Decompressor.h": {
+        "entities": [
+            "class_Cr2Decompressor"
+        ],
+        "lines": [
+            2,
+            20
+        ]
+    }
+}

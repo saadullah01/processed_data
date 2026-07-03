@@ -1,0 +1,36 @@
+{
+    "src/lib/OpenEXRCore/internal_dwa_compressor.h": {
+        "entities": [
+            "function_DwaCompressor_uncompress"
+        ],
+        "lines": [
+            1080,
+            1090,
+            1147,
+            1133
+        ]
+    },
+    "src/lib/OpenEXRCore/internal_dwa_decoder.h": {
+        "entities": [
+            "function_LossyDctDecoder_construct",
+            "function_LossyDctDecoderCsc_construct",
+            "struct_LossyDctDecoder",
+            "function_LossyDctDecoder_base_construct",
+            "struct__LossyDctDecoder",
+            "function_LossyDctDecoder_execute"
+        ],
+        "lines": [
+            34,
+            67,
+            227,
+            79,
+            115,
+            180,
+            214,
+            57,
+            155,
+            189,
+            127
+        ]
+    }
+}

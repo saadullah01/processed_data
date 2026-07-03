@@ -1,0 +1,10 @@
+{
+    "src/bmffimage.cpp": {
+        "entities": [
+            "function_BmffImage::brotliUncompress"
+        ],
+        "lines": [
+            216
+        ]
+    }
+}

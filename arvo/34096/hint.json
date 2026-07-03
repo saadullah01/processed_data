@@ -1,0 +1,16 @@
+{
+    "src/njs_parser.c": {
+        "entities": [],
+        "lines": [
+            4713,
+            6098,
+            6153
+        ]
+    },
+    "src/test/njs_unit_test.c": {
+        "entities": [],
+        "lines": [
+            2958
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "Zend/tests/nullsafe_operator/039.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_vm_def.h": {
+        "entities": [
+            "function_ZEND_VM_HOT_NOCONST_HANDLER(198, ZEND_JMP_NULL, CONST|TMPVARCV, JMP_ADDR)",
+            "function_ZEND_JMP_NULL"
+        ],
+        "lines": [
+            7376,
+            7383
+        ]
+    },
+    "Zend/zend_vm_execute.h": {
+        "entities": [
+            "function_ZEND_JMP_NULL_SPEC_CON",
+            "function_ZEND_JMP_NULL_SPEC_TMPV"
+        ],
+        "lines": [
+            12047,
+            12054,
+            5286,
+            5279
+        ]
+    }
+}

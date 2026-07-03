@@ -1,0 +1,19 @@
+{
+    "splash/SplashFTFont.cc": {
+        "entities": [
+            "method_SplashFTFont::makeGlyph",
+            "constructor_SplashFTFont::SplashFTFont"
+        ],
+        "lines": [
+            60,
+            271
+        ]
+    },
+    "splash/SplashFTFont.h": {
+        "entities": [],
+        "lines": [
+            1,
+            66
+        ]
+    }
+}

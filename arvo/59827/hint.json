@@ -1,0 +1,11 @@
+{
+    "src/kernel.c": {
+        "entities": [
+            "function_mrb_init_kernel"
+        ],
+        "lines": [
+            544,
+            571
+        ]
+    }
+}

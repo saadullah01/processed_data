@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-tcp.c": {
+        "entities": [
+            "function_dissect_tcpopt_sack"
+        ],
+        "lines": [
+            4377
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "gdal/fuzzers/gdal_translate_fuzzer.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            81,
+            102
+        ]
+    }
+}

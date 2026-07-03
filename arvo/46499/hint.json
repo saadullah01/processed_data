@@ -1,0 +1,11 @@
+{
+    "src/lib/protocols/tinc.c": {
+        "entities": [
+            "function_ndpi_check_tinc"
+        ],
+        "lines": [
+            90,
+            102
+        ]
+    }
+}

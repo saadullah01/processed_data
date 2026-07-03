@@ -1,0 +1,13 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_FiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: FiffParserFuzzer-GetDecoder-Decode
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  rawspeed::alignedMalloc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+ClusterFuzz has detected this issue as fixed in range 201712160631:201712170645.

@@ -1,0 +1,19 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_ps2write_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x625000086d68
+Crash State:
+  Ins_PUSHW
+  RunIns
+  Instance_Reset
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

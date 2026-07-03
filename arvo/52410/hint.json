@@ -1,0 +1,10 @@
+{
+    "mapsymbol.c": {
+        "entities": [
+            "function_loadSymbol"
+        ],
+        "lines": [
+            250
+        ]
+    }
+}

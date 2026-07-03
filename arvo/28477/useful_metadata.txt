@@ -1,0 +1,18 @@
+Project: glib
+Fuzzing Engine: afl
+Fuzz Target: fuzz_date_time_new_from_iso8601
+Job Type: afl_asan_glib
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 2
+Crash Address: 0x0000006dff12
+Crash State:
+  g_date_time_get_ymd
+  g_date_time_get_year
+  g_date_time_format_utf8
+Sanitizer: address (ASAN)
+
+I haven’t debugged in depth, but from the look of the test case, this looks like another NAN issue which should be fixed by
+
+ClusterFuzz testcase 5111097636028416 is verified as fixed.
+
+This bug has been fixed for 30 days. It has been opened to the public.

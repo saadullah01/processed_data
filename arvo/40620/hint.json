@@ -1,0 +1,10 @@
+{
+    "bfd/compress.c": {
+        "entities": [
+            "function_bfd_get_full_section_contents"
+        ],
+        "lines": [
+            226
+        ]
+    }
+}

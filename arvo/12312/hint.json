@@ -1,0 +1,10 @@
+{
+    "src/hb-aat-layout-morx-table.hh": {
+        "entities": [
+            "struct_ContextualSubtable"
+        ],
+        "lines": [
+            330
+        ]
+    }
+}

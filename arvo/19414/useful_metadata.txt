@@ -1,0 +1,24 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 16
+Severity: High
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 16
+Crash Address: 0x7ffcabe23898
+Crash State:
+  buffer_read_memory
+  fetch_data
+  print_insn_mode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.

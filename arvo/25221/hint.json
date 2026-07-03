@@ -1,0 +1,10 @@
+{
+    "poppler/Stream.h": {
+        "entities": [
+            "method_getChars"
+        ],
+        "lines": [
+            690
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/ms_adpcm.c": {
+        "entities": [
+            "function_wavlike_msadpcm_init"
+        ],
+        "lines": [
+            128
+        ]
+    }
+}

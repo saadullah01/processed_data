@@ -1,0 +1,15 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_enc_fuzzer
+Job Type: libfuzzer_asan_libxaac
+Platform Id: linux
+Crash Address: 0x61800000079c
+Crash State:
+  ixheaace_process
+  xaac_enc_fuzzer.cpp
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,20 @@
+{
+    "src/core/ddsi/src/ddsi_typewrap.c": {
+        "entities": [
+            "function_xt_valid_struct_member_ids",
+            "function_xt_valid_bitmask_positions",
+            "function_xt_valid_enum_values",
+            "function_xt_valid_union_member_ids"
+        ],
+        "lines": [
+            584,
+            619,
+            685,
+            654,
+            695,
+            665,
+            635,
+            606
+        ]
+    }
+}

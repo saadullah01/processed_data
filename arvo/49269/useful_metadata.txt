@@ -1,0 +1,16 @@
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  mrb_bint_to_s
+  mrb_integer_to_str
+  int_to_s
+Sanitizer: address (ASAN)
+Reproducer Testcase: 4692509858594816
+Fixed by a4ce63abc598f93cca66d59fd196a7293b9566fb
+ClusterFuzz testcase 4692509858594816 is verified as fixed
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decoders/Cr2Decoder.cpp": {
+        "entities": [
+            "method_Cr2Decoder::decodeOldFormat"
+        ],
+        "lines": [
+            92
+        ]
+    }
+}

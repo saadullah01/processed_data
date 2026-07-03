@@ -1,0 +1,48 @@
+Project: mupdf
+Fuzzer: afl_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: afl_asan_mupdf
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7f86eb165ec0
+Crash State:
+  pdf_lookup_cmap_full
+  pdf_remap_cmap_range
+  pdf_remap_cmap
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201801181639:201801190545
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5267574158786560
+
+ClusterFuzz has detected this issue as fixed in range 201801240607:201801250607.
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7f86eb165ec0
+Crash State:
+  pdf_lookup_cmap_full
+  pdf_remap_cmap_range
+  pdf_remap_cmap
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201801181639:201801190545
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201801240607:201801250607
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5267574158786560
+
+ClusterFuzz testcase 5267574158786560 is verified as fixed, so closing issue as verified.
+
+Reported upstream at https://bugs.ghostscript.com/show_bug.cgi?id=698884
+
+After analysis it was found that the fix was already provided by https://bugs.ghostscript.com/show_bug.cgi?id=698883
+
+Fixed in http://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=f597300439e62f5e921f0d7b1e880b5c1a1f1607;hp=093fc3b098dc5fadef5d8ad4b225db9fb124758b
+
+That code change depends on https://bugs.ghostscript.com/show_bug.cgi?id=698888
+
+Fixed in http://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=71ceebcf56e682504da22c4035b39a2d451e8ffd;hp=7f82c01523505052615492f8e220f4348ba46995
+
+This bug has been fixed for 30 days. It has been opened to the public.

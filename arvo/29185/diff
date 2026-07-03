@@ -1,0 +1,21 @@
+From a3cc4110b0696196ae5381363db293b92a4a9481 Mon Sep 17 00:00:00 2001
+From: Hayden Roche <hayden@wolfssl.com>
+Date: Mon, 11 Jan 2021 09:59:11 -0600
+Subject: [PATCH] Clamp the normalization value at the end of sp_mont_norm.
+
+---
+ wolfcrypt/src/sp_int.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/wolfcrypt/src/sp_int.c b/wolfcrypt/src/sp_int.c
+index ff8f2e9fe08..c5274e196a9 100644
+--- a/wolfcrypt/src/sp_int.c
++++ b/wolfcrypt/src/sp_int.c
+@@ -12290,6 +12290,7 @@ int sp_mont_norm(sp_int* norm, sp_int* m)
+     if ((err == MP_OKAY) && (bits == SP_WORD_SIZE)) {
+         norm->dp[0] %= m->dp[0];
+     }
++    sp_clamp(norm);
+ 
+     return err;
+ }

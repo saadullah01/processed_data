@@ -1,0 +1,146 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 372547409
+OSS Fuzz
+372547409
+libxml2:api: Heap-use-after-free in xmlValidateOneElement
+1
+Hotlists (3)
+Mark as Duplicate
+Comments
+(3)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(7)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTION87...@developer.gserviceaccount.com created issue #1
+Oct 9, 2024 08:48PM
+Detailed Report: https://oss-fuzz.com/testcase?key=6416192519077888
+
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: api
+Job Type: libfuzzer_asan_i386_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0xf510160c
+Crash State:
+  xmlValidateOneElement
+  xmlValidateElement
+  api.c
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_libxml2&range=202403200619:202403210632
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6416192519077888
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #2
+Oct 12, 2024 01:01AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 6416192519077888 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_libxml2&range=202410080612:202410110610
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+pe...@google.com<pe...@google.com> #3
+Oct 12, 2024 08:40AM
+
+This bug has been fixed. It has been opened to the public.
+
+Add comment
+Comment
+Issue metadata
+Reporter
+87...@developer.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+al...@apple.com
+ap...@gmail.com
+be...@google.com
+dd...@apple.com
+dk...@apple.com
+eb...@apple.com
+ja...@apple.com
+jm...@apple.com
+lg...@apple.com
+ph...@apple.com
+rd...@apple.com
+we...@aevum.de
+za...@gmail.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Jan 10, 2025
+Project
+libxml2
+Reported
+Oct 12, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

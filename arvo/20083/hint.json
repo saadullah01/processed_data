@@ -1,0 +1,34 @@
+{
+    "source3/smbd/reply.c": {
+        "entities": [
+            "function_do_unlink",
+            "function_rename_internals"
+        ],
+        "lines": [
+            3130,
+            7595,
+            7436
+        ]
+    },
+    "source3/smbd/trans2.c": {
+        "entities": [
+            "function_smb_posix_unlink",
+            "function_smb_posix_open",
+            "function_get_posix_fsp",
+            "function_smb_posix_mkdir"
+        ],
+        "lines": [
+            8672,
+            8663,
+            8454,
+            8842,
+            143,
+            8433,
+            156,
+            8535,
+            8699,
+            8412,
+            125
+        ]
+    }
+}

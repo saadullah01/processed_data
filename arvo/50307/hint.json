@@ -1,0 +1,10 @@
+{
+    "devices/vector/gdevpdfi.c": {
+        "entities": [
+            "function_pdf_image3x_make_mcde"
+        ],
+        "lines": [
+            2214
+        ]
+    }
+}

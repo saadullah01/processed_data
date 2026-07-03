@@ -1,0 +1,30 @@
+{
+    "gio/tests/network-address.c": {
+        "entities": [
+            "function_test_uri_scope_id",
+            "variable_uri_tests",
+            "variable_host_tests"
+        ],
+        "lines": [
+            76,
+            37,
+            326
+        ]
+    },
+    "glib/guri.c": {
+        "entities": [
+            "function_parse_ip_literal"
+        ],
+        "lines": [
+            411
+        ]
+    },
+    "glib/tests/uri.c": {
+        "entities": [
+            "variable_absolute_tests"
+        ],
+        "lines": [
+            526
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+Project: libhevc
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: libhevc
+Fuzzing Engine: libFuzzer
+Fuzz Target: hevc_dec_fuzzer
+Job Type: libfuzzer_msan_libhevc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  ihevcd_fmt_conv_420sp_to_rgb565
+  ihevcd_fmt_conv
+  ihevcd_decode
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Tracked internally as 141750034
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer hevc_dec_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5728697516032000 is verified as fixed

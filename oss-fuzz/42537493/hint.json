@@ -1,0 +1,65 @@
+{
+    "HTMLtree.c": {
+        "entities": [
+            "function_htmlSaveFile",
+            "function_htmlDocDumpMemoryFormat",
+            "function_htmlSaveFileFormat",
+            "function_htmlDocDump",
+            "function_htmlNodeDumpFileFormat"
+        ],
+        "lines": [
+            1029,
+            1063,
+            560,
+            1107,
+            508
+        ]
+    },
+    "include/private/io.h": {
+        "entities": [],
+        "lines": [
+            32
+        ]
+    },
+    "xmlIO.c": {
+        "entities": [
+            "function_xmlOutputBufferCreateFile",
+            "function_xmlOutputBufferCreateIO",
+            "function_xmlAllocOutputBufferInternal",
+            "function_xmlAllocOutputBuffer",
+            "function_xmlOutputBufferCreateFd",
+            "function___xmlOutputBufferCreateFilename"
+        ],
+        "lines": [
+            1536,
+            1668,
+            1258,
+            1643,
+            1932,
+            1997,
+            1651,
+            1940,
+            1237,
+            1589,
+            2005,
+            1276,
+            1245
+        ]
+    },
+    "xmlsave.c": {
+        "entities": [
+            "function_xmlSaveToIO",
+            "function_xmlSaveToFilename",
+            "function_xmlSaveToBuffer",
+            "function_xmlDocDumpFormatMemoryEnc",
+            "function_xmlSaveToFd"
+        ],
+        "lines": [
+            2049,
+            2018,
+            1990,
+            1960,
+            2554
+        ]
+    }
+}

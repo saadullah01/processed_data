@@ -1,0 +1,50 @@
+-- Comment 1:
+Project: librawspeed
+Fuzzer: afl_librawspeed_FujiDecompressorFuzzer
+Fuzz target binary: FujiDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x7fb08df77800
+Crash State:
+  rawspeed::FujiDecompressor::copy_line_to_xtrans
+  rawspeed::FujiDecompressor::fuji_decode_strip
+  rawspeed::FujiDecompressor::decompressThreaded
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Regressed: 201711230639:201711240641
+
+Reproducer Testcase: (testcase_id=4669760378765312)
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201712270645:201712280641.
+
+Project: librawspeed
+Fuzzer: afl_librawspeed_FujiDecompressorFuzzer
+Fuzz target binary: FujiDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x7fb08df77800
+Crash State:
+  rawspeed::FujiDecompressor::copy_line_to_xtrans
+  rawspeed::FujiDecompressor::fuji_decode_strip
+  rawspeed::FujiDecompressor::decompressThreaded
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Regressed: 201711230639:201711240641
+Fixed: 201712270645:201712280641
+
+Reproducer Testcase: (testcase_id=4669760378765312)
+
+-- Comment 3:
+ClusterFuzz testcase 4669760378765312 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

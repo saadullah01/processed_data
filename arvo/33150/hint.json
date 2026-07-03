@@ -1,0 +1,14 @@
+{
+    "src/in_dxf.c": {
+        "entities": [
+            "function_dxf_tables_read",
+            "function_move_out_BLOCK_CONTROL",
+            "function_move_out_LTYPE_CONTROL"
+        ],
+        "lines": [
+            8523,
+            11965,
+            8551
+        ]
+    }
+}

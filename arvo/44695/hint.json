@@ -1,0 +1,10 @@
+{
+    "src/jplist.c": {
+        "entities": [
+            "function_parse_primitive"
+        ],
+        "lines": [
+            490
+        ]
+    }
+}

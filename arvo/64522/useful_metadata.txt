@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 8
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs11
+Job Type: afl_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x78652d173db0
+Crash State:
+  asn1_decode_entry
+  asn1_decode
+  _sc_asn1_decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

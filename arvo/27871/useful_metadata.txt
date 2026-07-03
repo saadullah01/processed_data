@@ -1,0 +1,26 @@
+Project: miniz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: miniz
+Fuzzing Engine: libFuzzer
+Fuzz Target: zip_fuzzer
+Job Type: libfuzzer_msan_miniz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  mz_zip_compute_crc32_callback
+  mz_zip_reader_extract_to_callback
+  mz_zip_validate_file
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6421976188715008 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,12 @@
+{
+    "src/hb-aat-layout-kerx-table.hh": {
+        "entities": [
+            "method_KerxSubTableFormat0::sanitize",
+            "method_KerxSubTableFormat2::sanitize"
+        ],
+        "lines": [
+            275,
+            103
+        ]
+    }
+}

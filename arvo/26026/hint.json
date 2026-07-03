@@ -1,0 +1,10 @@
+{
+    "src/wavlike.c": {
+        "entities": [
+            "function_wavlike_read_cart_chunk"
+        ],
+        "lines": [
+            830
+        ]
+    }
+}

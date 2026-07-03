@@ -1,0 +1,20 @@
+Project: rnp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_keyring_kbx
+Job Type: libfuzzer_asan_rnp
+Platform Id: linux
+
+Crash Address: 0x60e000000376
+Crash State:
+  mem_src_read
+  src_peek
+  src_eof
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,11 @@
+{
+    "libarchive/archive_read_support_format_rar.c": {
+        "entities": [
+            "function_run_filters"
+        ],
+        "lines": [
+            3328,
+            3345
+        ]
+    }
+}

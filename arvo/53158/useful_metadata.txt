@@ -1,0 +1,20 @@
+Project: libraw
+Fuzzing Engine: afl
+Fuzz Target: libraw_raf_fuzzer
+Job Type: afl_asan_libraw
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x621000004d00
+Crash State:
+  LibRaw_buffer_datastream::read
+  LibRaw::uncompressed_fp_dng_load_raw
+  LibRaw::unpack
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 6213111850074112 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

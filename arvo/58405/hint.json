@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_font1C.c": {
+        "entities": [
+            "function_pdfi_read_cff_real"
+        ],
+        "lines": [
+            693
+        ]
+    }
+}

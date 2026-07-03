@@ -1,0 +1,17 @@
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_wpg_fuzzer
+Fuzz target binary: encoder_wpg_fuzzer
+Job Type: libfuzzer_msan_imagemagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  SetPixelViaPixelInfo
+  InsertRow
+  UnpackWPGRaster
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201803040535:201803050535.
+
+ClusterFuzz testcase 5671640655462400 is verified as fixed, so closing issue as verified.

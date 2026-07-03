@@ -1,0 +1,12 @@
+{
+    "libxslt/attrvt.c": {
+        "entities": [
+            "function_xsltCompileAttr",
+            "function_xsltSetAttrVTsegment"
+        ],
+        "lines": [
+            153,
+            178
+        ]
+    }
+}

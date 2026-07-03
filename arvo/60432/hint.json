@@ -1,0 +1,10 @@
+{
+    "src/x86/ipred16_sse.asm": {
+        "entities": [
+            "function_pal_pred_16bpc"
+        ],
+        "lines": [
+            3967
+        ]
+    }
+}

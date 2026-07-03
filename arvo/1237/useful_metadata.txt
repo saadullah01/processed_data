@@ -1,0 +1,22 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+Crash Type: Global-buffer-overflow WRITE 1
+Crash Address: 0x00000e4c79c1
+Crash State:
+  COM_Parse
+  Cmd_TokenizeString
+  dissect_quakeworld_ConnectionlessPacket
+Sanitizer: address (ASAN)
+Regressed: 201704181620:201704191700
+Reproducer Testcase: 6033191976566784
+
+ClusterFuzz has detected this issue as fixed in range 201704221622:201704231645.
+Fixed: 201704221622:201704231645
+
+ClusterFuzz testcase 6033191976566784 is verified as fixed, so closing issue.
+
+Upstream bug id: 13644 (duplicate of 13624, issue 1179)
+Current status: RESOLVED FIXED

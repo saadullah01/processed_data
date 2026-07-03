@@ -1,0 +1,12 @@
+{
+    "examples/llvmfuzz.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            75,
+            67,
+            86
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+Project: assimp
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_ubsan_assimp
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7f586c2c4000
+Crash State:
+  Assimp::IOStreamBuffer<char>::getNextLine
+  Assimp::PLY::DOM::ParseHeader
+  Assimp::PLY::DOM::ParseInstanceBinary
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

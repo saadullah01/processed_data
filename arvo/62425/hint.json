@@ -1,0 +1,46 @@
+{
+    "icu4c/source/i18n/calendar.cpp": {
+        "entities": [
+            "function_Calendar::roll",
+            "method_Calendar::getActualMinimum",
+            "function_Calendar::getTemporalMonthCode",
+            "method_Calendar::adoptTimeZone",
+            "method_Calendar::validateField",
+            "function_Calendar::setWeekData",
+            "function_Calendar::setTemporalMonthCode",
+            "method_Calendar::clear",
+            "method_Calendar::add",
+            "function_Calendar::fieldDifference",
+            "method_Calendar::get",
+            "method_Calendar::getActualHelper",
+            "method_Calendar::isSet",
+            "method_Calendar::getActualMaximum",
+            "function_Calendar::getActualMaximum",
+            "method_Calendar::prepareGetActual",
+            "method_Calendar::pinField",
+            "method_Calendar::set"
+        ],
+        "lines": [
+            3843,
+            1285,
+            3720,
+            2064,
+            2708,
+            2837,
+            1309,
+            1192,
+            2355,
+            1204,
+            3639,
+            1722,
+            2876,
+            3778,
+            3655,
+            2250,
+            3787,
+            2783,
+            2792,
+            1387
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "jchuff.c": {
+        "entities": [
+            "function_encode_one_block"
+        ],
+        "lines": [
+            4,
+            613,
+            588
+        ]
+    }
+}

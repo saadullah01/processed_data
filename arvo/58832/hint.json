@@ -1,0 +1,18 @@
+{
+    "epan/dissectors/packet-btl2cap.c": {
+        "entities": [
+            "function_dissect_le_credit_based_connresponse",
+            "function_dissect_le_credit_based_connrequest"
+        ],
+        "lines": [
+            1025,
+            871,
+            845,
+            909,
+            1039,
+            1014,
+            857,
+            1052
+        ]
+    }
+}

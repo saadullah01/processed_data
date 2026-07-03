@@ -1,0 +1,12 @@
+{
+    "crypto/x509/v3_alt.c": {
+        "entities": [
+            "function_GENERAL_NAME_print",
+            "function_i2v_GENERAL_NAME"
+        ],
+        "lines": [
+            174,
+            86
+        ]
+    }
+}

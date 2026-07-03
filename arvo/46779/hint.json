@@ -1,0 +1,10 @@
+{
+    "tsk/fs/ntfs.c": {
+        "entities": [
+            "function_ntfs_load_bmap"
+        ],
+        "lines": [
+            3300
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "xinclude.c": {
+        "entities": [
+            "function_xmlXIncludeCopyXPointer",
+            "function_xmlXIncludeCopyRange"
+        ],
+        "lines": [
+            1186,
+            1014,
+            1103
+        ]
+    },
+    "xpointer.c": {
+        "entities": [
+            "function_xmlXPtrBuildRangeNodeList"
+        ],
+        "lines": [
+            1483,
+            1574
+        ]
+    }
+}

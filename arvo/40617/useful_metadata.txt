@@ -1,0 +1,20 @@
+Project: libexif
+Fuzzing Engine: libFuzzer
+Fuzz Target: exif_loader_fuzzer
+Job Type: libfuzzer_asan_libexif
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6250000022ff
+Crash State:
+  exif_data_load_data_content
+  exif_data_load_data
+  exif_loader_get_data
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer exif_loader_fuzzer from making much progress. Fixing this will allow more bugs to be found.

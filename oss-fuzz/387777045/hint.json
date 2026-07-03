@@ -1,0 +1,8 @@
+{
+    "core/iwasm/interpreter/wasm_loader.c": {
+        "entities": [],
+        "lines": [
+            11228
+        ]
+    }
+}

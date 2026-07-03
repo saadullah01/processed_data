@@ -1,0 +1,16 @@
+{
+    "lparser.c": {
+        "entities": [
+            "function_singlevar"
+        ],
+        "lines": [
+            468
+        ]
+    },
+    "testes/attrib.lua": {
+        "entities": [],
+        "lines": [
+            434
+        ]
+    }
+}

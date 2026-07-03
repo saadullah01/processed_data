@@ -1,0 +1,22 @@
+Project: kimageformats
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: kimageformats
+Fuzzer: libFuzzer_kimageformats_kimgio_tga_fuzzer
+Fuzz target binary: kimgio_tga_fuzzer
+Job Type: libfuzzer_msan_kimageformats
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  LoadTGA
+  TGAHandler::read
+  kimgio_fuzzer.cc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

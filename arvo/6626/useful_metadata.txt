@@ -1,0 +1,55 @@
+Project: botan
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: botan
+Fuzzer: libFuzzer_botan_invert
+Fuzz target binary: invert
+Job Type: libfuzzer_msan_botan
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  Botan::word_add
+  Botan::bigint_cnd_abs
+  Botan::ct_inverse_mod_odd_modulus
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+I don't understand this bug, and I can't repro. Valgrind reports no problem. I can't get MSan to work (just crashes immediately inside libFuzzer before my fuzz target is ever called).
+
+Right now my best guess is that the inline asm is tricking MSan. Oh and then I notice in the docs "you may need to replace all inline assembly code that writes to memory with a pure C/C++ code." ok that is almost certainly the problem. I'll initialize the array to make MSan happy
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer invert from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201803010517:201803020518.
+
+Project: botan
+Fuzzer: libFuzzer_botan_invert
+Fuzz target binary: invert
+Job Type: libfuzzer_msan_botan
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  Botan::word_add
+  Botan::bigint_cnd_abs
+  Botan::ct_inverse_mod_odd_modulus
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5113093358092288 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

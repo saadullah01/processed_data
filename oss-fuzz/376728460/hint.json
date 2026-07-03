@@ -1,0 +1,20 @@
+{
+    "core/iwasm/interpreter/wasm_loader.c": {
+        "entities": [
+            "function_load_function_section",
+            "function_re_scan"
+        ],
+        "lines": [
+            3610,
+            15837
+        ]
+    },
+    "core/iwasm/interpreter/wasm_mini_loader.c": {
+        "entities": [
+            "function_load_function_section"
+        ],
+        "lines": [
+            1183
+        ]
+    }
+}

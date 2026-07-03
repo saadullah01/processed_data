@@ -1,0 +1,10 @@
+{
+    "lib/compress/zstd_opt.c": {
+        "entities": [
+            "function_ZSTD_litLengthPrice"
+        ],
+        "lines": [
+            269
+        ]
+    }
+}

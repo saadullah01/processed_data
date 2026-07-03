@@ -1,0 +1,39 @@
+Comment 1:
+Project: gdal
+Fuzzer: libFuzzer_gdal_filesystem_fuzzer
+Fuzz target binary: gdal_filesystem_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x610ffff3977c
+Crash State:
+  GXFReadRawScanlineFrom
+  GXFGetRawScanline
+  GXFGetScanline
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+Fixed in trunk changeset 38722, branches/2.2 changeset 38723 and branches/2.1 changeset 38724
+
+Comment 3:
+Old bug
+
+Comment 4:
+ClusterFuzz has detected this issue as fixed in range 201705302312:201705311647.
+Project: gdal
+Fuzzer: libFuzzer_gdal_filesystem_fuzzer
+Fuzz target binary: gdal_filesystem_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x610ffff3977c
+Crash State:
+  GXFReadRawScanlineFrom
+  GXFGetRawScanline
+  GXFGetScanline
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment 5:
+ClusterFuzz testcase 5535521092665344 is verified as fixed, so closing issue.

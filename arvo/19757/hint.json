@@ -1,0 +1,18 @@
+{
+    "fuzzing/PerMessageDeflate.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            24
+        ]
+    },
+    "src/PerMessageDeflate.h": {
+        "entities": [
+            "struct_InflationStream"
+        ],
+        "lines": [
+            161
+        ]
+    }
+}

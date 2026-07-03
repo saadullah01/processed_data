@@ -1,0 +1,10 @@
+{
+    "poppler/XRef.cc": {
+        "entities": [
+            "method_XRef::getEntry"
+        ],
+        "lines": [
+            1565
+        ]
+    }
+}

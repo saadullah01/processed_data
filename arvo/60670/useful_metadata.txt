@@ -1,0 +1,27 @@
+Project: selinux
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: selinux
+Fuzzing Engine: honggfuzz
+Fuzz Target: secilc-fuzzer
+Job Type: honggfuzz_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x603000005120
+Crash State:
+  cil_list_destroy
+  cil_destroy_classperms_list
+  cil_destroy_args
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Reproducer Testcase: (omitted)
+Crash Revision: (omitted)
+
+ClusterFuzz testcase 4833924441047040 is verified as fixed (revision range omitted)

@@ -1,0 +1,28 @@
+Project: hunspell
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 16
+Severity: Medium
+
+Project: hunspell
+Fuzzing Engine: libFuzzer
+Fuzz Target: affdicfuzzer
+Job Type: libfuzzer_asan_i386_hunspell
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 16
+Crash Address: 0xf582eea0
+Crash State:
+  AffixMgr::compound_check
+  SuggestMgr::checkword
+  SuggestMgr::testsug
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6256247108403200 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

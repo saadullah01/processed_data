@@ -1,0 +1,26 @@
+{
+    "icu4c/source/common/loclikely.cpp": {
+        "entities": [
+            "function__uloc_addLikelySubtags"
+        ],
+        "lines": [
+            483
+        ]
+    },
+    "icu4c/source/common/loclikelysubtags.cpp": {
+        "entities": [
+            "method_XLikelySubtags::makeMaximizedLsrFrom"
+        ],
+        "lines": [
+            456
+        ]
+    },
+    "icu4c/source/test/cintltst/cloctst.c": {
+        "entities": [
+            "function_TestIsRightToLeft"
+        ],
+        "lines": [
+            6886
+        ]
+    }
+}

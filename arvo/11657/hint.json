@@ -1,0 +1,12 @@
+{
+    "src/hb-ot-cff1-table.hh": {
+        "entities": [
+            "method_get_glyph",
+            "struct_Charset"
+        ],
+        "lines": [
+            392,
+            550
+        ]
+    }
+}

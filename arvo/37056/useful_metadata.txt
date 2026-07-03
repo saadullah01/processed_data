@@ -1,0 +1,19 @@
+Project: sudo
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: sudoers
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_policy
+Job Type: libfuzzer_asan_sudoers
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x602000009df0
+Crash State:
+  sudoers_gc_run
+  fuzz_policy.c
+  resolve_editor
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

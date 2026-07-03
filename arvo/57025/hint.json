@@ -1,0 +1,10 @@
+{
+    "bfd/coffgen.c": {
+        "entities": [
+            "function_coff_get_normalized_symtab"
+        ],
+        "lines": [
+            1703
+        ]
+    }
+}

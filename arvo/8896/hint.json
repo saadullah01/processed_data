@@ -1,0 +1,51 @@
+{
+    "coders/jpeg.c": {
+        "entities": [
+            "function_JPEGMessageHandler"
+        ],
+        "lines": [
+            257,
+            231,
+            138,
+            203,
+            242
+        ]
+    },
+    "coders/tiff.c": {
+        "entities": [
+            "function_ReadTIFFImage"
+        ],
+        "lines": [
+            2817,
+            1539,
+            5508,
+            2696,
+            5525,
+            2589,
+            3358,
+            2849,
+            2597,
+            2470,
+            3237,
+            2500,
+            2757,
+            2630,
+            2380,
+            2640,
+            3024,
+            2898,
+            3168,
+            3057,
+            2419,
+            2935,
+            2554,
+            3326
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

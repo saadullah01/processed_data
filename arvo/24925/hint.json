@@ -1,0 +1,25 @@
+{
+    "xinclude.c": {
+        "entities": [
+            "function_xmlXIncludeProcessTreeFlagsData",
+            "function_xmlXIncludeTestNode",
+            "function_xmlXIncludeProcessTreeFlags",
+            "function_xmlXIncludeRecurseDoc",
+            "function_xmlXIncludeLoadFallback",
+            "function_xmlXIncludeProcessNode",
+            "function_xmlXIncludeDoProcess"
+        ],
+        "lines": [
+            1984,
+            2521,
+            1997,
+            2413,
+            2605,
+            2386,
+            2645,
+            2393,
+            91,
+            732
+        ]
+    }
+}

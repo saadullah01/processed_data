@@ -1,0 +1,18 @@
+Project: open62541
+Fuzzer: libFuzzer_open62541_fuzz_json_decode_encode
+Fuzz target binary: fuzz_json_decode_encode
+Job Type: libfuzzer_asan_open62541
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x628000003f80
+Crash State:
+  searchObjectForKeyRec
+  searchObjectForKeyRec
+  searchObjectForKeyRec
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5163330924183552 is verified as fixed

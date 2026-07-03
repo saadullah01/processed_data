@@ -1,0 +1,17 @@
+Project: libheif
+Fuzzing Engine: libFuzzer
+Fuzz Target: file-fuzzer
+Job Type: libfuzzer_asan_i386_libheif
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0xf2d0890f
+Crash State:
+  Op_RGB_to_RGB24_32::convert_colorspace
+  heif::ColorConversionPipeline::convert_image
+  heif::convert_colorspace
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer file-fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5648321160151040 is verified as fixed

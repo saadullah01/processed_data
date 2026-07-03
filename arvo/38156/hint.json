@@ -1,0 +1,35 @@
+{
+    "icu4c/source/common/uloc.cpp": {
+        "entities": [
+            "function_uloc_getVariant",
+            "function__ConvertBCP47",
+            "function_ulocimp_getKeywordValue",
+            "function_uloc_openKeywords",
+            "function__canonicalize"
+        ],
+        "lines": [
+            1408,
+            1504,
+            1794,
+            771,
+            489,
+            1483,
+            478
+        ]
+    },
+    "icu4c/source/test/cintltst/cloctst.c": {
+        "entities": [
+            "function_addLocaleTest"
+        ],
+        "lines": [
+            243,
+            2495
+        ]
+    },
+    "icu4c/source/test/cintltst/cloctst.h": {
+        "entities": [],
+        "lines": [
+            88
+        ]
+    }
+}

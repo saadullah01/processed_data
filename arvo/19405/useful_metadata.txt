@@ -1,0 +1,22 @@
+Project: samba
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: samba
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_ndr_drsblobs_TYPE_STRUCT
+Job Type: libfuzzer_asan_samba
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x608000000104
+Crash State:
+  ndr_push_scheduleHeader
+  ndr_push_schedule
+  fuzz_ndr_drsblobs_TYPE_STRUCT.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

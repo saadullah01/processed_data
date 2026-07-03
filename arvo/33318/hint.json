@@ -1,0 +1,86 @@
+{
+    "source/m3_api_defs.h": {
+        "entities": [],
+        "lines": [
+            32
+        ]
+    },
+    "source/m3_compile.c": {
+        "entities": [
+            "function_Push",
+            "function_ValidateBlockEnd",
+            "variable_c_operations",
+            "function_PatchBranches",
+            "function_GetMaxUsedSlotPlusOne",
+            "function_MoveStackTopToSlot",
+            "function_EmitPatchingBranch",
+            "function_Compile_End"
+        ],
+        "lines": [
+            2464,
+            1378,
+            1094,
+            935,
+            2185,
+            906,
+            333,
+            1294,
+            1361,
+            1106,
+            2450,
+            438,
+            699,
+            1052,
+            1246
+        ]
+    },
+    "source/m3_compile.h": {
+        "entities": [],
+        "lines": [
+            103
+        ]
+    },
+    "source/m3_core.c": {
+        "entities": [
+            "function_m3_FreeImpl"
+        ],
+        "lines": [
+            117
+        ]
+    },
+    "source/m3_env.c": {
+        "entities": [
+            "function_EvaluateExpression",
+            "function_m3_LoadModule"
+        ],
+        "lines": [
+            286,
+            542
+        ]
+    },
+    "source/m3_info.c": {
+        "entities": [
+            "function_dump_type_stack"
+        ],
+        "lines": [
+            408,
+            385
+        ]
+    },
+    "source/m3_module.c": {
+        "entities": [
+            "function_m3_FreeModule",
+            "function_m3_GetModuleName"
+        ],
+        "lines": [
+            37,
+            119
+        ]
+    },
+    "source/wasm3.h": {
+        "entities": [],
+        "lines": [
+            246
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "tests/oss-fuzz.sh": {
+        "entities": [],
+        "lines": [
+            6
+        ]
+    }
+}

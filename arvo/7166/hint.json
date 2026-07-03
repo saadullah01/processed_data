@@ -1,0 +1,10 @@
+{
+    "epan/tvbuff_zlib.c": {
+        "entities": [
+            "function_tvb_uncompress"
+        ],
+        "lines": [
+            55
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+Project: libspectre
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: spectre_read_fuzzer
+Job Type: libfuzzer_msan_libspectre
+Platform Id: linux
+Crash Address: 
+Crash State:
+  psscan
+  document_load
+  spectre_read_fuzzer.c
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5678076710354944 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

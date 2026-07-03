@@ -1,0 +1,10 @@
+{
+    "src/flb_http_client.c": {
+        "entities": [
+            "function_flb_http_client"
+        ],
+        "lines": [
+            717
+        ]
+    }
+}

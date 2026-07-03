@@ -1,0 +1,22 @@
+Project: mapserver
+Fuzzing Engine: afl
+Fuzz Target: mapfuzzer
+Job Type: afl_asan_mapserver
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6110000003c0
+Crash State:
+  msSetError
+  loadColor
+  loadMapInternal
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mapfuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4782407505281024 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

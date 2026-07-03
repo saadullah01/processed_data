@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_fontps.c": {
+        "entities": [
+            "function_ps_font_eexec_func"
+        ],
+        "lines": [
+            979
+        ]
+    }
+}

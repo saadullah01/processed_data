@@ -1,0 +1,19 @@
+{
+    "src/ICCProfile.c": {
+        "entities": [
+            "function_read_mft_common"
+        ],
+        "lines": [
+            393,
+            406
+        ]
+    },
+    "tests.c": {
+        "entities": [
+            "variable_profile_test_cases"
+        ],
+        "lines": [
+            565
+        ]
+    }
+}

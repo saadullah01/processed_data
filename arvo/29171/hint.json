@@ -1,0 +1,10 @@
+{
+    "blosc/frame.c": {
+        "entities": [
+            "function_get_coffsets"
+        ],
+        "lines": [
+            917
+        ]
+    }
+}

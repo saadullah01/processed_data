@@ -1,0 +1,26 @@
+-- Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7ffc82339080
+Crash State:
+  pdfi_read_cff_dict
+  pdfi_read_cff_dict
+  pdfi_read_cff_dict
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+-- Comment 2:
+Upstream fix committed.
+
+-- Comment 3:
+ClusterFuzz testcase 6750173575905280 is verified as fixed
+
+-- Comment 4:
+This bug has been fixed. It has been opened to the public.

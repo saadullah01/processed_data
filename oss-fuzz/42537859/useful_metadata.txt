@@ -1,0 +1,33 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_RV30_fuzzer: Use-of-uninitialized-value in put_rv30_tpel8_h_lowpass
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_RV30_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+ put_rv30_tpel8_h_lowpass
+ rv34_mc
+ rv34_decode_slice
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6494489919684608 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type
+ Vulnerability
+Priority
+ P2
+Severity
+ S2
+Status
+ Fixed (Verified)
+Project
+ ffmpeg

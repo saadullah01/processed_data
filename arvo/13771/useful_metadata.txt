@@ -1,0 +1,22 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash State:
+  fz_mask_color_key
+  fz_decomp_image_from_stream
+  compressed_image_get_pixmap
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Regressed: 201903150316:201903160314
+
+ClusterFuzz has detected this issue as fixed in range 201903180312:201903190316

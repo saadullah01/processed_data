@@ -1,0 +1,15 @@
+Project: fluent-bit
+Fuzzing Engine: libFuzzer
+Fuzz Target: flb-it-fuzz-config_map_fuzzer_OSSFUZZ
+Job Type: libfuzzer_asan_fluent-bit
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x603000000160
+Crash State:
+  flb_free
+  flb_sds_destroy
+  flb_kv_item_destroy
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer flb-it-fuzz-config_map_fuzzer_OSSFUZZ from making much progress. Fixing this will allow more bugs to be found.

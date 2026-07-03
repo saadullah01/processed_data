@@ -1,0 +1,193 @@
+{
+    "src/H5Oainfo.c": {
+        "entities": [
+            "function_H5O__ainfo_encode"
+        ],
+        "lines": [
+            175,
+            31
+        ]
+    },
+    "src/H5Oattr.c": {
+        "entities": [
+            "function_H5O__attr_encode"
+        ],
+        "lines": [
+            380,
+            391
+        ]
+    },
+    "src/H5Obogus.c": {
+        "entities": [
+            "function_H5O__bogus_encode"
+        ],
+        "lines": [
+            35,
+            142
+        ]
+    },
+    "src/H5Obtreek.c": {
+        "entities": [
+            "function_H5O__btreek_encode"
+        ],
+        "lines": [
+            24,
+            120
+        ]
+    },
+    "src/H5Ocache_image.c": {
+        "entities": [
+            "function_H5O__mdci_encode"
+        ],
+        "lines": [
+            36,
+            135
+        ]
+    },
+    "src/H5Ocont.c": {
+        "entities": [
+            "function_H5O__cont_encode"
+        ],
+        "lines": [
+            33,
+            122
+        ]
+    },
+    "src/H5Odrvinfo.c": {
+        "entities": [
+            "function_H5O__drvinfo_encode"
+        ],
+        "lines": [
+            135,
+            23
+        ]
+    },
+    "src/H5Oefl.c": {
+        "entities": [
+            "function_H5O__efl_encode"
+        ],
+        "lines": [
+            197,
+            22
+        ]
+    },
+    "src/H5Ofsinfo.c": {
+        "entities": [
+            "function_H5O__fsinfo_encode"
+        ],
+        "lines": [
+            222,
+            30
+        ]
+    },
+    "src/H5Oginfo.c": {
+        "entities": [
+            "function_H5O__ginfo_encode"
+        ],
+        "lines": [
+            29,
+            158
+        ]
+    },
+    "src/H5Olayout.c": {
+        "entities": [
+            "function_H5O__layout_encode"
+        ],
+        "lines": [
+            794,
+            31
+        ]
+    },
+    "src/H5Olinfo.c": {
+        "entities": [
+            "function_H5O__linfo_encode"
+        ],
+        "lines": [
+            33,
+            183
+        ]
+    },
+    "src/H5Olink.c": {
+        "entities": [
+            "function_H5O__link_encode"
+        ],
+        "lines": [
+            289,
+            35
+        ]
+    },
+    "src/H5Omessage.c": {
+        "entities": [
+            "function_H5O_msg_flush",
+            "function_H5O_msg_encode"
+        ],
+        "lines": [
+            1972,
+            1597
+        ]
+    },
+    "src/H5Omtime.c": {
+        "entities": [
+            "function_H5O__mtime_new_encode",
+            "function_H5O__mtime_encode"
+        ],
+        "lines": [
+            24,
+            257,
+            221,
+            271
+        ]
+    },
+    "src/H5Oname.c": {
+        "entities": [
+            "function_H5O__name_encode"
+        ],
+        "lines": [
+            29,
+            110
+        ]
+    },
+    "src/H5Opkg.h": {
+        "entities": [
+            "struct_H5O_msg_class_t"
+        ],
+        "lines": [
+            211
+        ]
+    },
+    "src/H5Orefcount.c": {
+        "entities": [
+            "function_H5O__refcount_encode"
+        ],
+        "lines": [
+            29,
+            126
+        ]
+    },
+    "src/H5Oshared.h": {
+        "entities": [
+            "function_H5O_SHARED_ENCODE"
+        ],
+        "lines": [
+            91
+        ]
+    },
+    "src/H5Oshmesg.c": {
+        "entities": [
+            "function_H5O__shmesg_encode"
+        ],
+        "lines": [
+            24,
+            113
+        ]
+    },
+    "src/H5Ostab.c": {
+        "entities": [
+            "function_H5O__stab_encode"
+        ],
+        "lines": [
+            32,
+            123
+        ]
+    }
+}

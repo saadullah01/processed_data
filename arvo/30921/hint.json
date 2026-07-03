@@ -1,0 +1,44 @@
+{
+    "Userland/Libraries/LibJS/Runtime/Array.cpp": {
+        "entities": [
+            "constructor_Array::Array"
+        ],
+        "lines": [
+            38
+        ]
+    },
+    "Userland/Libraries/LibJS/Runtime/Array.h": {
+        "entities": [
+            "class_Array"
+        ],
+        "lines": [
+            30
+        ]
+    },
+    "Userland/Libraries/LibJS/Runtime/ArrayPrototype.cpp": {
+        "entities": [
+            "class_ArrayPrototype",
+            "function_ArrayPrototype::initialize"
+        ],
+        "lines": [
+            81,
+            44
+        ]
+    },
+    "Userland/Libraries/LibJS/Runtime/ArrayPrototype.h": {
+        "entities": [
+            "class_ArrayPrototype"
+        ],
+        "lines": [
+            27
+        ]
+    },
+    "Userland/Libraries/LibJS/Tests/builtins/Array/Array.isArray.js": {
+        "entities": [
+            "function_test(\"arguments that evaluate to true\")"
+        ],
+        "lines": [
+            21
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "src/lib/libdwarf/dwarf_frame.c": {
+        "entities": [
+            "function_dwarf_get_fde_for_die"
+        ],
+        "lines": [
+            2145
+        ]
+    },
+    "src/lib/libdwarf/dwarf_frame2.c": {
+        "entities": [
+            "function__dwarf_read_cie_fde_prefix"
+        ],
+        "lines": [
+            1294
+        ]
+    }
+}

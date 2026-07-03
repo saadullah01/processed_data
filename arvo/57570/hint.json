@@ -1,0 +1,30 @@
+{
+    "bfd/ecoff.c": {
+        "entities": [
+            "function_ecoff_final_link_debug_accumulate"
+        ],
+        "lines": [
+            3741
+        ]
+    },
+    "bfd/elfxx-mips.c": {
+        "entities": [
+            "function__bfd_mips_elf_read_ecoff_info"
+        ],
+        "lines": [
+            1464
+        ]
+    },
+    "bfd/libbfd-in.h": {
+        "entities": [],
+        "lines": [
+            929
+        ]
+    },
+    "bfd/libbfd.h": {
+        "entities": [],
+        "lines": [
+            935
+        ]
+    }
+}

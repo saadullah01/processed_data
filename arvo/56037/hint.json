@@ -1,0 +1,183 @@
+{
+    "src/libgit2/fetch.c": {
+        "entities": [],
+        "lines": [
+            17
+        ]
+    },
+    "src/libgit2/fetch.h": {
+        "entities": [],
+        "lines": [
+            11
+        ]
+    },
+    "src/libgit2/netops.c": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "src/libgit2/netops.h": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "src/libgit2/pack-objects.c": {
+        "entities": [],
+        "lines": [
+            11
+        ]
+    },
+    "src/libgit2/pack-objects.h": {
+        "entities": [],
+        "lines": [
+            13
+        ]
+    },
+    "src/libgit2/streams/mbedtls.c": {
+        "entities": [],
+        "lines": [
+            14
+        ]
+    },
+    "src/libgit2/streams/openssl.c": {
+        "entities": [],
+        "lines": [
+            20,
+            71
+        ]
+    },
+    "src/libgit2/streams/socket.c": {
+        "entities": [],
+        "lines": [
+            8
+        ]
+    },
+    "src/libgit2/streams/socket.h": {
+        "entities": [],
+        "lines": [
+            9
+        ]
+    },
+    "src/libgit2/transports/auth.h": {
+        "entities": [],
+        "lines": [
+            9
+        ]
+    },
+    "src/libgit2/transports/git.c": {
+        "entities": [
+            "function_git_proto_stream_read"
+        ],
+        "lines": [
+            95,
+            7
+        ]
+    },
+    "src/libgit2/transports/http.c": {
+        "entities": [],
+        "lines": [
+            11
+        ]
+    },
+    "src/libgit2/transports/smart.c": {
+        "entities": [
+            "function_git_smart__get_push_stream",
+            "function_git_smart__negotiation_step",
+            "function_git_smart__connect",
+            "function_git_smart__recv",
+            "function_git_transport_smart"
+        ],
+        "lines": [
+            13,
+            339,
+            502,
+            313,
+            155
+        ]
+    },
+    "src/libgit2/transports/smart.h": {
+        "entities": [
+            "struct_transport_smart"
+        ],
+        "lines": [
+            192,
+            170,
+            11
+        ]
+    },
+    "src/libgit2/transports/smart_pkt.c": {
+        "entities": [],
+        "lines": [
+            9
+        ]
+    },
+    "src/libgit2/transports/smart_protocol.c": {
+        "entities": [
+            "function_no_sideband",
+            "function_recv_pkt",
+            "function_store_common",
+            "function_git_smart__negotiate_fetch",
+            "function_git_smart__download_pack",
+            "function_git_smart__store_refs",
+            "function_wait_while_ack",
+            "function_parse_report"
+        ],
+        "lines": [
+            259,
+            271,
+            402,
+            916,
+            663,
+            282,
+            27,
+            290,
+            934,
+            682,
+            45,
+            430,
+            306,
+            947,
+            54,
+            568,
+            697,
+            576,
+            65,
+            327,
+            711,
+            336,
+            606,
+            616,
+            495
+        ]
+    },
+    "src/libgit2/transports/ssh.c": {
+        "entities": [],
+        "lines": [
+            13
+        ]
+    },
+    "src/libgit2/transports/winhttp.c": {
+        "entities": [],
+        "lines": [
+            13
+        ]
+    },
+    "src/util/staticstr.h": {
+        "entities": [],
+        "lines": []
+    },
+    "tests/util/url/joinpath.c": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "tests/util/url/redirect.c": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

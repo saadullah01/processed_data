@@ -1,0 +1,15 @@
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_disas_ext-bfd_arch_i386
+Job Type: afl_asan_binutils
+Platform Id: linux
+Crash Type: Dynamic-stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffd98be5f40
+Crash State:
+  fetch_data
+  print_insn
+  print_insn_i386
+Sanitizer: address (ASAN)
+ClusterFuzz testcase 6108626419318784 is verified as fixed
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

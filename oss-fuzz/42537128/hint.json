@@ -1,0 +1,10 @@
+{
+    "src/tpm2/RuntimeCommands.c": {
+        "entities": [
+            "function_RuntimeCommandsCheckEnabled"
+        ],
+        "lines": [
+            397
+        ]
+    }
+}

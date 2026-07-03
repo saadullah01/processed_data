@@ -1,0 +1,11 @@
+{
+    "libxslt/numbers.c": {
+        "entities": [
+            "function_xsltFormatNumberConversion"
+        ],
+        "lines": [
+            1250,
+            958
+        ]
+    }
+}

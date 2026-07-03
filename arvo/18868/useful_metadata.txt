@@ -1,0 +1,19 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x602000000635
+Crash State:
+  bebytes2ushort
+  coolkey_v0_get_attribute_count
+  coolkey_find_attribute
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

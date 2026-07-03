@@ -1,0 +1,19 @@
+Project: libhevc
+Fuzzing Engine: libFuzzer
+Fuzz Target: hevc_dec_fuzzer
+Job Type: libfuzzer_msan_libhevc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  ihevc_recon_4x4_ttype1
+  ihevcd_iquant_itrans_recon_ctb
+  ihevcd_process
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer hevc_dec_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5630411484430336 is verified as fixed.

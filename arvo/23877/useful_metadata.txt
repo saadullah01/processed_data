@@ -1,0 +1,19 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_readelf
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7f67ff9a3340
+Crash State:
+  print_dynamic_symbol
+  process_symbol_table
+  process_object
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

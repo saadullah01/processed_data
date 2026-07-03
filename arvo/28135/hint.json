@@ -1,0 +1,10 @@
+{
+    "src/ucl_util.c": {
+        "entities": [
+            "function_ucl_strnstr"
+        ],
+        "lines": [
+            2177
+        ]
+    }
+}

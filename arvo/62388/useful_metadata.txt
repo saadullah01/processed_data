@@ -1,0 +1,19 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_dec_fuzzer
+Job Type: libfuzzer_msan_libxaac
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  impd_drc_set_preselection
+  impd_select_drc_set
+  impd_drc_uni_sel_proc_process
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

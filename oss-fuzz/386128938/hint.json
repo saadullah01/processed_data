@@ -1,0 +1,19 @@
+{
+    "mrbgems/mruby-print/mrblib/print.rb": {
+        "entities": [
+            "method_Kernel#p"
+        ],
+        "lines": [
+            3
+        ]
+    },
+    "src/kernel.c": {
+        "entities": [
+            "function_mrb_init_kernel"
+        ],
+        "lines": [
+            576,
+            547
+        ]
+    }
+}

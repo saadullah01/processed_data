@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-idn.c": {
+        "entities": [
+            "function_dissect_idn_dmx_dictionary"
+        ],
+        "lines": [
+            739
+        ]
+    }
+}

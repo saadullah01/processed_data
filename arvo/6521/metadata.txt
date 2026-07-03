@@ -1,0 +1,109 @@
+Project: skcms
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5168080767418368
+
+Project: skcms
+Fuzzer: libFuzzer_skcms_iccprofile_transform
+Fuzz target binary: iccprofile_transform
+Job Type: libfuzzer_ubsan_skcms
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  read_mft_common
+  read_tag_mft2
+  read_a2b
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_skcms&range=201802220545:201802230544
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5168080767418368
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """The following revision refers to this bug:
+  https://skia.googlesource.com/skcms/+/569770ec9110579036c29b2e82aa52df0aa59dc8
+
+commit 569770ec9110579036c29b2e82aa52df0aa59dc8
+Author: Brian Osman <brianosman@google.com>
+Date: Fri Feb 23 14:53:52 2018
+
+Avoid out-of-bounds access to grid_points
+
+Bug: oss-fuzz:6521
+Change-Id: I03ce010633ad340c0b5f78cc2f3f16ae199a9240
+Reviewed-on: https://skia-review.googlesource.com/109800
+Reviewed-by: Brian Osman <brianosman@google.com>
+Commit-Queue: Brian Osman <brianosman@google.com>
+
+[add] https://crrev.com/569770ec9110579036c29b2e82aa52df0aa59dc8/profiles/fuzz/a2b_too_many_input_channels.icc
+[modify] https://crrev.com/569770ec9110579036c29b2e82aa52df0aa59dc8/tests.c
+[modify] https://crrev.com/569770ec9110579036c29b2e82aa52df0aa59dc8/src/ICCProfile.c
+"""
+
+-- Comment 3: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer iccprofile_transform from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """ClusterFuzz has detected this issue as fixed in range 201802230544:201802240539.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5168080767418368
+
+Project: skcms
+Fuzzer: libFuzzer_skcms_iccprofile_transform
+Fuzz target binary: iccprofile_transform
+Job Type: libfuzzer_ubsan_skcms
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  read_mft_common
+  read_tag_mft2
+  read_a2b
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_skcms&range=201802220545:201802230544
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_skcms&range=201802230544:201802240539
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5168080767418368
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 5: """ClusterFuzz testcase 5168080767418368 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

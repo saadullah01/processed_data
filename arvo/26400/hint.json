@@ -1,0 +1,11 @@
+{
+    "src/symbol.c": {
+        "entities": [
+            "function_sym2name_len"
+        ],
+        "lines": [
+            313,
+            303
+        ]
+    }
+}

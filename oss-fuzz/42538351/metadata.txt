@@ -1,0 +1,156 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42538351
+OSS Fuzz
+42538351
+ffmpeg:ffmpeg_AV_CODEC_ID_EATGQ_fuzzer: Use-of-uninitialized-value in tgq_decode_frame
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(7)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(2)
+Verified
+Vulnerability
+P2
+Add Hotlist
+ClusterFuzz
+Stability-Memory-MemorySanitizer
+Reproducible
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Sep 12, 2024 11:10PM
+Detailed Report: https://oss-fuzz.com/testcase?key=5607656650244096
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_EATGQ_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  tgq_decode_frame
+  ff_decode_receive_frame_internal
+  decode_receive_frame_internal
+ 
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_msan_ffmpeg&revision=202408160610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5607656650244096
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on issues here are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Sep 13, 2024 06:21AM
+[Empty comment from Monorail migration]
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #3
+Sep 18, 2024 05:37AM
+[Empty comment from Monorail migration]
+is...@google.com<is...@google.com> #4
+Sep 18, 2024 05:37AM
+This issue was migrated from crbug.com/oss-fuzz/71546?no_tracker_redirect=1
+pe...@google.com<pe...@google.com> #5
+Dec 5, 2024 07:42AM
+
+This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #6
+Dec 8, 2024 01:01AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 5607656650244096 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_ffmpeg&range=202412010635:202412020602
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+pe...@google.com<pe...@google.com> #7
+Dec 8, 2024 07:44AM
+
+This bug has been fixed. It has been opened to the public.
+
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+ff...@ffmpeg.org
+jo...@google.com
+jr...@google.com
+ke...@gmail.com
+mi...@niedermayer.cc
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+tf...@google.com
+tw...@mozilla.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Dec 12, 2024
+Project
+ffmpeg
+Reported
+Sep 13, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

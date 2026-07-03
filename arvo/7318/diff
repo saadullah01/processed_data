@@ -1,0 +1,30 @@
+From 6c1fec5014cb49a38b40ccfd8b40a446532e956c Mon Sep 17 00:00:00 2001
+From: Even Rouault <even.rouault@spatialys.com>
+Date: Tue, 3 Apr 2018 12:45:40 +0200
+Subject: [PATCH] OGR_GMT: fix heap buffer overflow. Fixes
+ https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=7318. Credit to OSS
+ Fuzz
+
+---
+ gdal/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/gdal/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp b/gdal/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp
+index 09797f29e3d1..8582174ae06a 100644
+--- a/gdal/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp
++++ b/gdal/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp
+@@ -90,10 +90,12 @@ OGRGmtLayer::OGRGmtLayer( const char * pszFilename, int bUpdateIn ) :
+                 osGeometryType = papszKeyedValues[iKey] + 1;
+             if( papszKeyedValues[iKey][0] == 'R' )
+                 osRegion = papszKeyedValues[iKey] + 1;
+-            if( papszKeyedValues[iKey][0] == 'J' )
++            if( papszKeyedValues[iKey][0] == 'J' &&
++                papszKeyedValues[iKey][1] != 0 &&
++                papszKeyedValues[iKey][2] != 0 )
+             {
+                 CPLString osArg = papszKeyedValues[iKey] + 2;
+-                if( osArg[0] == '"' && osArg.back() == '"' )
++                if( osArg[0] == '"' && osArg.size() >= 2 && osArg.back() == '"' )
+                 {
+                     osArg = osArg.substr(1,osArg.length()-2);
+                     char *pszArg = CPLUnescapeString(osArg, nullptr,

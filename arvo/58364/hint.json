@@ -1,0 +1,12 @@
+{
+    "libfaad/syntax.c": {
+        "entities": [
+            "function_decode_cpe",
+            "function_decode_sce_lfe"
+        ],
+        "lines": [
+            369,
+            394
+        ]
+    }
+}

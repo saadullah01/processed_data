@@ -1,0 +1,11 @@
+{
+    "psi/zfsample.c": {
+        "entities": [
+            "function_sampled_data_continue"
+        ],
+        "lines": [
+            504,
+            1
+        ]
+    }
+}

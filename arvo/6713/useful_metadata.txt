@@ -1,0 +1,36 @@
+Project: resiprocate
+Fuzzer: afl_resiprocate_fuzzStack
+Fuzz target binary: fuzzStack
+Job Type: afl_asan_resiprocate
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6020000000f6
+Crash State:
+  resip::ParseBuffer::qVal
+  resip::QValueParameter::QValueParameter
+  resip::QValueParameter::decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+The bug was present in all reSIProcate releases.
+Upstream PR pending
+
+ClusterFuzz has detected this issue as fixed in range 201803050550:201803060549
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6020000000f6
+Crash State:
+  resip::ParseBuffer::qVal
+  resip::QValueParameter::QValueParameter
+  resip::QValueParameter::decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6234261284716544 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

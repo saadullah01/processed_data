@@ -1,0 +1,16 @@
+{
+    "magick/render.c": {
+        "entities": [],
+        "lines": [
+            2016,
+            1,
+            1983
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    }
+}

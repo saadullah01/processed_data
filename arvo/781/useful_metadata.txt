@@ -1,0 +1,41 @@
+Project: pcre2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: pcre2
+Fuzzer: libFuzzer_pcre2_fuzzer
+Fuzz target binary: pcre2_fuzzer
+Job Type: libfuzzer_asan_pcre2
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7f20f63d6170
+Crash State:
+  match
+  pcre2_match_8
+  _start
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201703092232:201703101717
+
+Project: pcre2
+Fuzzer: libFuzzer_pcre2_fuzzer
+Fuzz target binary: pcre2_fuzzer
+Job Type: libfuzzer_asan_pcre2
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7f20f63d6170
+Crash State:
+  match
+  pcre2_match_8
+  _start
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

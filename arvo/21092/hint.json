@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-var-avar-table.hh": {
+        "entities": [
+            "struct_SegmentMaps"
+        ],
+        "lines": [
+            79
+        ]
+    }
+}

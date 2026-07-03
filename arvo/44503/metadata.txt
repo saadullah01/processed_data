@@ -1,0 +1,60 @@
+Project: libcoap
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5110183854997504
+
+Project: libcoap
+Fuzzing Engine: afl
+Fuzz Target: pdu_parse_fuzzer
+Job Type: afl_asan_libcoap
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x612000000a46
+Crash State:
+  coap_split_uri_sub
+  coap_get_uri_path
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_libcoap&range=202202070604:202202080606
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5110183854997504
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Reproduced. This issue is presumably fixed in PR 804 [1].
+
+[1] https://github.com/obgm/libcoap/pull/804"""
+
+-- Comment 3: """Actually, the main issue is processing an uninitialized data structure. A proper fix is provided in commit ba585f84 [2].
+[2] https://github.com/obgm/libcoap/commit/ba585f848ff527f2181f8f2bfd40520563e9e68d"""
+
+-- Comment 4: """ClusterFuzz testcase 5110183854997504 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_libcoap&range=202202090610:202202100608
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

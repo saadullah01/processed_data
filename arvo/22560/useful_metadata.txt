@@ -1,0 +1,26 @@
+Project: graphicsmagick
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: graphicsmagick
+Fuzzing Engine: libFuzzer
+Fuzz Target: coder_PTIF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  GammaToLinear
+  AccumulateRGB
+  ImportYUVAFromRGBA
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Hey libwep + libtiff team, we think this issue might be in one of these two libraries, but reachable via graphicsmagick. The allocation of memory occurs in libtiff and the uninitialized use occurs in libwep.
+
+ClusterFuzz testcase 5158223933079552 is verified as fixed
+
+There was an issue in both libtiff and GraphicsMagick.  The WebP compression only should support 8-bits/sample but libtiff was accidentally allowing other values.  Meanwhile, GraphicsMagick was improperly allowing other values to be passed.  So both libtiff and GraphicsMagick have updates.  I can't attest to ImageMagick.
+
+This bug has been fixed for 30 days. It has been opened to the public.

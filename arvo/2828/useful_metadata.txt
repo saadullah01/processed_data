@@ -1,0 +1,44 @@
+Project: gdal
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+
+Comment 1:
+Project: gdal
+Fuzzer: libFuzzer_gdal_ogr_sdts_fuzzer
+Fuzz target binary: ogr_sdts_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash State:
+  DDFSubfieldDefn::ExtractStringData
+  DDFSubfieldDefn::ExtractIntData
+  SDTS_IREF::GetSADR
+Sanitizer: address (ASAN)
+
+Comment 2:
+Fixed per https://trac.osgeo.org/gdal/changeset/39727
+Old bug
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201708010509:201708020510.
+Project: gdal
+Fuzzer: libFuzzer_gdal_ogr_sdts_fuzzer
+Fuzz target binary: ogr_sdts_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash State:
+  DDFSubfieldDefn::ExtractStringData
+  DDFSubfieldDefn::ExtractIntData
+  SDTS_IREF::GetSADR
+Sanitizer: address (ASAN)
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201707270509:201707280511
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201708010509:201708020510
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5663860470054912
+
+Comment 4:
+ClusterFuzz testcase 5663860470054912 is verified as fixed, so closing issue as verified.
+
+Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.

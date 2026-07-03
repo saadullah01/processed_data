@@ -1,0 +1,249 @@
+{
+    "doc/html/annotated.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/classes.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/functions.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/functions_vars.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/group___turbo_j_p_e_g.html": {
+        "entities": [
+            "function_tjDecompressHeader4"
+        ],
+        "lines": [
+            1739,
+            1805,
+            1785,
+            23,
+            281
+        ]
+    },
+    "doc/html/index.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/modules.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/search/all_6.js": {
+        "entities": [
+            "variable_searchData"
+        ],
+        "lines": [
+            84,
+            22
+        ]
+    },
+    "doc/html/search/functions_0.js": {
+        "entities": [],
+        "lines": [
+            9
+        ]
+    },
+    "doc/html/structtjregion.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/structtjscalingfactor.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doc/html/structtjtransform.html": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "doxygen.config": {
+        "entities": [
+            "variable_PROJECT_NUMBER"
+        ],
+        "lines": [
+            1
+        ]
+    },
+    "fuzz/decompress.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            58,
+            75,
+            38
+        ]
+    },
+    "fuzz/decompress_yuv.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            72,
+            1,
+            38,
+            55
+        ]
+    },
+    "javTJBench.java": {
+        "entities": [
+            "method_decompTest",
+            "function_decomp"
+        ],
+        "lines": [
+            168,
+            521,
+            498
+        ]
+    },
+    "javTJExample.java": {
+        "entities": [
+            "method_main"
+        ],
+        "lines": [
+            304,
+            1
+        ]
+    },
+    "javdoc/index-all.html": {
+        "entities": [],
+        "lines": [
+            316,
+            462
+        ]
+    },
+    "javdoc/org/libjpegturbo/turbojpeg/TJDecompressor.html": {
+        "entities": [
+            "method_setSourceImage",
+            "class_TJDecompressor"
+        ],
+        "lines": [
+            324,
+            351,
+            360,
+            144,
+            657,
+            478,
+            383
+        ]
+    },
+    "javdoc/org/libjpegturbo/turbojpeg/TJTransformer.html": {
+        "entities": [
+            "class_TJTransformer"
+        ],
+        "lines": [
+            125,
+            206
+        ]
+    },
+    "javorg/libjpegturbo/turbojpeg/TJDecompressor.java": {
+        "entities": [],
+        "lines": [
+            873,
+            199
+        ]
+    },
+    "tjbench.c": {
+        "entities": [
+            "function_decompTest",
+            "function_decomp"
+        ],
+        "lines": [
+            153,
+            557,
+            537
+        ]
+    },
+    "tjbenchtest.in": {
+        "entities": [],
+        "lines": [
+            72,
+            104,
+            145,
+            117,
+            31
+        ]
+    },
+    "tjbenchtest.java.in": {
+        "entities": [],
+        "lines": [
+            66,
+            111,
+            30,
+            98
+        ]
+    },
+    "tjexample.c": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            304,
+            263
+        ]
+    },
+    "turbojpeg-jni.c": {
+        "entities": [
+            "function_Java_org_libjpegturbo_turbojpeg_TJDecompressor_decompressHeader",
+            "function_Java_org_libjpegturbo_turbojpeg_TJDecompressor_decompress"
+        ],
+        "lines": [
+            578,
+            555,
+            564
+        ]
+    },
+    "turbojpeg-mapfile": {
+        "entities": [],
+        "lines": [
+            63
+        ]
+    },
+    "turbojpeg-mapfile.jni": {
+        "entities": [],
+        "lines": [
+            99
+        ]
+    },
+    "turbojpeg.c": {
+        "entities": [
+            "function_tjDecompressHeader4"
+        ],
+        "lines": [
+            1264,
+            1223
+        ]
+    },
+    "turbojpeg.h": {
+        "entities": [],
+        "lines": [
+            1201,
+            1783
+        ]
+    }
+}

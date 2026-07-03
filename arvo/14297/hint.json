@@ -1,0 +1,10 @@
+{
+    "src/lib/lwan-request.c": {
+        "entities": [
+            "function_parse_if_modified_since"
+        ],
+        "lines": [
+            610
+        ]
+    }
+}

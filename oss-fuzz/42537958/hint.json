@@ -1,0 +1,35 @@
+{
+    "fuzz/build.sh": {
+        "entities": [],
+        "lines": [
+            9
+        ]
+    },
+    "fuzz/compress.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            89,
+            1
+        ]
+    },
+    "fuzz/compress12.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            89,
+            1
+        ]
+    },
+    "fuzz/transform.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            70
+        ]
+    }
+}

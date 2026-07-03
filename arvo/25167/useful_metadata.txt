@@ -1,0 +1,16 @@
+Project: libzmq
+Fuzzing Engine: libFuzzer
+Fuzz Target: test_socket_options_fuzzer
+Job Type: libfuzzer_asan_libzmq
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6040000000b9
+Crash State:
+  zmq_z85_decode
+  zmq::options_t::set_curve_key
+  zmq::options_t::setsockopt
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,10 @@
+{
+    "src/utils/base_encoding.c": {
+        "entities": [
+            "function_gf_gz_decompress_payload_ex"
+        ],
+        "lines": [
+            294
+        ]
+    }
+}

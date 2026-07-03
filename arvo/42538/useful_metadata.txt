@@ -1,0 +1,17 @@
+Project: glib
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_resolver
+Job Type: libfuzzer_asan_glib
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 12
+Crash Address: 0x602000000dbb
+Crash State:
+  g_resolver_records_from_res_query
+  fuzz_resolver.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+I doubt that any of the fuzzing failures from gthreadedresolver.c will be remotely exploitable. The parsing code in gthreadedresolver.c is used to parse the records returned by libc’s res_nquery(), which presumably already does its own validation of anything coming from the network.

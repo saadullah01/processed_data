@@ -1,0 +1,18 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_bfd
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  _bfd_xcoff_slurp_armap
+  _bfd_xcoff_archive_p
+  bfd_check_format_matches
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6287311668248576 is verified as fixed.

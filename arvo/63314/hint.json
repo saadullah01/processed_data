@@ -1,0 +1,12 @@
+{
+    "jpegencoderhelper.cpp": {
+        "entities": [
+            "function_JpegEncoderHelper::compressYuv",
+            "function_JpegEncoderHelper::compressY"
+        ],
+        "lines": [
+            147,
+            227
+        ]
+    }
+}

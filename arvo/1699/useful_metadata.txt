@@ -1,0 +1,41 @@
+Project: ffmpeg
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_MLP_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_MLP_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  output_data
+  read_access_unit
+  decode_simple_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201705191624:201705211622.
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  output_data
+  read_access_unit
+  decode_simple_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6327177438035968 is verified as fixed, so closing issue.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

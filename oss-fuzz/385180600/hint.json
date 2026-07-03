@@ -1,0 +1,10 @@
+{
+    "src/core/meshcop/dataset.cpp": {
+        "entities": [
+            "function_Dataset::IsTlvValid"
+        ],
+        "lines": [
+            130
+        ]
+    }
+}

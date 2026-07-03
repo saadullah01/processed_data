@@ -1,0 +1,10 @@
+{
+    "src/double64.c": {
+        "entities": [
+            "function_host_read_d2f"
+        ],
+        "lines": [
+            631
+        ]
+    }
+}

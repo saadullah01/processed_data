@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decompressors/LJpegDecompressor.cpp": {
+        "entities": [
+            "method_LJpegDecompressor::decodeScan"
+        ],
+        "lines": [
+            81
+        ]
+    }
+}

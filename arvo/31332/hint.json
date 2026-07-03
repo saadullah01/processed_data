@@ -1,0 +1,10 @@
+{
+    "src/md4c.c": {
+        "entities": [
+            "function_md_is_container_mark"
+        ],
+        "lines": [
+            5685
+        ]
+    }
+}

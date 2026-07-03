@@ -1,0 +1,10 @@
+{
+    "opcodes/nds32-dis.c": {
+        "entities": [
+            "function_print_insn_nds32"
+        ],
+        "lines": [
+            974
+        ]
+    }
+}

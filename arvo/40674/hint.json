@@ -1,0 +1,12 @@
+{
+    "src/lib/libdwarf/dwarf_elf_load_headers.c": {
+        "entities": [
+            "function_read_gs_section_group"
+        ],
+        "lines": [
+            1771,
+            1684,
+            1725
+        ]
+    }
+}

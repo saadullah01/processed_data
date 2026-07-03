@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibGfx/JPGLoader.cpp": {
+        "entities": [
+            "function_bounds_okay"
+        ],
+        "lines": [
+            420
+        ]
+    }
+}

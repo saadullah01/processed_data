@@ -1,0 +1,16 @@
+Project: qemu
+Fuzzing Engine: libFuzzer
+Fuzz Target: qemu-fuzz-i386-target-generic-fuzz-e1000e
+Job Type: libfuzzer_asan_qemu
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x606000046be8
+Crash State:
+  e1000e_receive_internal
+  e1000e_receive_iov
+  e1000e_nc_receive_iov
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

@@ -1,0 +1,13 @@
+{
+    "jbig2_mmr.c": {
+        "entities": [
+            "struct_Jbig2MmrCtx",
+            "function_jbig2_decode_halftone_mmr"
+        ],
+        "lines": [
+            58,
+            43,
+            1231
+        ]
+    }
+}

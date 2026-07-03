@@ -1,0 +1,22 @@
+Project: libdwarf
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_stack_frame_access
+Job Type: libfuzzer_asan_libdwarf
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x620fb7085100
+Crash State:
+  _dwarf_memcpy_noswap_bytes
+  _dwarf_read_cie_fde_prefix
+  dwarf_get_fde_for_die
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

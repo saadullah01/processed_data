@@ -1,0 +1,10 @@
+{
+    "libavcodec/tiertexseqv.c": {
+        "entities": [
+            "function_seqvideo_decode_init"
+        ],
+        "lines": [
+            213
+        ]
+    }
+}

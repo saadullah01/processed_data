@@ -1,0 +1,10 @@
+{
+    "src/pix2.c": {
+        "entities": [
+            "function_pixGetRasterData"
+        ],
+        "lines": [
+            3310
+        ]
+    }
+}

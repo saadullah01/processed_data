@@ -1,0 +1,30 @@
+Project: libtpms
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 4
+Severity: Medium
+
+Project: libtpms
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz
+Job Type: libfuzzer_asan_libtpms
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 4
+Crash Address: 0x7ffde6e53cf0
+Crash State:
+  INDEX_ORDERLY_RAM_Marshal
+  PERSISTENT_ALL_Marshal
+  TPM2_PersistentAllStore
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6390624336084992 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

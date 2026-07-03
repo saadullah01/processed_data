@@ -1,0 +1,48 @@
+Project: skcms
+Fuzzer: libFuzzer_skcms_iccprofile_transform
+Fuzz target binary: iccprofile_transform
+Job Type: libfuzzer_ubsan_skcms
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash State:
+  read_mft_common
+  read_tag_mft2
+  read_a2b
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201802220545:201802230544
+
+Reproducer Testcase: 5168080767418368
+
+Avoid out-of-bounds access to grid_points
+
+Bug: oss-fuzz:6521
+
+[add] profiles/fuzz/a2b_too_many_input_channels.icc
+[modify] tests.c
+[modify] src/ICCProfile.c
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer iccprofile_transform from making much progress.
+
+Crash Type: Index-out-of-bounds
+Crash State:
+  read_mft_common
+  read_tag_mft2
+  read_a2b
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201802220545:201802230544
+Fixed: 201802230544:201802240539
+
+Reproducer Testcase: 5168080767418368
+
+ClusterFuzz testcase 5168080767418368 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

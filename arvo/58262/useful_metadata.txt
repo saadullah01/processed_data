@@ -1,0 +1,14 @@
+Project: matio
+Fuzzing Engine: libFuzzer
+Fuzz Target: matio_fuzzer
+Job Type: libfuzzer_asan_matio
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 16
+Crash Address: 0x60300000dd01
+Crash State:
+  H5MM_memcpy
+  H5A__read
+  H5VL__native_attr_read
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+ClusterFuzz testcase 6354834977849344 is verified as fixed

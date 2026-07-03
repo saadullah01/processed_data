@@ -1,0 +1,10 @@
+{
+    "libsepol/cil/src/cil_resolve_ast.c": {
+        "entities": [
+            "function_cil_resolve_classpermissionset"
+        ],
+        "lines": [
+            210
+        ]
+    }
+}

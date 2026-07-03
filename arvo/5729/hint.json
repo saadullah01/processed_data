@@ -1,0 +1,10 @@
+{
+    "MagickCore/draw.c": {
+        "entities": [
+            "function_GetFillAlpha"
+        ],
+        "lines": [
+            3941
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_objcopy
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+Crash Type: Invalid-free
+Crash Address: 0x621000004690
+Crash State:
+  bfd_init_section_compress_status
+  coff_real_object_p
+  coff_object_p
+Sanitizer: address (ASAN)

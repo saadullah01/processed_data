@@ -1,0 +1,34 @@
+{
+    "src/classes.c": {
+        "entities": [],
+        "lines": [
+            526
+        ]
+    },
+    "src/classes.h": {
+        "entities": [],
+        "lines": [
+            37
+        ]
+    },
+    "src/dwg.spec": {
+        "entities": [
+            "struct_ARC_DIMENSION",
+            "macro_ARC_DIMENSION"
+        ],
+        "lines": [
+            8060,
+            7775
+        ]
+    },
+    "src/in_dxf.c": {
+        "entities": [
+            "function_new_object"
+        ],
+        "lines": [
+            11874,
+            10835,
+            10908
+        ]
+    }
+}

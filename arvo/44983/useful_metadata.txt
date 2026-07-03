@@ -1,0 +1,28 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7fc81a1c1840
+Crash State:
+  check_user_password_preR5
+  pdfi_initialise_Decryption
+  pdfi_set_input_stream
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fix committed upstream
+
+ClusterFuzz testcase 6657097855533056 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

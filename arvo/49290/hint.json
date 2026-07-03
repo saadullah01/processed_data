@@ -1,0 +1,18 @@
+{
+    "base/gstype42.c": {
+        "entities": [
+            "function_parse_pieces"
+        ],
+        "lines": [
+            1290
+        ]
+    },
+    "psi/zbfont.c": {
+        "entities": [
+            "function_zfont_glyph_name"
+        ],
+        "lines": [
+            136
+        ]
+    }
+}

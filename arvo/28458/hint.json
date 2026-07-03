@@ -1,0 +1,19 @@
+{
+    "glib/gdate.c": {
+        "entities": [
+            "function_g_date_set_parse"
+        ],
+        "lines": [
+            1227
+        ]
+    },
+    "glib/tests/date.c": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            184,
+            737
+        ]
+    }
+}

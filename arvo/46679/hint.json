@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-sc-hsm.c": {
+        "entities": [
+            "function_sc_hsm_list_files"
+        ],
+        "lines": [
+            924
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x4936f3ff8006
+Crash State:
+  chunk_free_object
+  gs_font_dir_finalize
+  chunk_free_object
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

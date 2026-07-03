@@ -1,0 +1,16 @@
+Project: libsndfile
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: libsndfile
+Fuzzing Engine: libFuzzer
+Fuzz Target: sndfile_fuzzer
+Crash Type: Index-out-of-bounds
+Crash State:
+  psf_nms_adpcm_decode_block
+  nms_adpcm_read_block
+  nms_adpcm_read_f
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

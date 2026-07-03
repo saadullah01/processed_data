@@ -1,0 +1,12 @@
+{
+    "src/in_dxf.c": {
+        "entities": [
+            "function_dxf_tables_read",
+            "function_dxf_blocks_read"
+        ],
+        "lines": [
+            11972,
+            11782
+        ]
+    }
+}

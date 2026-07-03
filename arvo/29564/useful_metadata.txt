@@ -1,0 +1,28 @@
+Project: fio
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 5
+Severity: Medium
+
+Project: fio
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_parseini
+Job Type: libfuzzer_asan_fio
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 5
+Crash Address: 0x602000001638
+Crash State:
+  fio_keyword_replace
+  dup_and_sub_options
+  fio_options_parse
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This one is hopefully fixed by 85b9ee7e801f59c61c0a81c75a56563098443445 .
+
+ClusterFuzz testcase 5913552609214464 is verified as fixed.
+
+This bug has been fixed for 30 days. It has been opened to the public.

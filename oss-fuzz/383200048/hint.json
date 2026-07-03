@@ -1,0 +1,57 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "function_PackLinuxElf64::pack2_shlib",
+            "function_PackLinuxElf64::unpack",
+            "method_PackLinuxElf::pack2_shlib_overlay_compress",
+            "function_PackLinuxElf32::unpack",
+            "method_PackLinuxElf64::unpack",
+            "function_PackLinuxElf64::un_DT_INIT",
+            "function_PackLinuxElf::pack2_shlib_overlay_compress",
+            "function_PackLinuxElf32::pack2_shlib",
+            "method_PackLinuxElf32::unpack",
+            "method_PackLinuxElf32::pack2_shlib"
+        ],
+        "lines": [
+            5377,
+            5766,
+            9096,
+            5387,
+            7702,
+            5413,
+            7847,
+            8874,
+            7481,
+            5443,
+            7493,
+            5455,
+            5718,
+            9047,
+            7897,
+            5466,
+            5730,
+            5477,
+            7654,
+            5357,
+            5741,
+            5491,
+            5752
+        ]
+    },
+    "src/p_lx_elf.h": {
+        "entities": [],
+        "lines": [
+            61
+        ]
+    },
+    "src/p_unix.cpp": {
+        "entities": [
+            "function_PackUnix::unpackExtent",
+            "function_PackUnix::unpack"
+        ],
+        "lines": [
+            657,
+            485
+        ]
+    }
+}

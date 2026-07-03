@@ -1,0 +1,26 @@
+Project: harfbuzz
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: honggfuzz
+Fuzz Target: hb-shape-fuzzer
+Job Type: honggfuzz_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x60400005f87d
+Crash State:
+  bool OT::Lookup::sanitize<OT::PosLookupSubTable>
+  bool OT::ArrayOf<OT::OffsetTo<OT::PosLookup, OT::IntType<unsigned short, 2u>, tr
+  bool OT::GSUBGPOS::sanitize<OT::PosLookup>
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5417352787787776 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

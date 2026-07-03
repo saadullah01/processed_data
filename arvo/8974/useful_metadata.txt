@@ -1,0 +1,16 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_fuzzer
+Fuzz target binary: gdal_fuzzer
+Job Type: libfuzzer_ubsan_gdal
+Platform Id: linux
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: undefined (UBSAN)
+
+ClusterFuzz has detected this issue as fixed in range 201806200624:201806201644.
+
+ClusterFuzz testcase 5691369438838784 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

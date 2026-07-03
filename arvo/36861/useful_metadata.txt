@@ -1,0 +1,32 @@
+Project: spice-usbredir
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free WRITE 4
+Severity: High
+
+Project: spice-usbredir
+Fuzzing Engine: libFuzzer
+Fuzz Target: usbredirparserfuzz
+Job Type: libfuzzer_asan_spice-usbredir
+Platform Id: linux
+
+Crash Type: Heap-use-after-free WRITE 4
+Crash Address: 0x63100003c828
+Crash State:
+  usbredirparser_serialize
+  try_serialize
+  usbredirparserfuzz.cc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Reproducer Testcase ID: 6119613912973312
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer usbredirparserfuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6119613912973312 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,10 @@
+{
+    "blosc/blosc2.c": {
+        "entities": [
+            "function_blosc_d"
+        ],
+        "lines": [
+            1109
+        ]
+    }
+}

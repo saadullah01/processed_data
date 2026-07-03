@@ -1,0 +1,44 @@
+{
+    "pdf/ghostpdf.h": {
+        "entities": [
+            "struct_text_state_s"
+        ],
+        "lines": [
+            226,
+            75
+        ]
+    },
+    "pdf/pdf_colour.c": {
+        "entities": [
+            "function_pdfi_gs_setrgbcolor",
+            "function_pdfi_gs_setgray",
+            "function_pdfi_gs_setcolorspace",
+            "function_pdfi_gs_setcmykcolor"
+        ],
+        "lines": [
+            427,
+            396,
+            341,
+            367
+        ]
+    },
+    "pdf/pdf_font.c": {
+        "entities": [
+            "function_pdfi_d1",
+            "function_pdfi_d0"
+        ],
+        "lines": [
+            1169,
+            1249
+        ]
+    },
+    "pdf/pdf_font3.c": {
+        "entities": [
+            "function_pdfi_type3_build_char"
+        ],
+        "lines": [
+            81,
+            122
+        ]
+    }
+}

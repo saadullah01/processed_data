@@ -1,0 +1,22 @@
+Project: selinux
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_asan_selinux
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x603000005468
+Crash State:
+  __cil_verify_classperms
+  __cil_pre_verify_helper
+  cil_tree_walk
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 4967387467481088
+
+ClusterFuzz testcase 4967387467481088 is verified as fixed

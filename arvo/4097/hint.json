@@ -1,0 +1,10 @@
+{
+    "src/server/ua_services_subscription.c": {
+        "entities": [
+            "function_Service_DeleteSubscriptions"
+        ],
+        "lines": [
+            516
+        ]
+    }
+}

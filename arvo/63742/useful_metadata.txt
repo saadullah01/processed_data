@@ -1,0 +1,16 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_objdump_safe
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  bfd_getl32
+  alpha_ecoff_get_relocated_section_contents
+  bfd_get_relocated_section_contents
+
+Sanitizer: memory (MSAN)
+
+Reproducer Testcase: 4958718955225088

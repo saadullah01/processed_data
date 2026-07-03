@@ -1,0 +1,10 @@
+{
+    "src/flb_signv4.c": {
+        "entities": [
+            "function_flb_signv4_uri_normalize_path"
+        ],
+        "lines": [
+            135
+        ]
+    }
+}

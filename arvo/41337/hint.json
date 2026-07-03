@@ -1,0 +1,10 @@
+{
+    "binutils/sysdump.c": {
+        "entities": [
+            "function_getCHARS"
+        ],
+        "lines": [
+            44
+        ]
+    }
+}

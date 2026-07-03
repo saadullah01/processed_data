@@ -1,0 +1,14 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Fuzz Target: decompress_frame_fuzzer
+Job Type: libfuzzer_asan_c-blosc2
+Platform Id: linux
+Crash Address: 0x61100000024a
+Crash State:
+  frame_get_vlmetalayers
+  frame_to_schunk
+  blosc2_schunk_from_buffer

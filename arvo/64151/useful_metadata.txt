@@ -1,0 +1,21 @@
+Project: exiv2
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: exiv2
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz-read-print-write
+Job Type: honggfuzz_asan_exiv2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6110000004c8
+Crash State:
+  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
+  Exiv2::QuickTimeVideo::NikonTagsDecoder
+  Exiv2::QuickTimeVideo::userDataDecoder
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

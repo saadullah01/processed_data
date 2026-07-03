@@ -1,0 +1,10 @@
+{
+    "opcodes/i386-dis.c": {
+        "entities": [
+            "function_print_insn"
+        ],
+        "lines": [
+            9389
+        ]
+    }
+}

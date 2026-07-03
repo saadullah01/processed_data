@@ -1,0 +1,10 @@
+{
+    "tools/gen_merged_protos": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            218
+        ]
+    }
+}

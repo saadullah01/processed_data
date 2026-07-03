@@ -1,0 +1,29 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "method_PackLinuxElf64::invert_pt_dynamic",
+            "method_PackLinuxElf64::get_dynsym_name",
+            "method_PackLinuxElf32::get_dynsym_name",
+            "constructor_PackLinuxElf::PackLinuxElf",
+            "function_PackLinuxElf32::get_str_name",
+            "function_PackLinuxElf::PackLinuxElf",
+            "function_PackLinuxElf32::invert_pt_dynamic",
+            "function_PackLinuxElf64::get_str_name"
+        ],
+        "lines": [
+            8002,
+            259,
+            2346,
+            2383,
+            2356,
+            2102,
+            2393
+        ]
+    },
+    "src/p_lx_elf.h": {
+        "entities": [],
+        "lines": [
+            84
+        ]
+    }
+}

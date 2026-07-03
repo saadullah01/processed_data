@@ -1,0 +1,10 @@
+{
+    "src/media_tools/m3u8.c": {
+        "entities": [
+            "function_parse_attributes"
+        ],
+        "lines": [
+            720
+        ]
+    }
+}

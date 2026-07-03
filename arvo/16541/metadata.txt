@@ -1,0 +1,53 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5755077486182400
+
+Project: zstd
+Fuzzing Engine: libFuzzer
+Fuzz Target: simple_decompress
+Job Type: libfuzzer_ubsan_zstd
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7ffcdeddc000
+Crash State:
+  ZSTD_decodeLiteralsBlock
+  ZSTD_decompressBlock
+  ZSTD_decompressDCtx
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_zstd&range=201904181421:201904190236
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5755077486182400
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """We will fix this bug, but it is in the legacy decoder v0.2 which is not enabled by default."""
+
+-- Comment 3: """This bug is a second instance of https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=16445. The same bug is also present in v0.4, which is also not built into zstd by default.
+
+This bug is NOT present in v0.5 onward (which is built into zstd by default)."""
+
+-- Comment 4: """ClusterFuzz testcase 5755077486182400 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_zstd&range=201908210426:201908212232
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

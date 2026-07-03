@@ -1,0 +1,60 @@
+Project: libjpeg-turbo.dev
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5483940396007424
+
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: transform_fuzzer_dev
+Job Type: libfuzzer_ubsan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  emit_symbol
+  encode_mcu_AC_refine
+  compress_output
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_libjpeg-turbo&range=202211040617:202211050610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5483940396007424
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This is apparently a long-standing issue with 12-bit data precision in libjpeg-turbo (and probably libjpeg as well.)  It was exposed in the evolving libjpeg-turbo 2.2.x code base when I recently incorporated 12-bit data precision into the libjpeg API library, which exposed the 12-bit code paths to OSS-Fuzz for the first time.  The issue can also be reproduced by building the libjpeg-turbo 2.1.x and 2.0.x stable code bases with -DWITH_12BIT=1 and trying to transform a baseline 12-bit JPEG file into a progressive 12-bit JPEG file using jpegtran.  I am investigating."""
+
+-- Comment 3: """This was a regression introduced by the progressive Huffman encoding optimizations in libjpeg-turbo 2.0.x, so in fact the bug does not exist in libjpeg or in libjpeg-turbo 1.5.x and prior.  The author of the feature is investigating."""
+
+-- Comment 4: """Should be fixed in https://github.com/libjpeg-turbo/libjpeg-turbo/commit/78a36f6dc36ac7898a9c299e4a2bc58cb1a8eba4"""
+
+-- Comment 5: """ClusterFuzz testcase 5483940396007424 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_libjpeg-turbo&range=202211150613:202211160607
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

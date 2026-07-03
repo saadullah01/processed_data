@@ -1,0 +1,19 @@
+{
+    "src/ncp-spinel/SpinelNCPInstance.cpp": {
+        "entities": [
+            "method_SpinelNCPInstance::handle_ncp_spinel_callback",
+            "method_SpinelNCPInstance::handle_ncp_spinel_value_is"
+        ],
+        "lines": [
+            2721,
+            2754,
+            3271,
+            2861,
+            2991,
+            3248,
+            3313,
+            2747,
+            3292
+        ]
+    }
+}

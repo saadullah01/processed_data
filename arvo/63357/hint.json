@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibGfx/ImageFormats/BMPLoader.cpp": {
+        "entities": [
+            "function_decode_bmp_dib"
+        ],
+        "lines": [
+            845
+        ]
+    }
+}

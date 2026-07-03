@@ -1,0 +1,18 @@
+Project: c-blosc2
+Fuzzing Engine: honggfuzz
+Fuzz Target: decompress_fuzzer
+Job Type: honggfuzz_asan_c-blosc2
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x604ffffff8c1
+Crash State:
+  blosc_d
+  do_job
+  blosc_run_decompression_with_context
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer decompress_fuzzer from making much progress. Fixing this will allow more bugs to be found.

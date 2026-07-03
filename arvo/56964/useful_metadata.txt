@@ -1,0 +1,13 @@
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: html
+Job Type: afl_asan_libxml2
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x000000902283
+Crash State:
+  htmlCurrentChar
+  htmlParseNameComplex
+  htmlParseName
+Sanitizer: address (ASAN)
+Reproducer Testcase: 4544440854511616

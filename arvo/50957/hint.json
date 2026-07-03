@@ -1,0 +1,36 @@
+{
+    "src/cmscgats.c": {
+        "entities": [
+            "function_CookPointers",
+            "function_AllocateDataSet",
+            "function_SetDataFormat",
+            "function_AllocateDataFormat",
+            "function_SetData",
+            "function_InSymbol",
+            "function_cmsIT8SetData",
+            "function_DataSection",
+            "function_AllocChunk"
+        ],
+        "lines": [
+            1537,
+            1178,
+            928,
+            2338,
+            1575,
+            1585,
+            839,
+            974,
+            1617,
+            2004,
+            2778,
+            860,
+            988,
+            1629,
+            1636,
+            1000,
+            1008,
+            1015,
+            1660
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-shape-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  OT::gvar::accelerator_t::apply_deltas_to_points
+  bool OT::glyf_impl::Glyph::get_points<OT::glyf_accelerator_t>
+  bool OT::glyf_accelerator_t::get_points<OT::glyf_accelerator_t::points_aggregato
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

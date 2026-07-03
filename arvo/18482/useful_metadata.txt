@@ -1,0 +1,28 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Bad-free
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_decode
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Bad-free
+Crash Address: 0x7ffc164d8fa8
+Crash State:
+  sc_pkcs15_decode_prkdf_entry
+  fuzz_pkcs15_decode.c
+
+Sanitizer: address (ASAN)
+
+Regressed: 201910220541:201910230209
+
+Reproducer Testcase: 5750809543573504
+
+ClusterFuzz testcase 5750809543573504 is verified as fixed in 201910230209:201910240209
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

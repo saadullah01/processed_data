@@ -1,0 +1,20 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-shape-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  bool OT::glyf_impl::Glyph::get_points<OT::glyf_accelerator_t>
+  bool OT::glyf_accelerator_t::get_points<OT::glyf_accelerator_t::points_aggregato
+  OT::glyf_accelerator_t::get_advance_with_var_unscaled
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5114131137822720 is verified as fixed

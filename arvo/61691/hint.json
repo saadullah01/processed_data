@@ -1,0 +1,10 @@
+{
+    "decoder/generic/ixheaacd_qmf_dec_generic.c": {
+        "entities": [
+            "function_ixheaacd_cplx_anal_qmffilt"
+        ],
+        "lines": [
+            597
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+Project: libjpeg-turbo
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: qpdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: qpdf_fuzzer
+Job Type: libfuzzer_msan_qpdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  decompress_smooth_data
+  process_data_context_main
+  jpeg_read_scanlines
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer qpdf_fuzzer from making much progress.

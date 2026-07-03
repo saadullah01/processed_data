@@ -1,0 +1,15 @@
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_decoder
+Job Type: libfuzzer_asan_i386_flac
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0xf3400f00
+Crash State:
+  FLAC__lpc_restore_signal_intrin_sse41
+  read_frame_
+  FLAC__stream_decoder_process_until_end_of_stream
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer_decoder from making much progress. Fixing this will allow more bugs to be found.

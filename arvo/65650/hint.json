@@ -1,0 +1,10 @@
+{
+    "src/pefile.cpp": {
+        "entities": [
+            "function_PeFile::unpack0"
+        ],
+        "lines": [
+            2948
+        ]
+    }
+}

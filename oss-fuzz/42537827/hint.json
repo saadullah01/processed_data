@@ -1,0 +1,10 @@
+{
+    "libavformat/apetag.c": {
+        "entities": [
+            "function_ff_ape_parse_tag"
+        ],
+        "lines": [
+            121
+        ]
+    }
+}

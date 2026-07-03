@@ -1,0 +1,10 @@
+{
+    "jdhuff.h": {
+        "entities": [
+            "macro_HUFF_DECODE_FAST"
+        ],
+        "lines": [
+            237
+        ]
+    }
+}

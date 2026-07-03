@@ -1,0 +1,20 @@
+{
+    "gdal/frmts/raw/iscedataset.cpp": {
+        "entities": [
+            "function_ISCEDataset::Create",
+            "method_ISCEDataset::FlushCache",
+            "method_ISCEDataset::Create",
+            "method_ISCEDataset::Open",
+            "function_ISCEDataset::Open"
+        ],
+        "lines": [
+            227,
+            806,
+            681,
+            652,
+            695,
+            635,
+            861
+        ]
+    }
+}

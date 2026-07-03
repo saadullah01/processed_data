@@ -1,0 +1,11 @@
+{
+    "src/lib/protocols/bittorrent.c": {
+        "entities": [
+            "function_ndpi_search_bittorrent"
+        ],
+        "lines": [
+            494,
+            534
+        ]
+    }
+}

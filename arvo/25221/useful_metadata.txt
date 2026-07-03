@@ -1,0 +1,14 @@
+Project: poppler Fuzzer: libfuzzer Sanitizer: asan Crash Type: Negative-size-param
+
+Project: poppler
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_poppler
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  BaseMemStream<char const>::getChars
+  Stream::doGetChars
+  Stream::fillString
+Sanitizer: address (ASAN)

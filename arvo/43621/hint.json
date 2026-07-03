@@ -1,0 +1,20 @@
+{
+    "base/gsptype1.c": {
+        "entities": [
+            "function_compute_inst_matrix"
+        ],
+        "lines": [
+            616,
+            1
+        ]
+    },
+    "pdf/pdf_pattern.c": {
+        "entities": [
+            "function_pdfi_setpattern_type1"
+        ],
+        "lines": [
+            1,
+            446
+        ]
+    }
+}

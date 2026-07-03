@@ -1,0 +1,22 @@
+Project: php-src
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-execute
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7f67427c7800
+Crash State:
+  zend_gc_delref
+  i_zval_ptr_dtor
+  zend_unclean_zval_ptr_dtor
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,15 @@
+Project: fluent-bit
+Fuzzing Engine: libFuzzer
+Fuzz Target: flb-it-fuzz-record_ac_fuzzer_OSSFUZZ
+Job Type: libfuzzer_asan_fluent-bit
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  flb_ra_translate
+  record_ac_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5740978868191232 is verified as fixed

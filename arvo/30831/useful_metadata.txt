@@ -1,0 +1,21 @@
+Project: openthread
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Project: openthread
+Fuzzing Engine: honggfuzz
+Fuzz Target: cli-uart-received-fuzzer
+Job Type: honggfuzz_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7fffc319c084
+Crash State:
+  ot::Coap::Message::AppendUintOption
+  ot::Coap::Message::AppendBlockOption
+  otCoapMessageAppendBlock2Option
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

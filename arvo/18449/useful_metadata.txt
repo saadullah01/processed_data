@@ -1,0 +1,22 @@
+Project: karchive
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: karchive
+Fuzzing Engine: libFuzzer
+Fuzz Target: karchive_fuzzer
+Job Type: libfuzzer_msan_karchive
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  crc32_little
+  crc32_z
+  K7Zip::K7ZipPrivate::readAndDecodePackedStreams
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,15 @@
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-tracing-jit
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  php_fgetcsv
+  zif_str_getcsv
+  execute_internal
+Sanitizer: address (ASAN)
+Regressed:
+Slightly simplified. str_getcsv("\0yy","y","y","\0")
+ClusterFuzz testcase 6000911527575552 is verified as fixed

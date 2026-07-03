@@ -1,0 +1,13 @@
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x602000000671
+Crash State:
+  hextoint
+  get_name_from_EF_DatiPersonali
+  itacns_add_data_files
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

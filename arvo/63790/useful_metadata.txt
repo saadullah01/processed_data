@@ -1,0 +1,16 @@
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_tool_flac
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  write_callback
+  write_audio_frame_to_client_
+  read_frame_
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase ID: 6109218488582144
+
+ClusterFuzz testcase 6109218488582144 is verified as fixed.

@@ -1,0 +1,17 @@
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_ubsan_libredwg
+Platform Id: linux
+Crash Type: Object-size
+Crash Address:
+Crash State:
+  dxf_tables_read
+  dwg_read_dxf
+  llvmfuzz.c
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer llvmfuzz from making much progress.
+
+ClusterFuzz testcase 5426146561884160 is verified as fixed.

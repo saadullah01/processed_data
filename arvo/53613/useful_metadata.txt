@@ -1,0 +1,20 @@
+Project: libxml2
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: xml
+Job Type: libfuzzer_msan_libxml2
+Platform Id: linux
+
+Crash Address:
+
+Crash State:
+  xmlParseTryOrFinish
+  xmlParseChunk
+  xml.c
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

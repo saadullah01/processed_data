@@ -1,0 +1,27 @@
+Issue 385170375
+ffmpeg:ffmpeg_AV_CODEC_ID_RV60_fuzzer: Heap-buffer-overflow in decode_4x4_block
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_RV60_fuzzer
+Job Type: libfuzzer_asan_ffmpeg
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x51100000038d
+Crash State:
+  decode_4x4_block
+  decode_cu_r
+  decode_slice
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4710055187906560 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

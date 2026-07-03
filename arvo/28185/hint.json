@@ -1,0 +1,11 @@
+{
+    "src/libopensc/card-idprime.c": {
+        "entities": [
+            "function_idprime_get_token_name"
+        ],
+        "lines": [
+            418,
+            445
+        ]
+    }
+}

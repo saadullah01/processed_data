@@ -1,0 +1,10 @@
+{
+    "libvips/colour/UCS2LCh.c": {
+        "entities": [
+            "function_make_hI"
+        ],
+        "lines": [
+            127
+        ]
+    }
+}

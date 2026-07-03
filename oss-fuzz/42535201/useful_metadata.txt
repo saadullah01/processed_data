@@ -1,0 +1,27 @@
+assimp:assimp_fuzzer: Heap-buffer-overflow in Assimp::MD3Importer::InternReadFile
+
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_asan_assimp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x52800000bc50
+Crash State:
+  Assimp::MD3Importer::InternReadFile
+  Assimp::BaseImporter::ReadFile
+  Assimp::Importer::ReadFile
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 4915531437113344
+
+ClusterFuzz testcase 4915531437113344 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: assimp

@@ -1,0 +1,22 @@
+Project: fluent-bit
+Fuzzing Engine: libFuzzer
+Fuzz Target: flb-it-fuzz-parser_fuzzer_OSSFUZZ
+Job Type: libfuzzer_asan_fluent-bit
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x602000000218
+Crash State:
+  flb_parser_decoder_list_destroy
+  parser_fuzzer.c
+  flb_free
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer flb-it-fuzz-parser_fuzzer_OSSFUZZ from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5734019419078656 is verified as fixed in
+
+This bug has been fixed for 30 days. It has been opened to the public.

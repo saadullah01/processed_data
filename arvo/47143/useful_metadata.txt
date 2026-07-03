@@ -1,0 +1,18 @@
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_tool
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Invalid-free
+Crash Address: 0x6020000000d5
+Crash State:
+  change_pin
+  _main
+  fuzz_pkcs15_tool.c
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 4832828711370752 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "src/ALAC/alac_decoder.c": {
+        "entities": [
+            "function_alac_decode"
+        ],
+        "lines": [
+            554
+        ]
+    }
+}

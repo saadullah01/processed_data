@@ -1,0 +1,12 @@
+{
+    "src/libopensc/pkcs15-oberthur.c": {
+        "entities": [
+            "function_sc_oberthur_parse_publicinfo",
+            "function_sc_oberthur_parse_containers"
+        ],
+        "lines": [
+            400,
+            451
+        ]
+    }
+}

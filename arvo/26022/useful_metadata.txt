@@ -1,0 +1,30 @@
+Project: libxml2
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Project: libxml2
+Fuzzing Engine: honggfuzz
+Fuzz Target: xml
+Job Type: honggfuzz_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x60c000002208
+Crash State:
+  xmlStaticCopyNode
+  xmlCopyNode
+  xmlXIncludeLoadTxt
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 6039216293937152 is verified as fixed
+
+Fixed here: 847a3a1181d59dc49c1b446d646d344d0543af3e
+
+This is a long standing bug, not a short-lived regression.
+
+This bug has been fixed for 30 days. It has been opened to the public.

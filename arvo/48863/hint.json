@@ -1,0 +1,19 @@
+{
+    "pcap-common.c": {
+        "entities": [
+            "function_fixup_pcap_pkthdr"
+        ],
+        "lines": [
+            1849,
+            1836
+        ]
+    },
+    "pcap-usb-linux-common.c": {
+        "entities": [
+            "function_fix_linux_usb_mmapped_length"
+        ],
+        "lines": [
+            41
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Userland/Shell/Parser.cpp": {
+        "entities": [
+            "function_Parser::parse_heredoc_entries",
+            "method_Parser::parse_heredoc_initiation_record"
+        ],
+        "lines": [
+            1981,
+            1943
+        ]
+    }
+}

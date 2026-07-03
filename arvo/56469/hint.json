@@ -1,0 +1,25 @@
+{
+    "include/mupdf/pdf/document.h": {
+        "entities": [
+            "struct_pdf_document"
+        ],
+        "lines": [
+            429
+        ]
+    },
+    "source/pdf/pdf-page.c": {
+        "entities": [
+            "function_pdf_lookup_page_obj",
+            "function_pdf_load_page_tree_internal",
+            "function_pdf_drop_page_tree_internal",
+            "function_pdf_load_page_tree_imp"
+        ],
+        "lines": [
+            64,
+            100,
+            242,
+            88,
+            121
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ieee80211.c": {
+        "entities": [
+            "function_proto_reg_handoff_ieee80211"
+        ],
+        "lines": [
+            32952
+        ]
+    }
+}

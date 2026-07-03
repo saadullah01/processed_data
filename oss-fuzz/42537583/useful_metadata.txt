@@ -1,0 +1,27 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_MEDIA100_fuzzer: Use-of-uninitialized-value in mjpeg_decode_scan
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_MEDIA100_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  mjpeg_decode_scan
+  ff_mjpeg_decode_sos
+  mjpegb_decode_frame
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Reproducer Testcase ID: 5537446610141184
+
+ClusterFuzz testcase 5537446610141184 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

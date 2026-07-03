@@ -1,0 +1,31 @@
+{
+    "src/hb-ot-cff-common.hh": {
+        "entities": [
+            "function_StructAtOffsetOrNull"
+        ],
+        "lines": [
+            42
+        ]
+    },
+    "src/hb-ot-cff1-table.hh": {
+        "entities": [
+            "struct_cff1"
+        ],
+        "lines": [
+            1090,
+            1188,
+            1140,
+            1108,
+            1208
+        ]
+    },
+    "src/hb-ot-cff2-table.hh": {
+        "entities": [
+            "struct_cff2"
+        ],
+        "lines": [
+            426,
+            462
+        ]
+    }
+}

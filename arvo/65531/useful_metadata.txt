@@ -1,0 +1,23 @@
+Project: upx
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 4
+Severity: Medium
+
+Fuzz Target: test_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+Crash Address: 0x7ffc75eac2f0
+Crash State:
+  PackLinuxElf64::unpack
+  Packer::doTest
+  do_one_file
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fixed on branch devel4 by commit a86ed8f426cfd3ca303e13a9bd32d648e6a63325 .
+Would not matter anywhere that stack grows towards lower addresses.
+
+ClusterFuzz testcase 5290502832324608 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

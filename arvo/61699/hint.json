@@ -1,0 +1,119 @@
+{
+    "encoder/iusace_enc_main.c": {
+        "entities": [
+            "function_ixheaace_usac_encode"
+        ],
+        "lines": [
+            934,
+            1287
+        ]
+    },
+    "encoder/iusace_fd_enc.h": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "encoder/iusace_main.h": {
+        "entities": [],
+        "lines": [
+            111
+        ]
+    },
+    "encoder/ixheaace_api.c": {
+        "entities": [
+            "function_ixheaace_init",
+            "function_ia_enhaacplus_enc_execute",
+            "function_ixheaace_process",
+            "function_iusace_process"
+        ],
+        "lines": [
+            2698,
+            3244,
+            3283,
+            3572,
+            3547
+        ]
+    },
+    "encoder/ixheaace_api_defs.h": {
+        "entities": [],
+        "lines": [
+            43
+        ]
+    },
+    "encoder/ixheaace_enc_main.c": {
+        "entities": [
+            "function_ia_enhaacplus_enc_aac_core_encode"
+        ],
+        "lines": [
+            65,
+            173
+        ]
+    },
+    "encoder/ixheaace_enc_main.h": {
+        "entities": [],
+        "lines": [
+            108
+        ]
+    },
+    "encoder/ixheaace_error_codes.h": {
+        "entities": [
+            "enum_ixheaace_error_codes"
+        ],
+        "lines": [
+            138
+        ]
+    },
+    "encoder/ixheaace_fd_enc.c": {
+        "entities": [
+            "function_iusace_fd_encode"
+        ],
+        "lines": [
+            56,
+            94
+        ]
+    },
+    "encoder/ixheaace_fd_quant.c": {
+        "entities": [
+            "function_iusace_quantize_spec"
+        ],
+        "lines": [
+            444,
+            605
+        ]
+    },
+    "encoder/ixheaace_qc_main_hp.c": {
+        "entities": [
+            "function_ia_enhaacplus_enc_qc_main"
+        ],
+        "lines": [
+            192,
+            74,
+            171,
+            146
+        ]
+    },
+    "encoder/ixheaace_qc_util.h": {
+        "entities": [],
+        "lines": [
+            37
+        ]
+    },
+    "encoder/ixheaace_struct_def.h": {
+        "entities": [
+            "struct_ixheaace_state_struct"
+        ],
+        "lines": [
+            104
+        ]
+    },
+    "test/encoder/ixheaace_error.c": {
+        "entities": [
+            "function_ia_enhaacplus_enc_error_handler_init"
+        ],
+        "lines": [
+            115,
+            251
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+From: Michael Niedermayer <michael@niedermayer.cc>
+Date: Fri, 5 May 2017 11:16:07 +0000 (+0200)
+Subject: avcodec/aacps: Fix undefined behavior
+X-Git-Tag: n3.4~1756
+X-Git-Url: http://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff_plain/527f89e05922e840083ac6d49eeb838b1e350dd4
+
+avcodec/aacps: Fix undefined behavior
+
+Fixes: 1337/clusterfuzz-testcase-minimized-5212314171080704
+
+Fixes the existence of a potentially invalid pointer intermediate
+
+Found-by: continuous fuzzing process https://github.com/google/oss-fuzz/tree/master/targets/ffmpeg
+Signed-off-by: Michael Niedermayer <michael@niedermayer.cc>
+---
+
+diff --git a/libavcodec/aacps.c b/libavcodec/aacps.c
+index ccc79ffc1d..48b595adbd 100644
+--- a/libavcodec/aacps.c
++++ b/libavcodec/aacps.c
+@@ -975,7 +975,7 @@ static void stereo_processing(PSContext *ps, INTFLOAT (*l)[32][2], INTFLOAT (*r)
+                 h_step[1][3] = AAC_MSUB31_V3(H22[1][e+1][b], h[1][3], width);
+             }
+             ps->dsp.stereo_interpolate[!PS_BASELINE && ps->enable_ipdopd](
+-                l[k] + start + 1, r[k] + start + 1,
++                l[k] + 1 + start, r[k] + 1 + start,
+                 h, h_step, stop - start);
+         }
+     }

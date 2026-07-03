@@ -1,0 +1,17 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_frame_fuzzer
+Job Type: libfuzzer_ubsan_c-blosc2
+Platform Id: linux
+Crash Address: 0x33002eeeaf80
+Crash State:
+  blosc_getitem
+  get_coffset
+  frame_get_lazychunk
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

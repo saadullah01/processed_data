@@ -1,0 +1,10 @@
+{
+    "pulley/fuzz/src/interp.rs": {
+        "entities": [
+            "function_extended_op_is_safe_for_fuzzing"
+        ],
+        "lines": [
+            107
+        ]
+    }
+}

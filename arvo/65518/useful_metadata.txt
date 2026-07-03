@@ -1,0 +1,26 @@
+Project: upx
+Fuzzing Engine: libFuzzer
+Fuzz Target: test_packed_file_fuzzer
+Job Type: libfuzzer_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x616000001d9b
+Crash State:
+  N_BELE_RTP::LEPolicy::get32
+  PackUnix::find_overlay_offset
+  PackUnix::canUnpack
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer test_packed_file_fuzzer from making much progress.
+
+Fixed on branch devel4. Existing test was not updated when input conditions generalized.
+
+Compiler complaint fixed.
+
+ClusterFuzz testcase 6207433026371584 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

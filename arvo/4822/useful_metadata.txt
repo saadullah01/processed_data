@@ -1,0 +1,20 @@
+Project: librawspeed
+Fuzzer: afl_librawspeed_FujiDecompressorFuzzer
+Fuzz target binary: FujiDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Unknown-crash READ 8
+Crash Address: 0x000000000006
+Crash State:
+  rawspeed::FujiDecompressor::copy_line_to_xtrans
+  rawspeed::FujiDecompressor::fuji_decode_strip
+  rawspeed::FujiDecompressor::decompressThreaded
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz has detected this issue as fixed in range 201712280641:201712290055.
+
+ClusterFuzz testcase 4838595543171072 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

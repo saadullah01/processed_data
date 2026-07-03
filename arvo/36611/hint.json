@@ -1,0 +1,10 @@
+{
+    "libsepol/cil/src/cil_resolve_ast.c": {
+        "entities": [
+            "function___cil_insert_name"
+        ],
+        "lines": [
+            87
+        ]
+    }
+}

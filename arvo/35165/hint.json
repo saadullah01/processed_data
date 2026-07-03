@@ -1,0 +1,12 @@
+{
+    "binutils/readelf.c": {
+        "entities": [
+            "function_process_object",
+            "function_get_section_headers"
+        ],
+        "lines": [
+            5857,
+            21327
+        ]
+    }
+}

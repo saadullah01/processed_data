@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-xref.c": {
+        "entities": [
+            "function_pdf_xref_find_subsection"
+        ],
+        "lines": [
+            1096
+        ]
+    }
+}

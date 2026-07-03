@@ -1,0 +1,23 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_as
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x6180000007a0
+Crash State:
+  dwarf2_directive_filename
+  dwarf2_directive_file
+  read_a_source_file
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 4930241975418880 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,12 @@
+{
+    "sam.c": {
+        "entities": [
+            "function_bam_aux_next",
+            "function_bam_aux_first"
+        ],
+        "lines": [
+            4693,
+            4702
+        ]
+    }
+}

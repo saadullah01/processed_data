@@ -1,0 +1,17 @@
+Project: graphicsmagick
+Fuzzer: afl_graphicsmagick_coder_MVG_fuzzer
+Fuzz target binary: coder_MVG_fuzzer
+Job Type: afl_asan_graphicsmagick
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7f69ea0421d5
+Crash State:
+  MagickGetToken
+  DrawImage
+  ReadMVGImage
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201809260140:201809270141.
+
+ClusterFuzz testcase 5634802938544128 is verified as fixed, so closing issue as verified.

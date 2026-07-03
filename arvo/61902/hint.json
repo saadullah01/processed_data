@@ -1,0 +1,11 @@
+{
+    "encoder/ixheaace_fd_qc_adjthr.c": {
+        "entities": [
+            "function_iusace_estimate_scfs_chan"
+        ],
+        "lines": [
+            1606,
+            22
+        ]
+    }
+}

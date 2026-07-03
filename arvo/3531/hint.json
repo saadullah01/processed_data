@@ -1,0 +1,18 @@
+{
+    "src/librawspeed/decoders/CrwDecoder.cpp": {
+        "entities": [
+            "function_CrwDecoder::decodeRawInternal"
+        ],
+        "lines": [
+            62
+        ]
+    },
+    "src/librawspeed/decompressors/CrwDecompressor.cpp": {
+        "entities": [
+            "method_CrwDecompressor::decompress"
+        ],
+        "lines": [
+            275
+        ]
+    }
+}

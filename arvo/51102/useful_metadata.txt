@@ -1,0 +1,16 @@
+Project: hunspell
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+Fuzzing Engine: libFuzzer
+Fuzz Target: affdicfuzzer
+Job Type: libfuzzer_asan_hunspell
+Platform Id: linux
+Crash Address: 0x6020000000f2
+Crash State:
+  SuggestMgr::badcharkey_utf
+  SuggestMgr::suggest
+  HunspellImpl::suggest_internal
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

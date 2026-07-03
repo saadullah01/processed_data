@@ -1,0 +1,39 @@
+Project: ots
+Fuzzer: libFuzzer_ots_ots-fuzzer
+Fuzz target binary: ots-fuzzer
+Job Type: libfuzzer_asan_ots
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x607000000114
+Crash State:
+  ots::OTSStream::Write
+  ots::OpenTypeCMAP::Serialize
+  ProcessGeneric
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201703201614:201703211108.
+
+Project: ots
+Fuzzer: libFuzzer_ots_ots-fuzzer
+Fuzz target binary: ots-fuzzer
+Job Type: libfuzzer_asan_ots
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x607000000114
+Crash State:
+  ots::OTSStream::Write
+  ots::OpenTypeCMAP::Serialize
+  ProcessGeneric
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5372103857537024 is verified as fixed, so closing issue.
+
+This bug has been fixed for 30 days. It has been opened to the public.

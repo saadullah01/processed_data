@@ -1,0 +1,10 @@
+{
+    "src/lib/OpenEXRUtil/ImfCheckFile.cpp": {
+        "entities": [
+            "function_memstream_read"
+        ],
+        "lines": [
+            1555
+        ]
+    }
+}

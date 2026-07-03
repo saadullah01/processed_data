@@ -1,0 +1,18 @@
+{
+    "src/apps/testapps/testGridDisk.c": {
+        "entities": [
+            "function_gridDisk"
+        ],
+        "lines": [
+            360
+        ]
+    },
+    "src/h3lib/lib/algos.c": {
+        "entities": [
+            "function_h3NeighborRotations"
+        ],
+        "lines": [
+            346
+        ]
+    }
+}

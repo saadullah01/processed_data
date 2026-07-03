@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-layout-gsubgpos.hh": {
+        "entities": [
+            "function_context_closure_recurse_lookups"
+        ],
+        "lines": [
+            1248
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+Project: liblouis
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_translate_generic
+Job Type: libfuzzer_asan_liblouis
+Platform Id: linux
+Crash State:
+  passDoAction
+  translateString
+  _lou_translate
+Sanitizer: address (ASAN)
+Regressed: 202304240604:202304250611
+Reproducer Testcase: 6608976274653184
+ClusterFuzz testcase 6608976274653184 is verified as fixed in range 202312040620:202312050631

@@ -1,0 +1,10 @@
+{
+    "src/hunspell/affixmgr.cxx": {
+        "entities": [
+            "function_AffixMgr::redundant_condition"
+        ],
+        "lines": [
+            4820
+        ]
+    }
+}

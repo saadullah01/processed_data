@@ -1,0 +1,11 @@
+{
+    "base/gdevmem.c": {
+        "entities": [
+            "function_mem_initialize_device_procs"
+        ],
+        "lines": [
+            650,
+            895
+        ]
+    }
+}

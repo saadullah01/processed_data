@@ -1,0 +1,24 @@
+From 4b1c89ab381861e87a2fa43809438f040782f475 Mon Sep 17 00:00:00 2001
+From: Sean Parkinson <sean@wolfssl.com>
+Date: Mon, 15 Feb 2021 09:04:43 +1000
+Subject: [PATCH] DH SP math: return key size error with DH Agree
+
+SP math requires SP to support DH operations.
+When SP doesn't support bit size, WC_KEY_SIZE_E must be returned.
+---
+ wolfcrypt/src/dh.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/wolfcrypt/src/dh.c b/wolfcrypt/src/dh.c
+index 0c9f1827560..ebfb8683eb5 100644
+--- a/wolfcrypt/src/dh.c
++++ b/wolfcrypt/src/dh.c
+@@ -1998,6 +1998,8 @@ static int wc_DhAgree_Sync(DhKey* key, byte* agree, word32* agreeSz,
+     mp_clear(z);
+     mp_clear(y);
+     mp_forcezero(x);
++#else
++    ret = WC_KEY_SIZE_E;
+ #endif
+ 
+ #ifdef WOLFSSL_SMALL_STACK

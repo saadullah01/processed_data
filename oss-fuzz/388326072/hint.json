@@ -1,0 +1,252 @@
+{
+    "src/include/ndpi_private.h": {
+        "entities": [],
+        "lines": [
+            658
+        ]
+    },
+    "src/lib/protocols/http.c": {
+        "entities": [
+            "function_http_process_user_agent"
+        ],
+        "lines": [
+            775
+        ]
+    },
+    "src/lib/protocols/quic.c": {
+        "entities": [
+            "function_process_chlo"
+        ],
+        "lines": [
+            1501,
+            1478,
+            1423
+        ]
+    },
+    "src/lib/protocols/tls.c": {
+        "entities": [
+            "function_processClientServerHello"
+        ],
+        "lines": [
+            3163
+        ]
+    },
+    "tests/cfgs/default/result/dlt_ppp.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/doq.pcapng.out": {
+        "entities": [],
+        "lines": [
+            31
+        ]
+    },
+    "tests/cfgs/default/result/doq_adguard.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/google_meet.pcapng.out": {
+        "entities": [],
+        "lines": [
+            30
+        ]
+    },
+    "tests/cfgs/default/result/gquic.pcap.out": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "tests/cfgs/default/result/http_ipv6.pcap.out": {
+        "entities": [],
+        "lines": [
+            39
+        ]
+    },
+    "tests/cfgs/default/result/os_detected.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-27.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-28.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-29.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-33.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-34.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-forcing-vn-with-data.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-mvfst-27.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-mvfst-exp.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic-v2.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic.pcap.out": {
+        "entities": [],
+        "lines": [
+            31
+        ]
+    },
+    "tests/cfgs/default/result/quic046.pcap.out": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "tests/cfgs/default/result/quic_0RTT.pcap.out": {
+        "entities": [],
+        "lines": [
+            31
+        ]
+    },
+    "tests/cfgs/default/result/quic_crypto_aes_auth_size.pcap.out": {
+        "entities": [],
+        "lines": [
+            30
+        ]
+    },
+    "tests/cfgs/default/result/quic_frags_ch_in_multiple_packets.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic_frags_ch_out_of_order_same_packet_craziness.pcapng.out": {
+        "entities": [],
+        "lines": [
+            46
+        ]
+    },
+    "tests/cfgs/default/result/quic_frags_different_dcid.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic_q39.pcap.out": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "tests/cfgs/default/result/quic_q46.pcap.out": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "tests/cfgs/default/result/quic_q46_b.pcap.out": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "tests/cfgs/default/result/quic_q50.pcap.out": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "tests/cfgs/default/result/quic_t50.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/quic_t51.pcap.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/sites.pcapng.out": {
+        "entities": [],
+        "lines": [
+            125,
+            151
+        ]
+    },
+    "tests/cfgs/default/result/snapchat_call_v1.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    },
+    "tests/cfgs/default/result/telegram.pcap.out": {
+        "entities": [],
+        "lines": [
+            49
+        ]
+    },
+    "tests/cfgs/default/result/wechat.pcap.out": {
+        "entities": [],
+        "lines": [
+            74,
+            84
+        ]
+    },
+    "tests/cfgs/default/result/youtube_quic.pcap.out": {
+        "entities": [],
+        "lines": [
+            26
+        ]
+    },
+    "tests/cfgs/default/result/youtubeupload.pcap.out": {
+        "entities": [],
+        "lines": [
+            30
+        ]
+    },
+    "tests/cfgs/subclassification_disable/result/quic-mvfst-27.pcapng.out": {
+        "entities": [],
+        "lines": [
+            29
+        ]
+    }
+}

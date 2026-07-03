@@ -1,0 +1,10 @@
+{
+    "lib/dns/qp.c": {
+        "entities": [
+            "function_add_link"
+        ],
+        "lines": [
+            1997
+        ]
+    }
+}

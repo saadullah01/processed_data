@@ -1,0 +1,10 @@
+{
+    "splash/Splash.cc": {
+        "entities": [
+            "function_Splash::scaleMaskYuXu"
+        ],
+        "lines": [
+            3558
+        ]
+    }
+}

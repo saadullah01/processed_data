@@ -1,0 +1,24 @@
+{
+    "core/iwasm/interpreter/wasm_loader.c": {
+        "entities": [
+            "function_check_table_elem_type",
+            "function_is_table_64bit",
+            "function_get_table_elem_type"
+        ],
+        "lines": [
+            58,
+            4285,
+            10854
+        ]
+    },
+    "core/iwasm/interpreter/wasm_mini_loader.c": {
+        "entities": [
+            "function_is_table_64bit",
+            "function_get_table_elem_type"
+        ],
+        "lines": [
+            48,
+            2566
+        ]
+    }
+}

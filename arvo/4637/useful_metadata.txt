@@ -1,0 +1,23 @@
+Project: openthread
+Fuzzer: afl_openthread_radio-receive-done-fuzzer
+Fuzz target binary: radio-receive-done-fuzzer
+Job Type: afl_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7f3643f5bc9b
+Crash State:
+  ot::Mle::RouteTlv::GetRouteCost
+  ot::Mle::MleRouter::UpdateRoutes
+  ot::Mle::MleRouter::HandleAdvertisement
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201712130627:201712140624
+
+Reproducer Testcase: 5295064105353216
+
+ClusterFuzz has detected this issue as fixed in range 201712200630:201712210628
+Fixed: 201712200630:201712210628

@@ -1,0 +1,57 @@
+{
+    "libfaad/common.c": {
+        "entities": [
+            "function_pow2_fix",
+            "function_log2_fix"
+        ],
+        "lines": [
+            366,
+            471
+        ]
+    },
+    "libfaad/common.h": {
+        "entities": [],
+        "lines": [
+            419
+        ]
+    },
+    "libfaad/rvlc.c": {
+        "entities": [
+            "function_rvlc_decode_sf_forward"
+        ],
+        "lines": [
+            190
+        ]
+    },
+    "libfaad/sbr_hfadj.c": {
+        "entities": [
+            "function_find_log2_E",
+            "function_hf_assembly",
+            "function_calculate_gain",
+            "function_find_log2_Q",
+            "variable_pan_log2_tab"
+        ],
+        "lines": [
+            512,
+            321,
+            291,
+            1669,
+            360,
+            457,
+            333,
+            1677,
+            594,
+            627,
+            279,
+            504
+        ]
+    },
+    "libfaad/syntax.c": {
+        "entities": [
+            "function_decode_scale_factors"
+        ],
+        "lines": [
+            1903
+        ]
+    }
+}

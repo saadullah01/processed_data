@@ -1,0 +1,23 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs15_encode
+Job Type: afl_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7f88e06821c1
+Crash State:
+  authentic_get_tagged_data
+  authentic_parse_credential_data
+  authentic_pin_get_policy
+
+Sanitizer: address (ASAN)
+
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_pkcs15_encode from making much progress. Fixing this will allow more bugs to be found.

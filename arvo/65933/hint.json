@@ -1,0 +1,12 @@
+{
+    "src/analyzer/protocol/smtp/SMTP.cc": {
+        "entities": [
+            "method_SMTP_Analyzer::ProcessBdatArg",
+            "function_SMTP_Analyzer::ProcessBdatArg"
+        ],
+        "lines": [
+            857,
+            5
+        ]
+    }
+}

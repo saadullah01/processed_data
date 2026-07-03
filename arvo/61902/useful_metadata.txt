@@ -1,0 +1,16 @@
+Project: libxaac
+Fuzzing Engine: honggfuzz
+Fuzz Target: xaac_enc_fuzzer
+Job Type: honggfuzz_asan_libxaac
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x00000097cdc8
+Crash State:
+  iusace_estimate_scfs_chan
+  iusace_quantize_spec
+  iusace_fd_encode
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 6210285227343872 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

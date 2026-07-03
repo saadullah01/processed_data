@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ieee80211-radiotap.c": {
+        "entities": [
+            "function_dissect_radiotap"
+        ],
+        "lines": [
+            1833
+        ]
+    }
+}

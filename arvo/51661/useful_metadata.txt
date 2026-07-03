@@ -1,0 +1,30 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_objdump_safe
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x615000001008
+Crash State:
+  bfd_close_all_done
+  archive_close_worker
+  htab_traverse_noresize
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 202209150602:202209160612
+
+Reproducer Testcase ID: 6410665702588416
+
+ClusterFuzz testcase 6410665702588416 is verified as fixed in 202209220613:202209230601
+
+This bug has been fixed. It has been opened to the public.

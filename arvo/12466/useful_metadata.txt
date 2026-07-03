@@ -1,0 +1,19 @@
+Project: libarchive
+Fuzzer: afl_libarchive_fuzzer
+Fuzz target binary: libarchive_fuzzer
+Job Type: afl_asan_libarchive
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 7
+Crash Address: 0x7f23f8d75c34
+Crash State:
+  parse_tables
+  process_block
+  do_uncompress_file
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libarchive_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201905020210:201905030215.
+
+ClusterFuzz testcase 5700900719427584 is verified as fixed, so closing issue as verified.

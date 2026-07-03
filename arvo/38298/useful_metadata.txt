@@ -1,0 +1,18 @@
+Project: mruby
+Fuzzing Engine: honggfuzz
+Fuzz Target: mruby_fuzzer
+Job Type: honggfuzz_asan_mruby
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x62f00000c430
+Crash State:
+  value_move
+  mrb_ary_splice
+  mrb_ary_aset
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed by da749d870f4a57df7a05ef4a9ae023602d48af86

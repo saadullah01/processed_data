@@ -1,0 +1,32 @@
+libical:libical_fuzzer: Use-of-uninitialized-value in icalmemory_strdup
+
+Reproducible
+Stability-Memory-MemorySanitizer
+ClusterFuzz
+ClusterFuzz-Verified
+
+Project: libical
+Fuzzing Engine: libFuzzer
+Fuzz Target: libical_fuzzer
+Job Type: libfuzzer_msan_libical
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+ icalmemory_strdup
+ icalparameter_new_from_value_string
+ icalparser_add_line
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)

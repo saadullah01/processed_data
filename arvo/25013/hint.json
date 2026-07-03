@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-layout-common.hh": {
+        "entities": [
+            "struct_VariationStore"
+        ],
+        "lines": [
+            2537
+        ]
+    }
+}

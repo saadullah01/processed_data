@@ -1,0 +1,13 @@
+{
+    "src/bmf.c": {
+        "entities": [
+            "function_bmfGetPix",
+            "function_bmfGetBaseline"
+        ],
+        "lines": [
+            208,
+            281,
+            245
+        ]
+    }
+}

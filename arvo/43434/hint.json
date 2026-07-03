@@ -1,0 +1,10 @@
+{
+    "bfd/vms-alpha.c": {
+        "entities": [
+            "function_evax_bfd_print_dst"
+        ],
+        "lines": [
+            7306
+        ]
+    }
+}

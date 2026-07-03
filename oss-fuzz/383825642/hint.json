@@ -1,0 +1,10 @@
+{
+    "libavformat/vqf.c": {
+        "entities": [
+            "function_add_metadata"
+        ],
+        "lines": [
+            63
+        ]
+    }
+}

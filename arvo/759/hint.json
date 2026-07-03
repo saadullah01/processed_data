@@ -1,0 +1,10 @@
+{
+    "src/sfnt/sfobjs.c": {
+        "entities": [
+            "function_sfnt_init_face"
+        ],
+        "lines": [
+            1
+        ]
+    }
+}

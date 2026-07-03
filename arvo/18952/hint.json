@@ -1,0 +1,20 @@
+{
+    "src/lib/lwan-array.h": {
+        "entities": [
+            "macro_DEFINE_ARRAY_TYPE_FUNCS"
+        ],
+        "lines": [
+            116
+        ]
+    },
+    "src/lib/lwan-template.c": {
+        "entities": [
+            "function_post_process_template"
+        ],
+        "lines": [
+            1026,
+            996,
+            1084
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/kerberos.c": {
+        "entities": [
+            "function_ndpi_search_kerberos"
+        ],
+        "lines": [
+            309
+        ]
+    }
+}

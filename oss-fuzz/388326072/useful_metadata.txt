@@ -1,0 +1,27 @@
+ndpi:fuzz_quic_get_crypto_data: Heap-buffer-overflow in quic_len
+
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_quic_get_crypto_data
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x5070000000d5
+Crash State:
+  quic_len
+  processClientServerHello
+  process_tls
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5368116959313920 is verified as fixed.
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ndpi

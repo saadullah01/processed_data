@@ -1,0 +1,24 @@
+{
+    "gas/config/tc-tic4x.c": {
+        "entities": [
+            "function_tic4x_operands_match"
+        ],
+        "lines": [
+            1656
+        ]
+    },
+    "include/opcode/tic4x.h": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "opcodes/tic4x-dis.c": {
+        "entities": [
+            "function_tic4x_print_register"
+        ],
+        "lines": [
+            131
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+Project: libpcap
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: libpcap
+Fuzzer: afl_libpcap_fuzz_filter
+Fuzz target binary: fuzz_filter
+Job Type: afl_asan_libpcap
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x7fa102a4f800
+Crash State:
+  opt_cleanup
+  bpf_optimize
+  pcap_compile
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5641391398453248 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

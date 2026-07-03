@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_trans.c": {
+        "entities": [
+            "function_pdfi_trans_set_mask"
+        ],
+        "lines": [
+            174
+        ]
+    }
+}

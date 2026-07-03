@@ -1,0 +1,10 @@
+{
+    "src/cmscgats.c": {
+        "entities": [
+            "function_InStringSymbol"
+        ],
+        "lines": [
+            759
+        ]
+    }
+}

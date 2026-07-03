@@ -1,0 +1,11 @@
+{
+    "psi/imain.c": {
+        "entities": [
+            "function_gs_main_finit"
+        ],
+        "lines": [
+            1,
+            1278
+        ]
+    }
+}

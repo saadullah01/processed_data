@@ -1,0 +1,10 @@
+{
+    "lib/hostip.c": {
+        "entities": [
+            "function_Curl_loadhostpairs"
+        ],
+        "lines": [
+            835
+        ]
+    }
+}

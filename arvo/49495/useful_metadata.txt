@@ -1,0 +1,17 @@
+Project: lcms
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+Project: lcms
+Fuzzing Engine: libFuzzer
+Fuzz Target: cms_transform_all_fuzzer
+Job Type: libfuzzer_msan_lcms
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  ComputeConversion
+  DefaultICCintents
+  _cmsLinkProfiles
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

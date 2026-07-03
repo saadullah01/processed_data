@@ -1,0 +1,16 @@
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: libxml2_xml_reader_for_file_fuzzer
+Job Type: afl_asan_libxml2
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60d000000888
+Crash State:
+  xmlTextReaderFreeNodeList
+  xmlTextReaderFreeDoc
+  xmlFreeTextReader
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase: 5654854260752384
+ClusterFuzz testcase 5654854260752384 is verified as fixed
+Short-lived regression fixed here

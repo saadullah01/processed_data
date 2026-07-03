@@ -1,0 +1,22 @@
+Project: stb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzing Engine: afl
+Fuzz Target: stbi_read_fuzzer
+Job Type: afl_asan_stb
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x62b000006e0f
+Crash State:
+  load_jpeg_image
+  stbi__jpeg_load
+  stbi__load_main
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer stbi_read_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5726154781884416 is verified as fixed

@@ -1,0 +1,42 @@
+upx:decompress_packed_file_fuzzer: Heap-buffer-overflow in N_BELE_RTP::BEPolicy::get16
+
+Project: upx
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_packed_file_fuzzer
+Job Type: libfuzzer_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x60400000143d
+Crash State:
+  N_BELE_RTP::BEPolicy::get16
+  PackLinuxElf32::unpack
+  Packer::doUnpack
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+Comments:
+Fixed in developer's branch.  The diagnostic is "upx: clusterfuzz-testcase-minimized-list_packed_file_fuzzer-6751134295851008: CantUnpackException: bad DT_{0x6} = 0x5e0 (no Phdr)". Verified by "valgrind upx --dt-no-run -d -f -o foo clusterfuzz-testcase-minimized-list_packed_file_fuzzer-6751134295851008"
+
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 5935269646237696 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Issue metadata:
+Reporter: 87...@developer.gserviceaccount.com
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Access: Default access
+Assignee: cl...@appspot.gserviceaccount.com
+Verifier: cl...@appspot.gserviceaccount.com
+CC: re...@gmail.com
+Disclosure: Mar 10, 2025
+Project: upx
+Reported: Dec 10, 2024

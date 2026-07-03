@@ -1,0 +1,12 @@
+{
+    "src/libopensc/card-openpgp.c": {
+        "entities": [
+            "function_pgp_parse_and_set_pubkey_output"
+        ],
+        "lines": [
+            2933,
+            2918,
+            2903
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "HTMLparser.c": {
+        "entities": [
+            "function_htmlCurrentChar",
+            "function_htmlSkipBlankChars"
+        ],
+        "lines": [
+            473,
+            299,
+            588,
+            481
+        ]
+    },
+    "include/private/parser.h": {
+        "entities": [],
+        "lines": [
+            23
+        ]
+    },
+    "parser.c": {
+        "entities": [
+            "function_xmlSkipBlankChars",
+            "function_spacePop",
+            "function_xmlPopInput",
+            "function_xmlGROW"
+        ],
+        "lines": [
+            2049,
+            2279,
+            2185,
+            2061,
+            2132,
+            2075
+        ]
+    },
+    "parserInternals.c": {
+        "entities": [
+            "function_xmlCurrentChar",
+            "function_xmlNextChar"
+        ],
+        "lines": [
+            453,
+            585,
+            272,
+            406,
+            506,
+            444,
+            639
+        ]
+    }
+}

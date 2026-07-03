@@ -1,0 +1,20 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_as
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  buffer_and_nest
+  expand_irp
+  s_irp
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4641113183485952 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "Shell/Parser.cpp": {
+        "entities": [
+            "method_Parser::parse_glob"
+        ],
+        "lines": [
+            1380
+        ]
+    }
+}

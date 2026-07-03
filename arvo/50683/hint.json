@@ -1,0 +1,43 @@
+{
+    "src/libopensc/asn1.c": {
+        "entities": [],
+        "lines": [
+            2192
+        ]
+    },
+    "src/libopensc/asn1.h": {
+        "entities": [],
+        "lines": [
+            127
+        ]
+    },
+    "src/libopensc/card-piv.c": {
+        "entities": [
+            "function_piv_compute_signature"
+        ],
+        "lines": [
+            2436,
+            2463
+        ]
+    },
+    "src/libopensc/card-sc-hsm.c": {
+        "entities": [
+            "function_sc_hsm_decode_ecdsa_signature"
+        ],
+        "lines": [
+            1034,
+            1060
+        ]
+    },
+    "src/tests/unittests/Makefile.am": {
+        "entities": [],
+        "lines": [
+            27,
+            6
+        ]
+    },
+    "src/tests/unittests/decode_ecdsa_signature.c": {
+        "entities": [],
+        "lines": []
+    }
+}

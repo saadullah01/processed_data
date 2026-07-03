@@ -1,0 +1,27 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x6310100f6f40
+Crash State:
+  gx_dc_default_fill_masked
+  copy_portrait
+  image_render_simple
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed range: 202112140606:202112150601
+Reproducer Testcase ID: 5097021625729024
+
+Fix committed up stream
+
+ClusterFuzz testcase 5097021625729024 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

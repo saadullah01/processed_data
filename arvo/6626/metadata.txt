@@ -1,0 +1,95 @@
+Project: botan
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5113093358092288
+
+Project: botan
+Fuzzer: libFuzzer_botan_invert
+Fuzz target binary: invert
+Job Type: libfuzzer_msan_botan
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  Botan::word_add
+  Botan::bigint_cnd_abs
+  Botan::ct_inverse_mod_odd_modulus
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_botan&range=201802280517:201803010517
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5113093358092288
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """I don't understand this bug, and I can't repro. Valgrind reports no problem. I can't get MSan to work (just crashes immediately inside libFuzzer before my fuzz target is ever called).
+
+Right now my best guess is that the inline asm is tricking MSan. Oh and then I notice in the docs "you may need to replace all inline assembly code that writes to memory with a pure C/C++ code." ok that is almost certainly the problem. I'll initialize the array to make MSan happy"""
+
+-- Comment 3: """Hopefully fixed by 436143898"""
+
+-- Comment 4: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer invert from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """ClusterFuzz has detected this issue as fixed in range 201803010517:201803020518.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5113093358092288
+
+Project: botan
+Fuzzer: libFuzzer_botan_invert
+Fuzz target binary: invert
+Job Type: libfuzzer_msan_botan
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  Botan::word_add
+  Botan::bigint_cnd_abs
+  Botan::ct_inverse_mod_odd_modulus
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_botan&range=201802280517:201803010517
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_botan&range=201803010517:201803020518
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5113093358092288
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 6: """ClusterFuzz testcase 5113093358092288 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 7: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-stream.c": {
+        "entities": [
+            "function_pdf_open_raw_filter"
+        ],
+        "lines": [
+            305
+        ]
+    }
+}

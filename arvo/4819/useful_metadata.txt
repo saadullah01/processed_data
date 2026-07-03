@@ -1,0 +1,19 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-DcrDecoder
+Fuzz target binary: TiffDecoderFuzzer-DcrDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  rawspeed::alignedMalloc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201712282116:201712290055.
+
+ClusterFuzz testcase 6168972937396224 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

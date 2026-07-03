@@ -1,0 +1,18 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_ubsan_binutils
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  print_insn_rx
+  fuzz_disassemble.c
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,10 @@
+{
+    "src/h3lib/lib/polyfill.c": {
+        "entities": [
+            "function_iterStepPolygonCompact"
+        ],
+        "lines": [
+            508
+        ]
+    }
+}

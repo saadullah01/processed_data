@@ -1,0 +1,16 @@
+Project: gpac
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Fuzz Target: fuzz_probe_analyze
+Job Type: afl_asan_gpac
+Platform Id: linux
+Crash Address: 0x6190001d4b04
+Crash State:
+  gf_props_insert_property
+  gf_props_set_property
+  gf_filter_pid_set_property_full
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

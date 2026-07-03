@@ -1,0 +1,16 @@
+Project: lwan
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 3
+Project: lwan
+Fuzzing Engine: libFuzzer
+Fuzz Target: config_fuzzer
+Job Type: libfuzzer_asan_lwan
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 3
+Crash Address: 0x0000011ab260
+Crash State:
+  lex_multiline_string
+  lex_next
+  parse_key_value
+Sanitizer: address (ASAN)

@@ -1,0 +1,13 @@
+{
+    "code/AssetLib/ASE/ASEParser.cpp": {
+        "entities": [
+            "macro_AI_ASE_HANDLE_TOP_LEVEL_SECTION",
+            "method_Parser::ParseLV1SoftSkinBlock",
+            "function_Parser::ParseLV1SoftSkinBlock"
+        ],
+        "lines": [
+            74,
+            420
+        ]
+    }
+}

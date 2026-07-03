@@ -1,0 +1,17 @@
+{
+    "prog/dewarptest1.c": {
+        "entities": [],
+        "lines": [
+            160,
+            52
+        ]
+    },
+    "src/tiffio.c": {
+        "entities": [
+            "function_pixReadFromTiffStream"
+        ],
+        "lines": [
+            602
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/hb-open-file.hh": {
+        "entities": [
+            "method_ResourceMap::sanitize"
+        ],
+        "lines": [
+            387
+        ]
+    }
+}

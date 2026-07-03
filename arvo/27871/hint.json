@@ -1,0 +1,10 @@
+{
+    "tests/zip_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            33
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+Project: gnupg
+Fuzzer: libFuzzer_gnupg_fuzz_verify
+Fuzz target binary: fuzz_verify
+Job Type: libfuzzer_asan_gnupg
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6120000007dc
+Crash State:
+  proc_plaintext
+  do_proc_packets
+  proc_signature_packets
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_verify from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201903150247:201903160244.
+
+Project: gnupg
+Fuzzer: libFuzzer_gnupg_fuzz_verify
+Fuzz target binary: fuzz_verify
+Job Type: libfuzzer_asan_gnupg
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6120000007dc
+Crash State:
+  proc_plaintext
+  do_proc_packets
+  proc_signature_packets
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5697816893063168 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

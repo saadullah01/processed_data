@@ -1,0 +1,10 @@
+{
+    "lib/lookup.c": {
+        "entities": [
+            "function_idn2_to_ascii_4i"
+        ],
+        "lines": [
+            617
+        ]
+    }
+}

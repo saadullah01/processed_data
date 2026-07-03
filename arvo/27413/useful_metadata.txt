@@ -1,0 +1,25 @@
+Project: miniz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: uncompress_fuzzer
+Job Type: libfuzzer_msan_miniz
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  tinfl_decompress
+  mz_inflate
+  mz_uncompress2
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer uncompress_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6236480187662336 is verified as fixed
+
+This bug has exceeded our disclosure deadline. It has been opened to the public.

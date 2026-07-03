@@ -1,0 +1,25 @@
+Project: icu
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: locale_morph_fuzzer
+Job Type: libfuzzer_asan_icu
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffc70bfa33d
+Crash State:
+  icu_74::CheckedArrayByteSink::Append
+  ulocimp_toLanguageTag_74
+  icu_74::Locale::toLanguageTag
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer locale_morph_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6691907944972288 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

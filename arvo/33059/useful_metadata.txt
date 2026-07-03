@@ -1,0 +1,24 @@
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  dwg_free_summaryinfo
+  dwg_free
+  llvmfuzz.c
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libredwg&range=202102280602:202103010630
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4751523734224896
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer llvmfuzz from making much progress. Fixing this will allow more bugs to be found.
+
+Not repro in master
+
+ClusterFuzz testcase 4751523734224896 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libredwg&range=202207280610:202207290603

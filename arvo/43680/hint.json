@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_fontps.h": {
+        "entities": [
+            "function_pdf_ps_stack_push"
+        ],
+        "lines": [
+            1,
+            201
+        ]
+    }
+}

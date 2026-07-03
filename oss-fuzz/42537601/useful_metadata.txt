@@ -1,0 +1,29 @@
+Issue 42537601
+
+ffmpeg:ffmpeg_dem_SEGAFILM_fuzzer: Use-of-uninitialized-value in read_frame_internal
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_SEGAFILM_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+ read_frame_internal
+ avformat_find_stream_info
+ target_dem_fuzzer.c
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5883617752973312 is verified as fixed in revision range 202408140602:202408150610
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

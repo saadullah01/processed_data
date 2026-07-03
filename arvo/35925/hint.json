@@ -1,0 +1,22 @@
+{
+    "epan/dissectors/packet-json.c": {
+        "entities": [
+            "function_json_string_unescape",
+            "function_after_member",
+            "function_before_member",
+            "function_join_strings",
+            "function_after_value"
+        ],
+        "lines": [
+            33,
+            769,
+            389,
+            200,
+            651,
+            627,
+            791,
+            670,
+            639
+        ]
+    }
+}

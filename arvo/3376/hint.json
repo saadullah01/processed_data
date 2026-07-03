@@ -1,0 +1,10 @@
+{
+    "src/core/thread/network_data_leader_ftd.cpp": {
+        "entities": [
+            "method_Leader::HandleCommissioningSet"
+        ],
+        "lines": [
+            237
+        ]
+    }
+}

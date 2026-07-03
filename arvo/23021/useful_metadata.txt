@@ -1,0 +1,22 @@
+Project: ndpi
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzing Engine: afl
+Fuzz Target: fuzz_process_packet
+Job Type: afl_asan_ndpi
+Platform Id: linux
+
+Crash Address: 0x60e00000029d
+Crash State:
+  ndpi_search_kerberos
+  check_ndpi_udp_flow_func
+  ndpi_check_flow_func
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_process_packet from making much progress. Fixing this will allow more bugs to be found.

@@ -1,0 +1,20 @@
+{
+    "gdb/Makefile.in": {
+        "entities": [],
+        "lines": [
+            418
+        ]
+    },
+    "gdb/tui/tui-winsource.c": {
+        "entities": [
+            "function_tui_copy_source_line"
+        ],
+        "lines": [
+            71
+        ]
+    },
+    "gdb/unittests/tui-selftests.c": {
+        "entities": [],
+        "lines": []
+    }
+}

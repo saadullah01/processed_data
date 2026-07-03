@@ -1,0 +1,21 @@
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffDecoderFuzzer-SrwDecoder
+Fuzz target binary: TiffDecoderFuzzer-SrwDecoder
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x7fd9fe61cafe
+Crash State:
+  void rawspeed::SamsungV2Decompressor::decompressRow<
+  rawspeed::SamsungV2Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Regressed: 201708291830:201708300032
+Reproducer Testcase: 4862754034810880
+
+ClusterFuzz has detected this issue as fixed in range 201709240519:201709250516.
+Verified as fixed.

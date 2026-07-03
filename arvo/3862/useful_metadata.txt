@@ -1,0 +1,21 @@
+Project: yara
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Fuzzer: libFuzzer_yara_pe_fuzzer
+Fuzz target binary: pe_fuzzer
+Job Type: libfuzzer_asan_yara
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x61d000001258
+Crash State:
+  pe_parse_exports
+  pe__load
+  yr_modules_load
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

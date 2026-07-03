@@ -1,0 +1,29 @@
+Project: libjpeg-turbo.dev
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: libjpeg-turbo
+Fuzzing Engine: afl
+Fuzz Target: transform_fuzzer_dev
+Job Type: afl_asan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x608000000077
+Crash State:
+  jpeg_write_marker
+  jcopy_markers_execute
+  tj3Transform
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regression caused by the TurboJPEG 3 API overhaul (commit fc01f4673b71c0b833c59c21e8c4478a9c4bcf21) in the dev/3.0 evolving branch, which has not yet been released.  Should be fixed in commit 9b3a8f36418e8b6a601aa683506bb875f6dd9f12
+
+ClusterFuzz testcase 5865567175442432 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

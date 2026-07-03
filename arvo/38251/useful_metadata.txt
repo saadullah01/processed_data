@@ -1,0 +1,31 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Comment 1:
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7fdd51a7deb8
+Crash State:
+  mrb_vm_exec
+  mrb_vm_run
+  mrb_top_run
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Comment 2:
+Fixed by 3693187beb50e1e4594275238657754890a1ba67
+
+Comment 3:
+ClusterFuzz testcase 4801871936618496 is verified as fixed
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.

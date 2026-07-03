@@ -1,0 +1,10 @@
+{
+    "libavformat/jpegxl_anim_dec.c": {
+        "entities": [
+            "function_jpegxl_anim_probe"
+        ],
+        "lines": [
+            43
+        ]
+    }
+}

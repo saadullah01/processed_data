@@ -1,0 +1,37 @@
+Project: libgit2
+Fuzzer: libFuzzer_libgit2_objects_fuzzer
+Fuzz target binary: objects_fuzzer
+Job Type: libfuzzer_asan_libgit2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x607000000459
+Crash State:
+  tag_parse
+  git_tag__parse_raw
+  git_object__from_raw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer objects_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201810260120:201810270118.
+
+Project: libgit2
+Fuzzer: libFuzzer_libgit2_objects_fuzzer
+Fuzz target binary: objects_fuzzer
+Job Type: libfuzzer_asan_libgit2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x607000000459
+Crash State:
+  tag_parse
+  git_tag__parse_raw
+  git_object__from_raw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

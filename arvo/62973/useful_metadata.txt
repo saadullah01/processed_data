@@ -1,0 +1,27 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x6030000027e2
+Crash State:
+  bit_TV_to_utf8
+  json_cquote
+  dwg_json_TEXT_private
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer llvmfuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5900860527607808 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

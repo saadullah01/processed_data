@@ -1,0 +1,10 @@
+{
+    "src/decoders/decoders_libraw.cpp": {
+        "entities": [
+            "function_LibRaw::sony_arq_load_raw"
+        ],
+        "lines": [
+            22
+        ]
+    }
+}

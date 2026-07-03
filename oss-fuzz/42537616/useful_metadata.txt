@@ -1,0 +1,37 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_VP6F_fuzzer: Use-of-uninitialized-value in ff_vp3dsp_h_loop_filter_12
+
+ClusterFuzz
+Stability-Memory-MemorySanitizer
+Reproducible
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VP6F_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_vp3dsp_h_loop_filter_12
+  ff_vp56_decode_mbs
+  avcodec_default_execute2
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 4610946029387776
+
+Issue filed automatically.
+
+ClusterFuzz testcase 4610946029387776 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

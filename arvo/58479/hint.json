@@ -1,0 +1,19 @@
+{
+    "code/AssetLib/MDL/MDLLoader.cpp": {
+        "entities": [
+            "method_MDLImporter::IsPosValid",
+            "method_MDLImporter::SizeCheck"
+        ],
+        "lines": [
+            273,
+            284,
+            271
+        ]
+    },
+    "code/AssetLib/MDL/MDLLoader.h": {
+        "entities": [],
+        "lines": [
+            150
+        ]
+    }
+}

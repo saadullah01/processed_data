@@ -1,0 +1,16 @@
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  FT_Set_Transform
+  SplashFTFont::makeGlyph
+  SplashFont::getGlyph
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

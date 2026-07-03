@@ -1,0 +1,18 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x00000426ff80
+Crash State:
+  kvx_reassemble_bundle
+  print_insn_kvx
+  fuzz_disassemble.c
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 4674541891485696 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

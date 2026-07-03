@@ -1,0 +1,10 @@
+{
+    "agent/mibgroup/agentx/protocol.c": {
+        "entities": [
+            "function_agentx_parse_string"
+        ],
+        "lines": [
+            1241
+        ]
+    }
+}

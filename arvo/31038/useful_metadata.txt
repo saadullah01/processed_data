@@ -1,0 +1,32 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_frame_fuzzer
+Job Type: libfuzzer_ubsan_c-blosc2
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0xffffffffcf5c26fc
+Crash State:
+  frame_get_vlmetalayers
+  frame_to_schunk
+  blosc2_schunk_from_buffer
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 4622970490322944
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer decompress_frame_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4622970490322944 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

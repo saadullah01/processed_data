@@ -1,0 +1,24 @@
+Project: pcl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: ply_reader_fuzzer
+Job Type: libfuzzer_asan_pcl
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x00009fff7ffd
+Crash State:
+  pcl::PLYReader::read
+  ply_io.h
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ply_reader_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4678430691557376 is verified as fixed

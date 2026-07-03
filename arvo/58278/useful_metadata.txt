@@ -1,0 +1,32 @@
+Project: libavc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 16
+Severity: High
+
+Project: libavc
+Fuzzing Engine: libFuzzer
+Fuzz Target: svc_dec_fuzzer
+Job Type: libfuzzer_asan_libavc
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 16
+Crash Address: 0x7899f14d7638
+Crash State:
+  ih264_inter_pred_luma_vert_ssse3
+  ih264d_motion_compensate_mp
+  isvcd_decode_recon_tfr_nmb_non_base_lyr
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Reproducer Testcase: 6679526687244288
+
+b/279466017 has been created for this issue.
+
+ClusterFuzz testcase 6679526687244288 is verified as fixed
+
+84f955dd77e42ffb57cb05a869cb8c8bf68f1e13 fixed this
+
+This bug has been fixed. It has been opened to the public.

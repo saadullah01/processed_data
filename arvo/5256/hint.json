@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/common/TableLookUp.cpp": {
+        "entities": [
+            "method_TableLookUp::setTable"
+        ],
+        "lines": [
+            40
+        ]
+    }
+}

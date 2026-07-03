@@ -1,0 +1,16 @@
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x62f000140350
+Crash State:
+  obj_free
+  incremental_gc
+  mrb_incremental_gc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

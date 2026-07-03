@@ -1,0 +1,19 @@
+Project: lwan
+Fuzzer: libFuzzer_lwan_request_fuzzer
+Fuzz target binary: request_fuzzer
+Job Type: libfuzzer_asan_lwan
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  parse_proxy_protocol_v2
+  parse_http_request
+  fuzz_parse_http_request
+Sanitizer: address (ASAN)
+Regressed: 201904250139:201904260137
+Reproducer Testcase: 5091179189764096
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer request_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201904260137:201904270135
+Reproducer Testcase: 5091179189764096

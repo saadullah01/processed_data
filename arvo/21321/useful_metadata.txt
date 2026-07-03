@@ -1,0 +1,12 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  loop_prim_n_bytes
+  decode_s12z
+  print_insn_s12z
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

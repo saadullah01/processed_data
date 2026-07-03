@@ -1,0 +1,21 @@
+Project: h3
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzerVertexes
+Job Type: libfuzzer_msan_h3
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  cellToVertex
+  cellToVertexes
+  fuzzerVertexes.c
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This issue is fixed in v4.0.1

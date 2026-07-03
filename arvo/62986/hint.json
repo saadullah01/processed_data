@@ -1,0 +1,36 @@
+{
+    "bfd/elfxx-mips.c": {
+        "entities": [
+            "function__bfd_mips_elf_relocate_section",
+            "function_micromips_reloc_shuffle_p",
+            "function_mips_elf_calculate_relocation"
+        ],
+        "lines": [
+            2220,
+            10421,
+            5478
+        ]
+    },
+    "gold/mips.cc": {
+        "entities": [
+            "method_Target_mips<size, big_endian>::Relocate::relocate",
+            "class_Mips_relocate_functions"
+        ],
+        "lines": [
+            4307,
+            11415
+        ]
+    },
+    "ld/testsuite/ld-mips-elf/reloc-4.d": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "ld/testsuite/ld-mips-elf/reloc-5.d": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

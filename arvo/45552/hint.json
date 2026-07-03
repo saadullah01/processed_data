@@ -1,0 +1,10 @@
+{
+    "src/pkcs15init/profile.c": {
+        "entities": [
+            "function_new_file"
+        ],
+        "lines": [
+            1247
+        ]
+    }
+}

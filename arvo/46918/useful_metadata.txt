@@ -1,0 +1,16 @@
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffde1a25fb8
+Crash State:
+  dynapi_set_helper
+  dwg_dynapi_header_set_value
+  json_HEADER
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

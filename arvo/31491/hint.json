@@ -1,0 +1,10 @@
+{
+    "src/irc/core/irc.c": {
+        "entities": [
+            "function_unescape_tag"
+        ],
+        "lines": [
+            395
+        ]
+    }
+}

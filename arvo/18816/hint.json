@@ -1,0 +1,42 @@
+{
+    "epan/dissectors/asn1/snmp/snmp.cnf": {
+        "entities": [
+            "function_PDUs"
+        ],
+        "lines": [
+            35
+        ]
+    },
+    "epan/dissectors/packet-snmp.c": {
+        "entities": [
+            "function_dissect_snmp_T_msgAuthoritativeEngineID",
+            "function_dissect_snmp_SnmpEngineID",
+            "function_dissect_snmp_Trap_PDU_U",
+            "function_dissect_snmp_PDUs",
+            "function_dissect_snmp_T_encryptedPDU",
+            "function_dissect_snmp_Integer32",
+            "function_dissect_snmp_T_msgAuthenticationParameters",
+            "function_dissect_snmp_SpecificTrap",
+            "function_dissect_snmp_T_msgFlags",
+            "function_dissect_snmp_T_request_id",
+            "function_dissect_snmp_EnterpriseOID",
+            "function_dissect_snmp_SNMPv3Message",
+            "function_dissect_snmp_T_msgSecurityParameters"
+        ],
+        "lines": [
+            2562,
+            2663,
+            2762,
+            2091,
+            2845,
+            2029,
+            2544,
+            2609,
+            2324,
+            2293,
+            2461,
+            2718,
+            2143
+        ]
+    }
+}

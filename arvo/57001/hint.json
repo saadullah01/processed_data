@@ -1,0 +1,10 @@
+{
+    "code/AssetLib/OFF/OFFLoader.cpp": {
+        "entities": [
+            "method_OFFImporter::InternReadFile"
+        ],
+        "lines": [
+            284
+        ]
+    }
+}

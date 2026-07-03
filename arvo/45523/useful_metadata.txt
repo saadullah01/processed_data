@@ -1,0 +1,28 @@
+Project: selinux
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: selinux
+Fuzzing Engine: honggfuzz
+Fuzz Target: binpolicy-fuzzer
+Job Type: honggfuzz_asan_selinux
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x00017fff7fff
+Crash State:
+  write_cond_nodes_to_conf
+  sepol_kernel_policydb_to_conf
+  binpolicy-fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer binpolicy-fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5972918775971840 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

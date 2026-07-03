@@ -1,0 +1,16 @@
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000004654
+Crash State:
+  wmem_strdup_printf
+  dissect_parameter_sequence
+  dissect_rtps_submessage_v2
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

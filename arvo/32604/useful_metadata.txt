@@ -1,0 +1,24 @@
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  dwg_free_MTEXTATTRIBUTEOBJECTCONTEXTDATA_private
+  dwg_free_MTEXTATTRIBUTEOBJECTCONTEXTDATA
+  dwg_free_variable_no_class
+
+Sanitizer: address (ASAN)
+
+Reproducer Testcase: 5622710156787712
+
+Very good catch. Wrong dynamic type in in_dxf.
+Though the error only would appear in dxf2dwg conversion with --force-free, which is very unlikely.
+Fixed with 035876226d3eadd4e5e47b06fe34e3aa858b6406
+
+ClusterFuzz testcase 5622710156787712 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

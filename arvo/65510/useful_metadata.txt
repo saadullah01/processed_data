@@ -1,0 +1,25 @@
+Project: upx
+Fuzzing Engine: afl
+Fuzz Target: list_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x62b0000144c8
+Crash State:
+  N_BELE_RTP::BEPolicy::get32
+  PackLinuxElf32::invert_pt_dynamic
+  PackLinuxElf32::PackLinuxElf32help1
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed on branch devel4 by commit c3443fb3ce8a83e1804038599b77862f3b266410 .
+Existing test for malformed input was weak.
+
+ClusterFuzz testcase 4528496344891392 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,35 @@
+libjpeg-turbo:compress12_fuzzer: Use-of-uninitialized-value in encode_mcu_AC_first
+
+Project: libjpeg-turbo
+Fuzzing Engine: libFuzzer
+Fuzz Target: compress12_fuzzer
+Job Type: libfuzzer_msan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  encode_mcu_AC_first
+  compress_output
+  jpeg_finish_compress
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 5071676943958016 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Reporter: mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Assignee: mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier: mo...@clusterfuzz-external.iam.gserviceaccount.com
+CC: ao...@mozilla.com, dr...@virtualgl.org, mo...@clusterfuzz-external.iam.gserviceaccount.com, tn...@mozilla.com, tw...@mozilla.com
+Disclosure: Nov 14, 2024
+Reported: Aug 16, 2024
+Project: libjpeg-turbo

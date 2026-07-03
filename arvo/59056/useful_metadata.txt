@@ -1,0 +1,19 @@
+Project: assimp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Invalid-free
+
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_asan_assimp
+Platform Id: linux
+
+Crash Type: Invalid-free
+Crash Address: 0x62d000000520
+Crash State:
+  Assimp::FBX::Scope::Scope
+  Assimp::FBX::Element::Element
+  Assimp::FBX::Scope::Scope
+
+Sanitizer: address (ASAN)

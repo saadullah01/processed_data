@@ -1,0 +1,10 @@
+{
+    "pdf/ghostpdf.c": {
+        "entities": [
+            "function_pdfi_set_input_stream"
+        ],
+        "lines": [
+            1300
+        ]
+    }
+}

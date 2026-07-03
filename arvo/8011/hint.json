@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ber.c": {
+        "entities": [
+            "function_dissect_ber_constrained_bitstring"
+        ],
+        "lines": [
+            3905
+        ]
+    }
+}

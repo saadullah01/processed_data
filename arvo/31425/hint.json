@@ -1,0 +1,11 @@
+{
+    "src/decode.c": {
+        "entities": [
+            "function_decode_R13_R2000"
+        ],
+        "lines": [
+            1106,
+            1227
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-ieee1905.c": {
+        "entities": [
+            "function_dissect_metric_reporting_policy"
+        ],
+        "lines": [
+            2716
+        ]
+    }
+}

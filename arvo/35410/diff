@@ -1,0 +1,106 @@
+From 5cf7e1782022f43cca567f0a21ab6c15f317bdcc Mon Sep 17 00:00:00 2001
+From: Sean Parkinson <sean@wolfssl.com>
+Date: Wed, 23 Jun 2021 09:54:41 +1000
+Subject: [PATCH] TLS hmac: handle truncated mac in Hmac_UpdateFinal_CT()
+
+---
+ src/internal.c |  2 +-
+ src/tls.c      | 10 +++-------
+ wolfssl/test.h |  3 ++-
+ 3 files changed, 6 insertions(+), 9 deletions(-)
+
+diff --git a/src/internal.c b/src/internal.c
+index 7ab3f1b7270..3bcc74f42c8 100644
+--- a/src/internal.c
++++ b/src/internal.c
+@@ -15421,7 +15421,7 @@ int TimingPadVerify(WOLFSSL* ssl, const byte* input, int padLen, int macSz,
+      * either increment the size by (macSz + padLen + 1) before use or check on
+      * the size to make sure is valid. */
+     ret = ssl->hmac(ssl, verify, input, pLen - macSz - padLen - 1, padLen,
+-                                                                    content, 1, PEER_ORDER);
++                                                        content, 1, PEER_ORDER);
+     good |= MaskMac(input, pLen, ssl->specs.hash_size, verify);
+ 
+     /* Non-zero on failure. */
+diff --git a/src/tls.c b/src/tls.c
+index 0986fa24d3f..4829fd29470 100644
+--- a/src/tls.c
++++ b/src/tls.c
+@@ -870,13 +870,13 @@ static int Hmac_OuterHash(Hmac* hmac, unsigned char* mac)
+  * returns 0 on success, otherwise failure.
+  */
+ static int Hmac_UpdateFinal_CT(Hmac* hmac, byte* digest, const byte* in,
+-                               word32 sz, byte* header)
++                               word32 sz, int macLen, byte* header)
+ {
+     byte         lenBytes[8];
+     int          i, j;
+     unsigned int k;
+     int          blockBits, blockMask;
+-    int          lastBlockLen, macLen, extraLen, eocIndex;
++    int          lastBlockLen, extraLen, eocIndex;
+     int          blocks, safeBlocks, lenBlock, eocBlock;
+     unsigned int maxLen;
+     int          blockSz, padSz;
+@@ -889,7 +889,6 @@ static int Hmac_UpdateFinal_CT(Hmac* hmac, byte* digest, const byte* in,
+         case WC_SHA:
+             blockSz = WC_SHA_BLOCK_SIZE;
+             blockBits = 6;
+-            macLen = WC_SHA_DIGEST_SIZE;
+             padSz = WC_SHA_BLOCK_SIZE - WC_SHA_PAD_SIZE + 1;
+             break;
+     #endif /* !NO_SHA */
+@@ -898,7 +897,6 @@ static int Hmac_UpdateFinal_CT(Hmac* hmac, byte* digest, const byte* in,
+         case WC_SHA256:
+             blockSz = WC_SHA256_BLOCK_SIZE;
+             blockBits = 6;
+-            macLen = WC_SHA256_DIGEST_SIZE;
+             padSz = WC_SHA256_BLOCK_SIZE - WC_SHA256_PAD_SIZE + 1;
+             break;
+     #endif /* !NO_SHA256 */
+@@ -907,7 +905,6 @@ static int Hmac_UpdateFinal_CT(Hmac* hmac, byte* digest, const byte* in,
+         case WC_SHA384:
+             blockSz = WC_SHA384_BLOCK_SIZE;
+             blockBits = 7;
+-            macLen = WC_SHA384_DIGEST_SIZE;
+             padSz = WC_SHA384_BLOCK_SIZE - WC_SHA384_PAD_SIZE + 1;
+             break;
+     #endif /* WOLFSSL_SHA384 */
+@@ -916,7 +913,6 @@ static int Hmac_UpdateFinal_CT(Hmac* hmac, byte* digest, const byte* in,
+         case WC_SHA512:
+             blockSz = WC_SHA512_BLOCK_SIZE;
+             blockBits = 7;
+-            macLen = WC_SHA512_DIGEST_SIZE;
+             padSz = WC_SHA512_BLOCK_SIZE - WC_SHA512_PAD_SIZE + 1;
+             break;
+     #endif /* WOLFSSL_SHA512 */
+@@ -1225,7 +1221,7 @@ int TLS_hmac(WOLFSSL* ssl, byte* digest, const byte* in, word32 sz, int padSz,
+     #endif
+             {
+                 ret = Hmac_UpdateFinal_CT(&hmac, digest, in,
+-                                              sz + hashSz + padSz + 1, myInner);
++                                      sz + hashSz + padSz + 1, hashSz, myInner);
+             }
+ #else
+             ret = Hmac_UpdateFinal(&hmac, digest, in, sz + hashSz + padSz + 1,
+diff --git a/wolfssl/test.h b/wolfssl/test.h
+index 920cd65def3..de61e144c3d 100644
+--- a/wolfssl/test.h
++++ b/wolfssl/test.h
+@@ -2043,7 +2043,7 @@ static WC_INLINE unsigned int my_psk_server_cb(WOLFSSL* ssl, const char* identit
+     }
+ }
+ 
+-
++#ifdef WOLFSSL_TLS13
+ static WC_INLINE unsigned int my_psk_client_tls13_cb(WOLFSSL* ssl,
+         const char* hint, char* identity, unsigned int id_max_len,
+         unsigned char* key, unsigned int key_max_len, const char** ciphersuite)
+@@ -2100,6 +2100,7 @@ static WC_INLINE unsigned int my_psk_server_tls13_cb(WOLFSSL* ssl,
+ 
+     return 32;   /* length of key in octets or 0 for error */
+ }
++#endif
+ 
+ #if defined(OPENSSL_ALL) && !defined(NO_CERTS) && \
+        !defined(NO_FILESYSTEM)

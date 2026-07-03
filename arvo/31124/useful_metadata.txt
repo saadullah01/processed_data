@@ -1,0 +1,20 @@
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x603000006838
+Crash State:
+  __cil_verify_classperms
+  __verify_map_perm_classperms
+  hashtab_map
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5347603480969216 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

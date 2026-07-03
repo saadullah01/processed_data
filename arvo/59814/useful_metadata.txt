@@ -1,0 +1,17 @@
+Project: libheif
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: color_conversion_fuzzer
+Job Type: libfuzzer_asan_i386_libheif
+Platform Id: linux
+Crash Address: 0xf69ef7ef
+Crash State:
+  StreamReader_memory::read
+  read_plane_interleaved
+  color_conversion_fuzzer.cc
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

@@ -1,0 +1,28 @@
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_BIGTIFF_fuzzer
+Fuzz target binary: coder_BIGTIFF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  DisassociateAlphaRegion
+  ReadTIFFImage
+  ReadImage
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201805110540:201805251618
+
+Reproducer Testcase ID: 4781271438852096
+
+ClusterFuzz has detected this issue as fixed in range 201806160624:201806170559.
+
+Fixed: 201806160624:201806170559
+
+ClusterFuzz testcase 4781271438852096 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

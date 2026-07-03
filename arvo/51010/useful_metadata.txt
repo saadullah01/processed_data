@@ -1,0 +1,16 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disas_ext-bfd_arch_arm
+Job Type: libfuzzer_ubsan_binutils
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  print_insn_thumb32
+  print_insn
+  print_insn_big_arm
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,18 @@
+Project: lcms
+Fuzzing Engine: libFuzzer
+Fuzz Target: cms_profile_fuzzer
+Job Type: libfuzzer_msan_lcms
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x718000010000
+Crash State:
+  _cmsWriteUInt16Array
+  Type_LUT16_Write
+  SaveTags
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer cms_profile_fuzzer from making much progress. Fixing this will allow more bugs to be found.

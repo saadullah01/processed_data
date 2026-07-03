@@ -1,0 +1,14 @@
+{
+    "src/libbpf.c": {
+        "entities": [
+            "function_bpf_object__collect_prog_relos",
+            "function_bpf_object__elf_collect"
+        ],
+        "lines": [
+            4025,
+            3306,
+            4036,
+            4055
+        ]
+    }
+}

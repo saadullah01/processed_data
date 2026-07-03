@@ -1,0 +1,26 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_dec_fuzzer
+Job Type: libfuzzer_ubsan_libxaac
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+
+Crash State:
+  ixheaacd_res_ctns_apply
+  ixheaacd_parse_extension_frame
+  ixheaacd_parse_frame
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6539739899232256 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

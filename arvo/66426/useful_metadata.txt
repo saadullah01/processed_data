@@ -1,0 +1,32 @@
+Project: mruby
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: mruby
+Fuzzing Engine: afl
+Fuzz Target: mruby_fuzzer
+Job Type: afl_asan_mruby
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6030000003ed
+Crash State:
+  mrb_memsearch
+  str_convert_range
+  mrb_str_aref
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mruby_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Fixed by abcad36bae43f2c7cb8c2b1753dc94ab4cf25366
+
+ClusterFuzz testcase 4655387206811648 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

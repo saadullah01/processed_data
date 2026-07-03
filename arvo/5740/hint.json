@@ -1,0 +1,10 @@
+{
+    "MagickCore/geometry.c": {
+        "entities": [
+            "function_ParseGeometry"
+        ],
+        "lines": [
+            1123
+        ]
+    }
+}

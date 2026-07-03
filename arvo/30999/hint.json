@@ -1,0 +1,21 @@
+{
+    "Zend/zend_operators.c": {
+        "entities": [
+            "function_increment_string"
+        ],
+        "lines": [
+            2323
+        ]
+    },
+    "Zend/zend_types.h": {
+        "entities": [
+            "function_zval_delref_p"
+        ],
+        "lines": [
+            1361,
+            625,
+            1180,
+            1351
+        ]
+    }
+}

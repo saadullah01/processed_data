@@ -1,0 +1,14 @@
+{
+    "bfd/dwarf2.c": {
+        "entities": [
+            "function_alloc_trie_leaf",
+            "struct_trie_leaf",
+            "function_insert_arange_in_trie"
+        ],
+        "lines": [
+            148,
+            133,
+            2141
+        ]
+    }
+}

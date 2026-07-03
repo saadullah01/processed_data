@@ -1,0 +1,12 @@
+{
+    "include/assimp/IOStreamBuffer.h": {
+        "entities": [
+            "function_IOStreamBuffer<T>::getNextLine",
+            "method_IOStreamBuffer<T>::getNextDataLine"
+        ],
+        "lines": [
+            308,
+            261
+        ]
+    }
+}

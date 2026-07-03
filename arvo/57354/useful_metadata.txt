@@ -1,0 +1,22 @@
+Project: flac
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Project: flac
+Fuzzing Engine: afl
+Fuzz Target: fuzzer_tool_flac
+Job Type: afl_asan_flac
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6150005d0780
+Crash State:
+  flac__analyze_frame
+  write_callback
+  write_audio_frame_to_client_
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

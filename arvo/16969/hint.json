@@ -1,0 +1,20 @@
+{
+    "base/sfxcommon.c": {
+        "entities": [
+            "function_file_open_stream"
+        ],
+        "lines": [
+            82
+        ]
+    },
+    "psi/zfile.c": {
+        "entities": [
+            "function_zlibfile",
+            "function_zfile"
+        ],
+        "lines": [
+            282,
+            667
+        ]
+    }
+}

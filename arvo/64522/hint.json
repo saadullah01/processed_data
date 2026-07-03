@@ -1,0 +1,10 @@
+{
+    "src/libopensc/pkcs15-algo.c": {
+        "entities": [
+            "function_asn1_decode_des_params"
+        ],
+        "lines": [
+            45
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "src/resolver/resolver_validation.cc": {
+        "entities": [
+            "variable_get_struct_layout_string",
+            "method_Resolver::ValidateStorageClassLayout"
+        ],
+        "lines": [
+            308,
+            263
+        ]
+    },
+    "src/resolver/storage_class_layout_validation_test.cc": {
+        "entities": [],
+        "lines": [
+            263
+        ]
+    }
+}

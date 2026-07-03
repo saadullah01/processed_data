@@ -1,0 +1,12 @@
+Project: lwan
+Fuzzing Engine: libFuzzer
+Fuzz Target: template_fuzzer
+Job Type: libfuzzer_asan_lwan
+Platform Id: linux
+Crash Type: Global-buffer-overflow WRITE 1
+Crash Address: 0x0000011aa460
+Crash State:
+  template_fuzzer.cc
+Sanitizer: address (ASAN)
+ClusterFuzz testcase 5139009378713600 is verified as fixed
+This bug has been fixed for 30 days. It has been opened to the public.

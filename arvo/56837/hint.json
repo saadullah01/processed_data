@@ -1,0 +1,36 @@
+{
+    "src/core/ddsi/src/ddsi_typelib.c": {
+        "entities": [
+            "function_ddsi_type_register_dep_impl",
+            "function_ddsi_type_new",
+            "function_ddsi_type_free",
+            "function_ddsi_type_ref_id_locked_impl",
+            "function_ddsi_type_fini",
+            "function_ddsi_type_unref",
+            "function_ddsi_type_unref_impl_locked",
+            "function_ddsi_type_unref_locked"
+        ],
+        "lines": [
+            1061,
+            583,
+            360,
+            489,
+            426,
+            1079,
+            504,
+            1117,
+            350
+        ]
+    },
+    "src/core/ddsi/src/ddsi_typewrap.c": {
+        "entities": [
+            "function_ddsi_xt_type_init_impl"
+        ],
+        "lines": [
+            1416,
+            1395,
+            1316,
+            1383
+        ]
+    }
+}

@@ -1,0 +1,181 @@
+{
+    "src/H5Obogus.c": {
+        "entities": [
+            "function_H5O__bogus_decode"
+        ],
+        "lines": [
+            121,
+            13,
+            95
+        ]
+    },
+    "src/H5Ocache_image.c": {
+        "entities": [
+            "function_H5O__mdci_decode"
+        ],
+        "lines": [
+            111,
+            13,
+            79
+        ]
+    },
+    "src/H5Odrvinfo.c": {
+        "entities": [
+            "function_H5O__drvinfo_decode"
+        ],
+        "lines": [
+            96,
+            60
+        ]
+    },
+    "src/H5Ofill.c": {
+        "entities": [
+            "function_H5O__fill_old_decode",
+            "function_H5O__fill_new_decode"
+        ],
+        "lines": [
+            226,
+            354,
+            261,
+            10,
+            301,
+            335,
+            209,
+            179,
+            372,
+            342
+        ]
+    },
+    "src/H5Ofsinfo.c": {
+        "entities": [
+            "function_H5O__fsinfo_decode"
+        ],
+        "lines": [
+            129,
+            167,
+            202,
+            13,
+            143,
+            82,
+            114
+        ]
+    },
+    "src/H5Oginfo.c": {
+        "entities": [
+            "function_H5O__ginfo_decode"
+        ],
+        "lines": [
+            144,
+            132,
+            13,
+            78
+        ]
+    },
+    "src/H5Olayout.c": {
+        "entities": [
+            "function_H5O__layout_decode"
+        ],
+        "lines": [
+            262,
+            10,
+            397,
+            144,
+            530,
+            292,
+            679,
+            178,
+            311,
+            697,
+            580,
+            713,
+            204,
+            78,
+            475,
+            94,
+            223,
+            743,
+            360,
+            236,
+            755,
+            372,
+            254,
+            511
+        ]
+    },
+    "src/H5Olinfo.c": {
+        "entities": [
+            "function_H5O__linfo_decode"
+        ],
+        "lines": [
+            115,
+            13,
+            95
+        ]
+    },
+    "src/H5Olink.c": {
+        "entities": [
+            "function_H5O__link_decode"
+        ],
+        "lines": [
+            100,
+            134,
+            13,
+            141,
+            238,
+            208,
+            255
+        ]
+    },
+    "src/H5Opline.c": {
+        "entities": [
+            "function_H5O__pline_decode"
+        ],
+        "lines": [
+            153,
+            164,
+            133,
+            103,
+            11,
+            121
+        ]
+    },
+    "src/H5Orefcount.c": {
+        "entities": [
+            "function_H5O__refcount_decode"
+        ],
+        "lines": [
+            72,
+            104,
+            13
+        ]
+    },
+    "src/H5Osdspace.c": {
+        "entities": [
+            "function_H5O__sdspace_decode"
+        ],
+        "lines": [
+            217,
+            154,
+            115,
+            166
+        ]
+    },
+    "src/H5Oshmesg.c": {
+        "entities": [
+            "function_H5O__shmesg_decode"
+        ],
+        "lines": [
+            56,
+            87
+        ]
+    },
+    "src/H5Ostab.c": {
+        "entities": [
+            "function_H5O__stab_decode"
+        ],
+        "lines": [
+            13,
+            78
+        ]
+    }
+}

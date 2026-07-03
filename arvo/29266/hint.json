@@ -1,0 +1,10 @@
+{
+    "Libraries/LibJS/Heap/Heap.cpp": {
+        "entities": [
+            "method_Heap::gather_conservative_roots"
+        ],
+        "lines": [
+            124
+        ]
+    }
+}

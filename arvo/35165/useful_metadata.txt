@@ -1,0 +1,21 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_readelf
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000001ba0
+Crash State:
+  process_section_headers
+  process_object
+  process_file
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

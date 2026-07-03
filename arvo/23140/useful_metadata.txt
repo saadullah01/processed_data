@@ -1,0 +1,24 @@
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-parser
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  zval_ptr_dtor
+  attr_free
+  zend_hash_destroy
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_php&range=202006040325:202006060327
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5705701006770176
+
+ClusterFuzz testcase 5705701006770176 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_php&range=202006070327:202006080326
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

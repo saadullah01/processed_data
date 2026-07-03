@@ -1,0 +1,10 @@
+{
+    "src/gd.c": {
+        "entities": [
+            "function_gdImageColorTransparent"
+        ],
+        "lines": [
+            919
+        ]
+    }
+}

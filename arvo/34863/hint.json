@@ -1,0 +1,10 @@
+{
+    "AK/Utf8View.cpp": {
+        "entities": [
+            "method_Utf8CodePointIterator::operator*"
+        ],
+        "lines": [
+            246
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+Project: libdwarf
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_macro_dwarf5
+Job Type: libfuzzer_asan_libdwarf
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6030000000ee
+Crash State:
+  _dwarf_create_a_new_cu_context_record_on_list
+  _dwarf_next_cu_header_internal
+  dwarf_next_cu_header_d
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_macro_dwarf5 from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5080340952907776 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

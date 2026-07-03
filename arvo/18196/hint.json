@@ -1,0 +1,10 @@
+{
+    "vcf.c": {
+        "entities": [
+            "function_vcf_format"
+        ],
+        "lines": [
+            2830
+        ]
+    }
+}

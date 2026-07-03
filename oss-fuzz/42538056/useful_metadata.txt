@@ -1,0 +1,26 @@
+ffmpeg:ffmpeg_dem_ARGO_BRP_fuzzer: Use-of-uninitialized-value in argo_brp_read_packet
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_ARGO_BRP_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  argo_brp_read_packet
+  ff_read_packet
+  read_frame_internal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase ID: 4692991866896384
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

@@ -1,0 +1,22 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60400015bb58
+Crash State:
+  wmem_strbuf_get_str
+  dissect_rrc_PLMN_IdentityWithOptionalMCC_r6
+  dissect_per_constrained_sequence_of
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

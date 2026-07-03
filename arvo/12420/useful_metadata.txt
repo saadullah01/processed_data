@@ -1,0 +1,15 @@
+Project: libidn2
+Fuzzer: libFuzzer_libidn2_to_ascii_8z_fuzzer
+Fuzz target binary: libidn2_to_ascii_8z_fuzzer
+Job Type: libfuzzer_asan_libidn2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x6060000001e0
+Crash State:
+  idn2_to_ascii_4i
+  libidn2_to_ascii_8z_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

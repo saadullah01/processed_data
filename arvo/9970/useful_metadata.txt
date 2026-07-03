@@ -1,0 +1,40 @@
+Project: mupdf
+Fuzzer: afl_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: afl_asan_mupdf
+Platform Id: linux
+
+Crash Type: Stack-buffer-underflow READ 8
+Crash Address: 0x7fde52864418
+Crash State:
+  ps_index
+  ps_run
+  eval_postscript_func
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201807100416:201807102159
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6241403096006656
+
+ClusterFuzz has detected this issue as fixed in range 201808220129:201808221507.
+
+Project: mupdf
+Fuzzer: afl_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: afl_asan_mupdf
+Platform Id: linux
+
+Crash Type: Stack-buffer-underflow READ 8
+Crash Address: 0x7fde52864418
+Crash State:
+  ps_index
+  ps_run
+  eval_postscript_func
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201807100416:201807102159
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_mupdf&range=201808220129:201808221507
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6241403096006656

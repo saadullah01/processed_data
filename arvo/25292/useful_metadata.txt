@@ -1,0 +1,22 @@
+Project: rnp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: rnp
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_keyring
+Job Type: libfuzzer_asan_rnp
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7fff35f15c68
+Crash State:
+  stream_write_key
+  pgp_rawpacket_t::pgp_rawpacket_t
+  pgp_key_from_pkt
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

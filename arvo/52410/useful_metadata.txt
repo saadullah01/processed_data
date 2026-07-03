@@ -1,0 +1,25 @@
+Project: mapserver
+Fuzzing Engine: libFuzzer
+Fuzz Target: mapfuzzer
+Job Type: libfuzzer_asan_mapserver
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x61e000001cb0
+Crash State:
+  loadSymbol
+  loadMapInternal
+  msLoadMap
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_mapserver&range=202210030602:202210040620
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4859428566597632
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mapfuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+fixed per https://github.com/MapServer/MapServer/pull/6723
+
+ClusterFuzz testcase 4859428566597632 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_mapserver&range=202210150600:202210160606
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

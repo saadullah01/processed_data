@@ -1,0 +1,22 @@
+Project: libraw
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: libraw
+Fuzzing Engine: afl
+Fuzz Target: libraw_raf_fuzzer
+Job Type: afl_asan_libraw
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x62e00000a800
+Crash State:
+  LibRaw_buffer_datastream::read
+  LibRaw::read_shorts
+  LibRaw::sony_arq_load_raw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

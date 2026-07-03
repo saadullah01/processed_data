@@ -1,0 +1,43 @@
+Project: serenity
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 4
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6281737226944512
+
+Project: serenity
+Fuzzing Engine: afl
+Fuzz Target: FuzzGIFLoader
+Job Type: afl_asan_serenity
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x000000784fb0
+Crash State:
+  Gfx::decode_frame
+  Gfx::GIFImageDecoderPlugin::frame
+  Gfx::GIFImageDecoderPlugin::bitmap
+  
+Sanitizer: address (ASAN)
+
+Crash Revision: https://oss-fuzz.com/revisions?job=afl_asan_serenity&revision=202012020600
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6281737226944512
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored."""
+
+-- Comment 2: """ClusterFuzz testcase 6281737226944512 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_serenity&range=202012220615:202012230623
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

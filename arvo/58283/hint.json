@@ -1,0 +1,20 @@
+{
+    "binutils/objcopy.c": {
+        "entities": [
+            "function_write_debugging_info",
+            "function_delete_symbol_htabs"
+        ],
+        "lines": [
+            4648,
+            1057
+        ]
+    },
+    "binutils/wrstabs.c": {
+        "entities": [
+            "function_write_stabs_in_sections_debugging_info"
+        ],
+        "lines": [
+            462
+        ]
+    }
+}

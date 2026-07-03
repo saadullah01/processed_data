@@ -1,0 +1,15 @@
+Project: harfbuzz
+Fuzzing Engine: afl
+Fuzz Target: hb-draw-fuzzer
+Job Type: afl_asan_harfbuzz
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 2
+Crash Address: 0x61b000065bf9
+Crash State:
+  BEInt<unsigned short, 2>::operator unsigned short
+  OT::IntType<unsigned short, 2u>::operator unsigned int
+  OT::GlyphVarData::has_data
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Fixed with 8eba66c1c6d19bcc779a3b4e7b68251511986ee8
+ClusterFuzz testcase 5088336521986048 is verified as fixed

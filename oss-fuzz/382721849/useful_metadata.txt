@@ -1,0 +1,27 @@
+liblouis:fuzz_translate_generic: Use-of-uninitialized-value in _lou_extParseChars
+
+Project: liblouis
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_translate_generic
+Job Type: libfuzzer_msan_liblouis
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  _lou_extParseChars
+  fuzz_translate_generic.c
+  _lou_extParseChars
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)

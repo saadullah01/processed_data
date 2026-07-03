@@ -1,0 +1,25 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_CFHD_fuzzer: Use-of-uninitialized-value in horiz_filter
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_CFHD_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+ horiz_filter
+ cfhd_encode_frame
+ ff_encode_encode_cb
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5960860961406976 is verified as fixed.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

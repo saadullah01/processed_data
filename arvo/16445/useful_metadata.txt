@@ -1,0 +1,36 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: zstd
+Fuzzing Engine: libFuzzer
+Fuzz Target: simple_decompress
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffff3950508
+Crash State:
+  ZSTD_decodeLiteralsBlock
+  ZSTD_decompressBlock
+  ZSTD_decompressDCtx
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: range=201904181421:201904190236
+
+Reproducer Testcase: testcase_id=5640730759921664
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5640730759921664 is verified as fixed.
+
+This bug is in v03, which is not built into zstd by default.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

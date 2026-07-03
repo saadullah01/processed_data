@@ -1,0 +1,26 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_H263I_fuzzer: Use-of-uninitialized-value in h263_v_loop_filter_c
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_H263I_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  h263_v_loop_filter_c
+  ff_h263_loop_filter
+  decode_slice
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 6275505349787648
+
+Crash Revision: revision=202408060600
+
+Comments (extracted):
+- ClusterFuzz testcase 6275505349787648 is verified as fixed in range=202408100613:202408110600
+- This bug has been fixed. It has been opened to the public.

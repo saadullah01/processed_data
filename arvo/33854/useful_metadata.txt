@@ -1,0 +1,13 @@
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzShell
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+Crash Type: Bad-cast
+Crash Address: 0x0000021dafe0
+Crash State:
+  Bad-cast to AST::BarewordLiteral from Shell::AST::Tilde
+  Shell::Parser::parse_heredoc_initiation_record
+  Shell::Parser::parse_string_composite
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High

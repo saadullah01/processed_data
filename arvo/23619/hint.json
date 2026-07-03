@@ -1,0 +1,19 @@
+{
+    "json_tokener.c": {
+        "entities": [
+            "function_json_tokener_parse_ex"
+        ],
+        "lines": [
+            633,
+            223
+        ]
+    },
+    "json_tokener.h": {
+        "entities": [
+            "struct_json_tokener"
+        ],
+        "lines": [
+            111
+        ]
+    }
+}

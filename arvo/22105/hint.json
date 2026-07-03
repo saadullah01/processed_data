@@ -1,0 +1,23 @@
+{
+    "Packet++/header/RawPacket.h": {
+        "entities": [],
+        "lines": [
+            326
+        ]
+    },
+    "Packet++/src/RawPacket.cpp": {
+        "entities": [],
+        "lines": [
+            201
+        ]
+    },
+    "Pcap++/src/PcapFileDevice.cpp": {
+        "entities": [
+            "function_PcapFileReaderDevice::open",
+            "method_PcapFileReaderDevice::open"
+        ],
+        "lines": [
+            139
+        ]
+    }
+}

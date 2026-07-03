@@ -1,0 +1,17 @@
+{
+    "src/codec/SkJpegCodec.cpp": {
+        "entities": [
+            "function_is_orientation_marker"
+        ],
+        "lines": [
+            62
+        ]
+    },
+    "tests/CodecTest.cpp": {
+        "entities": [],
+        "lines": [
+            648,
+            621
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decompressors/PhaseOneDecompressor.cpp": {
+        "entities": [
+            "method_PhaseOneDecompressor::prepareStrips"
+        ],
+        "lines": [
+            66
+        ]
+    }
+}

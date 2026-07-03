@@ -1,0 +1,13 @@
+{
+    "src/libopensc/pkcs15-itacns.c": {
+        "entities": [
+            "function_get_name_from_EF_DatiPersonali",
+            "function_itacns_add_data_files"
+        ],
+        "lines": [
+            547,
+            427,
+            388
+        ]
+    }
+}

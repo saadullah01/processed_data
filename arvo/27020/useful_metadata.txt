@@ -1,0 +1,21 @@
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer-wolfssl-client-randomize
+Job Type: libfuzzer_msan_wolfssl
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  memory_test
+  fuzzer_send
+  SendBuffered
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Issue manually filed by: aarya
+
+ZD 11217
+
+ClusterFuzz testcase 5721325144113152 is verified as fixed

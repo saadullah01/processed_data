@@ -1,0 +1,10 @@
+{
+    "libass/ass_utils.h": {
+        "entities": [
+            "function_fnv_32a_buf"
+        ],
+        "lines": [
+            185
+        ]
+    }
+}

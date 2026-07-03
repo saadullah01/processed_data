@@ -1,0 +1,31 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-PefDecoder
+Fuzz target binary: TiffDecoderFuzzer-PefDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  _start
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201709140521:201709150508.
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-PefDecoder
+Fuzz target binary: TiffDecoderFuzzer-PefDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  _start
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6742688382582784 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

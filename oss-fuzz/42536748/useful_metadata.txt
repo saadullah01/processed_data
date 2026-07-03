@@ -1,0 +1,27 @@
+libwebp:enc_fuzzer@Enc.EncTest: Use-of-uninitialized-value in my_error_exit
+
+Project: libwebp
+Fuzzing Engine: libFuzzer
+Fuzz Target: enc_fuzzer@Enc.EncTest
+Job Type: libfuzzer_msan_libwebp
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  my_error_exit
+  jpeg_read_header
+  ReadJPEG
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)

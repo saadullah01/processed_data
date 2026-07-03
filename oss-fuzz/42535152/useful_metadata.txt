@@ -1,0 +1,27 @@
+qpdf:qpdf_fuzzer: Heap-use-after-free in QPDFXRefEntry::getType
+
+Project: qpdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: qpdf_fuzzer
+Job Type: libfuzzer_asan_qpdf
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x506000002bc8
+Crash State:
+  QPDFXRefEntry::getType
+  QPDFWriter::preserveObjectStreams
+  QPDFWriter::doWriteSetup
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 4894357298675712 is verified as fixed
+This bug has been fixed. It has been opened to the public.
+The bug did not affect any released version of qpdf.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: qpdf

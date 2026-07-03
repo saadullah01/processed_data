@@ -1,0 +1,11 @@
+{
+    "base/gstype2.c": {
+        "entities": [
+            "function_gs_type2_interpret"
+        ],
+        "lines": [
+            511,
+            503
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+Project: mruby
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: mruby
+Fuzzing Engine: honggfuzz
+Fuzz Target: mruby_proto_fuzzer
+Job Type: honggfuzz_asan_mruby
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x619000002250
+Crash State:
+  mrb_funcall_with_block
+  mrb_instance_new
+  mrb_funcall_with_block
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

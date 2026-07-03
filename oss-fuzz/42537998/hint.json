@@ -1,0 +1,30 @@
+{
+    "libavcodec/vc1_block.c": {
+        "entities": [
+            "function_vc1_decode_b_mb_intfi",
+            "function_vc1_decode_p_mb",
+            "function_vc1_decode_b_mb",
+            "function_vc1_decode_b_mb_intfr",
+            "function_vc1_decode_p_mb_intfr",
+            "function_vc1_decode_p_blocks",
+            "function_vc1_decode_p_mb_intfi"
+        ],
+        "lines": [
+            2016,
+            1857,
+            1602,
+            2048,
+            2242,
+            2817,
+            1766,
+            1735,
+            2186,
+            1355,
+            1297,
+            1458,
+            1969,
+            2775,
+            1530
+        ]
+    }
+}

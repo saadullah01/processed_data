@@ -1,0 +1,19 @@
+Project: arrow
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Negative-size-param
+Severity: High
+
+Project: arrow
+Fuzzing Engine: afl
+Fuzz Target: arrow-ipc-stream-fuzz
+Job Type: afl_asan_arrow
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  arrow::ConcatenateBuffers
+  arrow::ConcatenateImpl::Visit
+  arrow::Status arrow::VisitTypeInline<arrow::ConcatenateImpl>
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

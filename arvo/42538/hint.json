@@ -1,0 +1,10 @@
+{
+    "gio/gthreadedresolver.c": {
+        "entities": [
+            "function_g_resolver_records_from_res_query"
+        ],
+        "lines": [
+            656
+        ]
+    }
+}

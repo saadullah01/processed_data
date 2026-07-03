@@ -1,0 +1,21 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_ubsan_opensc
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000024ca004
+Crash State:
+  bebytes2ushort
+  coolkey_v0_get_attribute_len
+  coolkey_v0_get_attribute_record_len
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

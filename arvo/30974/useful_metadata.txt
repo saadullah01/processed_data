@@ -1,0 +1,14 @@
+Project: c-blosc2
+Fuzzing Engine: honggfuzz
+Fuzz Target: decompress_frame_fuzzer
+Job Type: honggfuzz_asan_c-blosc2
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  blosc_read_header
+  blosc2_getitem_ctx
+  blosc_getitem
+  
+Sanitizer: address (ASAN)

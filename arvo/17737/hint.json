@@ -1,0 +1,10 @@
+{
+    "xmlreader.c": {
+        "entities": [
+            "function_xmlTextReaderFreeNodeList"
+        ],
+        "lines": [
+            367
+        ]
+    }
+}

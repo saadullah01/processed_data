@@ -1,0 +1,60 @@
+{
+    "src/allheaders.h": {
+        "entities": [],
+        "lines": [
+            476
+        ]
+    },
+    "src/colormap.c": {
+        "entities": [
+            "function_pixcmapIsValid",
+            "function_pixcmapCopy"
+        ],
+        "lines": [
+            298,
+            317,
+            253
+        ]
+    },
+    "src/enhance.c": {
+        "entities": [
+            "function_pixUnsharpMasking"
+        ],
+        "lines": [
+            1043,
+            1018,
+            1003
+        ]
+    },
+    "src/pix1.c": {
+        "entities": [
+            "function_pixSetColormap",
+            "function_pixTransferAllData",
+            "function_pixCopyColormap"
+        ],
+        "lines": [
+            816,
+            1623,
+            935
+        ]
+    },
+    "src/pix2.c": {
+        "entities": [
+            "function_pixGetRGBComponentCmap"
+        ],
+        "lines": [
+            2613,
+            2589
+        ]
+    },
+    "src/readfile.c": {
+        "entities": [
+            "function_pixReadMem",
+            "function_pixReadStream"
+        ],
+        "lines": [
+            929,
+            406
+        ]
+    }
+}

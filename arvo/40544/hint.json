@@ -1,0 +1,10 @@
+{
+    "binutils/objcopy.c": {
+        "entities": [
+            "function_copy_unknown_object"
+        ],
+        "lines": [
+            1894
+        ]
+    }
+}

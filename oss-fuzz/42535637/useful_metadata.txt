@@ -1,0 +1,33 @@
+Issue 42535637
+libxaac:xaac_enc_fuzzer: Use-of-uninitialized-value in iusace_fd_encode_fac
+
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_enc_fuzzer
+Job Type: libfuzzer_msan_libxaac
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+ iusace_fd_encode_fac
+ iusace_encode_fac_params
+ iusace_lpd_frm_enc
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Reproducer Testcase ID: 5113602519400448
+
+Verified: ClusterFuzz testcase 5113602519400448 is verified as fixed.
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+
+Code Changes:
+--
+Pending Code Changes:
+--

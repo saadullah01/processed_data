@@ -1,0 +1,76 @@
+Project: open62541
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Null-dereference READ
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5712315752644608
+
+Project: open62541
+Fuzzer: libFuzzer_open62541_fuzz_binary_message
+Fuzz target binary: fuzz_binary_message
+Job Type: libfuzzer_ubsan_open62541
+Platform Id: linux
+
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: undefined (UBSAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_open62541&range=201811160414:201811180356
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5712315752644608
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """ClusterFuzz has detected this issue as fixed in range 201811200351:201811210400.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5712315752644608
+
+Project: open62541
+Fuzzer: libFuzzer_open62541_fuzz_binary_message
+Fuzz target binary: fuzz_binary_message
+Job Type: libfuzzer_ubsan_open62541
+Platform Id: linux
+
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: undefined (UBSAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_open62541&range=201811160414:201811180356
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_open62541&range=201811200351:201811210400
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5712315752644608
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 3: """ClusterFuzz testcase 5712315752644608 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """Fixed in https://github.com/open62541/open62541/pull/2230/commits/947c4814d8738056d010629819977166905cc156"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

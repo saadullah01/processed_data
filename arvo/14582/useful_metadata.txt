@@ -1,0 +1,17 @@
+Project: lwan
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 1
+
+Project: lwan
+Fuzzer: afl_lwan_request_fuzzer
+Fuzz target binary: request_fuzzer
+Job Type: afl_asan_lwan
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x0000011aeb3f
+Crash State:
+  parse_http_request
+  fuzz_parse_http_request
+Sanitizer: address (ASAN)
+Reproducer Testcase ID: 5729298679332864

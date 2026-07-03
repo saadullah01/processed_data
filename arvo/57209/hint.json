@@ -1,0 +1,26 @@
+{
+    "cpp/src/arrow/array/array_run_end.cc": {
+        "entities": [
+            "function_RunEndEncodedArray::SetData"
+        ],
+        "lines": [
+            71
+        ]
+    },
+    "cpp/src/arrow/array/array_run_end_test.cc": {
+        "entities": [
+            "function_TestRunEndEncodedArray::Validate"
+        ],
+        "lines": [
+            448
+        ]
+    },
+    "cpp/src/arrow/array/validate.cc": {
+        "entities": [
+            "method_ValidateRunEndEncoded"
+        ],
+        "lines": [
+            639
+        ]
+    }
+}

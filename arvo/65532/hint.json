@@ -1,0 +1,15 @@
+{
+    "src/p_mach.cpp": {
+        "entities": [
+            "function_PackMachBase<T>::canUnpack",
+            "method_PackMachBase<T>::unpack",
+            "method_PackMachBase<T>::canPack"
+        ],
+        "lines": [
+            1529,
+            1954,
+            1643,
+            1468
+        ]
+    }
+}

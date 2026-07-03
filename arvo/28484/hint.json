@@ -1,0 +1,10 @@
+{
+    "libsepol/cil/src/cil_post.c": {
+        "entities": [
+            "function_cil_post_fc_fill_data"
+        ],
+        "lines": [
+            186
+        ]
+    }
+}

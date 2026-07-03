@@ -1,0 +1,24 @@
+{
+    "example/readFromString/readFromString.cpp": {
+        "entities": [],
+        "lines": [
+            2
+        ]
+    },
+    "src/lib_json/json_value.cpp": {
+        "entities": [
+            "function_throwLogicError"
+        ],
+        "lines": [
+            210
+        ]
+    },
+    "src/test_lib_json/fuzz.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            25
+        ]
+    }
+}

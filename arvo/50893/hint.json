@@ -1,0 +1,14 @@
+{
+    "devices/vector/gdevxps.c": {
+        "entities": [
+            "function_xps_image_end_image",
+            "function_xps_image_enum_finalize"
+        ],
+        "lines": [
+            2296,
+            2588,
+            1790,
+            2575
+        ]
+    }
+}

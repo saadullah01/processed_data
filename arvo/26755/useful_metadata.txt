@@ -1,0 +1,26 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_fuzzer
+Job Type: libfuzzer_msan_c-blosc2
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  Lizard_decompress_safe
+  blosc_d
+  do_job
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5673261951877120 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

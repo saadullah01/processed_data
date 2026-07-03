@@ -1,0 +1,11 @@
+{
+    "io/src/ply_io.cpp": {
+        "entities": [
+            "function_pcl::PLYReader::read"
+        ],
+        "lines": [
+            746,
+            647
+        ]
+    }
+}

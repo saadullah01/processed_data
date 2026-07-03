@@ -1,0 +1,15 @@
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize
+Fuzz target binary: image_filter_deserialize
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  sse2::blit_row_s32a_opaque
+  Sprite_D32_S32::blitRect
+  SkDraw::drawSprite
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201802060525:201802070019.

@@ -1,0 +1,44 @@
+{
+    "lib/jxl/blending.cc": {
+        "entities": [
+            "function_ImageBlender::PrepareRect",
+            "method_ImageBlender::PrepareRect",
+            "function_ImageBlender::PrepareBlending",
+            "method_ImageBlender::PrepareBlending"
+        ],
+        "lines": [
+            36,
+            136,
+            234,
+            45,
+            78,
+            122
+        ]
+    },
+    "lib/jxl/blending.h": {
+        "entities": [
+            "class_ImageBlender"
+        ],
+        "lines": [
+            76,
+            54
+        ]
+    },
+    "lib/jxl/blending_test.cc": {
+        "entities": [
+            "function_BlendingTest.Offset",
+            "function_TEST(BlendingTest, Offset)"
+        ],
+        "lines": [
+            68
+        ]
+    },
+    "lib/jxl/dec_reconstruct.cc": {
+        "entities": [
+            "function_FinalizeFrameDecoding"
+        ],
+        "lines": [
+            1190
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "source/fitz/draw-unpack.c": {
+        "entities": [
+            "function_fz_unpack_tile"
+        ],
+        "lines": [
+            257
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "libr/bin/p/bin_art.c": {
+        "entities": [
+            "function_destroy"
+        ],
+        "lines": [
+            83
+        ]
+    }
+}

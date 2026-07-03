@@ -1,0 +1,10 @@
+{
+    "libavcodec/mimic.c": {
+        "entities": [
+            "function_vlc_decode_block"
+        ],
+        "lines": [
+            260
+        ]
+    }
+}

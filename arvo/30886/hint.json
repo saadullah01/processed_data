@@ -1,0 +1,18 @@
+{
+    "mrbgems/mruby-compiler/core/parse.y": {
+        "entities": [
+            "function_heredoc_remove_indent"
+        ],
+        "lines": [
+            4682
+        ]
+    },
+    "mrbgems/mruby-compiler/core/y.tab.c": {
+        "entities": [
+            "function_heredoc_remove_indent"
+        ],
+        "lines": [
+            10718
+        ]
+    }
+}

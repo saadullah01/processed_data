@@ -1,0 +1,27 @@
+libxml2:lint: Heap-use-after-free in xmlCharEncCloseFunc
+
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: lint
+Job Type: libfuzzer_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x508000000070
+Crash State:
+  xmlCharEncCloseFunc
+  htmlSaveFileFormat
+  parseAndPrintFile
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5815227948531712 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)

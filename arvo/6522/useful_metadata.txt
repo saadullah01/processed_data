@@ -1,0 +1,37 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7f365e761f44
+Crash State:
+  template_affine_color_N_lerp
+  paint_affine_color_lerp_N
+  fz_paint_image_imp
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201808280133:201808290130.
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7f365e761f44
+Crash State:
+  template_affine_color_N_lerp
+  paint_affine_color_lerp_N
+  fz_paint_image_imp
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5671645147561984 is verified as fixed, so closing issue as verified.

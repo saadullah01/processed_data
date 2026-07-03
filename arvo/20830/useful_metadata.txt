@@ -1,0 +1,20 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_process_packet
+Job Type: libfuzzer_ubsan_ndpi
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  ndpi_search_mail_imap_tcp
+  check_ndpi_tcp_flow_func
+  ndpi_detection_process_packet
+
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

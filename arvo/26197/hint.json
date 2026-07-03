@@ -1,0 +1,50 @@
+{
+    "usrsctplib/netinet/sctp.h": {
+        "entities": [],
+        "lines": [
+            34,
+            626
+        ]
+    },
+    "usrsctplib/netinet/sctp_input.c": {
+        "entities": [
+            "function_sctp_handle_cookie_echo",
+            "function_sctp_handle_error",
+            "function_sctp_process_control"
+        ],
+        "lines": [
+            2720,
+            34,
+            5670,
+            2568,
+            1294,
+            2749
+        ]
+    },
+    "usrsctplib/netinet/sctp_output.c": {
+        "entities": [
+            "function_sctp_send_initiate"
+        ],
+        "lines": [
+            34,
+            5263
+        ]
+    },
+    "usrsctplib/netinet/sctp_sysctl.h": {
+        "entities": [],
+        "lines": [
+            34,
+            343
+        ]
+    },
+    "usrsctplib/netinet/sctp_usrreq.c": {
+        "entities": [
+            "function_sctp_setopt"
+        ],
+        "lines": [
+            34,
+            6493,
+            6514
+        ]
+    }
+}

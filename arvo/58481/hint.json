@@ -1,0 +1,10 @@
+{
+    "src/libFLAC/stream_decoder.c": {
+        "entities": [
+            "function_write_audio_frame_to_client_"
+        ],
+        "lines": [
+            3227
+        ]
+    }
+}

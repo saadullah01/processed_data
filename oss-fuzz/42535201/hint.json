@@ -1,0 +1,13 @@
+{
+    "code/AssetLib/MD3/MD3Loader.cpp": {
+        "entities": [
+            "function_MD3Importer::InternReadFile",
+            "method_MD3Importer::InternReadFile"
+        ],
+        "lines": [
+            1026,
+            724,
+            749
+        ]
+    }
+}

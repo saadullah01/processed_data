@@ -1,0 +1,20 @@
+{
+    "src/hb-ot-var-cvar-table.hh": {
+        "entities": [
+            "function_decompile_tuple_variations",
+            "method_decompile_tuple_variations"
+        ],
+        "lines": [
+            54,
+            151
+        ]
+    },
+    "src/test-tuple-varstore.cc": {
+        "entities": [
+            "function_test_decompile_cvar"
+        ],
+        "lines": [
+            39
+        ]
+    }
+}

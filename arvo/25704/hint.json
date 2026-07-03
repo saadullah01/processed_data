@@ -1,0 +1,21 @@
+{
+    "blosc/blosc2.c": {
+        "entities": [
+            "function_blosc_d",
+            "function__blosc_getitem",
+            "function_serial_blosc",
+            "function_t_blosc_do_job"
+        ],
+        "lines": [
+            964,
+            997,
+            2341,
+            1096,
+            2541,
+            1167,
+            1011,
+            981,
+            989
+        ]
+    }
+}

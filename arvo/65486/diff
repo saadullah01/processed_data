@@ -1,0 +1,25 @@
+From 539e8f41a35fec30fba4cfb3a65ea4db67978f85 Mon Sep 17 00:00:00 2001
+From: Fredrik Roubert <roubert@google.com>
+Date: Wed, 3 Jan 2024 21:05:14 +0900
+Subject: [PATCH] ICU-22532 Compiler warning: conversion from 'double' to
+ 'int32_t'.
+
+The definition of kOneDay is 1.0 * U_MILLIS_PER_DAY so there's no
+reason whatsoever to not just use U_MILLIS_PER_DAY directly here.
+---
+ icu4c/source/i18n/calendar.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/icu4c/source/i18n/calendar.cpp b/icu4c/source/i18n/calendar.cpp
+index 8408cbfee88c..bddd06631197 100644
+--- a/icu4c/source/i18n/calendar.cpp
++++ b/icu4c/source/i18n/calendar.cpp
+@@ -1462,7 +1462,7 @@ void Calendar::computeFields(UErrorCode &ec)
+     // 11/6/00
+ 
+     int32_t millisInDay;
+-    int32_t days = ClockMath::floorDivide(localMillis, kOneDay, &millisInDay);
++    int32_t days = ClockMath::floorDivide(localMillis, U_MILLIS_PER_DAY, &millisInDay);
+ 
+     internalSet(UCAL_JULIAN_DAY,days + kEpochStartAsJulianDay);
+ 

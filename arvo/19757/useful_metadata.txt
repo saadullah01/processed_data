@@ -1,0 +1,22 @@
+Project: uWebSockets
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: uwebsockets
+Fuzzing Engine: libFuzzer
+Fuzz Target: MockedEchoServer
+Job Type: libfuzzer_asan_uwebsockets
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0xffffffffffffffef
+Crash State:
+  fu2::abi_400::detail::type_erasure::invocation_table::function_trait<void
+  uWS::WebSocketContext<false, true>::handleFragment
+  uWS::WebSocketProtocol<true, uWS::WebSocketContext<false, true> >::consumeContin
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

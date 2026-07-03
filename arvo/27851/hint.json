@@ -1,0 +1,23 @@
+{
+    "lib/ofp-actions.c": {
+        "entities": [
+            "function_decode_NXAST_RAW_ENCAP"
+        ],
+        "lines": [
+            4458,
+            4431
+        ]
+    },
+    "tests/automake.mk": {
+        "entities": [],
+        "lines": [
+            134
+        ]
+    },
+    "tests/fuzz-regression-list.at": {
+        "entities": [],
+        "lines": [
+            21
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "src/pcre2_fuzzsupport.c": {
+        "entities": [],
+        "lines": [
+            295
+        ]
+    }
+}

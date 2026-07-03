@@ -1,0 +1,10 @@
+{
+    "libvips/foreign/jxlload.c": {
+        "entities": [
+            "function_vips_foreign_load_jxl_fill_input"
+        ],
+        "lines": [
+            208
+        ]
+    }
+}

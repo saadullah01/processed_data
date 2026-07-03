@@ -1,0 +1,26 @@
+{
+    "crypto/x509/x509_test.cc": {
+        "entities": [],
+        "lines": [
+            6205
+        ]
+    },
+    "crypto/x509/x509_v3.c": {
+        "entities": [
+            "function_X509v3_add_ext"
+        ],
+        "lines": [
+            148,
+            158,
+            183
+        ]
+    },
+    "crypto/x509v3/v3_conf.c": {
+        "entities": [
+            "function_X509V3_EXT_add_nconf_sk"
+        ],
+        "lines": [
+            357
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Project: zstd
+Fuzzing Engine: libFuzzer
+Fuzz Target: sequence_compression_api
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x62c0000071b3
+Crash State:
+  ZSTD_compressLiterals
+  ZSTD_entropyCompressSeqStore
+  ZSTD_compressSequences
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+"That's indeed a 1-byte write-overflow bug,
+triggered inside the experimental Sequence Compression API using the new Explicit Delimiter Mode.
+This new mode has been merged into `dev` branch a few days ago, and has never reached Release status.
+Kind of the best time to find and fix such bugs !
+Thanks oss-fuzz !"
+
+ClusterFuzz testcase 6749389635321856 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

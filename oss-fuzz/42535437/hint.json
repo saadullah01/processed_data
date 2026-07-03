@@ -1,0 +1,11 @@
+{
+    "spicy/runtime/include/configuration.h": {
+        "entities": [
+            "struct_Configuration"
+        ],
+        "lines": [
+            20,
+            29
+        ]
+    }
+}

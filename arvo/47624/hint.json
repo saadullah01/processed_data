@@ -1,0 +1,10 @@
+{
+    "epan/conversation.c": {
+        "entities": [
+            "function_conversation_new_by_id"
+        ],
+        "lines": [
+            1012
+        ]
+    }
+}

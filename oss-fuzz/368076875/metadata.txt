@@ -1,0 +1,335 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 368076875
+OSS Fuzz
+368076875
+cpython3:fuzz_ast_literal_eval: Heap-use-after-free in dictkeys_decref
+Hotlists (3)
+Mark as Duplicate
+Comments
+(10)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(9)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTION87...@developer.gserviceaccount.com created issue #1
+Sep 22, 2024 10:34PM
+Detailed Report: https://oss-fuzz.com/testcase?key=5876542813569024
+
+Project: cpython3
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_ast_literal_eval
+Job Type: libfuzzer_asan_cpython3
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x527000049900
+Crash State:
+  dictkeys_decref
+  dict_dealloc
+  ast_dealloc
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_cpython3&range=202409180613:202409190644
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5876542813569024
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+al...@gmail.com<al...@gmail.com> #2
+Sep 23, 2024 04:37AM
+
+Hmm, I'm very perplexed. The reproducer has NUL bytes in it, which the ast.literal_eval fuzzer (as well as ast.literal_eval itself) rejects, so I don't know how this at all.
+
+gr...@krypto.org<gr...@krypto.org> #3
+Oct 5, 2024 11:15AM
+
+Agreed, I cannot reproduce this. But as you said, https://github.com/python/cpython/blob/16cd6cc86b3ba20074ae3eefb61aeb24ee1544f7/Modules/_xxtestfuzz/fuzzer.c#L414 means it shouldn't even have gotten to ast.literal_eval let alone UTF-8 decode in the first place.
+
+Even if I ignore that and feed the data in, it doesn't cause a problem on my clang 18 --with-address-sanitizer build:
+
+Python 3.14.0a0 (heads/main-dirty:16cd6cc86b3, Oct  5 2024, 17:56:51) [Clang 18.1.3 (1ubuntu1)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> data = open('ossfuzz-issue-368076875.testcase', 'rb').read()
+<python-input-0>:1: ResourceWarning: unclosed file <_io.BufferedReader name='ossfuzz-issue-368076875.testcase'>
+  data = open('ossfuzz-issue-368076875.testcase', 'rb').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+>>> data_u = data.decode()
+>>> len(data), len(data_u)
+(274773, 274749)
+>>> import ast
+>>> ast.literal_eval(data_u)
+Traceback (most recent call last):
+  File "<python-input-4>", line 1, in <module>
+    ast.literal_eval(data_u)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/.../cpython/Lib/ast.py", line 67, in literal_eval
+    node_or_string = parse(node_or_string.lstrip(" \t"), mode='eval')
+  File "/.../cpython/Lib/ast.py", line 53, in parse
+    return compile(source, filename, mode, flags,
+                   _feature_version=feature_version, optimize=optimize)
+SyntaxError: source code string cannot contain null bytes
+>>> data_u == data.decode('utf-8')
+True
+
+Message last modified on Oct 5, 2024 11:16AM
+al...@gmail.com<al...@gmail.com> #4
+Oct 5, 2024 11:28AM
+
+Ok, I've managed to reproduce. I don't know why the nul check in the fuzzer does nothing, nor why the fuzzer doesn't minimize all the extra stuff out. But if you truncate it at the first null, you can reproduce:
+
+>>> ast.literal_eval(s[:s.index(b"\x00")].decode())
+=================================================================
+==11194==ERROR: AddressSanitizer: heap-use-after-free on address 0x62f0004de410 at pc 0x000102e85760 bp 0x00016d3b4780 sp 0x00016d3b4778
+READ of size 8 at 0x62f0004de410 thread T0
+    #0 0x102e8575c in Py_DECREF refcount.h:342
+    #1 0x102ea5c88 in dictkeys_decref dictobject.c:458
+    #2 0x102e94db8 in dict_dealloc dictobject.c:3199
+    #3 0x102eff5bc in _Py_Dealloc object.c:2893
+    #4 0x1031419e4 in ast_dealloc Python-ast.c:5052
+    #5 0x102f90ffc in subtype_dealloc typeobject.c:2572
+    #6 0x102eff5bc in _Py_Dealloc object.c:2893
+    #7 0x103143c00 in ast_repr_max_depth Python-ast.c
+    #8 0x102ef3744 in PyObject_Repr object.c:694
+    #9 0x1031f3d70 in _PyEval_EvalFrameDefault generated_cases.c.h:3248
+    #10 0x1031cebf0 in _PyObject_VectorcallTstate pycore_call.h:167
+    #11 0x1031caef8 in map_next bltinmodule.c:1442
+    #12 0x102d3b368 in iternext abstract.c:2874
+    #13 0x102d36ef8 in PyIter_Next abstract.c:2924
+    #14 0x102f68200 in set_update_iterable_lock_held setobject.c:971
+    #15 0x102f5c4ac in make_new_set setobject.c:1095
+    #16 0x102d852cc in _PyObject_VectorcallTstate pycore_call.h:167
+    #17 0x10320a20c in _PyEval_EvalFrameDefault generated_cases.c.h:921
+    #18 0x1031de9d8 in PyEval_EvalCode ceval.c:647
+    #19 0x1031d3b68 in builtin_exec bltinmodule.c.h:556
+    #20 0x1031f8cd8 in _PyEval_EvalFrameDefault generated_cases.c.h:1451
+    #21 0x1031de9d8 in PyEval_EvalCode ceval.c:647
+    #22 0x1031d3b68 in builtin_exec bltinmodule.c.h:556
+    #23 0x102ee0360 in cfunction_vectorcall_FASTCALL_KEYWORDS methodobject.c:441
+    #24 0x102d852cc in _PyObject_VectorcallTstate pycore_call.h:167
+    #25 0x10320a20c in _PyEval_EvalFrameDefault generated_cases.c.h:921
+    #26 0x102d87b64 in _PyVectorcall_Call call.c:273
+    #27 0x1034bdfe0 in pymain_run_module main.c:349
+    #28 0x1034bf048 in pymain_run_stdin main.c:574
+    #29 0x1034bc7fc in Py_RunMain main.c:775
+    #30 0x1034bd894 in pymain_main main.c:805
+    #31 0x1034bdc30 in Py_BytesMain main.c:829
+    #32 0x19bf60270  (<unknown module>)
+
+0x62f0004de410 is located 16 bytes inside of 49104-byte region [0x62f0004de400,0x62f0004ea3d0)
+freed by thread T0 here:
+    #0 0x104a60d40 in free+0x98 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x54d40)
+    #1 0x102eff5bc in _Py_Dealloc object.c:2893
+    #2 0x103143c00 in ast_repr_max_depth Python-ast.c
+    #3 0x1031435e0 in ast_repr_max_depth Python-ast.c:5799
+    #4 0x102ef3744 in PyObject_Repr object.c:694
+    #5 0x1031f3d70 in _PyEval_EvalFrameDefault generated_cases.c.h:3248
+    #6 0x1031cebf0 in _PyObject_VectorcallTstate pycore_call.h:167
+    #7 0x1031caef8 in map_next bltinmodule.c:1442
+    #8 0x102d3b368 in iternext abstract.c:2874
+    #9 0x102d36ef8 in PyIter_Next abstract.c:2924
+    #10 0x102f68200 in set_update_iterable_lock_held setobject.c:971
+    #11 0x102f5c4ac in make_new_set setobject.c:1095
+    #12 0x102d852cc in _PyObject_VectorcallTstate pycore_call.h:167
+    #13 0x10320a20c in _PyEval_EvalFrameDefault generated_cases.c.h:921
+    #14 0x1031de9d8 in PyEval_EvalCode ceval.c:647
+    #15 0x1031d3b68 in builtin_exec bltinmodule.c.h:556
+    #16 0x1031f8cd8 in _PyEval_EvalFrameDefault generated_cases.c.h:1451
+    #17 0x1031de9d8 in PyEval_EvalCode ceval.c:647
+    #18 0x1031d3b68 in builtin_exec bltinmodule.c.h:556
+    #19 0x102ee0360 in cfunction_vectorcall_FASTCALL_KEYWORDS methodobject.c:441
+    #20 0x102d852cc in _PyObject_VectorcallTstate pycore_call.h:167
+    #21 0x10320a20c in _PyEval_EvalFrameDefault generated_cases.c.h:921
+    #22 0x102d87b64 in _PyVectorcall_Call call.c:273
+    #23 0x1034bdfe0 in pymain_run_module main.c:349
+    #24 0x1034bf048 in pymain_run_stdin main.c:574
+    #25 0x1034bc7fc in Py_RunMain main.c:775
+    #26 0x1034bd894 in pymain_main main.c:805
+    #27 0x1034bdc30 in Py_BytesMain main.c:829
+    #28 0x19bf60270  (<unknown module>)
+
+previously allocated by thread T0 here:
+    #0 0x104a60c04 in malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x54c04)
+    #1 0x102f3ab7c in _PyMem_DebugRawAlloc obmalloc.c:2699
+    #2 0x102e51aa8 in _PyLong_New longobject.c:157
+    #3 0x102e71138 in long_from_binary_base longobject.c:2586
+    #4 0x102e60a30 in PyLong_FromString longobject.c:3052
+    #5 0x102a54d78 in parsenumber_raw pegen.c
+    #6 0x102a51984 in _PyPegen_number_token pegen.c:704
+    #7 0x102adf7a4 in atom_rule parser.c:14845
+    #8 0x102ad68c4 in primary_rule parser.c:14262
+    #9 0x102ad4068 in await_primary_rule parser.c:14216
+    #10 0x102ad225c in power_rule parser.c:14092
+    #11 0x102acda14 in factor_rule parser.c:14042
+    #12 0x102ac9fe8 in term_raw parser.c:13883
+    #13 0x102ac81f8 in term_rule parser.c:13626
+    #14 0x102ac29e8 in sum_rule parser.c:13458
+    #15 0x102abfe04 in shift_expr_rule parser.c:13278
+    #16 0x102abd9c4 in bitwise_and_rule parser.c:13156
+    #17 0x102abbb48 in bitwise_xor_rule parser.c:13034
+    #18 0x102ab5084 in bitwise_or_rule parser.c:12912
+    #19 0x102b0cb5c in comparison_rule parser.c:12152
+    #20 0x102b0b660 in inversion_rule parser.c:12103
+    #21 0x102b07c80 in conjunction_rule parser.c:11980
+    #22 0x102aec584 in disjunction_rule parser.c:11892
+    #23 0x102aaf4ac in expression_rule parser.c:11180
+    #24 0x102b8c914 in kvpair_rule parser.c:16890
+    #25 0x102b8ad4c in double_starred_kvpair_rule parser.c:16850
+    #26 0x102b85890 in double_starred_kvpairs_rule parser.c:16778
+    #27 0x102b5ed0c in _tmp_96_rule parser.c:31587
+    #28 0x102ae0c18 in atom_rule parser.c:14908
+    #29 0x102ad68c4 in primary_rule parser.c:14262
+
+SUMMARY: AddressSanitizer: heap-use-after-free refcount.h:342 in Py_DECREF
+Shadow bytes around the buggy address:
+  0x62f0004de180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x62f0004de200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x62f0004de280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x62f0004de300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x62f0004de380: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x62f0004de400: fd fd[fd]fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x62f0004de480: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x62f0004de500: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x62f0004de580: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x62f0004de600: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x62f0004de680: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11194==ABORTING
+
+al...@gmail.com<al...@gmail.com> #5
+Oct 5, 2024 11:30AM
+
+Oh, I know why the check does nothing, it's because it's making sure there is a null, not that there isn't one. This should probably be re-written to just use PyUnicode_FromStringAndSize, but at least we know how to reproduce now
+
+al...@gmail.com<al...@gmail.com> #6
+Oct 5, 2024 11:31AM
+
+Any concerns about filing this as a public bug? It looks like a recent regression, and we definitely want this fix in 3.13 if it's impacted.
+
+gr...@krypto.org<gr...@krypto.org> #7
+Oct 5, 2024 11:49AM
+
+please go ahead! ast/parser bugs belong in the public.
+
+al...@gmail.com<al...@gmail.com> #8
+Oct 5, 2024 11:59AM
+
+Filed as https://github.com/python/cpython/issues/125010
+
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #9
+Oct 10, 2024 02:28AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 5876542813569024 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_cpython3&range=202410050628:202410090602
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+pe...@google.com<pe...@google.com> #10
+Oct 10, 2024 09:06AM
+
+This bug has been fixed. It has been opened to the public.
+
+Add comment
+Comment
+Issue metadata
+Reporter
+87...@developer.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+al...@gmail.com
+am...@ammaraskar.com
+gr...@krypto.org
+pa...@python.org
+se...@pyfound.org
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Jan 8, 2025
+Project
+cpython3
+Reported
+Oct 10, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

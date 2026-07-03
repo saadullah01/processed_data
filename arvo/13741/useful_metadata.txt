@@ -1,0 +1,46 @@
+Project: openthread
+Fuzzer: libFuzzer_openthread_ip6-send-fuzzer
+Fuzz target binary: ip6-send-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 1
+Crash Address: 0x7f805bfeff1b
+Crash State:
+  ot::MeshCoP::ChannelMaskEntryBase::GetChannelPage
+  ot::MeshCoP::ChannelMaskTlv::GetChannelMask
+  ot::MeshCoP::ChannelMaskTlv::GetChannelMask
+
+Sanitizer: address (ASAN)
+
+Regressed: 201903080251:201903090250
+
+Reproducer Testcase ID: 5153373483958272
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ip6-send-fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201903160144:201903170140.
+
+Project: openthread
+Fuzzer: libFuzzer_openthread_ip6-send-fuzzer
+Fuzz target binary: ip6-send-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 1
+Crash Address: 0x7f805bfeff1b
+Crash State:
+  ot::MeshCoP::ChannelMaskEntryBase::GetChannelPage
+  ot::MeshCoP::ChannelMaskTlv::GetChannelMask
+  ot::MeshCoP::ChannelMaskTlv::GetChannelMask
+
+Sanitizer: address (ASAN)
+
+Regressed: 201903080251:201903090250
+Fixed: 201903160144:201903170140
+
+Reproducer Testcase ID: 5153373483958272
+
+ClusterFuzz testcase 5153373483958272 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

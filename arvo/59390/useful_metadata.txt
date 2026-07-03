@@ -1,0 +1,44 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1: 
+Detailed Report: https://oss-fuzz.com/testcase?key=6479521638121472
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fz_load_bmp_subimage_count
+  img_open_document_with_stream
+  fz_open_document_with_stream
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=202305250625:202305260602
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6479521638121472
+
+-- Comment 2: 
+Fixed upstream by https://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=d7d621dc1ed15b45754472e619263541e9b508a1;hp=5696357c4efabca770576f72c0c90c1832f27990
+
+-- Comment 3: 
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer pdf_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+-- Comment 4: 
+Another upstream fix https://git.ghostscript.com/?p=mupdf.git;a=commitdiff;h=3f3de914a38ef440cf99c4b0c6f0f043c5fdffbe
+
+-- Comment 5: 
+ClusterFuzz testcase 6479521638121472 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_mupdf&range=202307250625:202307260617
+
+-- Comment 6: 
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "src/k7zip.cpp": {
+        "entities": [
+            "method_K7Zip::K7ZipPrivate::readAndDecodePackedStreams"
+        ],
+        "lines": [
+            1683
+        ]
+    }
+}

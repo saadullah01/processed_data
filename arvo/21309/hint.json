@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/tls.c": {
+        "entities": [
+            "function_processClientServerHello"
+        ],
+        "lines": [
+            1136
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "src/librawspeed/parsers/CiffParser.cpp": {
+        "entities": [
+            "function_CiffParser::parseData"
+        ],
+        "lines": [
+            48,
+            22
+        ]
+    },
+    "src/librawspeed/tiff/CiffIFD.cpp": {
+        "entities": [
+            "method_CiffIFD::parseIFDEntry",
+            "constructor_CiffIFD::CiffIFD"
+        ],
+        "lines": [
+            57,
+            70,
+            22,
+            39
+        ]
+    },
+    "src/librawspeed/tiff/CiffIFD.h": {
+        "entities": [
+            "constructor_CiffIFD::CiffIFD"
+        ],
+        "lines": [
+            44,
+            21,
+            55
+        ]
+    }
+}

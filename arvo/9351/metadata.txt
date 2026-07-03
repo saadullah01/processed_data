@@ -1,0 +1,94 @@
+Project: gdal
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5068982888431616
+
+Project: gdal
+Fuzzer: libFuzzer_gdal_translate_fuzzer
+Fuzz target binary: gdal_translate_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x60900312bd60
+Crash State:
+  GDAL_LercNS::BitStuffer2::Decode
+  bool GDAL_LercNS::Lerc2::ReadTile<unsigned short>
+  bool GDAL_LercNS::Lerc2::ReadTiles<unsigned short>
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201807050634:201807060633
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5068982888431616
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """Has been fixed per
+
+commit 361363f724e59bc2da002cd9cdec05578e1c163b
+Author: Even Rouault <even.rouault@spatialys.com>
+Date:   Sun Jul 8 10:16:23 2018 +0200
+
+    BitStuffer2::Decode(): prevent index out of bound access. Fixes https://oss-fuzz.com/v2/testcase-detail/5696299335680000. Credit to OSS Fuzz
+"""
+
+-- Comment 3: """ClusterFuzz has detected this issue as fixed in range 201807080639:201807090630.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5068982888431616
+
+Project: gdal
+Fuzzer: libFuzzer_gdal_translate_fuzzer
+Fuzz target binary: gdal_translate_fuzzer
+Job Type: libfuzzer_asan_gdal
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x60900312bd60
+Crash State:
+  GDAL_LercNS::BitStuffer2::Decode
+  bool GDAL_LercNS::Lerc2::ReadTile<unsigned short>
+  bool GDAL_LercNS::Lerc2::ReadTiles<unsigned short>
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201807050634:201807060633
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gdal&range=201807080639:201807090630
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5068982888431616
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 4: """ClusterFuzz testcase 5068982888431616 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

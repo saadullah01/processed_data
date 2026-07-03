@@ -1,0 +1,11 @@
+{
+    "src/ua_types.c": {
+        "entities": [
+            "function_structureOrder"
+        ],
+        "lines": [
+            1602,
+            1580
+        ]
+    }
+}

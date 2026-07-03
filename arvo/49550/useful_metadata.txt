@@ -1,0 +1,18 @@
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_msan_mruby
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0xffffaffffffffffc
+Crash State:
+  udiv
+  mpz_mdiv
+  mrb_bint_div
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mruby_fuzzer from making much progress. Fixing this will allow more bugs to be found.

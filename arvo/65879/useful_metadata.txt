@@ -1,0 +1,14 @@
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzWAVLoader
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+
+Crash Type: Stack-use-after-scope READ 4
+Crash Address: 0x782ca4900420
+Crash State:
+  Audio::WavLoaderPlugin::load_wav_info_block
+  Audio::WavLoaderPlugin::parse_header
+  Audio::WavLoaderPlugin::create
+  
+Sanitizer: address (ASAN)

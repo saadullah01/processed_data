@@ -1,0 +1,11 @@
+{
+    "blosc/frame.c": {
+        "entities": [
+            "function_get_vlmeta_from_trailer"
+        ],
+        "lines": [
+            1365,
+            1382
+        ]
+    }
+}

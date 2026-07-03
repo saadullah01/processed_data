@@ -1,0 +1,22 @@
+Project: harfbuzz
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: afl
+Fuzz Target: hb-shape-fuzzer
+Job Type: afl_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x6150004ab243
+Crash State:
+  void apply_string<GSUBProxy>
+  void hb_ot_map_t::apply<GSUBProxy>
+  hb_ot_map_t::substitute
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

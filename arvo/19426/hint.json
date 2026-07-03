@@ -1,0 +1,16 @@
+{
+    "epan/dissectors/packet-wcp.c": {
+        "entities": [
+            "function_wcp_save_data",
+            "function_proto_register_wcp",
+            "function_dissect_wcp"
+        ],
+        "lines": [
+            262,
+            751,
+            273,
+            350,
+            159
+        ]
+    }
+}

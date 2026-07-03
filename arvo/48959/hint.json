@@ -1,0 +1,10 @@
+{
+    "lib/misc/upng-gzip.c": {
+        "entities": [
+            "function_huffman_tree_create_lengths"
+        ],
+        "lines": [
+            242
+        ]
+    }
+}

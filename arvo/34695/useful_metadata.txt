@@ -1,0 +1,37 @@
+Project: fribidi
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Segv on unknown address
+Severity: Medium
+
+-- Comment 1:
+Project: fribidi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fribidi-fuzzer
+Job Type: libfuzzer_msan_fribidi
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  get_adjacent_run
+  fribidi_get_par_embedding_levels_ex
+  fribidi-fuzzer.c
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fribidi-fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+-- Comment 3:
+ClusterFuzz testcase 5361146803650560 is verified as fixed in
+
+-- Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+
+-- Comment 6:
+No, this was a real issue and I committed a fix for it two days ago.

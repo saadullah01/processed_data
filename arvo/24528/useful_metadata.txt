@@ -1,0 +1,19 @@
+Project: rnp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+
+Project: rnp
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_dump
+Job Type: libfuzzer_asan_rnp
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  armored_src_read
+  src_peek
+  src_eof
+
+Sanitizer: address (ASAN)

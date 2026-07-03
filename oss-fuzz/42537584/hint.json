@@ -1,0 +1,11 @@
+{
+    "libavcodec/vc1dec.c": {
+        "entities": [
+            "function_vc1_decode_init_alloc_tables"
+        ],
+        "lines": [
+            393,
+            379
+        ]
+    }
+}

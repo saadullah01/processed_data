@@ -1,0 +1,10 @@
+{
+    "src/ArduinoJson/Json/Utf16.hpp": {
+        "entities": [
+            "class_Codepoint"
+        ],
+        "lines": [
+            31
+        ]
+    }
+}

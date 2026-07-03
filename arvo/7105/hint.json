@@ -1,0 +1,11 @@
+{
+    "lib/http.c": {
+        "entities": [
+            "function_Curl_http_readwrite_headers"
+        ],
+        "lines": [
+            3014,
+            3078
+        ]
+    }
+}

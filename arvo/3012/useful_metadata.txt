@@ -1,0 +1,58 @@
+Project: librawspeed
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Use-after-poison WRITE 2
+Severity: High
+
+-- Comment 1:
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: TiffParserFuzzer-GetDecoder-Decode
+Job Type: libfuzzer_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x626000000102
+Crash State:
+  rawspeed::OrfDecoder::decodeCompressed
+  rawspeed::OrfDecoder::decodeRawInternal
+  rawspeed::RawDecoder::decodeRaw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201706230459:201706240502
+
+Reproducer Testcase: 6603997135765504
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201708140503:201708150504.
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: TiffParserFuzzer-GetDecoder-Decode
+Job Type: libfuzzer_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x626000000102
+Crash State:
+  rawspeed::OrfDecoder::decodeCompressed
+  rawspeed::OrfDecoder::decodeRawInternal
+  rawspeed::RawDecoder::decodeRaw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201706230459:201706240502
+Fixed: 201708140503:201708150504
+
+Reproducer Testcase: 6603997135765504
+
+-- Comment 3:
+ClusterFuzz testcase 6603997135765504 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

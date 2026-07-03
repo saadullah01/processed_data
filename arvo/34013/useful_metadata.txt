@@ -1,0 +1,14 @@
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_asan_i386_php
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0xf6a27890
+Crash State:
+  zend_fiber_suspend_context
+  zend_fiber_suspend
+  zim_Fiber_suspend
+
+Sanitizer: address (ASAN)

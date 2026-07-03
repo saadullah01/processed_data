@@ -1,0 +1,20 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pdfwrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-underflow READ 4
+Crash Address: 0x7fcf758b641c
+Crash State:
+  gs_type2_interpret
+  copied_type1_glyph_outline
+  gs_default_glyph_info
+
+Sanitizer: address (ASAN)
+
+Fix committed upstream
+
+ClusterFuzz testcase 5504389359468544 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

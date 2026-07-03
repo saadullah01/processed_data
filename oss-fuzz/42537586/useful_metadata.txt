@@ -1,0 +1,28 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_VP9_fuzzer: Use-of-uninitialized-value in loop_filter_v_8_8_c
+
+ClusterFuzz
+Stability-Memory-MemorySanitizer
+Reproducible
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VP9_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  loop_filter_v_8_8_c
+  ff_vp9_loopfilter_sb
+  vp9_decode_frame
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

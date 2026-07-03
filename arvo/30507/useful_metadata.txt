@@ -1,0 +1,17 @@
+Detailed Report: https://oss-fuzz.com/testcase?key=5911674068533248
+Project: serenity
+Fuzzing Engine: honggfuzz
+Fuzz Target: FuzzGIFLoader
+Job Type: honggfuzz_asan_serenity
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x0000006ab150
+Crash State:
+  Gfx::decode_frame
+  Gfx::GIFImageDecoderPlugin::frame
+  Gfx::GIFImageDecoderPlugin::bitmap
+Sanitizer: address (ASAN)
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_serenity&range=202102060612:202102070602
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5911674068533248
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer FuzzGIFLoader from making much progress. Fixing this will allow more bugs to be found.
+ClusterFuzz testcase 5911674068533248 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_serenity&range=202102260623:202102270630

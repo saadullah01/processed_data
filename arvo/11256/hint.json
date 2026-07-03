@@ -1,0 +1,10 @@
+{
+    "poppler/Parser.cc": {
+        "entities": [
+            "method_Parser::makeStream"
+        ],
+        "lines": [
+            193
+        ]
+    }
+}

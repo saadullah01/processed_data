@@ -1,0 +1,22 @@
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_ubsan_libredwg
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x10b747b79008
+Crash State:
+  bit_TV_to_utf8
+  json_cquote
+  json_header_write_private
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer llvmfuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4516765945430016 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

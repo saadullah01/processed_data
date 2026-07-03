@@ -1,0 +1,18 @@
+Project: libraw
+Fuzzing Engine: libFuzzer
+Fuzz Target: libraw_cr2_fuzzer
+Job Type: libfuzzer_msan_libraw
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  LibRaw::phase_one_flat_field
+  LibRaw::phase_one_correct
+  LibRaw::raw2image_ex
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libraw_cr2_fuzzer from making much progress. Fixing this will allow more bugs to be found.

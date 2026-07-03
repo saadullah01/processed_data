@@ -1,0 +1,22 @@
+- Issue 389731913
+- uriparser:uri_parsew_fuzzer: Crash in uriToStringEngineW
+- Project: uriparser
+- Fuzzing Engine: libFuzzer
+- Fuzz Target: uri_parsew_fuzzer
+- Job Type: libfuzzer_ubsan_uriparser
+- Platform Id: linux
+- Crash Type: UNKNOWN READ
+- Crash Address: 0x002d0000005a
+- Crash State:
+  uriToStringEngineW
+  ParseFuzzer.cpp
+- Sanitizer: undefined (UBSAN)
+- Recommended Security Severity: Medium
+- Reproducer Testcase ID: 6067233314373632
+- Comment: Turned out to be a bug in the fuzzing code, should be fixed after merge of pull request 214.
+- Comment: Verified by ClusterFuzz. ClusterFuzz testcase 6067233314373632 is verified as fixed.
+- Comment: This bug has been fixed. It has been opened to the public.
+- Priority: P2
+- Severity: S2
+- Status: Fixed (Verified)
+- Project: uriparser

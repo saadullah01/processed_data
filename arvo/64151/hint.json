@@ -1,0 +1,12 @@
+{
+    "src/quicktimevideo.cpp": {
+        "entities": [
+            "function_QuickTimeVideo::NikonTagsDecoder",
+            "method_QuickTimeVideo::NikonTagsDecoder"
+        ],
+        "lines": [
+            906,
+            1027
+        ]
+    }
+}

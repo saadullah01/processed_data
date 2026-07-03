@@ -1,0 +1,24 @@
+Project: arrow
+Fuzzing Engine: libFuzzer
+Fuzz Target: arrow-ipc-stream-fuzz
+Job Type: libfuzzer_asan_arrow
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x613000000368
+Crash State:
+  arrow::internal::ValidateArrayImpl::Visit
+  arrow::internal::ValidateArrayImpl::ValidateWithType
+  arrow::internal::ValidateArrayImpl::Validate
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4961281405222912
+
+ClusterFuzz testcase 4961281405222912 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_arrow&range=202111220604:202111230602
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

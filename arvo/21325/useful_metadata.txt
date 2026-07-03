@@ -1,0 +1,21 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  print_insn_ns32k
+  fuzz_disassemble.c
+  print_insn_ns32k
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

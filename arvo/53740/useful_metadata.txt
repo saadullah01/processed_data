@@ -1,0 +1,21 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_objcopy
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x61d000000990
+Crash State:
+  bfd_pef_parse_traceback_table
+  bfd_pef_parse_symbols
+  bfd_pef_get_symtab_upper_bound
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

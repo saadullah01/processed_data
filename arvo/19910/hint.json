@@ -1,0 +1,42 @@
+{
+    "gas/config/tc-z8k.c": {
+        "entities": [
+            "function_md_begin",
+            "function_get_specific"
+        ],
+        "lines": [
+            858,
+            143
+        ]
+    },
+    "opcodes/z8k-dis.c": {
+        "entities": [
+            "function_unpack_instr",
+            "function_output_instr",
+            "function_z8k_lookup_instr"
+        ],
+        "lines": [
+            1,
+            297,
+            189,
+            280,
+            29
+        ]
+    },
+    "opcodes/z8k-opc.h": {
+        "entities": [
+            "struct_opcode_entry_type"
+        ],
+        "lines": [
+            283
+        ]
+    },
+    "opcodes/z8kgen.c": {
+        "entities": [
+            "function_gas"
+        ],
+        "lines": [
+            970
+        ]
+    }
+}

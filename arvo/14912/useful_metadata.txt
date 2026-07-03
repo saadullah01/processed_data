@@ -1,0 +1,27 @@
+Detailed report: https://oss-fuzz.com/testcase?key=5676826040467456
+
+Project: capstone
+Fuzzer: libFuzzer_capstone_fuzz_disasmnext
+Fuzz target binary: fuzz_disasmnext
+Job Type: libfuzzer_msan_capstone
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  printUInt32
+  printU1ImmOperand
+  printInstruction
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_capstone&range=201904300316:201904301755
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5676826040467456
+
+fix for branch 'master': https://github.com/aquynh/capstone/pull/1684
+and for branch 'next': https://github.com/aquynh/capstone/pull/1685
+
+ClusterFuzz testcase 5676826040467456 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_capstone&range=202009150618:202009160625

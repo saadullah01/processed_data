@@ -1,0 +1,15 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x00000a2c2dd2
+Crash State:
+  decode_tlv
+  dissect_noe
+  call_dissector_work
+Sanitizer: address (ASAN)
+Regressed range: 201903040505:201903050525
+Reproducer Testcase ID: 5698027312906240
+Fixed range: 201903050525:201903070516

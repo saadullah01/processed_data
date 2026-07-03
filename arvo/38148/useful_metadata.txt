@@ -1,0 +1,16 @@
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzSQLParser
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x000002019c10
+Crash State:
+  Bad-cast to const SQL::AST::ChainedExpression from SQL::AST::ExistsExpression
+  AK::NonnullRefPtr<SQL::AST::ChainedExpression> AK::static_ptr_cast<SQL::AST::Cha
+  SQL::AST::Parser::parse_insert_statement
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High

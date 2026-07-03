@@ -1,0 +1,22 @@
+Project: fmt
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Project: libfmt
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzzer_named_arg
+Job Type: honggfuzz_asan_libfmt
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7fff5c6570b8
+Crash State:
+  fmt::v7::detail::buffer<char>::push_back
+  std::__1::back_insert_iterator<fmt::v7::detail::buffer<char> >::operator=
+  fmt::v7::detail::buffer_appender<char> std::__1::__copy_constexpr<char const*, f
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

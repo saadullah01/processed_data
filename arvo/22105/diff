@@ -1,0 +1,177 @@
+From 612455a2c65d08c0425dbad97ff67129091eb0e6 Mon Sep 17 00:00:00 2001
+From: seladb <pcapplusplus@gmail.com>
+Date: Sun, 24 May 2020 05:01:22 -0400
+Subject: [PATCH] Bugfix 22077 in oss-fuzz: Invalid-enum-value in
+ pcpp::PcapFileReaderDevice::getNextPacket
+
+---
+ Packet++/header/RawPacket.h                   |   7 ++
+ Packet++/src/RawPacket.cpp                    | 103 ++++++++++++++++++
+ Pcap++/src/PcapFileDevice.cpp                 |  12 +-
+ ...case-minimized-FuzzTarget-5631583764873216 | Bin 0 -> 40 bytes
+ 4 files changed, 121 insertions(+), 1 deletion(-)
+ create mode 100644 Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5631583764873216
+
+diff --git a/Packet++/header/RawPacket.h b/Packet++/header/RawPacket.h
+index 1f5790ff4f..075859d556 100644
+--- a/Packet++/header/RawPacket.h
++++ b/Packet++/header/RawPacket.h
+@@ -326,6 +326,13 @@ namespace pcpp
+ 		 */
+ 		LinkLayerType getLinkLayerType() const { return m_LinkLayerType; }
+ 
++		/**
++		 * This static method validates whether a link type integer value is valid
++		 * @param[in] linkTypeValue Link type integer value
++		 * @return True if the link type value is valid and can be casted into LinkLayerType enum, false otherwise
++		 */
++		static bool isLinkTypeValid(int linkTypeValue);
++
+ 		/**
+ 		 * Get raw data length in bytes
+ 		 * @return Raw data length in bytes
+diff --git a/Packet++/src/RawPacket.cpp b/Packet++/src/RawPacket.cpp
+index bdf8ec7d62..f298f5a6cc 100644
+--- a/Packet++/src/RawPacket.cpp
++++ b/Packet++/src/RawPacket.cpp
+@@ -201,4 +201,107 @@ bool RawPacket::setPacketTimeStamp(timespec timestamp)
+ 	return true;
+ }
+ 
++bool RawPacket::isLinkTypeValid(int linkTypeValue)
++{
++	if (linkTypeValue < 0 || linkTypeValue > 264)
++		return false;
++
++	switch (static_cast<LinkLayerType>(linkTypeValue))
++	{
++		case LINKTYPE_ETHERNET:
++		case LINKTYPE_LINUX_SLL:
++		case LINKTYPE_RAW:
++		case LINKTYPE_DLT_RAW1:
++		case LINKTYPE_DLT_RAW2:
++		case LINKTYPE_NULL:
++		case LINKTYPE_AX25:
++		case LINKTYPE_IEEE802_5:
++		case LINKTYPE_ARCNET_BSD:
++		case LINKTYPE_SLIP:
++		case LINKTYPE_PPP:
++		case LINKTYPE_FDDI:
++		case LINKTYPE_PPP_HDLC:
++		case LINKTYPE_PPP_ETHER:
++		case LINKTYPE_ATM_RFC1483:
++		case LINKTYPE_C_HDLC:
++		case LINKTYPE_IEEE802_11:
++		case LINKTYPE_FRELAY:
++		case LINKTYPE_LOOP:
++		case LINKTYPE_LTALK:
++		case LINKTYPE_PFLOG:
++		case LINKTYPE_IEEE802_11_PRISM:
++		case LINKTYPE_IP_OVER_FC:
++		case LINKTYPE_SUNATM:
++		case LINKTYPE_IEEE802_11_RADIOTAP:
++		case LINKTYPE_ARCNET_LINUX:
++		case LINKTYPE_APPLE_IP_OVER_IEEE1394:
++		case LINKTYPE_MTP2_WITH_PHDR:
++		case LINKTYPE_MTP2:
++		case LINKTYPE_MTP3:
++		case LINKTYPE_SCCP:
++		case LINKTYPE_DOCSIS:
++		case LINKTYPE_LINUX_IRDA:
++		case LINKTYPE_IEEE802_11_AVS:
++		case LINKTYPE_BACNET_MS_TP:
++		case LINKTYPE_PPP_PPPD:
++		case LINKTYPE_GPRS_LLC:
++		case LINKTYPE_GPF_T:
++		case LINKTYPE_GPF_F:
++		case LINKTYPE_LINUX_LAPD:
++		case LINKTYPE_BLUETOOTH_HCI_H4:
++		case LINKTYPE_USB_LINUX:
++		case LINKTYPE_PPI:
++		case LINKTYPE_IEEE802_15_4:
++		case LINKTYPE_SITA:
++		case LINKTYPE_ERF:
++		case LINKTYPE_BLUETOOTH_HCI_H4_WITH_PHDR:
++		case LINKTYPE_AX25_KISS:
++		case LINKTYPE_LAPD:
++		case LINKTYPE_PPP_WITH_DIR:
++		case LINKTYPE_C_HDLC_WITH_DIR:
++		case LINKTYPE_FRELAY_WITH_DIR:
++		case LINKTYPE_IPMB_LINUX:
++		case LINKTYPE_IEEE802_15_4_NONASK_PHY:
++		case LINKTYPE_USB_LINUX_MMAPPED:
++		case LINKTYPE_FC_2:
++		case LINKTYPE_FC_2_WITH_FRAME_DELIMS:
++		case LINKTYPE_IPNET:
++		case LINKTYPE_CAN_SOCKETCAN:
++		case LINKTYPE_IPV4:
++		case LINKTYPE_IPV6:
++		case LINKTYPE_IEEE802_15_4_NOFCS:
++		case LINKTYPE_DBUS:
++		case LINKTYPE_DVB_CI:
++		case LINKTYPE_MUX27010:
++		case LINKTYPE_STANAG_5066_D_PDU:
++		case LINKTYPE_NFLOG:
++		case LINKTYPE_NETANALYZER:
++		case LINKTYPE_NETANALYZER_TRANSPARENT:
++		case LINKTYPE_IPOIB:
++		case LINKTYPE_MPEG_2_TS:
++		case LINKTYPE_NG40:
++		case LINKTYPE_NFC_LLCP:
++		case LINKTYPE_INFINIBAND:
++		case LINKTYPE_SCTP:
++		case LINKTYPE_USBPCAP:
++		case LINKTYPE_RTAC_SERIAL:
++		case LINKTYPE_BLUETOOTH_LE_LL:
++		case LINKTYPE_NETLINK:
++		case LINKTYPE_BLUETOOTH_LINUX_MONITOR:
++		case LINKTYPE_BLUETOOTH_BREDR_BB:
++		case LINKTYPE_BLUETOOTH_LE_LL_WITH_PHDR:
++		case LINKTYPE_PROFIBUS_DL:
++		case LINKTYPE_PKTAP:
++		case LINKTYPE_EPON:
++		case LINKTYPE_IPMI_HPM_2:
++		case LINKTYPE_ZWAVE_R1_R2:
++		case LINKTYPE_ZWAVE_R3:
++		case LINKTYPE_WATTSTOPPER_DLM:
++		case LINKTYPE_ISO_14443:
++			return true;
++		default:
++			return false;
++	}
++}
++
+ } // namespace pcpp
+diff --git a/Pcap++/src/PcapFileDevice.cpp b/Pcap++/src/PcapFileDevice.cpp
+index 4c662da84e..3e5d4fc61e 100644
+--- a/Pcap++/src/PcapFileDevice.cpp
++++ b/Pcap++/src/PcapFileDevice.cpp
+@@ -139,7 +139,17 @@ bool PcapFileReaderDevice::open()
+ 		return false;
+ 	}
+ 
+-	m_PcapLinkLayerType = static_cast<LinkLayerType>(pcap_datalink(m_PcapDescriptor));
++	int linkLayer = pcap_datalink(m_PcapDescriptor);
++	if (!RawPacket::isLinkTypeValid(linkLayer))
++	{
++		LOG_ERROR("Invalid link layer (%d) for reader device filename '%s'", linkLayer, m_FileName);
++		pcap_close(m_PcapDescriptor);
++		m_PcapDescriptor = NULL;
++		m_DeviceOpened = false;
++		return false;
++	}
++
++	m_PcapLinkLayerType = static_cast<LinkLayerType>(linkLayer);
+ 
+ 	LOG_DEBUG("Successfully opened file reader device for filename '%s'", m_FileName);
+ 	m_DeviceOpened = true;
+diff --git a/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5631583764873216 b/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5631583764873216
+new file mode 100644
+index 0000000000000000000000000000000000000000..6775585ba8b870aeca1b213de4fafd1600e5735a
+GIT binary patch
+literal 40
+dcmca|c+)~A1{MYd2>Ad1Ka>Tf7=Qr81OV>#2@U`N
+
+literal 0
+HcmV?d00001
+

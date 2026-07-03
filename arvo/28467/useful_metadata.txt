@@ -1,0 +1,16 @@
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x607000000130
+Crash State:
+  __class_reset_perm_values
+  hashtab_map
+  cil_symtab_map
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

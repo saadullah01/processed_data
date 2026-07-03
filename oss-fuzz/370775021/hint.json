@@ -1,0 +1,10 @@
+{
+    "mrbgems/mruby-io/src/file_test.c": {
+        "entities": [
+            "function_mrb_init_file_test"
+        ],
+        "lines": [
+            338
+        ]
+    }
+}

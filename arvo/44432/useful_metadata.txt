@@ -1,0 +1,28 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffccf8351e0
+Crash State:
+  decompress_rNUMBER
+  read_rNUMBER_meta_data
+  dwg_decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer llvmfuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5393679093727232 is verified as fixed

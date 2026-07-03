@@ -1,0 +1,16 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6060000d12e1
+Crash State:
+  print_address_prefix_buf
+  print_nsap_net
+  esis_dissect_esh_pdu
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Current status: CONFIRMED (unfixed)
+ClusterFuzz has detected this issue as fixed in range 201805270716:201805280426.
+ClusterFuzz testcase 5676598553477120 is verified as fixed, so closing issue as verified.

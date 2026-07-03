@@ -1,0 +1,10 @@
+{
+    "base/ttinterp.c": {
+        "entities": [
+            "function_Ins_PUSHW"
+        ],
+        "lines": [
+            2402
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x631000063928
+Crash State:
+  pdfi_dereference
+  pdfi_deref_loop_detect
+  pdfi_dict_get
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

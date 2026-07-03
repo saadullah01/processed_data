@@ -1,0 +1,58 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1:
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-shape-fuzzer
+Fuzz target binary: hb-shape-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  CFF::Charset1_2<OT::IntType<unsigned char, 1u> >::get_glyph
+  OT::cff1::accelerator_templ_t<CFF::CFF1PrivateDictOpSet, CFF::CFF1PrivateDictVal
+  CFF1CSOpSet_Extents::process_seac
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_harfbuzz&range=201812010220:201812020220
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5632586529898496
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201812050219:201812060218.
+
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-shape-fuzzer
+Fuzz target binary: hb-shape-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  CFF::Charset1_2<OT::IntType<unsigned char, 1u> >::get_glyph
+  OT::cff1::accelerator_templ_t<CFF::CFF1PrivateDictOpSet, CFF::CFF1PrivateDictVal
+  CFF1CSOpSet_Extents::process_seac
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_harfbuzz&range=201812010220:201812020220
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_harfbuzz&range=201812050219:201812060218
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5632586529898496
+
+-- Comment 3:
+ClusterFuzz testcase 5632586529898496 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

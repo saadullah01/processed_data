@@ -1,0 +1,20 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_dwarf
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6160000005b0
+Crash State:
+  coff_bigobj_swap_aux_in
+  styp_to_sec_flags
+  coff_real_object_p
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5559160971067392 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

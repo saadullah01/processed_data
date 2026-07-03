@@ -1,0 +1,12 @@
+{
+    "parser.c": {
+        "entities": [
+            "function_xmlParseTryOrFinish",
+            "function_xmlParseElementStart"
+        ],
+        "lines": [
+            11496,
+            10025
+        ]
+    }
+}

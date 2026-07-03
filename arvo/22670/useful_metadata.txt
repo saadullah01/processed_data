@@ -1,0 +1,28 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  print_insn_ns32k
+  fuzz_disassemble.c
+  print_insn_ns32k
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+I have applied a small patch to the upstream binutils sources which should fix this problem.
+
+Comment 3:
+ClusterFuzz testcase 5747669472641024 is verified as fixed
+
+Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,21 @@
+{
+    "Zend/zend_ini_parser.y": {
+        "entities": [
+            "function_zend_ini_init_string",
+            "function_normalize_value"
+        ],
+        "lines": [
+            307,
+            110
+        ]
+    },
+    "Zend/zend_ini_scanner.l": {
+        "entities": [
+            "macro_RETURN_TOKEN"
+        ],
+        "lines": [
+            145,
+            598
+        ]
+    }
+}

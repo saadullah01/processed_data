@@ -1,0 +1,11 @@
+{
+    "libAACdec/src/aacdec_hcrs.cpp": {
+        "entities": [
+            "function_DecodeNonPCWs"
+        ],
+        "lines": [
+            1,
+            173
+        ]
+    }
+}

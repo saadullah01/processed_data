@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-function.c": {
+        "entities": [
+            "function_pdf_eval_function"
+        ],
+        "lines": [
+            1389
+        ]
+    }
+}

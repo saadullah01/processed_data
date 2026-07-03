@@ -1,0 +1,10 @@
+{
+    "libvips/foreign/archive.c": {
+        "entities": [
+            "function_vips__archive_mkfile_file"
+        ],
+        "lines": [
+            301
+        ]
+    }
+}

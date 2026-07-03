@@ -1,0 +1,23 @@
+{
+    "result/XInclude/coalesce.xml.rdr": {
+        "entities": [],
+        "lines": []
+    },
+    "tree.c": {
+        "entities": [
+            "function_xmlStaticCopyNode"
+        ],
+        "lines": [
+            4353,
+            4287
+        ]
+    },
+    "xinclude.c": {
+        "entities": [
+            "function_xmlXIncludeIncludeNode"
+        ],
+        "lines": [
+            2232
+        ]
+    }
+}

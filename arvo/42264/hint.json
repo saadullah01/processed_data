@@ -1,0 +1,10 @@
+{
+    "libdwfl/dwfl_segment_report_module.c": {
+        "entities": [
+            "function_dwfl_segment_report_module"
+        ],
+        "lines": [
+            292
+        ]
+    }
+}

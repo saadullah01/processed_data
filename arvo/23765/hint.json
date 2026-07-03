@@ -1,0 +1,23 @@
+{
+    "HTMLparser.c": {
+        "entities": [
+            "function_htmlParseLookupSequence"
+        ],
+        "lines": [
+            5235,
+            5158
+        ]
+    },
+    "result/HTML/chunked_attr.html": {
+        "entities": [],
+        "lines": []
+    },
+    "result/HTML/chunked_attr.html.sax": {
+        "entities": [],
+        "lines": []
+    },
+    "test/HTML/chunked_attr.html": {
+        "entities": [],
+        "lines": []
+    }
+}

@@ -1,0 +1,16 @@
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_TIERTEXSEQVIDEO_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_TIERTEXSEQVIDEO_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x7f389e61e838
+Crash State:
+  seq_decode_op2
+  seqvideo_decode
+  seqvideo_decode_frame
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High

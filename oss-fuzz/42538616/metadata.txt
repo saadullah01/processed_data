@@ -1,0 +1,174 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42538616
+OSS Fuzz
+42538616
+libavc:mvc_dec_fuzzer: Heap-buffer-overflow in ih264d_read_coeff4x4_cabac
+1
+Hotlists (5)
+Mark as Duplicate
+Comments
+(7)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(2)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz
+Deadline-Exceeded
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Sep 19, 2024 05:52AM
+Detailed Report: https://oss-fuzz.com/testcase?key=6236538583711744
+
+Project: libavc
+Fuzzing Engine: libFuzzer
+Fuzz Target: mvc_dec_fuzzer
+Job Type: libfuzzer_asan_libavc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x7b3aac0fe874
+Crash State:
+  ih264d_read_coeff4x4_cabac
+  ih264d_cabac_parse_8x8block
+  ih264d_parse_residual4x4_cabac
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libavc&range=202311210613:202311220613
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6236538583711744
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on issues here are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Sep 19, 2024 06:21AM
+[Empty comment from Monorail migration]
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #3
+Sep 19, 2024 07:30AM
+[Empty comment from Monorail migration]
+is...@google.com<is...@google.com> #4
+Sep 19, 2024 07:30AM
+This issue was migrated from crbug.com/oss-fuzz/71785?no_tracker_redirect=1
+pe...@google.com<pe...@google.com> #5
+Dec 11, 2024 07:45AM
+
+This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+pe...@google.com<pe...@google.com> #6
+Dec 18, 2024 07:45AM
+
+This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #7
+Jan 31, 2025 12:19AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 6236538583711744 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libavc&range=202501300618:202501310614
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+aa...@ittiam.com
+ad...@google.com
+ai...@google.com
+bc...@google.com
+cu...@google.com
+ej...@google.com
+es...@google.com
+fa...@google.com
+gr...@google.com
+ha...@google.com
+ha...@ittiam.com
+ja...@google.com
+ki...@google.com
+la...@google.com
+li...@google.com
+ma...@google.com
+Ma...@ittiam.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+ra...@ittiam.com
+sa...@ittiam.com
+sw...@google.com
+um...@ittiam.com
+va...@ittiam.com
+vi...@ittiam.com
+wa...@google.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Dec 18, 2024
+Project
+libavc
+Reported
+Sep 19, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

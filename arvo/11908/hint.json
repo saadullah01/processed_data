@@ -1,0 +1,17 @@
+{
+    "src/hb-dsalgs.hh": {
+        "entities": [],
+        "lines": [
+            234
+        ]
+    },
+    "src/hb-ot-post-table.hh": {
+        "entities": [
+            "method_get_glyph_from_name",
+            "struct_post"
+        ],
+        "lines": [
+            168
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+Project: harfbuzz
+Fuzzing Engine: afl
+Fuzz Target: hb-subset-fuzzer
+Job Type: afl_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x613000000362
+Crash State:
+  CFF::Charset::collect_glyph_to_sid_map
+  cff_subset_plan::plan_subset_charset
+  cff_subset_plan::create
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

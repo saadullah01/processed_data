@@ -1,0 +1,11 @@
+{
+    "source/fitz/shade.c": {
+        "entities": [
+            "function_fz_process_shade_type4"
+        ],
+        "lines": [
+            314,
+            326
+        ]
+    }
+}

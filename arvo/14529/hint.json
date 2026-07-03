@@ -1,0 +1,14 @@
+{
+    "fuzz/clusterfuzz-testcase-minimized-request_fuzzer-5636210766118912": {
+        "entities": [],
+        "lines": []
+    },
+    "src/lib/lwan-request.c": {
+        "entities": [
+            "function_parse_headers"
+        ],
+        "lines": [
+            555
+        ]
+    }
+}

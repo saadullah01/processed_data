@@ -1,0 +1,10 @@
+{
+    "linux-user/elfload.c": {
+        "entities": [
+            "function_load_elf_image"
+        ],
+        "lines": [
+            3261
+        ]
+    }
+}

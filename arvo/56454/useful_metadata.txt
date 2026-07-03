@@ -1,0 +1,21 @@
+Project: libdwarf
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 8
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_die_cu_offset
+Job Type: honggfuzz_asan_libdwarf
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7ffd1aac1e60
+Crash State:
+  dwarf_get_version_of_die
+  fuzz_die_cu_offset.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

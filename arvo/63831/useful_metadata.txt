@@ -1,0 +1,21 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  fz_drop_archive
+  htdoc_drop_document
+  fz_drop_document
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Fixed upstream by 6d167be4bd4d425e3966eef17e34c1589f21af81

@@ -1,0 +1,43 @@
+Project: librawspeed
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+ClusterFuzz report (comment 1):
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: TiffParserFuzzer-GetDecoder-Decode
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x604000000360
+Crash State:
+  rawspeed::DngOpcodes::OffsetPerRowOrCol<rawspeed::DngOpcodes::DeltaRowOrColBase:
+  rawspeed::DngOpcodes::applyOpCodes
+  rawspeed::DngDecoder::handleMetadata
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+ClusterFuzz report (comment 2):
+ClusterFuzz has detected this issue as fixed in range 201712060630:201712070640.
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: TiffParserFuzzer-GetDecoder-Decode
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x604000000360
+Crash State:
+  rawspeed::DngOpcodes::OffsetPerRowOrCol<rawspeed::DngOpcodes::DeltaRowOrColBase:
+  rawspeed::DngOpcodes::applyOpCodes
+  rawspeed::DngDecoder::handleMetadata
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz report (comment 3):
+ClusterFuzz testcase 5262004903215104 is verified as fixed, so closing issue as verified.
+
+ClusterFuzz report (comment 4):
+This bug has been fixed for 30 days. It has been opened to the public.

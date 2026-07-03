@@ -1,0 +1,26 @@
+ffmpeg:ffmpeg_dem_IMAGE2_fuzzer: Use-of-uninitialized-value in ff_jpegxl_parse_codestream_header
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_IMAGE2_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_jpegxl_parse_codestream_header
+  jpegxl_anim_probe
+  av_probe_input_format3
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5735819170611200 is verified as fixed.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

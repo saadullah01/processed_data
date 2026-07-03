@@ -1,0 +1,16 @@
+{
+    "src/lib/pubkey/ec_group/curve_gfp.cpp": {
+        "entities": [
+            "function_CurveGFp_Montgomery::curve_sqr",
+            "method_CurveGFp_NIST::curve_sqr",
+            "method_CurveGFp_NIST::curve_mul",
+            "method_CurveGFp_Montgomery::curve_mul"
+        ],
+        "lines": [
+            82,
+            188,
+            165,
+            106
+        ]
+    }
+}

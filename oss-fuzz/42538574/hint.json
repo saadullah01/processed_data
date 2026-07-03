@@ -1,0 +1,10 @@
+{
+    "libavcodec/hevc/hevcdec.c": {
+        "entities": [
+            "function_pic_arrays_init"
+        ],
+        "lines": [
+            129
+        ]
+    }
+}

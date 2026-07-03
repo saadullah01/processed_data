@@ -1,0 +1,22 @@
+Project: opensips
+Fuzzing Engine: afl
+Fuzz Target: fuzz_msg_parser
+Job Type: afl_asan_opensips
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 13
+Crash Address: 0x615000002a11
+Crash State:
+  dprint
+  get_hdr_field
+  parse_headers
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_msg_parser from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4543051888721920 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

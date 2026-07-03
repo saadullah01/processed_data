@@ -1,0 +1,13 @@
+{
+    "lib/x509/pkcs12.c": {
+        "entities": [
+            "function_gnutls_pkcs12_simple_parse"
+        ],
+        "lines": [
+            1721,
+            1682,
+            1670,
+            1743
+        ]
+    }
+}

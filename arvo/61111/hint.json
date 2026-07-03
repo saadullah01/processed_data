@@ -1,0 +1,10 @@
+{
+    "lib/replace/wscript": {
+        "entities": [
+            "function_configure"
+        ],
+        "lines": [
+            448
+        ]
+    }
+}

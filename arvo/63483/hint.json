@@ -1,0 +1,18 @@
+{
+    "src/decode.c": {
+        "entities": [
+            "function_dwg_decode_unknown_rest"
+        ],
+        "lines": [
+            5658
+        ]
+    },
+    "src/decode_r11.c": {
+        "entities": [
+            "function_decode_preR13_section"
+        ],
+        "lines": [
+            377
+        ]
+    }
+}

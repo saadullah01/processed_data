@@ -1,0 +1,18 @@
+{
+    "src/hb-bimap.hh": {
+        "entities": [
+            "method_hb_bimap_t::set"
+        ],
+        "lines": [
+            58
+        ]
+    },
+    "src/hb-ot-layout-common.hh": {
+        "entities": [
+            "struct_VariationStore"
+        ],
+        "lines": [
+            2788
+        ]
+    }
+}

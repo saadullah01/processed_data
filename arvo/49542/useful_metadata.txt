@@ -1,0 +1,16 @@
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_msan_mruby
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  udiv
+  mrb_bint_mod
+  int_mod
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mruby_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+Fixed by de2ea3c389e4f5a4b0910fbf203b93d8cf409957

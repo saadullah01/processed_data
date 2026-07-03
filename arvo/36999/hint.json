@@ -1,0 +1,20 @@
+{
+    "src/hb-map.hh": {
+        "entities": [
+            "function_set_with_hash",
+            "struct_hb_hashmap_t"
+        ],
+        "lines": [
+            224
+        ]
+    },
+    "test/api/test-map.c": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            104,
+            112
+        ]
+    }
+}

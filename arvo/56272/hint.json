@@ -1,0 +1,14 @@
+{
+    "src/lib/protocols/softether.c": {
+        "entities": [
+            "function_dissect_softether_host_fqdn",
+            "function_ndpi_search_softether"
+        ],
+        "lines": [
+            208,
+            177,
+            308,
+            239
+        ]
+    }
+}

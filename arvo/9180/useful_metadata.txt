@@ -1,0 +1,56 @@
+-- Comment 1:
+Detailed report: https://oss-fuzz.com/testcase?key=5961764976984064
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-ArwDecoder
+Fuzz target binary: TiffDecoderFuzzer-ArwDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  rawspeed::TiffIFD::TiffIFD
+  rawspeed::ArwDecoder::GetWB
+  rawspeed::ArwDecoder::decodeMetaDataInternal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_librawspeed&range=201801120659:201801140700
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5961764976984064
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201807040548:201807050537.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5961764976984064
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-ArwDecoder
+Fuzz target binary: TiffDecoderFuzzer-ArwDecoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  rawspeed::TiffIFD::TiffIFD
+  rawspeed::ArwDecoder::GetWB
+  rawspeed::ArwDecoder::decodeMetaDataInternal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_librawspeed&range=201801120659:201801140700
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_librawspeed&range=201807040548:201807050537
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5961764976984064
+
+-- Comment 3:
+ClusterFuzz testcase 5961764976984064 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

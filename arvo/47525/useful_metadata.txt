@@ -1,0 +1,22 @@
+Project: flac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_decoder
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  frame_sync_
+  FLAC__stream_decoder_process_single
+  FLAC::Decoder::Stream::process_single
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

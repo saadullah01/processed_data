@@ -1,0 +1,16 @@
+{
+    "src/util.c": {
+        "entities": [
+            "function_git__strntol64"
+        ],
+        "lines": [
+            83
+        ]
+    },
+    "tests/core/strtol.c": {
+        "entities": [],
+        "lines": [
+            76
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+Project: librawspeed
+Fuzzer: afl_librawspeed_LJpegDecompressorFuzzer
+Fuzz target binary: LJpegDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7f5f0e41b800
+Crash State:
+  rawspeed::unroll_loop_t<void rawspeed::LJpegDecompressor::decodeN<4>
+  void rawspeed::LJpegDecompressor::decodeN<4>
+  rawspeed::AbstractLJpegDecompressor::decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201711260644:201711270643.
+
+Project: librawspeed
+Fuzzer: afl_librawspeed_LJpegDecompressorFuzzer
+Fuzz target binary: LJpegDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7f5f0e41b800
+Crash State:
+  rawspeed::unroll_loop_t<void rawspeed::LJpegDecompressor::decodeN<4>
+  void rawspeed::LJpegDecompressor::decodeN<4>
+  rawspeed::AbstractLJpegDecompressor::decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5353239269605376 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

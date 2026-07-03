@@ -1,0 +1,33 @@
+Issue 42537998
+
+ffmpeg:ffmpeg_AV_CODEC_ID_VC1IMAGE_fuzzer: Use-of-uninitialized-value in vc1_put_blocks_clamped
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VC1IMAGE_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  vc1_put_blocks_clamped
+  vc1_decode_p_blocks
+  vc1_decode_frame
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6188476880453632 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Issue metadata
+Reporter: [REDACTED]
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Assignee: [REDACTED]
+Verifier: [REDACTED]

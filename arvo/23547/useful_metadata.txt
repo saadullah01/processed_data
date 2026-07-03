@@ -1,0 +1,20 @@
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-parser
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x62b000015218,0x62b00001b4e8) and [0x62b000015350, 0x62b00001b620)
+Crash State:
+  zend_lex_tstring
+  zendparse
+  zend_compile
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5680375123935232 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,44 @@
+{
+    "bfd/coff-z80.c": {
+        "entities": [
+            "function_extra_case"
+        ],
+        "lines": [
+            330
+        ]
+    },
+    "bfd/coff-z8k.c": {
+        "entities": [
+            "function_extra_case"
+        ],
+        "lines": [
+            193
+        ]
+    },
+    "bfd/coffcode.h": {
+        "entities": [
+            "struct_bfd_coff_backend_data",
+            "function_dummy_reloc16_extra_cases"
+        ],
+        "lines": [
+            1385,
+            5318
+        ]
+    },
+    "bfd/libcoff.h": {
+        "entities": [
+            "struct_bfd_coff_backend_data"
+        ],
+        "lines": [
+            712
+        ]
+    },
+    "bfd/reloc16.c": {
+        "entities": [
+            "function_bfd_coff_reloc16_get_relocated_section_contents"
+        ],
+        "lines": [
+            243
+        ]
+    }
+}

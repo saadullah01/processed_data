@@ -1,0 +1,32 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_avcbin_fuzzer
+Fuzz target binary: avcbin_fuzzer
+Job Type: libfuzzer_ubsan_gdal
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash State:
+  _AVCBinReadOpenTable
+  OGRAVCBinLayer::CheckSetupTable
+  OGRAVCBinLayer::OGRAVCBinLayer
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+Fixed per changeset 41633
+Old bug
+
+ClusterFuzz has detected this issue as fixed in range 201803040706:201803050702
+Project: gdal
+Fuzzer: libFuzzer_gdal_avcbin_fuzzer
+Fuzz target binary: avcbin_fuzzer
+Job Type: libfuzzer_ubsan_gdal
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash State:
+  _AVCBinReadOpenTable
+  OGRAVCBinLayer::CheckSetupTable
+  OGRAVCBinLayer::OGRAVCBinLayer
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5104654284226560 is verified as fixed, so closing issue as verified.
+This bug has been fixed for 30 days. It has been opened to the public.

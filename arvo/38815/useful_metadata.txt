@@ -1,0 +1,22 @@
+Project: flac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_decoder
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  FLAC::Decoder::FuzzerStream::write_callback
+  FLAC::Decoder::Stream::write_callback_
+  write_audio_frame_to_client_
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 6021284983603200
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer_decoder from making much progress.
+
+ClusterFuzz testcase 6021284983603200 is verified as fixed

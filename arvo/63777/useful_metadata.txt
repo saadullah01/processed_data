@@ -1,0 +1,20 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Fuzz Target: FuzzTTF
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+
+Crash Address: 0x6120000008e2
+Crash State:
+  OpenType::be_u32
+  OpenType::Cmap::subtable
+  OpenType::Font::try_load_from_offset
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4665490011979776 is verified as fixed

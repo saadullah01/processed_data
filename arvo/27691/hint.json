@@ -1,0 +1,25 @@
+{
+    "prog/fuzzing/dewarp_fuzzer.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            15
+        ]
+    },
+    "src/sarray1.c": {
+        "entities": [
+            "function_getFilenamesInDirectory"
+        ],
+        "lines": [
+            1896,
+            1884
+        ]
+    },
+    "version-notes.html": {
+        "entities": [],
+        "lines": [
+            102
+        ]
+    }
+}

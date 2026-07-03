@@ -1,0 +1,11 @@
+{
+    "libyarmodules/elf.c": {
+        "entities": [
+            "function_str_table_entry"
+        ],
+        "lines": [
+            81,
+            95
+        ]
+    }
+}

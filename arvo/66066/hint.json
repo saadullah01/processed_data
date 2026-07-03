@@ -1,0 +1,29 @@
+{
+    "src/analyzer/protocol/smtp/SMTP.cc": {
+        "entities": [
+            "method_SMTP_Analyzer::Undelivered",
+            "function_SMTP_Analyzer::BeginData",
+            "method_SMTP_Analyzer::ProcessBdatArg",
+            "method_SMTP_Analyzer::ProcessLine",
+            "method_SMTP_Analyzer::UpdateState"
+        ],
+        "lines": [
+            202,
+            875,
+            618,
+            591,
+            84,
+            885
+        ]
+    },
+    "src/analyzer/protocol/smtp/SMTP.h": {
+        "entities": [
+            "enum_SMTP_State",
+            "method_BeginData"
+        ],
+        "lines": [
+            35,
+            63
+        ]
+    }
+}

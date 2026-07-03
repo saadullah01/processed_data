@@ -1,0 +1,10 @@
+{
+    "src/OT/glyf/Glyph.hh": {
+        "entities": [
+            "struct_Glyph"
+        ],
+        "lines": [
+            428
+        ]
+    }
+}

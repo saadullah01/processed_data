@@ -1,0 +1,11 @@
+{
+    "HTMLparser.c": {
+        "entities": [
+            "function_htmlCurrentChar"
+        ],
+        "lines": [
+            457,
+            445
+        ]
+    }
+}

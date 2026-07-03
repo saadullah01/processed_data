@@ -1,0 +1,19 @@
+Project: uWebSockets
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: uwebsockets
+Fuzzing Engine: libFuzzer
+Fuzz Target: HttpWithProxy
+Job Type: libfuzzer_asan_uwebsockets
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x7f39f316d8dc
+Crash State:
+  std::__1::pair<unsigned int, void*> uWS::HttpParser::fenceAndConsumePostPadded<0
+  uWS::HttpParser::consumePostPadded
+  std::__1::__function::__func<LLVMFuzzerTestOneInput::$_0, std::__1::allocator<LL
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

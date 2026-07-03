@@ -1,0 +1,12 @@
+{
+    "source/fitz/printf.c": {
+        "entities": [
+            "function_fz_snprintf",
+            "function_fz_vsnprintf"
+        ],
+        "lines": [
+            489,
+            474
+        ]
+    }
+}

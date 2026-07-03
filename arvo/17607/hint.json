@@ -1,0 +1,10 @@
+{
+    "poppler/Annot.cc": {
+        "entities": [
+            "function_Annot::layoutText"
+        ],
+        "lines": [
+            3834
+        ]
+    }
+}

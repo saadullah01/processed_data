@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_cmap.c": {
+        "entities": [
+            "function_cmap_endcodespacerange_func"
+        ],
+        "lines": [
+            119
+        ]
+    }
+}

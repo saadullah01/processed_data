@@ -1,0 +1,10 @@
+{
+    "options.c": {
+        "entities": [
+            "function_fio_keyword_replace"
+        ],
+        "lines": [
+            5115
+        ]
+    }
+}

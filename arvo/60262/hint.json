@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibVideo/VP9/Context.h": {
+        "entities": [
+            "method_FrameContext::create_range_decoder"
+        ],
+        "lines": [
+            61
+        ]
+    }
+}

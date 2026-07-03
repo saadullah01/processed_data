@@ -1,0 +1,42 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1:
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  trySubset
+  hb-subset-fuzzer.cc
+  hb_malloc_impl
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed:
+Reproducer Testcase:
+
+Issue filed automatically.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+-- Comment 2:
+ClusterFuzz testcase 5041767803125760 is verified as fixed
+
+-- Comment 3:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

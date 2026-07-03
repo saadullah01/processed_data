@@ -1,0 +1,10 @@
+{
+    "src/commit.c": {
+        "entities": [
+            "function_git_commit__parse_raw"
+        ],
+        "lines": [
+            420
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "epan/asn1.c": {
+        "entities": [
+            "function_asn1_get_real"
+        ],
+        "lines": [
+            234
+        ]
+    }
+}

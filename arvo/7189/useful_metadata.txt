@@ -1,0 +1,25 @@
+Project: skcms
+Fuzzer: libFuzzer_skcms_iccprofile_info
+Fuzz target binary: iccprofile_info
+Job Type: libfuzzer_msan_skcms
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x00003f800000
+Crash State:
+  read_table_extents
+  fuzz_iccprofile_info.c
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 5960989452271616
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer iccprofile_info from making much progress. Fixing this will allow more bugs to be found.
+
+check table_entries in read_table_extents()
+[modify] fuzz/fuzz_iccprofile_info.c
+Bug: oss-fuzz:7185, oss-fuzz:7189
+
+ClusterFuzz has detected this issue as fixed in range 201803290446:201803300447.
+
+ClusterFuzz testcase 5960989452271616 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

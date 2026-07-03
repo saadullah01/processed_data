@@ -1,0 +1,15 @@
+Project: graphicsmagick
+Fuzzer: afl_graphicsmagick_coder_MVG_fuzzer
+Fuzz target binary: coder_MVG_fuzzer
+Job Type: afl_asan_graphicsmagick
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x7fed8e5ff780
+Crash State:
+  TracePoint
+  TraceEllipse
+  TraceRoundRectangle
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase: 5699661139017728
+ClusterFuzz has detected this issue as fixed in range 201809150213:201809160216.

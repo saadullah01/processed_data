@@ -1,0 +1,46 @@
+Project: serenity
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 8
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5341858496643072
+
+Project: serenity
+Fuzzing Engine: afl
+Fuzz Target: FuzzJs
+Job Type: afl_asan_serenity
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7ffc5ad65468
+Crash State:
+  JS::Heap::gather_conservative_roots
+  JS::Heap::gather_roots
+  JS::Heap::collect_garbage
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_serenity&range=202101030615:202101040606
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5341858496643072
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored."""
+
+-- Comment 2: """ClusterFuzz testcase 5341858496643072 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_serenity&range=202101050610:202101060611
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

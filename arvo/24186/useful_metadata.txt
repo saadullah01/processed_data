@@ -1,0 +1,22 @@
+Project: stb
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: stb
+Fuzzing Engine: libFuzzer
+Fuzz Target: stb_png_read_fuzzer
+Job Type: libfuzzer_msan_stb
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  stbi__compute_transparency16
+  stbi__parse_png_file
+  stbi__do_png
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

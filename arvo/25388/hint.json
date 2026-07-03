@@ -1,0 +1,20 @@
+{
+    "src/librekey/key_store_kbx.cpp": {
+        "entities": [
+            "function_rnp_key_store_kbx_parse_pgp_blob",
+            "function_rnp_key_store_kbx_from_src"
+        ],
+        "lines": [
+            136,
+            454
+        ]
+    },
+    "src/tests/fuzz_keyring_kbx.cpp": {
+        "entities": [
+            "function_test_fuzz_keyring_kbx"
+        ],
+        "lines": [
+            41
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "src/librepgp/stream-packet.cpp": {
+        "entities": [
+            "function_add_packet_body_s2k"
+        ],
+        "lines": [
+            409
+        ]
+    },
+    "src/tests/fuzz_keyring.cpp": {
+        "entities": [
+            "function_test_fuzz_keyring"
+        ],
+        "lines": [
+            40
+        ]
+    }
+}

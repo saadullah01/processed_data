@@ -1,0 +1,10 @@
+{
+    "src/decoders/fuji_compressed.cpp": {
+        "entities": [
+            "function_LibRaw::fuji_compressed_load_raw"
+        ],
+        "lines": [
+            1101
+        ]
+    }
+}

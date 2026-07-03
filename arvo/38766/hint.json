@@ -1,0 +1,10 @@
+{
+    "libarchive/archive_read_support_format_zip.c": {
+        "entities": [
+            "function_zipx_lzma_alone_init"
+        ],
+        "lines": [
+            1667
+        ]
+    }
+}

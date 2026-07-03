@@ -1,0 +1,11 @@
+{
+    "bfd/elf-attrs.c": {
+        "entities": [
+            "function__bfd_elf_parse_attributes"
+        ],
+        "lines": [
+            432,
+            303
+        ]
+    }
+}

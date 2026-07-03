@@ -1,0 +1,30 @@
+libavc:svc_dec_fuzzer: Heap-buffer-overflow in ih264d_format_convert
+
+Project: libavc
+Fuzzing Engine: libFuzzer
+Fuzz Target: svc_dec_fuzzer
+Job Type: libfuzzer_asan_libavc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x51f000000c80
+Crash State:
+  ih264d_format_convert
+  isvcd_video_decode
+  isvcd_api_function
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5657102618525696 is verified as fixed.
+This bug has been fixed. It has been opened to the public.
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)

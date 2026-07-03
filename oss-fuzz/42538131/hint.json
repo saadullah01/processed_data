@@ -1,0 +1,12 @@
+{
+    "libavformat/iamf_parse.c": {
+        "entities": [
+            "function_aac_decoder_config"
+        ],
+        "lines": [
+            67,
+            100,
+            87
+        ]
+    }
+}

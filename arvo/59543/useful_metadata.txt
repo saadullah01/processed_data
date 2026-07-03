@@ -1,0 +1,19 @@
+Project: libavc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libavc
+Fuzzing Engine: libFuzzer
+Fuzz Target: avc_enc_fuzzer
+Job Type: libfuzzer_asan_libavc
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x61d100024e7f
+Crash State:
+  ih264e_cabac_put_byte
+  ih264e_cabac_encode_bin
+  ih264e_write_pslice_mb_cabac
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

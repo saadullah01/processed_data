@@ -1,0 +1,11 @@
+{
+    "libSBRdec/src/sbrdecoder.cpp": {
+        "entities": [
+            "function_sbrDecoder_Header"
+        ],
+        "lines": [
+            1,
+            871
+        ]
+    }
+}

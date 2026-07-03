@@ -1,0 +1,50 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 2
+
+-- Comment 1:
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 2
+Crash Address: 0x000003980c80
+Crash State:
+  csnStreamDissector
+  csnStreamDissector
+  csnStreamDissector
+  
+Sanitizer: address (ASAN)
+
+-- Comment 2:
+Current status: CONFIRMED (unfixed)
+
+-- Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201705101621:201705111621
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 2
+Crash Address: 0x000003980c80
+Crash State:
+  csnStreamDissector
+  csnStreamDissector
+  csnStreamDissector
+  
+Sanitizer: address (ASAN)
+
+Regressed: 201705081620:201705081841
+Fixed: 201705101621:201705111621
+
+-- Comment 4:
+ClusterFuzz testcase 6037121083113472 is verified as fixed, so closing issue.
+
+-- Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.

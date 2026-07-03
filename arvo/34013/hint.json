@@ -1,0 +1,13 @@
+{
+    "sapi/fuzzer/fuzzer-execute.c": {
+        "entities": [
+            "function_fuzzer_compile_string",
+            "function_fuzzer_execute_ex"
+        ],
+        "lines": [
+            34,
+            27,
+            52
+        ]
+    }
+}

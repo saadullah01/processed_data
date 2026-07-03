@@ -1,0 +1,26 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x62a00000c468
+Crash State:
+  dict_find_string
+  gs_main_tempnames
+  gs_main_finit
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5680214581706752 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

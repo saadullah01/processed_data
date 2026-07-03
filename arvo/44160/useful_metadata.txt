@@ -1,0 +1,28 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7f35fbb15554
+Crash State:
+  sgets
+  pdfi_read_bytes
+  read_xref_entry_slow
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Fix committed upstream.
+
+ClusterFuzz testcase 4587919828975616 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

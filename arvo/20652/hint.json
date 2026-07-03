@@ -1,0 +1,14 @@
+{
+    "psi/imainarg.c": {
+        "entities": [
+            "function_gs_main_init_with_args01"
+        ],
+        "lines": [
+            195,
+            169,
+            268,
+            215,
+            249
+        ]
+    }
+}

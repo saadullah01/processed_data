@@ -1,0 +1,10 @@
+{
+    "icu4c/source/i18n/calendar.cpp": {
+        "entities": [
+            "method_Calendar::computeFields"
+        ],
+        "lines": [
+            1462
+        ]
+    }
+}

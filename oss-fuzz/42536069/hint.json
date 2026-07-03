@@ -1,0 +1,10 @@
+{
+    "cups/ipp.c": {
+        "entities": [
+            "function_ippReadIO"
+        ],
+        "lines": [
+            2683
+        ]
+    }
+}

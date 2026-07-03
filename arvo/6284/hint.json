@@ -1,0 +1,10 @@
+{
+    "src/android/SkAnimatedImage.cpp": {
+        "entities": [
+            "function_SkAnimatedImage::decodeNextFrame"
+        ],
+        "lines": [
+            176
+        ]
+    }
+}

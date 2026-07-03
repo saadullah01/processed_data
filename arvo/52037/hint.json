@@ -1,0 +1,40 @@
+{
+    "libgps/gpsutils.c": {
+        "entities": [
+            "function_safe_atof"
+        ],
+        "lines": [
+            201
+        ]
+    },
+    "tests/test_json.c": {
+        "entities": [
+            "function_main",
+            "function_jsontest"
+        ],
+        "lines": [
+            130,
+            261,
+            394,
+            11,
+            906,
+            406,
+            283,
+            669,
+            157,
+            419,
+            681,
+            174,
+            701,
+            330,
+            851,
+            473,
+            217,
+            607,
+            351,
+            226,
+            368,
+            892
+        ]
+    }
+}

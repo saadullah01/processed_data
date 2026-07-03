@@ -1,0 +1,10 @@
+{
+    "lib/util_mosq.c": {
+        "entities": [
+            "function_mosquitto__hex2bin"
+        ],
+        "lines": [
+            174
+        ]
+    }
+}

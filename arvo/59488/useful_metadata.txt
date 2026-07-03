@@ -1,0 +1,27 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_nm
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x6240746387c5
+Crash State:
+  display_rel_file
+  display_file
+  fuzz_nm.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4516103192444928 is verified as fixed
+
+This bug has been fixed.
+It has been opened to the public.

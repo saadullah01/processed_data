@@ -1,0 +1,21 @@
+{
+    "NEWS": {
+        "entities": [],
+        "lines": [
+            32
+        ]
+    },
+    "ext/standard/file.c": {
+        "entities": [
+            "function_php_fgetcsv"
+        ],
+        "lines": [
+            2038,
+            2023
+        ]
+    },
+    "ext/standard/tests/strings/gh12151.phpt": {
+        "entities": [],
+        "lines": []
+    }
+}

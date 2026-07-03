@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/common/DngOpcodes.cpp": {
+        "entities": [
+            "class_DngOpcodes::PixelOpcode"
+        ],
+        "lines": [
+            328
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/lib/openjp2/tcd.c": {
+        "entities": [
+            "function_opj_tcd_mct_decode"
+        ],
+        "lines": [
+            1965
+        ]
+    }
+}

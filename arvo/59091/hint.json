@@ -1,0 +1,15 @@
+{
+    "src/lib/libdwarf/dwarf_line_table_reader_common.h": {
+        "entities": [
+            "function__dwarf_read_line_table_header"
+        ],
+        "lines": [
+            1060,
+            234,
+            621,
+            654,
+            786,
+            531
+        ]
+    }
+}

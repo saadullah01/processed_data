@@ -1,0 +1,30 @@
+Issue 42538169
+
+php:php-fuzz-execute: Crash in i_zval_ptr_dtor
+
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_ubsan_php
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x569798ffa010
+Crash State:
+  i_zval_ptr_dtor
+  zho_it_dtor
+  zend_objects_store_del
+
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High
+
+Regressed: range=202408290601:202408310625
+
+Reproducer Testcase ID: 4860195954556928
+
+ClusterFuzz testcase 4860195954556928 is verified as fixed in range=202409170625:202409180616
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)

@@ -1,0 +1,21 @@
+{
+    "epan/dissectors/packet-rtcp.c": {
+        "entities": [
+            "function_dissect_rtcp_rtpfb",
+            "function_dissect_rtcp_rtpfb_transport_cc",
+            "function_proto_register_rtcp"
+        ],
+        "lines": [
+            1193,
+            1162,
+            1451,
+            6832,
+            1238,
+            1111,
+            696,
+            1278,
+            1271,
+            1182
+        ]
+    }
+}

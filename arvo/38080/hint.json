@@ -1,0 +1,11 @@
+{
+    "src/core/parser/parse_addr_spec.c": {
+        "entities": [
+            "function_parse_to_param"
+        ],
+        "lines": [
+            225,
+            241
+        ]
+    }
+}

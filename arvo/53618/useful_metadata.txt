@@ -1,0 +1,26 @@
+Project: librawspeed
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: librawspeed
+Fuzzing Engine: libFuzzer
+Fuzz Target: TiffDecoderFuzzer-Cr2Decoder
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  rawspeed::RawImageData::checkRowIsInitialized
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6491678580277248 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "gdal/ogr/ogrsf_frmts/gmt/ogrgmtlayer.cpp": {
+        "entities": [
+            "method_OGRGmtLayer::OGRGmtLayer"
+        ],
+        "lines": [
+            90
+        ]
+    }
+}

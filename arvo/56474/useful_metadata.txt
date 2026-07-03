@@ -1,0 +1,23 @@
+Project: libdwarf
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_die_cu_attrs_loclist
+Job Type: libfuzzer_ubsan_libdwarf
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000025f99a90
+Crash State:
+  dwarf_highpc_b
+  fuzz_die_cu_attrs_loclist.c
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_die_cu_attrs_loclist from making much progress. Fixing this will allow more bugs to be found.

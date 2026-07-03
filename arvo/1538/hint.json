@@ -1,0 +1,23 @@
+{
+    "libavcodec/ac3dec.c": {
+        "entities": [
+            "function_spx_strategy",
+            "function_coupling_strategy",
+            "function_decode_band_structure"
+        ],
+        "lines": [
+            1000,
+            761,
+            863
+        ]
+    },
+    "libavcodec/ac3dec.h": {
+        "entities": [
+            "struct_AC3DecodeContext"
+        ],
+        "lines": [
+            128,
+            144
+        ]
+    }
+}

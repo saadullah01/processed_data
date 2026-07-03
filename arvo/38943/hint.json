@@ -1,0 +1,24 @@
+{
+    "src/bucket.c": {
+        "entities": [
+            "function_gdbm_dir_entry_valid_p"
+        ],
+        "lines": [
+            28
+        ]
+    },
+    "src/gdbmseq.c": {
+        "entities": [
+            "function_gdbm_valid_key_p"
+        ],
+        "lines": [
+            25
+        ]
+    },
+    "src/proto.h": {
+        "entities": [],
+        "lines": [
+            28
+        ]
+    }
+}

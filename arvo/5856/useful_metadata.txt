@@ -1,0 +1,55 @@
+-- Comment 1:
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7173ffffffe0
+Crash State:
+  pdf_read_new_xref
+  read_xref_section
+  pdf_read_xref_sections
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: High
+
+Regressed: 201801181639:201801190545
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201801310616:201802010620.
+
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7173ffffffe0
+Crash State:
+  pdf_read_new_xref
+  read_xref_section
+  pdf_read_xref_sections
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: High
+
+Regressed: 201801181639:201801190545
+Fixed: 201801310616:201802010620
+
+-- Comment 3:
+ClusterFuzz testcase 4558604561547264 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+oss-fuzz closed this bug before it was reported upstream.
+
+Analysis showed that this was fixed by bug 698916
+
+Fixed in commits: 5e411a99604ff6be5db9e273ee84737204113299 ; a71e7c85a9f2313cde20d4479cd727a5f5518ed2
+
+-- Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.

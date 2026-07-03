@@ -1,0 +1,16 @@
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzJs
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x000003304030
+Crash State:
+  Bad-cast to JS::GlobalObject from JS::Object
+  JS::Object::Object
+  JS::ScopeObject::ScopeObject
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High

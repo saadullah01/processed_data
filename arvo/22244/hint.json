@@ -1,0 +1,12 @@
+{
+    "src/lib/protocols/openvpn.c": {
+        "entities": [
+            "function_ndpi_search_openvpn"
+        ],
+        "lines": [
+            72,
+            85,
+            119
+        ]
+    }
+}

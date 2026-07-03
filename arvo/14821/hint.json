@@ -1,0 +1,18 @@
+{
+    "src/core/net/ip6_address.cpp": {
+        "entities": [
+            "method_Address::FromString"
+        ],
+        "lines": [
+            316
+        ]
+    },
+    "tests/unit/test_ip6_address.cpp": {
+        "entities": [
+            "function_TestIp6AddressFromString"
+        ],
+        "lines": [
+            189
+        ]
+    }
+}

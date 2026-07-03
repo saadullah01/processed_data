@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-openpgp.c": {
+        "entities": [
+            "function_pgp_parse_algo_attr_blob"
+        ],
+        "lines": [
+            721
+        ]
+    }
+}

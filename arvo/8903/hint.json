@@ -1,0 +1,20 @@
+{
+    "libyarmodules/dex.c": {
+        "entities": [
+            "function_dex_parse",
+            "function_load_encoded_field",
+            "function_load_encoded_method"
+        ],
+        "lines": [
+            515,
+            999,
+            680,
+            553,
+            1035,
+            405,
+            374,
+            981,
+            1017
+        ]
+    }
+}

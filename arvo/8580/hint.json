@@ -1,0 +1,17 @@
+{
+    "epan/dissectors/packet-mstp.c": {
+        "entities": [
+            "function_cobs_frame_decode",
+            "function_dissect_mstp",
+            "function_cobs_decode"
+        ],
+        "lines": [
+            258,
+            202,
+            363,
+            237,
+            272,
+            215
+        ]
+    }
+}

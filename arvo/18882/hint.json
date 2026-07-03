@@ -1,0 +1,22 @@
+{
+    "src/patch_parse.c": {
+        "entities": [
+            "function_parse_patch_binary_side"
+        ],
+        "lines": [
+            808
+        ]
+    },
+    "tests/patch/parse.c": {
+        "entities": [],
+        "lines": [
+            184
+        ]
+    },
+    "tests/patch/patch_common.h": {
+        "entities": [],
+        "lines": [
+            974
+        ]
+    }
+}

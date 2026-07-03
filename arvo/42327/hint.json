@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_deref.c": {
+        "entities": [
+            "function_pdfi_deref_compressed"
+        ],
+        "lines": [
+            552,
+            538
+        ]
+    }
+}

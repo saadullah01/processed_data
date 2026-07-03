@@ -1,0 +1,22 @@
+Project: graphicsmagick
+Fuzzer: afl_graphicsmagick_coder_MVG_fuzzer
+Fuzz target binary: coder_MVG_fuzzer
+Job Type: afl_asan_graphicsmagick
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7f5f47afb915
+Crash State:
+  TranslateTextEx
+  AnnotateImage
+  DrawPrimitive
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201808250219:201808260217.
+
+ClusterFuzz testcase 5158172004712448 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

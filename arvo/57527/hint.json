@@ -1,0 +1,11 @@
+{
+    "fuzz/fuzz_die_cu_attrs_loclist.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            147,
+            100
+        ]
+    }
+}

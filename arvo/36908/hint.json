@@ -1,0 +1,10 @@
+{
+    "snmplib/read_config.c": {
+        "entities": [
+            "function_read_config"
+        ],
+        "lines": [
+            829
+        ]
+    }
+}

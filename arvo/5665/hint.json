@@ -1,0 +1,17 @@
+{
+    "source/pdf/pdf-crypt.c": {
+        "entities": [
+            "function_pdf_authenticate_owner_password",
+            "function_pdf_compute_encryption_key",
+            "function_pdf_compute_user_password"
+        ],
+        "lines": [
+            353,
+            678,
+            584,
+            649,
+            569,
+            699
+        ]
+    }
+}

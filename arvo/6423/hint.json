@@ -1,0 +1,8 @@
+{
+    "epan/dissectors/packet-sigcomp.c": {
+        "entities": [],
+        "lines": [
+            165
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/options.cpp": {
+        "entities": [
+            "function_zmq::options_t::set_curve_key"
+        ],
+        "lines": [
+            276
+        ]
+    }
+}

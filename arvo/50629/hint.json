@@ -1,0 +1,12 @@
+{
+    "src/quicktimevideo.cpp": {
+        "entities": [
+            "method_QuickTimeVideo::keysTagDecoder",
+            "function_QuickTimeVideo::previewTagDecoder"
+        ],
+        "lines": [
+            668,
+            685
+        ]
+    }
+}

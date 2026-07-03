@@ -1,0 +1,65 @@
+{
+    "fuzz/compress12_lossless.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            85
+        ]
+    },
+    "fuzz/compress16_lossless.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            85
+        ]
+    },
+    "fuzz/compress_lossless.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            84
+        ]
+    },
+    "fuzz/compress_yuv.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            87
+        ]
+    },
+    "fuzz/decompress.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            95
+        ]
+    },
+    "fuzz/decompress_yuv.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            1,
+            83
+        ]
+    },
+    "fuzz/transform.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            125,
+            101
+        ]
+    }
+}

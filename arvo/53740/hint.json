@@ -1,0 +1,10 @@
+{
+    "bfd/pef.c": {
+        "entities": [
+            "function_bfd_pef_parse_traceback_table"
+        ],
+        "lines": [
+            77
+        ]
+    }
+}

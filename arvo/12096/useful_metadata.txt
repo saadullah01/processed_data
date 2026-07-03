@@ -1,0 +1,42 @@
+Project: h2o
+Fuzzer: afl_h2o-fuzzer-http2
+Fuzz target binary: h2o-fuzzer-http2
+Job Type: afl_asan_h2o
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x60b0000001c8
+Crash State:
+  emit_writereq_of_openref
+  h2o_http2_scheduler_run
+  do_emit_writereq
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201812200410:201812210228
+
+Reproducer Testcase: 5130696692072448
+
+ClusterFuzz has detected this issue as fixed in range 201812220227:201812230226.
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x60b0000001c8
+Crash State:
+  emit_writereq_of_openref
+  h2o_http2_scheduler_run
+  do_emit_writereq
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201812200410:201812210228
+Fixed: 201812220227:201812230226
+
+Reproducer Testcase: 5130696692072448
+
+ClusterFuzz testcase 5130696692072448 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

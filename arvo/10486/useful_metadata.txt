@@ -1,0 +1,30 @@
+Project: libssh
+Fuzzer: libFuzzer_libssh_server_fuzzer
+Fuzz target binary: libssh_server_fuzzer
+Job Type: libfuzzer_asan_libssh
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7f1b568059b0
+Crash State:
+  ssh_buffer_unpack_va
+  _ssh_buffer_unpack
+  ssh_packet_userauth_request
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libssh_server_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201809190255:201809192219.
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7f1b568059b0
+Crash State:
+  ssh_buffer_unpack_va
+  _ssh_buffer_unpack
+  ssh_packet_userauth_request
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Fixed: (fixed in a later revision range)
+
+ClusterFuzz testcase 5766380100517888 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

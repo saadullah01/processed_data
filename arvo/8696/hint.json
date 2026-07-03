@@ -1,0 +1,10 @@
+{
+    "poppler/JBIG2Stream.cc": {
+        "entities": [
+            "method_JBIG2Stream::readSymbolDictSeg"
+        ],
+        "lines": [
+            1548
+        ]
+    }
+}

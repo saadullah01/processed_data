@@ -1,0 +1,48 @@
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_mvg_fuzzer
+Fuzz target binary: encoder_mvg_fuzzer
+Job Type: libfuzzer_msan_imagemagick
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  GetFillAlpha
+  DrawPolygonPrimitive
+  DrawPrimitive
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201801130553:201801150014
+
+Reproducer Testcase: 4854591964315648
+
+ClusterFuzz has detected this issue as fixed in range 201801260529:201801270531.
+
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_mvg_fuzzer
+Fuzz target binary: encoder_mvg_fuzzer
+Job Type: libfuzzer_msan_imagemagick
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  GetFillAlpha
+  DrawPolygonPrimitive
+  DrawPrimitive
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201801130553:201801150014
+Fixed: 201801260529:201801270531
+
+Reproducer Testcase: 4854591964315648
+
+ClusterFuzz testcase 4854591964315648 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

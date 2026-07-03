@@ -1,0 +1,22 @@
+Project: ndpi
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Detailed Report:
+Project: ndpi
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_tls_certificate
+Job Type: honggfuzz_asan_ndpi
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x6040000bed05
+Crash State:
+  processCertificateElements
+  fuzz_tls_certificate.c
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

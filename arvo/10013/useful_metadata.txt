@@ -1,0 +1,47 @@
+Project: graphicsmagick
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_TIFF_fuzzer
+Fuzz target binary: coder_TIFF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  DisassociateAlphaRegion
+  ReadTIFFImage
+  ReadImage
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201805110540:201805251618
+Reproducer Testcase: 5645145226608640
+
+Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201808250219:201808260217.
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_TIFF_fuzzer
+Fuzz target binary: coder_TIFF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  DisassociateAlphaRegion
+  ReadTIFFImage
+  ReadImage
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201805110540:201805251618
+Fixed: 201808250219:201808260217
+Reproducer Testcase: 5645145226608640
+
+Comment 3:
+ClusterFuzz testcase 5645145226608640 is verified as fixed, so closing issue as verified.
+
+Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

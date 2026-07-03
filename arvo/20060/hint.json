@@ -1,0 +1,14 @@
+{
+    "src/tag_utils.c": {
+        "entities": [
+            "function_get_ape_tag_item",
+            "function_get_ape_tag_item_indexed",
+            "function_WavpackDeleteTagItem"
+        ],
+        "lines": [
+            186,
+            242,
+            333
+        ]
+    }
+}

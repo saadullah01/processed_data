@@ -1,0 +1,22 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_dxf_fuzzer
+Fuzz target binary: dxf_fuzzer
+Job Type: libfuzzer_ubsan_gdal
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0xfffffffffffffff0
+Crash State:
+  OGRSimpleCurve::getPoint
+  OGRDXFLayer::TranslateLEADER
+  OGRDXFLayer::GetNextUnfilteredFeature
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201805130555:201805140608.
+
+ClusterFuzz testcase 6213050452410368 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

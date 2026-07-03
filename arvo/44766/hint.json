@@ -1,0 +1,10 @@
+{
+    "src/isomedibox_code_base.c": {
+        "entities": [
+            "function_audio_sample_entry_box_read"
+        ],
+        "lines": [
+            4217
+        ]
+    }
+}

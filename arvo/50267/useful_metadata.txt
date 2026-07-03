@@ -1,0 +1,26 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 8
+Severity: High
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pdfwrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 8
+Crash Address: 0x7ffcf5252b40
+Crash State:
+  gs_glyph_data_from_string
+  copied_type1_subr_data
+  gs_type2_interpret
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Fix committed upstream
+
+ClusterFuzz testcase 6152113700339712 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

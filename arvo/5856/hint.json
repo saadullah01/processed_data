@@ -1,0 +1,18 @@
+{
+    "source/pdf/pdf-parse.c": {
+        "entities": [
+            "function_pdf_parse_ind_obj"
+        ],
+        "lines": [
+            623
+        ]
+    },
+    "source/pdf/pdf-xref.c": {
+        "entities": [
+            "function_pdf_get_populating_xref_entry"
+        ],
+        "lines": [
+            228
+        ]
+    }
+}

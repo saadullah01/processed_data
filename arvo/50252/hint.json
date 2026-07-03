@@ -1,0 +1,11 @@
+{
+    "src/cmsgamma.c": {
+        "entities": [
+            "function_DefaultEvalParametricFn"
+        ],
+        "lines": [
+            601,
+            462
+        ]
+    }
+}

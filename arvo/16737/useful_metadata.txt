@@ -1,0 +1,16 @@
+Project: graphicsmagick
+Fuzzing Engine: libFuzzer
+Fuzz Target: coder_MNG_fuzzer
+Job Type: libfuzzer_ubsan_graphicsmagick
+Platform Id: linux
+Crash Type: Unknown signal
+Crash Address: 0x000000000000
+Crash State:
+  MagickMallocAligned
+  GetCacheInfo
+  AllocateImage
+Sanitizer: undefined (UBSAN)
+
+According to the stack trace, this crash happened in the glibc implementation of posix_memalign().  It looks like a null pointer was dereferenced in the glibc implementation.  It looks the crash happened in diagnostic code, which is perhaps not active by default in a glibc build.
+
+If you look at the full stdout, it's glibc aborting because some malloc metadata was corrupted.

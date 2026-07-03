@@ -1,0 +1,10 @@
+{
+    "libxslt/functions.c": {
+        "entities": [
+            "function_xsltKeyFunction"
+        ],
+        "lines": [
+            352
+        ]
+    }
+}

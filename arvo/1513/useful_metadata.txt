@@ -1,0 +1,31 @@
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_H264_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_H264_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash State:
+  decode_residual
+  ff_h264_decode_mb_cavlc
+  decode_slice
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201705121624:201705131623.
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_H264_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_H264_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash State:
+  decode_residual
+  ff_h264_decode_mb_cavlc
+  decode_slice
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6246484833992704 is verified as fixed, so closing issue.
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "libavformat/iamf_parse.c": {
+        "entities": [
+            "function_ff_iamfdec_read_descriptors"
+        ],
+        "lines": [
+            1081
+        ]
+    }
+}

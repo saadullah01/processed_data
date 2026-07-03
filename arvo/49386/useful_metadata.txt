@@ -1,0 +1,20 @@
+Project: lcms
+Fuzzing Engine: afl
+Fuzz Target: cms_transform_all_fuzzer
+Job Type: afl_asan_lcms
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x602000000376
+Crash State:
+  TetrahedralInterp16
+  cmsPipelineEval16
+  FixWhiteMisalignment
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6049227213504512 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

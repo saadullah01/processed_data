@@ -1,0 +1,101 @@
+Project: curl
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=6722246199476224
+
+Project: curl
+Fuzzer: afl_curl_fuzzer_rtsp
+Fuzz target binary: curl_fuzzer_rtsp
+Job Type: afl_asan_curl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x629000009214
+Crash State:
+  rtsp_rtp_readwrite
+  readwrite_data
+  Curl_readwrite
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=201803150536:201803160524
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6722246199476224
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """Here's the hit:
+
+#0  0x00000000004e2884 in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#1  0x00000000004e3648 in __asan_report_load1 ()
+#2  0x000000000065f2ad in rtsp_rtp_readwrite (data=0x62a000000208, conn=0x61c000000088, 
+    nread=0x7fffffffb200, readmore=0x7fffffffb220) at rtsp.c:704
+#3  0x000000000061749d in readwrite_data (data=0x62a000000208, conn=0x61c000000088, k=0x62a0000002c8, 
+    didwhat=0x7fffffffbc80, done=0x7fffffffc1e0, comeback=0x7fffffffc260) at transfer.c:822
+#4  0x00000000006124a2 in Curl_readwrite (conn=0x61c000000088, data=0x62a000000208, 
+    done=0x7fffffffc1e0, comeback=0x7fffffffc260) at transfer.c:1125
+#5  0x000000000053f85d in multi_runsingle (multi=0x615000000588, now=..., data=0x62a000000208)
+    at multi.c:1891
+"""
+
+-- Comment 3: """For my reference; Daniel has a prospective fix for this bug."""
+
+-- Comment 4: """ClusterFuzz has detected this issue as fixed in range 201805140521:201805150523.
+
+Detailed report: https://oss-fuzz.com/testcase?key=6722246199476224
+
+Project: curl
+Fuzzer: afl_curl_fuzzer_rtsp
+Fuzz target binary: curl_fuzzer_rtsp
+Job Type: afl_asan_curl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x629000009214
+Crash State:
+  rtsp_rtp_readwrite
+  readwrite_data
+  Curl_readwrite
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=201803150536:201803160524
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=201805140521:201805150523
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6722246199476224
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 5: """ClusterFuzz testcase 6722246199476224 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

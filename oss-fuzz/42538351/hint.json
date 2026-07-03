@@ -1,0 +1,10 @@
+{
+    "libavcodec/eatgq.c": {
+        "entities": [
+            "function_tgq_decode_mb"
+        ],
+        "lines": [
+            209
+        ]
+    }
+}

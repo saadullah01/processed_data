@@ -1,0 +1,54 @@
+-- Comment 1:
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffDecoderFuzzer-NefDecoder
+Fuzz target binary: TiffDecoderFuzzer-NefDecoder
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x7fa238a5a802
+Crash State:
+  rawspeed::NikonDecompressor::decompress
+  rawspeed::NefDecoder::decodeRawInternal
+  rawspeed::RawDecoder::decodeRaw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201707310503:201708010503
+
+Reproducer Testcase: 5062035266076672
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201709240519:201709250516.
+
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffDecoderFuzzer-NefDecoder
+Fuzz target binary: TiffDecoderFuzzer-NefDecoder
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison WRITE 2
+Crash Address: 0x7fa238a5a802
+Crash State:
+  rawspeed::NikonDecompressor::decompress
+  rawspeed::NefDecoder::decodeRawInternal
+  rawspeed::RawDecoder::decodeRaw
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201707310503:201708010503
+Fixed: 201709240519:201709250516
+
+Reproducer Testcase: 5062035266076672
+
+-- Comment 3:
+ClusterFuzz testcase 5062035266076672 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

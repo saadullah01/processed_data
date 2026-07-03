@@ -1,0 +1,16 @@
+{
+    "ext/spl/spl_observer.c": {
+        "entities": [
+            "method_SplObjectStorage::unserialize"
+        ],
+        "lines": [
+            682,
+            715,
+            731
+        ]
+    },
+    "ext/standard/tests/serialize/SplObjectStorage_object_reference.phpt": {
+        "entities": [],
+        "lines": []
+    }
+}

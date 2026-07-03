@@ -1,0 +1,24 @@
+Project: stb
+Fuzzing Engine: libFuzzer
+Fuzz Target: stbi_read_fuzzer
+Job Type: libfuzzer_ubsan_stb
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  stbi__jpeg_huff_decode
+  stbi__jpeg_decode_block_prog_dc
+  stbi__parse_entropy_coded_data
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_stb&range=202005260644:202005270331
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4835644724084736
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer stbi_read_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4835644724084736 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_stb&range=202301290605:202301300608

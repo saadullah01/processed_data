@@ -1,0 +1,18 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x000002002470
+Crash State:
+  ripBits
+  print_insn
+  print_insn_xgate
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_disassemble from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5701610390421504 is verified as fixed

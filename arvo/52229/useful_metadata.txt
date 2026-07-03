@@ -1,0 +1,24 @@
+Project: ndpi
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: ndpi
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_process_packet
+Job Type: honggfuzz_asan_ndpi
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7f4b10b90120
+Crash State:
+  check_content_type_and_change_protocol
+  check_content_type_and_change_protocol
+  ndpi_search_http_tcp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_process_packet from making much progress. Fixing this will allow more bugs to be found.

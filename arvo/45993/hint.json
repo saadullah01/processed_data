@@ -1,0 +1,16 @@
+{
+    "src/jp2image_int.cpp": {
+        "entities": [
+            "function_isValidBoxFileType"
+        ],
+        "lines": [
+            11
+        ]
+    },
+    "unitTests/test_jp2image_int.cpp": {
+        "entities": [],
+        "lines": [
+            58
+        ]
+    }
+}

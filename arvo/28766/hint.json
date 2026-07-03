@@ -1,0 +1,29 @@
+{
+    "src/trace_processor/importers/proto/memory_tracker_snapshot_parser.cc": {
+        "entities": [
+            "method_MemoryTrackerSnapshotParser::EmitRows",
+            "function_MemoryTrackerSnapshotParser::EmitRows"
+        ],
+        "lines": [
+            204,
+            165,
+            189
+        ]
+    },
+    "src/trace_processor/trace_database_integrationtest.cc": {
+        "entities": [],
+        "lines": [
+            273,
+            266,
+            299
+        ]
+    },
+    "tools/install-build-deps": {
+        "entities": [
+            "variable_BUILD_DEPS_HOST"
+        ],
+        "lines": [
+            217
+        ]
+    }
+}

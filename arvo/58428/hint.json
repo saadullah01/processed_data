@@ -1,0 +1,10 @@
+{
+    "src/OT/glyf/SimpleGlyph.hh": {
+        "entities": [
+            "struct_SimpleGlyph"
+        ],
+        "lines": [
+            191
+        ]
+    }
+}

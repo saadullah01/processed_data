@@ -1,0 +1,12 @@
+{
+    "arch/X86/X86Mapping.c": {
+        "entities": [
+            "variable_regsize_map_32",
+            "variable_regsize_map_64"
+        ],
+        "lines": [
+            824,
+            578
+        ]
+    }
+}

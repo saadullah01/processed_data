@@ -1,0 +1,18 @@
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 8
+Crash Address: 0x000009247818
+Crash State:
+  proto_item_add_bitmask_tree
+  proto_tree_add_bitmask_with_flags
+  dissect_metric_reporting_policy
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz has detected this issue as fixed in range 201801300738:201801310728.
+
+ClusterFuzz testcase 6168934182027264 is verified as fixed, so closing issue as verified.

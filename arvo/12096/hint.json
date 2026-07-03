@@ -1,0 +1,10 @@
+{
+    "lib/http2/scheduler.c": {
+        "entities": [
+            "function_h2o_http2_scheduler_relocate"
+        ],
+        "lines": [
+            267
+        ]
+    }
+}

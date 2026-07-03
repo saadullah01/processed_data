@@ -1,0 +1,26 @@
+{
+    "Lib/test/test_fstring.py": {
+        "entities": [],
+        "lines": [
+            565
+        ]
+    },
+    "Parser/tokenizer.c": {
+        "entities": [
+            "function_tok_get_normal_mode"
+        ],
+        "lines": [
+            43,
+            2235
+        ]
+    },
+    "Parser/tokenizer.h": {
+        "entities": [
+            "struct_tok_state"
+        ],
+        "lines": [
+            10,
+            123
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_objcopy
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x621f180158f8
+Crash State:
+  coff_mangle_symbols
+  coff_write_object_contents
+  bfd_close
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

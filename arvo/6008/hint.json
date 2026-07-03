@@ -1,0 +1,12 @@
+{
+    "coders/psd.c": {
+        "entities": [
+            "function_ReadPSDMergedImage",
+            "function_ReadPSDChannelRaw"
+        ],
+        "lines": [
+            2012,
+            1093
+        ]
+    }
+}

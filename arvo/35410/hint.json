@@ -1,0 +1,33 @@
+{
+    "src/internal.c": {
+        "entities": [
+            "function_TimingPadVerify"
+        ],
+        "lines": [
+            15421
+        ]
+    },
+    "src/tls.c": {
+        "entities": [
+            "function_Hmac_UpdateFinal_CT",
+            "function_TLS_hmac"
+        ],
+        "lines": [
+            898,
+            870,
+            1225,
+            907,
+            916,
+            889
+        ]
+    },
+    "wolfssl/test.h": {
+        "entities": [
+            "function_my_psk_client_tls13_cb"
+        ],
+        "lines": [
+            2043,
+            2100
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Comment 1:
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x6250000cf602
+Crash State:
+  dissect_rtcp
+  dissect_rtcp_heur_udp
+  dissector_try_heuristic
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Comment 2:
+Duplicate of issue 6512 and others.
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201805140417:201805150418.
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x6250000cf602
+Crash State:
+  dissect_rtcp
+  dissect_rtcp_heur_udp
+  dissector_try_heuristic
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

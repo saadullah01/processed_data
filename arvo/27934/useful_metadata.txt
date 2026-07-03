@@ -1,0 +1,18 @@
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_chunk_fuzzer
+Job Type: libfuzzer_msan_c-blosc2
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  tinfl_decompress
+  mz_inflate
+  mz_uncompress
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4863557237473280 is verified as fixed

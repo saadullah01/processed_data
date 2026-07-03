@@ -1,0 +1,44 @@
+{
+    "encoder/ixheaace_basic_ops.c": {
+        "entities": [],
+        "lines": [
+            33,
+            18
+        ]
+    },
+    "encoder/ixheaace_common_utils.h": {
+        "entities": [],
+        "lines": [
+            37
+        ]
+    },
+    "encoder/ixheaace_cplx_pred.c": {
+        "entities": [
+            "function_iusace_cplx_pred_main"
+        ],
+        "lines": [
+            371,
+            51
+        ]
+    },
+    "encoder/ixheaace_sbr_missing_harmonics_det.c": {
+        "entities": [
+            "function_ia_enhaacplus_enc_calculate_comp_vector"
+        ],
+        "lines": [
+            50,
+            538,
+            549
+        ]
+    },
+    "encoder/ixheaace_sbr_ton_corr_hp.c": {
+        "entities": [
+            "function_ixheaace_calculate_tonality_quotas"
+        ],
+        "lines": [
+            178,
+            49,
+            18
+        ]
+    }
+}

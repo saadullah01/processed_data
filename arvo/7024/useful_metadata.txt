@@ -1,0 +1,29 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 2
+Severity: Medium
+
+Fuzzer: afl_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Address: 0x7f30dcf3ab40
+Crash State:
+  dissect_ieeeNUMBER_common
+  dissect_ieeeNUMBER
+  call_dissector_through_handle
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Regressed: 201803180519:201803190519
+Reproducer Testcase ID: 6062904672518144
+
+ClusterFuzz has detected this issue as fixed in range 201803200521:201803220519
+Fixed: 201803200521:201803220519
+
+ClusterFuzz testcase 6062904672518144 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

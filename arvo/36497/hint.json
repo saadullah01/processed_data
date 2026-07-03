@@ -1,0 +1,32 @@
+{
+    "lib/jxl/dec_modular.cc": {
+        "entities": [
+            "method_ModularFrameDecoder::ModularImageToDecodedRect",
+            "function_ModularFrameDecoder::ModularImageToDecodedRect"
+        ],
+        "lines": [
+            578,
+            563
+        ]
+    },
+    "lib/jxl/dec_reconstruct.cc": {
+        "entities": [
+            "function_FinalizeFrameDecoding",
+            "function_ScaleRectForEC"
+        ],
+        "lines": [
+            1149,
+            430
+        ]
+    },
+    "lib/jxl/dec_upsample.cc": {
+        "entities": [
+            "method_Upsampler::UpsampleRect"
+        ],
+        "lines": [
+            355,
+            12,
+            365
+        ]
+    }
+}

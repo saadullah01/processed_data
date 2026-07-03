@@ -1,0 +1,36 @@
+Project: icu
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: collator_rulebased_fuzzer
+Job Type: libfuzzer_msan_icu
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  isMatchAtCPBoundary
+  u_strFindFirst_66
+  icu_66::UnicodeString::indexOf
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+It fail on line 48
+ 42 static inline UBool
+ 43 isMatchAtCPBoundary(const UChar *start, const UChar *match, const UChar *matchLimit, const UChar *limit) {
+ 44     if(U16_IS_TRAIL(*match) && start!=match && U16_IS_LEAD(*(match-1))) {
+ 45         /* the leading edge of the match is in the middle of a surrogate pair */
+ 46         return FALSE;
+ 47     }
+ 48     if(U16_IS_LEAD(*(matchLimit-1)) && match!=limit && U16_IS_TRAIL(*matchLimit)) {
+ 49         /* the trailing edge of the match is in the middle of a surrogate pair */
+ 50         return FALSE;
+ 51     }
+ 52     return TRUE;
+ 53 }

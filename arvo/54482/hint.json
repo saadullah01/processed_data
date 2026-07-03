@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-hdmx-table.hh": {
+        "entities": [
+            "struct_hdmx"
+        ],
+        "lines": [
+            156
+        ]
+    }
+}

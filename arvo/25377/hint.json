@@ -1,0 +1,15 @@
+{
+    "src/http/v2/ngx_http_v2.c": {
+        "entities": [
+            "function_ngx_http_v2_state_goaway",
+            "function_ngx_http_v2_state_settings"
+        ],
+        "lines": [
+            2310,
+            2118,
+            2095,
+            953,
+            2269
+        ]
+    }
+}

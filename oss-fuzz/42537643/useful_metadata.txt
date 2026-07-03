@@ -1,0 +1,35 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_AIC_fuzzer: Use-of-uninitialized-value in idctRowCondDC_int16_8bit
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_AIC_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  idctRowCondDC_int16_8bit
+  ff_simple_idct_int16_8bit
+  aic_decode_frame
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4804460075876352 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+
+Project: ffmpeg
+
+Code Changes
+--
+
+Pending Code Changes
+--

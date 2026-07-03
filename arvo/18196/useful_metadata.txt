@@ -1,0 +1,29 @@
+Project: htslib
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Project: htslib
+Fuzzing Engine: libFuzzer
+Fuzz Target: hts_open_fuzzer
+Job Type: libfuzzer_asan_htslib
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x605a05a69770
+Crash State:
+  vcf_format
+  vcf_write
+  bcf_write
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Crash Revision: 201910130231
+Reproducer Testcase ID: 5652579714859008
+
+Comment 2:
+ClusterFuzz testcase 5652579714859008 is verified as fixed
+Verified fixed revision range: 201910150231:201910160228
+
+Comment 3:
+This bug has been fixed for 30 days. It has been opened to the public.

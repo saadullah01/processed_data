@@ -1,0 +1,44 @@
+{
+    "libclamav/blob.c": {
+        "entities": [
+            "function_blobClose",
+            "function_blobAddData"
+        ],
+        "lines": [
+            225,
+            176,
+            241,
+            309,
+            255
+        ]
+    },
+    "libclamav/entconv.c": {
+        "entities": [
+            "function_cli_codepage_to_utf8"
+        ],
+        "lines": [
+            804,
+            901,
+            923,
+            879,
+            943,
+            787,
+            859,
+            956,
+            829,
+            990
+        ]
+    },
+    "libclamav/vba_extract.c": {
+        "entities": [
+            "function_cli_vba_readdir_new"
+        ],
+        "lines": [
+            1186,
+            773,
+            1136,
+            1204,
+            374
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free WRITE 8
+Severity: High
+
+-- Comment 1:
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-use-after-free WRITE 8
+Crash Address: 0x607000000cd0
+Crash State:
+  next_tvb_add_handle
+  dissect_h225_H245Control_item
+  dissect_per_sequence_of_helper
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201802010735:201802020730
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzshark_ip_proto-udp from making much progress. Fixing this will allow more bugs to be found.
+
+-- Comment 3:
+Fixed by
+
+-- Comment 4:
+ClusterFuzz has detected this issue as fixed in range 201802120628:201802130617.
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-use-after-free WRITE 8
+Crash Address: 0x607000000cd0
+Crash State:
+  next_tvb_add_handle
+  dissect_h225_H245Control_item
+  dissect_per_sequence_of_helper
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 201802010735:201802020730
+Fixed: 201802120628:201802130617
+
+Reproducer Testcase: 6177897392898048
+
+-- Comment 5:
+ClusterFuzz testcase 6177897392898048 is verified as fixed, so closing issue as verified.
+
+-- Comment 6:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+-- Comment 7:
+Issue 3779 has been merged into this issue.

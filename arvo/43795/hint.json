@@ -1,0 +1,10 @@
+{
+    "gas/macro.c": {
+        "entities": [
+            "function_buffer_and_nest"
+        ],
+        "lines": [
+            112
+        ]
+    }
+}

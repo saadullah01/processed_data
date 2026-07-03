@@ -1,0 +1,28 @@
+{
+    "include/libxml/xpath.h": {
+        "entities": [
+            "struct__xmlXPathParserContext"
+        ],
+        "lines": [
+            400
+        ]
+    },
+    "xpath.c": {
+        "entities": [
+            "function_xmlXPathRunEval",
+            "function_valuePop",
+            "function_xmlXPathCompParserContext",
+            "function_xmlXPathCompOpEval"
+        ],
+        "lines": [
+            13952,
+            2885,
+            13226,
+            2833,
+            13205,
+            6325,
+            13269,
+            13245
+        ]
+    }
+}

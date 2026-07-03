@@ -1,0 +1,18 @@
+{
+    "epan/dissectors/asn1/rrc/rrc.cnf": {
+        "entities": [
+            "function_PLMN-IdentityWithOptionalMCC-r6"
+        ],
+        "lines": [
+            901
+        ]
+    },
+    "epan/dissectors/packet-rrc.c": {
+        "entities": [
+            "function_dissect_rrc_PLMN_IdentityWithOptionalMCC_r6"
+        ],
+        "lines": [
+            135861
+        ]
+    }
+}

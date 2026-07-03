@@ -1,0 +1,122 @@
+Project: flac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5076189185572864
+
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_decoder
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x724000010000
+Crash State:
+  FLAC__crc16_update_words32
+  crc16_update_block_
+  bitreader_read_from_client_
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_msan_flac&revision=201908151754
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5076189185572864
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer_decoder from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """If I compile FLAC with the sanitizer flags:
+```
+CFLAGS="-fsanitize=address -g" CXXFLAGS=${CFLAGS} ./configure
+```
+and then download the test case and run it with:
+```
+./src/flac/flac -d clusterfuzz-testcase-fuzzer_decoder-5076189185572864.flac -f -o a.wav
+```
+and I get:
+```
+flac 1.3.3
+Copyright (C) 2000-2009  Josh Coalson, 2011-2016  Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+clusterfuzz-testcase-fuzzer_decoder-5076189185572864.flac: *** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+
+The input file is either not a FLAC file or is corrupted.  If you are
+convinced it is a FLAC file, you can rerun the same command and add the
+-F parameter to try and recover as much as possible from the file.
+```
+No memory sanitizer error.
+
+So, I cloned the `https://github.com/google/oss-fuzz` repo and looked at `projects/flac/build.sh` script which references two files `fuzzer_decoder.cpp` and `uzzer_encoder.cpp`. Where are those files? They are not in the FLAC repo and they are no in the `oss-fuzz` repo, so where?"""
+
+-- Comment 4: """Ok, managed to find them by looking in the `DockerFile`. """
+
+-- Comment 5: """Yeah, the testcase is not a pure FLAC file, it contains various parameters to the decoder as well, as you can see in fuzzer_decoder.cpp
+
+Apart from https://github.com/guidovranken/flac-fuzzers you also need https://github.com/guidovranken/fuzzing-headers
+
+Were you able to reproduce the issue now?"""
+
+-- Comment 6: """Not yet. What should `LIB_FUZZING_ENGINE` be set to?"""
+
+-- Comment 7: """Use -fsanitize=fuzzer as a replacement for LIB_FUZZING_ENGINE"""
+
+-- Comment 8: """As an upstream dev, this oss-fuzz process has been far from ideal.
+
+The documentation on how to reproduce the results is woefully poor and I am currently in a position where the fuzzing process is finding bugs significantly quicker than that I can even figure out how work on the problems found."""
+
+-- Comment 9: """Specifically, the dociker commands to run to build/run/test this.
+
+I also consider docker and impediment to the development/debugging process, so it would help to have a way to reproduce this outside docker."""
+
+-- Comment 10: """I've made you a build script: https://github.com/guidovranken/flac-fuzzers/blob/master/build_fuzzers.sh
+This produces the fuzzer binaries, which you can use to reproduce crashes, from inputs you download from oss-fuzz.com
+Hopefully this helps
+
+The docker files are not meant to be run in the normal way but as:
+
+git clone https://github.com/google/oss-fuzz.git
+cd oss-fuzz
+infra/helper.py build_fuzzers flac"""
+
+-- Comment 11: """Ok, I have a fix for this one.
+
+The `build_fuzzers.sh` script was useful to show how to build this, but was not useful for debugging or validating the fix, because the shell script is a one short build script and what is needed is something closer to a Makefile. I spent considerable amount of time putting together a Makefile that is not perfect, but does most of the work.
+
+From a debugging/validation point of view it would be orders of magnitude easier if the fuzzers were in the FLAC git repo and enabled with a `--enable-fuzzers` option for `./configure`."""
+
+-- Comment 12: """Also, how should I refer to this issue in the git commit message? Is the URL for this ticket ok? Will this ticket be made public at some point?"""
+
+-- Comment 13: """Please copy all the files you need to your repository. I'll retire https://github.com/guidovranken/flac-fuzzers and adapt the OSS-Fuzz build script to use the local configure script to build the fuzzers.
+
+With regards to the commit message, please include the string "Credit to OSS-Fuzz" as mentioned here: https://google.github.io/oss-fuzz/architecture/
+
+You may include a link to the report; the report will be made public automatically 30 days after the fix is pushed."""
+
+-- Comment 14: """https://github.com/xiph/flac/commit/c34c3459b514df02d922a882d406986e7f47afa4"""
+
+-- Comment 15: """ClusterFuzz testcase 5076189185572864 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_flac&range=201909150147:201909160147
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 16: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

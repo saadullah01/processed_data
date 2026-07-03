@@ -1,0 +1,18 @@
+{
+    "decoder/svc/isvcd_parse_ebslice.c": {
+        "entities": [
+            "function_isvcd_mv_pred_ref_tfr_nby2_ebmb"
+        ],
+        "lines": [
+            487
+        ]
+    },
+    "decoder/svc/isvcd_process_epslice.c": {
+        "entities": [
+            "function_isvcd_mv_pred_ref_tfr_nby2_epmb"
+        ],
+        "lines": [
+            340
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: dewarp_fuzzer
+Job Type: libfuzzer_msan_leptonica
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Sanitizer: memory (MSAN)
+Crash State:
+  genPathname
+  getFilenamesInDirectory
+  getSortedPathnamesInDirectory
+Recommended Security Severity: Medium
+
+fixed by checking input to getFilenamesInDirectory()
+Also turning off debug for dewarp function -- we don't want debug output when fuzzing (not used in production; slow).
+
+ClusterFuzz testcase 6043684579311616 is verified as fixed.

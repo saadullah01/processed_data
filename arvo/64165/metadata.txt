@@ -1,0 +1,46 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=4883320022106112
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzTTF
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x61b000000dd7
+Crash State:
+  OpenType::be_u32
+  OpenType::Cmap::subtable
+  OpenType::Font::try_load_from_offset
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_serenity&range=202303060604:202303070613
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4883320022106112
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored."""
+
+-- Comment 2: """ClusterFuzz testcase 4883320022106112 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_serenity&range=202312020614:202312030610
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

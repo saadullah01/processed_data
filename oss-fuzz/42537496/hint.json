@@ -1,0 +1,10 @@
+{
+    "base/gdevp14.c": {
+        "entities": [
+            "function_pdf14_compute_group_device_int_rect"
+        ],
+        "lines": [
+            7024
+        ]
+    }
+}

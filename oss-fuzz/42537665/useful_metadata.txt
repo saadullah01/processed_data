@@ -1,0 +1,28 @@
+ffmpeg:ffmpeg_dem_IAMF_fuzzer: Use-of-uninitialized-value in ff_iamf_parse_obu_header
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_IAMF_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_iamf_parse_obu_header
+  ff_iamfdec_read_descriptors
+  iamf_read_header
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5931276639469568 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

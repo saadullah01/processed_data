@@ -1,0 +1,22 @@
+Project: open62541
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: open62541
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_binary_decode
+Job Type: libfuzzer_asan_open62541
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x611000000c88
+Crash State:
+  diagnosticInfoOrder
+  structureOrder
+  UA_order
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

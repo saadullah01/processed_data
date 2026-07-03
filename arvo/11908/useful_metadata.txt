@@ -1,0 +1,22 @@
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-shape-fuzzer
+Fuzz target binary: hb-shape-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 4
+Crash Address: 0x7f0b12de0558
+Crash State:
+  hb_array_t<char const>::cmp
+  OT::post::accelerator_t::cmp_key
+  hb_bsearch_r
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed in harfBuzz master already.
+
+ClusterFuzz has detected this issue as fixed in range 201812180219:201812190219.
+
+ClusterFuzz testcase 5642666339991552 is verified as fixed, so closing issue as verified.

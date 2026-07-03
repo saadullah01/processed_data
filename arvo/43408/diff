@@ -1,0 +1,50 @@
+From 7839d0493830d19bd02f84590187553509b21ee8 Mon Sep 17 00:00:00 2001
+From: Aleks L <93376818+sashashura@users.noreply.github.com>
+Date: Wed, 20 Jul 2022 09:37:05 +0100
+Subject: [PATCH] Fixes Heap-buffer-overflow READ in
+ pcpp::cross_platform_memmem (#914)
+
+* Fixes Heap-buffer-overflow READ in pcpp::cross_platform_memmem
+
+Fixes Heap-buffer-overflow READ in pcpp::cross_platform_memmem:
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=43408
+
+The `haystackLen` for `cross_platform_memmem` call in `SipRequestFirstLine::parseVersion` is calculated as `m_SipRequest->getDataLen() - m_UriOffset`. However when `m_DataLen` is 4 and `m_UriOffset` is 5 it results in -1 which is converted into max uint64. This leads to memory read out of data buffer bounds.
+
+* Remove trailing tab
+
+* Add the regression test
+---
+ Packet++/src/SipLayer.cpp                          |   7 +++++++
+ ...-testcase-minimized-FuzzTarget-5421416466481152 | Bin 0 -> 72 bytes
+ 2 files changed, 7 insertions(+)
+ create mode 100644 Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5421416466481152
+
+diff --git a/Packet++/src/SipLayer.cpp b/Packet++/src/SipLayer.cpp
+index 506046d751..ff1203578e 100644
+--- a/Packet++/src/SipLayer.cpp
++++ b/Packet++/src/SipLayer.cpp
+@@ -291,6 +291,13 @@ SipRequestLayer::SipMethod SipRequestFirstLine::parseMethod(char* data, size_t d
+ 
+ void SipRequestFirstLine::parseVersion()
+ {
++	if (m_SipRequest->getDataLen() < m_UriOffset)
++	{
++		m_Version = "";
++		m_VersionOffset = -1;
++		return;
++	}
++
+ 	char* data = (char*)(m_SipRequest->m_Data + m_UriOffset);
+ 	char* verPos = (char*)cross_platform_memmem(data, m_SipRequest->getDataLen() - m_UriOffset, " SIP/", 5);
+ 	if (verPos == NULL)
+diff --git a/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5421416466481152 b/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5421416466481152
+new file mode 100644
+index 0000000000000000000000000000000000000000..954705c33ad6f945c952cb524b035b41064772f4
+GIT binary patch
+literal 72
+wcmca|c+)~A1{MYd5cm%!6?hmJAPkTQ1BBxWmIkr~AyN>f!bd?oPd_(*05%s6(*OVf
+
+literal 0
+HcmV?d00001
+

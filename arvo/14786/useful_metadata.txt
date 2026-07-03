@@ -1,0 +1,28 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-use-after-return READ 4
+
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-subset-fuzzer
+Fuzz target binary: hb-subset-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0x7f6ad65e51e0
+Crash State:
+  bool OT::Coverage::serialize<hb_map_iter_t<hb_map_iter_t<hb_filter_iter_t<OT::Co
+  bool OT::SingleSubstFormat1::serialize<hb_map_iter_t<hb_map_iter_t<hb_filter_ite
+  bool OT::SingleSubst::serialize<hb_map_iter_t<hb_filter_iter_t<OT::Coverage::ite
+
+Sanitizer: address (ASAN)
+
+Regressed revision range: 201905152240:201905160246
+Reproducer Testcase id: 5634197349203968
+
+Fixed revision range: 201905160246:201905170236
+
+ClusterFuzz testcase 5634197349203968 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,40 @@
+Project: net-snmp
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Comment 1:
+Project: net-snmp
+Fuzzer: afl_net-snmp_agentx_parse_fuzzer
+Fuzz target binary: agentx_parse_fuzzer
+Job Type: afl_asan_net-snmp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x61500000369a
+Crash State:
+  agentx_parse_string
+  agentx_parse
+  agentx_parse_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+Fixed by commit 7de049193ab7 ("AgentX: Avoid reading uninitialized data"). That commit fixes a bug that was introduced recently by commit 46a42549dbae ("AgentX: Reduce stack usage").
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201904280141:201904290141.
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x61500000369a
+Crash State:
+  agentx_parse_string
+  agentx_parse
+  agentx_parse_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

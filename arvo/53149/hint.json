@@ -1,0 +1,19 @@
+{
+    "libblkid/src/superblocks/iso9660.c": {
+        "entities": [
+            "function_probe_iso9660",
+            "function_merge_utf16be_ascii"
+        ],
+        "lines": [
+            195,
+            70,
+            169,
+            269,
+            209,
+            278,
+            312,
+            253,
+            287
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "blosc/blosc2.c": {
+        "entities": [
+            "function_blosc2_getitem_ctx"
+        ],
+        "lines": [
+            2673
+        ]
+    },
+    "blosc/frame.c": {
+        "entities": [
+            "function_get_coffsets"
+        ],
+        "lines": [
+            914
+        ]
+    }
+}

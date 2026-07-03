@@ -1,0 +1,18 @@
+Project: cyclonedds
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_type_object
+Job Type: libfuzzer_ubsan_cyclonedds
+Platform Id: linux
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x00000043dc6c
+Crash State:
+  ddsi_type_add_typeobj
+  fuzz_type_object.c
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_type_object from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5539544822054912 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,46 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5369591899488256
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzJs
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x000003304030
+Crash State:
+  Bad-cast to JS::GlobalObject from JS::Object
+  JS::Object::Object
+  JS::ScopeObject::ScopeObject
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_serenity&range=202101030615:202101040606
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5369591899488256
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored."""
+
+-- Comment 2: """ClusterFuzz testcase 5369591899488256 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_serenity&range=202101050610:202101060611
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

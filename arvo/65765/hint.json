@@ -1,0 +1,12 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "function_PackLinuxElf64::elf_find_table_size",
+            "function_PackLinuxElf32::elf_find_table_size"
+        ],
+        "lines": [
+            2046,
+            7935
+        ]
+    }
+}

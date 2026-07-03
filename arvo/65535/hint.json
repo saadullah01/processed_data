@@ -1,0 +1,12 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "method_PackLinuxElf64::canUnpack",
+            "method_PackLinuxElf32::canUnpack"
+        ],
+        "lines": [
+            2420,
+            2966
+        ]
+    }
+}

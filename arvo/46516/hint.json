@@ -1,0 +1,10 @@
+{
+    "gas/sb.c": {
+        "entities": [
+            "function_sb_scrub_and_add_sb"
+        ],
+        "lines": [
+            109
+        ]
+    }
+}

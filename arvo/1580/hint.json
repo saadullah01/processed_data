@@ -1,0 +1,10 @@
+{
+    "gdal/ogr/ogrsf_frmts/kml/kml.cpp": {
+        "entities": [
+            "method_KML::unregisterLayerIfMatchingThisNode"
+        ],
+        "lines": [
+            654
+        ]
+    }
+}

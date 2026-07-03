@@ -1,0 +1,10 @@
+{
+    "devices/vector/gdevpdfi.c": {
+        "entities": [
+            "function_gdev_pdf_dev_spec_op"
+        ],
+        "lines": [
+            3026
+        ]
+    }
+}

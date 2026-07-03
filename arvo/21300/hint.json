@@ -1,0 +1,10 @@
+{
+    "opcodes/metag-dis.c": {
+        "entities": [
+            "function_print_insn_metag"
+        ],
+        "lines": [
+            3362
+        ]
+    }
+}

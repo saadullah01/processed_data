@@ -1,0 +1,16 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  gp_semaphore_close
+  gx_semaphore_free
+  icc_linkcache_finalize
+
+Sanitizer: address (ASAN)
+
+Regressed: 202201210610:202201220610

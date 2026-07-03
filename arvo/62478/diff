@@ -1,0 +1,26 @@
+From ba2712b59c0423ccd7bb7ce9bd1b6701f86a0a6d Mon Sep 17 00:00:00 2001
+From: Kleis Auke Wolthuizen <github@kleisauke.nl>
+Date: Tue, 3 Oct 2023 18:08:51 +0200
+Subject: [PATCH] archive: ensure files are written in binary mode (#3694)
+
+On POSIX-compliant operating systems (e.g. Linux, macOS), there is
+no difference between binary mode and text mode, but Windows
+transforms line feeds ("\n") to "\r\n" sequences during write
+operations, resulting in corrupted images.
+---
+ libvips/foreign/archive.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libvips/foreign/archive.c b/libvips/foreign/archive.c
+index fd6f284060..ad16e114cd 100644
+--- a/libvips/foreign/archive.c
++++ b/libvips/foreign/archive.c
+@@ -301,7 +301,7 @@ vips__archive_mkfile_file(VipsArchive *archive,
+ 
+ 	path = g_build_filename(archive->base_dirname, filename, NULL);
+ 
+-	if (!(f = vips__file_open_write(path, TRUE))) {
++	if (!(f = vips__file_open_write(path, FALSE))) {
+ 		g_free(path);
+ 		return -1;
+ 	}

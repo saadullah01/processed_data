@@ -1,0 +1,95 @@
+{
+    "cpp/src/arrow/array/array_base.cc": {
+        "entities": [],
+        "lines": [
+            246
+        ]
+    },
+    "cpp/src/arrow/array/array_base.h": {
+        "entities": [],
+        "lines": [
+            151
+        ]
+    },
+    "cpp/src/arrow/array/array_test.cc": {
+        "entities": [],
+        "lines": [
+            113
+        ]
+    },
+    "cpp/src/arrow/array/concatenate.cc": {
+        "entities": [
+            "method_ConcatenateImpl::Buffers",
+            "method_Buffers",
+            "class_ConcatenateImpl"
+        ],
+        "lines": [
+            355,
+            263,
+            202,
+            299,
+            337,
+            279,
+            319
+        ]
+    },
+    "cpp/src/arrow/array/data.cc": {
+        "entities": [],
+        "lines": [
+            105,
+            29
+        ]
+    },
+    "cpp/src/arrow/array/data.h": {
+        "entities": [
+            "struct_ArrayData"
+        ],
+        "lines": [
+            195
+        ]
+    },
+    "cpp/src/arrow/buffer.cc": {
+        "entities": [],
+        "lines": [
+            25,
+            43
+        ]
+    },
+    "cpp/src/arrow/buffer.h": {
+        "entities": [],
+        "lines": [
+            336,
+            354
+        ]
+    },
+    "cpp/src/arrow/buffer_test.cc": {
+        "entities": [
+            "function_TEST(TestBuffer, SliceBuffer)"
+        ],
+        "lines": [
+            476,
+            463
+        ]
+    },
+    "cpp/src/arrow/ipc/reader.cc": {
+        "entities": [
+            "method_ArrayLoader::ReadBuffer",
+            "class_ArrayLoader"
+        ],
+        "lines": [
+            123
+        ]
+    },
+    "cpp/src/arrow/util/int_util.h": {
+        "entities": [],
+        "lines": [
+            150
+        ]
+    },
+    "testing": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

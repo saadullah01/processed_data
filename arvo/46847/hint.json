@@ -1,0 +1,10 @@
+{
+    "src/in_dxf.c": {
+        "entities": [
+            "function_add_TABLEGEOMETRY_Cell"
+        ],
+        "lines": [
+            5092
+        ]
+    }
+}

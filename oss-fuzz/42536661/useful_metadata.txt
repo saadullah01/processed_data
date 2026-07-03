@@ -1,0 +1,32 @@
+libarchive:libarchive_fuzzer: Heap-use-after-free in archive_read_data
+
+Project: libarchive
+Fuzzing Engine: libFuzzer
+Fuzz Target: libarchive_fuzzer
+Job Type: libfuzzer_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ {*}
+Crash Address: 0x7a62a91bfb35
+Crash State:
+  archive_read_data
+  libarchive_fuzzer.cc
+  process_head_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 6260810997891072 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Access: Default access
+View: Expanded Access
+Code Changes: --
+Pending Code Changes: --
+Project: libarchive

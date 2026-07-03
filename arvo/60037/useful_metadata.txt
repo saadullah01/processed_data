@@ -1,0 +1,17 @@
+Project: ntopng
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Fuzz Target: fuzz_dissect_packet
+Platform Id: linux
+Crash Address: 0x61100001a045
+Crash State:
+  IEC104Stats::processPacket
+  Flow::processIEC60870Packet
+  NetworkInterface::processPacket
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_dissect_packet from making much progress. Fixing this will allow more bugs to be found.

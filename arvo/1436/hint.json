@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-gsm_rlcmac.c": {
+        "entities": [
+            "struct_IU_Mode_Channel_Request_Desk_t"
+        ],
+        "lines": [
+            3027
+        ]
+    }
+}

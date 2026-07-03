@@ -1,0 +1,10 @@
+{
+    "src/libopensc/iasecc-sdo.c": {
+        "entities": [
+            "function_iasecc_parse_size"
+        ],
+        "lines": [
+            371
+        ]
+    }
+}

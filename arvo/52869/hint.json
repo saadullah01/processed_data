@@ -1,0 +1,10 @@
+{
+    "xinclude.c": {
+        "entities": [
+            "function_xmlXIncludeDoProcess"
+        ],
+        "lines": [
+            2247
+        ]
+    }
+}

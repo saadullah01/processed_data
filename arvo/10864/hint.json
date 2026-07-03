@@ -1,0 +1,10 @@
+{
+    "src/wpantund/NCPInstanceBase-Addresses.cpp": {
+        "entities": [
+            "method_NCPInstanceBase::on_mesh_prefix_was_removed"
+        ],
+        "lines": [
+            916
+        ]
+    }
+}

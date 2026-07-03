@@ -1,0 +1,22 @@
+Project: bind9
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: bind9
+Fuzzing Engine: libFuzzer
+Fuzz Target: dns_message_checksig_fuzzer
+Job Type: libfuzzer_ubsan_bind9
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  add_link
+  dns_qp_lookup
+  dns_zt_find
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

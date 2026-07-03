@@ -1,0 +1,16 @@
+{
+    "src/tls.c": {
+        "entities": [
+            "function_TLSX_CSR_Parse",
+            "function_TLSX_PreSharedKey_Parse",
+            "function_TLSX_CSR2_Parse"
+        ],
+        "lines": [
+            8517,
+            3526,
+            3502,
+            3091,
+            3517
+        ]
+    }
+}

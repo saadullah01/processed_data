@@ -1,0 +1,16 @@
+Project: freetype2
+Fuzzer: libFuzzer_freetype2_ftfuzzer
+Fuzz target binary: ftfuzzer
+Job Type: libfuzzer_asan_freetype2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x60d000000408
+Crash State:
+  TT_Get_MM_Var
+  FT_Get_MM_Var
+  setIntermediateAxis
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

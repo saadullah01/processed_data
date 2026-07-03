@@ -1,0 +1,22 @@
+Project: knot-dns
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: knot-dns
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_packet
+Job Type: libfuzzer_msan_knot-dns
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  rdata_seek
+  knot_tsig_rdata_is_ok
+  knot_pkt_parse
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,21 @@
+{
+    "src/lib/krb5/krb/pac.c": {
+        "entities": [
+            "function_krb5_pac_parse"
+        ],
+        "lines": [
+            349,
+            28,
+            317
+        ]
+    },
+    "src/lib/krb5/krb/t_pac.c": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            828,
+            431
+        ]
+    }
+}

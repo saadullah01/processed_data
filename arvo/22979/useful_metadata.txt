@@ -1,0 +1,24 @@
+Project: libraw
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: libraw
+Fuzzing Engine: honggfuzz
+Fuzz Target: libraw_fuzzer
+Job Type: honggfuzz_asan_libraw
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7f5f52e128a0
+Crash State:
+  __libcpp_strchr
+  strchr
+  LibRaw::parse_rollei
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libraw_fuzzer from making much progress. Fixing this will allow more bugs to be found.

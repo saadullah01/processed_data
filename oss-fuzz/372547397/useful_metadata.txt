@@ -1,0 +1,29 @@
+Issue 372547397
+
+htslib:hts_open_fuzzer: Heap-buffer-overflow in cram_encode_container
+
+Project: htslib
+Fuzzing Engine: libFuzzer
+Fuzz Target: hts_open_fuzzer
+Job Type: libfuzzer_asan_htslib
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x503000008088
+Crash State:
+  cram_encode_container
+  cram_flush_container_mt
+  cram_put_bam_seq
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+
+Project: htslib

@@ -1,0 +1,12 @@
+{
+    "source/fitz/load-bmp.c": {
+        "entities": [
+            "function_bmp_read_image",
+            "function_bmp_read_palette"
+        ],
+        "lines": [
+            932,
+            1100
+        ]
+    }
+}

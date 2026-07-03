@@ -1,0 +1,17 @@
+{
+    "epan/dissectors/packet-tls.c": {
+        "entities": [
+            "function_dissect_ssl_heur",
+            "function_dissect_ssl",
+            "function_proto_register_tls",
+            "function_dissect_tls"
+        ],
+        "lines": [
+            645,
+            583,
+            971,
+            981,
+            4536
+        ]
+    }
+}

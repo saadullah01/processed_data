@@ -1,0 +1,21 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_bfd
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x60703e3edcbe
+Crash State:
+  setup_sections
+  som_object_p
+  bfd_check_format_matches
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

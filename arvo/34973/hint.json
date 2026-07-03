@@ -1,0 +1,23 @@
+{
+    "AK/URLParser.cpp": {
+        "entities": [
+            "function_URLParser::parse_data_url"
+        ],
+        "lines": [
+            116,
+            125
+        ]
+    },
+    "Tests/AK/TestURL.cpp": {
+        "entities": [
+            "function_data_url_encoded",
+            "function_data_url_base64_encoded"
+        ],
+        "lines": [
+            1,
+            226,
+            237,
+            215
+        ]
+    }
+}

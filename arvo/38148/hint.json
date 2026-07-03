@@ -1,0 +1,41 @@
+{
+    "Tests/LibSQL/TestSqlStatementParser.cpp": {
+        "entities": [
+            "function_update",
+            "function_insert",
+            "function_delete_",
+            "function_TEST_CASE(delete_)",
+            "function_TEST_CASE(insert)"
+        ],
+        "lines": [
+            514,
+            452,
+            367,
+            307,
+            469,
+            379
+        ]
+    },
+    "Userland/Libraries/LibSQL/AST/Parser.cpp": {
+        "entities": [
+            "function_Parser::parse_insert_statement",
+            "function_Parser::parse_exists_expression",
+            "method_Parser::parse_insert_statement",
+            "function_Parser::parse_chained_expression",
+            "function_parse_primary_expression",
+            "function_Parser::parse_primary_expression"
+        ],
+        "lines": [
+            662,
+            219,
+            726,
+            422
+        ]
+    },
+    "Userland/Libraries/LibSQL/AST/Parser.h": {
+        "entities": [],
+        "lines": [
+            77
+        ]
+    }
+}

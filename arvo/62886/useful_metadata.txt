@@ -1,0 +1,24 @@
+Project: libxml2
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libxslt
+Fuzzing Engine: afl
+Fuzz Target: xpath
+Job Type: afl_asan_libxslt
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0001a65fd436
+Crash State:
+  xmlDictLookupInternal
+  xmlDictLookup
+  xmlNewDocNode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer xpath from making much progress.

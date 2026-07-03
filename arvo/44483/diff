@@ -1,0 +1,27 @@
+From b92d26a26e31b3b6c117b2d80c5ee1c8248e247f Mon Sep 17 00:00:00 2001
+From: Reini Urban <rurban@cpan.org>
+Date: Mon, 30 Oct 2023 18:33:46 +0100
+Subject: [PATCH] dxf2dwg: honor --force-free also with errors
+
+to repro ../tz/indwg/clusterfuzz-testcase-minimized-llvmfuzz-5075763015057408.dxf
+---
+ programs/dxf2dwg.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/programs/dxf2dwg.c b/programs/dxf2dwg.c
+index e4b0924017..47671b6f81 100644
+--- a/programs/dxf2dwg.c
++++ b/programs/dxf2dwg.c
+@@ -326,6 +326,12 @@ main (int argc, char *argv[])
+           fprintf (stderr, "READ ERROR 0x%x %s\n", error, filename_in);
+           if (need_free)
+             free (filename_out);
++          if (do_free
++#ifdef HAVE_VALGRIND_VALGRIND_H
++              || (RUNNING_ON_VALGRIND)
++#endif
++              )
++            dwg_free (&dwg);
+           continue;
+         }
+ 

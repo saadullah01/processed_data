@@ -1,0 +1,16 @@
+{
+    "src/lib/libdwarf/dwarf_rnglists.c": {
+        "entities": [
+            "function__dwarf_internal_read_rnglists_header",
+            "function_dwarf_get_rnglist_offset_index_value"
+        ],
+        "lines": [
+            33,
+            264,
+            368,
+            402,
+            604,
+            637
+        ]
+    }
+}

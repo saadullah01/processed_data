@@ -1,0 +1,56 @@
+Project: pigweed
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=4832986650247168
+
+Project: pigweed
+Fuzzing Engine: libFuzzer
+Fuzz Target: uart_transport_fuzzer
+Job Type: libfuzzer_ubsan_pigweed
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x0000002c9138
+Crash State:
+  Bad-cast to pw::stream::Writer from pw::stream::NullStream
+  pw::stream::ReaderWriter::operator pw::stream::Writer&
+  uart_transport_fuzzer.cc::$_0::operator
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_pigweed&revision=202312010605
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4832986650247168
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Filed in Buganizer at https://issues.pigweed.dev/314829006"""
+
+-- Comment 3: """ClusterFuzz testcase 4832986650247168 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_pigweed&range=202401080605:202401090619
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

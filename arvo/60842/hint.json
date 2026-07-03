@@ -1,0 +1,31 @@
+{
+    "src/box/bind.c": {
+        "entities": [
+            "function_sql_bind_decode"
+        ],
+        "lines": [
+            108
+        ]
+    },
+    "src/box/sql/mem.c": {
+        "entities": [
+            "function_mem_cmp_msgpack",
+            "function_port_c_get_vdbemem",
+            "function_mem_from_mp_ephemeral"
+        ],
+        "lines": [
+            2728,
+            3043,
+            3686
+        ]
+    },
+    "src/lumsgpack.c": {
+        "entities": [
+            "function_luamp_decode"
+        ],
+        "lines": [
+            486,
+            526
+        ]
+    }
+}

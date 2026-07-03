@@ -1,0 +1,22 @@
+Project: openthread
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: openthread
+Fuzzer: libFuzzer_openthread_cli-uart-received-fuzzer
+Fuzz target binary: cli-uart-received-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7fd8f688edaf
+Crash State:
+  ot::Ip6::Address::FromString
+  ot::Cli::Coap::ProcessRequest
+  ot::Cli::Interpreter::ProcessCoap
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

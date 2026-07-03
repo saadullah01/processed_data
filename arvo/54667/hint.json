@@ -1,0 +1,10 @@
+{
+    "bfd/vms-alpha.c": {
+        "entities": [
+            "function_parse_module"
+        ],
+        "lines": [
+            4347
+        ]
+    }
+}

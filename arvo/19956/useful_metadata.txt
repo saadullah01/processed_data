@@ -1,0 +1,22 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 12
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_i386_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 12
+Crash Address: 0xf11c3b90
+Crash State:
+  OT::VarRegionList::serialize
+  OT::VariationStore::serialize
+  bool OT::HVARVVAR::_subset<OT::HVAR>
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

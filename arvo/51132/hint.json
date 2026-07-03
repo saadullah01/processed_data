@@ -1,0 +1,10 @@
+{
+    "src/flb_parser.c": {
+        "entities": [
+            "function_multiline_parser_conf_file"
+        ],
+        "lines": [
+            753
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "ext/hash/hash_xxhash.c": {
+        "entities": [
+            "variable_php_hash_xxh32_ops",
+            "variable_php_hash_xxh64_ops"
+        ],
+        "lines": [
+            72,
+            79,
+            17,
+            24,
+            188
+        ]
+    },
+    "ext/hash/tests/xxhash_unserialize_memsize.phpt": {
+        "entities": [],
+        "lines": []
+    }
+}

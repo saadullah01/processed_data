@@ -1,0 +1,25 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_bfd
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffde1820a60
+Crash State:
+  vms_traverse_index
+  vms_lib_read_index
+  _bfd_vms_lib_archive_p
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5684410142818304 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

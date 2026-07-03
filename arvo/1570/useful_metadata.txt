@@ -1,0 +1,54 @@
+-- Comment 1:
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  decode_audio_block
+  ac3_decode_frame
+  decode_simple_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201705081931:201705091623
+
+Reproducer Testcase: 6455337349545984
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201705131623:201705141623.
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  decode_audio_block
+  ac3_decode_frame
+  decode_simple_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201705081931:201705091623
+Fixed: 201705131623:201705141623
+
+Reproducer Testcase: 6455337349545984
+
+-- Comment 3:
+ClusterFuzz testcase 6455337349545984 is verified as fixed, so closing issue.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

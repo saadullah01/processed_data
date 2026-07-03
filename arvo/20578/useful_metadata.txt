@@ -1,0 +1,22 @@
+Project: open62541
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: open62541
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_json_decode_encode
+Job Type: libfuzzer_msan_open62541
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x000000001827
+Crash State:
+  Variant_encodeJson
+  Variant_encodeJson
+  Variant_encodeJson
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: High

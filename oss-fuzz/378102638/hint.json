@@ -1,0 +1,10 @@
+{
+    "libswscale/slice.c": {
+        "entities": [
+            "function_alloc_lines"
+        ],
+        "lines": [
+            60
+        ]
+    }
+}

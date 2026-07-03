@@ -1,0 +1,11 @@
+{
+    "epan/dissectors/packet-rf4ce-nwk.c": {
+        "entities": [
+            "function_dissect_rf4ce_nwk_common"
+        ],
+        "lines": [
+            792,
+            780
+        ]
+    }
+}

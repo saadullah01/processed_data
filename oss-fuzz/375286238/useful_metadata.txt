@@ -1,0 +1,24 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_HYMT_fuzzer: Use-of-uninitialized-value in add_left_pred_c
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_HYMT_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+ add_left_pred_c
+ decode_frame
+ ff_decode_receive_frame_internal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducible Stability-Memory-MemorySanitizer Deadline-Exceeded ClusterFuzz-Verified
+
+ClusterFuzz testcase 6352546854141952 is verified as fixed.
+
+Status: Fixed (Verified)

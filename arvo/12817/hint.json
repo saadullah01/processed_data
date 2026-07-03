@@ -1,0 +1,21 @@
+{
+    "libarchive/archive_read_support_format_rar5.c": {
+        "entities": [
+            "function_parse_tables"
+        ],
+        "lines": [
+            2345,
+            2298
+        ]
+    },
+    "libarchive/test/test_read_format_rar5.c": {
+        "entities": [],
+        "lines": [
+            995
+        ]
+    },
+    "libarchive/test/test_read_format_rar5_truncated_huff.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

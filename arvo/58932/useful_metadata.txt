@@ -1,0 +1,24 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15init
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7fff6ba94060
+Crash State:
+  sc_path_print
+  sc_select_file
+  cflex_delete_file
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5206337630633984 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "stb_image.h": {
+        "entities": [
+            "function_stbi__process_frame_header"
+        ],
+        "lines": [
+            3267
+        ]
+    }
+}

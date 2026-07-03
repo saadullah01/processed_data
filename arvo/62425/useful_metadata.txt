@@ -1,0 +1,31 @@
+Project: icu
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: calendar_fuzzer
+Job Type: libfuzzer_asan_icu
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x616400000c68
+Crash State:
+  icu_74::Calendar::set
+  calendar_fuzzer.cpp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: 202309140626:202309160609
+
+upstream bug ICU-22510
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer calendar_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4871952818634752 is verified as fixed in 202309200607:202309210601
+
+This bug has been fixed. It has been opened to the public.

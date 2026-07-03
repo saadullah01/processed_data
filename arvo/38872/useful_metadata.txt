@@ -1,0 +1,20 @@
+Project: sleuthkit
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: sleuthkit_fls_ext_fuzzer
+Job Type: libfuzzer_asan_sleuthkit
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6140000005f7
+Crash State:
+  ext2fs_dinode_copy
+  ext2fs_inode_walk
+  tsk_fs_meta_walk
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

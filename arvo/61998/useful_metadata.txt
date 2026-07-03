@@ -1,0 +1,14 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 4
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_enc_fuzzer
+Job Type: libfuzzer_asan_libxaac
+Platform Id: linux
+Crash Address: 0x00000097dda4
+Crash State:
+  iusace_estimate_scfs_chan
+  iusace_quantize_spec
+  iusace_fd_encode
+Sanitizer: address (ASAN)

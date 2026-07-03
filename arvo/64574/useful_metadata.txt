@@ -1,0 +1,25 @@
+Project: jq
+Fuzzing Engine: libFuzzer
+Fuzz Target: jq_fuzz_parse_extended
+Job Type: libfuzzer_asan_jq
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x6020000000c0
+Crash State:
+  decToString
+  decNumberToString
+  jv_number_get_literal
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Issue filed automatically.
+
+We have a patch ready in GH "temporary private fork"
+
+Fixed by commit 71c2ab509a8628dbbad4bc7b3f98a64aa90d3297
+CVE-2023-50246
+
+ClusterFuzz testcase 4714293282865152 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

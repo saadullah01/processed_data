@@ -1,0 +1,21 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ {*}
+Severity: High
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzURL
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ {*}
+Crash Address: 0x608000000036
+Crash State:
+  AK::StringImpl::create
+  AK::String::String
+  AK::URLParser::parse_data_url
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

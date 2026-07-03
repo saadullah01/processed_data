@@ -1,0 +1,74 @@
+{
+    "include/geos/geomgraph/NodeMap.h": {
+        "entities": [
+            "class_NodeMap"
+        ],
+        "lines": [
+            51
+        ]
+    },
+    "include/geos/operation/relate/EdgeEndBuilder.h": {
+        "entities": [
+            "class_EdgeEndBuilder"
+        ],
+        "lines": [
+            48,
+            1
+        ]
+    },
+    "include/geos/operation/relate/RelateComputer.h": {
+        "entities": [],
+        "lines": [
+            82
+        ]
+    },
+    "include/geos/operation/relate/RelateNodeGraph.h": {
+        "entities": [],
+        "lines": [
+            69
+        ]
+    },
+    "src/geomgraph/Node.cpp": {
+        "entities": [
+            "method_Node::add"
+        ],
+        "lines": [
+            133
+        ]
+    },
+    "src/geomgraph/NodeMap.cpp": {
+        "entities": [],
+        "lines": [
+            111
+        ]
+    },
+    "src/operation/relate/EdgeEndBuilder.cpp": {
+        "entities": [],
+        "lines": [
+            1,
+            33
+        ]
+    },
+    "src/operation/relate/RelateComputer.cpp": {
+        "entities": [],
+        "lines": [
+            72
+        ]
+    },
+    "src/operation/relate/RelateNodeGraph.cpp": {
+        "entities": [
+            "method_RelateNodeGraph::insertEdgeEnds",
+            "function_RelateNodeGraph::build"
+        ],
+        "lines": [
+            131,
+            60
+        ]
+    },
+    "tests/unit/capi/GEOSUnionTest.cpp": {
+        "entities": [],
+        "lines": [
+            21
+        ]
+    }
+}

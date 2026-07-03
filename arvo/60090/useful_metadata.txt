@@ -1,0 +1,16 @@
+Project: libdwarf
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_set_frame_all
+Job Type: libfuzzer_asan_libdwarf
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x605fffffe940
+Crash State:
+  _dwarf_exec_frame_instr
+  _dwarf_get_fde_info_for_a_pc_row
+  dwarf_get_fde_info_for_reg3_b
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase ID: 5757752673435648
+ClusterFuzz testcase 5757752673435648 is verified as fixed
+This bug has been fixed. It has been opened to the public.

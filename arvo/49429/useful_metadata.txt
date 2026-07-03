@@ -1,0 +1,19 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_proto_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  urshift
+  mpz_div_2exp
+  mrb_bint_rshift
+
+Sanitizer: address (ASAN)

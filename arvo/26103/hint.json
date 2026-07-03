@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-idprime.c": {
+        "entities": [
+            "function_idprime_read_binary"
+        ],
+        "lines": [
+            539
+        ]
+    }
+}

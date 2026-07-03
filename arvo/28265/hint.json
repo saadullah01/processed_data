@@ -1,0 +1,10 @@
+{
+    "src/flb_http_client.c": {
+        "entities": [
+            "function_process_chunked_data"
+        ],
+        "lines": [
+            289
+        ]
+    }
+}

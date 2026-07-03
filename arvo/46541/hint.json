@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-font.c": {
+        "entities": [
+            "function_pdf_load_embedded_font"
+        ],
+        "lines": [
+            554
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+Project: flac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_decoder
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x724000010000
+Crash State:
+  FLAC__crc16_update_words32
+  crc16_update_block_
+  bitreader_read_from_client_
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer_decoder from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+If I compile FLAC with the sanitizer flags:
+CFLAGS="-fsanitize=address -g" CXXFLAGS=${CFLAGS} ./configure
+
+and then download the test case and run it with:
+./src/flac/flac -d clusterfuzz-testcase-fuzzer_decoder-5076189185572864.flac -f -o a.wav
+
+and I get:
+flac 1.3.3
+Copyright (C) 2000-2009  Josh Coalson, 2011-2016  Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+clusterfuzz-testcase-fuzzer_decoder-5076189185572864.flac: *** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+
+The input file is either not a FLAC file or is corrupted.  If you are
+convinced it is a FLAC file, you can rerun the same command and add the
+-F parameter to try and recover as much as possible from the file.
+
+No memory sanitizer error.
+
+Comment 5:
+Yeah, the testcase is not a pure FLAC file, it contains various parameters to the decoder as well, as you can see in fuzzer_decoder.cpp
+
+Comment 7:
+Use -fsanitize=fuzzer as a replacement for LIB_FUZZING_ENGINE
+
+Comment 11:
+Ok, I have a fix for this one.
+
+Comment 15:
+ClusterFuzz testcase 5076189185572864 is verified as fixed
+
+Comment 16:
+This bug has been fixed for 30 days. It has been opened to the public.

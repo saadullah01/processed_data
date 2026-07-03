@@ -1,0 +1,12 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "method_PackLinuxElf32::un_asl_dynsym",
+            "function_PackLinuxElf64::un_asl_dynsym"
+        ],
+        "lines": [
+            6334,
+            6375
+        ]
+    }
+}

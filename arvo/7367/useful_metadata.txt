@@ -1,0 +1,25 @@
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  fz_drop_imp
+  fz_drop_storable
+  pdf_load_compressed_inline_image
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: range=201804030415:201804040416
+
+Reproducer Testcase: 5667955980369920
+
+ClusterFuzz has detected this issue as fixed in range 201804090416:201804100418.
+
+Fixed: range=201804090416:201804100418
+
+ClusterFuzz testcase 5667955980369920 is verified as fixed.

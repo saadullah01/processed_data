@@ -1,0 +1,22 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_proto_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x02007fff8004
+Crash State:
+  mrb_bint_cmp
+  cmpnum
+  num_gt
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

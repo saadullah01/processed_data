@@ -1,0 +1,18 @@
+{
+    "pdf/pdf_deref.c": {
+        "entities": [
+            "function_pdfi_read_stream_object"
+        ],
+        "lines": [
+            258,
+            325,
+            358,
+            270,
+            240,
+            368,
+            381,
+            285,
+            351
+        ]
+    }
+}

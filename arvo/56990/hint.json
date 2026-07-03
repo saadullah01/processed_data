@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-oran.c": {
+        "entities": [
+            "function_dissect_oran_c_section"
+        ],
+        "lines": [
+            1790
+        ]
+    }
+}

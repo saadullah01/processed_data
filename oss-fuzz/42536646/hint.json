@@ -1,0 +1,10 @@
+{
+    "libheif/context.cc": {
+        "entities": [
+            "method_HeifContext::check_resolution"
+        ],
+        "lines": [
+            470
+        ]
+    }
+}

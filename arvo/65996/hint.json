@@ -1,0 +1,10 @@
+{
+    "src/string.c": {
+        "entities": [
+            "function_mrb_memsearch"
+        ],
+        "lines": [
+            499
+        ]
+    }
+}

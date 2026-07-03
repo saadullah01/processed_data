@@ -1,0 +1,27 @@
+Project: usrsctp
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: afl
+Fuzz Target: fuzzer_connect
+Job Type: afl_asan_usrsctp
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000045e0386a
+Crash State:
+  sctp_timer_start
+  sctp_handle_asconf
+  sctp_process_control
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_usrsctp&range=201909260423:201909280420
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5675883720867840
+
+ClusterFuzz testcase 5675883720867840 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_usrsctp&range=201909300415:201910010429

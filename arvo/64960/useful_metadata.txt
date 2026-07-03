@@ -1,0 +1,21 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_dec_fuzzer
+Job Type: libfuzzer_asan_libxaac
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x7ad5937f7eb0
+Crash State:
+  ixheaacd_init_sbr
+  ixheaacd_decode_create
+  ixheaacd_dec_main
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

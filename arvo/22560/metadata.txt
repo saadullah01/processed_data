@@ -1,0 +1,70 @@
+Project: graphicsmagick
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5158223933079552
+
+Project: graphicsmagick
+Fuzzing Engine: libFuzzer
+Fuzz Target: coder_PTIF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  GammaToLinear
+  AccumulateRGB
+  ImportYUVAFromRGBA
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_graphicsmagick&range=201812010257:201812020247
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5158223933079552
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Hey libwep + libtiff team, we think this issue might be in one of these two libraries, but reachable via graphicsmagick. The allocation of memory occurs in libtiff and the uninitialized use occurs in libwep."""
+
+-- Comment 3: """ClusterFuzz testcase 5158223933079552 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_graphicsmagick&range=202005310142:202006020139
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """I'm curious about whether it was problem in libtiff or ImageMagick."""
+
+-- Comment 5: """There was an issue in both libtiff and GraphicsMagick.  The WebP compression only should support 8-bits/sample but libtiff was accidentally allowing other values.  Meanwhile, GraphicsMagick was improperly allowing other values to be passed.  So both libtiff and GraphicsMagick have updates.  I can't attest to ImageMagick."""
+
+-- Comment 6: """Ok, thanks a lot for the update.
+
+Do you have a link to the libtiff update patch (if/when it's public) ? """
+
+-- Comment 7: """> Do you have a link to the libtiff update patch (if/when it's public) ?
+
+https://gitlab.com/libtiff/libtiff/-/commit/8a58319106fed41d70c6cb5d759fbbdecabf8919"""
+
+-- Comment 8: """thanks for the info"""
+
+-- Comment 9: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

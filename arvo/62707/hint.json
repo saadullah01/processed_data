@@ -1,0 +1,26 @@
+{
+    "decoder/ixheaacd_config.h": {
+        "entities": [],
+        "lines": [
+            68
+        ]
+    },
+    "decoder/ixheaacd_ld_mps_config.c": {
+        "entities": [
+            "function_ixheaacd_ld_spatial_extension_config"
+        ],
+        "lines": [
+            85,
+            110
+        ]
+    },
+    "decoder/ixheaacd_mps_bitdec.c": {
+        "entities": [
+            "function_ixheaacd_parse_extension_config"
+        ],
+        "lines": [
+            121,
+            102
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "internal-complibs/miniz-2.0.8/miniz.c": {
+        "entities": [
+            "function_tinfl_decompress"
+        ],
+        "lines": [
+            2663
+        ]
+    }
+}

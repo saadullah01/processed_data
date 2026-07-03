@@ -1,0 +1,47 @@
+Project: libarchive
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5666609181491200
+
+Project: libarchive
+Fuzzer: libFuzzer_libarchive_fuzzer
+Fuzz target binary: libarchive_fuzzer
+Job Type: libfuzzer_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x7f0b1d3ff800
+Crash State:
+  run_arm_filter
+  run_filter
+  apply_filters
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libarchive&range=201905020210:201905030215
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5666609181491200
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz testcase 5666609181491200 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libarchive&range=201906270132:201906280134
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

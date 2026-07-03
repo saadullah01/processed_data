@@ -1,0 +1,37 @@
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_MIMIC_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_MIMIC_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  vlc_decode_block
+  decode
+  mimic_decode_frame
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201705101624:201705111623.
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_MIMIC_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_MIMIC_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  vlc_decode_block
+  decode
+  mimic_decode_frame
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5235964056174592 is verified as fixed, so closing issue.

@@ -1,0 +1,10 @@
+{
+    "opcodes/arm-dis.c": {
+        "entities": [
+            "function_print_insn_arm"
+        ],
+        "lines": [
+            9715
+        ]
+    }
+}

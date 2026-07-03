@@ -1,0 +1,32 @@
+Project: fio
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Detailed Report: Project: fio
+Fuzzing Engine: afl
+Fuzz Target: fuzz_parseini
+Job Type: afl_asan_fio
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7fde6f765820
+Crash State:
+  add_file
+  str_filename_cb
+  __handle_option
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.
+
+This one should hopefully be fixed by https://github.com/axboe/fio/pull/1167 .
+
+ClusterFuzz testcase 5743041082163200 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_fio&range=202101160621:202101170631
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

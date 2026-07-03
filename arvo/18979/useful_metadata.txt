@@ -1,0 +1,26 @@
+Project: openjpeg
+Fuzzing Engine: afl
+Fuzz Target: opj_decompress_fuzzer
+Job Type: afl_asan_openjpeg
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x62780021a8d8
+Crash State:
+  opj_t2_decode_packets
+  opj_tcd_t2_decode
+  opj_tcd_decode_tile
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_openjpeg&range=201906150258:201906160259
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5721361410686976
+
+Fixed per https://github.com/uclouvain/openjpeg/pull/1217
+
+ClusterFuzz testcase 5721361410686976 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_openjpeg&range=201911170453:201911180445
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,14 @@
+{
+    "src/lib/libdwarf/dwarf_debugnames.c": {
+        "entities": [
+            "function_read_a_name_table_header",
+            "function_dwarf_dnames_header"
+        ],
+        "lines": [
+            386,
+            851,
+            820,
+            807
+        ]
+    }
+}

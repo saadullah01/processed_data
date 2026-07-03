@@ -1,0 +1,10 @@
+{
+    "bfd/vms-alpha.c": {
+        "entities": [
+            "function_dst_define_location"
+        ],
+        "lines": [
+            1553
+        ]
+    }
+}

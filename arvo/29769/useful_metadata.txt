@@ -1,0 +1,60 @@
+Project: libssh2
+Fuzzing Engine: libFuzzer
+Fuzz Target: ssh2_client_fuzzer
+Job Type: libfuzzer_asan_libssh2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x60300000b3f8
+Crash State:
+  ecdh_sha2_nistp
+  kex_method_ecdh_key_exchange
+  _libssh2_kex_exchange
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Looks reproducible from the given testcase. In gdb:
+
+Running: /out/clusterfuzz-testcase-minimized-ssh2_client_fuzzer-5469642053255168
+
+Thread 1 "ssh2_client_fuz" hit Breakpoint 1, ecdh_sha2_nistp (session=0x62f000000400, type=LIBSSH2_EC_CURVE_NISTP521,
+    data=0x60300000b470 "\037", data_len=24,
+    public_key=0x60d000000040 "\004\001\330\220\211f>\246:Jx\253\352\202x:\261\374\027\361\276\035\314g\313\023_bs\327\230\304\216\307\025\255\033^\020\f\213\215\236\274d\025\033\376\r\364\067\262FWz\320\240\377\226\227g\201\322\254Lf\314\001\332\312\342F\217\r\306\064\256\211x\245\217\177\017\324\360\311\314k\346\325\005?\321\233\020\207\026\265gXU\303oh\373\025\250\354\347\n\006\062aH\354\234\273\335\030\360\272\323(\237\223\065\343\322\t\254\036P\362", public_key_len=133, private_key=0x606000000140, exchange_state=0x62f00000d118)
+    at kex.c:1773
+1773            memcpy(session->server_hostkey, s, session->server_hostkey_len);
+(gdb) p session->server_hostkey_len
+$1 = 25089
+(gdb) p _libssh2_ntohu32((const unsigned char *)s-4)
+$4 = 25089
+
+- Where does s come from => data + 1
+- Where does data come from => key_state->data
+
+(gdb) x/24x key_state->data
+0x60300000b470: 0x1f    0x00    0x00    0x62    0x01    0xab    0xff    0xe4
+0x60300000b478: 0x00    0x02    0x04    0x01    0x53    0x48    0x2d    0x0a
+0x60300000b480: 0x00    0x72    0x73    0x61    0x2c    0x16    0xda    0x3f
+
+(gdb) x/4x (s-4)
+0x60300000b471: 0x00    0x00    0x62    0x01
+
+Looking at the test case this value appears at offset 20F in the minimized testcase; changing this to FFFFFFFF leads to libssh2 trying to malloc 4G of memory:
+
+Running: /out/clusterfuzz-testcase-minimized-ssh2_client_fuzzer-ffffffff
+==8049== ERROR: libFuzzer: out-of-memory (malloc(4294967295))
+   To change the out-of-memory limit use -rss_limit_mb=<N>
+
+    #0 0x52d3d1 in __sanitizer_print_stack_trace /src/llvm-project/compiler-rt/lib/asan/asan_stack.cpp:86:3
+    #1 0x4756d8 in fuzzer::PrintStackTrace() /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerUtil.cpp:210:5
+    #2 0x4598d5 in fuzzer::Fuzzer::HandleMalloc(unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:131:3
+    #3 0x4597ea in fuzzer::MallocHook(void const volatile*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:100:6
+    #4 0x533557 in __sanitizer::RunMallocHooks(void const*, unsigned long) /src/llvm-project/compiler-rt/lib/sanitizer_common/sanitizer_common.cpp:301:5
+    #5 0x4ab077 in __asan::Allocator::Allocate(unsigned long, unsigned long, __sanitizer::BufferedStackTrace*, __asan::AllocType, bool) /src/llvm-project/compiler-rt/lib/asan/asan_allocator.cpp:611:5
+    #6 0x4aa9e3 in __asan::asan_malloc(unsigned long, __sanitizer::BufferedStackTrace*) /src/llvm-project/compiler-rt/lib/asan/asan_allocator.cpp:980:34
+    #7 0x5249db in malloc /src/llvm-project/compiler-rt/lib/asan/asan_malloc_linux.cpp:146:10
+    #8 0x559850 in libssh2_default_alloc /src/libssh2_local/src/session.c:67:12
+    #9 0x59445b in ecdh_sha2_nistp /src/libssh2_local/src/kex.c:1764:35
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ssh2_client_fuzzer from making much progress. Fixing this will allow more bugs to be found.

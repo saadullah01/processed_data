@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-run.c": {
+        "entities": [
+            "function_pdf_run_annot_with_usage"
+        ],
+        "lines": [
+            79
+        ]
+    }
+}

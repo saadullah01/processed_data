@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-cmap.c": {
+        "entities": [
+            "function_add_range"
+        ],
+        "lines": [
+            525
+        ]
+    }
+}

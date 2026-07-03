@@ -1,0 +1,20 @@
+{
+    "src/librawspeed/decompressors/AbstractLJpegDecompressor.cpp": {
+        "entities": [
+            "method_AbstractLJpegDecompressor::parseSOF"
+        ],
+        "lines": [
+            112
+        ]
+    },
+    "src/librawspeed/decompressors/LJpegDecompressor.cpp": {
+        "entities": [
+            "function_LJpegDecompressor::decodeN",
+            "method_LJpegDecompressor::decodeN"
+        ],
+        "lines": [
+            73,
+            95
+        ]
+    }
+}

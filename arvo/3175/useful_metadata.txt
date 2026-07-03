@@ -1,0 +1,41 @@
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg_untrusted
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  hls_transform_unit
+  hls_transform_tree
+  hls_transform_tree
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201706170426:201706180428
+
+ClusterFuzz has detected this issue as fixed in range 201709111601:201709120424.
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash State:
+  hls_transform_unit
+  hls_transform_tree
+  hls_transform_tree
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201706170426:201706180428
+Fixed: 201709111601:201709120424
+
+fixed in abf3f9fa232409c00b60041464604a91fa5612c0

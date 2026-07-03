@@ -1,0 +1,10 @@
+{
+    "src/io/gml.c": {
+        "entities": [
+            "function_igraph_read_graph_gml"
+        ],
+        "lines": [
+            222
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+Project: lua
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_lua
+Job Type: honggfuzz_asan_lua
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x603000000da8
+Crash State:
+  luaG_runerror
+  luaD_pretailcall
+  luaV_execute
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_lua from making much progress. Fixing this will allow more bugs to be found.

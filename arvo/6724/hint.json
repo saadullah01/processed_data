@@ -1,0 +1,12 @@
+{
+    "gdal/frmts/raw/ehdrdataset.cpp": {
+        "entities": [
+            "method_EHdrRasterBand::IReadBlock",
+            "method_EHdrRasterBand::IWriteBlock"
+        ],
+        "lines": [
+            229,
+            167
+        ]
+    }
+}

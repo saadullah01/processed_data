@@ -1,0 +1,32 @@
+Project: libjpeg-turbo
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: qpdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: dct_fuzzer
+Job Type: libfuzzer_msan_qpdf
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  decompress_smooth_data
+  process_data_simple_main
+  jpeg_read_scanlines
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer dct_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+ClusterFuzz testcase 5753783396859904 is verified as fixed
+
+Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

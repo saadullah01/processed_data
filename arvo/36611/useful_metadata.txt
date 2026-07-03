@@ -1,0 +1,30 @@
+Project: selinux
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_msan_selinux
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  cil_resolve_name
+  cil_resolve_call_args
+  __cil_resolve_ast_node
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: 
+
+Issue filed automatically.
+
+ClusterFuzz testcase 6179919750103040 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

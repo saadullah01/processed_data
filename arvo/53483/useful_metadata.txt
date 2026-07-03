@@ -1,0 +1,21 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x604000000050
+Crash State:
+  dwg_free
+  llvmfuzz.c
+  dwg_free
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 4929759633342464 is verified as fixed

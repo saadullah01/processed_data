@@ -1,0 +1,11 @@
+{
+    "jcapimin.c": {
+        "entities": [
+            "function_jpeg_write_marker"
+        ],
+        "lines": [
+            240,
+            5
+        ]
+    }
+}

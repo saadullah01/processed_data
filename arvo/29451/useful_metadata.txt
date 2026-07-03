@@ -1,0 +1,16 @@
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: secilc-fuzzer
+Job Type: libfuzzer_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x612000000bc8
+Crash State:
+  cil_classorder_to_policydb
+  __cil_policydb_init
+  cil_binary_create_allocated_pdb
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

@@ -1,0 +1,13 @@
+{
+    "src/hb-ot-color-sbix-table.hh": {
+        "entities": [
+            "method_SBIXGlyph::copy",
+            "struct_SBIXStrike"
+        ],
+        "lines": [
+            152,
+            41,
+            162
+        ]
+    }
+}

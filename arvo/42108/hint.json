@@ -1,0 +1,10 @@
+{
+    "src/metadatidentify.cpp": {
+        "entities": [
+            "function_LibRaw::identify"
+        ],
+        "lines": [
+            708
+        ]
+    }
+}

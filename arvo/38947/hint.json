@@ -1,0 +1,10 @@
+{
+    "code/AssetLib/LWS/LWSLoader.cpp": {
+        "entities": [
+            "method_LWSImporter::InternReadFile"
+        ],
+        "lines": [
+            537
+        ]
+    }
+}

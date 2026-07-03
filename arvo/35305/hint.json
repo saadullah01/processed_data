@@ -1,0 +1,10 @@
+{
+    "lib/jxl/decode.cc": {
+        "entities": [
+            "function_JxlDecoderSetImageOutCallback"
+        ],
+        "lines": [
+            2111
+        ]
+    }
+}

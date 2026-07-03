@@ -1,0 +1,20 @@
+{
+    "libarchive/archive_read_support_format_rar5.c": {
+        "entities": [
+            "function_parse_tables"
+        ],
+        "lines": [
+            2323
+        ]
+    },
+    "libarchive/test/test_read_format_rar5.c": {
+        "entities": [],
+        "lines": [
+            950
+        ]
+    },
+    "libarchive/test/test_read_format_rar5_readtables_overflow.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

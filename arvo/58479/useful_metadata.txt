@@ -1,0 +1,16 @@
+Project: assimp
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_ubsan_assimp
+Platform Id: linux
+Crash Address: 0x000004140fa0
+Crash State:
+  Assimp::MDLImporter::InternReadFile_Quake1
+  Assimp::MDLImporter::InternReadFile
+  Assimp::BaseImporter::ReadFile
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

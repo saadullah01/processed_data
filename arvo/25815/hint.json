@@ -1,0 +1,17 @@
+{
+    "lib/Regex/RegexParser.cpp": {
+        "entities": [
+            "class_Parser",
+            "method_Parser::consumeTerm"
+        ],
+        "lines": [
+            420
+        ]
+    },
+    "test/hermes/regexp.js": {
+        "entities": [],
+        "lines": [
+            462
+        ]
+    }
+}

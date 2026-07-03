@@ -1,0 +1,10 @@
+{
+    "lib/url.c": {
+        "entities": [
+            "function_Curl_disconnect"
+        ],
+        "lines": [
+            781
+        ]
+    }
+}

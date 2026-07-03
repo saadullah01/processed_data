@@ -1,0 +1,27 @@
+{
+    "libarchive/archive_read_support_format_rar5.c": {
+        "entities": [
+            "function_init_unpack",
+            "function_rar5_read_data_skip",
+            "function_process_head_file",
+            "function_do_uncompress_block"
+        ],
+        "lines": [
+            3906,
+            2851,
+            1125,
+            1672,
+            2235
+        ]
+    },
+    "libarchive/test/test_read_format_rar5.c": {
+        "entities": [],
+        "lines": [
+            1194
+        ]
+    },
+    "libarchive/test/test_read_format_rar5_different_window_size.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

@@ -1,0 +1,16 @@
+Project: radare2
+Fuzzing Engine: libFuzzer
+Fuzz Target: ia_fuzz
+Job Type: libfuzzer_asan_radare2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x61100000604c
+Crash State:
+  populate_relocs_record
+  Elf64_r_bin_elf_get_relocs
+  elf_init
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

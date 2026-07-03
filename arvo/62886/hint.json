@@ -1,0 +1,10 @@
+{
+    "dict.c": {
+        "entities": [
+            "function_xmlDictLookupInternal"
+        ],
+        "lines": [
+            679
+        ]
+    }
+}

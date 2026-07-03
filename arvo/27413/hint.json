@@ -1,0 +1,10 @@
+{
+    "miniz_tinfl.c": {
+        "entities": [
+            "function_tinfl_decompress"
+        ],
+        "lines": [
+            498
+        ]
+    }
+}

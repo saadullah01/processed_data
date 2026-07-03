@@ -1,0 +1,261 @@
+Project: aom
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5681902774648832
+
+Project: libaom
+Fuzzer: afl_libaom_av1_dec_fuzzer_threaded
+Fuzz target binary: av1_dec_fuzzer_threaded
+Job Type: afl_asan_libaom
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x60b00000041c
+Crash State:
+  av1_loop_restoration_filter_frame_mt
+  av1_decode_tg_tiles_and_wrapup
+  aom_decode_frame_from_obus
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_libaom&range=201809060125:201809070125
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5681902774648832
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """Possibly the same as b/114647746. I had a primary fix for it:
+https://aomedia-review.googlesource.com/c/aom/+/70761"""
+
+-- Comment 3: """The following revision refers to this bug:
+  https://aomedia.googlesource.com/aom/+/32017745b0b4cb6d69ced6250dd67d9faf6282f8
+
+commit 32017745b0b4cb6d69ced6250dd67d9faf6282f8
+Author: Ravi Chaudhary <ravi.chaudhary@ittiam.com>
+Date: Fri Sep 14 15:48:43 2018
+
+Fix initialization in loop restoration mt
+
+When luma loop restoration is disabled, the initialization of
+cur_sb_col in lr_sync was not happening correctly.
+
+BUG=b/114647746
+BUG=oss-fuzz:10252
+
+Change-Id: I842a4a142680fdc78265c2f037b8bb1641f5e5d3
+
+[modify] https://crrev.com/32017745b0b4cb6d69ced6250dd67d9faf6282f8/av1/common/thread_common.c
+"""
+
+-- Comment 4: """ClusterFuzz has detected this issue as fixed in range 201809140126:201809150126.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5681902774648832
+
+Project: libaom
+Fuzzer: afl_libaom_av1_dec_fuzzer_threaded
+Fuzz target binary: av1_dec_fuzzer_threaded
+Job Type: afl_asan_libaom
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x60b00000041c
+Crash State:
+  av1_loop_restoration_filter_frame_mt
+  av1_decode_tg_tiles_and_wrapup
+  aom_decode_frame_from_obus
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_libaom&range=201809060125:201809070125
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_libaom&range=201809140126:201809150126
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5681902774648832
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 5: """ClusterFuzz testcase 5681902774648832 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """The following revision refers to this bug:
+  https://chromium.googlesource.com/chromium/src.git/+/7184de671cca6fae230dc6baa3815e3349d35d89
+
+commit 7184de671cca6fae230dc6baa3815e3349d35d89
+Author: Wan-Teh Chang <wtc@google.com>
+Date: Wed Sep 19 21:48:34 2018
+
+Roll src/third_party/libaom/source/libaom/ 67645b8f5..f866f5ebb (46 commits)
+
+https://aomedia.googlesource.com/aom.git/+log/67645b8f529c..f866f5ebb34b
+
+$ git log 67645b8f5..f866f5ebb --date=short --no-merges --format='%ad %ae %s'
+2018-09-18 wtc Fix cmake -DENABLE_EXAMPLES=0 error.
+2018-08-06 chengchen Bitmask patch 7: Optimize traversal steps.
+2018-08-03 chengchen Bitmask patch 6: Minor improvement.
+2018-07-30 chengchen Bitmask patch 5: Store vertical border and skip using bitmask
+2018-09-18 grant.hsu Extend blk_skip to support chroma planes
+2018-07-30 chengchen Bitmask patch 4: Store transform size info for vartx
+2018-07-26 chengchen Bitmask patch 3: Add more lookup table entries for bitmask.
+2018-09-13 anorkin Fix sending repeated random_seed in film grain
+2018-09-12 tdaede Only build stats library if examples are enabled.
+2018-09-17 wtc Call decoder_decode() even on invalid input data.
+2018-09-12 david.barker Fix range check in half_btf() function
+2018-09-17 wtc Optimize set_planes_to_neutral_grey for highbd.
+2018-07-16 chengchen Bitmask patch 2: Applying filtering once bitmask is built
+2018-07-20 chengchen Bitmask patch 1: Reduce u/v horizontal/vertical
+2018-09-17 tomfinegan Propagate user private data when film grain enabled.
+2018-09-07 umang.saini Fix 32bit build for arm target arch 8
+2018-09-13 yaowu Add cmdline switch --skip-film-grain to aomdec
+2018-09-17 remya.prakasan Add sse4_1 variant for highbd inv_txfm 32x32
+2018-09-17 satish.suman Optimize highbd 64x64 fwd_txfm
+2018-08-27 alexanderbokov Add ML-based rectangular partition pruning
+(...)
+
+Created with:
+  roll-dep src/third_party/libaom/source/libaom
+R=tomfinegan@chromium.org,johannkoenig@google.com,jzern@google.com
+
+Bug: oss-fuzz:10151
+Bug: oss-fuzz:10242
+Bug: aomedia:2163
+BUG: b/114621710
+BUG: b/114647746
+BUG: oss-fuzz:10252
+Change-Id: I6aab2c5958217ea1660a26783870adb6d6810ad7
+Reviewed-on: https://chromium-review.googlesource.com/1234955
+Commit-Queue: Tom Finegan <tomfinegan@chromium.org>
+Reviewed-by: Tom Finegan <tomfinegan@chromium.org>
+Cr-Commit-Position: refs/heads/master@{#592557}
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/DEPS
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/README.chromium
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/config/aom_version.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm-neon-cpu-detect/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm-neon-cpu-detect/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm-neon/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm-neon/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm64/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/arm64/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/generic/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/generic/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/ia32/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/ia32/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/ia32/config/av1_rtcd.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/x64/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/x64/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/linux/x64/config/av1_rtcd.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/win/ia32/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/win/ia32/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/win/ia32/config/av1_rtcd.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/win/x64/config/aom_config.asm
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/win/x64/config/aom_config.h
+[modify] https://crrev.com/7184de671cca6fae230dc6baa3815e3349d35d89/third_party/libaom/source/config/win/x64/config/av1_rtcd.h
+"""
+
+-- Comment 7: """The following revision refers to this bug:
+  https://chromium.googlesource.com/chromium/src.git/+/9943a644150b92c1f9d1360159c4aaa362f0b455
+
+commit 9943a644150b92c1f9d1360159c4aaa362f0b455
+Author: Wan-Teh Chang <wtc@google.com>
+Date: Tue Sep 25 17:44:19 2018
+
+Roll src/third_party/libaom/source/libaom/ 67645b8f5..f866f5ebb (46 commits)
+
+https://aomedia.googlesource.com/aom.git/+log/67645b8f529c..f866f5ebb34b
+
+$ git log 67645b8f5..f866f5ebb --date=short --no-merges --format='%ad %ae %s'
+2018-09-18 wtc Fix cmake -DENABLE_EXAMPLES=0 error.
+2018-08-06 chengchen Bitmask patch 7: Optimize traversal steps.
+2018-08-03 chengchen Bitmask patch 6: Minor improvement.
+2018-07-30 chengchen Bitmask patch 5: Store vertical border and skip using bitmask
+2018-09-18 grant.hsu Extend blk_skip to support chroma planes
+2018-07-30 chengchen Bitmask patch 4: Store transform size info for vartx
+2018-07-26 chengchen Bitmask patch 3: Add more lookup table entries for bitmask.
+2018-09-13 anorkin Fix sending repeated random_seed in film grain
+2018-09-12 tdaede Only build stats library if examples are enabled.
+2018-09-17 wtc Call decoder_decode() even on invalid input data.
+2018-09-12 david.barker Fix range check in half_btf() function
+2018-09-17 wtc Optimize set_planes_to_neutral_grey for highbd.
+2018-07-16 chengchen Bitmask patch 2: Applying filtering once bitmask is built
+2018-07-20 chengchen Bitmask patch 1: Reduce u/v horizontal/vertical
+2018-09-17 tomfinegan Propagate user private data when film grain enabled.
+2018-09-07 umang.saini Fix 32bit build for arm target arch 8
+2018-09-13 yaowu Add cmdline switch --skip-film-grain to aomdec
+2018-09-17 remya.prakasan Add sse4_1 variant for highbd inv_txfm 32x32
+2018-09-17 satish.suman Optimize highbd 64x64 fwd_txfm
+2018-08-27 alexanderbokov Add ML-based rectangular partition pruning
+(...)
+
+Created with:
+  roll-dep src/third_party/libaom/source/libaom
+R=tomfinegan@chromium.org,johannkoenig@google.com,jzern@google.com
+
+Bug: chromium:888022
+Bug: oss-fuzz:10151
+Bug: oss-fuzz:10242
+Bug: aomedia:2163
+BUG: b/114621710
+BUG: b/114647746
+BUG: oss-fuzz:10252
+Change-Id: I0bd468082e1dafc5b05820c82d4efd730fc99ffd
+Reviewed-on: https://chromium-review.googlesource.com/1239154
+Reviewed-by: Johann Koenig <johannkoenig@google.com>
+Cr-Commit-Position: refs/branch-heads/3538@{#654}
+Cr-Branched-From: 79f7c91a2b2a2932cd447fa6f865cb6662fa8fa6-refs/heads/master@{#587811}
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/DEPS
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/README.chromium
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/config/aom_version.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm-neon-cpu-detect/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm-neon-cpu-detect/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm-neon/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm-neon/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm64/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/arm64/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/generic/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/generic/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/ia32/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/ia32/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/ia32/config/av1_rtcd.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/x64/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/x64/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/linux/x64/config/av1_rtcd.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/win/ia32/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/win/ia32/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/win/ia32/config/av1_rtcd.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/win/x64/config/aom_config.asm
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/win/x64/config/aom_config.h
+[modify] https://crrev.com/9943a644150b92c1f9d1360159c4aaa362f0b455/third_party/libaom/source/config/win/x64/config/av1_rtcd.h
+"""
+
+-- Comment 8: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

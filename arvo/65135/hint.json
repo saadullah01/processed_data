@@ -1,0 +1,24 @@
+{
+    "ext/opcache/jit/zend_jit_arm64.dasc": {
+        "entities": [
+            "function_zend_jit_bind_global"
+        ],
+        "lines": [
+            11793,
+            11766
+        ]
+    },
+    "ext/opcache/jit/zend_jit_x86.dasc": {
+        "entities": [
+            "function_zend_jit_bind_global"
+        ],
+        "lines": [
+            12522,
+            12549
+        ]
+    },
+    "ext/opcache/tests/jit/bind_global_001.phpt": {
+        "entities": [],
+        "lines": []
+    }
+}

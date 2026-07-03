@@ -1,0 +1,10 @@
+{
+    "bfd/som.c": {
+        "entities": [
+            "function_setup_sections"
+        ],
+        "lines": [
+            2073
+        ]
+    }
+}

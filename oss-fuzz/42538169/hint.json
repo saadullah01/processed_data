@@ -1,0 +1,14 @@
+{
+    "Zend/tests/lazy_objects/oss_fuzz_71382.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_property_hooks.c": {
+        "entities": [
+            "function_zho_build_properties_ex"
+        ],
+        "lines": [
+            54
+        ]
+    }
+}

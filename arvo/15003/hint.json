@@ -1,0 +1,10 @@
+{
+    "libr/bin/p/bin_omf.c": {
+        "entities": [
+            "function_check_buffer"
+        ],
+        "lines": [
+            27
+        ]
+    }
+}

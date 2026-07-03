@@ -1,0 +1,10 @@
+{
+    "src/spss/readstat_sav_read.c": {
+        "entities": [
+            "function_sav_process_row"
+        ],
+        "lines": [
+            717
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "encoder/ih264e_api.c": {
+        "entities": [
+            "function_ih264e_init_mem_rec",
+            "function_api_check_struct_sanity"
+        ],
+        "lines": [
+            818,
+            4059,
+            836,
+            142
+        ]
+    }
+}

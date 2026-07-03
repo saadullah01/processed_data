@@ -1,0 +1,10 @@
+{
+    "src/colorcontent.c": {
+        "entities": [
+            "function_pixMaskOverColorPixels"
+        ],
+        "lines": [
+            708
+        ]
+    }
+}

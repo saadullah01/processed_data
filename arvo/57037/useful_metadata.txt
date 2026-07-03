@@ -1,0 +1,12 @@
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+Crash Type: Segv on unknown address
+Crash State:
+  mrb_bint_sub
+  int_sub
+  mrb_vm_exec
+Sanitizer: address (ASAN)
+Fixed by 62a8ea711329477ec0e22f17df77a37ceaff9322

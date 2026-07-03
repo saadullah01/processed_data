@@ -1,0 +1,20 @@
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+
+Crash Type: Heap-use-after-free WRITE 1
+Crash Address: 0x615000000e50
+Crash State:
+  pdf_cache_object
+  pdf_resolve_indirect
+  pdf_resolve_indirect_chain
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5200395937644544 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

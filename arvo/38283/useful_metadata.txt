@@ -1,0 +1,19 @@
+Project: freeradius-server
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 1
+
+Project: freeradius
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_tacacs
+Job Type: libfuzzer_asan_freeradius
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x7f26334095ff
+Crash State:
+  fr_is_base16_nstd
+  fr_base16_decode_nstd
+  fr_value_box_from_str
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer_tacacs from making much progress. Fixing this will allow more bugs to be found.

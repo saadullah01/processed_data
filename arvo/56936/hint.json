@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-gsm_rlp.c": {
+        "entities": [
+            "function_dissect_gsmrlp"
+        ],
+        "lines": [
+            257
+        ]
+    }
+}

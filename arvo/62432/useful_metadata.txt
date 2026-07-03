@@ -1,0 +1,21 @@
+Project: icu
+Fuzzing Engine: honggfuzz
+Fuzz Target: date_format_fuzzer
+Job Type: honggfuzz_asan_icu
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x62900000497c
+Crash State:
+  icu_74::SimpleDateFormat::subFormat
+  icu_74::SimpleDateFormat::_format
+  icu_74::SimpleDateFormat::format
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_icu&range=202309140626:202309160609
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5533809325768704
+upstream bug https://unicode-org.atlassian.net/browse/ICU-22508
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer date_format_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+ClusterFuzz testcase 5533809325768704 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_icu&range=202309190601:202309200607
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

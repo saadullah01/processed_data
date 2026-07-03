@@ -1,0 +1,20 @@
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7fff2599bef5
+Crash State:
+  iasecc_process_fci
+  iasecc_select_file
+  iasecc_init
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4726860867043328 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

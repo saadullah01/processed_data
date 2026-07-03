@@ -1,0 +1,10 @@
+{
+    "libavformat/wtvdec.c": {
+        "entities": [
+            "function_parse_chunks"
+        ],
+        "lines": [
+            833
+        ]
+    }
+}

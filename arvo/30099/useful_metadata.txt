@@ -1,0 +1,22 @@
+Project: libxslt
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: libxslt
+Fuzzing Engine: afl
+Fuzz Target: xslt
+Job Type: afl_asan_libxslt
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x6020000010d0
+Crash State:
+  xmlFreeNodeList
+  xmlFreeDoc
+  xsltFreeStylesheet
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Fixed here: https://gitlab.gnome.org/GNOME/libxslt/-/commit/3e8bbcdec8d2318ca8ab27a2a4a509a5d9bb2d51
+AFAICT, Chromium always parses stylesheets with XML_PARSE_NOENT, so it shouldn't be affected.

@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-zbee-security.c": {
+        "entities": [
+            "function_zbee_sec_add_key_to_keyring"
+        ],
+        "lines": [
+            1250
+        ]
+    }
+}

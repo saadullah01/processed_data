@@ -1,0 +1,28 @@
+spicy:fuzz-TFTP_Packet: Segv on unknown address in spicy::rt::accept_input
+
+Project: spicy
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-TFTP_Packet
+Job Type: libfuzzer_asan_spicy
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  spicy::rt::accept_input
+  __hlt_TFTP_Packet::TFTP::Request::__parse_TFTP__Request_2_stage2
+  __hlt_TFTP_Packet::TFTP::Request::__parse_stage1
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz-TFTP_Packet from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4877404433612800 is verified as fixed in
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: spicy

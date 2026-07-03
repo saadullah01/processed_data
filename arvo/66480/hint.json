@@ -1,0 +1,10 @@
+{
+    "src/protocols/radius/decode.c": {
+        "entities": [
+            "function_decode_extended_fragments"
+        ],
+        "lines": [
+            887
+        ]
+    }
+}

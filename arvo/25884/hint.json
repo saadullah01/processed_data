@@ -1,0 +1,18 @@
+{
+    "include/fmt/format-inl.h": {
+        "entities": [
+            "function_fallback_format"
+        ],
+        "lines": [
+            2545
+        ]
+    },
+    "test/format-test.cc": {
+        "entities": [
+            "function_FormatterTest::Precision"
+        ],
+        "lines": [
+            957
+        ]
+    }
+}

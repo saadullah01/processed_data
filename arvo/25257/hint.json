@@ -1,0 +1,45 @@
+{
+    "Zend/zend_API.c": {
+        "entities": [
+            "function_zend_disable_function"
+        ],
+        "lines": [
+            2790
+        ]
+    },
+    "Zend/zend_API.h": {
+        "entities": [],
+        "lines": [
+            341
+        ]
+    },
+    "main/main.c": {
+        "entities": [
+            "function_php_disable_functions",
+            "function_core_globals_dtor",
+            "function_php_module_startup"
+        ],
+        "lines": [
+            2274,
+            299,
+            1924
+        ]
+    },
+    "main/php_globals.h": {
+        "entities": [
+            "struct_struct _php_core_globals",
+            "struct__php_core_globals"
+        ],
+        "lines": [
+            139
+        ]
+    },
+    "sapi/fpm/fpm/fpm_php.c": {
+        "entities": [
+            "function_fpm_php_apply_defines_ex"
+        ],
+        "lines": [
+            96
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_objdump_safe
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+Crash Type: Invalid-free
+Crash Address: 0x6020000000b8
+Crash State:
+  alpha_ecoff_get_relocated_section_contents
+  bfd_get_relocated_section_contents
+  bfd_simple_get_relocated_section_contents
+Sanitizer: address (ASAN)
+Reproducer Testcase: 6396822459121664
+
+ClusterFuzz testcase 6396822459121664 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

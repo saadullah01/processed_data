@@ -1,0 +1,33 @@
+Project: gpac
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Comment 1:
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_asan_gpac
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x602000001073
+Crash State:
+  gf_opus_parse_packet_header
+  gf_inspect_dump_opus_internal
+  inspect_process
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gpac&range=202312170603:202312200621
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5172098934833152
+
+Comment 2:
+ClusterFuzz testcase 5172098934833152 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_gpac&range=202402140603:202402150615
+
+Comment 3:
+This bug has been fixed. It has been opened to the public.

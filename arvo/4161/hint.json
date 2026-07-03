@@ -1,0 +1,22 @@
+{
+    "lib/curl_fnmatch.c": {
+        "entities": [
+            "function_setcharset"
+        ],
+        "lines": [
+            274,
+            196,
+            133
+        ]
+    },
+    "tests/datMakefile.inc": {
+        "entities": [],
+        "lines": [
+            125
+        ]
+    },
+    "tests/dattest1163": {
+        "entities": [],
+        "lines": []
+    }
+}

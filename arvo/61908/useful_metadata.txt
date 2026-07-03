@@ -1,0 +1,12 @@
+Project: curl
+Fuzzing Engine: libFuzzer
+Fuzz Target: curl_fuzzer_ws
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0xf5400760
+Crash State:
+  curl_dbg_free
+  curl_slist_free_all
+  fuzz_terminate_fuzz_data
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

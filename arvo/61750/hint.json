@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-idprime.c": {
+        "entities": [
+            "function_idprime_process_containermap"
+        ],
+        "lines": [
+            301
+        ]
+    }
+}

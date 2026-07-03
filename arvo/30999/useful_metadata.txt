@@ -1,0 +1,20 @@
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_msan_php
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7fe99e9fb000
+Crash State:
+  zend_gc_delref
+  i_zval_ptr_dtor
+  zend_unclean_zval_ptr_dtor
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6450026794582016 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

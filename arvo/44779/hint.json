@@ -1,0 +1,46 @@
+{
+    "icu4c/source/common/ucasemap.cpp": {
+        "entities": [
+            "function_maybeTitleDutchIJ",
+            "function_ucasemap_internalUTF8ToTitle"
+        ],
+        "lines": [
+            594,
+            437
+        ]
+    },
+    "icu4c/source/common/ustrcase.cpp": {
+        "entities": [
+            "function_maybeTitleDutchIJ"
+        ],
+        "lines": [
+            416
+        ]
+    },
+    "icu4c/source/test/intltest/strcase.cpp": {
+        "entities": [
+            "method_StringCaseTest::TestDutchTitle",
+            "function_StringCaseTest::TestDutchTitle"
+        ],
+        "lines": [
+            763,
+            741
+        ]
+    },
+    "icu4j/main/classes/core/src/com/ibm/icu/impl/CaseMapImpl.java": {
+        "entities": [
+            "method_maybeTitleDutchIJ"
+        ],
+        "lines": [
+            794
+        ]
+    },
+    "icu4j/main/tests/core/src/com/ibm/icu/dev/test/lang/UCharacterCaseTest.java": {
+        "entities": [
+            "method_TestDutchTitle"
+        ],
+        "lines": [
+            497
+        ]
+    }
+}

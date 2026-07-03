@@ -1,0 +1,14 @@
+Project: selinux
+Fuzzing Engine: afl
+Fuzz Target: secilc-fuzzer
+Job Type: afl_asan_selinux
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0x7fd425e05eb0
+Crash State:
+  cil_copy_expr
+  cil_copy_expr
+  cil_copy_validatetrans
+
+Sanitizer: address (ASAN)

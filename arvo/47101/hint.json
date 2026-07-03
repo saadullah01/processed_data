@@ -1,0 +1,10 @@
+{
+    "gas/dwarf2dbg.c": {
+        "entities": [
+            "function_assign_file_to_slot"
+        ],
+        "lines": [
+            679
+        ]
+    }
+}

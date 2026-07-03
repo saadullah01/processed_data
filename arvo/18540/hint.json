@@ -1,0 +1,10 @@
+{
+    "src/tests/fuzzing/fuzz_pkcs15_reader.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            249
+        ]
+    }
+}

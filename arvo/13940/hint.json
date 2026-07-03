@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-function.c": {
+        "entities": [
+            "function_eval_stitching_func"
+        ],
+        "lines": [
+            1330
+        ]
+    }
+}

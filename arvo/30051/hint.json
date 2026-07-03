@@ -1,0 +1,10 @@
+{
+    "plugins/sudoers/parse_ldif.c": {
+        "entities": [
+            "function_sudoers_parse_ldif"
+        ],
+        "lines": [
+            766
+        ]
+    }
+}

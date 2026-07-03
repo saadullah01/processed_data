@@ -1,0 +1,10 @@
+{
+    "wolfcrypt/src/dh.c": {
+        "entities": [
+            "function_wc_DhAgree_Sync"
+        ],
+        "lines": [
+            1998
+        ]
+    }
+}

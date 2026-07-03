@@ -1,0 +1,12 @@
+{
+    "mrbgems/mruby-bigint/core/bigint.c": {
+        "entities": [
+            "function_urshift",
+            "function_ulshift"
+        ],
+        "lines": [
+            386,
+            363
+        ]
+    }
+}

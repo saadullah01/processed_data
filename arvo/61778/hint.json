@@ -1,0 +1,12 @@
+{
+    "bfd/coffcode.h": {
+        "entities": [
+            "function_fill_comdat_hash",
+            "function_handle_COMDAT"
+        ],
+        "lines": [
+            866,
+            1099
+        ]
+    }
+}

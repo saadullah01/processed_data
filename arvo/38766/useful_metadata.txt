@@ -1,0 +1,26 @@
+Project: libarchive
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libarchive
+Fuzzing Engine: libFuzzer
+Fuzz Target: libarchive_fuzzer
+Job Type: libfuzzer_asan_libarchive
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x632000030000
+Crash State:
+  liblzma.so.5
+  liblzma.so.5
+  liblzma.so.5
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 6716998885703680
+
+ClusterFuzz testcase 6716998885703680 is verified as fixed

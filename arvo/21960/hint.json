@@ -1,0 +1,19 @@
+{
+    "libclamav/vba_extract.c": {
+        "entities": [
+            "function_vba_readdir_new",
+            "function_cli_vba_readdir_new"
+        ],
+        "lines": [
+            480,
+            803,
+            903,
+            936,
+            841,
+            875,
+            813,
+            1082,
+            926
+        ]
+    }
+}

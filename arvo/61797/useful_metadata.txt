@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15init
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7d3ea82971b0
+Crash State:
+  iasecc_crt_parse
+  iasecc_se_parse
+  iasecc_se_get_info
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

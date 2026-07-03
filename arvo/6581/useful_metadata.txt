@@ -1,0 +1,23 @@
+Project: botan
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: botan
+Fuzzer: libFuzzer_botan_pkcs8
+Fuzz target binary: pkcs8
+Job Type: libfuzzer_asan_botan
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x606000012118
+Crash State:
+  Botan::bigint_monty_redc
+  Botan::CurveGFp_Montgomery::curve_mul
+  Botan::CurveGFp_Montgomery::to_curve_rep
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fixed in 74ca458b14d265

@@ -1,0 +1,10 @@
+{
+    "src/oplist.c": {
+        "entities": [
+            "function_plist_from_openstep"
+        ],
+        "lines": [
+            851
+        ]
+    }
+}

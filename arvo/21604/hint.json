@@ -1,0 +1,20 @@
+{
+    "poppler/Annot.h": {
+        "entities": [
+            "class_Annot"
+        ],
+        "lines": [
+            1,
+            591
+        ]
+    },
+    "poppler/Page.cc": {
+        "entities": [
+            "method_Page::loadStandaloneFields"
+        ],
+        "lines": [
+            1,
+            362
+        ]
+    }
+}

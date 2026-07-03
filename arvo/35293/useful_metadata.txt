@@ -1,0 +1,26 @@
+Project: libjxl
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: libjxl
+Fuzzing Engine: honggfuzz
+Fuzz Target: djxl_fuzzer
+Job Type: honggfuzz_asan_libjxl
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x603000001138
+Crash State:
+  jxl::ImageBlender::PrepareBlending
+  jxl::FinalizeFrameDecoding
+  jxl::FrameDecoder::Flush
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Issue filed automatically.
+
+ClusterFuzz testcase 5731034225311744 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

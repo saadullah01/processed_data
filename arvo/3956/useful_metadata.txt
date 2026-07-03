@@ -1,0 +1,86 @@
+-- Comment 1: "Detailed report: https://oss-fuzz.com/testcase?key=4602769987076096
+
+Project: curl
+Fuzzer: libFuzzer_curl_fuzzer_http
+Fuzz target binary: curl_fuzzer_http
+Job Type: libfuzzer_ubsan_curl
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  fuzz_send_next_response
+  fuzz_handle_transfer
+  _start
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_curl&range=201710290615:201710300415
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4602769987076096
+
+Issue filed automatically."
+
+-- Comment 2: "Simple bug in the fuzzer. Fixing up now."
+
+-- Comment 3: "Fixed in https://github.com/curl/curl-fuzzer/commit/c5185509794f2a471985baf330e7471789ec73d1"
+
+-- Comment 4: "ClusterFuzz has detected this issue as fixed in range 201711010414:201711020414.
+
+Detailed report: https://oss-fuzz.com/testcase?key=4602769987076096
+
+Project: curl
+Fuzzer: libFuzzer_curl_fuzzer_http
+Fuzz target binary: curl_fuzzer_http
+Job Type: libfuzzer_ubsan_curl
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  fuzz_send_next_response
+  fuzz_handle_transfer
+  _start
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_curl&range=201710290615:201710300415
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_curl&range=201711010414:201711020414
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4602769987076096"
+
+-- Comment 5: "ClusterFuzz testcase 4602769987076096 is verified as fixed, so closing issue as verified."
+
+-- Comment 6: "ClusterFuzz has detected this issue as fixed in range 201711010414:201711020414.
+
+Detailed report: https://oss-fuzz.com/testcase?key=4602769987076096
+
+Project: curl
+Fuzzer: libFuzzer_curl_fuzzer_http
+Fuzz target binary: curl_fuzzer_http
+Job Type: libfuzzer_ubsan_curl
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  fuzz_send_next_response
+  fuzz_handle_transfer
+  _start
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_curl&range=201710290615:201710300415
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_curl&range=201711010414:201711020414
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4602769987076096"
+
+-- Comment 7: "This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"

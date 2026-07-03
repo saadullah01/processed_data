@@ -1,0 +1,12 @@
+{
+    "src/filters/inspect.c": {
+        "entities": [
+            "function_gf_inspect_dump_obu_internal",
+            "function_inspect_dump_packet"
+        ],
+        "lines": [
+            3241,
+            1587
+        ]
+    }
+}

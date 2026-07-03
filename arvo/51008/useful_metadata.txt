@@ -1,0 +1,19 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_strings
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  _bfd_vms_slurp_etir
+  _bfd_vms_slurp_object_records
+  alpha_vms_object_p
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

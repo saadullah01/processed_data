@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_card
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7ffd59a5b290
+Crash State:
+  sc_asn1_read_tag
+  sc_asn1_find_tag
+  cardos_list_files
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,14 @@
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_enc_fuzzer
+Job Type: libfuzzer_asan_libxaac
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x00000097cda4
+Crash State:
+  iaace_quantize_lines
+  ia_enhaacplus_enc_qc_main
+  ia_enhaacplus_enc_aac_core_encode
+
+Sanitizer: address (ASAN)

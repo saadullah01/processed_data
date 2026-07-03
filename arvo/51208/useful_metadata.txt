@@ -1,0 +1,28 @@
+Project: h3
+Fuzzing Engine: afl
+Fuzz Target: fuzzerLocalIj
+Job Type: afl_asan_h3
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x0000005c9dd8
+Crash State:
+  _getBaseCellNeighbor
+  localIjkToCell
+  localIjToCell
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_h3&range=202209090602:202209100613
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5086445848625152
+
+https://github.com/uber/h3/pull/684
+
+ClusterFuzz testcase 5086445848625152 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_h3&range=202209120600:202209130601
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+
+This issue is fixed in https://github.com/uber/h3/releases/tag/v4.0.1

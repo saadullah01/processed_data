@@ -1,0 +1,22 @@
+Project: kimageformats
+Fuzzer: libFuzzer_kimageformats_kimgio_tga_fuzzer
+Fuzz target binary: kimgio_tga_fuzzer
+Job Type: libfuzzer_msan_kimageformats
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  LoadTGA
+  TGAHandler::read
+  kimgio_fuzzer.cc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201904160243:201904170248
+Reproducer Testcase ID: 5709726446256128
+
+ClusterFuzz has detected this issue as fixed in range 201904301739:201905010258
+Fixed: 201904301739:201905010258
+
+ClusterFuzz testcase 5709726446256128 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

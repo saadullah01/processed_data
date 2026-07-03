@@ -1,0 +1,33 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_MPEGVIDEO_fuzzer: Use-of-uninitialized-value in ff_er_frame_end
+
+Reproducible Stability-Memory-MemorySanitizer ClusterFuzz ClusterFuzz-Verified
+Vulnerability
+P2
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_MPEGVIDEO_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_er_frame_end
+  decode_chunks
+  mpeg_decode_frame
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Testcase ID: 5792589370949632
+
+ClusterFuzz testcase 5792589370949632 is verified as fixed in range=202408100613:202408110600
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

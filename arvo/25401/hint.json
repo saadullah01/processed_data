@@ -1,0 +1,10 @@
+{
+    "code/AssetLib/HMP/HMPLoader.cpp": {
+        "entities": [
+            "function_HMPImporter::ReadFirstSkin"
+        ],
+        "lines": [
+            451
+        ]
+    }
+}

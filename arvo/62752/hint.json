@@ -1,0 +1,11 @@
+{
+    "bfd/elf32-arm.c": {
+        "entities": [
+            "function_elf32_arm_get_synthetic_symtab"
+        ],
+        "lines": [
+            20035,
+            19971
+        ]
+    }
+}

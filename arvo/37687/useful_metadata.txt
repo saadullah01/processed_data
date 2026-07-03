@@ -1,0 +1,27 @@
+Project: libgd
+Fuzzing Engine: libFuzzer
+Fuzz Target: gif_target
+Job Type: libfuzzer_ubsan_libgd
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  gdImageColorTransparent
+  gdImageCreateFromGifCtx
+  gdImageCreateFromGifPtr
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 
+
+Reproducer Testcase: 
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5139716110942208 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

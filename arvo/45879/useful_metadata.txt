@@ -1,0 +1,18 @@
+Project: fluent-bit
+Fuzzing Engine: libFuzzer
+Fuzz Target: flb-it-fuzz-parser_fuzzer_OSSFUZZ
+Job Type: libfuzzer_asan_fluent-bit
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  flb_sds_copy
+  flb_parser_decoder_do
+  flb_parser_logfmt_do
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 6211782409060352 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

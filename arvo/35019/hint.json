@@ -1,0 +1,10 @@
+{
+    "lib/jxl/dec_reconstruct.cc": {
+        "entities": [
+            "function_FinalizeFrameDecoding"
+        ],
+        "lines": [
+            1118
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Zend/tests/bug79836_4.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_operators.c": {
+        "entities": [
+            "function_concat_function"
+        ],
+        "lines": [
+            2048
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+Project: mruby
+Fuzzing Engine: afl
+Fuzz Target: mruby_fuzzer
+Job Type: afl_asan_mruby
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x619000000480
+Crash State:
+  mrb_vm_exec
+  mrb_vm_run
+  mrb_top_run
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Fixed by 2b074893723ebb335e6469c34caa2d8eac05d6ed

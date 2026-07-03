@@ -1,0 +1,27 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Use-of-uninitialized-value in put_hevc_pel_bi_pixels_9
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  put_hevc_pel_bi_pixels_9
+  hls_prediction_unit
+  hls_coding_quadtree
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6290632570634240 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

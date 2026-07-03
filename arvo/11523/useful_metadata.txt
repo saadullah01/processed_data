@@ -1,0 +1,44 @@
+Project: libaom
+Fuzzer: libFuzzer_libaom_av1_dec_fuzzer
+Fuzz target binary: av1_dec_fuzzer
+Job Type: libfuzzer_asan_libaom
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x7f69291a30a7
+Crash State:
+  read_uncompressed_header
+  av1_decode_frame_headers_and_setup
+  aom_decode_frame_from_obus
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer av1_dec_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+commit d3e632565ea573f55dfc4c07b557a87ba91b11cb
+Author: Jack Haughton
+Fix misinterpretation of existing_frame_idx
+BUG:  aomedia:2255 
+Change-Id: I307ec9563943c7384a64b56e30c8e15904267501
+
+I have pushed a fix for this bug, which is awaiting code review. The problem was that ref_frame_map is not valid at that point in the decode cycle - the required information is stored in next_ref_frame_map at that point.
+
+commit 0ad5c625be27d7a3622dae95e9afe5e66b112d46
+Author: Jack Haughton
+Set up frame context using next_ref_frame_map
+BUG: oss-fuzz:11523
+Change-Id: Idec84e85f39fa6e2205853763002898b6ab1b410
+
+[modify] av1/decoder/decodeframe.c
+
+commit 4a400ac20dd361b52e3e0637024ec89312e8c36b
+Author: Wan-Teh Chang
+Add invalid file tests for three oss-fuzz bugs.
+BUG=oss-fuzz:11477,oss-fuzz:11479,oss-fuzz:11523
+Change-Id: I28c4b8555595e0d21a611e654135d5e689a63d4f
+
+[modify] test/test_data_util.cmake
+[modify] test/invalid_file_test.cc
+[modify] test/test-data.sha1

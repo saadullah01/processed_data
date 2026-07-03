@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-shape-complex-arabic.cc": {
+        "entities": [
+            "function_apply_stch"
+        ],
+        "lines": [
+            560
+        ]
+    }
+}

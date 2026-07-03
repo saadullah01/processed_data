@@ -1,0 +1,15 @@
+Project: mupdf
+Fuzzer: afl_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: afl_asan_mupdf
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x623000006ce8
+Crash State:
+  add_range
+  pdf_map_range_to_range
+  pdf_parse_bf_range
+Sanitizer: address (ASAN)
+Regressed: 201801181639:201801190545
+ClusterFuzz has detected this issue as fixed in range 201801240607:201801250607.
+Fixed: 201801240607:201801250607

@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs15_crypt
+Job Type: afl_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffc50ee0e00
+Crash State:
+  sc_hsm_decode_ecdsa_signature
+  sc_hsm_compute_signature
+  sc_compute_signature
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

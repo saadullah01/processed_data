@@ -1,0 +1,22 @@
+{
+    "icu4c/source/common/uloc_tag.cpp": {
+        "entities": [
+            "function__appendPrivateuseToLanguageTag"
+        ],
+        "lines": [
+            1952,
+            1965,
+            1984
+        ]
+    },
+    "icu4c/source/test/intltest/loctest.cpp": {
+        "entities": [
+            "function_LocaleTest::TestToLanguageTag",
+            "method_LocaleTest::TestToLanguageTag"
+        ],
+        "lines": [
+            5993,
+            5980
+        ]
+    }
+}

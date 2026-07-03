@@ -1,0 +1,32 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "magick/render.c": {
+        "entities": [
+            "function_trace_ellipse"
+        ],
+        "lines": [
+            6242,
+            6215,
+            6346,
+            6363,
+            6332
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+Project: openthread
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: openthread
+Fuzzing Engine: libFuzzer
+Fuzz Target: ip6-send-fuzzer
+Job Type: libfuzzer_ubsan_openthread
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  ot::EnergyScanServer::HandleScanResult
+  ot::Mac::Mac::ReportEnergyScanResult
+  ot::Mac::Mac::PerformEnergyScan
+
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5686760173731840 is verified as fixed

@@ -1,0 +1,22 @@
+Project: faad2
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 4
+
+Fuzz Target: fuzz_decode_fixed
+Job Type: honggfuzz_asan_faad2
+Platform Id: linux
+
+Crash Address: 0x00000024bff0
+Crash State:
+  hf_adjustment
+  sbr_process_channel
+  sbrDecodeCoupleFrame
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_decode_fixed from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5610396510453760 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

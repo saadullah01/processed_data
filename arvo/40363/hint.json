@@ -1,0 +1,10 @@
+{
+    "src/libbpf.c": {
+        "entities": [
+            "function_bpf_object__elf_collect"
+        ],
+        "lines": [
+            3270
+        ]
+    }
+}

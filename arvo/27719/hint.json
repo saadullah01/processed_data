@@ -1,0 +1,10 @@
+{
+    "src/libopensc/pkcs15-tcos.c": {
+        "entities": [
+            "function_insert_key"
+        ],
+        "lines": [
+            152
+        ]
+    }
+}

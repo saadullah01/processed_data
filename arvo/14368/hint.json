@@ -1,0 +1,56 @@
+{
+    "lib/legacy/zstd_v01.c": {
+        "entities": [
+            "function_ZSTD_readLE32",
+            "function_ZSTD_read32",
+            "function_ZSTD_readLE24",
+            "function_ZSTD_decodeSequence"
+        ],
+        "lines": [
+            1384,
+            1707,
+            1358,
+            1735
+        ]
+    },
+    "lib/legacy/zstd_v02.c": {
+        "entities": [
+            "function_ZSTD_decodeSequence"
+        ],
+        "lines": [
+            217,
+            3043,
+            3073
+        ]
+    },
+    "lib/legacy/zstd_v03.c": {
+        "entities": [
+            "function_ZSTD_decodeSequence"
+        ],
+        "lines": [
+            2714,
+            219,
+            2684
+        ]
+    },
+    "lib/legacy/zstd_v04.c": {
+        "entities": [
+            "function_ZSTD_decodeSequence"
+        ],
+        "lines": [
+            2808,
+            2837,
+            189
+        ]
+    },
+    "lib/legacy/zstd_v05.c": {
+        "entities": [
+            "function_ZSTDv05_decodeSequence"
+        ],
+        "lines": [
+            3185,
+            218,
+            3151
+        ]
+    }
+}

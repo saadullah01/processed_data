@@ -1,0 +1,10 @@
+{
+    "MagickCore/quantize.c": {
+        "entities": [
+            "function_SetGrayscaleImage"
+        ],
+        "lines": [
+            3318
+        ]
+    }
+}

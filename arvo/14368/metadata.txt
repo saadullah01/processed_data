@@ -1,0 +1,89 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5648063105859584
+
+Project: zstd
+Fuzzer: libFuzzer_zstd_stream_decompress
+Fuzz target binary: stream_decompress
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6050000000ec
+Crash State:
+  MEM_read32
+  ZSTDv05_decodeSequence
+  ZSTDv05_decompressSequences
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_zstd&range=201904181421:201904190236
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5648063105859584
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """* Fixed in commit b758250eb1a8c5d81e36bc9111a427472d7946c2.
+* The bug has been present for years, and was exposed after building the fuzzers with legacy code enabled.
+* It doesn't allow users to get access to uninitialized or out-of-bounds memory, since the read is never forwarded to the user."""
+
+-- Comment 3: """ClusterFuzz has detected this issue as fixed in range 201904190236:201904200235.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5648063105859584
+
+Project: zstd
+Fuzzer: libFuzzer_zstd_stream_decompress
+Fuzz target binary: stream_decompress
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6050000000ec
+Crash State:
+  MEM_read32
+  ZSTDv05_decodeSequence
+  ZSTDv05_decompressSequences
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_zstd&range=201904181421:201904190236
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_zstd&range=201904190236:201904200235
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5648063105859584
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for instructions to reproduce this bug locally.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 4: """ClusterFuzz testcase 5648063105859584 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

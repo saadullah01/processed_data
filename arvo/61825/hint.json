@@ -1,0 +1,10 @@
+{
+    "encoder/ixheaace_api.c": {
+        "entities": [
+            "function_iusace_process"
+        ],
+        "lines": [
+            3079
+        ]
+    }
+}

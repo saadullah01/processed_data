@@ -1,0 +1,47 @@
+-- Comment 1:
+Project: boringssl
+Fuzzer: libFuzzer_boringssl_ssl_ctx_api
+Fuzz target binary: ssl_ctx_api
+Job Type: libfuzzer_asan_boringssl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6020000002b1
+Crash State:
+  parse_sigalgs_list
+  SSL_CTX_set1_sigalgs_list
+  std::__1::function<void
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201808090200:201808100143
+
+Reproducer Testcase: 5807097051611136
+
+-- Comment 2:
+This one is just a bug in the parser. The API wants a NUL-terminated string, but it wasn't always passing one into it.
+
+-- Comment 3:
+Fix SSL_CTX_set1_sigalgs_list fuzzer.
+
+SSL_CTX_set1_sigalgs_list wants a NUL-terminated string, so we need to use
+GetString to give it one.
+
+Bug: oss-fuzz:9808
+
+[modify] fuzz/ssl_ctx_api.cc
+
+-- Comment 4:
+ClusterFuzz has detected this issue as fixed in range 201808100143:201808110143.
+
+Fixed: 201808100143:201808110143
+
+Reproducer Testcase: 5807097051611136
+
+-- Comment 5:
+ClusterFuzz testcase 5807097051611136 is verified as fixed, so closing issue as verified.
+
+-- Comment 6:
+This bug has been fixed for 30 days. It has been opened to the public.

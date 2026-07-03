@@ -1,0 +1,10 @@
+{
+    "Libraries/LibGfx/BMPLoader.cpp": {
+        "entities": [
+            "function_uncompress_bmp_rle_data"
+        ],
+        "lines": [
+            931
+        ]
+    }
+}

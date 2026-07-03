@@ -1,0 +1,10 @@
+{
+    "coders/wpg.c": {
+        "entities": [
+            "function_UnpackWPGRaster"
+        ],
+        "lines": [
+            446
+        ]
+    }
+}

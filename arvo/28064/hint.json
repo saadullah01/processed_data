@@ -1,0 +1,18 @@
+{
+    "jdarith.c": {
+        "entities": [
+            "function_start_pass"
+        ],
+        "lines": [
+            672
+        ]
+    },
+    "jdphuff.c": {
+        "entities": [
+            "function_start_pass_phuff_decoder"
+        ],
+        "lines": [
+            130
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "libavcodec/apac.c": {
+        "entities": [
+            "function_apac_decode"
+        ],
+        "lines": [
+            159
+        ]
+    }
+}

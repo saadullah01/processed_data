@@ -1,0 +1,11 @@
+{
+    "bfd/mmo.c": {
+        "entities": [
+            "function_mmo_get_loc"
+        ],
+        "lines": [
+            1492,
+            382
+        ]
+    }
+}

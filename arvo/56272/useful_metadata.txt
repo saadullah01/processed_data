@@ -1,0 +1,14 @@
+Project: ndpi
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_process_packet
+Job Type: honggfuzz_asan_ndpi
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  ndpi_free_flow_data
+  ndpi_free_flow
+  fuzz_process_packet.c
+
+Sanitizer: address (ASAN)

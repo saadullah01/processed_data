@@ -1,0 +1,10 @@
+{
+    "src/tools.c": {
+        "entities": [
+            "function_parse_line"
+        ],
+        "lines": [
+            5751
+        ]
+    }
+}

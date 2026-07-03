@@ -1,0 +1,12 @@
+{
+    "bfd/som.c": {
+        "entities": [
+            "function_som_set_reloc_info",
+            "function_som_slurp_reloc_table"
+        ],
+        "lines": [
+            4937,
+            5278
+        ]
+    }
+}

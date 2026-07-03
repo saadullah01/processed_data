@@ -1,0 +1,16 @@
+Project: libtpms
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz
+Job Type: libfuzzer_ubsan_libtpms
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+
+Crash State:
+  RsaAdjustPrimeCandidate
+  TpmRsa_GeneratePrimeForRSA
+  CryptRsaGenerateKey
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,33 @@
+{
+    "tiny_gltf.h": {
+        "entities": [
+            "function_ExpandFilePath",
+            "function_ParseSparseAccessor",
+            "function_WriteBinaryGltfStream",
+            "class_TinyGLTF",
+            "method_LoadASCIIFromString",
+            "function_ParseSampler",
+            "method_Sampler::operator==",
+            "function_GetBaseFilename",
+            "struct_Sampler",
+            "function_SerializeGltfSampler"
+        ],
+        "lines": [
+            2042,
+            7171,
+            613,
+            1605,
+            5094,
+            1322,
+            108,
+            1933,
+            2605,
+            7534,
+            4242,
+            5108,
+            1302,
+            26,
+            2652
+        ]
+    }
+}

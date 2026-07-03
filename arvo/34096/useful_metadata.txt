@@ -1,0 +1,13 @@
+Project: njs
+Fuzzing Engine: libFuzzer
+Fuzz Target: njs_process_script_fuzzer
+Job Type: libfuzzer_ubsan_njs
+Platform Id: linux
+Crash Type: Object-size
+Crash Address:
+Crash State:
+  njs_vmcode_interpreter
+  njs_vm_start
+  njs_process_script
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

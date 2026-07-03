@@ -1,0 +1,16 @@
+{
+    "src/hb-ot-var-gvar-table.hh": {
+        "entities": [
+            "function_get_glyph_var_data_length",
+            "method_get_glyph_var_data",
+            "struct_gvar"
+        ],
+        "lines": [
+            416,
+            492,
+            437,
+            568,
+            699
+        ]
+    }
+}

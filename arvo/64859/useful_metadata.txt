@@ -1,0 +1,26 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-draw-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x60400000008f
+Crash State:
+  OT::cff2::accelerator_templ_t<CFF::cff2_private_dict_opset_t, CFF::cff2_private_
+  hb_ot_draw_glyph
+  hb_font_draw_glyph
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5393832740782080 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

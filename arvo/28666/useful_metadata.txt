@@ -1,0 +1,18 @@
+Project: php-src
+Fuzzer: libfuzzer
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_asan_i386_php
+Platform Id: linux
+Crash Address: 0xf4d0dd08
+Crash State:
+  zif_range
+  ZEND_DO_ICALL_SPEC_RETVAL_USED_HANDLER
+  fuzzer_execute_ex
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+ClusterFuzz testcase 5148825408897024 is verified as fixed
+This bug has been fixed for 30 days. It has been opened to the public.
+- Your friendly Sheriffbot

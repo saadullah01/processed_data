@@ -1,0 +1,28 @@
+{
+    "src/ots.cc": {
+        "entities": [
+            "function_CheckTag",
+            "function_GetTableData",
+            "function_ProcessGeneric",
+            "method_Font::ParseTable",
+            "function_Font::ParseTable"
+        ],
+        "lines": [
+            640,
+            649,
+            810,
+            47,
+            629,
+            85,
+            505,
+            861
+        ]
+    },
+    "src/ots.h": {
+        "entities": [],
+        "lines": [
+            273,
+            218
+        ]
+    }
+}

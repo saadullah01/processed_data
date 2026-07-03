@@ -1,0 +1,10 @@
+{
+    "src/cmsps2.c": {
+        "entities": [
+            "function_WriteOutputLUT"
+        ],
+        "lines": [
+            1314
+        ]
+    }
+}

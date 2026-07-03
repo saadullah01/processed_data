@@ -1,0 +1,14 @@
+{
+    "gdal/gcore/gdalpamdataset.cpp": {
+        "entities": [
+            "method_GDALPamDataset::SerializeToXML",
+            "function_GDALPamDataset::CloneInfo",
+            "method_GDALPamDataset::XMLInit"
+        ],
+        "lines": [
+            489,
+            981,
+            247
+        ]
+    }
+}

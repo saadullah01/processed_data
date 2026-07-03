@@ -1,0 +1,19 @@
+{
+    "lib/Parser/JSLexer.cpp": {
+        "entities": [
+            "function_JSLexer::consumeBracedCodePoint",
+            "method_JSLexer::consumeBracedCodePoint"
+        ],
+        "lines": [
+            986,
+            999,
+            975
+        ]
+    },
+    "unittests/Parser/JSLexerTest.cpp": {
+        "entities": [],
+        "lines": [
+            957
+        ]
+    }
+}

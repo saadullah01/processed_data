@@ -1,0 +1,10 @@
+{
+    "src/effects/SkDisplacementMapEffect.cpp": {
+        "entities": [
+            "method_SkDisplacementMapEffect::onFilterImage"
+        ],
+        "lines": [
+            269
+        ]
+    }
+}

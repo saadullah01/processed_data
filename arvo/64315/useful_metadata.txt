@@ -1,0 +1,27 @@
+Project: net-snmp
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+-- Comment 1:
+Project: net-snmp
+Fuzzing Engine: honggfuzz
+Fuzz Target: snmp_config_fuzzer
+Job Type: honggfuzz_asan_net-snmp
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffff7398d20
+Crash State:
+  __wrap_strlcat
+  read_config
+  snmp_config_fuzzer.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Issue filed automatically.
+
+-- Comment 2:
+ClusterFuzz testcase 4516406728982528 is verified as fixed
+
+-- Comment 3:
+This bug has been fixed. It has been opened to the public.

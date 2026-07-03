@@ -1,0 +1,14 @@
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  template_affine_color_N_lerp
+  paint_affine_color_lerp_N
+  fz_paint_image_imp
+Sanitizer: memory (MSAN)
+ClusterFuzz testcase 5177354055974912 is verified as fixed
+This bug has been fixed. It has been opened to the public.

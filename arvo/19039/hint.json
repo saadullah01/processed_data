@@ -1,0 +1,10 @@
+{
+    "src/libopensc/gp.c": {
+        "entities": [
+            "function_gp_get_cplc_data"
+        ],
+        "lines": [
+            114
+        ]
+    }
+}

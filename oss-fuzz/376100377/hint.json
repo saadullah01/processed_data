@@ -1,0 +1,10 @@
+{
+    "src/core/parser/sdp/sdp_helpr_funcs.c": {
+        "entities": [
+            "function_extract_ice_option"
+        ],
+        "lines": [
+            413
+        ]
+    }
+}

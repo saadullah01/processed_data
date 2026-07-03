@@ -1,0 +1,18 @@
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_JNX_fuzzer
+Fuzz target binary: coder_JNX_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  funcDCM_PhotometricInterpretation
+  ReadDCMImage
+  ReadImage
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201809060212:201809070212.

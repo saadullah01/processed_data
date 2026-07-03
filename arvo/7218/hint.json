@@ -1,0 +1,10 @@
+{
+    "gdal/ogr/ogrpgeogeometry.cpp": {
+        "entities": [
+            "function_OGRCreateMultiPatch"
+        ],
+        "lines": [
+            1430
+        ]
+    }
+}

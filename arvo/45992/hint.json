@@ -1,0 +1,10 @@
+{
+    "base/gximage3.c": {
+        "entities": [
+            "function_gx_begin_image3_generic"
+        ],
+        "lines": [
+            209
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "poppler/Hints.cc": {
+        "entities": [
+            "constructor_Hints::Hints"
+        ],
+        "lines": [
+            103
+        ]
+    },
+    "poppler/XRef.cc": {
+        "entities": [
+            "method_XRef::getEntry"
+        ],
+        "lines": [
+            1,
+            1563
+        ]
+    }
+}

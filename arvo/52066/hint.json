@@ -1,0 +1,10 @@
+{
+    "mapfile.c": {
+        "entities": [
+            "function_loadProjection"
+        ],
+        "lines": [
+            1195
+        ]
+    }
+}

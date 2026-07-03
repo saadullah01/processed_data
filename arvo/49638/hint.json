@@ -1,0 +1,11 @@
+{
+    "src/lib/protocols/softether.c": {
+        "entities": [
+            "function_dissect_softether_ip_port"
+        ],
+        "lines": [
+            288,
+            295
+        ]
+    }
+}

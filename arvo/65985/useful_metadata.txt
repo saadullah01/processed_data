@@ -1,0 +1,26 @@
+Project: gpac
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Memcpy-param-overlap
+Severity: Medium
+
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_asan_gpac
+Platform Id: linux
+
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x62600001b104,0x62600001b10c) and [0x62600001b100, 0x62600001b108)
+Crash State:
+  mpgviddmx_process
+  gf_filter_process_task
+  gf_fs_thread_proc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4758900997947392 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

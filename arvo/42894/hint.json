@@ -1,0 +1,18 @@
+{
+    "Zend/zend_hash.c": {
+        "entities": [
+            "function_zend_hash_str_del_ind",
+            "function_zend_hash_del",
+            "function__zend_hash_del_el",
+            "function_zend_hash_str_del",
+            "function_zend_hash_del_ind"
+        ],
+        "lines": [
+            1571,
+            1604,
+            1476,
+            1525,
+            1431
+        ]
+    }
+}

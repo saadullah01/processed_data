@@ -1,0 +1,30 @@
+libcups:fuzzipp: Heap-buffer-overflow in ippWriteIO
+
+Project: libcups
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzipp
+Job Type: libfuzzer_asan_libcups
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x502000002af8
+Crash State:
+  ippWriteIO
+  fuzzipp.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzipp from making much progress. Fixing this will allow more bugs to be found.
+
+The bug has been fixed by the upstream project.
+
+ClusterFuzz testcase 4664958494244864 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

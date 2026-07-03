@@ -1,0 +1,27 @@
+wamr:wasm_mutator_fuzz_loader: Heap-buffer-overflow in copy_params_to_dynamic_space
+Project: wamr
+Fuzzing Engine: libFuzzer
+Fuzz Target: wasm_mutator_fuzz_loader
+Job Type: libfuzzer_asan_wamr
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x506000000060
+Crash State:
+  copy_params_to_dynamic_space
+  wasm_loader_prepare_bytecode
+  load_from_sections
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: wamr
+Code Changes
+--
+Pending Code Changes
+--

@@ -1,0 +1,26 @@
+Project: aac
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: libfdk-aac
+Fuzzing Engine: libFuzzer
+Fuzz Target: aacDecoder_DecodeFrame
+Job Type: libfuzzer_ubsan_libfdk-aac
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  sbrGetChannelElement
+  sbrDecoder_Parse
+  aacDecoder_ParseExplicitMpsAndSbr
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5745965901807616 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

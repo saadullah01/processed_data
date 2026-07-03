@@ -1,0 +1,31 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-underflow READ 4
+
+Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pdfwrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-underflow READ 4
+Crash Address: 0x7ffcea12c39c
+Crash State:
+  gs_type2_interpret
+  gs_type1_glyph_info
+  pdfi_cff_glyph_info
+
+Sanitizer: address (ASAN)
+
+Regressed: 202206280605:202206290610
+
+Reproducer Testcase: 5215827964329984
+
+Comment 2:
+Fixed upstream commit: b7f934c26b6d139d665ab924167036c74a973360
+
+Comment 3:
+ClusterFuzz testcase 5215827964329984 is verified as fixed
+Regressed range (verification): 202210050608:202210060615

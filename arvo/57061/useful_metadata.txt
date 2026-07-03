@@ -1,0 +1,23 @@
+Project: libxslt
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: libxslt
+Fuzzing Engine: afl
+Fuzz Target: xslt
+Job Type: afl_asan_libxslt
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x602000001710
+Crash State:
+  xsltCompileStepPattern
+  xsltCompileRelativePathPattern
+  xsltCompilePatternInternal
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5277478240518144 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,24 @@
+Project: binutils-gdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 15
+Severity: High
+
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disassemble
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 15
+Crash Address: 0x7ffc8c3d1b3a
+Crash State:
+  get_register_operand
+  print_branch
+  print_insn_tic30
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_disassemble from making much progress. Fixing this will allow more bugs to be found.

@@ -1,0 +1,27 @@
+Project: poppler
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: poppler
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  rc4InitKey
+  DecryptStream::reset
+  FlateStream::flateReset
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5986356943388672 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.
+- Your friendly Sheriffbot

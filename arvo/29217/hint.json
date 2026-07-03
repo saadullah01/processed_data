@@ -1,0 +1,11 @@
+{
+    "fofi/FoFiTrueType.cc": {
+        "entities": [
+            "function_FoFiTrueType::parse"
+        ],
+        "lines": [
+            1,
+            1467
+        ]
+    }
+}

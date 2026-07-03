@@ -1,0 +1,42 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: zstd
+Fuzzer: libFuzzer_zstd_stream_decompress
+Fuzz target binary: stream_decompress
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6050000000ec
+Crash State:
+  MEM_read32
+  ZSTDv05_decodeSequence
+  ZSTDv05_decompressSequences
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+* The bug has been present for years, and was exposed after building the fuzzers with legacy code enabled.
+* It doesn't allow users to get access to uninitialized or out-of-bounds memory, since the read is never forwarded to the user.
+
+ClusterFuzz has detected this issue as fixed in range 201904190236:201904200235.
+
+Project: zstd
+Fuzzer: libFuzzer_zstd_stream_decompress
+Fuzz target binary: stream_decompress
+Job Type: libfuzzer_asan_zstd
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6050000000ec
+Crash State:
+  MEM_read32
+  ZSTDv05_decodeSequence
+  ZSTDv05_decompressSequences
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

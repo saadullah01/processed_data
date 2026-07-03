@@ -1,0 +1,10 @@
+{
+    "libavformat/rmdec.c": {
+        "entities": [
+            "function_rm_read_audio_stream_info"
+        ],
+        "lines": [
+            188
+        ]
+    }
+}

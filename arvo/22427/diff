@@ -1,0 +1,276 @@
+From d2dadc4e18dfd924490c529a058eb5276a2ab6c5 Mon Sep 17 00:00:00 2001
+From: seladb <pcapplusplus@gmail.com>
+Date: Sat, 23 May 2020 04:31:36 -0400
+Subject: [PATCH] Bugfix 22232 in oss-fuzz: Heap-buffer-overflow in
+ pcpp::IPv6Layer::parseExtensions
+
+---
+ Packet++/header/IPv6Layer.h                   |  15 +++++++++++
+ Packet++/src/EthLayer.cpp                     |   4 ++-
+ Packet++/src/GreLayer.cpp                     |   8 ++++--
+ Packet++/src/GtpLayer.cpp                     |   4 ++-
+ Packet++/src/IPv6Layer.cpp                    |   2 +-
+ Packet++/src/MplsLayer.cpp                    |   4 ++-
+ Packet++/src/NullLoopbackLayer.cpp            |   4 ++-
+ Packet++/src/PPPoELayer.cpp                   |   4 ++-
+ Packet++/src/Packet.cpp                       |  24 ++++++++++--------
+ Packet++/src/SllLayer.cpp                     |   4 ++-
+ Packet++/src/VlanLayer.cpp                    |   4 ++-
+ ...case-minimized-FuzzTarget-5766899836387328 | Bin 0 -> 44 bytes
+ 12 files changed, 57 insertions(+), 20 deletions(-)
+ create mode 100644 Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5766899836387328
+
+diff --git a/Packet++/header/IPv6Layer.h b/Packet++/header/IPv6Layer.h
+index 89e20147a6..e8b86faa30 100644
+--- a/Packet++/header/IPv6Layer.h
++++ b/Packet++/header/IPv6Layer.h
+@@ -143,6 +143,14 @@ namespace pcpp
+ 		 */
+ 		bool isFragment() const;
+ 
++		/**
++		 * The static method makes validation of input data
++		 * @param[in] data The pointer to the beginning of byte stream of IP packet
++		 * @param[in] dataLen The length of byte stream
++		 * @return True if the data is valid and can represent the IPv6 packet
++		 */
++		static inline bool isDataValid(const uint8_t* data, size_t dataLen);
++
+ 
+ 		// implement abstract methods
+ 
+@@ -221,6 +229,13 @@ namespace pcpp
+ 		return newHeader;
+ 	}
+ 
++		// implementation of inline methods
++
++	bool IPv6Layer::isDataValid(const uint8_t* data, size_t dataLen)
++	{
++		return dataLen >= sizeof(ip6_hdr);
++	}
++
+ } // namespace pcpp
+ 
+ #endif /* PACKETPP_IPV6_LAYER */
+diff --git a/Packet++/src/EthLayer.cpp b/Packet++/src/EthLayer.cpp
+index 274cd67c11..0e077fd74c 100644
+--- a/Packet++/src/EthLayer.cpp
++++ b/Packet++/src/EthLayer.cpp
+@@ -46,7 +46,9 @@ void EthLayer::parseNextLayer()
+ 			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_IPV6:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_ARP:
+ 		m_NextLayer = new ArpLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/GreLayer.cpp b/Packet++/src/GreLayer.cpp
+index 9d7041cd9d..5dad318c61 100644
+--- a/Packet++/src/GreLayer.cpp
++++ b/Packet++/src/GreLayer.cpp
+@@ -206,7 +206,9 @@ void GreLayer::parseNextLayer()
+ 			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_IPV6:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_VLAN:
+ 		m_NextLayer = new VlanLayer(payload, payloadLen, this, m_Packet);
+@@ -565,7 +567,9 @@ void PPP_PPTPLayer::parseNextLayer()
+ 			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_PPP_IPV6:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	default:
+ 		m_NextLayer = new PayloadLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/GtpLayer.cpp b/Packet++/src/GtpLayer.cpp
+index 3a62520c0a..28b64bcb1d 100644
+--- a/Packet++/src/GtpLayer.cpp
++++ b/Packet++/src/GtpLayer.cpp
+@@ -599,7 +599,9 @@ void GtpV1Layer::parseNextLayer()
+ 	}
+ 	else if ((subProto & 0xf0) == 0x60)
+ 	{
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 	}
+ 	else
+ 	{
+diff --git a/Packet++/src/IPv6Layer.cpp b/Packet++/src/IPv6Layer.cpp
+index 92e1232a4d..6aa72e3c3e 100644
+--- a/Packet++/src/IPv6Layer.cpp
++++ b/Packet++/src/IPv6Layer.cpp
+@@ -230,7 +230,7 @@ void IPv6Layer::parseNextLayer()
+ 		uint8_t ipVersion = *payload >> 4;
+ 		if (ipVersion == 4 && IPv4Layer::isDataValid(payload, payloadLen))
+ 			m_NextLayer = new IPv4Layer(payload, payloadLen, this, m_Packet);
+-		else if (ipVersion == 6)
++		else if (ipVersion == 6 && IPv6Layer::isDataValid(payload, payloadLen))
+ 			m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
+ 		else
+ 			m_NextLayer = new PayloadLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/MplsLayer.cpp b/Packet++/src/MplsLayer.cpp
+index af02de13db..155e423b0e 100644
+--- a/Packet++/src/MplsLayer.cpp
++++ b/Packet++/src/MplsLayer.cpp
+@@ -124,7 +124,9 @@ void MplsLayer::parseNextLayer()
+ 				: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 			break;
+ 		case 6:
+-			m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++			m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++				? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++				: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 			break;
+ 		default:
+ 			m_NextLayer = new PayloadLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/NullLoopbackLayer.cpp b/Packet++/src/NullLoopbackLayer.cpp
+index 1bd89eba63..4d1ce65970 100644
+--- a/Packet++/src/NullLoopbackLayer.cpp
++++ b/Packet++/src/NullLoopbackLayer.cpp
+@@ -65,7 +65,9 @@ void NullLoopbackLayer::parseNextLayer()
+ 	case PCPP_BSD_AF_INET6_BSD:
+ 	case PCPP_BSD_AF_INET6_FREEBSD:
+ 	case PCPP_BSD_AF_INET6_DARWIN:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	default:
+ 		m_NextLayer = new PayloadLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/PPPoELayer.cpp b/Packet++/src/PPPoELayer.cpp
+index db65fd0ce0..1e8d98caa6 100644
+--- a/Packet++/src/PPPoELayer.cpp
++++ b/Packet++/src/PPPoELayer.cpp
+@@ -59,7 +59,9 @@ void PPPoESessionLayer::parseNextLayer()
+ 			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_PPP_IPV6:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	default:
+ 		m_NextLayer = new PayloadLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/Packet.cpp b/Packet++/src/Packet.cpp
+index 9924346dcb..7715533bee 100644
+--- a/Packet++/src/Packet.cpp
++++ b/Packet++/src/Packet.cpp
+@@ -678,6 +678,9 @@ std::string Packet::printPacketInfo(bool timeAsLocalTime) const
+ 
+ Layer* Packet::createFirstLayer(LinkLayerType linkType)
+ {
++	size_t rawDataLen = (size_t)m_RawPacket->getRawDataLen();
++	const uint8_t* rawData = m_RawPacket->getRawData();
++
+ 	if (linkType == LINKTYPE_ETHERNET)
+ 	{
+ 		// In order to distinguish between Ethernet II and IEEE 802.3 Ethernet the common method is
+@@ -686,9 +689,6 @@ Layer* Packet::createFirstLayer(LinkLayerType linkType)
+ 		// it means the value is an Ether Type which belongs to Ethernet II.
+ 		// You can read more in this link:
+ 		// https://www.ibm.com/support/pages/ethernet-version-2-versus-ieee-8023-ethernet
+-
+-		size_t rawDataLen = (size_t)m_RawPacket->getRawDataLen();
+-		const uint8_t* rawData = m_RawPacket->getRawData();
+ 		if (rawDataLen >= sizeof(ether_header))
+ 		{
+ 			uint16_t ethTypeOrLength = be16toh(*(uint16_t*)(rawData + 12));
+@@ -702,31 +702,35 @@ Layer* Packet::createFirstLayer(LinkLayerType linkType)
+ 	}
+ 	else if (linkType == LINKTYPE_LINUX_SLL)
+ 	{
+-		return new SllLayer((uint8_t*)m_RawPacket->getRawData(), m_RawPacket->getRawDataLen(), this);
++		return new SllLayer((uint8_t*)rawData, rawDataLen, this);
+ 	}
+ 	else if (linkType == LINKTYPE_NULL)
+ 	{
+-		return new NullLoopbackLayer((uint8_t*)m_RawPacket->getRawData(), m_RawPacket->getRawDataLen(), this);
++		return new NullLoopbackLayer((uint8_t*)rawData, rawDataLen, this);
+ 	}
+ 	else if (linkType == LINKTYPE_RAW || linkType == LINKTYPE_DLT_RAW1 || linkType == LINKTYPE_DLT_RAW2)
+ 	{
+-		uint8_t ipVer = m_RawPacket->getRawData()[0] & 0xf0;
++		uint8_t ipVer = rawData[0] & 0xf0;
+ 		if (ipVer == 0x40)
+ 		{
+-			return new IPv4Layer((uint8_t*)m_RawPacket->getRawData(), m_RawPacket->getRawDataLen(), NULL, this);
++			return IPv4Layer::isDataValid(rawData, rawDataLen)
++				? static_cast<Layer*>(new IPv4Layer((uint8_t*)rawData, rawDataLen, NULL, this))
++				: static_cast<Layer*>(new PayloadLayer((uint8_t*)rawData, rawDataLen, NULL, this));
+ 		}
+ 		else if (ipVer == 0x60)
+ 		{
+-			return new IPv6Layer((uint8_t*)m_RawPacket->getRawData(), m_RawPacket->getRawDataLen(), NULL, this);
++			return IPv6Layer::isDataValid(rawData, rawDataLen)
++				? static_cast<Layer*>(new IPv6Layer((uint8_t*)rawData, rawDataLen, NULL, this))
++				: static_cast<Layer*>(new PayloadLayer((uint8_t*)rawData, rawDataLen, NULL, this));
+ 		}
+ 		else
+ 		{
+-			return new PayloadLayer((uint8_t*)m_RawPacket->getRawData(), m_RawPacket->getRawDataLen(), NULL, this);
++			return new PayloadLayer((uint8_t*)rawData, rawDataLen, NULL, this);
+ 		}
+ 	}
+ 
+ 	// unknown link type
+-	return new EthLayer((uint8_t*)m_RawPacket->getRawData(), m_RawPacket->getRawDataLen(), this);
++	return new EthLayer((uint8_t*)rawData, rawDataLen, this);
+ }
+ 
+ std::string Packet::toString(bool timeAsLocalTime)
+diff --git a/Packet++/src/SllLayer.cpp b/Packet++/src/SllLayer.cpp
+index 2a7b969ce8..012de0215f 100644
+--- a/Packet++/src/SllLayer.cpp
++++ b/Packet++/src/SllLayer.cpp
+@@ -72,7 +72,9 @@ void SllLayer::parseNextLayer()
+ 			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_IPV6:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_ARP:
+ 		m_NextLayer = new ArpLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Packet++/src/VlanLayer.cpp b/Packet++/src/VlanLayer.cpp
+index 6a512a67d0..f1db10689a 100644
+--- a/Packet++/src/VlanLayer.cpp
++++ b/Packet++/src/VlanLayer.cpp
+@@ -70,7 +70,9 @@ void VlanLayer::parseNextLayer()
+ 			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_IPV6:
+-		m_NextLayer = new IPv6Layer(payload, payloadLen, this, m_Packet);
++		m_NextLayer = IPv6Layer::isDataValid(payload, payloadLen)
++			? static_cast<Layer*>(new IPv6Layer(payload, payloadLen, this, m_Packet))
++			: static_cast<Layer*>(new PayloadLayer(payload, payloadLen, this, m_Packet));
+ 		break;
+ 	case PCPP_ETHERTYPE_ARP:
+ 		m_NextLayer = new ArpLayer(payload, payloadLen, this, m_Packet);
+diff --git a/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5766899836387328 b/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5766899836387328
+new file mode 100644
+index 0000000000000000000000000000000000000000..31e2a3ee3864ca5d0070145a5fe5f6524869ef78
+GIT binary patch
+literal 44
+jcmca|c+)~A24)5Y2>Ad1zk)(41B?q1WMN=n$N@3|7=H=k
+
+literal 0
+HcmV?d00001
+

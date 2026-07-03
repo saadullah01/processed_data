@@ -1,0 +1,14 @@
+{
+    "Zend/tests/bug63882_2.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_hash.c": {
+        "entities": [
+            "function_zend_hash_sort_ex"
+        ],
+        "lines": [
+            2551
+        ]
+    }
+}

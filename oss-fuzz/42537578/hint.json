@@ -1,0 +1,11 @@
+{
+    "libavcodec/wmavoice.c": {
+        "entities": [
+            "function_synth_frame"
+        ],
+        "lines": [
+            1506,
+            1623
+        ]
+    }
+}

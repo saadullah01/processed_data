@@ -1,0 +1,12 @@
+{
+    "pdf/pdf_font1C.c": {
+        "entities": [
+            "function_pdfi_read_cff",
+            "function_pdfi_count_cff_index"
+        ],
+        "lines": [
+            1650,
+            1212
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "lib/ofp-port.c": {
+        "entities": [
+            "function_parse_intel_port_custom_property"
+        ],
+        "lines": [
+            1597
+        ]
+    }
+}

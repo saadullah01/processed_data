@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_cmap.c": {
+        "entities": [
+            "function_pdf_cmap_open_file"
+        ],
+        "lines": [
+            646
+        ]
+    }
+}

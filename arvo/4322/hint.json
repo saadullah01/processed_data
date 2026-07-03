@@ -1,0 +1,12 @@
+{
+    "src/librawspeed/decompressors/SonyArw2Decompressor.cpp": {
+        "entities": [
+            "function_SonyArw2Decompressor::decompressThreaded",
+            "constructor_SonyArw2Decompressor::SonyArw2Decompressor"
+        ],
+        "lines": [
+            41,
+            54
+        ]
+    }
+}

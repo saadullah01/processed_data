@@ -1,0 +1,31 @@
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_PTIF_fuzzer
+Fuzz target binary: coder_PTIF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  VerticalFilter
+  ResizeImage
+  WritePTIFImage
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This issue appears to be fixed by Mercurial changeset 15883:3e639c39c620
+
+ClusterFuzz has detected this issue as fixed in range 201902100226:201902110227.
+
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_PTIF_fuzzer
+Fuzz target binary: coder_PTIF_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  VerticalFilter
+  ResizeImage
+  WritePTIFImage
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

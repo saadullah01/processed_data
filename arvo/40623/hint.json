@@ -1,0 +1,10 @@
+{
+    "libexif/exif-data.c": {
+        "entities": [
+            "function_exif_data_load_data"
+        ],
+        "lines": [
+            921
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "src/core/common/message.hpp": {
+        "entities": [
+            "struct_MessageInfo",
+            "class_Message"
+        ],
+        "lines": [
+            636,
+            114,
+            619,
+            628
+        ]
+    },
+    "src/core/thread/mesh_forwarder.cpp": {
+        "entities": [
+            "function_MeshForwarder::GetDirectTransmission"
+        ],
+        "lines": [
+            266,
+            230
+        ]
+    },
+    "src/core/thread/mesh_forwarder_ftd.cpp": {
+        "entities": [
+            "method_MeshForwarder::EvictMessage"
+        ],
+        "lines": [
+            244
+        ]
+    }
+}

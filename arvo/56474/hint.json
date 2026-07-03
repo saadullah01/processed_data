@@ -1,0 +1,10 @@
+{
+    "src/lib/libdwarf/dwarf_query.c": {
+        "entities": [
+            "function_dwarf_lowpc"
+        ],
+        "lines": [
+            1136
+        ]
+    }
+}

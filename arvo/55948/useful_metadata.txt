@@ -1,0 +1,19 @@
+Project: mosquitto
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: mosquitto
+Fuzzing Engine: honggfuzz
+Fuzz Target: broker_fuzz_test_config
+Job Type: honggfuzz_asan_mosquitto
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7f2fd865fa34
+Crash State:
+  mosquitto__hex2bin
+  mosquitto__hex2bin_sha1
+  config__read_file_core
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

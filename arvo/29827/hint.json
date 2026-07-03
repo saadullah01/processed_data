@@ -1,0 +1,11 @@
+{
+    "cram/cram_codecs.c": {
+        "entities": [
+            "function_cram_xpack_decode_init"
+        ],
+        "lines": [
+            1400,
+            1408
+        ]
+    }
+}

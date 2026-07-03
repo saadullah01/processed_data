@@ -1,0 +1,42 @@
+{
+    "src/libopensc/iasecc-sdo.c": {
+        "entities": [
+            "function_iasecc_parse_docp",
+            "function_iasecc_parse_pubkey",
+            "function_iasecc_parse_prvkey",
+            "function_iasecc_parse_size",
+            "function_iasecc_sdo_allocate_and_parse",
+            "function_iasecc_sdo_parse_data",
+            "function_iasecc_sdo_parse",
+            "function_iasecc_sdo_parse_card_answer",
+            "function_iasecc_parse_chv",
+            "function_iasecc_docp_copy",
+            "function_iasecc_se_parse",
+            "function_iasecc_parse_keyset",
+            "function_iasecc_parse_get_tlv"
+        ],
+        "lines": [
+            641,
+            387,
+            516,
+            650,
+            1293,
+            407,
+            36,
+            424,
+            554,
+            812,
+            824,
+            452,
+            1222,
+            330,
+            586,
+            345,
+            735,
+            486,
+            365,
+            754,
+            766
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+ghostscript:gs_device_psdcmyk_fuzzer: Crash in clist_fill_rectangle_hl_color
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_psdcmyk_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7abbc6c9aeb0
+Crash State:
+  clist_fill_rectangle_hl_color
+  clip_fill_rectangle_hl_color_s0
+  gx_dc_devn_fill_rectangle
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Fixed in commit id: 22c4e067973bd9fa63f9d6ffebe4be16b0cc34c0
+
+ClusterFuzz testcase 5464627218022400 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)

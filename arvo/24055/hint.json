@@ -1,0 +1,18 @@
+{
+    "HTMLparser.c": {
+        "entities": [
+            "function_htmlParseChunk"
+        ],
+        "lines": [
+            6150
+        ]
+    },
+    "buf.c": {
+        "entities": [
+            "function_xmlBufSetInputBaseCur"
+        ],
+        "lines": [
+            1334
+        ]
+    }
+}

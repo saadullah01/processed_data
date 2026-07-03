@@ -1,0 +1,30 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_ubsan_wireshark
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000a782b2b0
+Crash State:
+  except_pop
+  dissect_record
+  epan_dissect_run
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201810090118:201810091822
+
+Reproducer Testcase: 5667572477853696
+
+ClusterFuzz has detected this issue as fixed in range 201810100118:201810110117
+
+ClusterFuzz testcase 5667572477853696 is verified as fixed, so closing issue as verified.

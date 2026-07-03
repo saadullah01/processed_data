@@ -1,0 +1,17 @@
+{
+    "src/bits.c": {
+        "entities": [
+            "function_bit_read_RD"
+        ],
+        "lines": [
+            491
+        ]
+    },
+    "src/dec_macros.h": {
+        "entities": [],
+        "lines": [
+            1611,
+            1511
+        ]
+    }
+}

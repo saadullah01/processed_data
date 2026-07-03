@@ -1,0 +1,22 @@
+Project: wolfssl
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer-wolfssl-rsa
+Job Type: libfuzzer_ubsan_wolfssl
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  fp_read_radix_16
+  fp_read_radix
+  mp_read_radix
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

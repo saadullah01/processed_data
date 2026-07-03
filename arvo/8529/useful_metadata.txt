@@ -1,0 +1,50 @@
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  FT_Set_Transform
+  SplashFTFont::getGlyphPath
+  SplashOutputDev::drawChar
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201805230517:201805240508
+
+Reproducer Testcase: 6193455704309760
+
+Fixed by: commit id 4ea7ac960d9ecb6a407d0e660312f5701d3dcd49
+
+ClusterFuzz has detected this issue as fixed in range 201805250506:201805251508
+
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  FT_Set_Transform
+  SplashFTFont::getGlyphPath
+  SplashOutputDev::drawChar
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201805230517:201805240508
+Fixed: 201805250506:201805251508
+
+Reproducer Testcase: 6193455704309760
+
+ClusterFuzz testcase 6193455704309760 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

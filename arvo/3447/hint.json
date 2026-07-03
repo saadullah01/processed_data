@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/common/DngOpcodes.cpp": {
+        "entities": [
+            "constructor_DngOpcodes::FixBadPixelsList::FixBadPixelsList"
+        ],
+        "lines": [
+            99
+        ]
+    }
+}

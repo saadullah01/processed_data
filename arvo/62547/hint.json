@@ -1,0 +1,39 @@
+{
+    "src/lib/libdwarf/dwarf_alloc.c": {
+        "entities": [
+            "function__dwarf_free_all_of_one_debug"
+        ],
+        "lines": [
+            1140
+        ]
+    },
+    "src/lib/libdwarf/dwarf_frame.c": {
+        "entities": [
+            "function_dwarf_get_fde_for_die",
+            "function__dwarf_fde_destructor"
+        ],
+        "lines": [
+            2160,
+            3416
+        ]
+    },
+    "src/lib/libdwarf/dwarf_frame2.c": {
+        "entities": [
+            "function__dwarf_create_cie_from_after_start",
+            "function__dwarf_create_fde_from_after_start"
+        ],
+        "lines": [
+            1150,
+            1119,
+            975
+        ]
+    },
+    "src/lib/libdwarf/dwarf_opaque.h": {
+        "entities": [
+            "struct_Dwarf_Debug_s"
+        ],
+        "lines": [
+            594
+        ]
+    }
+}

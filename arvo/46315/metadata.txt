@@ -1,0 +1,46 @@
+Project: php-src
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6066390068494336
+
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_asan_i386_php
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x07615816
+Crash State:
+  zend_hash_find
+  zend_hash_compare
+  zend_compare
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_php&range=202109090607:202109100604
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6066390068494336
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored."""
+
+-- Comment 2: """ClusterFuzz testcase 6066390068494336 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_i386_php&range=202204030602:202204040608
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

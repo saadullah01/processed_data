@@ -1,0 +1,34 @@
+Project: lxc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Comment 1:
+Project: lxc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-lxc-define-load
+Job Type: libfuzzer_asan_lxc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x629000004780
+Crash State:
+  strlcpy
+  parse_lxc_mntopts
+  set_config_rootfs_options
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz-lxc-define-load from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+ClusterFuzz testcase 6387887164751872 is verified as fixed
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

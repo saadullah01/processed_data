@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs15init
+Job Type: afl_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7f6c904a84e0
+Crash State:
+  sc_path_print
+  sc_select_file
+  sc_pkcs15init_rmdir
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,12 @@
+{
+    "source/pdf/pdf-function.c": {
+        "entities": [
+            "function_ps_underflow",
+            "function_ps_index"
+        ],
+        "lines": [
+            186,
+            316
+        ]
+    }
+}

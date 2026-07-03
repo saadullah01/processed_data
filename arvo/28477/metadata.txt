@@ -1,0 +1,53 @@
+Project: glib
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 2
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5111097636028416
+
+Project: glib
+Fuzzing Engine: afl
+Fuzz Target: fuzz_date_time_new_from_iso8601
+Job Type: afl_asan_glib
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 2
+Crash Address: 0x0000006dff12
+Crash State:
+  g_date_time_get_ymd
+  g_date_time_get_year
+  g_date_time_format_utf8
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_glib&range=202012080629:202012090608
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5111097636028416
+
+Issue filed automatically.
+
+See https://gitlab.gnome.org/GNOME/glib/tree/master/fuzzing#how-to-reproduce-oss-fuzz-bugs-locally for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """I haven’t debugged in depth, but from the look of the test case, this looks like another NAN issue which should be fixed by https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1791"""
+
+-- Comment 3: """ClusterFuzz testcase 5111097636028416 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_glib&range=202012090608:202012100615
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

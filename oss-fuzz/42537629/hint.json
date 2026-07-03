@@ -1,0 +1,10 @@
+{
+    "libavcodec/cfhdenc.c": {
+        "entities": [
+            "function_cfhd_encode_init"
+        ],
+        "lines": [
+            285
+        ]
+    }
+}

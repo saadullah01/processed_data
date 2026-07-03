@@ -1,0 +1,30 @@
+Project: sudo
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: sudoers
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_sudoers_parse
+Job Type: libfuzzer_asan_sudoers
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x000000001000
+Crash State:
+  ldif_to_sudoers
+  sudoers_parse_ldif
+  fuzz_sudoers_parse.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_sudoers_parse from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6203691789058048 is verified as fixed.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

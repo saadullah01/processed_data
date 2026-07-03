@@ -1,0 +1,22 @@
+Project: mupdf
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: Medium
+
+Project: mupdf
+Fuzzing Engine: honggfuzz
+Fuzz Target: pdf_fuzzer
+Job Type: honggfuzz_asan_mupdf
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7fdaa08db093
+Crash State:
+  template_affine_N_near_fb0
+  paint_affine_near_3_fb0
+  fz_paint_image_imp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

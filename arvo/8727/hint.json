@@ -1,0 +1,10 @@
+{
+    "arch/ARM/ARMInstPrinter.c": {
+        "entities": [
+            "function_printT2AddrModeSoRegOperand"
+        ],
+        "lines": [
+            2111
+        ]
+    }
+}

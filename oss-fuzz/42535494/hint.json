@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-btle.c": {
+        "entities": [
+            "function_dissect_btle"
+        ],
+        "lines": [
+            2516
+        ]
+    }
+}

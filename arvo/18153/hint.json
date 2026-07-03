@@ -1,0 +1,34 @@
+{
+    "NEWS": {
+        "entities": [],
+        "lines": [
+            1,
+            7
+        ]
+    },
+    "liblwgeom/cunit/cu_in_wkb.c": {
+        "entities": [
+            "function_wkb_in_suite_setup"
+        ],
+        "lines": [
+            235,
+            214
+        ]
+    },
+    "liblwgeom/lwcurvepoly.c": {
+        "entities": [
+            "function_lwcurvepoly_add_ring"
+        ],
+        "lines": [
+            71
+        ]
+    },
+    "liblwgeom/lwin_wkb.c": {
+        "entities": [
+            "function_lwcurvepoly_from_wkb_state"
+        ],
+        "lines": [
+            603
+        ]
+    }
+}

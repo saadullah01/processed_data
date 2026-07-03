@@ -1,0 +1,62 @@
+Project: geos
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5368457793765376
+
+Project: geos
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_geo2
+Job Type: libfuzzer_asan_geos
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60e000000900
+Crash State:
+  geos::geomgraph::PlanarGraph::~PlanarGraph
+  geos::operation::overlay::OverlayOp::~OverlayOp
+  geos::operation::overlay::OverlayOp::overlayOp
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_geos&range=202111230604:202111240610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5368457793765376
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_geo2 from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 5: """ClusterFuzz testcase 5368457793765376 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_geos&range=202211090608:202211100607
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

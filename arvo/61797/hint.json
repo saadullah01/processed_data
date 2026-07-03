@@ -1,0 +1,13 @@
+{
+    "src/libopensc/iasecc-sdo.c": {
+        "entities": [
+            "function_iasecc_crt_parse",
+            "function_iasecc_se_parse"
+        ],
+        "lines": [
+            368,
+            212,
+            204
+        ]
+    }
+}

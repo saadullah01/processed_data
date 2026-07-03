@@ -1,0 +1,29 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_PhaseOneDecompressorFuzzer
+Fuzz target binary: PhaseOneDecompressorFuzzer
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  PhaseOneDecompressor.cpp
+  rawspeed::alignedMalloc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201810080213:201810090214.
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_PhaseOneDecompressorFuzzer
+Fuzz target binary: PhaseOneDecompressorFuzzer
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  PhaseOneDecompressor.cpp
+  rawspeed::alignedMalloc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5674338661957632 is verified as fixed, so closing issue as verified.

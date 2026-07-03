@@ -1,0 +1,14 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  gs_heap_free_object
+  chunk_free_object
+  pdfi_repair_add_object
+  
+Sanitizer: address (ASAN)

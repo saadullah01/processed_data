@@ -1,0 +1,11 @@
+{
+    "arch/PowerPC/PPCInstPrinter.c": {
+        "entities": [
+            "function_PPC_printInst"
+        ],
+        "lines": [
+            410,
+            635
+        ]
+    }
+}

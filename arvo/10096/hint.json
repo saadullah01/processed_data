@@ -1,0 +1,36 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "config/delegates.mgk.in": {
+        "entities": [],
+        "lines": [
+            98
+        ]
+    },
+    "magick/render.c": {
+        "entities": [],
+        "lines": [
+            2306,
+            944,
+            884,
+            856,
+            927
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

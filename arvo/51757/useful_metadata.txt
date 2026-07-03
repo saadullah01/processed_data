@@ -1,0 +1,23 @@
+Comment 1:
+Project: mongoose
+Fuzzing Engine: afl
+Fuzz Target: fuzz
+Job Type: afl_asan_mongoose
+Platform Id: linux
+Crash Type: Dynamic-stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffcb47a8e78
+Crash State:
+  rx_icmp
+  rx_ip
+  mip_rx
+Sanitizer: address (ASAN)
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+ClusterFuzz testcase 6545699273048064 is verified as fixed
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

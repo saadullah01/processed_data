@@ -1,0 +1,16 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 8
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_disassemble
+Job Type: afl_asan_binutils
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 8
+Crash Address: 0x000001c0ae80
+Crash State:
+  print_insn_rx
+  fuzz_disassemble.c
+Sanitizer: address (ASAN)

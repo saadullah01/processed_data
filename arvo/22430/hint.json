@@ -1,0 +1,10 @@
+{
+    "cpp/poppler-page.cpp": {
+        "entities": [
+            "method_page::text_list"
+        ],
+        "lines": [
+            393
+        ]
+    }
+}

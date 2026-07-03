@@ -1,0 +1,10 @@
+{
+    "src/numeric.c": {
+        "entities": [
+            "function_int_to_s"
+        ],
+        "lines": [
+            1805
+        ]
+    }
+}

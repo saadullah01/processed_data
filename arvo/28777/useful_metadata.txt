@@ -1,0 +1,24 @@
+Project: hiredis
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: hiredis
+Fuzzing Engine: libFuzzer
+Fuzz Target: format_command_fuzzer
+Job Type: libfuzzer_ubsan_hiredis
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0xfffffffffffffff9
+Crash State:
+  alloc.h
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer format_command_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5178053365989376 is verified as fixed

@@ -1,0 +1,16 @@
+{
+    "src/filters/reframe_img.c": {
+        "entities": [
+            "function_img_process",
+            "function_rfimg_register",
+            "function_img_configure_pid"
+        ],
+        "lines": [
+            169,
+            309,
+            88,
+            444,
+            319
+        ]
+    }
+}

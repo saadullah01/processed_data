@@ -1,0 +1,10 @@
+{
+    "source3/libsmb/nmblib.c": {
+        "entities": [
+            "function_handle_name_ptrs"
+        ],
+        "lines": [
+            160
+        ]
+    }
+}

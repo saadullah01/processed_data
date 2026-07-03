@@ -1,0 +1,26 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: html
+Job Type: libfuzzer_msan_libxml2
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  htmlParseHTMLAttribute
+  htmlParseStartTag
+  htmlParseContentInternal
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 
+
+Reproducer Testcase: 
+
+Issue filed automatically.
+
+ClusterFuzz testcase 6314169344589824 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

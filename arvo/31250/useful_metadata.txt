@@ -1,0 +1,21 @@
+Project: sudo
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: sudoers
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_sudoers
+Job Type: honggfuzz_asan_sudoers
+Platform Id: linux
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x563234b158d0
+Crash State:
+  sudoers_lookup_check
+  sudoers_lookup
+  fuzz_sudoers.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5121941909405696 is verified as fixed

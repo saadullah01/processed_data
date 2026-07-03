@@ -1,0 +1,19 @@
+Project: matio
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 8
+Severity: High
+
+Project: matio
+Fuzzing Engine: libFuzzer
+Fuzz Target: matio_fuzzer
+Job Type: libfuzzer_asan_matio
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 8
+Crash Address: 0x7fff33348808
+Crash State:
+  H5S_get_simple_extent_dims
+  H5Sget_simple_extent_dims
+  Mat_H5ReadFieldNames
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

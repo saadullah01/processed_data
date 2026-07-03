@@ -1,0 +1,15 @@
+Project: libsndfile
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+Fuzzing Engine: libFuzzer
+Fuzz Target: sndfile_fuzzer
+Job Type: libfuzzer_msan_libsndfile
+Platform Id: linux
+Crash Address:
+Crash State:
+  exif_subchunk_parse
+  wavlike_subchunk_parse
+  wav_read_header
+Recommended Security Severity: Medium

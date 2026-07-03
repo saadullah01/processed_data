@@ -1,0 +1,20 @@
+{
+    "HTMLparser.c": {
+        "entities": [
+            "function_htmlCurrentChar"
+        ],
+        "lines": [
+            411
+        ]
+    },
+    "parserInternals.c": {
+        "entities": [
+            "function_xmlCurrentChar",
+            "function_xmlNextChar"
+        ],
+        "lines": [
+            674,
+            527
+        ]
+    }
+}

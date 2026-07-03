@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_fontps.c": {
+        "entities": [
+            "function_pdf_ps_put_oper_func"
+        ],
+        "lines": [
+            1,
+            1177
+        ]
+    }
+}

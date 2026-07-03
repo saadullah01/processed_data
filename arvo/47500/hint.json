@@ -1,0 +1,11 @@
+{
+    "src/lib/openjp2/ht_dec.c": {
+        "entities": [
+            "function_opj_t1_allocate_buffers"
+        ],
+        "lines": [
+            1071,
+            1063
+        ]
+    }
+}

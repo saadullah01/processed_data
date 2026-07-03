@@ -1,0 +1,30 @@
+ffmpeg:ffmpeg_IO_DEMUXER_fuzzer: Use-of-uninitialized-value in ff_ape_parse_tag
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_IO_DEMUXER_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_ape_parse_tag
+  tak_read_header
+  avformat_open_input
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: 202408070619
+
+Reproducer Testcase: 5697034877730816
+
+ClusterFuzz testcase 5697034877730816 is verified as fixed
+
+Status: Fixed (Verified)
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Project: ffmpeg

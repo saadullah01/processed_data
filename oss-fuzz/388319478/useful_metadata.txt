@@ -1,0 +1,30 @@
+selinux:selabel_file_compiled-fuzzer: Use-of-uninitialized-value in selabel_file_compiled-fuzzer.c
+
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: selabel_file_compiled-fuzzer
+Job Type: libfuzzer_msan_selinux
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  selabel_file_compiled-fuzzer.c
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase ID: 6683824058073088
+
+ClusterFuzz testcase 6683824058073088 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Code Changes: --
+Pending Code Changes: --
+Project: selinux

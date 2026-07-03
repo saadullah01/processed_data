@@ -1,0 +1,57 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5553984474841088
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_psdcmyk_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x6311000ab8c8
+Crash State:
+  pdfi_read_cff_font
+  pdfi_load_font_buffer
+  pdfi_load_font
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202208130601:202208140611
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5553984474841088
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Fixed in https://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=acaa21f68ede3ae8fca48136fa95ee32de6533b2
+"""
+
+-- Comment 3: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """ClusterFuzz testcase 5553984474841088 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202304110606:202304120613
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

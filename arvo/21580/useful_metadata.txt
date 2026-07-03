@@ -1,0 +1,24 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_i386_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0xf2102fd1
+Crash State:
+  BEInt<unsigned short, 2>::operator=
+  OT::IntType<unsigned short, 2u>::operator=
+  bool OT::ClassDefFormat1::serialize<hb_zip_iter_t<hb_sorted_array_t<OT::HBGlyphI
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Fixed by https://github.com/harfbuzz/harfbuzz/commit/57b7de032f6

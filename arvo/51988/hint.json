@@ -1,0 +1,10 @@
+{
+    "src/hunspell/affixmgr.cxx": {
+        "entities": [
+            "function_AffixMgr::cpdcase_check"
+        ],
+        "lines": [
+            1353
+        ]
+    }
+}

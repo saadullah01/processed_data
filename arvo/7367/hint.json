@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-stream.c": {
+        "entities": [
+            "function_pdf_load_compressed_inline_image"
+        ],
+        "lines": [
+            362
+        ]
+    }
+}

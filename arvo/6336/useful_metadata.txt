@@ -1,0 +1,29 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_ubsan_wireshark
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000006a28000
+Crash State:
+  _gcry_aes_cbc_enc
+  cmac_write
+  _gcry_cipher_cmac_authenticate
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201710110413:201710111535
+Reproducer Testcase ID: 5639011549839360
+
+Reproduced.
+Reported in bugzilla id: 14442
+
+ClusterFuzz has detected this issue as fixed in range 201802200624:201802210601.
+Fixed: 201802200624:201802210601
+
+ClusterFuzz testcase 5639011549839360 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

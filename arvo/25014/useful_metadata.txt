@@ -1,0 +1,28 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: xml
+Job Type: libfuzzer_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x604000000368
+Crash State:
+  xmlNodeDumpOutputInternal
+  xmlDocContentDumpOutput
+  xmlDocDumpFormatMemoryEnc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libxml2&range=202008170611:202008180613
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4837552128000000
+
+ClusterFuzz testcase 4837552128000000 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libxml2&range=202008190614:202008200606
+
+Fixed here: https://gitlab.gnome.org/GNOME/libxml2/-/commit/19cae17f5a2acfbd5554d145bb87cd6bf2de244f
+
+(short-lived regression)
+
+This bug has been fixed for 30 days. It has been opened to the public.

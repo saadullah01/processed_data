@@ -1,0 +1,33 @@
+Project: ndpi
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+-- Comment 1:
+Project: ndpi
+Fuzzing Engine: afl
+Fuzz Target: fuzz_ndpi_reader
+Job Type: afl_asan_ndpi
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x60b0000003d2
+Crash State:
+  ndpi_search_openvpn
+  check_ndpi_udp_flow_func
+  ndpi_detection_process_packet
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 202001130443:202001150336
+
+Reproducer Testcase: 5094191580577792
+
+-- Comment 2:
+ClusterFuzz testcase 5094191580577792 is verified as fixed in range 202005150301:202005160258
+
+-- Comment 3:
+This bug has been fixed for 30 days. It has been opened to the public.

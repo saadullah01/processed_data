@@ -1,0 +1,13 @@
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7ffff7f38460
+Crash State:
+  pgp_parse_algo_attr_blob
+  pgp_get_card_features
+  pgp_init
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

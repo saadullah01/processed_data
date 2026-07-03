@@ -1,0 +1,29 @@
+swift-protobuf:FuzzTextFormat_release: Stack-buffer-overflow in SwiftProtobuf.TextFormatScanner.
+
+Project: swift-protobuf
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzTextFormat_release
+Job Type: libfuzzer_asan_swift-protobuf
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7ffceace30ce
+Crash State:
+  SwiftProtobuf.TextFormatScanner.
+  SwiftProtobuf.TextFormatScanner.
+  function signature specialization <Arg
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed in 0cb8176c7f6f812dd29bc51d54466a2873b32443
+
+This was a new issue, it's specific to the skipping of unknown fields in textformat that just landed yesterday.
+
+ClusterFuzz testcase 4619956026146816 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

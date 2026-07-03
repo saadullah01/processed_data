@@ -1,0 +1,19 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 2
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Address: 0x602000000092
+Crash State:
+  json_HEADER
+  dwg_read_json
+  llvmfuzz.c
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

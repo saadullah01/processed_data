@@ -1,0 +1,11 @@
+{
+    "fuzz/api.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            2296,
+            2287
+        ]
+    }
+}

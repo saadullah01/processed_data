@@ -1,0 +1,14 @@
+{
+    "src/glyf.cc": {
+        "entities": [
+            "function_OpenTypeGLYF::Parse",
+            "method_OpenTypeGLYF::ParseSimpleGlyph",
+            "method_OpenTypeGLYF::TraverseComponentsCountingPoints"
+        ],
+        "lines": [
+            338,
+            99,
+            415
+        ]
+    }
+}

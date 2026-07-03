@@ -1,0 +1,23 @@
+Project: libxml2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: valid
+Job Type: libfuzzer_asan_libxml2
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60c000003650
+Crash State:
+  xmlValidatePopElement
+  xmlTextReaderValidatePop
+  xmlTextReaderRead
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase: 4848343855464448
+
+ClusterFuzz testcase 4848343855464448 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

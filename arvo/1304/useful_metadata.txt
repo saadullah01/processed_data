@@ -1,0 +1,41 @@
+-- Comment 1:
+Project: gnutls
+Fuzzer: libFuzzer_gnutls_pkcs12_key_parser_fuzzer
+Fuzz target binary: gnutls_pkcs12_key_parser_fuzzer
+Job Type: libfuzzer_asan_gnutls
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60c000000080
+Crash State:
+  gnutls_x509_crl_deinit
+  gnutls_pkcs12_simple_parse
+  _start
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed range: 201704281630:201704291628
+Reproducer Testcase ID: 5649010138284032
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201704291628:201704301627.
+Project: gnutls
+Fuzzer: libFuzzer_gnutls_pkcs12_key_parser_fuzzer
+Fuzz target binary: gnutls_pkcs12_key_parser_fuzzer
+Job Type: libfuzzer_asan_gnutls
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60c000000080
+Crash State:
+  gnutls_x509_crl_deinit
+  gnutls_pkcs12_simple_parse
+  _start
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed range: 201704281630:201704291628
+Fixed range: 201704291628:201704301627
+Reproducer Testcase ID: 5649010138284032
+
+-- Comment 3:
+ClusterFuzz testcase 5649010138284032 is verified as fixed, so closing issue.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

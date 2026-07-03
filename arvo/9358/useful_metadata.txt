@@ -1,0 +1,24 @@
+Project: gdal
+Fuzzer: libFuzzer_gdal_ers_fuzzer
+Fuzz target binary: ers_fuzzer
+Job Type: libfuzzer_ubsan_gdal
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x00000959f0a0
+Crash State:
+  Bad-cast to GDALPamRasterBand from (anonymous namespace)::ERSProxyRasterBand
+  GDALPamRasterBand* cpl::down_cast<GDALPamRasterBand*, GDALRasterBand>
+  GDALPamDataset::XMLInit
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_gdal&range=201806050629:201806060631
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5108048535224320
+
+Fixed in master per https://github.com/OSGeo/gdal/commit/aa6a7c2b18d9d679a349bb7d5683347d0caa9566 and release/2.3 per https://github.com/OSGeo/gdal/commit/c177435f4370e56575870773ffc107c4bc44942e
+
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_gdal&range=201807120634:201807130649

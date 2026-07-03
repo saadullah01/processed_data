@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-authentic.c": {
+        "entities": [
+            "function_authentic_set_current_files"
+        ],
+        "lines": [
+            567
+        ]
+    }
+}

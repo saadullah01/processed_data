@@ -1,0 +1,92 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1:
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize_width
+Fuzz target binary: image_filter_deserialize_width
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  SkMatrix::getType
+  SkMatrix::isIdentity
+  SkShader::makeWithLocalMatrix
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201803150607:201803160548
+
+Issue filed automatically.
+
+-- Comment 2:
+Can confirm it repros at ToT
+==235592==WARNING: MemorySanitizer: use-of-uninitialized-value
+    #0 0x172db17 in SkMatrix::getType() const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/core/SkMatrix.h:128:13
+    #1 0x172db17 in SkMatrix::isIdentity() const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/core/SkMatrix.h:144
+    #2 0x172db17 in SkShader::makeWithLocalMatrix(SkMatrix const&) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/shaders/SkLocalMatrixShader.cpp:90
+    #3 0x124b277 in SkBaseDevice::drawTextRSXform(void const*, unsigned long, SkRSXform const*, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDevice.cpp:515:42
+    #4 0x11c64d5 in SkCanvas::onDrawTextRSXform(void const*, unsigned long, SkRSXform const*, SkRect const*, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2513:23
+    #5 0x11c9e17 in SkCanvas::drawTextRSXform(void const*, unsigned long, SkRSXform const*, SkRect const*, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2592:15
+    #6 0x150e8b2 in decltype ({parm#2}((SkRecords::NoOp)())) SkRecord::visit<SkRecords::Draw&>(int, SkRecords::Draw&) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkRecord.h:42:28
+    #7 0x150e8b2 in SkRecordDraw(SkRecord const&, SkCanvas*, SkPicture const* const*, SkDrawable* const*, int, SkBBoxHierarchy const*, SkPicture::AbortCallback*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkRecordDraw.cpp:52
+    #8 0x14ae4e4 in SkBigPicture::playback(SkCanvas*, SkPicture::AbortCallback*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBigPicture.cpp:33:5
+    #9 0x11d0b4a in SkCanvas::onDrawPicture(SkPicture const*, SkMatrix const*, SkPaint const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2814:14
+    #10 0x11cff26 in SkCanvas::drawPicture(SkPicture const*, SkMatrix const*, SkPaint const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2794:15
+    #11 0x1a85881 in SkCanvas::drawPicture(SkPicture const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/core/SkCanvas.h:2128:15
+    #12 0x1a85881 in SkCanvas::drawPicture(sk_sp<SkPicture> const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../include/core/SkCanvas.h:2140
+    #13 0x1a85881 in SkPictureImageFilter::onFilterImage(SkSpecialImage*, SkImageFilter::Context const&, SkIPoint*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/effects/SkPictureImageFilter.cpp:118
+    #14 0x12e3875 in SkImageFilter::filterImage(SkSpecialImage*, SkImageFilter::Context const&, SkIPoint*) const /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkImageFilter.cpp:214:40
+    #15 0x11dec14 in SkBitmapDevice::drawSpecial(SkSpecialImage*, int, int, SkPaint const&, SkImage*, SkMatrix const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkBitmapDevice.cpp:536:33
+    #16 0x11be28c in SkCanvas::onDrawBitmap(SkBitmap const&, float, float, SkPaint const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:2287:27
+    #17 0x11adbda in SkCanvas::drawBitmap(SkBitmap const&, float, float, SkPaint const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkCanvas.cpp:1817:11
+    #18 0xf2b74e in FuzzImageFilterDeserialize(sk_sp<SkData>) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/oss_fuzz/FuzzImageFilterDeserialize.cpp:34:16
+    #19 0xf25dbb in fuzz_filter_fuzz(sk_sp<SkData>) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:577:5
+    #20 0xf25dbb in fuzz_file(char const*) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:164
+    #21 0xf233f6 in main /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../fuzz/fuzz.cpp:90:16
+    #22 0x7f18be20f2b0 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x202b0)
+    #23 0xe3a029 in _start (/usr/local/google/home/kjlubick/skia/skia/out/MSAN/fuzz+0xe3a029)
+
+  Uninitialized value was created by an allocation of 'inverse' in the stack frame of function '_ZN12SkBaseDevice15drawTextRSXformEPKvmPK9SkRSXformRK7SkPaint'
+    #0 0x124ad50 in SkBaseDevice::drawTextRSXform(void const*, unsigned long, SkRSXform const*, SkPaint const&) /usr/local/google/home/kjlubick/skia/skia/out/MSAN/../../src/core/SkDevice.cpp:482
+
+-- Comment 3:
+Git bisect blames https://skia-review.googlesource.com/c/skia/+/114468
+
+-- Comment 4:
+The following revision refers to this bug:
+
+handle bad xform in drawTextRSXform
+
+Bug: oss-fuzz:6955
+
+[modify] src/core/SkDevice.cpp
+
+-- Comment 5:
+ClusterFuzz has detected this issue as fixed in range 201803160548:201803170613.
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  SkMatrix::getType
+  SkMatrix::isIdentity
+  SkShader::makeWithLocalMatrix
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201803150607:201803160548
+Fixed: 201803160548:201803170613
+
+-- Comment 6:
+ClusterFuzz testcase 5662420044349440 is verified as fixed, so closing issue as verified.
+
+-- Comment 7:
+This bug has been fixed for 30 days. It has been opened to the public.

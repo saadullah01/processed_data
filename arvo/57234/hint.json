@@ -1,0 +1,11 @@
+{
+    "libxslt/attrvt.c": {
+        "entities": [
+            "function_xsltCompileAttr"
+        ],
+        "lines": [
+            178,
+            331
+        ]
+    }
+}

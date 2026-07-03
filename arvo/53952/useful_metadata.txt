@@ -1,0 +1,15 @@
+Project: samba Fuzzer: honggfuzz Sanitizer: asan Crash Type: Global-buffer-overflow READ 1
+
+Project: samba
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_lzxpress_round_trip
+Job Type: honggfuzz_asan_samba
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x55b31b3f5960
+Crash State:
+  lzxpress_decompress
+  fuzz_lzxpress_round_trip.c
+
+Sanitizer: address (ASAN)

@@ -1,0 +1,24 @@
+Project: h2o
+Fuzzer: libFuzzer_h2o_h2o-fuzzer-http2
+Fuzz target binary: h2o-fuzzer-http2
+Job Type: libfuzzer_asan_h2o
+Platform Id: linux
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: address (ASAN)
+Regressed: 201707110449:201707120456
+Reproducer Testcase ID: 4581434322845696
+
+ClusterFuzz has detected this issue as fixed in range 201710130505:201710132327
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: address (ASAN)
+Regressed: 201707110449:201707120456
+Fixed: 201710130505:201710132327
+Reproducer Testcase ID: 4581434322845696
+
+ClusterFuzz testcase 4581434322845696 is verified as fixed

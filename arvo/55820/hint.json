@@ -1,0 +1,10 @@
+{
+    "src/conf.c": {
+        "entities": [
+            "function_config__read_file_core"
+        ],
+        "lines": [
+            1001
+        ]
+    }
+}

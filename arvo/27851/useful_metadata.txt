@@ -1,0 +1,22 @@
+Project: openvswitch
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free WRITE 2
+Severity: High
+
+Project: openvswitch
+Fuzzing Engine: libFuzzer
+Fuzz Target: ofp_print_target
+Job Type: libfuzzer_asan_openvswitch
+Platform Id: linux
+
+Crash Type: Heap-use-after-free WRITE 2
+Crash Address: 0x60600000011a
+Crash State:
+  decode_NXAST_RAW_ENCAP
+  ofpact_decode
+  ofpacts_decode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

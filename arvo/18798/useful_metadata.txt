@@ -1,0 +1,43 @@
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6020000005d9
+Crash State:
+  parse_sec_attr_44
+  setcos_select_file
+  sc_select_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+Frank, fast check with GDB shows that this is unsigned integer underflow:
+
+The break on `card-setcos.c:791` and printing variable `len` shows the following in first two iterations:
+
+Thread 1 "fuzz_pkcs15_rea" hit Breakpoint 1, parse_sec_attr_44 (file=0x3114a20, buf=0x3114bf0 "\210j0", len=8)
+    at card-setcos.c:791
+791			size_t iACLen   = buf[iOffset] & 0x0F;
+$1 = 8
+
+Thread 1 "fuzz_pkcs15_rea" hit Breakpoint 1, parse_sec_attr_44 (file=0x3114a20, buf=0x3114bf0 "\210j0", 
+    len=18446744073709551615) at card-setcos.c:791
+791			size_t iACLen   = buf[iOffset] & 0x0F;
+$2 = 18446744073709551615
+
+So changing the condition on line 792 to `iACLen >= len` should handle this issue.
+
+Other problem I see in this function is using the `iOffset` as an index to the same array without checking the bounds, but that one is not reproduced in this testcase. But I think at least the cycle should have test some test like this `(size_t)iOffset < len`
+
+Comment 3:
+ClusterFuzz testcase 5755855475834880 is verified as fixed
+
+Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

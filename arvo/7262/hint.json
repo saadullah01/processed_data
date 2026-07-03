@@ -1,0 +1,10 @@
+{
+    "src/variations.cc": {
+        "entities": [
+            "function_ParseVariationDataSubtable"
+        ],
+        "lines": [
+            78
+        ]
+    }
+}

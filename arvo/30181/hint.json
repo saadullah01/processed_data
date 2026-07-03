@@ -1,0 +1,10 @@
+{
+    "src/mqtt_packet.c": {
+        "entities": [
+            "function_MqttEncode_Connect"
+        ],
+        "lines": [
+            744
+        ]
+    }
+}

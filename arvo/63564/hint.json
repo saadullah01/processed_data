@@ -1,0 +1,27 @@
+{
+    "decoder/ixheaacd_config.h": {
+        "entities": [
+            "struct_ia_usac_dec_mps_config_struct"
+        ],
+        "lines": [
+            146
+        ]
+    },
+    "decoder/ixheaacd_ld_mps_config.c": {
+        "entities": [
+            "function_ixheaacd_ld_spatial_extension_config"
+        ],
+        "lines": [
+            120
+        ]
+    },
+    "decoder/ixheaacd_mps_bitdec.c": {
+        "entities": [
+            "function_ixheaacd_parse_extension_config"
+        ],
+        "lines": [
+            130,
+            47
+        ]
+    }
+}

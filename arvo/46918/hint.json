@@ -1,0 +1,13 @@
+{
+    "src/in_json.c": {
+        "entities": [
+            "function_json_HEADER"
+        ],
+        "lines": [
+            1018,
+            1035,
+            1044,
+            1006
+        ]
+    }
+}

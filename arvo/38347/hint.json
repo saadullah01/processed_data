@@ -1,0 +1,11 @@
+{
+    "src/libFLAC/stream_decoder.c": {
+        "entities": [
+            "function_read_subframe_"
+        ],
+        "lines": [
+            2528,
+            2545
+        ]
+    }
+}

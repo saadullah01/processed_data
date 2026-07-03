@@ -1,0 +1,12 @@
+{
+    "src/io/pajek-parser.y": {
+        "entities": [
+            "function_is_standard_vattr",
+            "function_is_standard_eattr"
+        ],
+        "lines": [
+            768,
+            787
+        ]
+    }
+}

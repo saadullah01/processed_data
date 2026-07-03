@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_page.c": {
+        "entities": [
+            "function_pdfi_process_one_page"
+        ],
+        "lines": [
+            160,
+            1
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "epan/addr_resolv.c": {
+        "entities": [
+            "function_eth_addr_resolve",
+            "function_eui64_to_display",
+            "function_get_manuf_name",
+            "function_tvb_get_manuf_name_if_known",
+            "function_manuf_name_lookup"
+        ],
+        "lines": [
+            1669,
+            1916,
+            3499,
+            3564,
+            1870,
+            3484,
+            3582
+        ]
+    },
+    "epan/addr_resolv.h": {
+        "entities": [],
+        "lines": [
+            225
+        ]
+    },
+    "epan/address_types.c": {
+        "entities": [
+            "function_fcwwn_name_res_str"
+        ],
+        "lines": [
+            393,
+            383
+        ]
+    }
+}

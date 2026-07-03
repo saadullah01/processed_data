@@ -1,0 +1,13 @@
+ffmpeg:ffmpeg_dem_MV_fuzzer: Use-of-uninitialized-value in parse_video_var
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_MV_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  parse_video_var
+  read_table
+  mv_read_header
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

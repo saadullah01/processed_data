@@ -1,0 +1,56 @@
+Project: wolfssl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6720505136676864
+
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-disable-fastmath
+Job Type: libfuzzer_asan_wolfssl
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7fffaaf2dba8
+Crash State:
+  Sha512Update
+  wc_Sha512Update
+  edNUMBER_sign_msg
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wolfssl&range=202102040614:202102050625
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6720505136676864
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ZD 11649"""
+
+-- Comment 3: """ClusterFuzz testcase 6720505136676864 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_wolfssl&range=202102070604:202102080614
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

@@ -1,0 +1,32 @@
+{
+    "poppler/UTF.cc": {
+        "entities": [
+            "function_utf8ToUtf16"
+        ],
+        "lines": [
+            357
+        ]
+    },
+    "poppler/UTF.h": {
+        "entities": [],
+        "lines": [
+            64
+        ]
+    },
+    "qt5/tests/check_utf_conversion.cpp": {
+        "entities": [
+            "method_TestUTFConversion::testUTF"
+        ],
+        "lines": [
+            80
+        ]
+    },
+    "qt6/tests/check_utf_conversion.cpp": {
+        "entities": [
+            "method_TestUTFConversion::testUTF"
+        ],
+        "lines": [
+            78
+        ]
+    }
+}

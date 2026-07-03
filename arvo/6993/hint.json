@@ -1,0 +1,22 @@
+{
+    "autotest/ogr/ogr_shape.py": {
+        "entities": [
+            "variable_gdaltest_list"
+        ],
+        "lines": [
+            5273,
+            5425
+        ]
+    },
+    "gdal/ogr/ogrsf_frmts/shape/shpopen.c": {
+        "entities": [
+            "function_SHPRewindObject"
+        ],
+        "lines": [
+            3002,
+            2955,
+            3028,
+            2975
+        ]
+    }
+}

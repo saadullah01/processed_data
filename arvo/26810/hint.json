@@ -1,0 +1,18 @@
+{
+    "source/fitz/geometry.c": {
+        "entities": [
+            "function_fz_irect_from_rect"
+        ],
+        "lines": [
+            371
+        ]
+    },
+    "source/fitz/pixmap.c": {
+        "entities": [
+            "function_fz_copy_pixmap_rect"
+        ],
+        "lines": [
+            649
+        ]
+    }
+}

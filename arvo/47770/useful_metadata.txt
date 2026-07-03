@@ -1,0 +1,16 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+
+Crash State:
+  gx_device_finalize
+  alloc_restore_step_in
+  dorestore
+
+Sanitizer: address (ASAN)
+
+I cannot reproduce this outside the oss-fuzz environment, and I can't debug inside the environment, and it's not the kind of that lends itself to instrumenting with printfs, so I'm giving up for now.

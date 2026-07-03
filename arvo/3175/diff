@@ -1,0 +1,30 @@
+From: Michael Niedermayer <michael@niedermayer.cc>
+Date: Sun, 10 Sep 2017 19:10:17 +0000 (+0200)
+Subject: avcodec/hevc_ps: Fix c?_qp_offset_list size
+X-Git-Tag: n3.4~389
+X-Git-Url: http://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff_plain/abf3f9fa232409c00b60041464604a91fa5612c0
+
+avcodec/hevc_ps: Fix c?_qp_offset_list size
+
+Fixes: runtime error: index 5 out of bounds for type 'int8_t const[5]'
+Fixes:3175/clusterfuzz-testcase-minimized-4736774054084608
+
+Found-by: continuous fuzzing process https://github.com/google/oss-fuzz/tree/master/projects/ffmpeg
+Signed-off-by: Michael Niedermayer <michael@niedermayer.cc>
+---
+
+diff --git a/libavcodec/hevc_ps.h b/libavcodec/hevc_ps.h
+index 78f9dd876e..4e6c3bc849 100644
+--- a/libavcodec/hevc_ps.h
++++ b/libavcodec/hevc_ps.h
+@@ -366,8 +366,8 @@ typedef struct HEVCPPS {
+     uint8_t chroma_qp_offset_list_enabled_flag;
+     uint8_t diff_cu_chroma_qp_offset_depth;
+     uint8_t chroma_qp_offset_list_len_minus1;
+-    int8_t  cb_qp_offset_list[5];
+-    int8_t  cr_qp_offset_list[5];
++    int8_t  cb_qp_offset_list[6];
++    int8_t  cr_qp_offset_list[6];
+     uint8_t log2_sao_offset_scale_luma;
+     uint8_t log2_sao_offset_scale_chroma;
+ 

@@ -1,0 +1,27 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  general_endcidrange_func
+  cmap_endcidrange_func
+  pdfi_pscript_interpret
+
+Sanitizer: address (ASAN)
+
+Fix committed upstream
+
+ClusterFuzz testcase 6203008550043648 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

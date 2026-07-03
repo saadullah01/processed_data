@@ -1,0 +1,27 @@
+ffmpeg:ffmpeg_dem_OBU_fuzzer: Use-of-uninitialized-value in read_obu_with_size
+
+Stability-Memory-MemorySanitizer
+Reproducible
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_OBU_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  read_obu_with_size
+  obu_read_packet
+  ff_read_packet
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

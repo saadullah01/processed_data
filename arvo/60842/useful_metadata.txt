@@ -1,0 +1,22 @@
+Project: tarantool
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: luaL_loadbuffer_fuzzer
+Job Type: libfuzzer_asan_tarantool
+Platform Id: linux
+Crash Address: 0x00004ff8d015
+Crash State:
+  snap_restoreval
+  lj_snap_restore
+  trace_exit_cp
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 6668810630070272
+
+ClusterFuzz testcase 6668810630070272 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

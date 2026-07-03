@@ -1,0 +1,10 @@
+{
+    "stb_image.h": {
+        "entities": [
+            "function_stbi__parse_huffman_block"
+        ],
+        "lines": [
+            4256
+        ]
+    }
+}

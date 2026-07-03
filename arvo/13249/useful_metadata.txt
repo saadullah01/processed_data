@@ -1,0 +1,13 @@
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fz_clamp
+  eval_postscript_func
+  pdf_eval_function
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,23 @@
+Project: h3
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: h3
+Fuzzing Engine: libFuzzer
+Fuzz Target: h3_fuzzer
+Job Type: libfuzzer_ubsan_h3
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  h3NeighborRotations
+  h3_fuzzer.c
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer h3_fuzzer from making much progress. Fixing this will allow more bugs to be found.

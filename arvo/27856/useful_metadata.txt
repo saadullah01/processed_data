@@ -1,0 +1,13 @@
+Project: libavc
+Fuzzing Engine: libFuzzer
+Fuzz Target: avc_dec_fuzzer
+Job Type: libfuzzer_asan_i386_libavc
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0xf1e03040
+Crash State:
+  ih264d_parse_pslice
+  ih264d_parse_decode_slice
+  ih264d_parse_nal_unit
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

@@ -1,0 +1,22 @@
+{
+    "parser.c": {
+        "entities": [
+            "function_xmlParseReference",
+            "function_xmlParseBalancedChunkMemoryInternal"
+        ],
+        "lines": [
+            12906,
+            7267,
+            12876
+        ]
+    },
+    "tree.c": {
+        "entities": [
+            "function_xmlStaticCopyNode"
+        ],
+        "lines": [
+            4214,
+            4206
+        ]
+    }
+}

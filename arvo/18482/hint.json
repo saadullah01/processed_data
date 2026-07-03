@@ -1,0 +1,10 @@
+{
+    "src/libopensc/pkcs15-prkey.c": {
+        "entities": [
+            "function_sc_pkcs15_decode_prkdf_entry"
+        ],
+        "lines": [
+            260
+        ]
+    }
+}

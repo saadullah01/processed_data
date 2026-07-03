@@ -1,0 +1,30 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_HEVC_fuzzer: Use-of-uninitialized-value in add_residual4x4_9
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_HEVC_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  add_residual4x4_9
+  hls_transform_tree
+  hls_transform_tree
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 5920837765496832
+
+ClusterFuzz testcase 5920837765496832 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

@@ -1,0 +1,16 @@
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_i386_harfbuzz
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  OT::VarRegionList* hb_serialize_context_t::allocate_size<OT::VarRegionList>
+  OT::VarRegionList::serialize
+  OT::VariationStore::serialize
+Sanitizer: address (ASAN)
+Issue filed automatically.
+ClusterFuzz testcase 5499162606043136 is verified as fixed.
+This bug has been fixed.
+It has been opened to the public.

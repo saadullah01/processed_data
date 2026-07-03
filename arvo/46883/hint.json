@@ -1,0 +1,10 @@
+{
+    "src/idl_parser.cpp": {
+        "entities": [
+            "method_Parser::Next"
+        ],
+        "lines": [
+            492
+        ]
+    }
+}

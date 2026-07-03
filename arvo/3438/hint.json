@@ -1,0 +1,19 @@
+{
+    "src/librawspeed/decompressors/UncompressedDecompressor.cpp": {
+        "entities": [
+            "method_UncompressedDecompressor::sanityCheck"
+        ],
+        "lines": [
+            59,
+            38
+        ]
+    },
+    "src/librawspeed/decompressors/UncompressedDecompressor.h": {
+        "entities": [
+            "class_UncompressedDecompressor"
+        ],
+        "lines": [
+            39
+        ]
+    }
+}

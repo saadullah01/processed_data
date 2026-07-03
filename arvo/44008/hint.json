@@ -1,0 +1,13 @@
+{
+    "src/pix3.c": {
+        "entities": [
+            "function_pixCountArbInRect"
+        ],
+        "lines": [
+            3345,
+            3322,
+            3355,
+            3380
+        ]
+    }
+}

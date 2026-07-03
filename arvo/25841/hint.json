@@ -1,0 +1,16 @@
+{
+    "binutils/elfcomm.c": {
+        "entities": [],
+        "lines": [
+            67
+        ]
+    },
+    "binutils/readelf.c": {
+        "entities": [
+            "function_target_specific_reloc_handling"
+        ],
+        "lines": [
+            12557
+        ]
+    }
+}

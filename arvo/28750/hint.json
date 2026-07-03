@@ -1,0 +1,37 @@
+{
+    "cpp/src/parquet/arrow/arrow_reader_writer_test.cc": {
+        "entities": [
+            "class_ParquetIOTestBase"
+        ],
+        "lines": [
+            521,
+            42,
+            644,
+            77
+        ]
+    },
+    "cpp/src/parquet/arrow/reader_internal.cc": {
+        "entities": [
+            "function_TransferColumnData",
+            "function_DecimalIntegerTransfer",
+            "struct_DecimalConverter<DecimalArrayType, ByteArrayType>",
+            "struct_DecimalConverter<DecimalArrayType, FLBAType>",
+            "function_DecimalConverter<DecimalArrayType, ByteArrayType>::ConvertToDecimal",
+            "function_ConvertToDecimal"
+        ],
+        "lines": [
+            481,
+            677,
+            557,
+            462,
+            531,
+            413
+        ]
+    },
+    "testing": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

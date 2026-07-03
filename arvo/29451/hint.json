@@ -1,0 +1,26 @@
+{
+    "libsepol/cil/src/cil_build_ast.c": {
+        "entities": [
+            "function_cil_gen_expandtypeattribute",
+            "function_cil_gen_class",
+            "function_cil_gen_common"
+        ],
+        "lines": [
+            3209,
+            1018,
+            444
+        ]
+    },
+    "libsepol/cil/src/cil_resolve_ast.c": {
+        "entities": [
+            "function_cil_resolve_classcommon",
+            "function_cil_resolve_blockabstract",
+            "function_cil_resolve_classorder"
+        ],
+        "lines": [
+            2464,
+            1484,
+            772
+        ]
+    }
+}

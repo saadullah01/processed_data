@@ -1,0 +1,10 @@
+{
+    "deflate.c": {
+        "entities": [
+            "function_slide_hash"
+        ],
+        "lines": [
+            179
+        ]
+    }
+}

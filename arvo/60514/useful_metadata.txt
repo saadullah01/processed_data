@@ -1,0 +1,21 @@
+Project: cyclonedds
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: cyclonedds
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_type_object
+Job Type: libfuzzer_asan_cyclonedds
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x602000000930
+Crash State:
+  xt_valid_enum_values
+  xt_validate_impl
+  ddsi_xt_type_add_typeobj
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

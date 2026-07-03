@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-xref.c": {
+        "entities": [
+            "function_pdf_get_xref_entry"
+        ],
+        "lines": [
+            301
+        ]
+    }
+}

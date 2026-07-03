@@ -1,0 +1,22 @@
+Project: gdbm
+Fuzzing Engine: afl
+Fuzz Target: gdbm_fuzzer
+Job Type: afl_asan_gdbm
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x612000068eb8
+Crash State:
+  gdbm_valid_key_p
+  get_next_key
+  gdbm_firstkey
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed in ca7194987388a825f57fdebd73eb9c491a8749b0
+
+ClusterFuzz testcase 6317999997452288 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

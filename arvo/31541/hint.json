@@ -1,0 +1,30 @@
+{
+    "ldo.c": {
+        "entities": [
+            "function_ccall",
+            "function_luaD_precall"
+        ],
+        "lines": [
+            504,
+            474,
+            572,
+            542
+        ]
+    },
+    "ldo.h": {
+        "entities": [],
+        "lines": [
+            58
+        ]
+    },
+    "lvm.c": {
+        "entities": [
+            "function_luaV_execute"
+        ],
+        "lines": [
+            1632,
+            1648,
+            1670
+        ]
+    }
+}

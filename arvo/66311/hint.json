@@ -1,0 +1,14 @@
+{
+    "src/Common/opcua_types/sopc_encoder.c": {
+        "entities": [
+            "function_ReadVariantArrayBuiltInType",
+            "function_getBuiltinOptimizableSize",
+            "function_WriteVariantArrayBuiltInType"
+        ],
+        "lines": [
+            2547,
+            2164,
+            2126
+        ]
+    }
+}

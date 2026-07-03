@@ -1,0 +1,27 @@
+Project: librawspeed
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_Cr2DecompressorFuzzer
+Fuzz target binary: Cr2DecompressorFuzzer
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  Cr2Decompressor.cpp
+  rawspeed::alignedMalloc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201803190646:201803200654.
+
+ClusterFuzz testcase 6162553081167872 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

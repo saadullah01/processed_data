@@ -1,0 +1,10 @@
+{
+    "libavcodec/dvbsubdec.c": {
+        "entities": [
+            "function_dvbsub_parse_clut_segment"
+        ],
+        "lines": [
+            1103
+        ]
+    }
+}

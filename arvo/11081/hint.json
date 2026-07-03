@@ -1,0 +1,10 @@
+{
+    "src/hb-machinery.hh": {
+        "entities": [
+            "function_get_size"
+        ],
+        "lines": [
+            118
+        ]
+    }
+}

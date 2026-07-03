@@ -1,0 +1,21 @@
+Project: cyclonedds
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_config_init
+Job Type: libfuzzer_asan_cyclonedds
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  ddsi_config_init
+  fuzz_config_init.c
+
+Sanitizer: address (ASAN)
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_config_init from making much progress. Fixing this will allow more bugs to be found."
+
+"ClusterFuzz testcase 5320678181568512 is verified as fixed."
+
+"This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"

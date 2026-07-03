@@ -1,0 +1,16 @@
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15init
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x794ebe88c700
+Crash State:
+  sc_pkcs15_get_lastupdate
+  generate_cache_filename
+  sc_pkcs15_read_cached_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

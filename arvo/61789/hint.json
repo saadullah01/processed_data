@@ -1,0 +1,30 @@
+{
+    "decoder/ixheaacd_mps_bitdec.c": {
+        "entities": [
+            "function_ixheaacd_decode_frame",
+            "function_ixheaacd_decode_and_map_frame_ott",
+            "function_ixheaacd_decode_and_map_frame_ttt",
+            "function_ixheaacd_map_index_data",
+            "function_ixheaacd_bound_check",
+            "function_ixheaacd_decode_and_map_frame_arb_tree",
+            "function_ixheaacd_decode_and_map_frame_arbdmx"
+        ],
+        "lines": [
+            1988,
+            1638,
+            2055,
+            2027,
+            1742,
+            47,
+            1807,
+            1585,
+            1841,
+            1779,
+            1870,
+            1495,
+            1976,
+            1850,
+            2013
+        ]
+    }
+}

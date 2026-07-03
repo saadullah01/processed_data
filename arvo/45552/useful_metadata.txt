@@ -1,0 +1,19 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs15init
+Job Type: afl_asan_opensc
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x617000003df8
+Crash State:
+  process_ef
+  process_block
+  process_df
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

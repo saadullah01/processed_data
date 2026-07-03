@@ -1,0 +1,24 @@
+Project: zstd
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: zstd
+Fuzzing Engine: libFuzzer
+Fuzz Target: simple_decompress
+Job Type: libfuzzer_ubsan_zstd
+Platform Id: linux
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7ffcdeddc000
+Crash State:
+  ZSTD_decodeLiteralsBlock
+  ZSTD_decompressBlock
+  ZSTD_decompressDCtx
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High
+
+We will fix this bug, but it is in the legacy decoder v0.2 which is not enabled by default.
+
+The same bug is also present in v0.4, which is also not built into zstd by default.
+This bug is NOT present in v0.5 onward (which is built into zstd by default).

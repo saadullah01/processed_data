@@ -1,0 +1,10 @@
+{
+    "lib/http_aws_sigv4.c": {
+        "entities": [
+            "function_make_headers"
+        ],
+        "lines": [
+            220
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_image.c": {
+        "entities": [
+            "function_pdfi_get_image_info"
+        ],
+        "lines": [
+            484,
+            471
+        ]
+    }
+}

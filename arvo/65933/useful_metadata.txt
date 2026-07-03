@@ -1,0 +1,20 @@
+Project: zeek
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Fuzzing Engine: honggfuzz
+Fuzz Target: zeek-smtp-fuzzer
+Job Type: honggfuzz_asan_zeek
+Platform Id: linux
+
+Crash Address:
+
+Crash State:
+  zeek::analyzer::smtp::SMTP_Analyzer::DeliverStream
+  zeek::analyzer::SupportAnalyzer::ForwardStream
+  zeek::analyzer::tcp::ContentLine_Analyzer::DoDeliverOnce
+
+Sanitizer: address (ASAN)
+
+Reproducer Testcase: 4789219251781632

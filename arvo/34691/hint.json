@@ -1,0 +1,10 @@
+{
+    "src/array.c": {
+        "entities": [
+            "function_mrb_ary_shift_m"
+        ],
+        "lines": [
+            591
+        ]
+    }
+}

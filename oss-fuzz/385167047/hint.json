@@ -1,0 +1,10 @@
+{
+    "libavformat/ipmovie.c": {
+        "entities": [
+            "function_ipmovie_read_header"
+        ],
+        "lines": [
+            614
+        ]
+    }
+}

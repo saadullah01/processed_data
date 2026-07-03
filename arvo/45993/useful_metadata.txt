@@ -1,0 +1,21 @@
+Project: exiv2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: exiv2
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-read-print-write
+Job Type: libfuzzer_asan_exiv2
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x602000000094
+Crash State:
+  Exiv2::getULong
+  Exiv2::Internal::isValidBoxFileType
+  Exiv2::Jp2Image::readMetadata
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz-read-print-write from making much progress. Fixing this will allow more bugs to be found.

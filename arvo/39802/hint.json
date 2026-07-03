@@ -1,0 +1,20 @@
+{
+    "parser/parse_hname2.c": {
+        "entities": [
+            "function_parse_hname2"
+        ],
+        "lines": [
+            280,
+            259,
+            239
+        ]
+    },
+    "parser/test/test_parser.c": {
+        "entities": [
+            "function_test_parser"
+        ],
+        "lines": [
+            143
+        ]
+    }
+}

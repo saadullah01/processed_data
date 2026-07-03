@@ -1,0 +1,10 @@
+{
+    "libavcodec/ac3dec.c": {
+        "entities": [
+            "function_decode_audio_block"
+        ],
+        "lines": [
+            1389
+        ]
+    }
+}

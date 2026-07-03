@@ -1,0 +1,18 @@
+diff --git a/decoder/ihevcd_decode.c b/decoder/ihevcd_decode.c
+index 16ed36b..9f634b7 100644
+--- a/decoder/ihevcd_decode.c
++++ b/decoder/ihevcd_decode.c
+@@ -626,6 +626,13 @@
+ 
+         nal_ofst = ihevcd_nal_search_start_code(ps_codec->pu1_inp_bitsbuf,
+                                                 ps_codec->i4_bytes_remaining);
++        /* If there is no start code found, consume the data and break */
++        if(nal_ofst == ps_codec->i4_bytes_remaining)
++        {
++            ps_codec->pu1_inp_bitsbuf += nal_ofst;
++            ps_codec->i4_bytes_remaining -= nal_ofst;
++            break;
++        }
+ 
+         ps_codec->i4_nal_ofst = nal_ofst;
+         {

@@ -1,0 +1,21 @@
+Project: libxaac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: libxaac
+Fuzzing Engine: libFuzzer
+Fuzz Target: xaac_enc_fuzzer
+Job Type: libfuzzer_msan_libxaac
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  ixheaace_frame_info_generator
+  ixheaace_extract_sbr_envelope
+  ixheaace_env_encode_frame
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

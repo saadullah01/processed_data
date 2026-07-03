@@ -1,0 +1,78 @@
+Project: upx
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6312242609979392
+
+Project: upx
+Fuzzing Engine: afl
+Fuzz Target: test_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x61b000000680
+Crash State:
+  upx_safe_strlen
+  void PeFile::rebuildImports<LE32, unsigned int>
+  void PeFile::unpack0<PeFile32::pe_header_t, LE32, unsigned int>
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=afl_asan_upx&revision=202401080622
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6312242609979392
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """The directions in
+   https://google.github.io/oss-fuzz/advanced-topics/debugging/#debugging-fuzzers-with-gdb
+should be more clear about what is literal and what is expandable.
+
+The step:
+   # Copy input testcase into host output directory so it can be accessed
+   # within the Docker image.
+   $ cp /path/to/testcase build/out/$PROJECT_NAME
+is confusing because "the input testcase" actually designates a variable pathname
+which for example might end with
+     clusterfuzz-testcase-minimized-test_packed_file_fuzzer-6312242609979392
+
+However the direction for  invoking the debugger
+   gdb  --args  /out/$PROJECT_NAME/$FUZZ_TARGET_NAME  /out/$PROJECT_NAME/testcase
+specifies 'testcase' as a literal.  It would be more clear for the last argument to be
+   /out/$PROJECT_NAME/$TESTCASE_NAME
+and the 'cp' command to be
+   cp  /path/to/$TESTCASE_NAME  build/out/$PROJECT_NAME
+"""
+
+-- Comment 3: """Fixed on branch devel4 by commit 67bb2344c6c82cc60891403f61e409f877ae24b0 .
+Safe, but hard to tell if it was the fuzzer or mismatched conventions.
+https://github.com/upx/upx/issues/769"""
+
+-- Comment 4: """ClusterFuzz testcase 6312242609979392 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_upx&range=202401130623:202401140628
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

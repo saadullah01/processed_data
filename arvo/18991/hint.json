@@ -1,0 +1,11 @@
+{
+    "decoder/ihevcd_iquant_itrans_recon_ctb.c": {
+        "entities": [
+            "function_ihevcd_iquant_itrans_recon_ctb"
+        ],
+        "lines": [
+            678,
+            542
+        ]
+    }
+}

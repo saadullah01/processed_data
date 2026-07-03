@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-asepcos.c": {
+        "entities": [
+            "function_asepcos_parse_sec_attr"
+        ],
+        "lines": [
+            184
+        ]
+    }
+}

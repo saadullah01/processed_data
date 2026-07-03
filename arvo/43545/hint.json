@@ -1,0 +1,24 @@
+{
+    "binutils/objdump.c": {
+        "entities": [
+            "function_main",
+            "function_load_debug_section"
+        ],
+        "lines": [
+            131,
+            5349,
+            3847
+        ]
+    },
+    "binutils/readelf.c": {
+        "entities": [
+            "function_load_debug_section",
+            "function_parse_args"
+        ],
+        "lines": [
+            15910,
+            5246,
+            239
+        ]
+    }
+}

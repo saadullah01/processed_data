@@ -1,0 +1,10 @@
+{
+    "src/cmslut.c": {
+        "entities": [
+            "function_CubeSize"
+        ],
+        "lines": [
+            467
+        ]
+    }
+}

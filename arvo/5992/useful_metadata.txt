@@ -1,0 +1,22 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_ubsan_wireshark
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  dissect_nbap_LogicalChannelID
+  dissect_per_sequence
+  dissect_nbap_E_DCH_LogicalChannelToDeleteItem
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Current status: CONFIRMED (unfixed)
+
+ClusterFuzz has detected this issue as fixed in range 201903100457:201903110417.
+
+ClusterFuzz testcase 4859278411169792 is verified as fixed, so closing issue as verified.

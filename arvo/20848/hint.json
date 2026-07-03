@@ -1,0 +1,10 @@
+{
+    "bfd/format.c": {
+        "entities": [
+            "function_bfd_check_format_matches"
+        ],
+        "lines": [
+            210
+        ]
+    }
+}

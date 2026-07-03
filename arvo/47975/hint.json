@@ -1,0 +1,10 @@
+{
+    "gas/input-file.c": {
+        "entities": [
+            "function_input_file_open"
+        ],
+        "lines": [
+            117
+        ]
+    }
+}

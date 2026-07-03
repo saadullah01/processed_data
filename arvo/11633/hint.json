@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-cdma2k.c": {
+        "entities": [
+            "function_cdma2k_message_ACTIVE_SET_RECORD_FIELDS"
+        ],
+        "lines": [
+            3857
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "lib/jxl/render_pipeline/stage_blending.cc": {
+        "entities": [
+            "class_BlendingStage"
+        ],
+        "lines": [
+            126
+        ]
+    }
+}

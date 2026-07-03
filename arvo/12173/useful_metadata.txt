@@ -1,0 +1,59 @@
+-- Comment 1:
+Detailed report: https://oss-fuzz.com/testcase?key=5176327364149248
+Project: curl
+Fuzzer: libFuzzer_curl_fuzzer_ftp
+Fuzz target binary: curl_fuzzer_ftp
+Job Type: libfuzzer_asan_curl
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000000015b0
+Crash State:
+  ftp_disconnect
+  Curl_disconnect
+  ConnectionExists
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_curl&range=201812220306:201812230305
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5176327364149248
+
+-- Comment 2:
+Pending fix: https://github.com/curl/curl/pull/3405
+
+-- Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201812230305:201812240307.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5176327364149248
+
+Fuzzer: libFuzzer_curl_fuzzer_ftp
+Fuzz target binary: curl_fuzzer_ftp
+Job Type: libfuzzer_asan_curl
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000000015b0
+Crash State:
+  ftp_disconnect
+  Curl_disconnect
+  ConnectionExists
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_curl&range=201812220306:201812230305
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_curl&range=201812230305:201812240307
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5176327364149248
+
+-- Comment 4:
+ClusterFuzz testcase 5176327364149248 is verified as fixed, so closing issue as verified.
+
+-- Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

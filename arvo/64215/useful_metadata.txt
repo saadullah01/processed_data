@@ -1,0 +1,24 @@
+Project: opensc
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: afl
+Fuzz Target: fuzz_pkcs15init
+Job Type: afl_asan_opensc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x60600000065c
+Crash State:
+  epassNUMBER_pkcs15_generate_key
+  sc_pkcs15init_generate_key
+  do_generate_key
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5766060984631296 is verified as fixed

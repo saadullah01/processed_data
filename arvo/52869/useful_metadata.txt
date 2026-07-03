@@ -1,0 +1,22 @@
+Project: libxml2
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: xml
+Job Type: afl_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x615000181708
+Crash State:
+  xmlXIncludeDoProcess
+  xmlXIncludeProcessNode
+  xmlTextReaderRead
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

@@ -1,0 +1,36 @@
+{
+    "Libraries/LibJS/Runtime/GlobalObject.h": {
+        "entities": [],
+        "lines": [
+            125
+        ]
+    },
+    "Libraries/LibJS/Runtime/Object.cpp": {
+        "entities": [
+            "function_Object::Object(GlobalObjectTag)",
+            "function_Object::Object"
+        ],
+        "lines": [
+            90
+        ]
+    },
+    "Libraries/LibJS/Runtime/Shape.cpp": {
+        "entities": [
+            "function_Shape::Shape"
+        ],
+        "lines": [
+            72
+        ]
+    },
+    "Libraries/LibJS/Runtime/Shape.h": {
+        "entities": [
+            "class_Shape",
+            "method_Shape::global_object"
+        ],
+        "lines": [
+            65,
+            110,
+            78
+        ]
+    }
+}

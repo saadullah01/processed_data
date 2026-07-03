@@ -1,0 +1,18 @@
+{
+    "bfd/vms-lib.c": {
+        "entities": [
+            "function_vms_add_index",
+            "struct_carsym_mem",
+            "function_vms_traverse_index",
+            "function__bfd_vms_lib_archive_p",
+            "function_vms_lib_read_index"
+        ],
+        "lines": [
+            131,
+            453,
+            395,
+            112,
+            240
+        ]
+    }
+}

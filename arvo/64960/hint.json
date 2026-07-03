@@ -1,0 +1,18 @@
+{
+    "decoder/ixheaacd_headerdecode.c": {
+        "entities": [
+            "function_ixheaacd_ga_hdr_dec"
+        ],
+        "lines": [
+            535
+        ]
+    },
+    "decoder/ixheaacd_init_config.c": {
+        "entities": [
+            "function_ixheaacd_config"
+        ],
+        "lines": [
+            644
+        ]
+    }
+}

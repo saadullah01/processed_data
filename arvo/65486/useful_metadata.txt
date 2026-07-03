@@ -1,0 +1,22 @@
+Project: icu
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: icu
+Fuzzing Engine: afl
+Fuzz Target: time_zone_names_fuzzer
+Job Type: afl_asan_icu
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffd791fa1c1
+Crash State:
+  icu_75::TZDBTimeZoneNames::getMetaZoneNames
+  icu_75::TZDBTimeZoneNames::getMetaZoneDisplayName
+  TestNames
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

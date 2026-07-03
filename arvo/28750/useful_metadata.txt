@@ -1,0 +1,26 @@
+Project: arrow
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Project: arrow
+Fuzzing Engine: libFuzzer
+Fuzz Target: parquet-arrow-fuzz
+Job Type: libfuzzer_ubsan_arrow
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x00000488bee8
+Crash State:
+  Bad-cast to const ::arrow::Decimal128Type from arrow::Decimal256Type
+  parquet::arrow::DecimalConverter<arrow::Decimal256Array, parquet::PhysicalType<
+  arrow::Status parquet::arrow::TransferDecimal<arrow::Decimal256Array, parquet::P
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 6015129204424704 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

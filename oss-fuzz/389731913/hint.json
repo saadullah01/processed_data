@@ -1,0 +1,10 @@
+{
+    "fuzz/ParseFuzzer.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            110
+        ]
+    }
+}

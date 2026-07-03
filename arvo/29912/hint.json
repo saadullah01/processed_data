@@ -1,0 +1,11 @@
+{
+    "src/libopensc/card-cardos.c": {
+        "entities": [
+            "function_cardos_have_2048bit_package"
+        ],
+        "lines": [
+            175,
+            159
+        ]
+    }
+}

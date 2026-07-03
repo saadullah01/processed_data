@@ -1,0 +1,17 @@
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_objdump_safe
+Job Type: afl_asan_binutils
+Platform Id: linux
+Crash Type: Dynamic-stack-buffer-overflow READ 8
+Crash Address: 0x7fffc9664858
+Crash State:
+  error_handler_internal
+  _bfd_error_handler
+  elf_swap_shdr_in
+Sanitizer: address (ASAN)
+This is a false positive
+AFL build fix has been deployed, this should be automatically closed shortly.
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_objdump_safe from making much progress. Fixing this will allow more bugs to be found.
+ClusterFuzz testcase 4716408626348032 is verified as fixed
+This bug has been fixed. It has been opened to the public.

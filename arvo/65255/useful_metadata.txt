@@ -1,0 +1,26 @@
+Project: gpac
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: gpac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_probe_analyze
+Job Type: libfuzzer_ubsan_gpac
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  vvc_get_ctb_info_in_slice
+  gf_vvc_parse_nalu_bs
+  gf_inspect_dump_nalu_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5389270067838976 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

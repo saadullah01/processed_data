@@ -1,0 +1,20 @@
+Project: c-blosc2
+Fuzzing Engine: afl
+Fuzz Target: decompress_frame_fuzzer
+Job Type: afl_asan_c-blosc2
+Platform Id: linux
+
+Crash Type: Invalid-free
+Crash Address: 0x60d0000003de
+Crash State:
+  frame_get_lazychunk
+  frame_decompress_chunk
+  blosc2_schunk_decompress_chunk
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer decompress_frame_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5994237083648000 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

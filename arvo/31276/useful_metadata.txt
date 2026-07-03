@@ -1,0 +1,24 @@
+Project: p11-kit
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: p11-kit
+Fuzzing Engine: libFuzzer
+Fuzz Target: rpc_fuzzer
+Job Type: libfuzzer_ubsan_p11-kit
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0xffffffffffffffff
+Crash State:
+  p11_rpc_buffer_get_byte_value
+  p11_rpc_buffer_get_attribute
+  p11_rpc_buffer_get_attribute_array_value
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer rpc_fuzzer from making much progress. Fixing this will allow more bugs to be found.

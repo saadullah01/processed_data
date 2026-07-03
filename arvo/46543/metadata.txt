@@ -1,0 +1,56 @@
+Project: gstreamer
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=4713285385060352
+
+Project: gstreamer
+Fuzzing Engine: honggfuzz
+Fuzz Target: typefind
+Job Type: honggfuzz_asan_gstreamer
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6020000158cf
+Crash State:
+  gst_sub_parse_data_format_autodetect
+  gst_sub_parse_type_find
+  gst_type_find_factory_call_function
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_gstreamer&range=202204060606:202204090606
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4713285385060352
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Fixed in https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/2147"""
+
+-- Comment 3: """ClusterFuzz testcase 4713285385060352 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_gstreamer&range=202204090606:202204100603
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

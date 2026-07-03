@@ -1,0 +1,11 @@
+{
+    "src/kex.c": {
+        "entities": [
+            "function_ecdh_sha2_nistp"
+        ],
+        "lines": [
+            1752,
+            1870
+        ]
+    }
+}

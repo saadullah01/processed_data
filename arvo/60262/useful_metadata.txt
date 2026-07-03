@@ -1,0 +1,17 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 7
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzVP9Decoder
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+Crash Address: 0x60a0000003b5
+Crash State:
+  Gfx::BooleanDecoder::initialize
+  Video::VP9::FrameContext::create_range_decoder
+  Video::VP9::Parser::compressed_header
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

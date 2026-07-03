@@ -1,0 +1,19 @@
+Project: igraph
+Fuzzing Engine: honggfuzz
+Fuzz Target: read_gml_fuzzer
+Job Type: honggfuzz_asan_igraph
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x608000000068
+Crash State:
+  igraph_vector_ptr_size
+  igraph_gml_tree_destroy
+  igraph_i_gml_parsedata_destroy
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer read_gml_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4855254405480448 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,39 @@
+{
+    "plugins/sudoers/policy.c": {
+        "entities": [
+            "function_sudoers_policy_validate",
+            "function_sudoers_policy_list",
+            "function_sudoers_policy_deserialize_info",
+            "function_sudoers_policy_close"
+        ],
+        "lines": [
+            976,
+            1075,
+            348,
+            1045
+        ]
+    },
+    "plugins/sudoers/regress/fuzz/fuzz_policy.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput",
+            "function_find_path"
+        ],
+        "lines": [
+            340,
+            302,
+            639
+        ]
+    },
+    "plugins/sudoers/sudoers.c": {
+        "entities": [
+            "function_set_cmnd",
+            "function_sudoers_policy_main"
+        ],
+        "lines": [
+            360,
+            930,
+            341,
+            968
+        ]
+    }
+}

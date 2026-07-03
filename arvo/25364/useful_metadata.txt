@@ -1,0 +1,14 @@
+Project: libsndfile
+Fuzzing Engine: libFuzzer
+Fuzz Target: sndfile_fuzzer
+Job Type: libfuzzer_msan_libsndfile
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  psf_log_printf
+  caf_read_header
+  caf_open
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer sndfile_fuzzer from making much progress.

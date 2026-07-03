@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decoders/DcrDecoder.cpp": {
+        "entities": [
+            "function_DcrDecoder::decodeRawInternal"
+        ],
+        "lines": [
+            92
+        ]
+    }
+}

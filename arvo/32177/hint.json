@@ -1,0 +1,10 @@
+{
+    "libsepol/cil/src/cil_reset_ast.c": {
+        "entities": [
+            "function_cil_reset_classperms_set"
+        ],
+        "lines": [
+            59
+        ]
+    }
+}

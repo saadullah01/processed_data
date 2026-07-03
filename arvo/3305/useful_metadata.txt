@@ -1,0 +1,41 @@
+Project: openjpeg
+Fuzzer: libFuzzer_openjpeg_opj_decompress_fuzzer
+Fuzz target binary: opj_decompress_fuzzer
+Job Type: libfuzzer_asan_openjpeg_untrusted
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6040000011a4
+Crash State:
+  opj_mct_decode_real
+  opj_tcd_mct_decode
+  opj_tcd_decode_tile
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+Fixed per commit cc893a4ebfaf8c42cf1221ac82c83df91e77340b
+master only
+
+Complementary fix per commit 5abd86b14bb26d1882ee1c07b03f809f85162a5d
+
+ClusterFuzz has detected this issue as fixed in range 201709070414:201709080414.
+Project: openjpeg
+Fuzzer: libFuzzer_openjpeg_opj_decompress_fuzzer
+Fuzz target binary: opj_decompress_fuzzer
+Job Type: libfuzzer_asan_openjpeg
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6040000011a4
+Crash State:
+  opj_mct_decode_real
+  opj_tcd_mct_decode
+  opj_tcd_decode_tile
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: range 201709050414:201709060414
+Fixed: range 201709070414:201709080414
+Reproducer Testcase: 5317114783072256
+
+ClusterFuzz testcase 5317114783072256 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

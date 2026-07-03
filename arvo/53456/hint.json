@@ -1,0 +1,24 @@
+{
+    "base/gsbitops.c": {
+        "entities": [],
+        "lines": [
+            1,
+            725
+        ]
+    },
+    "base/gsbitops.h": {
+        "entities": [],
+        "lines": [
+            1,
+            502
+        ]
+    },
+    "base/gxclbits.c": {
+        "entities": [
+            "function_cmd_put_bits"
+        ],
+        "lines": [
+            279
+        ]
+    }
+}

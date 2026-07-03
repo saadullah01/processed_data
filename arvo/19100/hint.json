@@ -1,0 +1,13 @@
+{
+    "src/lib/protocols/amazon_video.c": {
+        "entities": [
+            "function_ndpi_check_amazon_video",
+            "function_init_amazon_video_dissector"
+        ],
+        "lines": [
+            1,
+            28,
+            69
+        ]
+    }
+}

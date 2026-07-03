@@ -1,0 +1,27 @@
+flac:fuzzer_tool_flac: Use-of-uninitialized-value in FLAC__replaygain_synthesis__apply_gain
+
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_tool_flac
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  FLAC__replaygain_synthesis__apply_gain
+  write_callback
+  read_frame_
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 5539899256668160
+
+ClusterFuzz testcase 5539899256668160 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

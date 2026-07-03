@@ -1,0 +1,13 @@
+{
+    "src/flb_parser.c": {
+        "entities": [
+            "function_flb_parser_create"
+        ],
+        "lines": [
+            224,
+            105,
+            201,
+            261
+        ]
+    }
+}

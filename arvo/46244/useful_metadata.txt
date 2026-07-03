@@ -1,0 +1,22 @@
+Project: libraw
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: libraw
+Fuzzing Engine: libFuzzer
+Fuzz Target: libraw_cr2_fuzzer
+Job Type: libfuzzer_msan_libraw
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  LibRaw::init_fuji_block
+  LibRaw::fuji_decode_strip
+  LibRaw::fuji_decode_loop
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

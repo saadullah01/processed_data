@@ -1,0 +1,10 @@
+{
+    "src/numeric.c": {
+        "entities": [
+            "function_cmpnum"
+        ],
+        "lines": [
+            1801
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+Project: wpantund
+Fuzzer: afl_wpantund_wpantund-fuzz
+Fuzz target binary: wpantund-fuzz
+Job Type: afl_asan_wpantund
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x00000000f93e
+Crash State:
+  spinel_datatype_vunpack_
+  spinel_datatype_unpack
+  nl::wpantund::SpinelNCPInstance::handle_ncp_spinel_value_inserted
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment: "This is pretty much the exact same backtrace as [omitted], except with a non-NULL pointer.
+The specific line indicated in the backtrace doesn't really make any sense."

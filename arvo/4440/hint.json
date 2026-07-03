@@ -1,0 +1,12 @@
+{
+    "src/librawspeed/common/RawImage.cpp": {
+        "entities": [
+            "method_RawImageData::getData",
+            "method_RawImageData::getDataUncropped"
+        ],
+        "lines": [
+            226,
+            242
+        ]
+    }
+}

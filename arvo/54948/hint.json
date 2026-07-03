@@ -1,0 +1,12 @@
+{
+    "src/oplist.c": {
+        "entities": [
+            "function_node_from_openstep",
+            "function_parse_dict_data"
+        ],
+        "lines": [
+            710,
+            550
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+Project: php-src
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-function-jit
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x1000df08700f
+Crash State:
+  zend_ssa_remove_nops
+  zend_dfa_optimize_op_array
+  zend_optimize_script
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,11 @@
+{
+    "src/libopensc/card-authentic.c": {
+        "entities": [
+            "function_authentic_get_tagged_data"
+        ],
+        "lines": [
+            205,
+            190
+        ]
+    }
+}

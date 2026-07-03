@@ -1,0 +1,26 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 2
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 2
+Crash Address: 0x602000000230
+Crash State:
+  dxf_objects_read
+  dwg_read_dxf
+  llvmfuzz.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Introduced just recently with 3b47eb0fe81ab7ded5342208feac016076e0e668,
+fixed with 5b27162afa44042bd43dec3fed8a1177c2c43ebb
+
+ClusterFuzz testcase 6523553928314880 is verified as fixed

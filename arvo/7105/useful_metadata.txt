@@ -1,0 +1,27 @@
+Project: curl
+Fuzzer: afl_curl_fuzzer_rtsp
+Fuzz target binary: curl_fuzzer_rtsp
+Job Type: afl_asan_curl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x629000009214
+Crash State:
+  rtsp_rtp_readwrite
+  readwrite_data
+  Curl_readwrite
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+#0  0x00000000004e2884 in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#1  0x00000000004e3648 in __asan_report_load1 ()
+#2  0x000000000065f2ad in rtsp_rtp_readwrite (data=0x62a000000208, conn=0x61c000000088, 
+    nread=0x7fffffffb200, readmore=0x7fffffffb220) at rtsp.c:704
+#3  0x000000000061749d in readwrite_data (data=0x62a000000208, conn=0x61c000000088, k=0x62a0000002c8, 
+    didwhat=0x7fffffffbc80, done=0x7fffffffc1e0, comeback=0x7fffffffc260) at transfer.c:822
+#4  0x00000000006124a2 in Curl_readwrite (conn=0x61c000000088, data=0x62a000000208, 
+    done=0x7fffffffc1e0, comeback=0x7fffffffc260) at transfer.c:1125
+#5  0x000000000053f85d in multi_runsingle (multi=0x615000000588, now=..., data=0x62a000000208)
+    at multi.c:1891

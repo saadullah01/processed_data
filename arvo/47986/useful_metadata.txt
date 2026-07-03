@@ -1,0 +1,18 @@
+Project: libical
+Fuzzing Engine: afl
+Fuzz Target: libical_fuzzer
+Job Type: afl_asan_libical
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7fffdf0a53c0
+Crash State:
+  simple_str_to_doublestr
+  icalvalue_new_from_string
+  icalparser_add_line
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.

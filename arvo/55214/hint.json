@@ -1,0 +1,36 @@
+{
+    "src/H5Fsuper_cache.c": {
+        "entities": [
+            "function_H5F__cache_superblock_deserialize"
+        ],
+        "lines": [
+            544,
+            451,
+            483,
+            518,
+            495,
+            433,
+            466,
+            562,
+            440
+        ]
+    },
+    "src/H5Gent.c": {
+        "entities": [
+            "function_H5G__ent_decode_vec",
+            "function_H5G_ent_decode"
+        ],
+        "lines": [
+            144,
+            117,
+            93,
+            130
+        ]
+    },
+    "src/H5Gprivate.h": {
+        "entities": [],
+        "lines": [
+            248
+        ]
+    }
+}

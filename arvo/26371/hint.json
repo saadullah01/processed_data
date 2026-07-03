@@ -1,0 +1,10 @@
+{
+    "src/pdu.c": {
+        "entities": [
+            "function_coap_pdu_parse_opt"
+        ],
+        "lines": [
+            701
+        ]
+    }
+}

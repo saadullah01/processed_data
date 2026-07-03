@@ -1,0 +1,26 @@
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-shape-fuzzer
+Fuzz target binary: hb-shape-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x617000000688
+Crash State:
+  BEInt<unsigned short, 2>::operator unsigned short
+  OT::IntType<unsigned short, 2u>::operator unsigned int
+  CFF::Charset1_2<OT::IntType<unsigned char, 1u> >::get_glyph
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed by HarfBuzz PR 1449
+
+ClusterFuzz has detected this issue as fixed in range 201812050219:201812060218.
+
+ClusterFuzz testcase 5700264032468992 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,10 @@
+{
+    "cram/cram_encode.c": {
+        "entities": [
+            "function_cram_encode_aux"
+        ],
+        "lines": [
+            3099
+        ]
+    }
+}

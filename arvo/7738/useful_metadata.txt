@@ -1,0 +1,79 @@
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize_width
+Fuzz target binary: image_filter_deserialize_width
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  SkPictureShader::onMakeContext
+  SkShaderBase::makeContext
+  SkBlitter::Choose
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 4748594994216960
+
+This seems to have been introduced in (commit reference omitted)
+If refBitmapShader returns here: SkPictureShader.cpp line 227
+scaleAdjust is not initialized.
+
+To repro, build Skia with MSAN and run:
+out/MSAN/fuzz -t filter_fuzz -b ~/Downloads/clusterfuzz-testcase-minimized-image_filter_deserialize_width-4748594994216960
+
+The following revision refers to this bug:
+commit 8f88d89796d0ab7fefb302b21e03cc186dfc8bc3
+Author: Florin Malita
+Date: Fri Apr 20 14:14:45 2018
+
+Fix use-of-uninitialized-value in SkPictureShader::onMakeContext
+
+SkPictureShader::refBitmapShader is expected to always initialize the
+scale adjust vector when returning a non-null shader.  But the code path
+returning EmptyShader does not do that.
+
+Instead of hauling around a separate scale adjustment, we can refactor
+to avoid this problem by adjusting the local matrix directly, if needed,
+in refBitmapShader.  The local matrix is conveniently already stored in
+a SkTCopyOnFirstWrite.
+
+Bug: chromium:835048, oss-fuzz:7738
+Change-Id: I2df3bde7d6237f01bc71857c2fe254e86b186dc0
+Reviewed-by: Kevin Lubick
+Auto-Submit: Florin Malita
+Commit-Queue: Florin Malita
+
+Modified files:
+src/shaders/SkPictureShader.h
+src/shaders/SkPictureShader.cpp
+
+The following revision refers to this bug:
+commit ad3f3c7162bc5f96fcd2203b1ea6273432ff46ef
+Author: Florin Malita
+Date: Fri Apr 20 17:46:27 2018
+
+Fix use-of-uninitialized-value in SkPictureShader::onMakeContext
+
+SkPictureShader::refBitmapShader is expected to always initialize the
+scale adjust vector when returning a non-null shader.  But the code path
+returning EmptyShader does not do that.
+
+Instead of hauling around a separate scale adjustment, we can refactor
+to avoid this problem by adjusting the local matrix directly, if needed,
+in refBitmapShader.  The local matrix is conveniently already stored in
+a SkTCopyOnFirstWrite.
+
+Bug: chromium:835048, oss-fuzz:7738
+Change-Id: I2df3bde7d6237f01bc71857c2fe254e86b186dc0
+Reviewed-by: Kevin Lubick
+Auto-Submit: Florin Malita
+Commit-Queue: Florin Malita
+(cherry picked from commit 8f88d89796d0ab7fefb302b21e03cc186dfc8bc3)
+
+Modified files:
+src/shaders/SkPictureShader.h
+src/shaders/SkPictureShader.cpp
+
+ClusterFuzz has detected this issue as fixed in range 201804200632:201804210624.
+
+ClusterFuzz testcase 4748594994216960 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

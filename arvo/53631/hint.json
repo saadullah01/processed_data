@@ -1,0 +1,10 @@
+{
+    "src/libopensc/muscle.c": {
+        "entities": [
+            "function_msc_zero_object"
+        ],
+        "lines": [
+            127
+        ]
+    }
+}

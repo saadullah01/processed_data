@@ -1,0 +1,217 @@
+Project: curl
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=6310694975700992
+
+Project: curl
+Fuzzer: afl_curl_fuzzer_rtsp
+Fuzz target binary: curl_fuzzer_rtsp
+Job Type: afl_asan_curl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x629000009211
+Crash State:
+  rtsp_rtp_readwrite
+  readwrite_data
+  Curl_readwrite
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=201711090514:201711100514
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6310694975700992
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """TLVHeader(type='CURLOPT_ACCEPT_ENCODING' (30), length=0, data=b'')
+TLVHeader(type='CURLOPT_URL' (1), length=25, data=b'rtsp://17/\xce.\xd7)\x06.:p7\x00\x12\x00\x00\x00\x00')
+TLVHeader(type='Server banner (sent on connection)' (2), length=125, data=b'RTSP/0.0 117<\xc3\xba\xac\xfft\n\xff\xf6\x00\x00\x00\x00\x000>\x14\xe2\nContent-Length:\t8o@\r\x8c\xb0\x00\x01\x00\x00\x00\x19rtrp:2O\xc0\xf2\xf2\xf4COnten\x03\xe8Len\nCOntd\xff\x00\x1e\x00e\xb9gth:\xef\xff\x7fK\x00\x80_\xfd\r S\x17\x07:g)n\n\x0e$d\x10\x00\x00\r\xde#d')
+TLVHeader(type='CURLOPT_RTSP_REQUEST' (34), length=4, data=b'\x00\x00\x00\x02')
+TLVHeader(type='Server response 1' (17), length=60807, data=b'$\xe4\x00\x02\x00\x87$\xe4\x00\x00\x1......skip lots of bytes
+
+Nothing looks immediately worrying?"""
+
+-- Comment 3: """(gdb) break __asan::ReportGenericError
+Breakpoint 1 at 0x4dd410
+(gdb) run ../clusterfuzz-testcase-curl_fuzzer_rtsp-6310694975700992
+Starting program: /raid/Git/curl-fuzzer/curl_fuzzer_rtsp ../clusterfuzz-testcase-curl_fuzzer_rtsp-6310694975700992
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+* STATE: INIT => CONNECT handle 0x62a000000208; line 1407 (connection #-5000)
+* Connecting to hostname: 127.0.1.127
+* Added connection 0. The cache now contains 1 members
+[../clusterfuzz-testcase-curl_fuzzer_rtsp-6310694975700992] Opened.. Read 60992 bytes, fuzzing.. FUZZ: Using socket manager 0
+FUZZ[0]: Using socket manager 0
+FUZZ[0]: Sending initial response
+*   Trying 127.0.1.127...
+* Could not set TCP_NODELAY: Operation not supported
+* STATE: CONNECT => WAITCONNECT handle 0x62a000000208; line 1459 (connection #0)
+* Connected to 127.0.1.127 (|) port 554 (#0)
+* STATE: WAITCONNECT => SENDPROTOCONNECT handle 0x62a000000208; line 1576 (connection #0)
+* Marked for [keep alive]: HTTP default
+* STATE: SENDPROTOCONNECT => DO handle 0x62a000000208; line 1594 (connection #0)
+> DESCRIBE * RTSP/1.0
+CSeq: 1
+Accept: application/sdp
+Accept-Encoding: deflate, gzip
+
+* STATE: DO => DO_DONE handle 0x62a000000208; line 1673 (connection #0)
+* STATE: DO_DONE => WAITPERFORM handle 0x62a000000208; line 1798 (connection #0)
+* STATE: WAITPERFORM => PERFORM handle 0x62a000000208; line 1814 (connection #0)
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< RTSP/0.0 117<ú▒▒t
+< ▒▒0>▒
+▒▒rtrp:2O▒▒▒▒COnten▒Len 8o@
+ S:g)nd▒e▒gth:▒K▒_▒
+FUZZ: Initial perform; still running? 1
+FUZZ[0]: Received 89 bytes
+==>
+DESCRIBE * RTSP/1.0
+CSeq: 1
+Accept: application/sdp
+Accept-Encoding: deflate, gzip
+
+
+<==
+FUZZ[0]: Sending next response: 1
+FUZZ[0]: Shutting down server socket: 4
+* RTP write channel 228 rtp_length 2
+* RTP write channel 228 rtp_length 0
+▒#d:g)n
+< ,t-Enco▒
+< Content-Encoding:x,n,,,(,,,,,,,,,,!,RTSP+0.son▒eU
+
+
+
+                                                   ▒
+<
+
+        nee▒▒▒▒6▒▒
+* Marked for [closure]: Connection: close used
+< Connection: OPTIPtwsclose▒6▒▒
+< Connection: PPOtTIwsclose  ▒▒1Ld l▒
+<
+  d
+< C
+< $
+   nNnnnnA7@"▒▒▒▒▒▒;rtsp)/%%%$%b
+                                nNnnnnA7@"}RTSP+0.son▒eU
+
+
+
+                                                        ▒
+<
+
+
+  nee▒▒▒▒6▒▒
+rtsp://1./..▒:.:1116./65 ▒RTSP/1.2 30Orr:./65.rtsp:/%%%$%b,%%3 /0RtSp:/1 F;;;;;;;;;;
+                                                          nNnnnnA6@"}RTSP+0.soedT
+< Conten
+        nee▒▒▒▒6▒▒
+t▒▒RTSP/1B1 2,x,t-Enco▒ose▒RTSP/▒6rtsp:+/1./..▒:.:11)6./65RTSP/1.2 30Orrtsp://3/)▒5...F:11./65▒
+< Content-Enco▒ding:▒▒x,98▒▒RTSrtsp:/▒fB%▒▒c▒F%$▒▒@"3}RTYP/H.3 304ntedT
+< Content-TYpe:    4▒t-edT
+< Content-TYpe:    ▒A
+RtSp:c)n Son:  2
+< :cP'
+< $"4/567jPD/S, SETUP, JEARDOWN,%%347@"3U}RTSP/1.0 11.0mte#▒Yt
+5▒RTSP/1.2 30Or ing▒▒▒g:n,ncoer:n,d,,,,,, ,,,,,,,,,,,,,,,,,,,,yd#0"C
+< Co(4//60
+< C▒ntent-Encoding:i,▒▒n:te=n▒-▒g▒iC,
+< tn260
+< ▒Co79/
+* Increasing bytecount by 62 from hbuflen
+* Excess found in a non pipelined read: excess = 15022, size = 8, maxdownload = 8, bytecount = 62
+* RTP Rewinding 15022 (READMORE)
+
+Breakpoint 1, 0x00000000004dd410 in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+(gdb) bt
+#0  0x00000000004dd410 in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#1  0x00000000004bcf04 in __asan_memcpy ()
+#2  0x0000000000653511 in rtsp_rtp_readwrite (data=0x62a000000208, conn=0x61c000000088, nread=0x7fffffffb980, readmore=0x7fffffffb9a0) at rtsp.c:716
+#3  0x000000000060beab in readwrite_data (data=0x62a000000208, conn=0x61c000000088, k=0x62a0000002c8, didwhat=0x7fffffffc380, done=0x7fffffffc8e0, comeback=0x7fffffffc960) at transfer.c:816
+#4  0x00000000006071d2 in Curl_readwrite (conn=0x61c000000088, data=0x62a000000208, done=0x7fffffffc8e0, comeback=0x7fffffffc960) at transfer.c:1119
+#5  0x0000000000537d74 in multi_runsingle (multi=0x615000000808, now=..., data=0x62a000000208) at multi.c:1886
+#6  0x0000000000533114 in curl_multi_perform (multi=0x615000000808, running_handles=0x7fffffffdb40) at multi.c:2154
+#7  0x0000000000512fe7 in fuzz_handle_transfer (fuzz=0x7fffffffde60) at curl_fuzzer.cc:382
+#8  0x00000000005115e6 in LLVMFuzzerTestOneInput (data=0x630000000400 "", size=60992) at curl_fuzzer.cc:93
+#9  0x000000000086e29c in main (argc=2, argv=0x7fffffffe4e8) at standalone_fuzz_target_runner.cc:65
+(gdb) f 2
+#2  0x0000000000653511 in rtsp_rtp_readwrite (data=0x62a000000208, conn=0x61c000000088, nread=0x7fffffffb980, readmore=0x7fffffffb9a0) at rtsp.c:716
+716         memcpy(scratch, rtp, rtp_dataleft);
+(gdb)
+
+Looks like it might be something to do with RTSP rewinding? Finding out you can break on __asan::ReportGenericError is awesome; you can explore what's going on at the point of the crash!"""
+
+-- Comment 4: """so that memcpy() is the culprit? Doesn't that just copy 'rtp_dataleft' bytes to an allocated area that was just malloced (one line 709) to fit that much?"""
+
+-- Comment 5: """My guess is that it's reading too many bytes out of the buffer; it's trying to read 15022 bytes out and maybe there aren't that many left in there, because of rewinding stuff?"""
+
+-- Comment 6: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer curl_fuzzer_rtsp from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 7: """Daniel is I think going to try and reproduce this at some point."""
+
+-- Comment 8: """This is a proper security problem. I have a fix pending that according to current plans will be merged into master on March 19, 48 hours before the next planned release."""
+
+-- Comment 9: """ClusterFuzz has detected this issue as fixed in range 201803120523:201803130527.
+
+Detailed report: https://oss-fuzz.com/testcase?key=6310694975700992
+
+Project: curl
+Fuzzer: afl_curl_fuzzer_rtsp
+Fuzz target binary: curl_fuzzer_rtsp
+Job Type: afl_asan_curl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x629000009211
+Crash State:
+  rtsp_rtp_readwrite
+  readwrite_data
+  Curl_readwrite
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=201711090514:201711100514
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=201803120523:201803130527
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6310694975700992
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 10: """ClusterFuzz testcase 6310694975700992 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 11: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

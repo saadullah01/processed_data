@@ -1,0 +1,18 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_crypt
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffd1e2afca9
+Crash State:
+  sc_color_fprintf_va
+  sc_do_log_va
+  sc_do_log
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

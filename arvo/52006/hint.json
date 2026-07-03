@@ -1,0 +1,16 @@
+{
+    "NEWS": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "src/daemon/protocols/cdp.c": {
+        "entities": [
+            "function_cdp_decode"
+        ],
+        "lines": [
+            466
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+Project: upx
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: upx
+Fuzzing Engine: afl
+Fuzz Target: test_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x61b000000680
+Crash State:
+  upx_safe_strlen
+  void PeFile::rebuildImports<LE32, unsigned int>
+  void PeFile::unpack0<PeFile32::pe_header_t, LE32, unsigned int>
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+Fixed on branch devel4 by commit 67bb2344c6c82cc60891403f61e409f877ae24b0 . Safe, but hard to tell if it was the fuzzer or mismatched conventions.
+
+ClusterFuzz testcase 6312242609979392 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,15 @@
+Project: capstone
+Fuzzer: libFuzzer_capstone_fuzz_disasmmaster
+Fuzz target binary: fuzz_disasmmaster
+Job Type: libfuzzer_ubsan_capstone
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  printT2AddrModeSoRegOperand
+  cs_disasm
+  fuzz_disasm.c
+  
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,10 @@
+{
+    "src/lib/ndpi_main.c": {
+        "entities": [
+            "function_ndpi_strncasestr"
+        ],
+        "lines": [
+            7141
+        ]
+    }
+}

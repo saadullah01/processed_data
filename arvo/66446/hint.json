@@ -1,0 +1,10 @@
+{
+    "valid.c": {
+        "entities": [
+            "function_xmlAddIDSafe"
+        ],
+        "lines": [
+            2373
+        ]
+    }
+}

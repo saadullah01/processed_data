@@ -1,0 +1,22 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_ps2write_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x62a000323a2c
+Crash State:
+  ttfOutliner__BuildGlyphOutlineAux
+  ttfOutliner__Outline
+  gx_ttf_outline
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

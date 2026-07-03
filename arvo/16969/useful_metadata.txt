@@ -1,0 +1,16 @@
+Project: ghostpdl
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Null-dereference READ
+
+Project: ghostscript
+Fuzzing Engine: afl
+Fuzz Target: gstoraster_fuzzer
+Job Type: afl_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  NULL
+Sanitizer: address (ASAN)

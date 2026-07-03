@@ -1,0 +1,16 @@
+Project: selinux
+Fuzzing Engine: honggfuzz
+Fuzz Target: secilc-fuzzer
+Job Type: honggfuzz_asan_selinux
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x607000000120
+Crash State:
+  cil_symtab_get_datum
+  __cil_resolve_perms
+  cil_resolve_classperms
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

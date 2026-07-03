@@ -1,0 +1,23 @@
+Project: proj.4
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: proj4
+Fuzzer: libFuzzer_proj4_standard_fuzzer
+Fuzz target binary: standard_fuzzer
+Job Type: libfuzzer_asan_proj4
+Platform Id: linux
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7fbe21623158
+Crash State:
+  reverse_4d
+  pj_inv4d
+  proj_trans
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Master only
+
+ClusterFuzz has detected this issue as fixed in range 201711260648:201711270646.

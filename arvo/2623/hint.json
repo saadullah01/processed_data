@@ -1,0 +1,31 @@
+{
+    "lib/core/proxy.c": {
+        "entities": [
+            "function_frontend_write_req_chunk"
+        ],
+        "lines": [
+            588
+        ]
+    },
+    "lib/http2/connection.c": {
+        "entities": [
+            "function_handle_data_frame"
+        ],
+        "lines": [
+            617
+        ]
+    },
+    "t/50too-much-data.t": {
+        "entities": [],
+        "lines": []
+    },
+    "t/Util.pm": {
+        "entities": [
+            "variable_@EXPORT"
+        ],
+        "lines": [
+            12,
+            292
+        ]
+    }
+}

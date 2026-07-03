@@ -1,0 +1,54 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "coders/png.c": {
+        "entities": [
+            "function_png_read_raw_profile"
+        ],
+        "lines": [
+            1144,
+            1156,
+            2717,
+            1126
+        ]
+    },
+    "locale/C.mgk": {
+        "entities": [],
+        "lines": [
+            570,
+            1587
+        ]
+    },
+    "magick/gm_messages.mc": {
+        "entities": [],
+        "lines": [
+            1055
+        ]
+    },
+    "magick/locale_c.h": {
+        "entities": [],
+        "lines": [
+            865,
+            3,
+            1447,
+            180,
+            637
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    }
+}

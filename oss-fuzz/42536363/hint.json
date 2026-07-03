@@ -1,0 +1,10 @@
+{
+    "src/nxt_tstr.c": {
+        "entities": [
+            "function_nxt_tstr_test"
+        ],
+        "lines": [
+            159
+        ]
+    }
+}

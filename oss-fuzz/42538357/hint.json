@@ -1,0 +1,10 @@
+{
+    "libavformat/qcp.c": {
+        "entities": [
+            "function_qcp_read_header"
+        ],
+        "lines": [
+            105
+        ]
+    }
+}

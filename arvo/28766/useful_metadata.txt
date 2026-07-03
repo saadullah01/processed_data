@@ -1,0 +1,16 @@
+Project: perfetto
+Fuzzing Engine: libFuzzer
+Fuzz Target: trace_processor_fuzzer
+Job Type: libfuzzer_asan_perfetto
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 4
+Crash Address: 0x7ffd7314fff0
+Crash State:
+  perfetto::trace_processor::MemoryTrackerSnapshotParser::EmitRows
+  perfetto::trace_processor::MemoryTrackerSnapshotParser::GenerateGraphFromRawNode
+  perfetto::trace_processor::MemoryTrackerSnapshotParser::NotifyEndOfFile
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

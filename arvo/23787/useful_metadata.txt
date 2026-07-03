@@ -1,0 +1,30 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Memcpy-param-overlap
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x615000000a82,0x615000000a86) and [0x615000000a80, 0x615000000a84)
+Crash State:
+  authentic_set_current_files
+  authentic_select_file
+  sc_select_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5161383229652992 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,18 @@
+Project: libjxl
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: djxl_fuzzer
+Job Type: libfuzzer_msan_libjxl
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  jxl::N_SCALAR::Epf0Row
+  jxl::FilterPipeline::ApplyFiltersRow
+  jxl::FinalizeImageRect
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

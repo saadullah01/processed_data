@@ -1,0 +1,10 @@
+{
+    "libsepol/src/conditional.c": {
+        "entities": [
+            "function_cond_init_bool_indexes"
+        ],
+        "lines": [
+            522
+        ]
+    }
+}

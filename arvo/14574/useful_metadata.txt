@@ -1,0 +1,57 @@
+Project: libarchive
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Comment 1:
+Project: libarchive
+Fuzzer: afl_libarchive_fuzzer
+Fuzz target binary: libarchive_fuzzer
+Job Type: afl_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6020000000d1
+Crash State:
+  circular_memcpy
+  run_arm_filter
+  run_filter
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: range=201901070252:201901080253
+
+Reproducer Testcase: testcase_id=5688875420221440
+
+Issue filed automatically.
+
+Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201905060211:201905070212.
+
+Project: libarchive
+Fuzzer: afl_libarchive_fuzzer
+Fuzz target binary: libarchive_fuzzer
+Job Type: afl_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6020000000d1
+Crash State:
+  circular_memcpy
+  run_arm_filter
+  run_filter
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: range=201901070252:201901080253
+Fixed: range=201905060211:201905070212
+
+Reproducer Testcase: testcase_id=5688875420221440
+
+Comment 3:
+ClusterFuzz testcase 5688875420221440 is verified as fixed, so closing issue as verified.

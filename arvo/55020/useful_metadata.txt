@@ -1,0 +1,22 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_objdump_safe
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x60bfffae033d
+Crash State:
+  bfd_putl32
+  coff_aarch64_addr32_reloc
+  bfd_perform_relocation
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

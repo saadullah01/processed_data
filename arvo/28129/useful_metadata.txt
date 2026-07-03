@@ -1,0 +1,22 @@
+Project: php-src
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: php
+Fuzzing Engine: honggfuzz
+Fuzz Target: php-fuzz-parser
+Job Type: honggfuzz_asan_php
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x603000000e18
+Crash State:
+  _zend_is_inconsistent
+  zend_hash_find
+  zend_hash_find_ptr
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,32 @@
+libxml2:api: Heap-use-after-free in xmlValidateOneElement
+
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: api
+Job Type: libfuzzer_asan_i386_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0xf510160c
+Crash State:
+  xmlValidateOneElement
+  xmlValidateElement
+  api.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Reproducer Testcase: 6416192519077888
+
+Reproducible: Stability-Memory-AddressSanitizer; ClusterFuzz-Verified
+
+ClusterFuzz testcase 6416192519077888 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: libxml2

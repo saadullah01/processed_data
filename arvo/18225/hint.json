@@ -1,0 +1,18 @@
+{
+    "opcodes/tic30-dis.c": {
+        "entities": [
+            "function_get_indirect_operand",
+            "function_print_two_operand",
+            "function_print_par_insn",
+            "function_print_three_operand",
+            "function_get_register_operand"
+        ],
+        "lines": [
+            428,
+            210,
+            340,
+            472,
+            188
+        ]
+    }
+}

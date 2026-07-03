@@ -1,0 +1,16 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disas_ext-bfd_arch_i386
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  OP_VEX
+  print_insn
+  print_insn_i386
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

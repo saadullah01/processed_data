@@ -1,0 +1,16 @@
+{
+    "mrbgems/mruby-pack/src/pack.c": {
+        "entities": [
+            "function_pack_unpack",
+            "function_read_tmpl",
+            "enum_pack_dir",
+            "function_mrb_pack_pack"
+        ],
+        "lines": [
+            1512,
+            1217,
+            1642,
+            45
+        ]
+    }
+}

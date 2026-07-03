@@ -1,0 +1,52 @@
+Project: graphicsmagick
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Comment 1:
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_MVG_fuzzer
+Fuzz target binary: coder_MVG_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  GetPixelOpacity
+  DrawPolygonPrimitive
+  DrawPrimitive
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201808250219:201808260217
+
+Reproducer Testcase: 5686594198044672
+
+Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201902160227:201902170227.
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  GetPixelOpacity
+  DrawPolygonPrimitive
+  DrawPrimitive
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201808250219:201808260217
+Fixed: 201902160227:201902170227
+
+Reproducer Testcase: 5686594198044672
+
+Comment 3:
+ClusterFuzz testcase 5686594198044672 is verified as fixed, so closing issue as verified.
+
+Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

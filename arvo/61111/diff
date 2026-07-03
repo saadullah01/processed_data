@@ -1,0 +1,51 @@
+From 269738d6ce42a2e4979bfca33328fbf0bf0e6d10 Mon Sep 17 00:00:00 2001
+From: Douglas Bagnall <douglas.bagnall@catalyst.net.nz>
+Date: Fri, 28 Jul 2023 15:36:21 +1200
+Subject: [PATCH] lib/replace: fix strlcat/strlcpy compile for Honggfuzz
+
+Otherwise we getthis kind of thing:
+
+../../lib/replace/replace.c:837:3: error: implicit declaration of function 'strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                strlcpy(buf, s, buflen);
+
+../../third_party/heimdal/lib/roken/getarg.c:288:6: error: implicit declaration of function 'strlcat' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+            strlcat(buf, "]", sizeof(buf));
+
+because we found the symbol names in libc, but didn't check that the
+functions are declared in <string.h>. We already include
+<bsd/string.h> whenever we have it.
+
+Signed-off-by: Douglas Bagnall <douglas.bagnall@catalyst.net.nz>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+
+Autobuild-User(master): Andrew Bartlett <abartlet@samba.org>
+Autobuild-Date(master): Tue Aug  8 05:35:08 UTC 2023 on atb-devel-224
+---
+ lib/replace/wscript | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/lib/replace/wscript b/lib/replace/wscript
+index 37d77593900..77e655bb68b 100644
+--- a/lib/replace/wscript
++++ b/lib/replace/wscript
+@@ -448,6 +448,17 @@ def configure(conf):
+         if conf.CHECK_FUNCS_IN('strlcpy strlcat', 'bsd', headers='bsd/string.h',
+                                checklibc=True):
+             strlcpy_in_bsd = True
++    elif conf.env.enable_fuzzing:
++        # Just to complicate it more, some versions of Honggfuzz have
++        # got strlcpy and strlcat in libc, but not in <string.h>
++        # (unless it is there coincidentally, on a BSD). Therefore we
++        # can't use CHECK_FUNCS alone to decide whether to add the
++        # headers to replace.h.
++        #
++        # As this is only known to happen on a fuzzing compiler, we'll
++        # skip the check when not in fuzzing mode.
++        conf.CHECK_HEADERS('bsd/string.h')
++
+     if not conf.CHECK_FUNCS('getpeereid'):
+         conf.CHECK_FUNCS_IN('getpeereid', 'bsd', headers='sys/types.h bsd/unistd.h')
+     if not conf.CHECK_FUNCS_IN('setproctitle', 'setproctitle', headers='setproctitle.h'):
+-- 
+GitLab
+

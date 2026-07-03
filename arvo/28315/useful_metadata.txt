@@ -1,0 +1,18 @@
+Project: openthread
+Fuzzing Engine: libFuzzer
+Fuzz Target: ip6-send-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7ffe6243f772
+Crash State:
+  ot::MeshCoP::ChannelMaskEntryBase::GetEntrySize
+  ot::MeshCoP::ChannelMaskEntryBase::GetNext
+  ot::MeshCoP::ChannelMaskBaseTlv::IsValid
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ip6-send-fuzzer from making much progress. Fixing this will allow more bugs to be found.

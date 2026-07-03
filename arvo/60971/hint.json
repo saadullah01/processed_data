@@ -1,0 +1,10 @@
+{
+    "src/tests/fuzzing/fuzz_pkcs11.c": {
+        "entities": [
+            "function_test_verify"
+        ],
+        "lines": [
+            512
+        ]
+    }
+}

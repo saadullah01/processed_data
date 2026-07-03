@@ -1,0 +1,126 @@
+{
+    "lib/ftp.c": {
+        "entities": [
+            "function_ftp_connect",
+            "function_ftp_statemachine",
+            "function_ReceivedServerConnect",
+            "function_ftp_readresp",
+            "function_ftp_state_mdtm_resp",
+            "function_ftp_state_pasv_resp",
+            "function_Curl_GetFTPResponse",
+            "function_ftp_state_size_resp",
+            "function_ftp_state_get_resp"
+        ],
+        "lines": [
+            2950,
+            2311,
+            554,
+            363,
+            2763,
+            397,
+            2861,
+            2319,
+            688,
+            2877,
+            2099,
+            660,
+            3191,
+            379,
+            1821,
+            2494
+        ]
+    },
+    "lib/imap.c": {
+        "entities": [
+            "function_imap_state_fetch_resp",
+            "function_imap_state_listsearch_resp",
+            "function_imap_connect",
+            "function_imap_get_message",
+            "function_imap_state_select_resp",
+            "function_imap_state_starttls_resp",
+            "function_imap_state_capability_resp"
+        ],
+        "lines": [
+            896,
+            1472,
+            1058,
+            355,
+            1159,
+            1191,
+            982,
+            1176,
+            1145,
+            1086
+        ]
+    },
+    "lib/pingpong.c": {
+        "entities": [
+            "function_Curl_pp_readresp",
+            "function_Curl_pp_vsendf",
+            "function_Curl_pp_init",
+            "function_Curl_pp_statemach"
+        ],
+        "lines": [
+            256,
+            198,
+            487,
+            106,
+            267,
+            140
+        ]
+    },
+    "lib/pingpong.h": {
+        "entities": [
+            "struct_pingpong"
+        ],
+        "lines": [
+            64,
+            90,
+            47
+        ]
+    },
+    "lib/pop3.c": {
+        "entities": [
+            "function_pop3_get_message",
+            "function_pop3_connect",
+            "function_pop3_state_servergreet_resp",
+            "function_pop3_state_capa_resp",
+            "function_pop3_state_command_resp",
+            "function_pop3_state_starttls_resp"
+        ],
+        "lines": [
+            706,
+            649,
+            1130,
+            943,
+            658,
+            794,
+            252
+        ]
+    },
+    "lib/smtp.c": {
+        "entities": [
+            "function_smtp_state_starttls_resp",
+            "function_smtp_state_ehlo_resp",
+            "function_smtp_do",
+            "function_smtp_connect",
+            "function_smtp_get_message",
+            "function_smtp_state_command_resp"
+        ],
+        "lines": [
+            1540,
+            1033,
+            1361,
+            883,
+            1044,
+            250,
+            859
+        ]
+    },
+    "tests/dattest250": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    }
+}

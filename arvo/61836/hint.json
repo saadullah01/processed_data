@@ -1,0 +1,10 @@
+{
+    "src/ICMPinfo.cpp": {
+        "entities": [
+            "method_ICMPinfo::dissectICMP"
+        ],
+        "lines": [
+            100
+        ]
+    }
+}

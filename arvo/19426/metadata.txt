@@ -1,0 +1,56 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5661536303710208
+
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x631000178820
+Crash State:
+  tvb_memcpy
+  dissect_wcp
+  call_dissector_work
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_wireshark&range=201804171756:201804240545
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5661536303710208
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz testcase 5661536303710208 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_wireshark&range=201912200247:201912210245
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 4: """For the record, this was tracked upstream at https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16276"""

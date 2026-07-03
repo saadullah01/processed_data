@@ -1,0 +1,28 @@
+Project: yara
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: yara
+Fuzzing Engine: libFuzzer
+Fuzz Target: dotnet_fuzzer
+Job Type: libfuzzer_asan_yara
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x618000000ba0
+Crash State:
+  dotnet_parse_tilde_2
+  dotnet_parse_tilde
+  dotnet_parse_com
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5275377885380608 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

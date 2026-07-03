@@ -1,0 +1,24 @@
+Project: libsndfile
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 2
+Severity: High
+
+Project: libsndfile
+Fuzzing Engine: afl
+Fuzz Target: sndfile_fuzzer
+Job Type: afl_asan_libsndfile
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 2
+Crash Address: 0x608000000076
+Crash State:
+  wavlike_ima_decode_block
+  ima_reader_init
+  wavlike_ima_init
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer sndfile_fuzzer from making much progress.

@@ -1,0 +1,22 @@
+Project: upx
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_packed_file_fuzzer
+Job Type: libfuzzer_ubsan_upx
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000003408000
+Crash State:
+  N_BELE_RTP::LEPolicy::get32
+  PackLinuxElf32::invert_pt_dynamic
+  PackLinuxElf32::PackLinuxElf32help1
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer decompress_packed_file_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Fixed ac72c027937ff7c39b8b2c060fc7df1e1fdee489 on branch devel.
+
+ClusterFuzz testcase 6063044497047552 is verified as fixed in revisions range.

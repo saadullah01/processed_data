@@ -1,0 +1,19 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ {*}
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ {*}
+Crash Address: 0x00000199def1
+Crash State:
+  ps_font_def_func
+  pdfi_pscript_interpret
+  pdfi_read_ps_font
+
+Sanitizer: address (ASAN)

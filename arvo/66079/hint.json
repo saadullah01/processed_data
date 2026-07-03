@@ -1,0 +1,16 @@
+{
+    "src/p_lx_elf.cpp": {
+        "entities": [
+            "method_PackLinuxElf32::elf_lookup",
+            "function_PackLinuxElf64::invert_pt_dynamic",
+            "function_PackLinuxElf32::invert_pt_dynamic",
+            "method_PackLinuxElf64::elf_lookup"
+        ],
+        "lines": [
+            8041,
+            8183,
+            8269,
+            2135
+        ]
+    }
+}

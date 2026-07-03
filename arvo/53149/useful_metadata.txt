@@ -1,0 +1,28 @@
+Project: util-linux
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: util-linux
+Fuzzing Engine: afl
+Fuzz Target: test_blkid_fuzz
+Job Type: afl_asan_util-linux
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffde37a67c0
+Crash State:
+  merge_utf16be_ascii
+  probe_isoNUMBER
+  superblocks_probe
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer test_blkid_fuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4742512162242560 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

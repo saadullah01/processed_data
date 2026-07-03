@@ -1,0 +1,10 @@
+{
+    "src/libraw_datastream.cpp": {
+        "entities": [
+            "function_LibRaw_buffer_datastream::scanf_one"
+        ],
+        "lines": [
+            460
+        ]
+    }
+}

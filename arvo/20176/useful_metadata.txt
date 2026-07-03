@@ -1,0 +1,24 @@
+Project: wget2
+Fuzzing Engine: honggfuzz
+Fuzz Target: wget_options_fuzzer
+Job Type: honggfuzz_asan_wget2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ {*}
+Crash Address: 0x60b0003f4fa3
+Crash State:
+  rpl_glob
+  read_config_expand
+  read_config_expand
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Crash Revision: https://oss-fuzz.com/revisions?job=honggfuzz_asan_wget2&revision=202001160607
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5639439544221696
+
+ClusterFuzz testcase 5639439544221696 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_wget2&range=202001180631:202001190643
+
+This bug has been fixed for 30 days. It has been opened to the public.

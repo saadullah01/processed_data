@@ -1,0 +1,12 @@
+{
+    "src/packet_analysis/protocol/teredo/Teredo.cc": {
+        "entities": [
+            "method_TeredoAnalyzer::DetectProtocol"
+        ],
+        "lines": [
+            272,
+            307,
+            291
+        ]
+    }
+}

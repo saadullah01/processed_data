@@ -1,0 +1,12 @@
+{
+    "libavcodec/mlpdec.c": {
+        "entities": [
+            "function_read_matrix_params"
+        ],
+        "lines": [
+            729,
+            770,
+            743
+        ]
+    }
+}

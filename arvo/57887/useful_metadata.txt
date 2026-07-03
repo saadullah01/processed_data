@@ -1,0 +1,22 @@
+Project: libdwarf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_die_cu
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x601fffffc965
+Crash State:
+  _dwarf_memcpy_noswap_bytes
+  _dwarf_extract_address_from_debug_addr
+  _dwarf_look_in_local_and_tied
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,26 @@
+{
+    "src/libopensc/card-atrust-acos.c": {
+        "entities": [
+            "function_atrust_acos_check_sw"
+        ],
+        "lines": [
+            803
+        ]
+    },
+    "src/libopensc/card-starcos.c": {
+        "entities": [
+            "function_starcos_check_sw"
+        ],
+        "lines": [
+            1974
+        ]
+    },
+    "src/libopensc/iso7816.c": {
+        "entities": [
+            "function_iso7816_check_sw"
+        ],
+        "lines": [
+            117
+        ]
+    }
+}

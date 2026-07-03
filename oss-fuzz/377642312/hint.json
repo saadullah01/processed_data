@@ -1,0 +1,11 @@
+{
+    "libavformat/iamf_reader.c": {
+        "entities": [
+            "function_ff_iamf_read_packet"
+        ],
+        "lines": [
+            282,
+            294
+        ]
+    }
+}

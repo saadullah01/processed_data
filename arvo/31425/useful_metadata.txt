@@ -1,0 +1,27 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 16
+Severity: Medium
+
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_asan_libredwg
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 16
+Crash Address: 0x6070000000d8
+Crash State:
+  decode_R13_RNUMBER
+  dwg_decode
+  llvmfuzz.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer llvmfuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6172625933041664 is verified as fixed in
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,22 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Use-after-poison READ 8
+Severity: High
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzJs
+Job Type: libfuzzer_asan_serenity
+Platform Id: linux
+
+Crash Type: Use-after-poison READ 8
+Crash Address: 0x62d0000cee28
+Crash State:
+  JS::IndexedProperties::put
+  JS::ArrayExpression::execute
+  JS::UnaryExpression::execute
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

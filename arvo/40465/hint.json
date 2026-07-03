@@ -1,0 +1,22 @@
+{
+    "binutils/deflex.l": {
+        "entities": [],
+        "lines": [
+            32
+        ]
+    },
+    "gas/as.h": {
+        "entities": [
+            "function_xmemdup0"
+        ],
+        "lines": [
+            484
+        ]
+    },
+    "ld/ldlex.l": {
+        "entities": [],
+        "lines": [
+            104
+        ]
+    }
+}

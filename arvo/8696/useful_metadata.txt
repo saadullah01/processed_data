@@ -1,0 +1,26 @@
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  JBIG2Bitmap::getPixelPtr
+  JBIG2Stream::readGenericRefinementRegion
+  JBIG2Stream::readSymbolDictSeg
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201805270335:201805270805
+
+Reproducer Testcase ID: 5159163985395712
+
+Fixed by commit id: 0053966d3ec5b5c4eb6480417b2c8a8ccd910964
+
+ClusterFuzz has detected this issue as fixed in range 201806040505:201806050504
+
+ClusterFuzz testcase 5159163985395712 is verified as fixed, so closing issue as verified.

@@ -1,0 +1,15 @@
+{
+    "libsepol/cil/src/cil_verify.c": {
+        "entities": [
+            "function___cil_verify_classpermission",
+            "function___cil_verify_classperms",
+            "function___verify_map_perm_classperms"
+        ],
+        "lines": [
+            1787,
+            1700,
+            1804,
+            1735
+        ]
+    }
+}

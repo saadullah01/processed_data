@@ -1,0 +1,10 @@
+{
+    "src/lib/libdwarf/dwarf_frame2.c": {
+        "entities": [
+            "function__dwarf_gnu_aug_encodings"
+        ],
+        "lines": [
+            1609
+        ]
+    }
+}

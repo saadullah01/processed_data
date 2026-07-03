@@ -1,0 +1,154 @@
+{
+    "include/fluent-bit/flb_mem.h": {
+        "entities": [
+            "function_flb_fuzz_get_probability"
+        ],
+        "lines": [
+            54
+        ]
+    },
+    "tests/internal/fuzzers/config_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            320
+        ]
+    },
+    "tests/internal/fuzzers/config_map_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            155
+        ]
+    },
+    "tests/internal/fuzzers/config_random_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            24
+        ]
+    },
+    "tests/internal/fuzzers/engine_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerInitialize"
+        ],
+        "lines": [
+            121
+        ]
+    },
+    "tests/internal/fuzzers/filter_stdout_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            27
+        ]
+    },
+    "tests/internal/fuzzers/flb_json_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            24
+        ]
+    },
+    "tests/internal/fuzzers/http_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            14
+        ]
+    },
+    "tests/internal/fuzzers/msgpack_parse_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            4
+        ]
+    },
+    "tests/internal/fuzzers/msgpack_to_gelf_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            4
+        ]
+    },
+    "tests/internal/fuzzers/multiline_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            132
+        ]
+    },
+    "tests/internal/fuzzers/pack_json_state_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            6
+        ]
+    },
+    "tests/internal/fuzzers/parse_json_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            24
+        ]
+    },
+    "tests/internal/fuzzers/parse_logfmt_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            11
+        ]
+    },
+    "tests/internal/fuzzers/parse_ltsv_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            11
+        ]
+    },
+    "tests/internal/fuzzers/parser_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            42
+        ]
+    },
+    "tests/internal/fuzzers/record_ac_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            22
+        ]
+    },
+    "tests/internal/fuzzers/signv4_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            19
+        ]
+    },
+    "tests/internal/fuzzers/strp_fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            19
+        ]
+    }
+}

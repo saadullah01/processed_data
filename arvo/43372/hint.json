@@ -1,0 +1,16 @@
+{
+    "opcodes/i386-dis.c": {
+        "entities": [
+            "function_OP_VEX",
+            "function_get_sib",
+            "struct_instr_info",
+            "function_OP_E_memory"
+        ],
+        "lines": [
+            9282,
+            13147,
+            142,
+            11287
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+Project: yara
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Comment 1:
+Project: yara
+Fuzzer: libFuzzer_yara_pe_fuzzer
+Fuzz target binary: pe_fuzzer
+Job Type: libfuzzer_asan_yara
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x61d000001224
+Crash State:
+  wide_string_fits_in_pe
+  pe_parse_version_info
+  pe_collect_resources
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_yara&range=201710270451:201710280453
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5211130361282560
+
+Comment 2:
+Testcase 5211130361282560 is a top crash on ClusterFuzz for linux platform. Please prioritize fixing this crash.
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201710290703:201710300450.
+
+Project: yara
+Fuzzer: libFuzzer_yara_pe_fuzzer
+Fuzz target binary: pe_fuzzer
+Job Type: libfuzzer_asan_yara
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x61d000001224
+Crash State:
+  wide_string_fits_in_pe
+  pe_parse_version_info
+  pe_collect_resources
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_yara&range=201710270451:201710280453
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_yara&range=201710290703:201710300450
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5211130361282560
+
+Comment 4:
+ClusterFuzz testcase 5211130361282560 is verified as fixed, so closing issue as verified.
+
+Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.

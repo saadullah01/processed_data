@@ -1,0 +1,17 @@
+{
+    "src/tag.c": {
+        "entities": [
+            "function_tag_parse"
+        ],
+        "lines": [
+            138,
+            70
+        ]
+    },
+    "tests/object/tag/parse.c": {
+        "entities": [],
+        "lines": [
+            198
+        ]
+    }
+}

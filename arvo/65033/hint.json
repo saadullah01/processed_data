@@ -1,0 +1,11 @@
+{
+    "parser.c": {
+        "entities": [
+            "function_xmlParseConditionalSections"
+        ],
+        "lines": [
+            6793,
+            6804
+        ]
+    }
+}

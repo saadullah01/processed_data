@@ -1,0 +1,26 @@
+Project: glib
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 5
+Severity: Medium
+
+Project: glib
+Fuzzing Engine: afl
+Fuzz Target: fuzz_uri_parse
+Job Type: afl_asan_glib
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 5
+Crash Address: 0x602000000134
+Crash State:
+  g_string_insert_len
+  g_string_append_len
+  _uri_encoder
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fixed in https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1669
+
+ClusterFuzz testcase 4902921962782720 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_glib&range=202009300622:202010010618

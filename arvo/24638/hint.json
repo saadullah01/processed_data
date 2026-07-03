@@ -1,0 +1,10 @@
+{
+    "bfd/vms-lib.c": {
+        "entities": [
+            "function_vms_traverse_index"
+        ],
+        "lines": [
+            245
+        ]
+    }
+}

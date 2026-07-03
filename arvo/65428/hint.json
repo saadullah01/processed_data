@@ -1,0 +1,12 @@
+{
+    "src/NetworkInterface.cpp": {
+        "entities": [
+            "method_NetworkInterface::processPacket",
+            "function_NetworkInterface::processPacket"
+        ],
+        "lines": [
+            2160,
+            2094
+        ]
+    }
+}

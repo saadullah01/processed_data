@@ -1,0 +1,10 @@
+{
+    "src/flac/main.c": {
+        "entities": [
+            "function_decode_file"
+        ],
+        "lines": [
+            2205
+        ]
+    }
+}

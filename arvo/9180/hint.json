@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decoders/ArwDecoder.cpp": {
+        "entities": [
+            "method_ArwDecoder::GetWB"
+        ],
+        "lines": [
+            418
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "librpc/idl/drsblobs.idl": {
+        "entities": [
+            "struct_schedule"
+        ],
+        "lines": [
+            157
+        ]
+    }
+}

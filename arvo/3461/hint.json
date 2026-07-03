@@ -1,0 +1,20 @@
+{
+    "src/librawspeed/decoders/NefDecoder.cpp": {
+        "entities": [
+            "function_NefDecoder::decodeRawInternal"
+        ],
+        "lines": [
+            107
+        ]
+    },
+    "src/librawspeed/decompressors/NikonDecompressor.cpp": {
+        "entities": [
+            "function_NikonDecompressor::decompress",
+            "method_NikonDecompressor::decompress"
+        ],
+        "lines": [
+            171,
+            149
+        ]
+    }
+}

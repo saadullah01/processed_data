@@ -1,0 +1,10 @@
+{
+    "src/lib/libdwarf/dwarf_debuglink.c": {
+        "entities": [
+            "function_is_full_path"
+        ],
+        "lines": [
+            75
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/gc.c": {
+        "entities": [
+            "function_mrb_field_write_barrier"
+        ],
+        "lines": [
+            1349
+        ]
+    }
+}

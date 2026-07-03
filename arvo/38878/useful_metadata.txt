@@ -1,0 +1,21 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+Crash Address: 0x616000004bec
+Crash State:
+  hb_resolve_overflows
+  _repack
+  hb_subset_or_fail
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5127321313476608 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

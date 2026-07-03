@@ -1,0 +1,10 @@
+{
+    "bfd/elfcode.h": {
+        "entities": [
+            "function_elf_object_p"
+        ],
+        "lines": [
+            518
+        ]
+    }
+}

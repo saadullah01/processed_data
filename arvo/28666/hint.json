@@ -1,0 +1,19 @@
+{
+    "ext/standard/array.c": {
+        "entities": [
+            "function_PHP_FUNCTION(range)",
+            "function_range"
+        ],
+        "lines": [
+            2756,
+            2773
+        ]
+    },
+    "ext/standard/tests/array/range_errors.phpt": {
+        "entities": [],
+        "lines": [
+            97,
+            47
+        ]
+    }
+}

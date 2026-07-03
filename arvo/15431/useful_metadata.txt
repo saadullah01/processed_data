@@ -1,0 +1,13 @@
+Project: libarchive
+Fuzzer: libFuzzer_libarchive_fuzzer
+Fuzz target binary: libarchive_fuzzer
+Job Type: libfuzzer_asan_libarchive
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x7f0b1d3ff800
+Crash State:
+  run_arm_filter
+  run_filter
+  apply_filters
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

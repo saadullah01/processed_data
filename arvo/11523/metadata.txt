@@ -1,0 +1,144 @@
+Project: aom
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5630956925353984
+
+Project: libaom
+Fuzzer: libFuzzer_libaom_av1_dec_fuzzer
+Fuzz target binary: av1_dec_fuzzer
+Job Type: libfuzzer_asan_libaom
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x7f69291a30a7
+Crash State:
+  read_uncompressed_header
+  av1_decode_frame_headers_and_setup
+  aom_decode_frame_from_obus
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libaom&range=201811210326:201811220321
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5630956925353984
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer av1_dec_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """Jack, David: Could you please take a look at the new heap-buffer-overflow bug? This bug was introduced by Jack's fix for the null pointer dereference in show_existing_frame_reset():
+
+commit d3e632565ea573f55dfc4c07b557a87ba91b11cb
+Author: Jack Haughton <jack.haughton@argondesign.com>
+Date: Thu Nov 22 01:15:54 2018
+
+Fix misinterpretation of existing_frame_idx
+
+BUG:  aomedia:2255 
+Change-Id: I307ec9563943c7384a64b56e30c8e15904267501
+
+https://aomedia-review.googlesource.com/c/aom/+/75602"""
+
+-- Comment 4: """Hello, thanks for bringing this to our attention - I'm on it now. Apologies for the regression.
+
+Thanks, Jack"""
+
+-- Comment 5: """I have pushed a fix for this bug at https://aomedia-review.googlesource.com/c/aom/+/75724, which is awaiting code review. The problem was that ref_frame_map is not valid at that point in the decode cycle - the required information is stored in next_ref_frame_map at that point.
+
+Thanks
+Jack"""
+
+-- Comment 6: """The following revision refers to this bug:
+  https://aomedia.googlesource.com/aom/+/0ad5c625be27d7a3622dae95e9afe5e66b112d46
+
+commit 0ad5c625be27d7a3622dae95e9afe5e66b112d46
+Author: Jack Haughton <jack.haughton@argondesign.com>
+Date: Mon Nov 26 17:10:37 2018
+
+Set up frame context using next_ref_frame_map
+
+BUG: oss-fuzz:11523
+Change-Id: Idec84e85f39fa6e2205853763002898b6ab1b410
+
+[modify] https://crrev.com/0ad5c625be27d7a3622dae95e9afe5e66b112d46/av1/decoder/decodeframe.c
+"""
+
+-- Comment 7: """ClusterFuzz has detected this issue as fixed in range 201811260322:201811270321.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5630956925353984
+
+Project: libaom
+Fuzzer: libFuzzer_libaom_av1_dec_fuzzer
+Fuzz target binary: av1_dec_fuzzer
+Job Type: libfuzzer_asan_libaom
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x7f69291a30a7
+Crash State:
+  read_uncompressed_header
+  av1_decode_frame_headers_and_setup
+  aom_decode_frame_from_obus
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libaom&range=201811210326:201811220321
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libaom&range=201811260322:201811270321
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5630956925353984
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 8: """ClusterFuzz testcase 5630956925353984 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 9: """The following revision refers to this bug:
+  https://aomedia.googlesource.com/aom/+/4a400ac20dd361b52e3e0637024ec89312e8c36b
+
+commit 4a400ac20dd361b52e3e0637024ec89312e8c36b
+Author: Wan-Teh Chang <wtc@google.com>
+Date: Tue Nov 27 17:54:30 2018
+
+Add invalid file tests for three oss-fuzz bugs.
+
+BUG=oss-fuzz:11477,oss-fuzz:11479,oss-fuzz:11523
+
+Change-Id: I28c4b8555595e0d21a611e654135d5e689a63d4f
+
+[modify] https://crrev.com/4a400ac20dd361b52e3e0637024ec89312e8c36b/test/test_data_util.cmake
+[modify] https://crrev.com/4a400ac20dd361b52e3e0637024ec89312e8c36b/test/invalid_file_test.cc
+[modify] https://crrev.com/4a400ac20dd361b52e3e0637024ec89312e8c36b/test/test-data.sha1
+"""
+
+-- Comment 10: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

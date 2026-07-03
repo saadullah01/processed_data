@@ -1,0 +1,10 @@
+{
+    "opcodes/csky-dis.c": {
+        "entities": [
+            "function_csky_output_operand"
+        ],
+        "lines": [
+            301
+        ]
+    }
+}

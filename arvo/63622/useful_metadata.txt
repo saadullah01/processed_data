@@ -1,0 +1,23 @@
+Project: igraph
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: igraph
+Fuzzing Engine: libFuzzer
+Fuzz Target: read_pajek
+Job Type: libfuzzer_asan_i386_igraph
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x010100f1
+Crash State:
+  igraph_strvector_set_len
+  igraph_strvector_set
+  add_string_attribute
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4810244435607552 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

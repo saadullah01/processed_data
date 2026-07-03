@@ -1,0 +1,19 @@
+Project: wolfssl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-sp-math-all
+Job Type: libfuzzer_asan_wolfssl
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x60b000000160
+Crash State:
+  sp_tohex
+  cryptofuzz::module::wolfCrypt_bignum::Bignum::ToDecString
+  cryptofuzz::module::wolfCrypt_bignum::Bignum::ToComponentBignum
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

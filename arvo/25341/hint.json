@@ -1,0 +1,12 @@
+{
+    "code/AssetLib/MDL/MDLMaterialLoader.cpp": {
+        "entities": [
+            "method_MDLImporter::ParseTextureColorData",
+            "method_MDLImporter::CreateTextureARGB8_3DGS_MDL3"
+        ],
+        "lines": [
+            217,
+            132
+        ]
+    }
+}

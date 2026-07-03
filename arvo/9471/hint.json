@@ -1,0 +1,60 @@
+{
+    "gdal/frmts/rmf/rmfdataset.cpp": {
+        "entities": [
+            "method_RMFRasterBand::IWriteBlock",
+            "method_RMFRasterBand::IRasterIO",
+            "function_RMFRasterBand::IRasterIO",
+            "function_RMFDataset::SetupCompression",
+            "function_RMFDataset::~RMFDataset",
+            "method_RMFDataset::RMFDataset",
+            "function_RMFDataset::RMFDataset",
+            "method_RMFDataset::Create",
+            "function_RMFDataset::Open",
+            "constructor_RMFDataset::RMFDataset",
+            "function_RMFRasterBand::ReadBuffer",
+            "function_RMFDataset::Create",
+            "method_RMFDataset::~RMFDataset",
+            "method_RMFRasterBand::IReadBlock"
+        ],
+        "lines": [
+            609,
+            1473,
+            899,
+            676,
+            266,
+            651,
+            940,
+            2989,
+            624,
+            914,
+            149,
+            853,
+            2234,
+            220,
+            2685
+        ]
+    },
+    "gdal/frmts/rmf/rmfdataset.h": {
+        "entities": [
+            "class_RMFDataset",
+            "class_RMFRasterBand"
+        ],
+        "lines": [
+            330,
+            196,
+            311,
+            263
+        ]
+    },
+    "gdal/frmts/rmf/rmfjpeg.cpp": {
+        "entities": [
+            "function_RMFDataset::JPEGCompress",
+            "function_RMFDataset::JPEGDecompress",
+            "method_RMFDataset::JPEGDecompress"
+        ],
+        "lines": [
+            154,
+            100
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x62a00010712c
+Crash State:
+  mem_mono_copy_mono
+  mem_mapped4_copy_color
+  tile_clip_copy_color
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Fix committed upstream
+
+ClusterFuzz testcase 5202762432905216 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

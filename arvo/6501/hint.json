@@ -1,0 +1,10 @@
+{
+    "src/core/SkPath_serial.cpp": {
+        "entities": [
+            "function_SkPath::readFromMemory_EQ4"
+        ],
+        "lines": [
+            222
+        ]
+    }
+}

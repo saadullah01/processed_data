@@ -1,0 +1,23 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_card
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Address: 0x7ffc7f9654d0
+Crash State:
+  sc_asn1_read_tag
+  sc_asn1_find_tag
+  cardos_list_files
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5367069203365888 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

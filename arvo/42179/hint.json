@@ -1,0 +1,10 @@
+{
+    "bfd/elf64-bpf.c": {
+        "entities": [
+            "function_bpf_elf_generic_reloc"
+        ],
+        "lines": [
+            600
+        ]
+    }
+}

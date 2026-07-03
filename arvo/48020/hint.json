@@ -1,0 +1,18 @@
+{
+    "example/reader_util.c": {
+        "entities": [
+            "function_process_ndpi_collected_info"
+        ],
+        "lines": [
+            1157
+        ]
+    },
+    "src/include/ndpi_typedefs.h": {
+        "entities": [
+            "struct_ndpi_flow_struct"
+        ],
+        "lines": [
+            1276
+        ]
+    }
+}

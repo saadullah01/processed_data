@@ -1,0 +1,10 @@
+{
+    "bfd/i386msdos.c": {
+        "entities": [
+            "function_msdos_object_p"
+        ],
+        "lines": [
+            45
+        ]
+    }
+}

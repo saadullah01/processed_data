@@ -1,0 +1,35 @@
+{
+    "src/librepgp/stream-dump.cpp": {
+        "entities": [
+            "function_obj_add_s2k_json",
+            "function_dst_print_s2k"
+        ],
+        "lines": [
+            1420,
+            437
+        ]
+    },
+    "src/librepgp/stream-packet.cpp": {
+        "entities": [
+            "function_get_packet_body_s2k"
+        ],
+        "lines": [
+            619
+        ]
+    },
+    "src/tests/ffi.cpp": {
+        "entities": [
+            "function_test_ffi_key_import_gpg_s2k"
+        ],
+        "lines": [
+            5307,
+            9511
+        ]
+    },
+    "src/tests/rnp_tests.h": {
+        "entities": [],
+        "lines": [
+            235
+        ]
+    }
+}

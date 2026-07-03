@@ -1,0 +1,11 @@
+{
+    "pdf/pdf_font1.c": {
+        "entities": [
+            "function_pdfi_t1_decode_pfb"
+        ],
+        "lines": [
+            373,
+            391
+        ]
+    }
+}

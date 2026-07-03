@@ -1,0 +1,10 @@
+{
+    "src/operation/overlayng/OverlayNG.cpp": {
+        "entities": [
+            "method_OverlayNG::computeEdgeOverlay"
+        ],
+        "lines": [
+            207
+        ]
+    }
+}

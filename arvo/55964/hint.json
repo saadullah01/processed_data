@@ -1,0 +1,10 @@
+{
+    "decoder/svc/isvcd_nal_parse.c": {
+        "entities": [
+            "function_isvcd_pic_reset_ctxt"
+        ],
+        "lines": [
+            381
+        ]
+    }
+}

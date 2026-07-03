@@ -1,0 +1,22 @@
+{
+    "libyarmodules/macho/macho.c": {
+        "entities": [
+            "function_macho_handle_unixthread",
+            "function_macho_handle_segment",
+            "function_macho_handle_main",
+            "function_macho_parse_file",
+            "function_macho_handle_segment_64"
+        ],
+        "lines": [
+            352,
+            323,
+            230,
+            587,
+            209,
+            625,
+            436,
+            468,
+            381
+        ]
+    }
+}

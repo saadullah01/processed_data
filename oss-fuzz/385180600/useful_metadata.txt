@@ -1,0 +1,35 @@
+openthread:ot-ncp-hdlc-received-fuzzer: Stack-buffer-overflow in ot::MeshCoP::Dataset::ReadTimestamp
+
+Project: openthread
+Fuzzing Engine: libFuzzer
+Fuzz Target: ot-ncp-hdlc-received-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x78be91c06124
+Crash State:
+  ot::MeshCoP::Dataset::ReadTimestamp
+  ot::MeshCoP::DatasetManager::LocalSave
+  ot::MeshCoP::DatasetManager::SaveLocal
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: range=202408050604:202408060614
+
+Reproducer Testcase ID: 5123637492908032
+
+Comment (verification):
+  ClusterFuzz testcase 5123637492908032 is verified as fixed in range=202412260602:202412270630
+
+Comment:
+  This bug has been fixed. It has been opened to the public.
+
+Issue metadata:
+  Type: Vulnerability
+  Priority: P2
+  Severity: S2
+  Status: Fixed (Verified)
+  Project: openthread

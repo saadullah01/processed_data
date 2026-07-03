@@ -1,0 +1,91 @@
+Project: wpantund
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=6050841338314752
+
+Project: wpantund
+Fuzzer: afl_wpantund_wpantund-fuzz
+Fuzz target binary: wpantund-fuzz
+Job Type: afl_asan_wpantund
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x00000000f93e
+Crash State:
+  spinel_datatype_vunpack_
+  spinel_datatype_unpack
+  nl::wpantund::SpinelNCPInstance::handle_ncp_spinel_value_inserted
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_wpantund&range=201712140631:201712150632
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6050841338314752
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """This is pretty much the exact same backtrace as <https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=4964>, except with a non-NULL pointer.
+
+The specific line indicated in the backtrace doesn't really make any sense."""
+
+-- Comment 3: """First attempt at reproducing this didn't yield any results. Will try again later."""
+
+-- Comment 4: """ClusterFuzz has detected this issue as fixed in range 201803080627:201803090624.
+
+Detailed report: https://oss-fuzz.com/testcase?key=6050841338314752
+
+Project: wpantund
+Fuzzer: afl_wpantund_wpantund-fuzz
+Fuzz target binary: wpantund-fuzz
+Job Type: afl_asan_wpantund
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x00000000f93e
+Crash State:
+  spinel_datatype_vunpack_
+  spinel_datatype_unpack
+  nl::wpantund::SpinelNCPInstance::handle_ncp_spinel_value_inserted
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_wpantund&range=201712140631:201712150632
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_wpantund&range=201803080627:201803090624
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6050841338314752
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 5: """ClusterFuzz testcase 6050841338314752 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

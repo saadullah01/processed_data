@@ -1,0 +1,12 @@
+{
+    "pdf/pdf_image.c": {
+        "entities": [
+            "function_pdfi_Do"
+        ],
+        "lines": [
+            2638,
+            2631,
+            2583
+        ]
+    }
+}

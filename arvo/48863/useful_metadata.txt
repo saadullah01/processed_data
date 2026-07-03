@@ -1,0 +1,15 @@
+Project: libpcap
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pcap
+Job Type: libfuzzer_asan_libpcap
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60200000009f
+Crash State:
+  fixup_pcap_pkthdr
+  pcap_next_packet
+  pcap_offline_read
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_pcap from making much progress. Fixing this will allow more bugs to be found.

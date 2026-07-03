@@ -1,0 +1,16 @@
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer-wolfssl-rsa
+Job Type: libfuzzer_asan_wolfssl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x60d000000337
+Crash State:
+  RsaPad_PSS
+  wc_RsaPad_ex
+  RsaPublicEncryptEx
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

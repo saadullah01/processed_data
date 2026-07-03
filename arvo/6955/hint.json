@@ -1,0 +1,10 @@
+{
+    "src/core/SkDevice.cpp": {
+        "entities": [
+            "method_SkBaseDevice::drawTextRSXform"
+        ],
+        "lines": [
+            511
+        ]
+    }
+}

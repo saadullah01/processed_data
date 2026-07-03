@@ -1,0 +1,22 @@
+Project: graphicsmagick
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: graphicsmagick
+Fuzzing Engine: libFuzzer
+Fuzz Target: coder_SFW_fuzzer
+Job Type: libfuzzer_asan_i386_graphicsmagick
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0xf26017ae
+Crash State:
+  GenerateEXIFAttribute
+  GetImageAttribute
+  ReadJPEGImage
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,53 @@
+{
+    "mip/mip.c": {
+        "entities": [
+            "function_rx_icmp"
+        ],
+        "lines": [
+            453
+        ]
+    },
+    "mongoose.c": {
+        "entities": [
+            "function_mg_base64_decode",
+            "function_rx_icmp",
+            "function_printdirentry",
+            "function_mg_http_parse"
+        ],
+        "lines": [
+            90,
+            6715,
+            1902,
+            1542
+        ]
+    },
+    "src/base64.c": {
+        "entities": [
+            "function_mg_base64_decode"
+        ],
+        "lines": [
+            1,
+            66
+        ]
+    },
+    "src/http.c": {
+        "entities": [
+            "function_printdirentry",
+            "function_mg_http_parse"
+        ],
+        "lines": [
+            1,
+            202,
+            562
+        ]
+    },
+    "test/fuzz.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            58,
+            85
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+Project: selinux
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: selinux
+Fuzzing Engine: libFuzzer
+Fuzz Target: binpolicy-fuzzer
+Job Type: libfuzzer_msan_selinux
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  validate_datum_array_gaps
+  validate_policydb
+  policydb_read
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer binpolicy-fuzzer from making much progress. Fixing this will allow more bugs to be found.

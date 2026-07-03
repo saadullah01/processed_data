@@ -1,0 +1,32 @@
+Issue: ffmpeg:ffmpeg_SWS_fuzzer: Use-of-uninitialized-value in hScale16To15_c
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_SWS_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  hScale16To15_c
+  lum_h_scale
+  ff_swscale
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Sanity/Verification:
+  ClusterFuzz testcase 5402482399838208 is verified as fixed.
+  This bug has been fixed. It has been opened to the public.
+
+Issue metadata:
+  Type: Vulnerability
+  Priority: P2
+  Severity: S2
+  Status: Fixed (Verified)
+  Access: Default access
+  Disclosure: Feb 7, 2025
+  Project: ffmpeg
+  Reported: Nov 9, 2024

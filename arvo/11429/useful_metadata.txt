@@ -1,0 +1,18 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_VC5DecompressorFuzzer
+Fuzz target binary: VC5DecompressorFuzzer
+Job Type: libfuzzer_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 2
+Crash Address: 0x61e0000022f8
+Crash State:
+  rawspeed::VC5Decompressor::Wavelet::HighPassBand::decode
+  rawspeed::VC5Decompressor::decode
+  VC5Decompressor.cpp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201811180252:201811190250.

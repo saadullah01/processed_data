@@ -1,0 +1,36 @@
+{
+    "base/gdevp14.c": {
+        "entities": [
+            "function_pdf14_pop_transparency_group",
+            "function_pdf14_tile_pattern_fill"
+        ],
+        "lines": [
+            5192,
+            5180,
+            1614
+        ]
+    },
+    "base/gsptype1.c": {
+        "entities": [
+            "function_gx_dc_pattern_write",
+            "function_gx_dc_pattern_read"
+        ],
+        "lines": [
+            1960,
+            1972,
+            2286
+        ]
+    },
+    "base/gxpcmap.c": {
+        "entities": [
+            "function_gx_pattern_load",
+            "function_gx_pattern_cache_add_entry",
+            "function_gx_pattern_cache_free_entry"
+        ],
+        "lines": [
+            1192,
+            947,
+            1524
+        ]
+    }
+}

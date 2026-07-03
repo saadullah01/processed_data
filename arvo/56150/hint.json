@@ -1,0 +1,13 @@
+{
+    "Userland/Libraries/LibGfx/JPEGLoader.cpp": {
+        "entities": [
+            "struct_Component",
+            "function_read_start_of_scan"
+        ],
+        "lines": [
+            554,
+            547,
+            135
+        ]
+    }
+}

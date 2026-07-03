@@ -1,0 +1,10 @@
+{
+    "src/tools/pkcs15-tool.c": {
+        "entities": [
+            "function_change_pin"
+        ],
+        "lines": [
+            1834
+        ]
+    }
+}

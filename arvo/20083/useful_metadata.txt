@@ -1,0 +1,15 @@
+Project: samba
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_ndr_drsuapi_TYPE_OUT
+Job Type: libfuzzer_asan_samba
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6040000002fd
+Crash State:
+  lzxpress_decompress
+  ndr_pull_compression_xpress_chunk
+  ndr_pull_compression_start
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+BUG: 14236
+ClusterFuzz testcase 5724999789051904 is verified as fixed

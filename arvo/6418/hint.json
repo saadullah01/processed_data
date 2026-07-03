@@ -1,0 +1,19 @@
+{
+    "epan/osi-utils.c": {
+        "entities": [
+            "function_print_address_prefix_buf",
+            "function_print_nsap_net_buf"
+        ],
+        "lines": [
+            66,
+            180,
+            189
+        ]
+    },
+    "epan/osi-utils.h": {
+        "entities": [],
+        "lines": [
+            28
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+Detailed report: https://oss-fuzz.com/testcase?key=5146983567196160
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_PNG_fuzzer
+Fuzz target binary: coder_PNG_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  ReadPNGImage
+  ReadImage
+  BlobToImage
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_graphicsmagick&range=201805110540:201805251618
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5146983567196160
+Issue manually filed by: alex.gaynor
+
+ClusterFuzz has detected this issue as fixed in range 201806170559:201806180557.
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_graphicsmagick&range=201806170559:201806180557
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5146983567196160
+
+ClusterFuzz testcase 5146983567196160 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

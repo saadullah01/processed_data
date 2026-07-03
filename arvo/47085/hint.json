@@ -1,0 +1,10 @@
+{
+    "src/contrib/string.c": {
+        "entities": [
+            "function_memzero"
+        ],
+        "lines": [
+            145
+        ]
+    }
+}

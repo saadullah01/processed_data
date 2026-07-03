@@ -1,0 +1,10 @@
+{
+    "src/core/coap/coap_message.cpp": {
+        "entities": [
+            "method_Message::AppendUintOption"
+        ],
+        "lines": [
+            200
+        ]
+    }
+}

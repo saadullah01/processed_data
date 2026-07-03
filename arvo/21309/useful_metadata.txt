@@ -1,0 +1,22 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_ndpi_reader
+Job Type: libfuzzer_msan_ndpi
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ndpi_strdup
+  processClientServerHello
+  processTLSBlock
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

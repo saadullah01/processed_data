@@ -1,0 +1,10 @@
+{
+    "ssl/t1_lib.c": {
+        "entities": [
+            "function_tls_decrypt_ticket"
+        ],
+        "lines": [
+            1384
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+Project: leptonica
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: pix4_fuzzer
+Job Type: libfuzzer_msan_leptonica
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  pixGetCmapHistogramInRect
+  pix4_fuzzer.cc
+  pix4_fuzzer.cc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Fixed a bug in the fuzzer -- it used a garbage address for an input pix.

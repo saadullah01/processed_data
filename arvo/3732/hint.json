@@ -1,0 +1,12 @@
+{
+    "src/librawspeed/decompressors/Cr2Decompressor.cpp": {
+        "entities": [
+            "function_Cr2Decompressor::decodeN_X_Y",
+            "method_Cr2Decompressor::decodeN_X_Y"
+        ],
+        "lines": [
+            138,
+            27
+        ]
+    }
+}

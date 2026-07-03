@@ -1,0 +1,26 @@
+libheif:file_fuzzer: Heap-buffer-overflow in MaskImageCodec::decode_mask_image
+
+Project: libheif
+Fuzzing Engine: honggfuzz
+Fuzz Target: file_fuzzer
+Job Type: honggfuzz_asan_libheif
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x52900001d20f
+Crash State:
+  MaskImageCodec::decode_mask_image
+  HeifContext::decode_image_planar
+  HeifContext::decode_image_user
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5211861302181888 is verified as fixed
+
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Project: libheif

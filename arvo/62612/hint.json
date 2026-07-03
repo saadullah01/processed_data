@@ -1,0 +1,14 @@
+{
+    "bfd/compress.c": {
+        "entities": [
+            "function_bfd_compress_section",
+            "function_bfd_init_section_compress_status",
+            "function_bfd_compress_section_contents"
+        ],
+        "lines": [
+            506,
+            1058,
+            1116
+        ]
+    }
+}

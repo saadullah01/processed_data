@@ -1,0 +1,10 @@
+{
+    "mapfile.c": {
+        "entities": [
+            "function_loadLayer"
+        ],
+        "lines": [
+            4021
+        ]
+    }
+}

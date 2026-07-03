@@ -1,0 +1,12 @@
+{
+    "binutils/objdump.c": {
+        "entities": [
+            "function_slurp_symtab",
+            "function_slurp_dynamic_symtab"
+        ],
+        "lines": [
+            1025,
+            994
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "src/glat.cc": {
+        "entities": [
+            "function_OpenTypeGLAT_v3::Parse"
+        ],
+        "lines": [
+            214
+        ]
+    },
+    "src/silf.cc": {
+        "entities": [
+            "method_OpenTypeSILF::Parse"
+        ],
+        "lines": [
+            49
+        ]
+    }
+}

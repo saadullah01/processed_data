@@ -1,0 +1,10 @@
+{
+    "cram/cram_encode.c": {
+        "entities": [
+            "function_process_one_read"
+        ],
+        "lines": [
+            3401
+        ]
+    }
+}

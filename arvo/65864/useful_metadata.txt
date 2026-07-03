@@ -1,0 +1,36 @@
+Project: upx
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Comment 1:
+Project: upx
+Fuzzing Engine: libFuzzer
+Fuzz Target: test_packed_file_fuzzer
+Job Type: libfuzzer_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x7b01312ff39c
+Crash State:
+  ucl_nrv2e_decompress_safe_le32
+  upx_ucl_decompress
+  upx_decompress
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 5400798724947968
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer test_packed_file_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+Fixed 2767ec54e11ac516e4a2233f183c61843d9789f0 on branch devel.
+https://github.com/upx/upx/issues/781
+
+Comment 4:
+ClusterFuzz testcase 5400798724947968 is verified as fixed
+
+Comment 5:
+This bug has been fixed. It has been opened to the public.

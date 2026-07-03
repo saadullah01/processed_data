@@ -1,0 +1,16 @@
+Project: libredwg
+Fuzzing Engine: honggfuzz
+Fuzz Target: llvmfuzz
+Job Type: honggfuzz_asan_libredwg
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x609000002880
+Crash State:
+  dxf_blocks_read
+  dwg_read_dxf
+  llvmfuzz.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Fixed together with #32755
+ClusterFuzz testcase 6304517726535680 is verified as fixed
+This bug has been fixed. It has been opened to the public.

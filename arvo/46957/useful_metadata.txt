@@ -1,0 +1,15 @@
+Project: quickjs
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_compile
+Job Type: libfuzzer_msan_quickjs
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  build_backtrace
+  JS_ThrowError2
+  JS_ThrowInternalError
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_compile from making much progress. Fixing this will allow more bugs to be found.

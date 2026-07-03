@@ -1,0 +1,18 @@
+Project: gpac
+Fuzzing Engine: afl
+Fuzz Target: fuzz_probe_analyze
+Job Type: afl_asan_gpac
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x000001af8aac
+Crash State:
+  gf_mp3_bit_rate
+  mpeg2ps_init
+  m2psdmx_process
+Sanitizer: address (ASAN)
+Regressed: 202312170603:202312200621
+Reproducer Testcase id: 4759642446036992
+
+ClusterFuzz testcase 4759642446036992 is verified as fixed in range 202401300626:202401310615
+
+This bug has been fixed. It has been opened to the public.

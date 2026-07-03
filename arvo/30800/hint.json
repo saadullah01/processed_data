@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-iasecc.c": {
+        "entities": [
+            "function_iasecc_process_fci"
+        ],
+        "lines": [
+            1171
+        ]
+    }
+}

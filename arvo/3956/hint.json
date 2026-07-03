@@ -1,0 +1,10 @@
+{
+    "lib/http2.c": {
+        "entities": [
+            "function_Curl_http2_request_upgrade"
+        ],
+        "lines": [
+            1183
+        ]
+    }
+}

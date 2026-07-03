@@ -1,0 +1,33 @@
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_psd_fuzzer
+Fuzz target binary: encoder_psd_fuzzer
+Job Type: libfuzzer_msan_imagemagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ScaleQuantumToShort
+  ExportAlphaQuantum
+  ExportQuantumPixels
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201801130553:201801150014
+Reproducer Testcase: 5934130886868992
+
+ClusterFuzz has detected this issue as fixed in range 201803040535:201803050535
+Project: imagemagick
+Fuzzer: libFuzzer_imagemagick_encoder_psd_fuzzer
+Fuzz target binary: encoder_psd_fuzzer
+Job Type: libfuzzer_msan_imagemagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ScaleQuantumToShort
+  ExportAlphaQuantum
+  ExportQuantumPixels
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201801130553:201801150014
+Fixed: 201803040535:201803050535
+Reproducer Testcase: 5934130886868992

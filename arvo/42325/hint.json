@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_repair.c": {
+        "entities": [
+            "function_pdfi_repair_file"
+        ],
+        "lines": [
+            436
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_VP7_fuzzer: Use-of-uninitialized-value in put_vp8_epel8_h6v6_c
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VP7_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  put_vp8_epel8_h6v6_c
+  vp7_decode_mb_row_no_filter
+  vp7_decode_mb_row_sliced
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 6511762726256640 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: ffmpeg

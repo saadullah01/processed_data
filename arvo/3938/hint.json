@@ -1,0 +1,11 @@
+{
+    "tests/oss-fuzz/rules_fuzzer.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            41,
+            51
+        ]
+    }
+}

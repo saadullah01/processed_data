@@ -1,0 +1,10 @@
+{
+    "libavcodec/webp.c": {
+        "entities": [
+            "function_decode_entropy_coded_image"
+        ],
+        "lines": [
+            704
+        ]
+    }
+}

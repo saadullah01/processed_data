@@ -1,0 +1,10 @@
+{
+    "binutils/dwarf.c": {
+        "entities": [
+            "function_display_debug_aranges"
+        ],
+        "lines": [
+            7174
+        ]
+    }
+}

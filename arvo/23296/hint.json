@@ -1,0 +1,22 @@
+{
+    "binutils/readelf.c": {
+        "entities": [
+            "function_process_mips_specific"
+        ],
+        "lines": [
+            16566
+        ]
+    },
+    "include/elf/mips.h": {
+        "entities": [
+            "struct_Elf32_RegInfo",
+            "struct_Elf64_Internal_RegInfo",
+            "struct_Elf_Internal_Options"
+        ],
+        "lines": [
+            1074,
+            1004,
+            558
+        ]
+    }
+}

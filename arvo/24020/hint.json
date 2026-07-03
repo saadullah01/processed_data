@@ -1,0 +1,10 @@
+{
+    "binutils/readelf.c": {
+        "entities": [
+            "function_slurp_hppa_unwind_table"
+        ],
+        "lines": [
+            8206
+        ]
+    }
+}

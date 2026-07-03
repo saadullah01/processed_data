@@ -1,0 +1,12 @@
+{
+    "lib/jxl/dec_reconstruct.cc": {
+        "entities": [
+            "function_DoYCbCrUpsampling"
+        ],
+        "lines": [
+            289,
+            299,
+            270
+        ]
+    }
+}

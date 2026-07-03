@@ -1,0 +1,22 @@
+Project: cpython3
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Project: cpython3
+Fuzzing Engine: afl
+Fuzz Target: fuzz_ast_literal_eval
+Job Type: afl_asan_cpython3
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x6280000a7e34
+Crash State:
+  tok_get_normal_mode
+  _PyTokenizer_Get
+  _PyPegen_tokenize_full_source_to_check_for_errors
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

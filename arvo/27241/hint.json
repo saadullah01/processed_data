@@ -1,0 +1,11 @@
+{
+    "src/flb_strptime.c": {
+        "entities": [
+            "function__flb_strptime"
+        ],
+        "lines": [
+            168,
+            178
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+Project: gpac
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Fuzzing Engine: afl
+Fuzz Target: fuzz_probe_analyze
+Job Type: afl_asan_gpac
+Platform Id: linux
+Crash Address: 0x6220243094dd
+Crash State:
+  img_process
+  gf_filter_process_task
+  gf_fs_thread_proc
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 5080488060452864

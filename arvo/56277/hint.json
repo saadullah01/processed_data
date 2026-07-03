@@ -1,0 +1,12 @@
+{
+    "bfd/ecofflink.c": {
+        "entities": [
+            "function_lookup_line",
+            "function_mk_fdrtab"
+        ],
+        "lines": [
+            1723,
+            1877
+        ]
+    }
+}

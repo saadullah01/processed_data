@@ -1,0 +1,10 @@
+{
+    "epan/dissectors/packet-xcsl.c": {
+        "entities": [
+            "function_get_next_item"
+        ],
+        "lines": [
+            109
+        ]
+    }
+}

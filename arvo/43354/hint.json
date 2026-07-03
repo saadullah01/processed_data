@@ -1,0 +1,52 @@
+{
+    "pdf/ghostpdf.c": {
+        "entities": [
+            "variable_pdf_warning_strings"
+        ],
+        "lines": [
+            1,
+            381
+        ]
+    },
+    "pdf/ghostpdf.h": {
+        "entities": [],
+        "lines": [
+            1,
+            132
+        ]
+    },
+    "pdf/pdf_colour.c": {
+        "entities": [],
+        "lines": [
+            1,
+            2727
+        ]
+    },
+    "pdf/pdf_colour.h": {
+        "entities": [],
+        "lines": [
+            1,
+            87
+        ]
+    },
+    "pdf/pdf_int.c": {
+        "entities": [
+            "function_pdfi_run_context",
+            "function_setup_stream_DefaultSpaces"
+        ],
+        "lines": [
+            1,
+            1879,
+            1783
+        ]
+    },
+    "pdf/pdf_page.c": {
+        "entities": [
+            "function_setup_page_DefaultSpaces"
+        ],
+        "lines": [
+            1,
+            677
+        ]
+    }
+}

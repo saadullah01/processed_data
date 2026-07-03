@@ -1,0 +1,11 @@
+{
+    "bfd/pdb.c": {
+        "entities": [
+            "function_pdb_archive_p"
+        ],
+        "lines": [
+            671,
+            39
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+Project: assimp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_asan_assimp
+Platform Id: linux
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x000000004080
+Crash State:
+  Assimp::ObjFileMtlImporter::getFloatValue
+  Assimp::ObjFileMtlImporter::load
+  Assimp::ObjFileMtlImporter::ObjFileMtlImporter
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5086898182422528 is verified as fixed

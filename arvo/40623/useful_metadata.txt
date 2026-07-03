@@ -1,0 +1,16 @@
+Project: libexif
+Fuzzing Engine: afl
+Fuzz Target: exif_from_data_fuzzer
+Job Type: afl_asan_libexif
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x61d000010a89
+Crash State:
+  exif_mnote_data_canon_load
+  exif_mnote_data_load
+  interpret_maker_note
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

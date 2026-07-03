@@ -1,0 +1,23 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x7fdb69479030
+Crash State:
+  mem_true24_fill_rectangle
+  gx_dc_pure_fill_rectangle
+  gx_default_fillpage
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 4749278763941888 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

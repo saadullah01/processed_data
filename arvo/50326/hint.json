@@ -1,0 +1,20 @@
+{
+    "base/gxtype1.c": {
+        "entities": [
+            "function_gs_type1_piece_codes"
+        ],
+        "lines": [
+            1,
+            498,
+            459,
+            479
+        ]
+    },
+    "base/gxtype1.h": {
+        "entities": [],
+        "lines": [
+            1,
+            196
+        ]
+    }
+}

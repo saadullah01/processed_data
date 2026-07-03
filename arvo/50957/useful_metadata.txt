@@ -1,0 +1,23 @@
+Project: lcms
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: lcms
+Fuzzing Engine: libFuzzer
+Fuzz Target: cms_universal_transform_fuzzer
+Job Type: libfuzzer_msan_lcms
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  PackPlanarBytes
+  CachedXFORM
+  cmsDoTransform
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5304997398577152 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

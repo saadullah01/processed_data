@@ -1,0 +1,18 @@
+{
+    "fuzz/build_fuzz.sh": {
+        "entities": [],
+        "lines": [
+            43,
+            29
+        ]
+    },
+    "libfaad/specrec.c": {
+        "entities": [
+            "function_quant_to_spec"
+        ],
+        "lines": [
+            40,
+            572
+        ]
+    }
+}

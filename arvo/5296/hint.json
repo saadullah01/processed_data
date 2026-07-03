@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/common/Spline.h": {
+        "entities": [
+            "class_Spline"
+        ],
+        "lines": [
+            162
+        ]
+    }
+}

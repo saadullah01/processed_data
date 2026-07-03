@@ -1,0 +1,51 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Dynamic-stack-buffer-overflow WRITE {*}
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6108626419318784
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_disas_ext-bfd_arch_i386
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Dynamic-stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffd98be5f40
+Crash State:
+  fetch_data
+  print_insn
+  print_insn_i386
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_binutils&range=202111220600:202111230606
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6108626419318784
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz testcase 6108626419318784 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_binutils&range=202111230606:202111250603
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

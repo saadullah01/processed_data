@@ -1,0 +1,21 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pdfwrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6310000b0830
+Crash State:
+  sputs
+  gx_serialize_Indexed
+  pdf_color_space_named
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fix committed upstream

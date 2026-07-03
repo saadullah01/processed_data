@@ -1,0 +1,10 @@
+{
+    "tsk/fs/tsk_apfs.hpp": {
+        "entities": [
+            "class_APFSBtreeNode"
+        ],
+        "lines": [
+            440
+        ]
+    }
+}

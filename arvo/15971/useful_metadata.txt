@@ -1,0 +1,31 @@
+Project: openthread
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 8
+Severity: Medium
+
+-- Comment 1:
+Project: openthread
+Fuzzer: libFuzzer_openthread_ncp-uart-received-fuzzer
+Fuzz target binary: ncp-uart-received-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7f9204f9f121
+Crash State:
+  ot::NetworkData::Leader::IsStableUpdated
+  ot::NetworkData::Leader::RegisterNetworkData
+  ot::NetworkData::Leader::HandleServerData
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+-- Comment 2:
+ClusterFuzz testcase 5630599882080256 is verified as fixed
+
+-- Comment 3:
+This bug has been fixed for 30 days. It has been opened to the public.

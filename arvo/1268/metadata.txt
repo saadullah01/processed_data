@@ -1,0 +1,78 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-use-after-return READ 4
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=6172256742932480
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0x7f4b3aee69b0
+Crash State:
+  add_tagged_field
+  ieee_NUMBER_add_tagged_parameters
+  dissect_data_encap
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201704181620:201704191700
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6172256742932480
+
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz has detected this issue as fixed in range 201704231645:201704251645.
+
+Detailed report: https://oss-fuzz.com/testcase?key=6172256742932480
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0x7f4b3aee69b0
+Crash State:
+  add_tagged_field
+  ieee_NUMBER_add_tagged_parameters
+  dissect_data_encap
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201704181620:201704191700
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201704231645:201704251645
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6172256742932480
+
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 3: """ClusterFuzz testcase 6172256742932480 is verified as fixed, so closing issue.
+
+If this is incorrect, please add ClusterFuzz-Wrong label and re-open the issue."""
+
+-- Comment 4: """Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13662
+
+Current status: RESOLVED FIXED"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

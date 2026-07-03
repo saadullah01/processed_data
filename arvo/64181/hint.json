@@ -1,0 +1,10 @@
+{
+    "src/pkcs15init/pkcs15-setcos.c": {
+        "entities": [
+            "function_setcos_new_file"
+        ],
+        "lines": [
+            287
+        ]
+    }
+}

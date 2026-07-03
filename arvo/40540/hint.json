@@ -1,0 +1,10 @@
+{
+    "src/hb-ot-color-colr-table.hh": {
+        "entities": [
+            "struct_ClipList"
+        ],
+        "lines": [
+            971
+        ]
+    }
+}

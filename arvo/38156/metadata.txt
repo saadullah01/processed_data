@@ -1,0 +1,55 @@
+Project: icu
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-use-after-scope READ 1
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=4509226890821632
+
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: uloc_canonicalize_fuzzer
+Job Type: libfuzzer_asan_icu
+Platform Id: linux
+
+Crash Type: Stack-use-after-scope READ 1
+Crash Address: 0x7fff22d2f2dd
+Crash State:
+  uprv_stricmp_70
+  ulocimp_getLanguage_70
+  _canonicalize
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_icu&range=202109030601:202109050610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4509226890821632
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer uloc_canonicalize_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """ClusterFuzz testcase 4509226890821632 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_icu&range=202109150613:202109160601
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

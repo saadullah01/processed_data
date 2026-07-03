@@ -1,0 +1,30 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffcba6b3046
+Crash State:
+  mrb_str_len_to_dbl
+  mrb_str_len_to_inum
+  mrb_str_to_i
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_mruby&range=202001060431:202001070449
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6269063261323264
+
+ClusterFuzz testcase 6269063261323264 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_mruby&range=202001100438:202001110437
+
+This bug has been fixed for 30 days. It has been opened to the public.

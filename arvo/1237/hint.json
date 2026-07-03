@@ -1,0 +1,17 @@
+{
+    "epan/dissectors/packet-quakeworld.c": {
+        "entities": [
+            "function_COM_Parse",
+            "function_Cmd_TokenizeString",
+            "function_dissect_quakeworld_ConnectionlessPacket"
+        ],
+        "lines": [
+            198,
+            112,
+            85,
+            219,
+            381,
+            127
+        ]
+    }
+}

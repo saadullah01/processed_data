@@ -1,0 +1,10 @@
+{
+    "src/libFLAC/bitreader.c": {
+        "entities": [
+            "function_crc16_update_block_"
+        ],
+        "lines": [
+            131
+        ]
+    }
+}

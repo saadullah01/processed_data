@@ -1,0 +1,10 @@
+{
+    "src/ucl_parser.c": {
+        "entities": [
+            "function_ucl_check_variable"
+        ],
+        "lines": [
+            395
+        ]
+    }
+}

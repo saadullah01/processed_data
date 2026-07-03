@@ -1,0 +1,11 @@
+{
+    "src/libopensc/card-entersafe.c": {
+        "entities": [
+            "function_entersafe_gen_key"
+        ],
+        "lines": [
+            1418,
+            1374
+        ]
+    }
+}

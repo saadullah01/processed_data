@@ -1,0 +1,18 @@
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7fd334213820
+Crash State:
+  dissect_xcsl_tcp_heur
+  dissector_try_heuristic
+  decode_tcp_ports
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: 201807100423:201807102206
+Reproducer Testcase ID: 6233603948937216
+Upstream bug: 16695
+ClusterFuzz testcase 6233603948937216 is verified as fixed in range 202007140148:202007150149
+This bug has been fixed for 30 days. It has been opened to the public.

@@ -1,0 +1,10 @@
+{
+    "decoder/ihevcd_decode.c": {
+        "entities": [
+            "function_ihevcd_decode"
+        ],
+        "lines": [
+            626
+        ]
+    }
+}

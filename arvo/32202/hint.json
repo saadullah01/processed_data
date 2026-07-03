@@ -1,0 +1,10 @@
+{
+    "src/libopensc/pkcs15-oberthur.c": {
+        "entities": [
+            "function_sc_pkcs15emu_oberthur_add_pubkey"
+        ],
+        "lines": [
+            609
+        ]
+    }
+}

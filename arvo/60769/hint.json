@@ -1,0 +1,15 @@
+{
+    "src/libopensc/pkcs15.c": {
+        "entities": [
+            "function_sc_pkcs15_read_file",
+            "function_sc_pkcs15_get_lastupdate",
+            "function_decompress_file"
+        ],
+        "lines": [
+            2401,
+            569,
+            532,
+            2509
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 4
+
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x000007e9e110
+Crash State:
+  dissect_snmp_PDUs
+  dissect_ber_choice
+  dissect_snmp_RegisterResponse
+
+Sanitizer: address (ASAN)
+
+Regressed: 201911070304:201911080304
+
+Reproducer Testcase ID: 5694793825124352

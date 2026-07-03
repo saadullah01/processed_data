@@ -1,0 +1,19 @@
+Project: assimp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_asan_assimp
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7fb5e0f76d38
+Crash State:
+  Assimp::FileSystemFilter::Cleanup
+  Assimp::FileSystemFilter::Exists
+  Assimp::IOSystem::Exists
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

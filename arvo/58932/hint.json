@@ -1,0 +1,10 @@
+{
+    "src/pkcs15init/pkcs15-cflex.c": {
+        "entities": [
+            "function_cflex_delete_file"
+        ],
+        "lines": [
+            56
+        ]
+    }
+}

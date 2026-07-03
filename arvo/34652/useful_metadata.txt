@@ -1,0 +1,15 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_asan_mruby
+Platform Id: linux
+Crash Address: 0x60c000002ff9
+Crash State:
+  mrb_format_float
+  fmt_float
+  mrb_str_format
+Recommended Security Severity: High

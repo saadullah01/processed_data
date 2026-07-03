@@ -1,0 +1,14 @@
+{
+    "bfd/coff-x86_64.c": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "bfd/pe-x86_64.c": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

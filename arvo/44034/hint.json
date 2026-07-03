@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_font.c": {
+        "entities": [
+            "function_pdfi_open_CIDFont_substitute_file"
+        ],
+        "lines": [
+            329
+        ]
+    }
+}

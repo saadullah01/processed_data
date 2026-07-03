@@ -1,0 +1,23 @@
+Project: yara
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: yara
+Fuzzer: libFuzzer_yara_dex_fuzzer
+Fuzz target binary: dex_fuzzer
+Job Type: libfuzzer_msan_yara
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  read_uleb128
+  load_encoded_method
+  dex_parse
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201812190219:201812200220

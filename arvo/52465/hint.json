@@ -1,0 +1,12 @@
+{
+    "snmplib/asn1.c": {
+        "entities": [
+            "function_encoded_oid_len",
+            "function_asn_build_objid"
+        ],
+        "lines": [
+            1558,
+            1647
+        ]
+    }
+}

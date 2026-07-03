@@ -1,0 +1,10 @@
+{
+    "src/libbpf.c": {
+        "entities": [
+            "function_btf_fixup_datasec"
+        ],
+        "lines": [
+            2752
+        ]
+    }
+}

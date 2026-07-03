@@ -1,0 +1,13 @@
+{
+    "src/ietf/rtsp_session.c": {
+        "entities": [
+            "function_gf_rtsp_session_new_server",
+            "function_RTSP_UnpackURL"
+        ],
+        "lines": [
+            152,
+            113,
+            957
+        ]
+    }
+}

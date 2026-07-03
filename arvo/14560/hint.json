@@ -1,0 +1,10 @@
+{
+    "libyarmodules/dotnet.c": {
+        "entities": [
+            "function_dotnet_parse_us"
+        ],
+        "lines": [
+            223
+        ]
+    }
+}

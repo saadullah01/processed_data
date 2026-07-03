@@ -1,0 +1,150 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42535696
+OSS Fuzz
+42535696
+ghostscript:gs_device_pdfwrite_fuzzer: Heap-buffer-overflow in pdf_save_viewer_state
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(5)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+ClusterFuzz
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+May 21, 2024 08:56AM
+Detailed Report: https://oss-fuzz.com/testcase?key=4871770673840128
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pdfwrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x52900005ec78
+Crash State:
+  pdf_save_viewer_state
+  stream_to_text
+  pdf_open_page
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202405200621:202405210615
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4871770673840128
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+ke...@artifex.com<ke...@artifex.com> #2
+May 22, 2024 02:47AM
+Marked as fixed, reassigned to ke...@artifex.com.
+Fix committed https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=6342496773e5824fb5bf51a871fa7384930da0ad
+[Deleted User]<[Deleted User]> #3
+May 22, 2024 06:11AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #4
+May 24, 2024 09:51AM
+Verified by ke...@artifex.com.
+ClusterFuzz testcase 4871770673840128 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_ghostscript&range=202405220611:202405230630
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+is...@google.com<is...@google.com> #5
+May 24, 2024 09:51AM
+This issue was migrated from crbug.com/oss-fuzz/69157?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+ke...@artifex.com
+Verifier
+ke...@artifex.com
+Collaborators
+ 
+CC
+ 
+bm...@google.com
+ch...@artifex.com
+da...@adalogics.com
+he...@artifex.com
+ju...@gmail.com
+kd...@chromium.org
+ke...@artifex.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+se...@artifex.com
+sk...@google.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+--
+Project
+ghostscript
+Reported
+May 21, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

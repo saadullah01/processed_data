@@ -1,0 +1,18 @@
+{
+    "arch/ua_network_tcp.c": {
+        "entities": [
+            "function_UA_ServerNetworkLayerTCP"
+        ],
+        "lines": [
+            525
+        ]
+    },
+    "plugins/ua_config_default.c": {
+        "entities": [
+            "function_addDefaultNetworkLayers"
+        ],
+        "lines": [
+            321
+        ]
+    }
+}

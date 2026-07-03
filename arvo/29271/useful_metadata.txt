@@ -1,0 +1,18 @@
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-unserialize
+Job Type: libfuzzer_asan_php
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 1
+Crash Address: 0x7f3a73cf7308
+Crash State:
+  zval_get_type
+  php_var_unserialize_internal
+  process_nested_data
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 4532420363812864 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

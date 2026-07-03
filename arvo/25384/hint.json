@@ -1,0 +1,16 @@
+{
+    "Zend/zend_string.h": {
+        "entities": [
+            "function_zend_string_realloc",
+            "function_zend_string_truncate",
+            "function_zend_string_extend",
+            "function_zend_string_safe_realloc"
+        ],
+        "lines": [
+            186,
+            226,
+            245,
+            206
+        ]
+    }
+}

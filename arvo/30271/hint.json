@@ -1,0 +1,22 @@
+{
+    "plugins/sudoers/toke.c": {
+        "entities": [
+            "function_expand_include",
+            "function_push_include"
+        ],
+        "lines": [
+            5201,
+            5278
+        ]
+    },
+    "plugins/sudoers/toke.l": {
+        "entities": [
+            "function_expand_include",
+            "function_push_include"
+        ],
+        "lines": [
+            1083,
+            1006
+        ]
+    }
+}

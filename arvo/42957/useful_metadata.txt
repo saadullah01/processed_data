@@ -1,0 +1,19 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 8
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 8
+Crash Address: 0x00000161a020
+Crash State:
+  pdfi_dict_get
+  pdfi_dict_get_int
+  pdfi_read_bare_object
+
+Sanitizer: address (ASAN)

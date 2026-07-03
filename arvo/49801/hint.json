@@ -1,0 +1,10 @@
+{
+    "bfd/coffgen.c": {
+        "entities": [
+            "function_build_debug_section"
+        ],
+        "lines": [
+            1519
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/wavlike.c": {
+        "entities": [
+            "function_exif_subchunk_parse"
+        ],
+        "lines": [
+            1269
+        ]
+    }
+}

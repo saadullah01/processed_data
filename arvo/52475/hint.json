@@ -1,0 +1,29 @@
+{
+    "src/metadatfuji.cpp": {
+        "entities": [
+            "function_LibRaw::parseAdobeRAFMakernote"
+        ],
+        "lines": [
+            134,
+            781,
+            277,
+            662,
+            541,
+            682,
+            171,
+            304,
+            694,
+            439,
+            193,
+            706,
+            326,
+            210,
+            725,
+            485,
+            742,
+            627,
+            117,
+            638
+        ]
+    }
+}

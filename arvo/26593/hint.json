@@ -1,0 +1,10 @@
+{
+    "src/flb_utils.c": {
+        "entities": [
+            "function_flb_utils_time_to_seconds"
+        ],
+        "lines": [
+            471
+        ]
+    }
+}

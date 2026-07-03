@@ -1,0 +1,17 @@
+{
+    "libavformat/mxfdec.c": {
+        "entities": [
+            "struct_MXFIndexTableSegment",
+            "function_mxf_edit_unit_absolute_offset",
+            "function_mxf_compute_index_tables"
+        ],
+        "lines": [
+            262,
+            2155,
+            1899,
+            2127,
+            1935,
+            2164
+        ]
+    }
+}

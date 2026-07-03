@@ -1,0 +1,19 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_objdump_safe
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  reloc_at
+  read_debug_line_header
+  display_debug_lines_raw
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5433319697547264 is verified as fixed

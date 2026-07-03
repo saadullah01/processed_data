@@ -1,0 +1,10 @@
+{
+    "bfd/coff-sh.c": {
+        "entities": [
+            "function_sh_reloc"
+        ],
+        "lines": [
+            562
+        ]
+    }
+}

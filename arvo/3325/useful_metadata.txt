@@ -1,0 +1,59 @@
+Project: proj.4
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+-- Comment 1:
+Project: proj4
+Fuzzer: afl_proj4_standard_fuzzer
+Fuzz target binary: standard_fuzzer
+Job Type: afl_asan_proj4_untrusted
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000115a73
+Crash State:
+  _fini
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+-- Comment 2:
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000000000 in ?? ()
+(gdb) bt
+#0  0x0000000000000000 in ?? ()
+#1  0x00000000004223d7 in reverse_obs (obs=..., P=0x6827c0) at PJ_unitconvert.c:317
+#2  0x0000000000423f79 in pj_invobs (obs=..., P=0x6827c0) at pj_internal.c:88
+#3  0x000000000041a8c8 in proj_trans_obs (P=0x6827c0, direction=PJ_INV, obs=...) at pj_obs_api.c:136
+#4  0x000000000041cade in pipeline_forward_obs (point=..., P=0x67ecf0) at PJ_pipeline.c:194
+#5  0x000000000041d278 in pipeline_forward (lp=..., P=0x67ecf0) at PJ_pipeline.c:252
+#6  0x00000000004469a7 in o_forward (lp=..., P=0x67e860) at PJ_ob_tran.c:32
+#7  0x000000000045e5da in pj_fwd (lp=..., P=0x67e860) at pj_fwd.c:41
+#8  0x000000000040babe in pj_transform (srcdefn=0x67d920, dstdefn=0x67e860, point_count=1, point_offset=1, x=0x7fffffffda70, y=0x7fffffffda78, z=0x0) at pj_transform.c:402
+#9  0x0000000000401e07 in LLVMFuzzerTestOneInput (
+    buf=0x67e250 "\t+o_lat_;p=6ccc6!o\t+lon_0=90SntOsan.\t+\t\t+ste`\027+step\372Ԍ\221ep\t++proj=ob_tran\t\t+I: 4ed\250\025\070\225e\t\t\366\001\366\215'+la\t+step\t+sqep\216+t\272\tep\t+step\t+s\223,\t+I2@\022\361d\250#8\225up\002+s=\t+o_lat_p=6ccc6l\217n_0=90Snt\a\a\a\r\a\a\001\a\v\225d\t+e\tm\t+o_proj=merc\t"..., len=682) at standard_fuzzer.cpp:148
+#10 0x000000000040228d in main (argc=2, argv=0x7fffffffdd38) at standard_fuzzer.cpp:206
+
+-- Comment 3:
+Fixed per https://github.com/OSGeo/proj.4/commit/5e97ef560034cb0ae2aec9613a5ff7695b1704c5
+
+master only
+
+-- Comment 4:
+Project: proj4
+Fuzzer: afl_proj4_standard_fuzzer
+Fuzz target binary: standard_fuzzer
+Job Type: afl_asan_proj4
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000115a73
+Crash State:
+  _fini
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

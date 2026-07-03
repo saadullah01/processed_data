@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-coolkey.c": {
+        "entities": [
+            "function_coolkey_add_object"
+        ],
+        "lines": [
+            1945
+        ]
+    }
+}

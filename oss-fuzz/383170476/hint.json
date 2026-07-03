@@ -1,0 +1,10 @@
+{
+    "libavformat/mlvdec.c": {
+        "entities": [
+            "function_read_string"
+        ],
+        "lines": [
+            82
+        ]
+    }
+}

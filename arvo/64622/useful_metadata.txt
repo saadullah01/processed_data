@@ -1,0 +1,22 @@
+Project: pigweed
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Project: pigweed
+Fuzzing Engine: libFuzzer
+Fuzz Target: uart_transport_fuzzer
+Job Type: libfuzzer_ubsan_pigweed
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x0000002c9138
+Crash State:
+  Bad-cast to pw::stream::Writer from pw::stream::NullStream
+  pw::stream::ReaderWriter::operator pw::stream::Writer&
+  uart_transport_fuzzer.cc::$_0::operator
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High

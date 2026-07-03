@@ -1,0 +1,10 @@
+{
+    "Libraries/LibGfx/GIFLoader.cpp": {
+        "entities": [
+            "function_decode_frame"
+        ],
+        "lines": [
+            380
+        ]
+    }
+}

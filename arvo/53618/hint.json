@@ -1,0 +1,11 @@
+{
+    "src/librawspeed/decompressors/Cr2DecompressorImpl.h": {
+        "entities": [
+            "function_Cr2Decompressor<HuffmanTable>::Cr2Decompressor"
+        ],
+        "lines": [
+            37,
+            191
+        ]
+    }
+}

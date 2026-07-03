@@ -1,0 +1,22 @@
+Project: PcapPlusPlus
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Project: pcapplusplus
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzTarget
+Job Type: libfuzzer_asan_pcapplusplus
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffdd4792340
+Crash State:
+  pcpp::IDnsResource::decodeName
+  pcpp::IDnsResource::IDnsResource
+  pcpp::DnsLayer::parseResources
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

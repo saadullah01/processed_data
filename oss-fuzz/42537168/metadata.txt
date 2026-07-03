@@ -1,0 +1,152 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42537168
+OSS Fuzz
+42537168
+mupdf:pdf_fuzzer: Heap-buffer-overflow in pdf_show_path
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(7)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+ClusterFuzz
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Jul 17, 2024 12:02PM
+Detailed Report: https://oss-fuzz.com/testcase?key=5331792253485056
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x51e000000a08
+Crash State:
+  pdf_show_path
+  pdf_process_keyword
+  pdf_process_stream
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_mupdf&range=202407160628:202407170625
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5331792253485056
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Jul 18, 2024 06:21AM
+[Empty comment from Monorail migration]
+[Deleted User]<[Deleted User]> #3
+Jul 18, 2024 06:21AM
+[Empty comment from Monorail migration]
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #4
+Jul 19, 2024 01:07AM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 5331792253485056 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_mupdf&range=202407170625:202407180627
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+[Deleted User]<[Deleted User]> #5
+Jul 19, 2024 06:10AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+se...@artifex.com<se...@artifex.com> #6
+Jul 28, 2024 05:52PM
+Fixed upstream by http://cgit.ghostscript.com/cgi-bin/cgit.cgi/mupdf.git/commit/?id=711e82dde434dfe8f36feca88c5c4b9d70ab87ce
+is...@google.com<is...@google.com> #7
+Jul 28, 2024 05:52PM
+This issue was migrated from crbug.com/oss-fuzz/70481?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S1
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+jo...@titanous.com
+ju...@gmail.com
+ke...@artifex.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+ro...@artifex.com
+se...@artifex.com
+to...@artifex.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Oct 15, 2024
+Project
+mupdf
+Reported
+Jul 17, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

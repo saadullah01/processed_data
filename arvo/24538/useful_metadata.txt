@@ -1,0 +1,24 @@
+Project: rnp
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_dump
+Job Type: libfuzzer_asan_rnp
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7ffeefb264b8
+Crash State:
+  dst_print_s2k
+  stream_dump_packets_raw
+  stream_dump_packets
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_dump from making much progress. Fixing this will allow more bugs to be found.
+
+This must be fixed since the commit f07b44cec577a117ad0028c35896804dc8efd548
+
+ClusterFuzz testcase 5156863386320896 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

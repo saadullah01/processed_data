@@ -1,0 +1,16 @@
+Project: cyclonedds
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+Fuzzing Engine: afl
+Fuzz Target: fuzz_type_object
+Job Type: afl_asan_cyclonedds
+Platform Id: linux
+Crash Address: 0x6150000013f8
+Crash State:
+  ddsi_type_unref_impl_locked
+  ddsi_type_unref_locked
+  ddsi_xt_type_fini
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

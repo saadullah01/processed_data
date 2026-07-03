@@ -1,0 +1,30 @@
+libraw:libraw_raf_fuzzer: Heap-buffer-overflow in LibRaw::xtrans_interpolate
+
+Project: libraw
+Fuzzing Engine: libFuzzer
+Fuzz Target: libraw_raf_fuzzer
+Job Type: libfuzzer_asan_libraw
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x7bb344fe480c
+Crash State:
+  LibRaw::xtrans_interpolate
+  LibRaw::dcraw_process
+  libraw_fuzzer.cc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer libraw_raf_fuzzer from making much progress. Fixing this will allow more bugs to be found."
+
+ClusterFuzz testcase 5090302665752576 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: libraw

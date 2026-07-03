@@ -1,0 +1,10 @@
+{
+    "example/reader_util.c": {
+        "entities": [
+            "function_ndpi_is_valid_vxlan"
+        ],
+        "lines": [
+            1746
+        ]
+    }
+}

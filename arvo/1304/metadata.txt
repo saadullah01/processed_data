@@ -1,0 +1,79 @@
+Project: gnutls
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5649010138284032
+
+Project: gnutls
+Fuzzer: libFuzzer_gnutls_pkcs12_key_parser_fuzzer
+Fuzz target binary: gnutls_pkcs12_key_parser_fuzzer
+Job Type: libfuzzer_asan_gnutls
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60c000000080
+Crash State:
+  gnutls_x509_crl_deinit
+  gnutls_pkcs12_simple_parse
+  _start
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gnutls&range=201704281630:201704291628
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5649010138284032
+
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz has detected this issue as fixed in range 201704291628:201704301627.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5649010138284032
+
+Project: gnutls
+Fuzzer: libFuzzer_gnutls_pkcs12_key_parser_fuzzer
+Fuzz target binary: gnutls_pkcs12_key_parser_fuzzer
+Job Type: libfuzzer_asan_gnutls
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60c000000080
+Crash State:
+  gnutls_x509_crl_deinit
+  gnutls_pkcs12_simple_parse
+  _start
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gnutls&range=201704281630:201704291628
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_gnutls&range=201704291628:201704301627
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5649010138284032
+
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 3: """ClusterFuzz testcase 5649010138284032 is verified as fixed, so closing issue.
+
+If this is incorrect, please add ClusterFuzz-Wrong label and re-open the issue."""
+
+-- Comment 4: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

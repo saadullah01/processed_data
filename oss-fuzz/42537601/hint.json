@@ -1,0 +1,10 @@
+{
+    "libavformat/segafilm.c": {
+        "entities": [
+            "function_film_read_header"
+        ],
+        "lines": [
+            234
+        ]
+    }
+}

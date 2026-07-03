@@ -1,0 +1,10 @@
+{
+    "code/Common/ZipArchiveIOSystem.cpp": {
+        "entities": [
+            "method_ZipArchiveIOSystem::Implement::MapArchive"
+        ],
+        "lines": [
+            372
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "pw_stream/public/pw_stream/stream.h": {
+        "entities": [
+            "class_SeekableReaderWriter",
+            "class_NonSeekableReaderWriter",
+            "class_ReaderWriter",
+            "class_RelativeSeekableReaderWriter"
+        ],
+        "lines": [
+            603,
+            519,
+            557,
+            471
+        ]
+    },
+    "pw_transfer/public/pw_transfer/handler.h": {
+        "entities": [
+            "method_ReadWriteHandler::ReadWriteHandler"
+        ],
+        "lines": [
+            143
+        ]
+    }
+}

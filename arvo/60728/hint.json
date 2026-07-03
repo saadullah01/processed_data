@@ -1,0 +1,10 @@
+{
+    "src/demosaic/xtrans_demosaic.cpp": {
+        "entities": [
+            "function_LibRaw::xtrans_interpolate"
+        ],
+        "lines": [
+            265
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+Issue 376731120
+
+wamr:wasm_mutator_fuzz_loader: Heap-buffer-overflow in bh_leb_read
+
+Project: wamr
+Fuzzing Engine: libFuzzer
+Fuzz Target: wasm_mutator_fuzz_loader
+Job Type: libfuzzer_asan_wamr
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x50600000011c
+Crash State:
+  bh_leb_read
+  read_leb
+  wasm_loader_prepare_bytecode
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5197004222824448 is verified as fixed.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: wamr
+Reported: Nov 1, 2024

@@ -1,0 +1,14 @@
+Project: serenity
+Fuzzing Engine: afl
+Fuzz Target: FuzzGIFLoader
+Job Type: afl_asan_serenity
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x000000784fb0
+Crash State:
+  Gfx::decode_frame
+  Gfx::GIFImageDecoderPlugin::frame
+  Gfx::GIFImageDecoderPlugin::bitmap
+
+Sanitizer: address (ASAN)

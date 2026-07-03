@@ -1,0 +1,16 @@
+{
+    "src/apps/testapps/testVertex.c": {
+        "entities": [],
+        "lines": [
+            107
+        ]
+    },
+    "src/h3lib/lib/vertex.c": {
+        "entities": [
+            "function_cellToVertex"
+        ],
+        "lines": [
+            224
+        ]
+    }
+}

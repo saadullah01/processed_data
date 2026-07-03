@@ -1,0 +1,10 @@
+{
+    "fuzz/fuzz_iccprofile_info.c": {
+        "entities": [
+            "function_read_table_extents"
+        ],
+        "lines": [
+            16
+        ]
+    }
+}

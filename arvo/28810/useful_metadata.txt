@@ -1,0 +1,19 @@
+Project: aac
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 4
+
+Project: libfdk-aac
+Fuzzing Engine: afl
+Fuzz Target: aacDecoder_DecodeFrame
+Job Type: afl_asan_libfdk-aac
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x000000866068
+Crash State:
+  Hcr_State_BODY_SIGN_ESC__BODY
+  DecodeNonPCWs
+  HcrDecoder
+
+Sanitizer: address (ASAN)

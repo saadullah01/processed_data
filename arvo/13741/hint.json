@@ -1,0 +1,10 @@
+{
+    "src/core/meshcop/meshcop_tlvs.cpp": {
+        "entities": [
+            "method_ChannelMaskTlv::GetChannelMask"
+        ],
+        "lines": [
+            236
+        ]
+    }
+}

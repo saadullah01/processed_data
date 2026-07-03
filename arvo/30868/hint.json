@@ -1,0 +1,15 @@
+{
+    "blosc/frame.c": {
+        "entities": [
+            "function_get_coffsets",
+            "function_frame_get_vlmetalayers",
+            "function_frame_update_trailer"
+        ],
+        "lines": [
+            1048,
+            1041,
+            730,
+            1435
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "src/libical/icalvalue.c": {
+        "entities": [
+            "function_icalvalue_new_from_string_with_error",
+            "function_simple_str_to_doublestr"
+        ],
+        "lines": [
+            390,
+            583,
+            362,
+            400,
+            410,
+            603
+        ]
+    },
+    "src/test/regression.c": {
+        "entities": [
+            "function_test_geo_props"
+        ],
+        "lines": [
+            4418,
+            4407
+        ]
+    }
+}

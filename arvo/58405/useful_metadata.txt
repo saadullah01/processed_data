@@ -1,0 +1,32 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 1
+Severity: High
+
+Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_ps2write_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffefc71e981
+Crash State:
+  pdfi_read_cff_dict
+  pdfi_read_cff_dict
+  pdfi_read_cff_font
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase id: 5911272708505600
+
+Comment 2:
+Fixed in this commit: 38e5e7a1f535c85f0c0c699214aca533ba552a79
+
+Comment 3:
+ClusterFuzz testcase 5911272708505600 is verified as fixed
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.

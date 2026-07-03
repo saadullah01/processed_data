@@ -1,0 +1,10 @@
+{
+    "ldo.c": {
+        "entities": [
+            "function_luaD_pretailcall"
+        ],
+        "lines": [
+            530
+        ]
+    }
+}

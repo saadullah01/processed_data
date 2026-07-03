@@ -1,0 +1,27 @@
+From: Michael Niedermayer <michael@niedermayer.cc>
+Date: Fri, 19 May 2017 23:23:01 +0000 (+0200)
+Subject: avcodec/mlpdec: Do not leave a invalid num_primitive_matrices in the context
+X-Git-Tag: n3.4~1471
+X-Git-Url: http://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff_plain/64ea4d102a070b95832ae4a751688f87da7760a2
+
+avcodec/mlpdec: Do not leave a invalid num_primitive_matrices in the context
+
+Fixes: runtime error: index 8 out of bounds for type 'uint8_t [8]'
+Fixes: 1699/clusterfuzz-testcase-minimized-6327177438035968
+
+Found-by: continuous fuzzing process https://github.com/google/oss-fuzz/tree/master/targets/ffmpeg
+Signed-off-by: Michael Niedermayer <michael@niedermayer.cc>
+---
+
+diff --git a/libavcodec/mlpdec.c b/libavcodec/mlpdec.c
+index 5426712007..eac19a0d5e 100644
+--- a/libavcodec/mlpdec.c
++++ b/libavcodec/mlpdec.c
+@@ -729,6 +729,7 @@ static int read_matrix_params(MLPDecodeContext *m, unsigned int substr, GetBitCo
+         av_log(m->avctx, AV_LOG_ERROR,
+                "Number of primitive matrices cannot be greater than %d.\n",
+                max_primitive_matrices);
++        s->num_primitive_matrices = 0;
+         return AVERROR_INVALIDDATA;
+     }
+ 

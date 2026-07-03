@@ -1,0 +1,15 @@
+{
+    "src/in_json.c": {
+        "entities": [
+            "function_json_HEADER",
+            "function__set_struct_field"
+        ],
+        "lines": [
+            2438,
+            2535,
+            2445,
+            2479,
+            1265
+        ]
+    }
+}

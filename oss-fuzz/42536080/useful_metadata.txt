@@ -1,0 +1,27 @@
+Issue 42536080
+mupdf:pdf_fuzzer: Crash in pdf_dict_get
+
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x02008264b621
+Crash State:
+  pdf_dict_get
+  pdf_dict_getl
+  pdf_run_annot_with_usage
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4839131497693184 is verified as fixed.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Project: mupdf

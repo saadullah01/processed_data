@@ -1,0 +1,27 @@
+{
+    "Userland/Libraries/LibGfx/ImageFormats/PBMLoader.cpp": {
+        "entities": [
+            "function_read_image_data"
+        ],
+        "lines": [
+            49,
+            15
+        ]
+    },
+    "Userland/Libraries/LibGfx/ImageFormats/PGMLoader.cpp": {
+        "entities": [
+            "function_read_image_data"
+        ],
+        "lines": [
+            31
+        ]
+    },
+    "Userland/Libraries/LibGfx/ImageFormats/PPMLoader.cpp": {
+        "entities": [
+            "function_read_image_data"
+        ],
+        "lines": [
+            19
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+Project: libraw
+Fuzzing Engine: libFuzzer
+Fuzz Target: libraw_fuzzer
+Job Type: libfuzzer_asan_libraw
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7ffe20ce6e60
+Crash State:
+  LibRaw_buffer_datastream::gets
+  LibRaw::parse_rollei
+  LibRaw::identify
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libraw_fuzzer from making much progress. Fixing this will allow more bugs to be found.

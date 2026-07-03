@@ -1,0 +1,24 @@
+Project: ndpi
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Fuzzing Engine: afl
+Fuzz Target: fuzz_process_packet
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7fff60546920
+Crash State:
+  check_content_type_and_change_protocol
+  ndpi_search_http_tcp
+  check_ndpi_detection_func
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5487070584111104 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,13 @@
+Project: util-linux
+Fuzzing Engine: libFuzzer
+Fuzz Target: test_blkid_fuzz
+Job Type: libfuzzer_asan_i386_util-linux
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x265406b2
+Crash State:
+  probe_bcachefs
+  superblocks_probe
+  superblocks_safeprobe
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

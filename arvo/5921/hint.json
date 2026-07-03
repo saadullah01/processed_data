@@ -1,0 +1,32 @@
+{
+    "epan/dissectors/asn1/h225/packet-h225-template.c": {
+        "entities": [
+            "function_dissect_h225_h225_RasMessage",
+            "function_dissect_h225_H323UserInformation"
+        ],
+        "lines": [
+            329,
+            44,
+            342,
+            377
+        ]
+    },
+    "epan/dissectors/packet-h225.c": {
+        "entities": [
+            "function_dissect_h225_h225_RasMessage",
+            "function_dissect_h225_H323UserInformation",
+            "function_proto_register_h225"
+        ],
+        "lines": [
+            7908,
+            1156,
+            908,
+            11726,
+            7823,
+            7921,
+            52,
+            7956,
+            11476
+        ]
+    }
+}

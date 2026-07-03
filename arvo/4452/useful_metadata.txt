@@ -1,0 +1,18 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_LJpegDecompressorFuzzer
+Fuzz target binary: LJpegDecompressorFuzzer
+Job Type: libfuzzer_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison READ 8
+Crash Address: 0x7f00daf7c207
+Crash State:
+  void rawspeed::LJpegDecompressor::decodeN<4>
+  rawspeed::AbstractLJpegDecompressor::decode
+  LJpegDecompressor.cpp
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201712020623:201712030636.

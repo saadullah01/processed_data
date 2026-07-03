@@ -1,0 +1,156 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=4748594994216960
+
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize_width
+Fuzz target binary: image_filter_deserialize_width
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  SkPictureShader::onMakeContext
+  SkShaderBase::makeContext
+  SkBlitter::Choose
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201804090617:201804170639
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4748594994216960
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """This seems to have been introduced in 
+https://skia-review.googlesource.com/c/skia/+/120480
+
+If refBitmapShader returns here: https://github.com/google/skia/blob/84c0792ea59fae33809e5cf2facdcef176ccf170/src/shaders/SkPictureShader.cpp?utf8=%E2%9C%93#L227
+
+scaleAdjust is not initialized."""
+
+-- Comment 3: """To repro, build Skia with MSAN and run:
+
+out/MSAN/fuzz -t filter_fuzz -b ~/Downloads/clusterfuzz-testcase-minimized-image_filter_deserialize_width-4748594994216960"""
+
+-- Comment 4: """The following revision refers to this bug:
+  https://skia.googlesource.com/skia/+/8f88d89796d0ab7fefb302b21e03cc186dfc8bc3
+
+commit 8f88d89796d0ab7fefb302b21e03cc186dfc8bc3
+Author: Florin Malita <fmalita@chromium.org>
+Date: Fri Apr 20 14:14:45 2018
+
+Fix use-of-uninitialized-value in SkPictureShader::onMakeContext
+
+SkPictureShader::refBitmapShader is expected to always initialize the
+scale adjust vector when returning a non-null shader.  But the code path
+returning EmptyShader does not do that.
+
+Instead of hauling around a separate scale adjustment, we can refactor
+to avoid this problem by adjusting the local matrix directly, if needed,
+in refBitmapShader.  The local matrix is conveniently already stored in
+a SkTCopyOnFirstWrite.
+
+Bug: chromium:835048, oss-fuzz:7738
+Change-Id: I2df3bde7d6237f01bc71857c2fe254e86b186dc0
+Reviewed-on: https://skia-review.googlesource.com/122544
+Auto-Submit: Florin Malita <fmalita@chromium.org>
+Reviewed-by: Kevin Lubick <kjlubick@google.com>
+Commit-Queue: Florin Malita <fmalita@chromium.org>
+
+[modify] https://crrev.com/8f88d89796d0ab7fefb302b21e03cc186dfc8bc3/src/shaders/SkPictureShader.h
+[modify] https://crrev.com/8f88d89796d0ab7fefb302b21e03cc186dfc8bc3/src/shaders/SkPictureShader.cpp
+"""
+
+-- Comment 5: """The following revision refers to this bug:
+  https://skia.googlesource.com/skia/+/ad3f3c7162bc5f96fcd2203b1ea6273432ff46ef
+
+commit ad3f3c7162bc5f96fcd2203b1ea6273432ff46ef
+Author: Florin Malita <fmalita@chromium.org>
+Date: Fri Apr 20 17:46:27 2018
+
+Fix use-of-uninitialized-value in SkPictureShader::onMakeContext
+
+SkPictureShader::refBitmapShader is expected to always initialize the
+scale adjust vector when returning a non-null shader.  But the code path
+returning EmptyShader does not do that.
+
+Instead of hauling around a separate scale adjustment, we can refactor
+to avoid this problem by adjusting the local matrix directly, if needed,
+in refBitmapShader.  The local matrix is conveniently already stored in
+a SkTCopyOnFirstWrite.
+
+Bug: chromium:835048, oss-fuzz:7738
+Change-Id: I2df3bde7d6237f01bc71857c2fe254e86b186dc0
+Reviewed-on: https://skia-review.googlesource.com/122544
+Auto-Submit: Florin Malita <fmalita@chromium.org>
+Reviewed-by: Kevin Lubick <kjlubick@google.com>
+Commit-Queue: Florin Malita <fmalita@chromium.org>
+(cherry picked from commit 8f88d89796d0ab7fefb302b21e03cc186dfc8bc3)
+Reviewed-on: https://skia-review.googlesource.com/122820
+
+[modify] https://crrev.com/ad3f3c7162bc5f96fcd2203b1ea6273432ff46ef/src/shaders/SkPictureShader.h
+[modify] https://crrev.com/ad3f3c7162bc5f96fcd2203b1ea6273432ff46ef/src/shaders/SkPictureShader.cpp
+"""
+
+-- Comment 6: """ClusterFuzz has detected this issue as fixed in range 201804200632:201804210624.
+
+Detailed report: https://oss-fuzz.com/testcase?key=4748594994216960
+
+Project: skia
+Fuzzer: libFuzzer_skia_image_filter_deserialize_width
+Fuzz target binary: image_filter_deserialize_width
+Job Type: libfuzzer_msan_skia
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  SkPictureShader::onMakeContext
+  SkShaderBase::makeContext
+  SkBlitter::Choose
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201804090617:201804170639
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_skia&range=201804200632:201804210624
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4748594994216960
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 7: """ClusterFuzz testcase 4748594994216960 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 8: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

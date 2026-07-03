@@ -1,0 +1,12 @@
+{
+    "src/libical/icalparser.c": {
+        "entities": [
+            "function_icalparser_add_line"
+        ],
+        "lines": [
+            1071,
+            966,
+            1031
+        ]
+    }
+}

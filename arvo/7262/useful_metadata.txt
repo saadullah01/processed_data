@@ -1,0 +1,40 @@
+Project: ots
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Project: ots
+Fuzzer: libFuzzer_ots_ots-fuzzer
+Fuzz target binary: ots-fuzzer
+Job Type: libfuzzer_asan_ots
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x627000385430
+Crash State:
+  ots::Buffer::ReadU16
+  ParseVariationDataSubtable
+  ots::ParseItemVariationStore
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ots-fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201804020657:201804030701.
+Crash Type: UNKNOWN READ
+Crash Address: 0x627000385430
+Crash State:
+  ots::Buffer::ReadU16
+  ParseVariationDataSubtable
+  ots::ParseItemVariationStore
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Comment 4:
+ClusterFuzz testcase 4904400788127744 is verified as fixed, so closing issue as verified.
+
+Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.

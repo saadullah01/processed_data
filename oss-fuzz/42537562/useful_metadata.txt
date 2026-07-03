@@ -1,0 +1,24 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_LSCR_fuzzer: Use-of-uninitialized-value in ff_add_png_paeth_prediction
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_LSCR_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ff_add_png_paeth_prediction
+  ff_png_filter_row
+  decode_frame_lscr
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

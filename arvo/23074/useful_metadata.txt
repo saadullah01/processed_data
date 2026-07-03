@@ -1,0 +1,18 @@
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_disassemble
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 1
+Crash Address: 0x7fc07017e864
+Crash State:
+  bfd_put_bits
+  hash_insn_array
+  build_dis_hash_table
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5685956790452224 is verified as fixed

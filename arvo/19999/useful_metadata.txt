@@ -1,0 +1,16 @@
+Project: perfetto
+Fuzzing Engine: libFuzzer
+Fuzz Target: trace_processor_fuzzer
+Job Type: libfuzzer_asan_perfetto
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x3d567fffa200
+Crash State:
+  perfetto::trace_processor::TraceStorage::GetIdForVariadicType
+  perfetto::trace_processor::GlobalArgsTracker::AddArgSet
+  perfetto::trace_processor::ArgsTracker::Flush
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

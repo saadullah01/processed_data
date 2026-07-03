@@ -1,0 +1,30 @@
+wt:fuzz-eval: Heap-double-free in basic_string.tcc
+Verified
+Vulnerability
+P2
+Reproducible
+Stability-Memory-AddressSanitizer
+Deadline-Exceeded
+ClusterFuzz-Verified
+STATUS UPDATE
+No update yet.
+Project: wt
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-eval
+Job Type: libfuzzer_asan_wt
+Platform Id: linux
+Crash Type: Heap-double-free
+Crash Address: 0x503000000b50
+Crash State:
+  basic_string.tcc
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+ClusterFuzz testcase 4829565027942400 is verified as fixed
+Type: Vulnerability
+Priority: P2
+Severity: S1
+Status: Fixed (Verified)
+Access: Default access
+Code Changes: --
+Pending Code Changes: --
+Project: wt

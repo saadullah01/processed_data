@@ -1,0 +1,10 @@
+{
+    "base/fapi_ft.c": {
+        "entities": [
+            "function_load_glyph"
+        ],
+        "lines": [
+            810
+        ]
+    }
+}

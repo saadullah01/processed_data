@@ -1,0 +1,10 @@
+{
+    "Magick++/fuzz/encoder_xc_fuzzer.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            9
+        ]
+    }
+}

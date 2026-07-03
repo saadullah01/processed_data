@@ -1,0 +1,17 @@
+{
+    "src/vm.c": {
+        "entities": [
+            "function_mrb_funcall_with_block",
+            "function_mrb_yield_with_class",
+            "function_mrb_yield_cont"
+        ],
+        "lines": [
+            516,
+            550,
+            202,
+            906,
+            858,
+            508
+        ]
+    }
+}

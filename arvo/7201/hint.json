@@ -1,0 +1,10 @@
+{
+    "src/core/SkPathMeasure.cpp": {
+        "entities": [
+            "function_compute_conic_segs"
+        ],
+        "lines": [
+            258
+        ]
+    }
+}

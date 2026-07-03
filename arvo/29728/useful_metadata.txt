@@ -1,0 +1,30 @@
+Project: mupdf
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: mupdf
+Fuzzing Engine: honggfuzz
+Fuzz Target: pdf_fuzzer
+Job Type: honggfuzz_asan_mupdf
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x60c00000083c
+Crash State:
+  pdf_get_xref_entry
+  pdf_cache_object
+  pdf_resolve_indirect
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer pdf_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5401258389274624 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

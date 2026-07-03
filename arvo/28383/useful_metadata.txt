@@ -1,0 +1,25 @@
+Project: opensc
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-use-after-return READ 1
+
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 1
+Crash Address: 0x7f63fc704805
+Crash State:
+  insert_pin
+  detect_idkey
+  sc_pkcs15emu_tcos_init_ex
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_pkcs15_reader from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6203718906937344 is verified as fixed.
+
+This bug has been fixed for 30 days. It has been opened to the public.

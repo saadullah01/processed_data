@@ -1,0 +1,24 @@
+Project: mruby
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_ubsan_mruby
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  str_init_embed
+  str_new
+  mrb_str_new
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Fixed by bc9476e7caa75e0a258682f4dc3247a00fed5581

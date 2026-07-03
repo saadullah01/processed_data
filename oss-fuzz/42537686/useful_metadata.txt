@@ -1,0 +1,29 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_H264_fuzzer: Use-of-uninitialized-value in put_h264_qpel8_hv_lowpass_9
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_H264_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  put_h264_qpel8_hv_lowpass_9
+  put_h264_qpel16_mc12_9_c
+  mc_part_422_simple_16
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 6226767184986112
+
+ClusterFuzz testcase 6226767184986112 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)

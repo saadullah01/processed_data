@@ -1,0 +1,49 @@
+{
+    "devices/vector/gdevpdfb.h": {
+        "entities": [
+            "variable_PDF_DEVICE_IDENT"
+        ],
+        "lines": [
+            161
+        ]
+    },
+    "devices/vector/gdevpdfg.c": {
+        "entities": [
+            "function_pdf_save_viewer_state"
+        ],
+        "lines": [
+            98
+        ]
+    },
+    "devices/vector/gdevpdfi.c": {
+        "entities": [
+            "function_gdev_pdf_dev_spec_op"
+        ],
+        "lines": [
+            3016,
+            3048,
+            3035,
+            3024
+        ]
+    },
+    "devices/vector/gdevpdfu.c": {
+        "entities": [
+            "function_stream_to_text",
+            "function_text_to_stream"
+        ],
+        "lines": [
+            1207,
+            1167
+        ]
+    },
+    "devices/vector/gdevpdfx.h": {
+        "entities": [
+            "struct_pdf_viewer_state",
+            "struct_gx_device_pdf_s"
+        ],
+        "lines": [
+            793,
+            515
+        ]
+    }
+}

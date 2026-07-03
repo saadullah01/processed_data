@@ -1,0 +1,10 @@
+{
+    "libavcodec/cbs_vp9.c": {
+        "entities": [
+            "function_cbs_vp9_split_fragment"
+        ],
+        "lines": [
+            375
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/ima_adpcm.c": {
+        "entities": [
+            "function_ima_reader_init"
+        ],
+        "lines": [
+            182
+        ]
+    }
+}

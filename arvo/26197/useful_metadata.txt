@@ -1,0 +1,18 @@
+Project: usrsctp
+Fuzzing Engine: afl
+Fuzz Target: fuzzer_listen
+Job Type: afl_asan_usrsctp
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x6180000007ff
+Crash State:
+  sctp_process_init
+  sctp_process_cookie_existing
+  sctp_handle_cookie_echo
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Reproducer Testcase ID: 5077370870169600
+
+ClusterFuzz testcase 5077370870169600 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

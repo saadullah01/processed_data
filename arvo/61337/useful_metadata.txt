@@ -1,0 +1,19 @@
+Project: libxml2
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 2
+Severity: High
+
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: html
+Job Type: libfuzzer_asan_i386_libxml2
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 2
+Crash Address: 0xf5000650
+Crash State:
+  __xmlRaiseError
+  htmlParseErr
+  htmlCurrentChar
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

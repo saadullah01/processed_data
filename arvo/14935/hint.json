@@ -1,0 +1,13 @@
+{
+    "spng.c": {
+        "entities": [
+            "function_validate_past_idat",
+            "function_get_ancillary_data_first_idat"
+        ],
+        "lines": [
+            1040,
+            1144,
+            1086
+        ]
+    }
+}

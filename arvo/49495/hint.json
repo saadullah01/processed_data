@@ -1,0 +1,19 @@
+{
+    "src/cmscnvrt.c": {
+        "entities": [
+            "function_ComputeConversion"
+        ],
+        "lines": [
+            386
+        ]
+    },
+    "src/cmsio0.c": {
+        "entities": [
+            "function__cmsReadHeader"
+        ],
+        "lines": [
+            832,
+            815
+        ]
+    }
+}

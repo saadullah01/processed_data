@@ -1,0 +1,11 @@
+{
+    "src/cfgparse.c": {
+        "entities": [
+            "function_readcfgfile"
+        ],
+        "lines": [
+            1976,
+            1997
+        ]
+    }
+}

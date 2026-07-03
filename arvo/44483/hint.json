@@ -1,0 +1,10 @@
+{
+    "programs/dxf2dwg.c": {
+        "entities": [
+            "function_main"
+        ],
+        "lines": [
+            326
+        ]
+    }
+}

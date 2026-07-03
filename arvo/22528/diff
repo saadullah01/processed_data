@@ -1,0 +1,99 @@
+From 3e0078c2bac7b530a93484fe081a4f5aeb1e191d Mon Sep 17 00:00:00 2001
+From: seladb <pcapplusplus@gmail.com>
+Date: Wed, 27 May 2020 03:02:01 -0400
+Subject: [PATCH] Bugfix 22528 in oss-fuzz: Heap-buffer-overflow in
+ pcpp::HeaderField::HeaderField
+
+---
+ Packet++/header/SipLayer.h                        |   9 ++++++++-
+ Packet++/src/TextBasedProtocol.cpp                |  12 +++++++++++-
+ Packet++/src/UdpLayer.cpp                         |   3 ++-
+ ...testcase-minimized-FuzzTarget-5716696466980864 | Bin 0 -> 459 bytes
+ 4 files changed, 21 insertions(+), 3 deletions(-)
+ create mode 100644 Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5716696466980864
+
+diff --git a/Packet++/header/SipLayer.h b/Packet++/header/SipLayer.h
+index 40f04be1ad..fa3b89822d 100644
+--- a/Packet++/header/SipLayer.h
++++ b/Packet++/header/SipLayer.h
+@@ -617,6 +617,14 @@ namespace pcpp
+ 		 */
+ 		static SipResponseLayer::SipResponseStatusCode parseStatusCode(char* data, size_t dataLen);
+ 
++		/**
++		 * A static method for parsing the SIP version out of raw data
++		 * @param[in] data The raw data
++		 * @param[in] dataLen The raw data length
++		 * @return The parsed SIP version string or an empty string if version cannot be extracted
++		 */
++		static std::string parseVersion(char* data, size_t dataLen);
++
+ 		/**
+ 		 * @return The size in bytes of the SIP response first line
+ 		 */
+@@ -653,7 +661,6 @@ namespace pcpp
+ 		SipResponseFirstLine(SipResponseLayer* sipResponse);
+ 		SipResponseFirstLine(SipResponseLayer* sipResponse,  std::string version, SipResponseLayer::SipResponseStatusCode statusCode, std::string statusCodeString = "");
+ 
+-		static std::string parseVersion(char* data, size_t dataLen);
+ 		static SipResponseLayer::SipResponseStatusCode validateStatusCode(char* data, size_t dataLen, SipResponseLayer::SipResponseStatusCode potentialCode);
+ 
+ 
+diff --git a/Packet++/src/TextBasedProtocol.cpp b/Packet++/src/TextBasedProtocol.cpp
+index d8059983f1..fee529697b 100644
+--- a/Packet++/src/TextBasedProtocol.cpp
++++ b/Packet++/src/TextBasedProtocol.cpp
+@@ -475,15 +475,25 @@ HeaderField::HeaderField(TextBasedProtocolMessage* TextBasedProtocolMessage, int
+ 		// So fieldValuePtr give us the position of the separator. Value offset is the first non-space byte forward
+ 		fieldValuePtr++;
+ 
++		// reached the end of the packet and value start offset wasn't found
++		if ((size_t)(fieldValuePtr - (char*)(m_TextBasedProtocolMessage->m_Data)) >= m_TextBasedProtocolMessage->getDataLen())
++		{
++			m_ValueOffsetInMessage = -1;
++			m_FieldValueSize = -1;
++			return;
++		}
++
+ 		if (spacesAllowedBetweenNameAndValue)
+ 		{
+ 			// advance fieldValuePtr 1 byte forward while didn't get to end of packet and fieldValuePtr points to a space char
+ 			while ((size_t)(fieldValuePtr - (char*)m_TextBasedProtocolMessage->m_Data) <= m_TextBasedProtocolMessage->getDataLen() && (*fieldValuePtr) == ' ')
++			{
+ 				fieldValuePtr++;
++			}
+ 		}
+ 
+ 		// reached the end of the packet and value start offset wasn't found
+-		if ((size_t)(fieldValuePtr - (char*)(m_TextBasedProtocolMessage->m_Data)) > m_TextBasedProtocolMessage->getDataLen())
++		if ((size_t)(fieldValuePtr - (char*)(m_TextBasedProtocolMessage->m_Data)) >= m_TextBasedProtocolMessage->getDataLen())
+ 		{
+ 			m_ValueOffsetInMessage = -1;
+ 			m_FieldValueSize = -1;
+diff --git a/Packet++/src/UdpLayer.cpp b/Packet++/src/UdpLayer.cpp
+index 70f08a50b2..bb8b779bfb 100644
+--- a/Packet++/src/UdpLayer.cpp
++++ b/Packet++/src/UdpLayer.cpp
+@@ -105,7 +105,8 @@ void UdpLayer::parseNextLayer()
+ 	{
+ 		if (SipRequestFirstLine::parseMethod((char*)udpData, udpDataLen) != SipRequestLayer::SipMethodUnknown)
+ 			m_NextLayer = new SipRequestLayer(udpData, udpDataLen, this, m_Packet);
+-		else if (SipResponseFirstLine::parseStatusCode((char*)udpData, udpDataLen) != SipResponseLayer::SipStatusCodeUnknown)
++		else if (SipResponseFirstLine::parseStatusCode((char*)udpData, udpDataLen) != SipResponseLayer::SipStatusCodeUnknown
++						&& SipResponseFirstLine::parseVersion((char*)udpData, udpDataLen) != "")
+ 			m_NextLayer = new SipResponseLayer(udpData, udpDataLen, this, m_Packet);
+ 		else
+ 			m_NextLayer = new PayloadLayer(udpData, udpDataLen, this, m_Packet);
+diff --git a/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5716696466980864 b/Tests/Fuzzers/RegressionTests/regression_samples/clusterfuzz-testcase-minimized-FuzzTarget-5716696466980864
+new file mode 100644
+index 0000000000000000000000000000000000000000..21cee7468ee40e3fa8a20a2af827e72fceed4221
+GIT binary patch
+literal 459
+zcmca|c+)~A1{MZ}Jq!#CrVMvA6&V;985nLbq?7;!7#J1<IsacX)H5&&F>u(Oztbuw
+z=fJ_>IwK1x=fEH!_#do$df+1l;iHEc_(~S>2CU*x25L$%u`pHO*ym%jX(7S_1E2*8
+z|NjHkI+@%7nZp1w=TVXch?B~Y1w>FGka1iki$nq{lT7Zkz5yBt0;^Qhz<`UfKxEM>
+z@h2QyaIHXnR)P=!)F8(Qa;k%woE$dIX=(Tjz^M(poeuw@fJA*jx8d*wnI-}NEE|Ue
+
+literal 0
+HcmV?d00001
+

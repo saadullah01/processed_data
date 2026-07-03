@@ -1,0 +1,16 @@
+Project: wolfssl
+Fuzzing Engine: afl
+Fuzz Target: fuzzer-wolfssl-server
+Job Type: afl_asan_wolfssl
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60c00000167d
+Crash State:
+  ato16
+  TLSX_CSR_Parse
+  TLSX_Parse
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+ZD 11451
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzer-wolfssl-server from making much progress. Fixing this will allow more bugs to be found.
+ClusterFuzz testcase 6480646788743168 is verified as fixed

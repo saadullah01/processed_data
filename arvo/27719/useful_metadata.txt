@@ -1,0 +1,19 @@
+Project: opensc
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: libfuzzer_asan_opensc
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 1
+Crash Address: 0x7ff0675a86c0
+Crash State:
+  insert_key
+  detect_netkey
+  sc_pkcs15emu_tcos_init_ex
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_pkcs15_reader from making much progress. Fixing this will allow more bugs to be found."
+
+"ClusterFuzz testcase 4768673595916288 is verified as fixed."
+
+"This bug has been fixed for 30 days. It has been opened to the public."

@@ -1,0 +1,10 @@
+{
+    "libavcodec/msmpeg4dec.c": {
+        "entities": [
+            "function_ff_msmpeg4_decode_block"
+        ],
+        "lines": [
+            628
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+Project: libavc
+Fuzzing Engine: honggfuzz
+Fuzz Target: svc_dec_fuzzer
+Job Type: honggfuzz_asan_libavc
+Platform Id: linux
+
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  isvcd_parse_inter_slice_data_cavlc_enh_lyr
+  isvcd_parse_epslice
+  isvcd_parse_decode_slice_ext_nal
+
+Sanitizer: address (ASAN)

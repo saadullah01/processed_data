@@ -1,0 +1,12 @@
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_MLP_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_MLP_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash State:
+  output_data
+  read_access_unit
+  decode_simple_internal
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium

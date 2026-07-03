@@ -1,0 +1,10 @@
+{
+    "base/ttinterp.c": {
+        "entities": [
+            "function_Ins_NPUSHW"
+        ],
+        "lines": [
+            2350
+        ]
+    }
+}

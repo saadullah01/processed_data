@@ -1,0 +1,12 @@
+{
+    "src/apprentice.c": {
+        "entities": [
+            "function_parse_strength"
+        ],
+        "lines": [
+            32,
+            2434,
+            2444
+        ]
+    }
+}

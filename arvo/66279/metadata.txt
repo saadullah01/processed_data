@@ -1,0 +1,57 @@
+Project: leptonica
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5324785533911040
+
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: pixa_recog_fuzzer
+Job Type: libfuzzer_asan_leptonica
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x6150000040a8
+Crash State:
+  bmfGetWidth
+  bmfGetWordWidths
+  bmfGetLineStrings
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_leptonica&range=202005020213:202005030215
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5324785533911040
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """The problem is fixed in commit f86cdab
+https://github.com/DanBloomberg/leptonica/commit/f86cdab8d685ce5d2ea0d133c076611e3394c6c8"""
+
+-- Comment 3: """ClusterFuzz testcase 5324785533911040 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_leptonica&range=202401290612:202401300605
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

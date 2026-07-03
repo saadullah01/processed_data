@@ -1,0 +1,10 @@
+{
+    "libavformat/mvdec.c": {
+        "entities": [
+            "function_read_table"
+        ],
+        "lines": [
+            256
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+Project: json-c
+Fuzzing Engine: libFuzzer
+Fuzz Target: tokener_parse_ex_fuzzer
+Job Type: libfuzzer_asan_i386_json-c
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 4
+Crash Address: 0x0821d7a3
+Crash State:
+  json_tokener_parse_ex
+  tokener_parse_ex_fuzzer.cc
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer tokener_parse_ex_fuzzer from making much progress. Fixing this will allow more bugs to be found.

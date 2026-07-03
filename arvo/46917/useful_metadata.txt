@@ -1,0 +1,39 @@
+Project: libexif
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+-- Comment 1:
+Project: libexif
+Fuzzing Engine: libFuzzer
+Fuzz Target: exif_from_data_fuzzer
+Job Type: libfuzzer_asan_libexif
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6060000000bf
+Crash State:
+  exif_get_long
+  exif_mnote_data_fuji_load
+  exif_mnote_data_load
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed:
+Reproducer Testcase:
+
+Issue filed automatically.
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer exif_from_data_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+-- Comment 3:
+ClusterFuzz testcase 6455148890685440 is verified as fixed
+
+-- Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

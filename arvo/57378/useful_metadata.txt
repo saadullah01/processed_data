@@ -1,0 +1,11 @@
+Project: libxslt
+Fuzzing Engine: libFuzzer
+Fuzz Target: xslt
+Platform Id: linux
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x00000083db28
+Crash State:
+  xmlParseNotationDecl
+  xmlParseMarkupDecl
+  xmlParseInternalSubset
+Sanitizer: address (ASAN)

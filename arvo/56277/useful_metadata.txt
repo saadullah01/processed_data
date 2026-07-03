@@ -1,0 +1,22 @@
+Project: binutils-gdb
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_addr2line
+Job Type: honggfuzz_asan_binutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000260038002
+Crash State:
+  ecoff_swap_sym_in
+  _bfd_ecoff_locate_line
+  _bfd_mips_elf_find_nearest_line
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

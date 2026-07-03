@@ -1,0 +1,22 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: wireshark
+Fuzzing Engine: afl
+Fuzz Target: fuzzshark_ip
+Job Type: afl_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x631000178820
+Crash State:
+  tvb_memcpy
+  dissect_wcp
+  call_dissector_work
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

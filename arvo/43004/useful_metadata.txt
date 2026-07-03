@@ -1,0 +1,18 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000009b98
+Crash State:
+  pdfi_array_get
+  pdfi_array_get_type
+  pdfi_create_colorspace_by_array
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

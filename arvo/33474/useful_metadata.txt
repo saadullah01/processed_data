@@ -1,0 +1,24 @@
+Detailed Report: https://oss-fuzz.com/testcase?key=4566878358994944
+
+Project: geos
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_geo2
+Job Type: libfuzzer_asan_geos
+Platform Id: linux
+
+Crash Type: Stack-use-after-scope READ 8
+Crash Address: 0x7fff77725a18
+Crash State:
+  geos::operation::overlayng::EdgeNodingBuilder::add
+  geos::operation::overlayng::EdgeNodingBuilder::build
+  geos::operation::overlayng::OverlayNG::computeEdgeOverlay
+
+Sanitizer: address (ASAN)
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_asan_geos&revision=202104200620
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4566878358994944
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_geo2 from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4566878358994944 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_geos&range=202108240610:202108260603

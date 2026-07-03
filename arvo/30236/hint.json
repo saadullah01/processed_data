@@ -1,0 +1,41 @@
+{
+    "plugins/sudoers/gram.c": {
+        "entities": [
+            "variable_yyrline",
+            "function_yyparse"
+        ],
+        "lines": [
+            3077,
+            2569,
+            3091,
+            2836,
+            2967,
+            2583,
+            2980,
+            2600,
+            2994,
+            2869,
+            3008,
+            3022,
+            2902,
+            2777,
+            3289,
+            864,
+            2791,
+            2925,
+            2543,
+            3064,
+            2813
+        ]
+    },
+    "plugins/sudoers/gram.y": {
+        "entities": [
+            "grammar rule_options",
+            "grammar_rule_options"
+        ],
+        "lines": [
+            792,
+            831
+        ]
+    }
+}

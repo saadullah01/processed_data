@@ -1,0 +1,10 @@
+{
+    "icu4c/source/test/fuzzer/date_format_fuzzer.cpp": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            12
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "Zend/tests/div_by_zero_compound_refcounted.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_operators.c": {
+        "entities": [
+            "function_div_function"
+        ],
+        "lines": [
+            1314,
+            1324
+        ]
+    }
+}

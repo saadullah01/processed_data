@@ -1,0 +1,27 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x000000001000
+Crash State:
+  names_string_ref
+  zfont_glyph_name
+  pdfi_fapi_get_glyphname_or_cid
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fix committed upstream.
+
+ClusterFuzz testcase 5250930063310848 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,19 @@
+Project: gstreamer
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE {*}
+Severity: High
+
+Project: gstreamer
+Fuzzing Engine: libFuzzer
+Fuzz Target: gst-discoverer
+Job Type: libfuzzer_asan_gstreamer
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x60c000010d40
+Crash State:
+  parse_subrip
+  parse_webvtt
+  gst_sub_parse_chain
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

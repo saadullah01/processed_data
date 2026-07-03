@@ -1,0 +1,22 @@
+Project: librawspeed
+Fuzzer: afl_librawspeed_PanasonicDecompressorFuzzer
+Fuzz target binary: PanasonicDecompressorFuzzer
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE {*}
+Crash Address: 0x62900000e204
+Crash State:
+  rawspeed::PanasonicDecompressor::PanaBitpump::getBits
+  rawspeed::PanasonicDecompressor::decompressThreaded
+  rawspeed::RawDecompressorThread::start_routine
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201712030636:201712040643.
+
+ClusterFuzz testcase 4816034927214592 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

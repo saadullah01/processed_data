@@ -1,0 +1,28 @@
+Project: fluent-bit
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-double-free
+Severity: High
+
+Project: fluent-bit
+Fuzzing Engine: libFuzzer
+Fuzz Target: flb-it-fuzz-config_random_fuzzer_OSSFUZZ
+Job Type: libfuzzer_asan_fluent-bit
+Platform Id: linux
+
+Crash Type: Heap-double-free
+Crash Address: 0x61100003dc80
+Crash State:
+  flb_sds_destroy
+  flb_parser_conf_file
+  config_random_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Reproducer Testcase: 6437799227686912
+
+ClusterFuzz testcase 6437799227686912 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

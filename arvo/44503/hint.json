@@ -1,0 +1,10 @@
+{
+    "tests/oss-fuzz/pdu_parse_target.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            8
+        ]
+    }
+}

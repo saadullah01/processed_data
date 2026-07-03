@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decoders/NefDecoder.cpp": {
+        "entities": [
+            "method_NefDecoder::DecodeNikonSNef"
+        ],
+        "lines": [
+            581
+        ]
+    }
+}

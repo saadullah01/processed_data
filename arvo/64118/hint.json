@@ -1,0 +1,24 @@
+{
+    "src/bits.c": {
+        "entities": [
+            "macro_CHK_OVERFLOW_PLUS",
+            "function_bit_advance_position",
+            "function_bit_read_fixed"
+        ],
+        "lines": [
+            64,
+            134,
+            1578,
+            145,
+            122
+        ]
+    },
+    "src/decode.c": {
+        "entities": [
+            "function_decode_preR13_sentinel"
+        ],
+        "lines": [
+            6277
+        ]
+    }
+}

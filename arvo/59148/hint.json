@@ -1,0 +1,10 @@
+{
+    "bfd/syms.c": {
+        "entities": [
+            "function__bfd_stab_section_find_nearest_line"
+        ],
+        "lines": [
+            945
+        ]
+    }
+}

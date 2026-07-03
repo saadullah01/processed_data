@@ -1,0 +1,10 @@
+{
+    "libspectre/ps.c": {
+        "entities": [
+            "function_ps_read_doseps"
+        ],
+        "lines": [
+            2204
+        ]
+    }
+}

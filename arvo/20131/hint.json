@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-idprime.c": {
+        "entities": [
+            "variable_idprime_atrs"
+        ],
+        "lines": [
+            52
+        ]
+    }
+}

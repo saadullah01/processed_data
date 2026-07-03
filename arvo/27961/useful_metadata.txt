@@ -1,0 +1,13 @@
+Project: mupdf
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_msan_mupdf
+Platform Id: linux
+Crash State:
+  template_span_with_mask_3_general
+  paint_span_with_mask_3_a
+  fz_paint_pixmap_with_mask
+Recommended Security Severity: Medium

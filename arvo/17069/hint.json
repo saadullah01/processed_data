@@ -1,0 +1,10 @@
+{
+    "src/libFLAC/bitreader.c": {
+        "entities": [
+            "function_FLAC__bitreader_read_rice_signed_block"
+        ],
+        "lines": [
+            869
+        ]
+    }
+}

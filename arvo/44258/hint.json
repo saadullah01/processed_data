@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_xref.c": {
+        "entities": [
+            "function_pdfi_process_xref_stream"
+        ],
+        "lines": [
+            205
+        ]
+    }
+}

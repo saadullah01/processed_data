@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decoders/OrfDecoder.cpp": {
+        "entities": [
+            "function_OrfDecoder::decodeRawInternal"
+        ],
+        "lines": [
+            98
+        ]
+    }
+}

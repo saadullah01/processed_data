@@ -1,0 +1,27 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x62d00001c450
+Crash State:
+  pdfi_fapi_get_word
+  write_delta_array_entry
+  gs_fapi_serialize_type2_font
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Upstream fix committed.
+
+ClusterFuzz testcase 6200706263023616 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

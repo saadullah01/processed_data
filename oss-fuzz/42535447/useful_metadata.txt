@@ -1,0 +1,65 @@
+Issue 42535447
+libultrahdr:ultrahdr_dec_fuzzer: Heap-buffer-overflow in ultrahdr::gain_map_metadata::decodeGainmapMetadata
+
+Detailed Report: https://oss-fuzz.com/testcase?key=5624388803166208
+
+Project: libultrahdr
+Fuzzing Engine: honggfuzz
+Fuzz Target: ultrahdr_dec_fuzzer
+Job Type: honggfuzz_asan_libultrahdr
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x5020000004b2
+Crash State:
+  ultrahdr::gain_map_metadata::decodeGainmapMetadata
+  ultrahdr::JpegR::decodeJPEGR
+  UltraHdrDecFuzzer::process
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=honggfuzz_asan_libultrahdr&range=202405100601:202405110610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5624388803166208
+
+Issue filed automatically.
+
+Comments:
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer ultrahdr_dec_fuzzer from making much progress. Fixing this will allow more bugs to be found."
+
+"Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 5624388803166208 is verified as fixed in https://oss-fuzz.com/revisions?job=honggfuzz_asan_libultrahdr&range=202405140612:202405150604"
+
+"This bug has been fixed. It has been opened to the public."
+
+Issue metadata:
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+CC
+ar...@google.com
+di...@google.com
+ha...@ittiam.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+ra...@ittiam.com
+um...@ittiam.com
+
+Disclosure
+Aug 9, 2024
+Reported
+May 11, 2024

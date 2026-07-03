@@ -1,0 +1,25 @@
+{
+    "Zend/tests/gc_043.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_gc.c": {
+        "entities": [
+            "function_zend_gc_collect_cycles",
+            "function_gc_remove_nested_data_from_buffer"
+        ],
+        "lines": [
+            1376,
+            1410,
+            1348,
+            1419,
+            1390,
+            1518,
+            1328,
+            1364,
+            1428,
+            1557,
+            1464
+        ]
+    }
+}

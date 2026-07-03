@@ -1,0 +1,32 @@
+Project: mruby
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: mruby
+Fuzzing Engine: honggfuzz
+Fuzz Target: mruby_fuzzer
+Job Type: honggfuzz_asan_mruby
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0002800c734e
+Crash State:
+  presym_sym2name
+  sym2name_len
+  mrb_sym_name_len
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer mruby_fuzzer from making much progress.
+
+This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+I could not reproduce the error.
+
+This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+ClusterFuzz testcase 5354991105343488 is verified as fixed

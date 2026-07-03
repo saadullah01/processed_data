@@ -1,0 +1,26 @@
+From b1e3c5970dbf6ef329b5b146ae03158824e201fb Mon Sep 17 00:00:00 2001
+From: Dan Bloomberg <dan.bloomberg@gmail.com>
+Date: Mon, 11 May 2020 15:57:40 -0700
+Subject: [PATCH] Attempted to fix issue 22143: in oss-fuzz:  Null deference
+ READ * check result of colormap removal; otherwise, failure would cause a
+ crash
+
+---
+ src/colorcontent.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/colorcontent.c b/src/colorcontent.c
+index 4a49b921f..cdd7ba4a3 100644
+--- a/src/colorcontent.c
++++ b/src/colorcontent.c
+@@ -708,6 +708,10 @@ PIXCMAP   *cmap;
+         pixc = pixRemoveColormap(pixs, REMOVE_CMAP_TO_FULL_COLOR);
+     else
+         pixc = pixClone(pixs);
++    if (!pixc || pixGetDepth(pixc) != 32) {
++        pixDestroy(&pixc);
++        return (PIX *)ERROR_PTR("rgb pix not made", procName, NULL);
++    }
+ 
+     pixd = pixCreate(w, h, 1);
+     datad = pixGetData(pixd);

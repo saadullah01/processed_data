@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_repair.c": {
+        "entities": [
+            "function_pdfi_repair_add_object"
+        ],
+        "lines": [
+            33
+        ]
+    }
+}

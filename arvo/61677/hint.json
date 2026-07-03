@@ -1,0 +1,12 @@
+{
+    "opcodes/kvx-dis.c": {
+        "entities": [
+            "function_print_insn_kvx",
+            "function_decode_prologue_epilogue_bundle"
+        ],
+        "lines": [
+            1013,
+            1214
+        ]
+    }
+}

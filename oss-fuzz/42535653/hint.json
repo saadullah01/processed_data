@@ -1,0 +1,12 @@
+{
+    "base/gdevp14.c": {
+        "entities": [
+            "function_pdf14_spot_get_color_comp_index"
+        ],
+        "lines": [
+            12468,
+            12485,
+            12478
+        ]
+    }
+}

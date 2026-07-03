@@ -1,0 +1,22 @@
+Project: ots
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: ots
+Fuzzing Engine: libFuzzer
+Fuzz Target: ots-fuzzer
+Job Type: libfuzzer_msan_ots
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  ots::OTSStream::WriteU16
+  ots::OpenTypeSTAT::Serialize
+  ProcessGeneric
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

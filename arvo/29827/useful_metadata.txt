@@ -1,0 +1,15 @@
+Project: htslib
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+Fuzz Target: hts_open_fuzzer
+Job Type: afl_asan_htslib
+Platform Id: linux
+Crash Address: 0x61d000001cf8
+Crash State:
+  cram_xpack_decode_init
+  cram_decoder_init
+  cram_decode_compression_header
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

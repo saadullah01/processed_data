@@ -1,0 +1,22 @@
+Project: assimp
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_asan_assimp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60700000094f
+Crash State:
+  Assimp::IOSystem2Unzip::opendisk
+  call_zopendisk64
+  unzOpenCurrentFile3
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,13 @@
+{
+    "libselinux/fuzz/selabel_file_compiled-fuzzer.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            153,
+            202,
+            141,
+            95
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "decoder/ihevcd_sao.c": {
+        "entities": [
+            "function_ihevcd_sao_ctb",
+            "function_ihevcd_sao_shift_ctb"
+        ],
+        "lines": [
+            568,
+            103
+        ]
+    }
+}

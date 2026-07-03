@@ -1,0 +1,14 @@
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_frame_fuzzer
+Job Type: libfuzzer_asan_i386_c-blosc2
+Platform Id: linux
+Crash Type: Negative-size-param
+Crash Address:
+Crash State:
+  frame_get_metalayers
+  frame_to_schunk
+  blosc2_schunk_from_buffer
+Sanitizer: address (ASAN)
+Regressed range: 202101190627:202101200619
+Reproducer testcase id: 5964915892420608

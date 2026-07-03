@@ -1,0 +1,10 @@
+{
+    "bfd/coff-alpha.c": {
+        "entities": [
+            "function_alpha_ecoff_get_relocated_section_contents"
+        ],
+        "lines": [
+            726
+        ]
+    }
+}

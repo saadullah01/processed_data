@@ -1,0 +1,10 @@
+{
+    "libavcodec/aic.c": {
+        "entities": [
+            "function_aic_decode_init"
+        ],
+        "lines": [
+            465
+        ]
+    }
+}

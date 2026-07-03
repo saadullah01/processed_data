@@ -1,0 +1,10 @@
+{
+    "src/decode_r2007.c": {
+        "entities": [
+            "function_read_file_header"
+        ],
+        "lines": [
+            1244
+        ]
+    }
+}

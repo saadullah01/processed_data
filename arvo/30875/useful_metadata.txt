@@ -1,0 +1,16 @@
+Project: wolfssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-sp-math
+Job Type: libfuzzer_msan_wolfssl
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  sp_read_unsigned_bin
+  cryptofuzz::module::wolfCrypt::OpDH_Derive
+  cryptofuzz::ExecutorBase<cryptofuzz::Bignum, cryptofuzz::operation::DH_Derive>::
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

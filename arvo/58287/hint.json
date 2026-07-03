@@ -1,0 +1,13 @@
+{
+    "libfaad/pns.c": {
+        "entities": [
+            "function_pns_decode"
+        ],
+        "lines": [
+            208,
+            161,
+            186,
+            253
+        ]
+    }
+}

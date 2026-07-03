@@ -1,0 +1,10 @@
+{
+    "lib/legacy/zstd_v03.c": {
+        "entities": [
+            "function_ZSTD_decodeLiteralsBlock"
+        ],
+        "lines": [
+            2530
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzTTF
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000042e7f31
+Crash State:
+  TTF::be_u16
+  TTF::Hhea::number_of_h_metrics
+  TTF::Font::load_from_offset
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer FuzzTTF from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4944791397859328 is verified as fixed.

@@ -1,0 +1,10 @@
+{
+    "Userland/Libraries/LibTTF/Font.cpp": {
+        "entities": [
+            "function_Font::load_from_offset"
+        ],
+        "lines": [
+            241
+        ]
+    }
+}

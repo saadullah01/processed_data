@@ -1,0 +1,10 @@
+{
+    "src/lib_json/json_reader.cpp": {
+        "entities": [
+            "method_OurReader::skipBom"
+        ],
+        "lines": [
+            1270
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "gdal/third_party/LercLib/BitStuffer2.cpp": {
+        "entities": [
+            "method_BitStuffer2::Decode"
+        ],
+        "lines": [
+            235
+        ]
+    }
+}

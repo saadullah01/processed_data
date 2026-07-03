@@ -1,0 +1,13 @@
+{
+    "src/lib/util/dns.c": {
+        "entities": [
+            "function_dns_label_decode",
+            "function_fr_dns_label_to_value_box"
+        ],
+        "lines": [
+            1234,
+            1194,
+            1135
+        ]
+    }
+}

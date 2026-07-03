@@ -1,0 +1,18 @@
+Project: h3
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzerVertexes
+Job Type: libfuzzer_msan_h3
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  cellToVertex
+  fuzzerVertexes.c
+  cellToVertex
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5260556457607168 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+This issue is fixed in v4.0.1

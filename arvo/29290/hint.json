@@ -1,0 +1,10 @@
+{
+    "src/imageformats/ani.cpp": {
+        "entities": [
+            "method_ANIHandler::ensureScanned"
+        ],
+        "lines": [
+            325
+        ]
+    }
+}

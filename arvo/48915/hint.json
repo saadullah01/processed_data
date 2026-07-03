@@ -1,0 +1,26 @@
+{
+    "include/mruby/internal.h": {
+        "entities": [],
+        "lines": [
+            182
+        ]
+    },
+    "mrbgems/mruby-bigint/core/bigint.c": {
+        "entities": [
+            "function_mpz_init_set"
+        ],
+        "lines": [
+            1450,
+            34,
+            23
+        ]
+    },
+    "src/class.c": {
+        "entities": [
+            "function_init_copy"
+        ],
+        "lines": [
+            2737
+        ]
+    }
+}

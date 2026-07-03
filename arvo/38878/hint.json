@@ -1,0 +1,15 @@
+{
+    "src/hb-repacker.hh": {
+        "entities": [
+            "struct_overflow_record_t",
+            "function_hb_resolve_overflows",
+            "struct_graph_t"
+        ],
+        "lines": [
+            708,
+            91,
+            430,
+            414
+        ]
+    }
+}

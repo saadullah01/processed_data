@@ -1,0 +1,10 @@
+{
+    "encoder/ih264e_encode.c": {
+        "entities": [
+            "function_ih264e_encode"
+        ],
+        "lines": [
+            215
+        ]
+    }
+}

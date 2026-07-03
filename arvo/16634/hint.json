@@ -1,0 +1,14 @@
+{
+    "src/cdf.c": {
+        "entities": [
+            "function_cdf_read_sector",
+            "function_cdf_read_short_sector"
+        ],
+        "lines": [
+            35,
+            53,
+            405,
+            415
+        ]
+    }
+}

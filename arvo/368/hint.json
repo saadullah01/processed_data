@@ -1,0 +1,11 @@
+{
+    "src/cff/cffload.c": {
+        "entities": [
+            "function_cff_blend_doBlend"
+        ],
+        "lines": [
+            1307,
+            1316
+        ]
+    }
+}

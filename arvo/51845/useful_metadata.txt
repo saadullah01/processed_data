@@ -1,0 +1,14 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_addr2line
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  _bfd_stab_section_find_nearest_line
+  coff_find_nearest_line_with_names
+  coff_find_nearest_line
+Sanitizer: address (ASAN)
+Regressed: 202209250605:202209260615
+Reproducer Testcase: 4568096413450240

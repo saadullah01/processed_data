@@ -1,0 +1,37 @@
+Project: libxml2
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Comment 1:
+Project: libxml2
+Fuzzer: libFuzzer_libxml2_xml_read_memory_fuzzer
+Fuzz target binary: libxml2_xml_read_memory_fuzzer
+Job Type: libfuzzer_ubsan_libxml2
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash State:
+  xmlAddDefAttrs
+  xmlParseAttributeListDecl
+  xmlParseMarkupDecl
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase ID: 6187774258446336
+
+Comment 2:
+This issue will be fixed by resolving this upstream bug:
+Bug 766828 - xmlParseStartTag2() contains typo when checking for default definitions for an attribute in a namespace
+The problem here is a sloppy definition of a two-dimensional array.  Fixing the definition of the 2D array (and cleaning up the code that uses it) fixes this UBSan warning.
+
+Comment 3:
+The UBSan error is fixed here:
+
+Comment 4:
+ClusterFuzz has detected this issue as fixed in range 201705312014:201706011641.
+
+Comment 5:
+ClusterFuzz testcase 6187774258446336 is verified as fixed, so closing issue.
+
+Comment 6:
+This bug has been fixed for 30 days. It has been opened to the public.

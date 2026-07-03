@@ -1,0 +1,79 @@
+Project: ffmpeg
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=6455337349545984
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  decode_audio_block
+  ac3_decode_frame
+  decode_simple_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_ffmpeg&range=201705081931:201705091623
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6455337349545984
+
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz has detected this issue as fixed in range 201705131623:201705141623.
+
+Detailed report: https://oss-fuzz.com/testcase?key=6455337349545984
+
+Project: ffmpeg
+Fuzzer: libFuzzer_ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Fuzz target binary: ffmpeg_AV_CODEC_ID_AC3_fuzzer
+Job Type: libfuzzer_ubsan_ffmpeg
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address: 
+Crash State:
+  decode_audio_block
+  ac3_decode_frame
+  decode_simple_internal
+  
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_ffmpeg&range=201705081931:201705091623
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_ffmpeg&range=201705131623:201705141623
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6455337349545984
+
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 3: """ClusterFuzz testcase 6455337349545984 is verified as fixed, so closing issue.
+
+If this is incorrect, please add ClusterFuzz-Wrong label and re-open the issue."""
+
+-- Comment 4: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

@@ -1,0 +1,29 @@
+From 3fad9ee6b69ed018762651314b17fa5567505ca1 Mon Sep 17 00:00:00 2001
+From: Nathan Moinvaziri <nathan@nathanm.com>
+Date: Fri, 29 Jan 2021 18:48:19 -0800
+Subject: [PATCH] Fixed ASAN unknown-read due to off_pos 32-bit overflow and
+ check if off_pos less than is zero.
+ https://oss-fuzz.com/testcase-detail/4746687820201984
+
+---
+ blosc/frame.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/blosc/frame.c b/blosc/frame.c
+index 6cc6a1769..2960a4420 100644
+--- a/blosc/frame.c
++++ b/blosc/frame.c
+@@ -917,10 +917,10 @@ uint8_t* get_coffsets(blosc2_frame *frame, int32_t header_len, int64_t cbytes, i
+     return frame->coffsets;
+   }
+   if (frame->sdata != NULL) {
+-    int32_t off_pos = header_len + cbytes;
++    int64_t off_pos = header_len + cbytes;
+     // Check that there is enough room to read Blosc header
+-    if (off_pos + BLOSC_EXTENDED_HEADER_LENGTH > frame->len) {
+-      BLOSC_TRACE_ERROR("Cannot read the offsets past frame boundary.");
++    if (off_pos < 0 || off_pos + BLOSC_EXTENDED_HEADER_LENGTH > frame->len) {
++      BLOSC_TRACE_ERROR("Cannot read the offsets outside of frame boundary.");
+       return NULL;
+     }
+     // For in-memory frames, the coffset is just one pointer away

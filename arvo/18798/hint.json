@@ -1,0 +1,10 @@
+{
+    "src/libopensc/card-setcos.c": {
+        "entities": [
+            "function_parse_sec_attr_44"
+        ],
+        "lines": [
+            787
+        ]
+    }
+}

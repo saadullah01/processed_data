@@ -1,0 +1,24 @@
+Project: assimp
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 8
+Severity: Medium
+
+Project: assimp
+Fuzzing Engine: afl
+Fuzz Target: assimp_fuzzer
+Job Type: afl_asan_assimp
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7fcc428b69b0
+Crash State:
+  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
+  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
+  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<ch
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer assimp_fuzzer from making much progress. Fixing this will allow more bugs to be found.

@@ -1,0 +1,17 @@
+Project: file
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: magic_fuzzer
+Job Type: libfuzzer_asan_i386_file
+Platform Id: linux
+Crash Address: 0xef4dd848
+Crash State:
+  cdf_read_property_info
+  cdf_unpack_summary_info
+  cdf_file_summary_info
+Sanitizer: address (ASAN)
+Recommended Security Severity: High

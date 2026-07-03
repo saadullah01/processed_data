@@ -1,0 +1,10 @@
+{
+    "av1/decoder/decodeframe.c": {
+        "entities": [
+            "function_show_existing_frame_reset"
+        ],
+        "lines": [
+            4755
+        ]
+    }
+}

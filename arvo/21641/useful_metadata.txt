@@ -1,0 +1,24 @@
+Project: leptonica
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: pix_rotate_shear_fuzzer
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  putgreytile
+  gtStripContig
+  TIFFRGBAImageGet
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+This is calling a tiff library function:
+    TIFFReadRGBAImageOriented()
+to decode the compressed string in the tif into a raster image, which is written into tiffdata.
+
+leptonica has no control over the compressed string, or the decoding functions in the tiff librrary.
+If they find an uninitialized value when decoding, there is nothing that the leptonica wrapper can do about it.

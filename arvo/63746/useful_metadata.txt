@@ -1,0 +1,17 @@
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_filecfg_protocols
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7fffa2bc4ee0
+Crash State:
+  ndpi_handle_rule
+  ndpi_load_protocols_file_fd
+  fuzz_filecfg_protocols.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 6210570824843264 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

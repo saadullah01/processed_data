@@ -1,0 +1,13 @@
+{
+    "lib/jxl/dec_noise.cc": {
+        "entities": [
+            "function_AddNoise"
+        ],
+        "lines": [
+            238,
+            222,
+            22,
+            215
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/filters/reframe_mp3.c": {
+        "entities": [
+            "function_mp3_dmx_process"
+        ],
+        "lines": [
+            643
+        ]
+    }
+}

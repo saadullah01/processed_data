@@ -1,0 +1,25 @@
+Project: libxslt
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: libxslt
+Fuzzing Engine: libFuzzer
+Fuzz Target: xslt
+Job Type: libfuzzer_msan_libxslt
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  xmlXPathFreeCompExpr
+  xsltFreeAVTList
+  xsltFreeStylesheet
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+ClusterFuzz testcase 5149552796893184 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

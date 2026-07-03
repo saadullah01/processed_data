@@ -1,0 +1,14 @@
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_asan_poppler
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x62e0000002f4
+Crash State:
+  XRef::getEntry
+  Parser::makeStream
+  Parser::getObj
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+ClusterFuzz has detected this issue as fixed in range 201902020252:201902030252

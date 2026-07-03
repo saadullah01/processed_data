@@ -1,0 +1,22 @@
+Project: hermes
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 2
+Severity: Medium
+
+Project: hermes
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer-jsi-entry
+Job Type: libfuzzer_asan_hermes
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7ffe639df350
+Crash State:
+  hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, cha
+  hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, cha
+  hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, cha
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

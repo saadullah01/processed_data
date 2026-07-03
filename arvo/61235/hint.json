@@ -1,0 +1,16 @@
+{
+    "src/jv.c": {
+        "entities": [
+            "function_tsd_dec_ctx_get"
+        ],
+        "lines": [
+            528
+        ]
+    },
+    "tests/jq.test": {
+        "entities": [],
+        "lines": [
+            556
+        ]
+    }
+}

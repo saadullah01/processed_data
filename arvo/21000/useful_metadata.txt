@@ -1,0 +1,19 @@
+Project: ndpi
+Fuzzing Engine: afl
+Fuzz Target: fuzz_process_packet
+Job Type: afl_asan_ndpi
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x60800029d57a
+Crash State:
+  ndpi_search_oscar_tcp_connect
+  check_ndpi_tcp_flow_func
+  ndpi_detection_process_packet
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Crash Revision: 202002190356
+Reproducer Testcase: 5657110761439232
+
+ClusterFuzz testcase 5657110761439232 is verified as fixed in range: 202003120309:202003131930
+
+This bug has been fixed for 30 days. It has been opened to the public.

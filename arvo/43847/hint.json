@@ -1,0 +1,10 @@
+{
+    "Packet++/src/DnsResource.cpp": {
+        "entities": [
+            "method_IDnsResource::decodeName"
+        ],
+        "lines": [
+            138
+        ]
+    }
+}

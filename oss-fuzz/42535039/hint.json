@@ -1,0 +1,13 @@
+{
+    "base/gdevmpla.c": {
+        "entities": [
+            "function_mem_planar_put_image_slow"
+        ],
+        "lines": [
+            320,
+            336,
+            352,
+            365
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "prog/fuzzing/flipdetect_fuzzer.cc": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            17
+        ]
+    }
+}

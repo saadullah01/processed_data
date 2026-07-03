@@ -1,0 +1,67 @@
+{
+    "include/mupdf/fitz/filter.h": {
+        "entities": [],
+        "lines": [
+            12
+        ]
+    },
+    "source/fitz/filter-basic.c": {
+        "entities": [
+            "function_next_arc4",
+            "function_next_concat",
+            "function_next_null"
+        ],
+        "lines": [
+            2,
+            675,
+            75,
+            45,
+            238,
+            91
+        ]
+    },
+    "source/fitz/untar.c": {
+        "entities": [
+            "function_open_tar_entry"
+        ],
+        "lines": [
+            118
+        ]
+    },
+    "source/fitz/unzip.c": {
+        "entities": [
+            "function_open_zip_entry"
+        ],
+        "lines": [
+            286
+        ]
+    },
+    "source/pdf/pdf-form.c": {
+        "entities": [
+            "function_pdf_signature_widget_byte_range",
+            "function_pdf_signature_widget_hash_bytes"
+        ],
+        "lines": [
+            1268,
+            1245
+        ]
+    },
+    "source/pdf/pdf-signature.c": {
+        "entities": [
+            "function_pdf_write_digest"
+        ],
+        "lines": [
+            29
+        ]
+    },
+    "source/pdf/pdf-stream.c": {
+        "entities": [
+            "function_pdf_open_inline_stream",
+            "function_pdf_open_raw_filter"
+        ],
+        "lines": [
+            298,
+            359
+        ]
+    }
+}

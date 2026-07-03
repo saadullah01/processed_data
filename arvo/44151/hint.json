@@ -1,0 +1,13 @@
+{
+    "pdf/pdf_text.c": {
+        "entities": [
+            "function_pdfi_show_set_params",
+            "function_pdfi_TJ"
+        ],
+        "lines": [
+            1312,
+            1201,
+            486
+        ]
+    }
+}

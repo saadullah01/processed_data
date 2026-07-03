@@ -1,0 +1,43 @@
+Project: karchive
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: karchive
+Fuzzer: afl_karchive_fuzzer
+Fuzz target binary: karchive_fuzzer
+Job Type: afl_asan_karchive
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x605000000278
+Crash State:
+  QByteArray::operator=
+  KAr::openArchive
+  KArchive::open
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer karchive_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201905150259:201905152303.
+
+Project: karchive
+Fuzzer: afl_karchive_fuzzer
+Fuzz target binary: karchive_fuzzer
+Job Type: afl_asan_karchive
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x605000000278
+Crash State:
+  QByteArray::operator=
+  KAr::openArchive
+  KArchive::open
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

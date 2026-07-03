@@ -1,0 +1,31 @@
+Project: libbpf
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Project: libbpf
+Fuzzing Engine: libFuzzer
+Fuzz Target: bpf-object-fuzzer
+Job Type: libfuzzer_asan_libbpf
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x6140000542a0
+Crash State:
+  __bpf_object__open
+  bpf_object__open_mem
+  bpf-object-fuzzer.c
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Reproducer Testcase: 6218051104669696
+Issue filed automatically.
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer bpf-object-fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+ClusterFuzz testcase 6218051104669696 is verified as fixed.
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,20 @@
+Project: mupdf
+Fuzzing Engine: libFuzzer
+Fuzz Target: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  pdf_drop_obj
+  pdf_drop_xref_subsec
+  pdf_drop_document_imp
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 6353530199080960 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+This issue was related to OSS-fuzz issue #55826 and was also fixed by a commit referenced in the report.

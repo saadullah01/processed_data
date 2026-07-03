@@ -1,0 +1,12 @@
+{
+    "libyarmodules/dotnet.c": {
+        "entities": [
+            "function_dotnet_parse_tilde_2"
+        ],
+        "lines": [
+            1137,
+            1177,
+            1166
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+Project: htslib
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: UNKNOWN WRITE
+Severity: High
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: hts_open_fuzzer
+Platform Id: linux
+Crash Address: 0x7fe46ff161c0
+Crash State:
+  vcf_parse_format
+  vcf_parse
+  vcf_read
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: High

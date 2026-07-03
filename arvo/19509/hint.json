@@ -1,0 +1,27 @@
+{
+    "Makefile.am": {
+        "entities": [],
+        "lines": [
+            873
+        ]
+    },
+    "libarchive/archive_read_support_format_rar5.c": {
+        "entities": [
+            "function_process_head_file"
+        ],
+        "lines": [
+            1702,
+            63
+        ]
+    },
+    "libarchive/test/test_read_format_rar5.c": {
+        "entities": [],
+        "lines": [
+            1241
+        ]
+    },
+    "libarchive/test/test_read_format_rar5_different_winsize_on_merge.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

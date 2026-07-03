@@ -1,0 +1,14 @@
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15init
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Invalid-free
+Crash Address: 0x000001000002
+Crash State:
+  sc_file_clear_acl_entries
+  sc_file_free
+  setcos_create_key
+
+Sanitizer: address (ASAN)

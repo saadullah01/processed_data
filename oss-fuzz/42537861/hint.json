@@ -1,0 +1,10 @@
+{
+    "libavcodec/get_buffer.c": {
+        "entities": [
+            "function_update_frame_pool"
+        ],
+        "lines": [
+            142
+        ]
+    }
+}

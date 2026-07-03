@@ -1,0 +1,140 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 387317434
+OSS Fuzz
+387317434
+libvips:matrixsave_buffer_fuzzer: Heap-buffer-overflow in next_marker
+Hotlists (3)
+Mark as Duplicate
+Comments
+(4)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(9)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTION87...@developer.gserviceaccount.com created issue #1
+Jan 4, 2025 07:51AM
+Detailed Report: https://oss-fuzz.com/testcase?key=6578104092393472
+
+Project: libvips
+Fuzzing Engine: libFuzzer
+Fuzz Target: matrixsave_buffer_fuzzer
+Job Type: libfuzzer_asan_libvips
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x7cde60aff800
+Crash State:
+  next_marker
+  read_markers
+  consume_markers
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libvips&range=202501020653:202501030600
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6578104092393472
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+lo...@gmail.com<lo...@gmail.com> #2
+Jan 5, 2025 05:33AM
+Caused by https://github.com/libvips/libvips/commit/7b47b07bcd0583c4f9d4afaac85d3abb5008edff and fixed by https://github.com/libvips/libvips/pull/4340
+
+This was not part of any libvips release.
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #3
+Jan 12, 2025 02:16AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 6578104092393472 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libvips&range=202501110646:202501120630
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+pe...@google.com<pe...@google.com> #4
+Jan 12, 2025 07:41AM
+
+This bug has been fixed. It has been opened to the public.
+
+Add comment
+Comment
+Issue metadata
+Reporter
+87...@developer.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+jc...@gmail.com
+kl...@gmail.com
+lo...@gmail.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Apr 4, 2025
+Project
+libvips
+Reported
+Jan 4, 2025
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

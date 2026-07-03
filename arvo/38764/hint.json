@@ -1,0 +1,10 @@
+{
+    "libarchive/archive_read_support_format_iso9660.c": {
+        "entities": [
+            "function_read_children"
+        ],
+        "lines": [
+            1007
+        ]
+    }
+}

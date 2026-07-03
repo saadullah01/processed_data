@@ -1,0 +1,35 @@
+{
+    "src/hb-open-type.hh": {
+        "entities": [
+            "method_HeadlessArrayOf::operator[]",
+            "method_ArrayOf::operator[]",
+            "struct_ArrayOf",
+            "struct_List16OfOffsetTo",
+            "struct_ArrayOfM1",
+            "struct_UnsizedListOfOffset16To",
+            "method_UnsizedArrayOf::operator[]",
+            "struct_HeadlessArrayOf",
+            "struct_VarSizedBinSearchArrayOf",
+            "struct_UnsizedArrayOf"
+        ],
+        "lines": [
+            616,
+            1066,
+            459,
+            559,
+            881,
+            466,
+            754,
+            566,
+            797
+        ]
+    },
+    "src/hb-ot-layout-common.hh": {
+        "entities": [
+            "struct_Lookup"
+        ],
+        "lines": [
+            1317
+        ]
+    }
+}

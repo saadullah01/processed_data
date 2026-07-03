@@ -1,0 +1,10 @@
+{
+    "src/flb_parser_json.c": {
+        "entities": [
+            "function_flb_parser_json_do"
+        ],
+        "lines": [
+            168
+        ]
+    }
+}

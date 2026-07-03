@@ -1,0 +1,25 @@
+Project: aom
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: High
+
+Project: libvips
+Fuzzing Engine: libFuzzer
+Fuzz Target: jpegsave_file_fuzzer
+Job Type: libfuzzer_asan_libvips
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x614000010460
+Crash State:
+  decompress_smooth_data
+  process_data_simple_main
+  jpeg_read_scanlines
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer jpegsave_file_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 6474707951681536 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

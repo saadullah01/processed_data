@@ -1,0 +1,18 @@
+{
+    "fuzz/qtest/fuzz.test": {
+        "entities": [
+            "variable_@fuzzers"
+        ],
+        "lines": [
+            21
+        ]
+    },
+    "libqpdf/QPDF.cc": {
+        "entities": [
+            "function_QPDF::read_xrefEntry"
+        ],
+        "lines": [
+            905
+        ]
+    }
+}

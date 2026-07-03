@@ -1,0 +1,10 @@
+{
+    "src/string.c": {
+        "entities": [
+            "function_mrb_str_modify_keep_ascii"
+        ],
+        "lines": [
+            820
+        ]
+    }
+}

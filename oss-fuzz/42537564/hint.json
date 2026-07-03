@@ -1,0 +1,10 @@
+{
+    "tools/target_dec_fuzzer.c": {
+        "entities": [
+            "function_fuzz_video_get_buffer"
+        ],
+        "lines": [
+            129
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "src/lib/math/mp/mp_core.cpp": {
+        "entities": [
+            "function_bigint_cnd_add",
+            "function_bigint_cnd_sub"
+        ],
+        "lines": [
+            41,
+            85,
+            71,
+            55
+        ]
+    }
+}

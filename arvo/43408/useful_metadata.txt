@@ -1,0 +1,17 @@
+Project: PcapPlusPlus
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ {*}
+Severity: Medium
+
+Project: pcapplusplus
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzTarget
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x6030000019e1
+Crash State:
+  pcpp::cross_platform_memmem
+  pcpp::SipRequestFirstLine::parseVersion
+  pcpp::SipRequestFirstLine::SipRequestFirstLine
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

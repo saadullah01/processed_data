@@ -1,0 +1,22 @@
+Project: faad2
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Index-out-of-bounds
+Severity: Medium
+
+Project: faad2
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_decode
+Job Type: libfuzzer_ubsan_faad2
+Platform Id: linux
+
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  decode_sce_lfe
+  raw_data_block
+  aac_frame_decode
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

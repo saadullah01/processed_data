@@ -1,0 +1,56 @@
+{
+    "encoder/ih264e_bitstream.c": {
+        "entities": [
+            "function_ih264e_put_bits",
+            "function_ih264e_put_rbsp_trailing_bits"
+        ],
+        "lines": [
+            211,
+            309,
+            182,
+            281,
+            220
+        ]
+    },
+    "encoder/ih264e_bitstream.h": {
+        "entities": [],
+        "lines": [
+            169,
+            245
+        ]
+    },
+    "encoder/ih264e_cabac.c": {
+        "entities": [
+            "function_ih264e_cabac_flush",
+            "function_ih264e_cabac_put_byte"
+        ],
+        "lines": [
+            292,
+            425,
+            433,
+            242,
+            307,
+            274,
+            381,
+            407,
+            315,
+            349
+        ]
+    },
+    "encoder/ih264e_cabac.h": {
+        "entities": [],
+        "lines": [
+            190,
+            215
+        ]
+    },
+    "encoder/ih264e_process.c": {
+        "entities": [
+            "function_ih264e_entropy"
+        ],
+        "lines": [
+            571,
+            444
+        ]
+    }
+}

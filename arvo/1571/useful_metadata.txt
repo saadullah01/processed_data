@@ -1,0 +1,25 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 2
+Crash Address: 0x000003986050
+Crash State:
+  csnStreamDissector
+  csnStreamDissector
+  csnStreamDissector
+
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201705081620:201705081841
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4584253100654592
+
+ClusterFuzz has detected this issue as fixed in range 201705131621:201705141622.
+
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201705131621:201705141622
+
+Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13708
+Current status: RESOLVED FIXED

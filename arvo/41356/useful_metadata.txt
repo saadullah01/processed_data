@@ -1,0 +1,26 @@
+Project: geos
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: geos
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_geo2
+Job Type: libfuzzer_asan_geos
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60e000000900
+Crash State:
+  geos::geomgraph::PlanarGraph::~PlanarGraph
+  geos::operation::overlay::OverlayOp::~OverlayOp
+  geos::operation::overlay::OverlayOp::overlayOp
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_geo2 from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5368457793765376 is verified as fixed

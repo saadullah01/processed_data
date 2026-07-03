@@ -1,0 +1,14 @@
+Project: harfbuzz
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-draw-fuzzer
+Job Type: libfuzzer_asan_harfbuzz
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x625000005caa
+Crash State:
+  BEInt<unsigned short, 2>::operator unsigned short
+  OT::IntType<unsigned short, 2u>::operator unsigned int
+  OT::gvar::get_offset
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Fixed by commit 758fda728

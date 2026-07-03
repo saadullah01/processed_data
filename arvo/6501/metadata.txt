@@ -1,0 +1,103 @@
+Project: skia
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5078673775394816
+
+Project: skia
+Fuzzer: libFuzzer_skia_path_deserialize
+Fuzz target binary: path_deserialize
+Job Type: libfuzzer_asan_skia
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x603000000114
+Crash State:
+  SkPath::moveTo
+  SkPath::readFromMemory_EQ4
+  SkPath::readFromMemory
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_skia&range=201802210646:201802220715
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5078673775394816
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you have questions for the OSS-Fuzz team, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """The following revision refers to this bug:
+  https://skia.googlesource.com/skia/+/61e30b2e81fe8d02d20978daeff28bc06ba584e7
+
+commit 61e30b2e81fe8d02d20978daeff28bc06ba584e7
+Author: Mike Reed <reed@google.com>
+Date: Thu Feb 22 14:48:44 2018
+
+add checks for enough data in path deserialization
+
+Bug: oss-fuzz:6501
+Change-Id: Ie77d57268947be2cc56f846ce21f154e0d469112
+Reviewed-on: https://skia-review.googlesource.com/109320
+Commit-Queue: Mike Reed <reed@google.com>
+Reviewed-by: Mike Klein <mtklein@google.com>
+
+[modify] https://crrev.com/61e30b2e81fe8d02d20978daeff28bc06ba584e7/src/core/SkPath_serial.cpp
+"""
+
+-- Comment 3: """ClusterFuzz has detected this issue as fixed in range 201802220715:201802230716.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5078673775394816
+
+Project: skia
+Fuzzer: libFuzzer_skia_path_deserialize
+Fuzz target binary: path_deserialize
+Job Type: libfuzzer_asan_skia
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x603000000114
+Crash State:
+  SkPath::moveTo
+  SkPath::readFromMemory_EQ4
+  SkPath::readFromMemory
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_skia&range=201802210646:201802220715
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_skia&range=201802220715:201802230716
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5078673775394816
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 4: """ClusterFuzz testcase 5078673775394816 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

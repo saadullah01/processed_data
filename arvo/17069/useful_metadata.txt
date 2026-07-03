@@ -1,0 +1,23 @@
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_decoder
+Job Type: libfuzzer_asan_flac
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x625000002100
+Crash State:
+  FLAC__bitreader_read_rice_signed_block
+  read_residual_partitioned_rice_
+  read_subframe_lpc_
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+libFLAC/bitreader.c: Fix out-of-bounds read
+
+Credit: Oss-Fuzz
+Testcase: fuzzer_decoder-5670265022840832
+
+ClusterFuzz testcase 5670265022840832 is verified as fixed

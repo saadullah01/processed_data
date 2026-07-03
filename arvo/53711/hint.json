@@ -1,0 +1,20 @@
+{
+    "pdf/pdf_deref.c": {
+        "entities": [
+            "function_pdfi_dereference_main",
+            "function_pdfi_read_stream_object"
+        ],
+        "lines": [
+            217,
+            962
+        ]
+    },
+    "pdf/pdf_file.c": {
+        "entities": [
+            "function_pdfi_seek"
+        ],
+        "lines": [
+            1516
+        ]
+    }
+}

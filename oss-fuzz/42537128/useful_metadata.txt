@@ -1,0 +1,38 @@
+libtpms:fuzz: Crash in RuntimeCommandsCheckEnabled
+
+Project: libtpms
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz
+Job Type: libfuzzer_asan_libtpms
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x5a4d2f816850
+Crash State:
+  RuntimeCommandsCheckEnabled
+  CommandCodeToCommandIndex
+  CommandAuditSet
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5895575698997248 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type
+Vulnerability
+
+Priority
+P2
+
+Severity
+S2
+
+Status
+Fixed (Verified)
+
+Project
+libtpms

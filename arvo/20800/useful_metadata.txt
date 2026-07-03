@@ -1,0 +1,16 @@
+Project: yara
+Fuzzing Engine: libFuzzer
+Fuzz Target: pe_fuzzer
+Job Type: libfuzzer_asan_yara
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6210000061f9
+Crash State:
+  pe_parse_debug_directory
+  pe__load
+  yr_modules_load
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

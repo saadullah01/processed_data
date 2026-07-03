@@ -1,0 +1,10 @@
+{
+    "opcodes/crx-dis.c": {
+        "entities": [
+            "function_get_number_of_operands"
+        ],
+        "lines": [
+            104
+        ]
+    }
+}

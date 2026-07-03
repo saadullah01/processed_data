@@ -1,0 +1,84 @@
+Project: lwan
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Negative-size-param
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5091179189764096
+
+Project: lwan
+Fuzzer: libFuzzer_lwan_request_fuzzer
+Fuzz target binary: request_fuzzer
+Job Type: libfuzzer_asan_lwan
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  parse_proxy_protocol_v2
+  parse_http_request
+  fuzz_parse_http_request
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_lwan&range=201904250139:201904260137
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5091179189764096
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer request_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """ClusterFuzz has detected this issue as fixed in range 201904260137:201904270135.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5091179189764096
+
+Project: lwan
+Fuzzer: libFuzzer_lwan_request_fuzzer
+Fuzz target binary: request_fuzzer
+Job Type: libfuzzer_asan_lwan
+Platform Id: linux
+
+Crash Type: Negative-size-param
+Crash Address: 
+Crash State:
+  parse_proxy_protocol_v2
+  parse_http_request
+  fuzz_parse_http_request
+  
+Sanitizer: address (ASAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_lwan&range=201904250139:201904260137
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_lwan&range=201904260137:201904270135
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5091179189764096
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for instructions to reproduce this bug locally.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 4: """ClusterFuzz testcase 5091179189764096 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

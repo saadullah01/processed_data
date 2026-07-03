@@ -1,0 +1,22 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-fuzzer
+Fuzz target binary: hb-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  int OT::SortedArrayOf<OT::GlyphID, OT::IntType<unsigned short, 2u> >::bsearch<un
+  OT::CoverageFormat1::get_coverage
+  OT::Coverage::get_coverage
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,28 @@
+{
+    "src/libopensc/card-epass2003.c": {
+        "entities": [
+            "function_epass2003_gen_key"
+        ],
+        "lines": [
+            3082,
+            3109
+        ]
+    },
+    "src/libopensc/cardctl.h": {
+        "entities": [
+            "struct_sc_epass2003_gen_key_data"
+        ],
+        "lines": [
+            833
+        ]
+    },
+    "src/pkcs15init/pkcs15-epass2003.c": {
+        "entities": [
+            "function_epass2003_pkcs15_generate_key"
+        ],
+        "lines": [
+            638,
+            679
+        ]
+    }
+}

@@ -1,0 +1,73 @@
+Project: libdwarf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6557751518560256
+
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_init_path
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x616000000680
+Crash State:
+  _dwarf_elf_setup_all_section_groups
+  _dwarf_load_elf_sectheaders
+  _dwarf_elf_nlsetup
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=afl_asan_libdwarf&revision=202111030610
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6557751518560256
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_init_path from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """It's hard to be sure, but I am pretty sure you are using a git version
+of libdwarf before this was fixed.
+Unless you are using git id 
+94dece3ce0f030d06da442a103bd6a5301410b25
+or later this report is unproductive.
+Latest version today (Nov 8) is 
+9770b2cc4812857022a8e147bdfe1f102adba382
+and I request that this be used."""
+
+-- Comment 4: """The set up will always pull the latest trunk from Github - (https://github.com/google/oss-fuzz/blob/master/projects/libdwarf/Dockerfile#L19). However, the bot doesn't run constantly so updates may take a day or two at times.
+
+In the detailed report you can see the specific revision that was most recently tested on, which at the time of writing is " eeec32b6f674efa8eacc72c656fc9a2f44f8e482". Wasn't the fix landed in cd021a1311572d4f9bb37b0b808685a5ed84bcc3 ? At least that commit changes the function in which the heap overflow occurs, which is later than eeec32b6f674efa8eacc72c656fc9a2f44f8e482 revision where it was last tested.
+
+In either case, I just tested locally and can confirm the bug no longer exists. This will be auto-closed by the Clusterfuzz bot shortly, i.e. it will be closed the next time the bot runs the fuzzers."""
+
+-- Comment 5: """ClusterFuzz testcase 6557751518560256 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_libdwarf&range=202111080611:202111090609
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

@@ -1,0 +1,143 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42536068
+OSS Fuzz
+42536068
+libcups:fuzzipp: Use-of-uninitialized-value in _cupsStrAlloc
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(5)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+ClusterFuzz
+Stability-Memory-MemorySanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Jun 7, 2024 07:48AM
+Detailed Report: https://oss-fuzz.com/testcase?key=4637350360580096
+
+Project: libcups
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzipp
+Job Type: libfuzzer_msan_libcups
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  _cupsStrAlloc
+  ippReadIO
+  fuzzipp.c
+ 
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Crash Revision: https://oss-fuzz.com/revisions?job=libfuzzer_msan_libcups&revision=202406070608
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4637350360580096
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Jun 8, 2024 06:20AM
+[Empty comment from Monorail migration]
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #3
+Jun 16, 2024 06:34AM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 4637350360580096 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_libcups&range=202406140624:202406150623
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+[Deleted User]<[Deleted User]> #4
+Jun 17, 2024 06:10AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+is...@google.com<is...@google.com> #5
+Jun 17, 2024 06:10AM
+This issue was migrated from crbug.com/oss-fuzz/69492?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+ji...@gmail.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+os...@iosifache.me
+ti...@gmail.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Sep 5, 2024
+Project
+libcups
+Reported
+Jun 7, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

@@ -1,0 +1,17 @@
+{
+    "mrblib/array.rb": {
+        "entities": [],
+        "lines": [
+            101
+        ]
+    },
+    "src/array.c": {
+        "entities": [
+            "function_mrb_init_array"
+        ],
+        "lines": [
+            1409,
+            1331
+        ]
+    }
+}

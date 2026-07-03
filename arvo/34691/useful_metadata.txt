@@ -1,0 +1,22 @@
+Project: mruby
+Fuzzing Engine: honggfuzz
+Fuzz Target: mruby_fuzzer
+Job Type: honggfuzz_asan_mruby
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x605ffffffe08
+Crash State:
+  mrb_ary_shift_m
+  mrb_vm_exec
+  mrb_vm_run
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Fixed by 9a72869043e0377ec549a325a074e592f82ef5ed
+
+ClusterFuzz testcase 4642920853536768 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

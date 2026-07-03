@@ -1,0 +1,23 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_dwarf
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x78f74ee86328
+Crash State:
+  coff_bigobj_swap_aux_in
+  styp_to_sec_flags
+  coff_real_object_p
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5915117760675840 is verified as fixed

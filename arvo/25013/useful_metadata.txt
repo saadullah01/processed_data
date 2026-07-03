@@ -1,0 +1,17 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: hb-subset-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  bool OT::OffsetTo<OT::VariationStore, OT::IntType<unsigned int, 4u>, true>::seri
+  OT::GDEF::subset
+  bool _subset<OT::GDEF const>
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,18 @@
+{
+    "src/lib/libdwarf/dwarf_die_deliv.c": {
+        "entities": [
+            "function__dwarf_read_cu_version_and_abbrev_offset",
+            "function_finish_cu_context_via_cudie_inner",
+            "function__dwarf_make_CU_Context"
+        ],
+        "lines": [
+            321,
+            579,
+            357,
+            840,
+            594,
+            820,
+            862
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_xref.c": {
+        "entities": [
+            "function_read_digits"
+        ],
+        "lines": [
+            546
+        ]
+    }
+}

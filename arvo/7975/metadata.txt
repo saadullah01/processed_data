@@ -1,0 +1,94 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=5176520067776512
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_udp_port-dns
+Fuzz target binary: fuzzshark_udp_port-dns
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6050001d12d0
+Crash State:
+  dissect_dns_answer
+  dissect_dns_common
+  dissect_dns
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201804171756:201804240545
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5176520067776512
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues."""
+
+-- Comment 2: """This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzzshark_udp_port-dns from making much progress. Fixing this will allow more bugs to be found.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=14683
+(duplicate of https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=14681, issue 7416)
+
+Current status: CONFIRMED (unfixed)"""
+
+-- Comment 4: """ClusterFuzz has detected this issue as fixed in range 201805140417:201805150418.
+
+Detailed report: https://oss-fuzz.com/testcase?key=5176520067776512
+
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_udp_port-dns
+Fuzz target binary: fuzzshark_udp_port-dns
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x6050001d12d0
+Crash State:
+  dissect_dns_answer
+  dissect_dns_common
+  dissect_dns
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201804171756:201804240545
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=201805140417:201805150418
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5176520067776512
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 5: """ClusterFuzz testcase 5176520067776512 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 6: """This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

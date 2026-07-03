@@ -1,0 +1,39 @@
+Project: librawspeed
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Use-after-poison READ 2
+Severity: High
+
+Comment 1:
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffDecoderFuzzer-SrwDecoder
+Fuzz target binary: TiffDecoderFuzzer-SrwDecoder
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x7f82fdc6ff02
+Crash State:
+  void rawspeed::SamsungV2Decompressor::decompressRow<
+  rawspeed::SamsungV2Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_librawspeed&range=201708291830:201708300032
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6137765290835968
+
+Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201710020519:201710030511.
+
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x7f82fdc6ff02
+Crash State:
+  void rawspeed::SamsungV2Decompressor::decompressRow<
+  rawspeed::SamsungV2Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Fixed: https://oss-fuzz.com/revisions?job=afl_asan_librawspeed&range=201710020519:201710030511
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6137765290835968

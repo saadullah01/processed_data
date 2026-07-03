@@ -1,0 +1,16 @@
+Project: serenity
+Fuzzing Engine: afl
+Fuzz Target: FuzzJs
+Job Type: afl_asan_serenity
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7ffc5ad65468
+Crash State:
+  JS::Heap::gather_conservative_roots
+  JS::Heap::gather_roots
+  JS::Heap::collect_garbage
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

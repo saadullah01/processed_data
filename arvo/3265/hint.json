@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decompressors/SamsungV2Decompressor.cpp": {
+        "entities": [
+            "function_SamsungV2Decompressor::decompressRow"
+        ],
+        "lines": [
+            227
+        ]
+    }
+}

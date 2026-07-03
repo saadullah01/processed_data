@@ -1,0 +1,34 @@
+Project: poppler
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  FT_Set_Transform
+  SplashFTFont::makeGlyph
+  SplashFont::getGlyph
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201805290504:201805300507
+Reproducer Testcase: 4854502862618624
+
+Fixed by commit: af4d5f31705dcfd65319da430f87744b5c1f3616
+
+ClusterFuzz has detected this issue as fixed in range 201806220509:201806250532
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  FT_Set_Transform
+  SplashFTFont::makeGlyph
+  SplashFont::getGlyph
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201805290504:201805300507
+Fixed: 201806220509:201806250532
+Reproducer Testcase: 4854502862618624

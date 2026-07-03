@@ -1,0 +1,31 @@
+libcups:fuzzipp: Use-of-uninitialized-value in _cupsStrAlloc
+
+Project: libcups
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzipp
+Job Type: libfuzzer_msan_libcups
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  _cupsStrAlloc
+  ippReadIO
+  fuzzipp.c
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4637350360580096 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)

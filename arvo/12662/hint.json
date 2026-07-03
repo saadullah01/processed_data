@@ -1,0 +1,14 @@
+{
+    "src/sas/readstat_sas7bdat_read.c": {
+        "entities": [
+            "function_sas7bdat_parse_page_pass2",
+            "function_sas7bdat_parse_page_pass1"
+        ],
+        "lines": [
+            25,
+            652,
+            668,
+            735
+        ]
+    }
+}

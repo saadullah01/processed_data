@@ -1,0 +1,11 @@
+{
+    "epan/dissectors/packet-gtpv2.c": {
+        "entities": [
+            "variable_gtpv2_element_type_vals"
+        ],
+        "lines": [
+            843,
+            1175
+        ]
+    }
+}

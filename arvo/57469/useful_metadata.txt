@@ -1,0 +1,14 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: html
+Job Type: libfuzzer_asan_libxml2
+Platform Id: linux
+
+Crash Type: Global-buffer-overflow READ 1
+Crash Address: 0x0000008f81f3
+Crash State:
+  xmlStrndup
+  htmlParseSystemLiteral
+  htmlParseDocTypeDecl
+
+Sanitizer: address (ASAN)

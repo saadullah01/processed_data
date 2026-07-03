@@ -1,0 +1,35 @@
+Project: libspng
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Comment 1:
+Project: libspng
+Fuzzer: libFuzzer_libspng_spng_read_fuzzer_structure_aware
+Fuzz target binary: spng_read_fuzzer_structure_aware
+Job Type: libfuzzer_asan_libspng
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x01fed7ec0924
+Crash State:
+  validate_past_idat
+  spng_decode_image
+  spng_read_fuzzer.cc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer spng_read_fuzzer_structure_aware from making much progress. Fixing this will allow more bugs to be found.
+
+Comment 3:
+This doesn't affect the latest release (v0.4.5), development is done on the master branch and these bugs are fixed before the next release.
+
+Comment 4:
+ClusterFuzz testcase 5162723165339648 is verified as fixed.
+
+Comment 5:
+This bug has been fixed for 30 days.

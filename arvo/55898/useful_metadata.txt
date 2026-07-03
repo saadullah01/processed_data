@@ -1,0 +1,20 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address: 
+Crash State:
+  gs_function_Sd_init
+  sampled_data_finish
+  gs_interpret
+
+Sanitizer: address (ASAN)
+Issue filed automatically.
+
+Fixed in this commit:
+372b7efe8d597b56fb96bf6137af42a48e644fb4
+
+ClusterFuzz testcase 4555685393465344 is verified as fixed in

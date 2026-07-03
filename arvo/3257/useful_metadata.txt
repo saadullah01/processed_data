@@ -1,0 +1,27 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_TiffDecoderFuzzer-SrwDecoder
+Fuzz target binary: TiffDecoderFuzzer-SrwDecoder
+Job Type: libfuzzer_asan_librawspeed
+Platform Id: linux
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x613000000088
+Crash State:
+  rawspeed::SamsungV0Decompressor::decompressStrip
+  rawspeed::SamsungV0Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201709010522:201709020515.
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x613000000088
+Crash State:
+  rawspeed::SamsungV0Decompressor::decompressStrip
+  rawspeed::SamsungV0Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5436374968696832 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

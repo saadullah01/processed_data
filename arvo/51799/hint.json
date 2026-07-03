@@ -1,0 +1,10 @@
+{
+    "bfd/pdb.c": {
+        "entities": [
+            "function_pdb_get_elt_at_index"
+        ],
+        "lines": [
+            66
+        ]
+    }
+}

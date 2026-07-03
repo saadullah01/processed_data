@@ -1,0 +1,13 @@
+{
+    "src/lib/libdwarf/dwarf_machoread.c": {
+        "entities": [
+            "function__dwarf_object_detector_universal_head_fd"
+        ],
+        "lines": [
+            1328,
+            1234,
+            1268,
+            1293
+        ]
+    }
+}

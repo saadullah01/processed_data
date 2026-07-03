@@ -1,0 +1,23 @@
+Project: coturn
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzStun
+Job Type: libfuzzer_msan_coturn
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  stun_check_message_integrity_by_key_str
+  stun_check_message_integrity_str
+  FuzzStun.c
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer FuzzStun from making much progress. Fixing this will allow more bugs to be found.

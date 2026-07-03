@@ -1,0 +1,19 @@
+Project: wireshark
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 2
+Severity: Medium
+
+Project: wireshark
+Fuzzer: afl_wireshark_fuzzshark_ip_proto-udp
+Fuzz target binary: fuzzshark_ip_proto-udp
+Job Type: afl_asan_wireshark
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7f56cdf649e6
+Crash State:
+  cdma2k_message_HANDOFF_DIR
+  cdma2k_message_decode
+  dissect_cdma2k
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

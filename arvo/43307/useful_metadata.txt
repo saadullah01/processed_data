@@ -1,0 +1,57 @@
+Project: elfutils
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+-- Comment 1:
+Project: elfutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz-dwfl-core
+Job Type: libfuzzer_asan_i386_elfutils
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0xf75b3fe0
+Crash State:
+  read_addrs
+  dwfl_link_map_report
+  dwfl_core_file_report
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz-dwfl-core from making much progress. Fixing this will allow more bugs to be found.
+
+-- Comment 3:
+It can be reproduced by downloading the reproducer testcase and passing it to eu-stack:
+```
+autoreconf -i -f
+./configure --enable-maintainer-mode --enable-sanitize-address --enable-sanitize-undefined
+make -j$(nproc) V=1
+LD_LIBRARY_PATH="./libdw;./libelf" ./src/stack --core ./oss-fuzz-43307
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==159086==ERROR: AddressSanitizer: SEGV on unknown address 0x7f1c426f6fe0 (pc 0x7f1c47758399 bp 0x60b000001170 sp 0x7ffdf9aca7a0 T0)
+==159086==The signal is caused by a READ memory access.
+    #0 0x7f1c47758399 in read_8ubyte_unaligned_noncvt ../libdw/memory-access.h:301
+    #1 0x7f1c47758399 in read_addrs /home/vagrant/elfutils/libdwfl/link_map.c:288
+    #2 0x7f1c47758399 in report_r_debug /home/vagrant/elfutils/libdwfl/link_map.c:341
+    #3 0x7f1c47758399 in dwfl_link_map_report /home/vagrant/elfutils/libdwfl/link_map.c:1117
+    #4 0x7f1c4775df31 in _new.dwfl_core_file_report /home/vagrant/elfutils/libdwfl/core-file.c:552
+    #5 0x403b34 in parse_opt /home/vagrant/elfutils/src/stack.c:595
+    #6 0x7f1c46802471 in argp_parse (/lib64/libc.so.6+0x11e471)
+    #7 0x402a7d in main /home/vagrant/elfutils/src/stack.c:695
+    #8 0x7f1c4671155f in __libc_start_call_main (/lib64/libc.so.6+0x2d55f)
+    #9 0x7f1c4671160b in __libc_start_main_impl (/lib64/libc.so.6+0x2d60b)
+    #10 0x402f44 in _start (/home/vagrant/elfutils/src/stack+0x402f44)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../libdw/memory-access.h:301 in read_8ubyte_unaligned_noncvt
+==159086==ABORTING
+```
+
+-- Comment 4:
+ClusterFuzz testcase 4696722113167360 is verified as fixed

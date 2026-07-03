@@ -1,0 +1,149 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 382816119
+OSS Fuzz
+382816119
+libwebp:mux_demux_api_fuzzer@MuxDemuxApi.MuxDemuxApiTest: Heap-buffer-overflow in ChunkAssignData
+Hotlists (3)
+Mark as Duplicate
+Comments
+(5)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(8)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Reproducible
+Stability-Memory-AddressSanitizer
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTION87...@developer.gserviceaccount.com created issue #1
+Dec 8, 2024 01:52AM
+Detailed Report: https://oss-fuzz.com/testcase?key=6136120099799040
+
+Project: libwebp
+Fuzzing Engine: libFuzzer
+Fuzz Target: mux_demux_api_fuzzer@MuxDemuxApi.MuxDemuxApiTest
+Job Type: libfuzzer_asan_libwebp
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x503000000a44
+Crash State:
+  ChunkAssignData
+  WebPMuxCreateInternal
+  MuxDemuxApiTest
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_libwebp&range=202411260631:202411270612
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6136120099799040
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+vr...@google.com<vr...@google.com> #2
+Dec 9, 2024 06:49AM
+
+Fixed in cl/228150057
+
+jz...@google.com<jz...@google.com> #3
+Dec 10, 2024 11:24AM
+
+https://chromium-review.googlesource.com/c/webm/libwebp/+/6082471
+
+87...@developer.gserviceaccount.com<87...@developer.gserviceaccount.com> #4
+Dec 11, 2024 12:00AM
+Verified by cl...@appspot.gserviceaccount.com.
+ClusterFuzz testcase 6136120099799040 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_libwebp&range=202412100604:202412110641
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+pe...@google.com<pe...@google.com> #5
+Dec 11, 2024 07:45AM
+
+This bug has been fixed. It has been opened to the public.
+
+Add comment
+Comment
+Issue metadata
+Reporter
+87...@developer.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+cl...@appspot.gserviceaccount.com
+Verifier
+cl...@appspot.gserviceaccount.com
+Collaborators
+ 
+co...@oss-fuzz.com
+CC
+ 
+ao...@mozilla.com
+jz...@google.com
+pa...@gmail.com
+tn...@mozilla.com
+tw...@mozilla.com
+vr...@google.com
+yg...@google.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Mar 10, 2025
+Project
+libwebp
+Reported
+Dec 8, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

@@ -1,0 +1,22 @@
+Project: libsndfile
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+
+Project: libsndfile
+Fuzzing Engine: honggfuzz
+Fuzz Target: sndfile_fuzzer
+Job Type: honggfuzz_asan_libsndfile
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x7f7619a77a68
+Crash State:
+  copyPredictorTo24
+  alac_decode
+  alac_decode_block
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

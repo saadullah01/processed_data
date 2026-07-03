@@ -1,0 +1,14 @@
+Project: libjxl
+Fuzzing Engine: libFuzzer
+Fuzz Target: djxl_fuzzer
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  jxl::N_AVX2::UpsampleRect
+  jxl::Upsampler::UpsampleRect
+  jxl::FinalizeImageRect
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

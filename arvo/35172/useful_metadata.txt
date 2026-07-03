@@ -1,0 +1,26 @@
+Project: libjxl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 4
+Severity: High
+
+Project: libjxl
+Fuzzing Engine: libFuzzer
+Fuzz Target: djxl_fuzzer
+Job Type: libfuzzer_asan_libjxl
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x7f7695154369
+Crash State:
+  jxl::ThreadPool::RunCallState<jxl::ConvertToExternal
+  jpegxl::ThreadParallelRunner::ThreadFunc
+  void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5502486264807424 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

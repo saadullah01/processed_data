@@ -1,0 +1,26 @@
+Project: poppler
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: poppler
+Fuzzer: libFuzzer_poppler_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_msan_poppler
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7f52cf8e6100
+Crash State:
+  XRefEntry::setFlag
+  Parser::makeStream
+  Parser::getObj
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer pdf_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz has detected this issue as fixed in range 201811070400:201811080359.

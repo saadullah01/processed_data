@@ -1,0 +1,10 @@
+{
+    "source/pdf/pdf-function.c": {
+        "entities": [
+            "function_eval_exponential_func"
+        ],
+        "lines": [
+            1179
+        ]
+    }
+}

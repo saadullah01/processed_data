@@ -1,0 +1,11 @@
+{
+    "src/lib/libdwarf/dwarf_frame2.c": {
+        "entities": [
+            "function__dwarf_create_cie_from_after_start"
+        ],
+        "lines": [
+            1005,
+            855
+        ]
+    }
+}

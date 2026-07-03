@@ -1,0 +1,12 @@
+{
+    "src/lxc/confile_utils.c": {
+        "entities": [
+            "function_rt_sig_num",
+            "function_sig_parse"
+        ],
+        "lines": [
+            1024,
+            1043
+        ]
+    }
+}

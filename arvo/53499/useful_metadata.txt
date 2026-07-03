@@ -1,0 +1,32 @@
+Project: libjpeg-turbo.dev
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 1
+Severity: High
+
+Project: libjpeg-turbo
+Fuzzing Engine: afl
+Fuzz Target: libjpeg_turbo_fuzzer_dev
+Job Type: afl_asan_libjpeg-turbo
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 1
+Crash Address: 0x612000000746
+Crash State:
+  rgb_rgb_convert
+  sep_upsample
+  process_data_simple_main
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.
+
+should fix this.  The issue was due to the fact that decompression scaling is silently disabled with lossless JPEG images (because decompression scaling is a function of the IDCT.)  The TurboJPEG API had to be expanded to give calling programs the ability to detect lossless JPEG images, so they will know that their decompression scaling requests will be ignored.
+
+ClusterFuzz testcase 4809239764008960 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,19 @@
+{
+    "fuzz/fuzz_die_cu_attrs.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            155,
+            46
+        ]
+    },
+    "fuzz/fuzz_die_cu_offset.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            47
+        ]
+    }
+}

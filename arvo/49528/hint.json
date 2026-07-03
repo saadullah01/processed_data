@@ -1,0 +1,27 @@
+{
+    "base/gstiffio.c": {
+        "entities": [
+            "function_tiff_free_private_tiff"
+        ],
+        "lines": [
+            176
+        ]
+    },
+    "base/gstiffio.h": {
+        "entities": [],
+        "lines": [
+            24
+        ]
+    },
+    "devices/gdevtsep.c": {
+        "entities": [
+            "function_tiffsep_prn_close",
+            "function_tiffsep1_prn_close"
+        ],
+        "lines": [
+            1744,
+            1274,
+            1732
+        ]
+    }
+}

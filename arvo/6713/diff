@@ -1,0 +1,35 @@
+From 7e412f3bcbfebc986813b2de1b90a27e4f63bf16 Mon Sep 17 00:00:00 2001
+From: Scott Godin <sgodin@sipspectrum.com>
+Date: Mon, 5 Mar 2018 12:07:48 -0500
+Subject: [PATCH] -minor optimization to prevent a potential for 2 calls to
+ DnsUtil::isIpV6Address in Uri::getAorInternal
+
+---
+ resip/stack/Uri.cxx | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/resip/stack/Uri.cxx b/resip/stack/Uri.cxx
+index 3617719505..9f905b6b6c 100644
+--- a/resip/stack/Uri.cxx
++++ b/resip/stack/Uri.cxx
+@@ -793,9 +793,10 @@ Uri::getAorInternal(bool dropScheme, bool addPort, Data& aor) const
+ 
+    addPort = addPort && mPort!=0;
+ 
++   bool hostIsIpV6Address = DnsUtil::isIpV6Address(mHost);
+    if(!mHostCanonicalized)
+    {
+-      if (DnsUtil::isIpV6Address(mHost))
++      if (hostIsIpV6Address)
+       {
+          mCanonicalHost = DnsUtil::canonicalizeIpV6Address(mHost);
+       }
+@@ -835,7 +836,7 @@ Uri::getAorInternal(bool dropScheme, bool addPort, Data& aor) const
+       }
+    }
+ 
+-   if(DnsUtil::isIpV6Address(mHost) && addPort)
++   if(hostIsIpV6Address && addPort)
+    {
+       aor += Symbols::LS_BRACKET;
+       aor += mCanonicalHost;

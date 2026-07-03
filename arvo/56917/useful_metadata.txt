@@ -1,0 +1,22 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Memcpy-param-overlap
+Severity: Medium
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_objdump
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Memcpy-param-overlap
+Crash Address: [0x626000009100,0x6260000090f8) and [0x000000000000, 0xfffffffffffffff8)
+Crash State:
+  dump_bfd
+  display_any_bfd
+  fuzz_objdump.h
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

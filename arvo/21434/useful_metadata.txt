@@ -1,0 +1,28 @@
+Project: leptonica
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: leptonica
+Fuzzing Engine: libFuzzer
+Fuzz Target: pix_rotate_shear_fuzzer
+Job Type: libfuzzer_msan_leptonica
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  put4bitbwtile
+  gtStripContig
+  TIFFRGBAImageGet
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5682052142989312 is verified as fixed
+
+This bug has been fixed for 30 days. It has been opened to the public.

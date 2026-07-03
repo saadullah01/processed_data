@@ -1,0 +1,10 @@
+{
+    "src/sfnt/ttcpal.c": {
+        "entities": [
+            "function_tt_face_load_cpal"
+        ],
+        "lines": [
+            1
+        ]
+    }
+}

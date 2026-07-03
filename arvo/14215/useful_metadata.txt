@@ -1,0 +1,28 @@
+Project: graphicsmagick
+Fuzzer: libFuzzer_graphicsmagick_coder_PDB_fuzzer
+Fuzz target binary: coder_PDB_fuzzer
+Job Type: libfuzzer_msan_graphicsmagick
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  WritePDBImage
+  WriteImage
+  ImageToBlob
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed: 201904110127:201904111727
+Reproducer Testcase ID: 5716846705115136
+
+ClusterFuzz has detected this issue as fixed in range 201904130137:201904150134.
+Fixed: 201904130137:201904150134
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  WritePDBImage
+  WriteImage
+  ImageToBlob
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Reproducer Testcase ID: 5716846705115136
+
+ClusterFuzz testcase 5716846705115136 is verified as fixed.

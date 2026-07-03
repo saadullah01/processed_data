@@ -1,0 +1,18 @@
+Project: yara
+Fuzzing Engine: libFuzzer
+Fuzz Target: dotnet_fuzzer
+Job Type: libfuzzer_ubsan_yara
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x000002507000
+Crash State:
+  dotnet_parse_tilde_2
+  dotnet_parse_tilde
+  dotnet_parse_com
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer dotnet_fuzzer from making much progress.

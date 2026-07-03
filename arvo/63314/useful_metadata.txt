@@ -1,0 +1,26 @@
+Project: libultrahdr
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: libultrahdr
+Fuzzing Engine: afl
+Fuzz Target: ultrahdr_enc_fuzzer
+Job Type: afl_asan_libultrahdr
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x60200000039e
+Crash State:
+  convsamp
+  forward_DCT
+  compress_data
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer ultrahdr_enc_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5146379254890496 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

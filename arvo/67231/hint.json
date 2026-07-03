@@ -1,0 +1,14 @@
+{
+    "epan/dissectors/packet-ieee80211.c": {
+        "entities": [
+            "function_wlan_aid_to_str",
+            "function_wlan_aid_str_len",
+            "function_set_sid_addr_cols"
+        ],
+        "lines": [
+            38171,
+            38140,
+            38148
+        ]
+    }
+}

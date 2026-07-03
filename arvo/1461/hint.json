@@ -1,0 +1,10 @@
+{
+    "parser.c": {
+        "entities": [
+            "struct__xmlDefAttrs"
+        ],
+        "lines": [
+            1087
+        ]
+    }
+}

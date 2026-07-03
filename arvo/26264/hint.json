@@ -1,0 +1,10 @@
+{
+    "poppler/SecurityHandler.h": {
+        "entities": [
+            "method_getFileKeyLength"
+        ],
+        "lines": [
+            96
+        ]
+    }
+}

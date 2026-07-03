@@ -1,0 +1,29 @@
+Project: libredwg
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Object-size
+Severity: Medium
+
+Detailed Report:
+Project: libredwg
+Fuzzing Engine: libFuzzer
+Fuzz Target: llvmfuzz
+Job Type: libfuzzer_ubsan_libredwg
+Platform Id: linux
+
+Crash Type: Object-size
+Crash Address:
+Crash State:
+  dxf_entities_read
+  dwg_read_dxf
+  llvmfuzz.c
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium
+
+Fixed with 2c860ce9a8566293604540e6e7eb89e210abc2f3
+
+ClusterFuzz testcase 6416239774793728 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

@@ -1,0 +1,16 @@
+{
+    "mrbgems/mruby-bigint/core/bigint.c": {
+        "entities": [
+            "function_mrb_bint_add",
+            "function_mrb_bint_sub_d",
+            "function_mrb_bint_add_d",
+            "function_mrb_bint_sub"
+        ],
+        "lines": [
+            1201,
+            1209,
+            1227,
+            1183
+        ]
+    }
+}

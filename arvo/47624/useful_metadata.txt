@@ -1,0 +1,16 @@
+Project: wireshark
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzshark_ip
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Stack-use-after-return READ 4
+Crash Address: 0x7f915900b9a0
+Crash State:
+  conversation_match_element_list
+  wmem_map_lookup
+  find_conversation_by_id
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 5120191362629632 is verified as fixed

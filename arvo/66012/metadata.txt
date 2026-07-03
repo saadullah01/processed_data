@@ -1,0 +1,139 @@
+Project: curl
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 1
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6007217014767616
+
+Project: curl
+Fuzzing Engine: afl
+Fuzz Target: curl_fuzzer
+Job Type: afl_asan_curl
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 1
+Crash Address: 0x629000000208
+Crash State:
+  ftp_endofresp
+  Curl_pp_readresp
+  Curl_GetFTPResponse
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_curl&range=202401150610:202401160622
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6007217014767616
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Puzzling. The regression ranges look like they don't introduced anything that makes this happen.
+
+By just reading the code I have not figured out how this can happen. I try to run the reproducer soon to see what I can learn if I can reproduce."""
+
+-- Comment 3: """I don't see anything obvious. With FUZZ_VERBOSE=yes it's a little bit interesting:
+
+<==
+FUZZ[0]: Sending next response: 7
+< 450
+* Curl_pp_readresp_ 21 bytes of trailing server response left
+* FTP 0x61a0000003e0 (line 2562) state change from LIST to STOP
+* STATE: DOING_MORE => DID handle 0x622000000108; line 2366
+* STATE: DID => DONE handle 0x622000000108; line 2398
+* multi_done[DONE]: status: 0 prem: 0 done: 0
+* Remembering we are in dir "��������/"
+> ABOR
+* Connection #0 to host 127.0.1.127 left intact
+* STATE: INIT => CONNECT handle 0x622000000108; line 1982
+* Connecting to hostname: 127.0.1.127
+* Found bundle for host: 0x606000000ec8 [serially]
+* Re-using existing connection with host ����������������
+* STATE: CONNECT => CONNECTING handle 0x622000000108; line 2036
+* STATE: CONNECTING => PROTOCONNECT handle 0x622000000108; line 2144
+* STATE: PROTOCONNECT => DO handle 0x622000000108; line 2163
+* multi_done[DO]: status: 78 prem: 0 done: 0
+* Remembering we are in dir "��������/��"
+< 450
+,112,130,216,4 ��������������������������������������������������������������������������������������
+
+Interestingly with FUZZ_VERBOSE turned on (which enables debug logging) we actually terminate sooner, in Curl_debug < Curl_pp_readresp (pingpong.c:357). But yes, very reproducible."""
+
+-- Comment 4: """I can't even build the fuzzer right now: https://github.com/curl/curl-fuzzer/issues/102"""
+
+-- Comment 5: """The stack trace shows that the FTP code accesses the data->state.buffer after it has been freed. The bad access is here:
+
+ #0 0x5e0dde in ftp_endofresp curl/lib/ftp.c:537:19
+
+... but the buffer is freed in multi_done (multi.c:787), *after* ftp_done has been called so I still don't see how this code executes *after* the freeing of that buffer. """
+
+-- Comment 6: """My repro method copied here for reference:
+
+The method I use (and that I should really document in the REPRODUCING guide) is:
+
+- Use ossfuzz
+- `python3 infra/helper.py build_image curl`
+- `python3 infra/helper.py build_fuzzers curl`
+- Copy the clusterfuzz test case into the ossfuzz `build/out` directory
+- `python3 infra/helper.py shell` which drops you into a Docker container
+- `export GDBMODE=1`
+- Run `compile`, which will compile the fuzzers for you and also compile a version of GDB that will work
+- Run `gdb /out/<thefuzzeryouwanttorun>`
+- In gdb, `break __asan::ReportGenericError`
+- then, run `run /out/clusterfuzz-<name of test case>`
+"""
+
+-- Comment 7: """If it helps I've attached a gdb output of hitting this while running an "auto-next" script."""
+
+-- Comment 8: """Coming at this from an unknowledgeable viewpoint, it seems weird that the entire connection gets restarted because the wildcard match isn't marked as "done"
+
+2622	      if(data->state.wildcardmatch) {
+2623	        if(data->wildcard->state != CURLWC_DONE) {
+2626	          multistate(data, MSTATE_INIT);
+2627	          break;
+"""
+
+-- Comment 9: """Since the connection is still there and alive, it actually will just start over the statemachine (with a new filename) and reuse the existing connection. It's not that bad.
+
+But it triggers this problem and I think I know why:
+
+- when the connection is setup, Curl_pp_init() is called and that stores a pointer to data->state.buffer in a ping pong struct
+- then the transfer is done using that buffer
+- when multi_done is called, the buffer is freed
+- the wildcard logic makes the state machine start over at INIT
+- when it reaches the CONNECT state it allocates a new state.buffer
+
+And here is the issue: when it reuses the FTP connection for this, it does *not* call Curl_pp_init() again. The poingping struct remains having a pointer to the *previous* buffer which is now freed...
+
+I'll write up a PR for this.
+
+I'll also double-check if the same issue might exist for the other ping-pong protocols."""
+
+-- Comment 10: """https://github.com/curl/curl/pull/12752"""
+
+-- Comment 11: """This is a bigger take that should fix it, differently: https://github.com/curl/curl/pull/12757. Merging now."""
+
+-- Comment 12: """ClusterFuzz testcase 6007217014767616 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_curl&range=202401250617:202401260624
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 13: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

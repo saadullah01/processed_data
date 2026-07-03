@@ -1,0 +1,21 @@
+Project: libxslt
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Fuzzing Engine: honggfuzz
+Fuzz Target: xslt
+Job Type: honggfuzz_asan_libxslt
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x60c000001e40
+Crash State:
+  xsltFreeAVTList
+  xsltFreeStylesheet
+  xsltFuzzXslt
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

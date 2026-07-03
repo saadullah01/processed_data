@@ -1,0 +1,26 @@
+ffmpeg:ffmpeg_dem_IPMOVIE_fuzzer: Use-of-uninitialized-value in ipmovie_read_header
+
+Reproducible
+Stability-Memory-MemorySanitizer
+ClusterFuzz-Verified
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_dem_IPMOVIE_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  ipmovie_read_header
+  avformat_open_input
+  target_dem_fuzzer.c
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type: Vulnerability
+Priority: P2
+Severity: S2

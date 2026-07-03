@@ -1,0 +1,22 @@
+Project: wasm3
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow WRITE 8
+Severity: High
+
+Project: wasm3
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer
+Job Type: libfuzzer_asan_wasm3
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x60d0000000d0
+Crash State:
+  op_Const64
+  EvaluateExpression
+  InitElements
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

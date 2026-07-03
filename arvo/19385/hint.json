@@ -1,0 +1,11 @@
+{
+    "librpc/ndr/ndr_string.c": {
+        "entities": [
+            "function_ndr_pull_charset_to_null"
+        ],
+        "lines": [
+            560,
+            629
+        ]
+    }
+}

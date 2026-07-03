@@ -1,0 +1,10 @@
+{
+    "gdal/frmts/gxf/gxfopen.c": {
+        "entities": [
+            "function_GXFOpen"
+        ],
+        "lines": [
+            333
+        ]
+    }
+}

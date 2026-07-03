@@ -1,0 +1,14 @@
+{
+    "src/njs_regexp.c": {
+        "entities": [],
+        "lines": [
+            1828
+        ]
+    },
+    "src/test/njs_unit_test.c": {
+        "entities": [],
+        "lines": [
+            8861
+        ]
+    }
+}

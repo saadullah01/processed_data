@@ -1,0 +1,10 @@
+{
+    "source/fitz/draw-affine.c": {
+        "entities": [
+            "function_fz_paint_image_imp"
+        ],
+        "lines": [
+            3940
+        ]
+    }
+}

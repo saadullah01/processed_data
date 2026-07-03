@@ -1,0 +1,14 @@
+{
+    "src/boxbasic.c": {
+        "entities": [
+            "function_boxaaWriteMem",
+            "function_boxaWriteMem"
+        ],
+        "lines": [
+            2398,
+            2106,
+            2386,
+            2094
+        ]
+    }
+}

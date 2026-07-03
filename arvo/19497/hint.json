@@ -1,0 +1,18 @@
+{
+    "icu4c/source/common/ustring.cpp": {
+        "entities": [
+            "function_isMatchAtCPBoundary"
+        ],
+        "lines": [
+            45
+        ]
+    },
+    "icu4c/source/test/cintltst/custrtst.c": {
+        "entities": [
+            "function_TestSurrogateSearching"
+        ],
+        "lines": [
+            962
+        ]
+    }
+}

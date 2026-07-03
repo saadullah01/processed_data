@@ -1,0 +1,10 @@
+{
+    "wolfcrypt/src/tfm.c": {
+        "entities": [
+            "function_fp_read_radix_16"
+        ],
+        "lines": [
+            5296
+        ]
+    }
+}

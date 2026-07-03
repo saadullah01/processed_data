@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_deref.c": {
+        "entities": [
+            "function_pdfi_dereference"
+        ],
+        "lines": [
+            891
+        ]
+    }
+}

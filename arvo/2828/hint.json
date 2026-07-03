@@ -1,0 +1,10 @@
+{
+    "gdal/frmts/sdts/sdtsiref.cpp": {
+        "entities": [
+            "method_SDTS_IREF::GetSADR"
+        ],
+        "lines": [
+            195
+        ]
+    }
+}

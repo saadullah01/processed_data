@@ -1,0 +1,10 @@
+{
+    "libexslt/crypto.c": {
+        "entities": [
+            "function_exsltCryptoRc4DecryptFunction"
+        ],
+        "lines": [
+            683
+        ]
+    }
+}

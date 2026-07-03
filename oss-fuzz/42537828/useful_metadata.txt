@@ -1,0 +1,23 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_VC1_fuzzer: Use-of-uninitialized-value in vc1_loop_filter
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_VC1_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  vc1_loop_filter
+  ff_vc1_b_intfi_loop_filter
+  vc1_decode_b_blocks
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 6366103557701632
+
+ClusterFuzz testcase 6366103557701632 is verified as fixed.
+
+Status: Fixed (Verified)

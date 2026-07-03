@@ -1,0 +1,19 @@
+Project: c-blosc2
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_fuzzer
+Job Type: libfuzzer_msan_c-blosc2
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x71efffff66bb
+Crash State:
+  blosc_run_decompression_with_context
+  blosc_decompress
+  fuzz_decompress.c
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

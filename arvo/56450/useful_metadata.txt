@@ -1,0 +1,23 @@
+Project: libdwarf
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 8
+Severity: Medium
+
+Project: libdwarf
+Fuzzing Engine: afl
+Fuzz Target: fuzz_die_cu_attrs
+Job Type: afl_asan_libdwarf
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 8
+Crash Address: 0x7ffcbacc4b90
+Crash State:
+  dwarf_dietype_offset
+  fuzz_die_cu_attrs.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_die_cu_attrs from making much progress. Fixing this will allow more bugs to be found.

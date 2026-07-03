@@ -1,0 +1,60 @@
+Project: openvswitch
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+-- Comment 1:
+Project: openvswitch
+Fuzzer: libFuzzer_openvswitch_expr_parse_target
+Fuzz target binary: expr_parse_target
+Job Type: libfuzzer_msan_openvswitch
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  make_cmp
+  expr_parse_primary
+  expr_parse_not
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201809270257:201809280256
+
+Issue filed automatically.
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer expr_parse_target from making much progress.
+
+-- Comment 3:
+ClusterFuzz has detected this issue as fixed in range 201810110248:201810120249.
+
+Project: openvswitch
+Fuzzer: libFuzzer_openvswitch_expr_parse_target
+Fuzz target binary: expr_parse_target
+Job Type: libfuzzer_msan_openvswitch
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash State:
+  make_cmp
+  expr_parse_primary
+  expr_parse_not
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 201809270257:201809280256
+Fixed: 201810110248:201810120249
+
+-- Comment 4:
+ClusterFuzz testcase 5692438513975296 is verified as fixed, so closing issue as verified.
+
+-- Comment 5:
+This bug has been fixed for 30 days. It has been opened to the public.
+
+- Your friendly Sheriffbot

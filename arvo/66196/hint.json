@@ -1,0 +1,10 @@
+{
+    "src/media_tools/av_parsers.c": {
+        "entities": [
+            "function_gf_mp3_bit_rate"
+        ],
+        "lines": [
+            4520
+        ]
+    }
+}

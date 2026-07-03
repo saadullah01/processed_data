@@ -1,0 +1,10 @@
+{
+    "poppler/SecurityHandler.cc": {
+        "entities": [
+            "function_StandardSecurityHandler::StandardSecurityHandler"
+        ],
+        "lines": [
+            117
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "Tests/LibJS/test-invalid-unicode-js.cpp": {
+        "entities": [
+            "function_invalid_unicode_after_valid_code_and_before_eof"
+        ],
+        "lines": [
+            65,
+            7
+        ]
+    },
+    "Userland/Libraries/LibJS/Lexer.cpp": {
+        "entities": [
+            "method_Lexer::next",
+            "function_Lexer::next",
+            "method_Lexer::consume",
+            "function_Lexer::consume"
+        ],
+        "lines": [
+            194,
+            813,
+            206
+        ]
+    },
+    "Userland/Libraries/LibJS/Lexer.h": {
+        "entities": [
+            "class_Lexer"
+        ],
+        "lines": [
+            77
+        ]
+    }
+}

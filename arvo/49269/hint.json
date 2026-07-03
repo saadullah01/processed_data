@@ -1,0 +1,10 @@
+{
+    "mrbgems/mruby-bigint/core/bigint.c": {
+        "entities": [
+            "function_digits"
+        ],
+        "lines": [
+            90
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "libavcodec/rv60dec.c": {
+        "entities": [
+            "function_decode_slice"
+        ],
+        "lines": [
+            2257
+        ]
+    }
+}

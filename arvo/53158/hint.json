@@ -1,0 +1,10 @@
+{
+    "src/decoders/fp_dng.cpp": {
+        "entities": [
+            "function_LibRaw::uncompressed_fp_dng_load_raw"
+        ],
+        "lines": [
+            604
+        ]
+    }
+}

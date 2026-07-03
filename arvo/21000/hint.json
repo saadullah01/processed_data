@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/capwap.c": {
+        "entities": [
+            "function_ndpi_search_setup_capwap"
+        ],
+        "lines": [
+            66
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "bfd/ecoff.c": {
+        "entities": [
+            "function__bfd_ecoff_slurp_symbolic_info",
+            "function__bfd_ecoff_slurp_symbol_table"
+        ],
+        "lines": [
+            486,
+            847
+        ]
+    }
+}

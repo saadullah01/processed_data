@@ -1,0 +1,10 @@
+{
+    "src/hunspell/hashmgr.cxx": {
+        "entities": [
+            "function_HashMgr::decode_flags"
+        ],
+        "lines": [
+            744
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/lib/ndpi_utils.c": {
+        "entities": [
+            "function_ndpi_check_punycode_string"
+        ],
+        "lines": [
+            91
+        ]
+    }
+}

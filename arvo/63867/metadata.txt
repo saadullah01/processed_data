@@ -1,0 +1,62 @@
+Project: cryptofuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5460901268160512
+
+Project: libecc
+Fuzzing Engine: libFuzzer
+Fuzz Target: cryptofuzz-libecc
+Job Type: libfuzzer_msan_libecc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  fp_uninit
+  cryptofuzz::module::libecc::OpECC_ValidatePubkey
+  cryptofuzz::ExecutorBase<bool, cryptofuzz::operation::ECC_ValidatePubkey>::callM
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_libecc&range=202311020611:202311040620
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5460901268160512
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Hi,
+
+This issue seems to be related to a missing "x.magic = y.magic = WORD(0)" in https://github.com/guidovranken/cryptofuzz/blob/d1710d9f9c643ef8df1b79ab4d874f133647154b/modules/libecc/module.cpp#L443 when declaring the two local variables.
+
+Regards,"""
+
+-- Comment 3: """Thanks. Should be fixed with https://github.com/guidovranken/cryptofuzz/commit/ed5b4655ba6f1a641bc340322874d720f4494baf"""
+
+-- Comment 4: """ClusterFuzz testcase 5460901268160512 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_libecc&range=202311040620:202311050618
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

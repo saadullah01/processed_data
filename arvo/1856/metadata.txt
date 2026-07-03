@@ -1,0 +1,99 @@
+Project: harfbuzz
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed report: https://oss-fuzz.com/testcase?key=4535496598355968
+
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-fuzzer
+Fuzz target binary: hb-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  int OT::SortedArrayOf<OT::GlyphID, OT::IntType<unsigned short, 2u> >::bsearch<un
+  OT::CoverageFormat1::get_coverage
+  OT::Coverage::get_coverage
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_harfbuzz&range=201703101926:201703102125
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4535496598355968
+
+
+Issue filed automatically.
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers."""
+
+-- Comment 2: """ClusterFuzz testcase 4535496598355968 is flaky and no longer reproduces, so closing issue.
+
+If this is incorrect, please add ClusterFuzz-Wrong label and re-open the issue."""
+
+-- Comment 3: """Re-opening these bugs as this was likely a mistake on ClusterFuzz's part. Sorry for the noise!"""
+
+-- Comment 4: """This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 5: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 6: """This should fix it:
+https://github.com/behdad/harfbuzz/commit/e5930722d485207ca158612a2b08816337fed7e8
+
+Fingers crossed."""
+
+-- Comment 7: """ClusterFuzz has detected this issue as fixed in range 201711141717:201711150637.
+
+Detailed report: https://oss-fuzz.com/testcase?key=4535496598355968
+
+Project: harfbuzz
+Fuzzer: libFuzzer_harfbuzz_hb-fuzzer
+Fuzz target binary: hb-fuzzer
+Job Type: libfuzzer_msan_harfbuzz
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  int OT::SortedArrayOf<OT::GlyphID, OT::IntType<unsigned short, 2u> >::bsearch<un
+  OT::CoverageFormat1::get_coverage
+  OT::Coverage::get_coverage
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_harfbuzz&range=201703101926:201703102125
+Fixed: https://oss-fuzz.com/revisions?job=libfuzzer_msan_harfbuzz&range=201711141717:201711150637
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4535496598355968
+
+See https://github.com/google/oss-fuzz/blob/master/docs/reproducing.md for more information.
+
+If you suspect that the result above is incorrect, try re-doing that job on the test case report page."""
+
+-- Comment 8: """ClusterFuzz testcase 4535496598355968 is verified as fixed, so closing issue as verified.
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

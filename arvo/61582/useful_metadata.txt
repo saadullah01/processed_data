@@ -1,0 +1,23 @@
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: uloc_is_right_to_left_fuzzer
+Job Type: libfuzzer_asan_icu
+Platform Id: linux
+Crash Type: Stack-use-after-scope READ 3
+Crash Address: 0x7fff6baa00ca
+Crash State:
+  ulocimp_addLikelySubtags_74
+  uloc_isRightToLeft_74
+  uloc_is_right_to_left_fuzzer.cpp
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer uloc_is_right_to_left_fuzzer from making much progress.
+
+file upstream bug in ICU-22466
+Making this my first priority now
+
+Merged fix in PR 2561
+
+This bug has been fixed. It has been opened to the public.
+
+ClusterFuzz testcase 4747793473077248 is verified as fixed.

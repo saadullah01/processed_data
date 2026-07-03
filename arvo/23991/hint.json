@@ -1,0 +1,22 @@
+{
+    "binutils/testsuite/binutils-all/arc/double_regs.s": {
+        "entities": [],
+        "lines": []
+    },
+    "binutils/testsuite/binutils-all/arc/objdump.exp": {
+        "entities": [
+            "function_check_assembly"
+        ],
+        "lines": [
+            72
+        ]
+    },
+    "opcodes/arc-dis.c": {
+        "entities": [
+            "function_print_insn_arc"
+        ],
+        "lines": [
+            934
+        ]
+    }
+}

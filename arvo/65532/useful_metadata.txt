@@ -1,0 +1,31 @@
+Project: upx
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Fuzzing Engine: afl
+Fuzz Target: list_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x6160000011c8
+Crash State:
+  PackMachBase<N_Mach::MachClass_64<N_BELE_CTP::LEPolicy> >::canUnpack
+  try_can_unpack
+  PackMaster::visitAllPackers
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer list_packed_file_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Fixed on branch devel4 by commit 0d980ef9a70159aa89d4f295ce5f14b6f569a376 .
+Standard bug: tracking bounded concatenated variable-length structs.
+
+Fixed on branch devel.
+
+ClusterFuzz testcase 5483719401996288 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+- Your friendly Sheriffbot

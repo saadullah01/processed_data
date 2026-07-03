@@ -1,0 +1,12 @@
+{
+    "libr/bin/format/objc/mach0_classes.c": {
+        "entities": [
+            "function_iterate_list_of_lists"
+        ],
+        "lines": [
+            682,
+            650,
+            630
+        ]
+    }
+}

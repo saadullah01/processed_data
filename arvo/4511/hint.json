@@ -1,0 +1,20 @@
+{
+    "src/librawspeed/decompressors/PanasonicDecompressor.cpp": {
+        "entities": [
+            "function_PanasonicDecompressor::PanasonicDecompressor",
+            "struct_PanasonicDecompressor::PanaBitpump"
+        ],
+        "lines": [
+            76,
+            46
+        ]
+    },
+    "src/librawspeed/decompressors/PanasonicDecompressor.h": {
+        "entities": [
+            "class_PanasonicDecompressor"
+        ],
+        "lines": [
+            29
+        ]
+    }
+}

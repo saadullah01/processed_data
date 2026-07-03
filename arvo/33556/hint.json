@@ -1,0 +1,10 @@
+{
+    "src/lxc/conf.c": {
+        "entities": [
+            "function_parse_lxc_mntopts"
+        ],
+        "lines": [
+            2154
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "lib/jxl/decode.cc": {
+        "entities": [
+            "function_JxlDecoderDCOutBufferSize",
+            "function_JxlDecoderImageOutBufferSize",
+            "function_JxlDecoderPreviewOutBufferSize"
+        ],
+        "lines": [
+            1888,
+            1820,
+            1863
+        ]
+    },
+    "lib/jxl/image_metadata.h": {
+        "entities": [
+            "struct_CodecMetadata"
+        ],
+        "lines": [
+            377
+        ]
+    }
+}

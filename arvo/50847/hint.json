@@ -1,0 +1,10 @@
+{
+    "base/ttfmain.c": {
+        "entities": [
+            "function_ttfOutliner__BuildGlyphOutlineAux"
+        ],
+        "lines": [
+            650
+        ]
+    }
+}

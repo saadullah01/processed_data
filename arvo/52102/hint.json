@@ -1,0 +1,12 @@
+{
+    "mapfile.c": {
+        "entities": [
+            "function_loadLabel",
+            "function_loadClass"
+        ],
+        "lines": [
+            3231,
+            1623
+        ]
+    }
+}

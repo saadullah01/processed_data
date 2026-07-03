@@ -1,0 +1,45 @@
+{
+    "decoder/svc/isvcd_api.c": {
+        "entities": [
+            "function_isvcd_video_decode"
+        ],
+        "lines": [
+            5183
+        ]
+    },
+    "decoder/svc/isvcd_parse_ebslice.c": {
+        "entities": [
+            "function_isvcd_mv_pred_ref_tfr_nby2_ebmb"
+        ],
+        "lines": [
+            622
+        ]
+    },
+    "decoder/svc/isvcd_parse_epslice.c": {
+        "entities": [
+            "function_isvcd_parse_interlayer_resamp_func_init"
+        ],
+        "lines": [
+            3209,
+            3188
+        ]
+    },
+    "decoder/svc/isvcd_process_epslice.c": {
+        "entities": [
+            "function_isvcd_mv_pred_ref_tfr_nby2_epmb",
+            "function_isvcd_interlyr_motion_mode_pred"
+        ],
+        "lines": [
+            485,
+            158
+        ]
+    },
+    "decoder/svc/isvcd_structs.h": {
+        "entities": [
+            "struct_svc_dec_lyr_struct_t"
+        ],
+        "lines": [
+            660
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "tests/fuzz/fuzz_decompress.c": {
+        "entities": [
+            "function_LLVMFuzzerTestOneInput"
+        ],
+        "lines": [
+            22
+        ]
+    }
+}

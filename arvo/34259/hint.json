@@ -1,0 +1,11 @@
+{
+    "blosc/frame.c": {
+        "entities": [
+            "function_get_header_info"
+        ],
+        "lines": [
+            409,
+            418
+        ]
+    }
+}

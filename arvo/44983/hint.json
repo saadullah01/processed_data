@@ -1,0 +1,25 @@
+{
+    "pdf/pdf_errors.h": {
+        "entities": [],
+        "lines": [
+            51
+        ]
+    },
+    "pdf/pdf_sec.c": {
+        "entities": [
+            "function_pdfi_initialise_Decryption"
+        ],
+        "lines": [
+            1369,
+            1410,
+            1380,
+            1391
+        ]
+    },
+    "pdf/pdf_warnings.h": {
+        "entities": [],
+        "lines": [
+            56
+        ]
+    }
+}

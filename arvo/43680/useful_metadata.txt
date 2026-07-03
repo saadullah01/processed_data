@@ -1,0 +1,27 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x0000bfff8004
+Crash State:
+  chunk_obj_alloc
+  chunk_alloc_bytes
+  cmap_endfbrange_func
+
+Sanitizer: address (ASAN)
+
+Fix committed upstream
+
+ClusterFuzz testcase 5770434644148224 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

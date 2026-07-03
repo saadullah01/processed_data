@@ -1,0 +1,30 @@
+{
+    "libarchive/archive_read_support_format_rar5.c": {
+        "entities": [
+            "function_circular_memcpy",
+            "function_copy_string",
+            "function_do_uncompress_block",
+            "function_run_e8e9_filter",
+            "function_push_data",
+            "function_run_arm_filter"
+        ],
+        "lines": [
+            2660,
+            689,
+            562,
+            505,
+            604,
+            2686
+        ]
+    },
+    "libarchive/test/test_read_format_rar5.c": {
+        "entities": [],
+        "lines": [
+            1010
+        ]
+    },
+    "libarchive/test/test_read_format_rar5_invalid_dict_reference.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

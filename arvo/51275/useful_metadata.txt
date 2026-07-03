@@ -1,0 +1,21 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 4
+Severity: Medium
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gs_device_pdfwrite_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 4
+Crash Address: 0x7fff31529760
+Crash State:
+  gs_type2_interpret
+  copied_type1_glyph_outline
+  gs_default_glyph_info
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fixed upstream in this commit https://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=893e67b7b7253aa147740269525b2a071c7bbe79

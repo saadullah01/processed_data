@@ -1,0 +1,54 @@
+{
+    "Userland/Libraries/LibJS/Forward.h": {
+        "entities": [],
+        "lines": [
+            146,
+            131,
+            54
+        ]
+    },
+    "Userland/Libraries/LibJS/Runtime/TypedArray.h": {
+        "entities": [
+            "class_TypedArray",
+            "method_TypedArray::put_by_index"
+        ],
+        "lines": [
+            75,
+            44,
+            94
+        ]
+    },
+    "Userland/Libraries/LibJS/Runtime/Uint8ClampedArray.cpp": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    },
+    "Userland/Libraries/LibJS/Runtime/Uint8ClampedArray.h": {
+        "entities": [
+            "class_Uint8ClampedArray"
+        ],
+        "lines": [
+            1
+        ]
+    },
+    "Userland/Libraries/LibWeb/CodeGenerators/WrapperGenerator.cpp": {
+        "entities": [
+            "function_generate_implementation",
+            "function_generate_prototype_implementation"
+        ],
+        "lines": [
+            856,
+            1200
+        ]
+    },
+    "Userland/Libraries/LibWeb/HTML/ImageData.cpp": {
+        "entities": [
+            "function_ImageData::create_with_size"
+        ],
+        "lines": [
+            26,
+            5
+        ]
+    }
+}

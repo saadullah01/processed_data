@@ -1,0 +1,48 @@
+Project: graphicsmagick
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Unknown signal
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5126582330458112
+
+Project: graphicsmagick
+Fuzzing Engine: libFuzzer
+Fuzz Target: coder_MNG_fuzzer
+Job Type: libfuzzer_ubsan_graphicsmagick
+Platform Id: linux
+
+Crash Type: Unknown signal
+Crash Address: 0x000000000000
+Crash State:
+  MagickMallocAligned
+  GetCacheInfo
+  AllocateImage
+  
+Sanitizer: undefined (UBSAN)
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_graphicsmagick&range=201809220214:201809230232
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5126582330458112
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """According to the stack trace, this crash happened in the glibc implementation of posix_memalign().  It looks like a null pointer was dereferenced in the glibc implementation.  It looks the crash happened in diagnostic code, which is perhaps not active by default in a glibc build."""
+
+-- Comment 3: """If you look at the full stdout, it's glibc aborting because some malloc metadata was corrupted. I believe this is actually antoher manifestation of https://oss-fuzz.com/testcase-detail/5753914042875904"""
+
+-- Comment 4: """ClusterFuzz testcase 5126582330458112 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_ubsan_graphicsmagick&range=201911170318:201911180315
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 5: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

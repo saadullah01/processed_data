@@ -1,0 +1,28 @@
+Project: capstonenext
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: capstone
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_disasmnext
+Job Type: libfuzzer_msan_capstone
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  PPC_post_printer
+  fill_insn
+  cs_disasm
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_disasmnext from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5475859325911040 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

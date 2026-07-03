@@ -1,0 +1,28 @@
+Project: libavc
+Fuzzing Engine: honggfuzz
+Fuzz Target: svc_dec_fuzzer
+Job Type: honggfuzz_asan_libavc
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x7f86ed7f0800
+Crash State:
+  ih264d_get_bits_h264
+  ih264d_parse_ccv
+  ih264d_parse_sei_payload
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Reproducer Testcase: 4666730514612224
+
+svc decoder is newly added in libavc's upstream project and is not part of Android source tree yet. So this has no security impact in Android currently.
+
+b/269299961 has been created for this issue
+
+ClusterFuzz testcase 4666730514612224 is verified as fixed
+
+764ab7b702142762bfa9c4e93427c6e494ff7940 fixed this.
+
+This bug has been fixed. It has been opened to the public.

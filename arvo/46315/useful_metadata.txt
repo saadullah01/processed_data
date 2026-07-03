@@ -1,0 +1,26 @@
+Project: php-src
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: php
+Fuzzing Engine: libFuzzer
+Fuzz Target: php-fuzz-execute
+Job Type: libfuzzer_asan_i386_php
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x07615816
+Crash State:
+  zend_hash_find
+  zend_hash_compare
+  zend_compare
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+ClusterFuzz testcase 6066390068494336 is verified as fixed

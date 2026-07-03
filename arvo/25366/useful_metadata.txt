@@ -1,0 +1,16 @@
+Project: libsndfile
+Fuzzing Engine: libFuzzer
+Fuzz Target: sndfile_fuzzer
+Job Type: libfuzzer_msan_libsndfile
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  endswap_int64_t_array
+  endswap_double_array
+  host_read_d2f
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

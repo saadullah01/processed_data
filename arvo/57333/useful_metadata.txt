@@ -1,0 +1,25 @@
+Project: libavc
+Fuzzing Engine: libFuzzer
+Fuzz Target: avc_enc_fuzzer
+Job Type: libfuzzer_msan_libavc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  Codec::encodeFrames
+  avc_enc_fuzzer.cpp
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+b/274906999 has been created for this issue.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer avc_enc_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5923692197838848 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_msan_libavc&range=202304040617:202304050617
+
+This is fixed by https://github.com/ittiam-systems/libavc/commit/ba34616a119952074bf32bbb8ae2b93e1d8500c2
+
+This bug has been fixed. It has been opened to the public.

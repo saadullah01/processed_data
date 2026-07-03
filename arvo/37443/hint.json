@@ -1,0 +1,17 @@
+{
+    "libyarmodules/pe/pe.c": {
+        "entities": [
+            "function_pe_parse_version_info",
+            "function_pe_parse_delay_import_pointer",
+            "function_pe_parse_delay_import_dll_name",
+            "function_rva_to_offset"
+        ],
+        "lines": [
+            1165,
+            3310,
+            3440,
+            662,
+            1181
+        ]
+    }
+}

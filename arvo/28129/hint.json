@@ -1,0 +1,14 @@
+{
+    "Zend/tests/attributes/032_attribute_validation_scope.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_attributes.c": {
+        "entities": [
+            "function_validate_attribute"
+        ],
+        "lines": [
+            33
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "bfd/peXXigen.c": {
+        "entities": [
+            "function__bfd_XX_print_ce_compressed_pdata"
+        ],
+        "lines": [
+            1987
+        ]
+    }
+}

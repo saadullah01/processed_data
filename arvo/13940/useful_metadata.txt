@@ -1,0 +1,17 @@
+Project: mupdf
+Fuzzer: libFuzzer_mupdf_pdf_fuzzer
+Fuzz target binary: pdf_fuzzer
+Job Type: libfuzzer_asan_mupdf
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 4
+Crash Address: 0x629000009414
+Crash State:
+  eval_sample_func
+  pdf_eval_function
+  eval_stitching_func
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: (regression detected)
+Fixed: (ClusterFuzz detected as fixed)
+ClusterFuzz testcase 5664837016748032 is verified as fixed
+This bug has been fixed for 30 days. It has been opened to the public.

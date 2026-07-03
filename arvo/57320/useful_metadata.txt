@@ -1,0 +1,32 @@
+Project: flac
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: flac
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzer_tool_metaflac
+Job Type: libfuzzer_msan_flac
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  local__parse_ms_
+  grabbag__cuesheet_parse
+  do_shorthand_operation__cuesheet
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed:
+
+Reproducer Testcase:
+
+Issue filed automatically.
+
+ClusterFuzz testcase 6232410621870080 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

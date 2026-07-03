@@ -1,0 +1,24 @@
+upx:list_packed_file_fuzzer: Crash in N_BELE_RTP::LEPolicy::get32
+
+Project: upx
+Fuzzing Engine: libFuzzer
+Fuzz Target: list_packed_file_fuzzer
+Job Type: libfuzzer_asan_upx
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x623000089420
+Crash State:
+  N_BELE_RTP::LEPolicy::get32
+  PackLinuxElf64::elf_lookup
+  PackLinuxElf64::PackLinuxElf64help1
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+Fixed in UPX commit 937ae4c5e on 2024-06-04.
+Perhaps the fix was not seen by the testing because of an issue where the build system insists on applying a stale patch which was inserted into the build logic by Leviathan Security, but was not removed when UPX corrected the problem which necessitated the patch. UPX has no access to the build recipe. Because the contract with Leviathan Security ended without appropriate cleanup of their change to the build recipe, then someone at OSTIP must step in to remove the unnecessary patch, or else provide UPX with access to the build recipe (the URL of the source, plus access permissions).
+
+ClusterFuzz testcase 6751134295851008 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

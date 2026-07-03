@@ -1,0 +1,25 @@
+Issue 386128938
+mruby:mruby_fuzzer: Use-of-uninitialized-value in mark_context
+
+Project: mruby
+Fuzzing Engine: libFuzzer
+Fuzz Target: mruby_fuzzer
+Job Type: libfuzzer_msan_mruby
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  mark_context
+  incremental_gc
+  mrb_incremental_gc
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type Vulnerability
+Priority P2
+Severity S2
+Status Fixed (Verified)
+Project mruby

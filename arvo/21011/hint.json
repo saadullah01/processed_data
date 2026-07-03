@@ -1,0 +1,16 @@
+{
+    "bfd/format.c": {
+        "entities": [
+            "function_bfd_preserve_save",
+            "function_bfd_check_format_matches",
+            "function_bfd_preserve_finish",
+            "function_bfd_preserve_restore"
+        ],
+        "lines": [
+            97,
+            153,
+            212,
+            180
+        ]
+    }
+}

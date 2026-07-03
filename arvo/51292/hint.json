@@ -1,0 +1,34 @@
+{
+    "etc/cyclonedds.rnc": {
+        "entities": [],
+        "lines": [
+            1303
+        ]
+    },
+    "etc/cyclonedds.xsd": {
+        "entities": [],
+        "lines": [
+            1976
+        ]
+    },
+    "src/core/ddsc/tests/config.c": {
+        "entities": [],
+        "lines": [
+            481
+        ]
+    },
+    "src/core/ddsi/defconfig.c": {
+        "entities": [],
+        "lines": [
+            107
+        ]
+    },
+    "src/core/ddsi/src/ddsi_config.c": {
+        "entities": [
+            "function_if_network_partition"
+        ],
+        "lines": [
+            720
+        ]
+    }
+}

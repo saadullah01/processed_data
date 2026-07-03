@@ -1,0 +1,10 @@
+{
+    "src/metaflac/options.c": {
+        "entities": [
+            "function_parse_options"
+        ],
+        "lines": [
+            251
+        ]
+    }
+}

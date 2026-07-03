@@ -1,0 +1,10 @@
+{
+    "libdwfl/link_map.c": {
+        "entities": [
+            "function_read_addrs"
+        ],
+        "lines": [
+            248
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "src/jplist.c": {
+        "entities": [
+            "function_parse_array",
+            "function_parse_primitive",
+            "function_plist_from_json",
+            "function_parse_object",
+            "function_parse_string"
+        ],
+        "lines": [
+            418,
+            707,
+            625,
+            564,
+            540,
+            605
+        ]
+    }
+}

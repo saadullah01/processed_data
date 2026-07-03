@@ -1,0 +1,10 @@
+{
+    "src/cmstypes.c": {
+        "entities": [
+            "function_Write16bitTables"
+        ],
+        "lines": [
+            2071
+        ]
+    }
+}

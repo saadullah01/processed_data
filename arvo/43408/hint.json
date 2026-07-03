@@ -1,0 +1,10 @@
+{
+    "Packet++/src/SipLayer.cpp": {
+        "entities": [
+            "method_SipRequestFirstLine::parseVersion"
+        ],
+        "lines": [
+            291
+        ]
+    }
+}

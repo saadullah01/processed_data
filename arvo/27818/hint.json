@@ -1,0 +1,10 @@
+{
+    "internal-complibs/lizard-1.0/lizard_decompress_liz.h": {
+        "entities": [
+            "function_Lizard_decompress_LIZv1"
+        ],
+        "lines": [
+            62
+        ]
+    }
+}

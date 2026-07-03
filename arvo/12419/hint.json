@@ -1,0 +1,10 @@
+{
+    "xmlreader.c": {
+        "entities": [
+            "function_xmlTextReaderRemoveID"
+        ],
+        "lines": [
+            273
+        ]
+    }
+}

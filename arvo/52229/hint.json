@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/http.c": {
+        "entities": [
+            "function_ndpi_check_http_server"
+        ],
+        "lines": [
+            655
+        ]
+    }
+}

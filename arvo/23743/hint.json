@@ -1,0 +1,12 @@
+{
+    "binutils/elfcomm.c": {
+        "entities": [
+            "function_release_archive",
+            "function_setup_nested_archive"
+        ],
+        "lines": [
+            745,
+            717
+        ]
+    }
+}

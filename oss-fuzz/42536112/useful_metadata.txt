@@ -1,0 +1,29 @@
+miniz:zip_fuzzer: Heap-buffer-overflow in mz_zip_mem_read_func
+
+Project: miniz
+Fuzzing Engine: libFuzzer
+Fuzz Target: zip_fuzzer
+Job Type: libfuzzer_asan_miniz
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ {*}
+Crash Address: 0x507000000144
+Crash State:
+  mz_zip_mem_read_func
+  mz_zip_validate_file
+  zip_fuzzer.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 5362290995036160 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+Type: Vulnerability
+Priority: P2
+Severity: S2
+Status: Fixed (Verified)
+Access: Default access
+Project: miniz

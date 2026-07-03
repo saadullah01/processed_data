@@ -1,0 +1,66 @@
+{
+    "gas/testsuite/gas/s12z/truncated.d": {
+        "entities": [],
+        "lines": [
+            9
+        ]
+    },
+    "opcodes/s12z-dis.c": {
+        "entities": [
+            "function_print_insn_s12z",
+            "function_abstract_read_memory"
+        ],
+        "lines": [
+            56,
+            346
+        ]
+    },
+    "opcodes/s12z-opc.c": {
+        "entities": [
+            "function_shift_decode",
+            "function_bfextins_n_bytes",
+            "function_create_simple_memory_operand",
+            "function_decode_s12z",
+            "function_create_memory_operand",
+            "function_x_opr_decode_with_size",
+            "function_create_register_all16_operand",
+            "function_loop_primitive_decode",
+            "function_create_register_all_operand",
+            "function_decode_operation",
+            "function_create_immediate_operand",
+            "function_mul_decode",
+            "function_create_register_operand_with_size",
+            "function_create_bitfield_operand",
+            "function_loop_prim_n_bytes",
+            "function_mul_n_bytes"
+        ],
+        "lines": [
+            260,
+            272,
+            2329,
+            1691,
+            2204,
+            285,
+            31,
+            171,
+            303,
+            314,
+            962,
+            325,
+            2501,
+            459,
+            2258,
+            981,
+            342,
+            1628,
+            733,
+            2662,
+            359,
+            1772,
+            2680,
+            2169,
+            2043,
+            127
+        ]
+    }
+}

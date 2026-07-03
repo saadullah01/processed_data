@@ -1,0 +1,31 @@
+{
+    "Zend/tests/short_echo_as_identifier.phpt": {
+        "entities": [],
+        "lines": []
+    },
+    "Zend/zend_language_parser.y": {
+        "entities": [
+            "grammar_rule_trait_alias",
+            "grammar rule_trait_alias"
+        ],
+        "lines": [
+            296,
+            852
+        ]
+    },
+    "Zend/zend_language_scanner.h": {
+        "entities": [],
+        "lines": [
+            78
+        ]
+    },
+    "Zend/zend_language_scanner.l": {
+        "entities": [
+            "function_zend_lex_tstring"
+        ],
+        "lines": [
+            306,
+            2149
+        ]
+    }
+}

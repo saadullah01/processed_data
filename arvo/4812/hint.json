@@ -1,0 +1,10 @@
+{
+    "src/librawspeed/decompressors/FujiDecompressor.cpp": {
+        "entities": [
+            "function_FujiDecompressor::FujiDecompressor"
+        ],
+        "lines": [
+            37
+        ]
+    }
+}

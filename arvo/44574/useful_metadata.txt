@@ -1,0 +1,22 @@
+Project: libplist
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Fuzz Target: jplist_fuzzer
+Job Type: libfuzzer_asan_libplist
+Platform Id: linux
+Crash Address: 0x6020000000b1
+Crash State:
+  parse_primitive
+  plist_from_json
+  jplist_fuzzer.cc
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+"This crash occurs very frequently on linux platform and is likely preventing the fuzzer jplist_fuzzer from making much progress. Fixing this will allow more bugs to be found."
+
+ClusterFuzz testcase 6639076466360320 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

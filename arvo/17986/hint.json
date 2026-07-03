@@ -1,0 +1,53 @@
+{
+    "VisualMagick/installer/inc/version.isx": {
+        "entities": [],
+        "lines": [
+            10
+        ]
+    },
+    "magick/attribute.c": {
+        "entities": [],
+        "lines": [
+            2053,
+            398,
+            2071,
+            2088,
+            1833,
+            431,
+            2102,
+            1856,
+            1601,
+            1984,
+            2115,
+            1865,
+            1998,
+            1877,
+            1495,
+            2011,
+            2139,
+            1630,
+            1887,
+            1511,
+            2035,
+            1910
+        ]
+    },
+    "magick/version.h": {
+        "entities": [],
+        "lines": [
+            38
+        ]
+    },
+    "www/Changelog.html": {
+        "entities": [],
+        "lines": [
+            35
+        ]
+    },
+    "www/api/attribute.html": {
+        "entities": [],
+        "lines": [
+            3
+        ]
+    }
+}

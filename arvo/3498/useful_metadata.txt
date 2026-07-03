@@ -1,0 +1,44 @@
+Project: librawspeed
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Use-after-poison READ 2
+Severity: High
+
+Project: librawspeed
+Fuzzer: afl_librawspeed_TiffDecoderFuzzer-SrwDecoder
+Fuzz target binary: TiffDecoderFuzzer-SrwDecoder
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x7ffb7ca6ed00
+Crash State:
+  void rawspeed::SamsungV2Decompressor::decompressRow<
+  rawspeed::SamsungV2Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: 201708291830:201708300032
+Reproducer Testcase ID: 5856496673882112
+
+Testcase 5856496673882112 is a top crash on ClusterFuzz for linux platform. Please prioritize fixing this crash.
+
+ClusterFuzz has detected this issue as fixed in range 201709280518:201709290515
+
+Crash Type: Use-after-poison READ 2
+Crash Address: 0x7ffb7ca6ed00
+Crash State:
+  void rawspeed::SamsungV2Decompressor::decompressRow<
+  rawspeed::SamsungV2Decompressor::decompress
+  rawspeed::SrwDecoder::decodeRawInternal
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Regressed: 201708291830:201708300032
+Fixed: 201709280518:201709290515
+Reproducer Testcase ID: 5856496673882112
+
+ClusterFuzz testcase 5856496673882112 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

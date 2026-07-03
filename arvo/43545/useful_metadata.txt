@@ -1,0 +1,17 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_dwarf
+Job Type: libfuzzer_asan_binutils
+Platform Id: linux
+
+Crash Type: Null-dereference READ
+Crash Address: 0x000000000000
+Crash State:
+  load_separate_debug_files
+  fuzz_dwarf.c
+
+Sanitizer: address (ASAN)
+
+ClusterFuzz testcase 6328029872259072 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

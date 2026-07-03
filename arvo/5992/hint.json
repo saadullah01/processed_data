@@ -1,0 +1,27 @@
+{
+    "epan/dissectors/asn1/nbap/nbap.cnf": {
+        "entities": [
+            "function_RL-Specific-DCH-Info-Item"
+        ],
+        "lines": [
+            1959,
+            1928,
+            1362,
+            1945,
+            1407
+        ]
+    },
+    "epan/dissectors/packet-nbap.c": {
+        "entities": [
+            "function_dissect_nbap_E_DCH_DDI_Value",
+            "function_dissect_nbap_LogicalChannelID"
+        ],
+        "lines": [
+            15043,
+            18313,
+            12311,
+            15099,
+            11805
+        ]
+    }
+}

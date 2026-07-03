@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/mail_imap.c": {
+        "entities": [
+            "function_ndpi_search_mail_imap_tcp"
+        ],
+        "lines": [
+            161
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "src/cmstypes.c": {
+        "entities": [
+            "function_Type_LUT16_Write",
+            "function_Type_LUT8_Write"
+        ],
+        "lines": [
+            2218,
+            2227,
+            1935
+        ]
+    }
+}

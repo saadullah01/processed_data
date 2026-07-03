@@ -1,0 +1,38 @@
+{
+    "base/gdevdflt.c": {
+        "entities": [
+            "function_gx_device_subclass",
+            "function_gx_device_unsubclass"
+        ],
+        "lines": [
+            1347,
+            1484,
+            1520,
+            1432,
+            1530,
+            1502
+        ]
+    },
+    "base/gdevsclass.c": {
+        "entities": [
+            "function_default_subclass_finalize"
+        ],
+        "lines": [
+            875
+        ]
+    },
+    "psi/zdevice.c": {
+        "entities": [
+            "function_zmakewordimagedevice",
+            "function_psi_device_ref_reloc_ptrs",
+            "function_psi_device_ref_enum_ptrs",
+            "function_psi_device_ref_finalize"
+        ],
+        "lines": [
+            456,
+            45,
+            54,
+            71
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "tsk/fs/fs_dir.c": {
+        "entities": [
+            "function_tsk_fs_dir_walk_recursive"
+        ],
+        "lines": [
+            829
+        ]
+    }
+}

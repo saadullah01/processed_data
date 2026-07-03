@@ -1,0 +1,30 @@
+Project: upx
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Project: upx
+Fuzzing Engine: afl
+Fuzz Target: test_packed_file_fuzzer
+Job Type: afl_asan_upx
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x628000009f20
+Crash State:
+  N_BELE_RTP::LEPolicy::get64
+  PackLinuxElf64::elf_find_table_size
+  PackLinuxElf64::invert_pt_dynamic
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer test_packed_file_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+Fixed on branch upx-devel4
+
+ClusterFuzz testcase 5044309392949248 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

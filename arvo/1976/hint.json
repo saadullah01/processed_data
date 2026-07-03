@@ -1,0 +1,11 @@
+{
+    "valid.c": {
+        "entities": [
+            "function_xmlValidateOneNamespace"
+        ],
+        "lines": [
+            4627,
+            4638
+        ]
+    }
+}

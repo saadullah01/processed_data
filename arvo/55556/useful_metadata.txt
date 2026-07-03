@@ -1,0 +1,46 @@
+Project: boringssl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 8
+Severity: High
+
+Comment 1:
+Project: boringssl
+Fuzzing Engine: libFuzzer
+Fuzz Target: conf
+Job Type: libfuzzer_asan_boringssl
+Platform Id: linux
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x604000000258
+Crash State:
+  sk_num
+  ASN1_template_free
+  asn1_item_combine_free
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+
+Comment 2:
+I see the new fuzzer was a good idea. :-)
+
+Comment 3:
+The following revision refers to this bug:
+
+commit 507ac830036d7531489490831814cf03e0d7c4d6
+Author: David Benjamin
+Fix error-handling in X509V3_EXT_add_nconf_sk and X509v3_add_ext.
+See also upstream's abcf241114c4dc33af95288ae7f7d10916c67db0.
+Fixed: oss-fuzz:55555, oss-fuzz:55556, oss-fuzz:55560
+Change-Id: I3b015822806ced39a498017bd2329323ed8dfbf0
+Reviewed-by: Bob Beck
+Commit-Queue: David Benjamin
+
+Modified:
+  crypto/x509v3/v3_conf.c
+  crypto/x509/x509_test.cc
+  crypto/x509/x509_v3.c
+
+Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+Comment 5:
+ClusterFuzz testcase 4809750350266368 is verified as fixed.

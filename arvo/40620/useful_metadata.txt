@@ -1,0 +1,33 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Dynamic-stack-buffer-overflow WRITE {*}
+
+Comment 1:
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_disas_ext-bfd_arch_i386
+Job Type: afl_asan_binutils
+Platform Id: linux
+
+Crash Type: Dynamic-stack-buffer-overflow WRITE {*}
+Crash Address: 0x7ffe8264c1c0
+Crash State:
+  fetch_data
+  print_insn
+  print_insn_i386
+
+Sanitizer: address (ASAN)
+
+Comment 2:
+Am not entirely sure what's going on here. I am unable to reproduce the issue with libFuzzer or honggfuzz - the issue only occurs with AFL. Could this be a false positive? 
+
+Notice that AFL has been broken for a while on binutils, which means the AFL fuzzers has just started running and thus there may be a correlation with AFL-specific issues.
+
+Comment 3:
+I debugged this more and it is a false positive due to the AFL build getting messed up. 
+
+A fix was proposed here:
+
+Comment 4:
+ClusterFuzz testcase 5730636799803392 is verified as fixed in

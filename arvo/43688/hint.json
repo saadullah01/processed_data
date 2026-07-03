@@ -1,0 +1,10 @@
+{
+    "pdf/pdf_page.c": {
+        "entities": [
+            "function_pdfi_page_render"
+        ],
+        "lines": [
+            834
+        ]
+    }
+}

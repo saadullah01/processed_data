@@ -1,0 +1,20 @@
+Project: gpac
+Fuzzing Engine: afl
+Fuzz Target: fuzz_probe_analyze
+Job Type: afl_asan_gpac
+Platform Id: linux
+
+Crash Type: UNKNOWN WRITE
+Crash Address: 0x7bb84a837844
+Crash State:
+  img_process
+  gf_filter_process_task
+  gf_fs_thread_proc
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 6385597702799360 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

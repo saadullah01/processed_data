@@ -1,0 +1,25 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Segv on unknown address
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Segv on unknown address
+Crash Address:
+Crash State:
+  pdfi_array_get
+  pdfi_TJ
+  pdfi_interpret_stream_operator
+
+Sanitizer: address (ASAN)
+
+Fix committed upstream
+
+ClusterFuzz testcase 4946908395732992 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

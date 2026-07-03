@@ -1,0 +1,11 @@
+{
+    "src/lib/lwan-request.c": {
+        "entities": [
+            "function_parse_http_request"
+        ],
+        "lines": [
+            1192,
+            1205
+        ]
+    }
+}

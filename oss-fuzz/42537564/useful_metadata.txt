@@ -1,0 +1,31 @@
+ffmpeg:ffmpeg_AV_CODEC_ID_MVHA_fuzzer: Use-of-uninitialized-value in add_left_pred_c
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_AV_CODEC_ID_MVHA_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+ add_left_pred_c
+ decode_frame
+ decode_receive_frame_internal
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+Comments:
+ ClusterFuzz testcase 4878509466517504 is verified as fixed.
+ This bug has been fixed. It has been opened to the public.
+
+Issue metadata:
+ Type: Vulnerability
+ Priority: P2
+ Severity: S2
+ Status: Fixed (Verified)
+ Project: ffmpeg

@@ -1,0 +1,17 @@
+{
+    "parser/parse_via.c": {
+        "entities": [
+            "function_parse_via_param"
+        ],
+        "lines": [
+            909,
+            742
+        ]
+    },
+    "parser/test/test_parser.c": {
+        "entities": [],
+        "lines": [
+            163
+        ]
+    }
+}

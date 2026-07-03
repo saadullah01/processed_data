@@ -1,0 +1,12 @@
+{
+    "src/filters/inspect.c": {
+        "entities": [
+            "function_dump_sei",
+            "function_gf_inspect_dump_nalu_internal"
+        ],
+        "lines": [
+            758,
+            1015
+        ]
+    }
+}

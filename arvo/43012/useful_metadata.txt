@@ -1,0 +1,40 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE 4
+Severity: High
+
+-- Comment 1:
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE 4
+Crash Address: 0x7fe0e038e354
+Crash State:
+  fn_ElIn_evaluate
+  pdfi_tf_using_function
+  gs_begin_transparency_mask
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: (url omitted)
+
+Reproducer Testcase: (url omitted)
+
+Issue filed automatically.
+
+-- Comment 2:
+Fix committed upstream
+
+-- Comment 3:
+ClusterFuzz testcase 4573706263855104 is verified as fixed. (verification url omitted)
+
+-- Comment 4:
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

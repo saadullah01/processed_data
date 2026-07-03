@@ -1,0 +1,18 @@
+{
+    "options.c": {
+        "entities": [
+            "variable_fio_options"
+        ],
+        "lines": [
+            1672
+        ]
+    },
+    "parse.c": {
+        "entities": [
+            "function___handle_option"
+        ],
+        "lines": [
+            786
+        ]
+    }
+}

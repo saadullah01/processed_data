@@ -1,0 +1,10 @@
+{
+    "src/lib/protocols/softether.c": {
+        "entities": [
+            "function_dissect_softether_type"
+        ],
+        "lines": [
+            97
+        ]
+    }
+}

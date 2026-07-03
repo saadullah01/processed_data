@@ -1,0 +1,14 @@
+Project: proj4
+Fuzzer: afl_proj4_standard_fuzzer
+Fuzz target binary: standard_fuzzer
+Job Type: afl_asan_proj4
+Platform Id: linux
+Crash Type: Heap-buffer-overflow WRITE 7
+Crash Address: 0x603000000176
+Crash State:
+  proj_hgrid_init
+  pj_projection_specific_setup_hgridshift
+  pj_init_ctx
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Resolved with commit: 0d1eeb16dd0a574d81ba0eaeea430f1be105a038

@@ -1,0 +1,11 @@
+{
+    "src/cdf.c": {
+        "entities": [
+            "function_cdf_get_property_info_pos"
+        ],
+        "lines": [
+            888,
+            35
+        ]
+    }
+}

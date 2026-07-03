@@ -1,0 +1,19 @@
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_ndpi_reader
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x603000006ecc
+Crash State:
+  ndpi_workflow_process_packet
+  fuzz_ndpi_reader.c
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_ndpi_reader from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4911041312587776 is verified as fixed

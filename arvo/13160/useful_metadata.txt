@@ -1,0 +1,27 @@
+Project: graphicsmagick
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Fuzzer: afl_graphicsmagick_coder_MVG_fuzzer
+Fuzz target binary: coder_MVG_fuzzer
+Job Type: afl_asan_graphicsmagick
+Platform Id: linux
+Crash Address: 0x611000040358
+Crash State:
+  DrawDashPolygon
+  DrawPrimitive
+  DrawImage
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: 201807190219:201807200025
+Reproducer Testcase: 5741583656288256
+
+ClusterFuzz has detected this issue as fixed in range 201902170227:201902180224.
+Fixed: 201902170227:201902180224
+
+ClusterFuzz testcase 5741583656288256 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.
+- Your friendly Sheriffbot

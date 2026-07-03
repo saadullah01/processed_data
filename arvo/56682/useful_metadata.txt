@@ -1,0 +1,31 @@
+Project: duckdb
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Container-overflow READ 16
+Severity: Medium
+
+Detailed Report:
+Project: duckdb
+Fuzzing Engine: libFuzzer
+Fuzz Target: parse_fuzz_test
+Job Type: libfuzzer_asan_duckdb
+Platform Id: linux
+
+Crash Type: Container-overflow READ 16
+Crash Address: 0x62700000a900
+Crash State:
+  duckdb_tdigest::TDigest::process
+  void duckdb::ApproxQuantileScalarOperation::Finalize<double, duckdb::ApproxQuant
+  duckdb::PhysicalUngroupedAggregate::GetData
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer parse_fuzz_test from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 5869382900514816 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

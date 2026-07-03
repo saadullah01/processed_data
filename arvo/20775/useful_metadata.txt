@@ -1,0 +1,19 @@
+Project: openthread
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 2
+Severity: Medium
+
+Project: openthread
+Fuzzing Engine: honggfuzz
+Fuzz Target: ip6-send-fuzzer
+Job Type: honggfuzz_asan_openthread
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7ffff7f5671e
+Crash State:
+  ot::ExtendedTlv::GetLength
+  ot::Tlv::GetSize
+  ot::Tlv::GetNext
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

@@ -1,0 +1,10 @@
+{
+    "tree.c": {
+        "entities": [
+            "function_xmlSearchNsSafe"
+        ],
+        "lines": [
+            5954
+        ]
+    }
+}

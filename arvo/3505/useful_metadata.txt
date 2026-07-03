@@ -1,0 +1,44 @@
+Project: librawspeed
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Use-after-poison READ 4
+Severity: High
+
+-- Comment 1:
+Project: librawspeed
+Fuzzer: afl_librawspeed_FiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: FiffParserFuzzer-GetDecoder-Decode
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+Crash Type: Use-after-poison READ 4
+Crash Address: 0x7f78737a8e03
+Crash State:
+  void rawspeed::LJpegDecompressor::decodeN<2>
+  rawspeed::AbstractLJpegDecompressor::decode
+  rawspeed::AbstractDngDecompressor::decompressThreaded
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Issue filed automatically.
+
+-- Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201709280518:201709290515.
+Project: librawspeed
+Fuzzer: afl_librawspeed_FiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: FiffParserFuzzer-GetDecoder-Decode
+Job Type: afl_asan_librawspeed
+Platform Id: linux
+Crash Type: Use-after-poison READ 4
+Crash Address: 0x7f78737a8e03
+Crash State:
+  void rawspeed::LJpegDecompressor::decodeN<2>
+  rawspeed::AbstractLJpegDecompressor::decode
+  rawspeed::AbstractDngDecompressor::decompressThreaded
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Issue filed automatically.
+
+-- Comment 3:
+ClusterFuzz testcase 6010819949101056 is verified as fixed, so closing issue as verified.
+
+-- Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

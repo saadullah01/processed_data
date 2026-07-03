@@ -1,0 +1,16 @@
+Project: assimp
+Fuzzing Engine: libFuzzer
+Fuzz Target: assimp_fuzzer
+Job Type: libfuzzer_asan_assimp
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7f5dc50a3120
+Crash State:
+  Assimp::ZipArchiveIOSystem::Implement::MapArchive
+  Assimp::ZipArchiveIOSystem::getFileList
+  Assimp::D3MF::D3MFOpcPackage::D3MFOpcPackage
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

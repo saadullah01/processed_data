@@ -1,0 +1,11 @@
+{
+    "src/lib/protocols/raknet.c": {
+        "entities": [
+            "function_ndpi_search_raknet"
+        ],
+        "lines": [
+            124,
+            142
+        ]
+    }
+}

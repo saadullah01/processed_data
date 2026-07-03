@@ -1,0 +1,20 @@
+Project: icu
+Fuzzing Engine: libFuzzer
+Fuzz Target: uloc_canonicalize_fuzzer
+Job Type: libfuzzer_asan_icu
+Platform Id: linux
+
+Crash Type: Stack-use-after-scope READ 1
+Crash Address: 0x7fff22d2f2dd
+Crash State:
+  uprv_stricmp_70
+  ulocimp_getLanguage_70
+  _canonicalize
+
+Sanitizer: address (ASAN)
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer uloc_canonicalize_fuzzer from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4509226890821632 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.

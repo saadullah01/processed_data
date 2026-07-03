@@ -1,0 +1,10 @@
+{
+    "opcodes/vax-dis.c": {
+        "entities": [
+            "function_print_insn_mode"
+        ],
+        "lines": [
+            219
+        ]
+    }
+}

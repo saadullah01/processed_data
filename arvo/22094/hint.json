@@ -1,0 +1,10 @@
+{
+    "libheif/heif_colorconversion.cc": {
+        "entities": [
+            "function_heif::convert_colorspace"
+        ],
+        "lines": [
+            2924
+        ]
+    }
+}

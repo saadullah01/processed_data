@@ -1,0 +1,27 @@
+ffmpeg:ffmpeg_BSF_VP9_METADATA_fuzzer: Use-of-uninitialized-value in cbs_vp9_split_fragment
+
+Project: ffmpeg
+Fuzzing Engine: libFuzzer
+Fuzz Target: ffmpeg_BSF_VP9_METADATA_fuzzer
+Job Type: libfuzzer_msan_ffmpeg
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  cbs_vp9_split_fragment
+  cbs_read_data
+  ff_cbs_bsf_generic_filter
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)

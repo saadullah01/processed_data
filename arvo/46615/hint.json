@@ -1,0 +1,10 @@
+{
+    "src/decoders/load_mfbacks.cpp": {
+        "entities": [
+            "function_LibRaw::phase_one_correct"
+        ],
+        "lines": [
+            230
+        ]
+    }
+}

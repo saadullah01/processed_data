@@ -1,0 +1,13 @@
+{
+    "turbojpeg.c": {
+        "entities": [
+            "function_tjDecodeYUVPlanes",
+            "function_setDecodeDefaults"
+        ],
+        "lines": [
+            1392,
+            1428,
+            1495
+        ]
+    }
+}

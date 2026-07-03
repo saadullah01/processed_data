@@ -1,0 +1,12 @@
+{
+    "Userland/Libraries/LibGfx/Font/OpenType/Font.cpp": {
+        "entities": [
+            "function_Font::try_load_from_offset"
+        ],
+        "lines": [
+            418,
+            387,
+            427
+        ]
+    }
+}

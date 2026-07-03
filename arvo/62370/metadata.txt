@@ -1,0 +1,56 @@
+Project: wireshark
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 6
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=6013938384633856
+
+Project: wireshark
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 6
+Crash Address: 0x616000011096
+Crash State:
+  ws_manuf_lookup_str
+  tvb_get_manuf_name_if_known
+  dissect_roaming_consortium
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=202309130627:202309140607
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6013938384633856
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """Tracking upstream at https://gitlab.com/wireshark/wireshark/-/issues/19344"""
+
+-- Comment 3: """ClusterFuzz testcase 6013938384633856 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=202309160617:202309170615
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 4: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

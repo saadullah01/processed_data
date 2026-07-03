@@ -1,0 +1,11 @@
+{
+    "usbredirparser/usbredirparser.c": {
+        "entities": [
+            "function_usbredirparser_serialize"
+        ],
+        "lines": [
+            1,
+            1653
+        ]
+    }
+}

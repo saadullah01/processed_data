@@ -1,0 +1,16 @@
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_ps_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x61c0000010f0
+Crash State:
+  psi_device_ref_finalize
+  gs_gc_reclaim
+  ireclaim
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

@@ -1,0 +1,10 @@
+{
+    "src/document.c": {
+        "entities": [
+            "function_is_codefence"
+        ],
+        "lines": [
+            1789
+        ]
+    }
+}

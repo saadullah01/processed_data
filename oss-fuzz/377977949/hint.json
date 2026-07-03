@@ -1,0 +1,18 @@
+{
+    "fuzz/qtest/fuzz.test": {
+        "entities": [
+            "variable_$n_qpdf_files"
+        ],
+        "lines": [
+            11
+        ]
+    },
+    "libqpdf/Pl_AES_PDF.cc": {
+        "entities": [
+            "function_Pl_AES_PDF::Pl_AES_PDF"
+        ],
+        "lines": [
+            23
+        ]
+    }
+}

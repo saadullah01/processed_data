@@ -1,0 +1,20 @@
+Project: exiv2
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz-read-print-write
+Job Type: honggfuzz_asan_exiv2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow WRITE 8
+Crash Address: 0x602000000455
+Crash State:
+  Exiv2::MemIo::read
+  Exiv2::BasicIo::readOrThrow
+  Exiv2::QuickTimeVideo::tagDecoder
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz testcase 5744443654799360 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

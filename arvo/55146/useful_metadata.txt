@@ -1,0 +1,30 @@
+Project: libplist
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: High
+
+Report Comments:
+
+-- Comment 1:
+Project: libplist
+Fuzzing Engine: afl
+Fuzz Target: oplist_fuzzer
+Job Type: afl_asan_libplist
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x603000000112
+Crash State:
+  node_from_openstep
+  node_from_openstep
+  plist_from_openstep
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Issue filed automatically.
+
+-- Comment 2:
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer oplist_fuzzer from making much progress.

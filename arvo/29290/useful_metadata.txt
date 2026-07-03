@@ -1,0 +1,18 @@
+Project: kimageformats
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: kimgio_ani_fuzzer
+Job Type: libfuzzer_msan_kimageformats
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  ANIHandler::ensureScanned
+  ANIHandler::read
+  kimgio_fuzzer.cc
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

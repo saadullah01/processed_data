@@ -1,0 +1,21 @@
+Project: librawspeed
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_SonyArw2DecompressorFuzzer
+Fuzz target binary: SonyArw2DecompressorFuzzer
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  _start
+  rawspeed::alignedMalloc
+
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium

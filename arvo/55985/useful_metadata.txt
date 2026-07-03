@@ -1,0 +1,20 @@
+Project: binutils-gdb
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: High
+
+Project: binutils
+Fuzzing Engine: afl
+Fuzz Target: fuzz_nm
+Job Type: afl_asan_binutils
+Platform Id: linux
+Crash Type: UNKNOWN READ
+Crash Address: 0x621514bd71b9
+Crash State:
+  ecoff_swap_sym_in
+  _bfd_ecoff_slurp_symbol_table
+  _bfd_ecoff_canonicalize_symtab
+Sanitizer: address (ASAN)
+Recommended Security Severity: High
+Issue filed automatically.

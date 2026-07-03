@@ -1,0 +1,17 @@
+Project: wireshark
+Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+Fuzz target binary: fuzzshark_ip
+Job Type: libfuzzer_ubsan_wireshark
+Platform Id: linux
+Crash Type: Index-out-of-bounds
+Crash Address:
+Crash State:
+  dissect_radiotap
+  call_dissector_through_handle
+  call_dissector_work
+Sanitizer: undefined (UBSAN)
+Recommended Security Severity: Medium
+Current status: CONFIRMED (unfixed)
+ClusterFuzz has detected this issue as fixed in range 201705151620:201705161620.
+ClusterFuzz testcase 5493277962797056 is verified as fixed, so closing issue.
+This bug has been fixed for 30 days. It has been opened to the public.

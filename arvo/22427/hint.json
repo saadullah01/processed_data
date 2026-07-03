@@ -1,0 +1,98 @@
+{
+    "Packet++/header/IPv6Layer.h": {
+        "entities": [
+            "method_IPv6Layer::isDataValid"
+        ],
+        "lines": [
+            221,
+            143
+        ]
+    },
+    "Packet++/src/EthLayer.cpp": {
+        "entities": [
+            "function_EthLayer::parseNextLayer"
+        ],
+        "lines": [
+            46
+        ]
+    },
+    "Packet++/src/GreLayer.cpp": {
+        "entities": [
+            "method_PPP_PPTPLayer::parseNextLayer",
+            "function_PPP_PPTPLayer::parseNextLayer",
+            "function_GreLayer::parseNextLayer"
+        ],
+        "lines": [
+            565,
+            206
+        ]
+    },
+    "Packet++/src/GtpLayer.cpp": {
+        "entities": [
+            "method_GtpV1Layer::parseNextLayer"
+        ],
+        "lines": [
+            599
+        ]
+    },
+    "Packet++/src/IPv6Layer.cpp": {
+        "entities": [
+            "function_IPv6Layer::parseNextLayer",
+            "method_IPv6Layer::parseNextLayer"
+        ],
+        "lines": [
+            230
+        ]
+    },
+    "Packet++/src/MplsLayer.cpp": {
+        "entities": [
+            "function_MplsLayer::parseNextLayer"
+        ],
+        "lines": [
+            124
+        ]
+    },
+    "Packet++/src/NullLoopbackLayer.cpp": {
+        "entities": [
+            "method_NullLoopbackLayer::parseNextLayer"
+        ],
+        "lines": [
+            65
+        ]
+    },
+    "Packet++/src/PPPoELayer.cpp": {
+        "entities": [
+            "function_PPPoESessionLayer::parseNextLayer"
+        ],
+        "lines": [
+            59
+        ]
+    },
+    "Packet++/src/Packet.cpp": {
+        "entities": [
+            "method_Packet::createFirstLayer",
+            "function_Packet::createFirstLayer"
+        ],
+        "lines": [
+            686,
+            702,
+            678
+        ]
+    },
+    "Packet++/src/SllLayer.cpp": {
+        "entities": [
+            "function_SllLayer::parseNextLayer"
+        ],
+        "lines": [
+            72
+        ]
+    },
+    "Packet++/src/VlanLayer.cpp": {
+        "entities": [
+            "method_VlanLayer::parseNextLayer"
+        ],
+        "lines": [
+            70
+        ]
+    }
+}

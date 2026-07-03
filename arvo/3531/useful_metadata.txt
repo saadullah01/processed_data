@@ -1,0 +1,39 @@
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_CiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: CiffParserFuzzer-GetDecoder-Decode
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  _start
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed range: 201709130518:201709140521
+Reproducer Testcase ID: 6413887396118528
+
+Testcase 6413887396118528 is a top crash on ClusterFuzz for linux platform.
+
+ClusterFuzz has detected this issue as fixed in range 201710020519:201710030511
+Project: librawspeed
+Fuzzer: libFuzzer_librawspeed_CiffParserFuzzer-GetDecoder-Decode
+Fuzz target binary: CiffParserFuzzer-GetDecoder-Decode
+Job Type: libfuzzer_msan_librawspeed
+Platform Id: linux
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  rawspeed::RawImageData::checkMemIsInitialized
+  rawspeed::RawDecoder::decodeRaw
+  _start
+Sanitizer: memory (MSAN)
+Recommended Security Severity: Medium
+Regressed range: 201709130518:201709140521
+Fixed range: 201710020519:201710030511
+Reproducer Testcase ID: 6413887396118528
+
+ClusterFuzz testcase 6413887396118528 is verified as fixed, so closing issue as verified.
+
+This bug has been fixed for 30 days. It has been opened to the public.

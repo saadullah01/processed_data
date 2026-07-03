@@ -1,0 +1,35 @@
+Project: kimageformats
+Fuzzer: afl_kimageformats_kimgio_fuzzer
+Fuzz target binary: kimgio_fuzzer
+Job Type: afl_asan_kimageformats
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x6030000032e0
+Crash State:
+  void qDeleteAll<QHash<QString, KArchiveEntry*>::const_iterator>
+  KArchiveDirectoryPrivate::~KArchiveDirectoryPrivate
+  KArchiveDirectory::~KArchiveDirectory
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+ClusterFuzz has detected this issue as fixed in range 201904140246:201904150250.
+
+Project: kimageformats
+Fuzzer: afl_kimageformats_kimgio_fuzzer
+Fuzz target binary: kimgio_fuzzer
+Job Type: afl_asan_kimageformats
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 8
+Crash Address: 0x6030000032e0
+Crash State:
+  void qDeleteAll<QHash<QString, KArchiveEntry*>::const_iterator>
+  KArchiveDirectoryPrivate::~KArchiveDirectoryPrivate
+  KArchiveDirectory::~KArchiveDirectory
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High

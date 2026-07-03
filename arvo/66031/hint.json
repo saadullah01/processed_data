@@ -1,0 +1,28 @@
+{
+    "src/filters/in_rtp_sdp.c": {
+        "entities": [
+            "function_rtpin_load_sdp"
+        ],
+        "lines": [
+            329
+        ]
+    },
+    "src/ietf/sdp.c": {
+        "entities": [
+            "function_gf_sdp_info_parse"
+        ],
+        "lines": [
+            500,
+            621,
+            701
+        ]
+    },
+    "src/utils/token.c": {
+        "entities": [
+            "function_gf_token_get"
+        ],
+        "lines": [
+            39
+        ]
+    }
+}

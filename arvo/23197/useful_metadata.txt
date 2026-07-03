@@ -1,0 +1,23 @@
+Project: libhevc
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: hevc_dec_fuzzer
+Job Type: libfuzzer_msan_libhevc
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  ihevc_inter_pred_chroma_copy_ssse3
+  ihevcd_inter_pred_ctb
+  ihevcd_process
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer hevc_dec_fuzzer from making much progress. Fixing this will allow more bugs to be found.

@@ -1,0 +1,22 @@
+Project: serenity
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Bad-cast
+Severity: High
+
+Project: serenity
+Fuzzing Engine: libFuzzer
+Fuzz Target: FuzzPGMLoader
+Job Type: libfuzzer_ubsan_serenity
+Platform Id: linux
+
+Crash Type: Bad-cast
+Crash Address: 0x7fff616c6308
+Crash State:
+  Bad-cast to AK::Array<AK::TypeErasedParameter, 0>Gfx::read_image_data
+  bool Gfx::decode<Gfx::PortableImageMapLoadingContext<Gfx::PGM> >
+  Gfx::PortableImageDecoderPlugin<Gfx::PortableImageMapLoadingContext<Gfx::PGM> >:
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: High

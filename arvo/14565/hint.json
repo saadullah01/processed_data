@@ -1,0 +1,10 @@
+{
+    "src/imageformats/tga.cpp": {
+        "entities": [
+            "function_LoadTGA"
+        ],
+        "lines": [
+            252
+        ]
+    }
+}

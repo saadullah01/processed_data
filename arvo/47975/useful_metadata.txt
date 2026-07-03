@@ -1,0 +1,22 @@
+Project: binutils
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_as
+Job Type: libfuzzer_msan_binutils
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+
+Crash State:
+  input_file_open
+  input_scrub_new_file
+  read_a_source_file
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium
+
+Regressed: 202110230605:202110250602
+
+ClusterFuzz testcase 6322888519581696 is verified as fixed (regression range: 202206150610:202207080609)
+
+This bug has been fixed. It has been opened to the public.

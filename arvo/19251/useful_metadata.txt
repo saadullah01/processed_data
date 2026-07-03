@@ -1,0 +1,22 @@
+Project: opensc
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ {*}
+Severity: Medium
+
+Project: opensc
+Fuzzing Engine: honggfuzz
+Fuzz Target: fuzz_pkcs15_reader
+Job Type: honggfuzz_asan_opensc
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ {*}
+Crash Address: 0x7ffff7f9a7d8
+Crash State:
+  sc_pkcs15emu_object_add
+  sc_pkcs15emu_coolkey_init
+  sc_pkcs15emu_coolkey_init_ex
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium

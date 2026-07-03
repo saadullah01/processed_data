@@ -1,0 +1,154 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42537407
+OSS Fuzz
+42537407
+wasmtime:pulley: Heap-buffer-overflow in pulley_interpreter_fuzz::interp::interp::hee7bfbaNUMBER
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(6)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+Stability-Memory-AddressSanitizer
+ClusterFuzz
+Reproducible
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+Jul 26, 2024 07:35AM
+Detailed Report: https://oss-fuzz.com/testcase?key=6383366283264000
+
+Project: wasmtime
+Fuzzing Engine: libFuzzer
+Fuzz Target: pulley
+Job Type: libfuzzer_asan_wasmtime
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x7b6c7efef800
+Crash State:
+  pulley_interpreter_fuzz::interp::interp::hee7bfbaNUMBER
+  pulley::_::run::he08c2279bee6178d
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wasmtime&range=202407250620:202407260612
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=6383366283264000
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+Jul 27, 2024 06:20AM
+[Empty comment from Monorail migration]
+al...@alexcrichton.com<al...@alexcrichton.com> #3
+Jul 29, 2024 01:06PM
+Fixed in https://github.com/bytecodealliance/wasmtime/pull/9042
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #4
+Jul 31, 2024 03:58AM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 6383366283264000 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_wasmtime&range=202407290621:202407300619
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+[Deleted User]<[Deleted User]> #5
+Jul 31, 2024 06:11AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+is...@google.com<is...@google.com> #6
+Jul 31, 2024 06:11AM
+This issue was migrated from crbug.com/oss-fuzz/70697?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+[Deleted User]
+al...@alexcrichton.com
+an...@gmail.com
+cf...@gmail.com
+fi...@gmail.com
+je...@shopify.com
+jo...@gmail.com
+js...@fastly.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+pe...@gmail.com
+sa...@gmail.com
+ti...@tillschneidereit.net
+yd...@mozilla.com
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Oct 24, 2024
+Project
+wasmtime
+Reported
+Jul 26, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

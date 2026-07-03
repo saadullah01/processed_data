@@ -1,0 +1,24 @@
+Project: yara
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 8
+Severity: Medium
+
+Project: yara
+Fuzzing Engine: libFuzzer
+Fuzz Target: macho_fuzzer
+Job Type: libfuzzer_asan_yara
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 8
+Crash Address: 0x604000003f40
+Crash State:
+  macho_handle_unixthread
+  macho_parse_file
+  macho__load
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer macho_fuzzer from making much progress. Fixing this will allow more bugs to be found.

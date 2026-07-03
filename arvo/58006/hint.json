@@ -1,0 +1,14 @@
+{
+    "modules/core/src/channels.cpp": {
+        "entities": [
+            "function_cv::mixChannels",
+            "function_getMixchFunc"
+        ],
+        "lines": [
+            81,
+            158,
+            53,
+            46
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+Project: hunspell
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 1
+Severity: Medium
+
+Project: hunspell
+Fuzzing Engine: afl
+Fuzz Target: affdicfuzzer
+Job Type: afl_asan_hunspell
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 1
+Crash Address: 0x6030000000cf
+Crash State:
+  AffixMgr::redundant_condition
+  AffixMgr::parse_affix
+  AffixMgr::parse_file
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz testcase 4648378025246720 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

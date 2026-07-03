@@ -1,0 +1,12 @@
+{
+    "src/lib/libdwarf/dwarf_locationop_read.c": {
+        "entities": [
+            "function__dwarf_read_loc_expr_op",
+            "function_read_encoded_addr"
+        ],
+        "lines": [
+            613,
+            70
+        ]
+    }
+}

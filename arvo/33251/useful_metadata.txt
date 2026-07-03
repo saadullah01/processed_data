@@ -1,0 +1,24 @@
+Project: c-blosc2
+Fuzzing Engine: libFuzzer
+Fuzz Target: decompress_frame_fuzzer
+Job Type: libfuzzer_asan_i386_c-blosc2
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 6
+Crash Address: 0xf290383d
+Crash State:
+  frame_get_metalayers
+  frame_to_schunk
+  blosc2_schunk_from_buffer
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Issue filed automatically.
+
+ClusterFuzz testcase 5361858753200128 is verified as fixed.
+
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot

@@ -1,0 +1,20 @@
+{
+    "cram/cram_encode.c": {
+        "entities": [
+            "function_cram_encode_container"
+        ],
+        "lines": [
+            1921,
+            1842,
+            1967
+        ]
+    },
+    "cram/cram_io.c": {
+        "entities": [
+            "function_cram_write_SAM_hdr"
+        ],
+        "lines": [
+            4954
+        ]
+    }
+}

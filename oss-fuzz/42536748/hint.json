@@ -1,0 +1,10 @@
+{
+    "imageio/jpegdec.c": {
+        "entities": [
+            "function_my_error_exit"
+        ],
+        "lines": [
+            205
+        ]
+    }
+}

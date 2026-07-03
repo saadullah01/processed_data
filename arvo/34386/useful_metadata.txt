@@ -1,0 +1,24 @@
+Project: tinygltf
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: UNKNOWN READ
+Severity: Medium
+
+Project: tinygltf
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_gltf
+Job Type: libfuzzer_asan_tinygltf
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x7ffb65011738
+Crash State:
+  tinygltf::ExpandFilePath
+  tinygltf::FindFile
+  tinygltf::LoadExternalFile
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_gltf from making much progress. Fixing this will allow more bugs to be found.

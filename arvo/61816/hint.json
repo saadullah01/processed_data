@@ -1,0 +1,32 @@
+{
+    "decoder/ixheaacd_mps_bitdec.c": {
+        "entities": [
+            "function_ixheaacd_parse_residual_data",
+            "function_ixheaacd_parse_frame",
+            "function_ixheaacd_parse_extension_frame"
+        ],
+        "lines": [
+            839,
+            712,
+            585,
+            746,
+            619,
+            813,
+            565,
+            855,
+            1144,
+            602,
+            796,
+            765,
+            542
+        ]
+    },
+    "decoder/ixheaacd_mps_res_pns_js_thumb.c": {
+        "entities": [
+            "function_ixheaacd_res_ctns_apply"
+        ],
+        "lines": [
+            99
+        ]
+    }
+}

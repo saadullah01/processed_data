@@ -1,0 +1,10 @@
+{
+    "bfd/elfnn-aarch64.c": {
+        "entities": [
+            "function_get_plt_type"
+        ],
+        "lines": [
+            9760
+        ]
+    }
+}

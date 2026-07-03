@@ -1,0 +1,15 @@
+{
+    "src/libopensc/card-sc-hsm.c": {
+        "entities": [
+            "function_sc_hsm_read_binary",
+            "function_sc_hsm_write_ef"
+        ],
+        "lines": [
+            782,
+            848,
+            823,
+            856,
+            890
+        ]
+    }
+}

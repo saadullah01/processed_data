@@ -1,0 +1,22 @@
+Project: opencv
+Fuzzer: libfuzzer
+Sanitizer: ubsan
+Crash Type: Incorrect-function-pointer-type
+Severity: Medium
+
+Project: opencv
+Fuzzing Engine: libFuzzer
+Fuzz Target: imdecode_fuzzer
+Job Type: libfuzzer_ubsan_opencv
+Platform Id: linux
+
+Crash Type: Incorrect-function-pointer-type
+Crash Address:
+Crash State:
+  cv::mixChannels
+  cv::mixChannels
+  cv::extend_cvtColor
+
+Sanitizer: undefined (UBSAN)
+
+Recommended Security Severity: Medium

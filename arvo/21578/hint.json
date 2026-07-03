@@ -1,0 +1,10 @@
+{
+    "src/ucl_parser.c": {
+        "entities": [
+            "function_ucl_lex_json_string"
+        ],
+        "lines": [
+            1053
+        ]
+    }
+}

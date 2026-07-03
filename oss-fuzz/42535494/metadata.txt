@@ -1,0 +1,152 @@
+OSS Fuzz
+Skip Navigation
+Sign in
+Issue 42535494
+OSS Fuzz
+42535494
+wireshark:fuzzshark_ip_proto-udp: Heap-buffer-overflow in dissect_btle
+1
+Hotlists (4)
+Mark as Duplicate
+Comments
+(6)
+Dependencies
+(0)
+Duplicates
+(0)
+Blocking
+(0)
+Resources
+(0)
+Verified
+Vulnerability
+P2
+Add Hotlist
+ClusterFuzz
+Stability-Memory-AddressSanitizer
+Reproducible
+ClusterFuzz-Verified
+STATUS UPDATE
+
+No update yet.
+
+DESCRIPTIONmo...@clusterfuzz-external.iam.gserviceaccount.com created issue #1
+May 12, 2024 08:36PM
+Detailed Report: https://oss-fuzz.com/testcase?key=4653303358095360
+
+Project: wireshark
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzzshark_ip_proto-udp
+Job Type: libfuzzer_asan_wireshark
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 6
+Crash Address: 0x50200010a99c
+Crash State:
+  dissect_btle
+  call_dissector_work
+  call_dissector_with_data
+ 
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=202405110606:202405120627
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4653303358095360
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public.
+COMMENTS
+All comments
+Oldest first
+[Deleted User]<[Deleted User]> #2
+May 13, 2024 06:21AM
+[Empty comment from Monorail migration]
+ge...@gmail.com<ge...@gmail.com> #3
+May 13, 2024 08:56AM
+This is a duplicate of https://gitlab.com/wireshark/wireshark/-/issues/19835
+mo...@clusterfuzz-external.iam.gserviceaccount.com<mo...@clusterfuzz-external.iam.gserviceaccount.com> #4
+May 16, 2024 01:57AM
+Verified by mo...@clusterfuzz-external.iam.gserviceaccount.com.
+ClusterFuzz testcase 4653303358095360 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_wireshark&range=202405140622:202405150629
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new
+[Deleted User]<[Deleted User]> #5
+May 16, 2024 06:10AM
+This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot
+is...@google.com<is...@google.com> #6
+May 16, 2024 06:10AM
+This issue was migrated from crbug.com/oss-fuzz/68976?no_tracker_redirect=1
+Add comment
+Comment
+Issue metadata
+Reporter
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Type
+Vulnerability
+Priority
+P2
+Severity
+S2
+Status
+Fixed (Verified)
+Access
+Default access
+View
+Expanded Access
+Assignee
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Verifier
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+Collaborators
+ 
+CC
+ 
+da...@davidmanouchehri.com
+ge...@gmail.com
+ge...@wireshark.org
+jb...@gmail.com
+lo...@gmail.com
+me...@moshekaplan.com
+mo...@clusterfuzz-external.iam.gserviceaccount.com
+pe...@lekensteyn.nl
+rk...@gmail.com
+se...@wireshark.org
+Code Changes
+--
+Pending Code Changes
+--
+Disclosure
+Aug 12, 2024
+Project
+wireshark
+Reported
+May 13, 2024
+Found In
+--
+Targeted To
+--
+Verified In
+--
+In Prod
+OSS Fuzz Issue Tracker
+Powered by Google
+|
+Privacy
+|
+Terms

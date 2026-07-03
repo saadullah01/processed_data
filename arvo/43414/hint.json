@@ -1,0 +1,12 @@
+{
+    "code/Common/ZipArchiveIOSystem.cpp": {
+        "entities": [
+            "function_IOSystem2Unzip::opendisk",
+            "method_IOSystem2Unzip::opendisk"
+        ],
+        "lines": [
+            122,
+            130
+        ]
+    }
+}

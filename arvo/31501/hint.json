@@ -1,0 +1,22 @@
+{
+    "src/imageformats/heif.cpp": {
+        "entities": [
+            "method_HEIFHandler::ensureDecoder",
+            "function_HEIFHandler::canRead",
+            "function_HEIFHandler::ensureDecoder"
+        ],
+        "lines": [
+            364,
+            261
+        ]
+    },
+    "src/imageformats/heif_p.h": {
+        "entities": [
+            "class_HEIFHandler"
+        ],
+        "lines": [
+            10,
+            28
+        ]
+    }
+}

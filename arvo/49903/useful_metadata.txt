@@ -1,0 +1,21 @@
+Project: zlib
+Fuzzer: libfuzzer
+Sanitizer: msan
+Crash Type: Use-of-uninitialized-value
+Severity: Medium
+
+Fuzzing Engine: libFuzzer
+Fuzz Target: example_dict_fuzzer
+Job Type: libfuzzer_msan_zlib
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address:
+Crash State:
+  fill_window
+  deflate_fast
+  deflate
+
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

@@ -1,0 +1,13 @@
+{
+    "src/HttpParser.h": {
+        "entities": [
+            "struct_HttpParser",
+            "method_getHeaders"
+        ],
+        "lines": [
+            272,
+            193,
+            157
+        ]
+    }
+}

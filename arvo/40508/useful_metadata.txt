@@ -1,0 +1,13 @@
+Project: net-snmp
+Fuzzer: honggfuzz
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow READ 1
+Severity: Medium
+Fuzz Target: snmp_mib_fuzzer
+Job Type: honggfuzz_asan_net-snmp
+Platform Id: linux
+Crash Address: 0x7ffd469bdfdf
+Crash State:
+  check_utc
+  read_module_internal
+  netsnmp_read_module

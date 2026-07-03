@@ -1,0 +1,10 @@
+{
+    "SAX2.c": {
+        "entities": [
+            "function_xmlSAX2StartElementNs"
+        ],
+        "lines": [
+            2261
+        ]
+    }
+}

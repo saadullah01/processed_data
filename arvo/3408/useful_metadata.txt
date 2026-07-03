@@ -1,0 +1,42 @@
+Comment 1:
+- Project: wireshark
+- Fuzzer: libFuzzer_wireshark_fuzzshark_ip
+- Fuzz target binary: fuzzshark_ip
+- Job Type: libfuzzer_asan_wireshark
+- Platform Id: linux
+- Crash Type: Stack-buffer-overflow READ 16
+- Crash Address: 0x7ff8e53f5428
+- Crash State:
+  zbee_sec_add_key_to_keyring
+  dissect_zbee_aps_transport_key
+  dissect_zbee_aps_cmd
+- Sanitizer: address (ASAN)
+- Recommended Security Severity: Medium
+- Regressed: range=201709111549:201709160414
+- Reproducer Testcase: 4728461463650304
+
+Comment 2:
+- Upstream bug: 14070
+- Current status: IN_PROGRESS (unfixed)
+
+Comment 3:
+- Crash Type: Stack-buffer-overflow READ 16
+- Crash Address: 0x7ff8e53f5428
+- Crash State:
+  zbee_sec_add_key_to_keyring
+  dissect_zbee_aps_transport_key
+  dissect_zbee_aps_cmd
+- Sanitizer: address (ASAN)
+- Recommended Security Severity: Medium
+- Regressed: range=201709111549:201709160414
+- Fixed: range=201709170414:201709180414
+- Reproducer Testcase: 4728461463650304
+
+Comment 4:
+- Testcase 4728461463650304 is a top crash on ClusterFuzz for linux platform.
+
+Comment 5:
+- ClusterFuzz testcase 4728461463650304 is verified as fixed.
+
+Comment 6:
+- This bug has been fixed for 30 days. It has been opened to the public.

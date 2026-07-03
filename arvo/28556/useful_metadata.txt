@@ -1,0 +1,15 @@
+Project: openthread
+Fuzzing Engine: honggfuzz
+Fuzz Target: cli-uart-received-fuzzer
+Job Type: honggfuzz_asan_openthread
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow READ 4
+Crash Address: 0x7ffee7bacc8d
+Crash State:
+  ot::MeshCoP::ChannelMaskEntry::GetMask
+  ot::MeshCoP::ChannelMaskTlv::GetChannelMask
+  ot::MeshCoP::Dataset::ConvertTo
+
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium

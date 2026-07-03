@@ -1,0 +1,98 @@
+Project: libxml2
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=5302431933136896
+
+Project: libxml2
+Fuzzing Engine: afl
+Fuzz Target: xml
+Job Type: afl_asan_libxml2
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x60c0000058c8
+Crash State:
+  xmlAddNextSibling
+  xmlXIncludeCopyRange
+  xmlXIncludeCopyXPointer
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Regressed: https://oss-fuzz.com/revisions?job=afl_asan_libxml2&range=202008080619:202008090607
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=5302431933136896
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """The root cause here appears to be that both xmlAddNextSibling() and xmlAddChild() may optionally free their second argument (the `tmp` xmlNodePtr passed in) and return a different xmlNodePtr, or these functions may not free `tmp` and return the same pointer value.
+
+In a nutshell, any code that ignores the return value of xmlAddNextSibling() or xmlAddChild()—and tries to use their second argument after they're called—could have the same use-after-free bug found in the attached test case.
+
+I see various functions in tree.c, xinclude.c and xpointer.c could all potentially have this same bug.
+"""
+
+-- Comment 3: """That's correct. But all of this can only happen when an XML_TEXT_NODE is added. That means functions like xmlXPtrBuildRangeNodeList should be safe."""
+
+-- Comment 4: """Hi Nick, Does this look correct?
+
+Although the first set of changes in xmlXPtrBuildRangeNodeList() in xpointer.c may not be strictly necessary, they seem like they are still correct.
+
+Also, I couldn't rule out the second change to xpointer.c via brief source code inspection.
+
+Note that you do not need to credit me for this patch as the changes are mechanical.
+"""
+
+-- Comment 5: """Hi David, I prefer patches created with `git format-patch`."""
+
+-- Comment 6: """This bug is approaching its deadline for being fixed, and will be automatically derestricted within 7 days. If a fix is planned within 2 weeks after the deadline has passed, a grace extension can be granted.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 7: """This bug has exceeded our disclosure deadline. It has been opened to the public.
+
+- Your friendly Sheriffbot"""
+
+-- Comment 8: """How does one get more than comment access to this monorail instance?"""
+
+-- Comment 9: """+1 to comment 8
+I'd like to pursue the fix in comment 4 to fix this in chromium and hopefully libxml2 as well, but I can't access the oss-fuzz.com test case in the issue description."""
+
+-- Comment 10: """Maybe if someone cc'd me on this bug I would have access...?"""
+
+-- Comment 11: """That did the trick, thanks!"""
+
+-- Comment 12: """> Hi David, I prefer patches created with `git format-patch`.
+
+Posted a merge request here:  https://gitlab.gnome.org/GNOME/libxml2/-/merge_requests/145
+"""
+
+-- Comment 13: """Note:  Apple assigned this issue to CVE-2021-30801 internally.  (I'm checking to see why the Mitre database still says "reserved".)
+"""
+
+-- Comment 14: """Fix merged to libxml2 upstream here:  <https://gitlab.gnome.org/GNOME/libxml2/-/commit/8f5ccada05ddd4a1ff8e399ad39fc7cd4bd33325>
+"""
+
+-- Comment 15: """ClusterFuzz testcase 5302431933136896 is verified as fixed in https://oss-fuzz.com/revisions?job=afl_asan_libxml2&range=202201270610:202201280606
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""

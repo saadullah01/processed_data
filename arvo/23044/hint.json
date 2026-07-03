@@ -1,0 +1,18 @@
+{
+    "src/softmagic.c": {
+        "entities": [
+            "function_file_strncmp",
+            "function_file_strncmp16",
+            "function_magiccheck"
+        ],
+        "lines": [
+            32,
+            2152,
+            1902,
+            1972,
+            1914,
+            1980,
+            2110
+        ]
+    }
+}

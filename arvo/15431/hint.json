@@ -1,0 +1,26 @@
+{
+    "Makefile.am": {
+        "entities": [],
+        "lines": [
+            865
+        ]
+    },
+    "libarchive/archive_read_support_format_rar5.c": {
+        "entities": [
+            "function_run_arm_filter"
+        ],
+        "lines": [
+            623
+        ]
+    },
+    "libarchive/test/test_read_format_rar5.c": {
+        "entities": [],
+        "lines": [
+            1215
+        ]
+    },
+    "libarchive/test/test_read_format_rar5_arm_filter_on_window_boundary.rar.uu": {
+        "entities": [],
+        "lines": []
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "src/vm.c": {
+        "entities": [
+            "function_mrb_vm_exec"
+        ],
+        "lines": [
+            1357
+        ]
+    }
+}

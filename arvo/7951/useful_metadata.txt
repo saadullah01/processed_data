@@ -1,0 +1,16 @@
+Project: graphicsmagick
+Fuzzer: afl_graphicsmagick_coder_DPX_fuzzer
+Fuzz target binary: coder_DPX_fuzzer
+Job Type: afl_asan_graphicsmagick
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x6050000007c6
+Crash State:
+  ReadDPXImage
+  ReadImage
+  BlobToImage
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed range: 201804210549:201804220546
+Reproducer Testcase ID: 5698815739822080
+Fixed range: 201804230535:201804240602

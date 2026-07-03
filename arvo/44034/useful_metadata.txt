@@ -1,0 +1,28 @@
+Project: ghostpdl
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Stack-buffer-overflow WRITE {*}
+Severity: High
+
+Project: ghostscript
+Fuzzing Engine: libFuzzer
+Fuzz Target: gstoraster_fuzzer
+Job Type: libfuzzer_asan_ghostscript
+Platform Id: linux
+
+Crash Type: Stack-buffer-overflow WRITE {*}
+Crash Address: 0x7f0bfff50820
+Crash State:
+  pdfi_open_CIDFont_substitute_file
+  pdfi_load_font
+  pdfi_read_type0_font
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+Fix committed upstream
+
+ClusterFuzz testcase 6435992876220416 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

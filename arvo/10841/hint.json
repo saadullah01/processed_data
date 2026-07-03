@@ -1,0 +1,19 @@
+{
+    "src/librawspeed/decompressors/PhaseOneDecompressor.cpp": {
+        "entities": [
+            "function_PhaseOneDecompressor::PhaseOneDecompressor"
+        ],
+        "lines": [
+            49,
+            26
+        ]
+    },
+    "src/librawspeed/decompressors/PhaseOneDecompressor.h": {
+        "entities": [
+            "class_PhaseOneDecompressor"
+        ],
+        "lines": [
+            45
+        ]
+    }
+}

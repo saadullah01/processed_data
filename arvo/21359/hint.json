@@ -1,0 +1,10 @@
+{
+    "opcodes/z80-dis.c": {
+        "entities": [
+            "function_suffix"
+        ],
+        "lines": [
+            773
+        ]
+    }
+}

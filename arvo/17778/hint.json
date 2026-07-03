@@ -1,0 +1,12 @@
+{
+    "usrsctplib/netinet/sctp_asconf.c": {
+        "entities": [
+            "function_sctp_process_asconf_add_ip"
+        ],
+        "lines": [
+            34,
+            259,
+            245
+        ]
+    }
+}

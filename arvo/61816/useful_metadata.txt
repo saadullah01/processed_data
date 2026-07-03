@@ -1,0 +1,12 @@
+Project: libxaac
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Global-buffer-overflow READ 2
+Fuzz Target: xaac_dec_fuzzer
+Job Type: afl_asan_libxaac
+Platform Id: linux
+Crash Address: 0x000000b91b94
+Crash State:
+  ixheaacd_res_ctns_apply
+  ixheaacd_parse_extension_frame
+  ixheaacd_parse_frame

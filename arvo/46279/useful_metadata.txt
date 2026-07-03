@@ -1,0 +1,24 @@
+Project: libarchive
+Fuzzer: afl
+Sanitizer: asan
+Crash Type: Heap-use-after-free READ 4
+Severity: High
+
+Project: libarchive
+Fuzzing Engine: afl
+Fuzz Target: libarchive_fuzzer
+Job Type: afl_asan_libarchive
+Platform Id: linux
+
+Crash Type: Heap-use-after-free READ 4
+Crash Address: 0x60e0000001a0
+Crash State:
+  read_data_compressed
+  archive_read_format_rar_read_data
+  _archive_read_data_block
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: High
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer libarchive_fuzzer from making much progress.

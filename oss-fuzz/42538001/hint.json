@@ -1,0 +1,10 @@
+{
+    "libavcodec/notchlc.c": {
+        "entities": [
+            "function_lz4_decompress"
+        ],
+        "lines": [
+            93
+        ]
+    }
+}

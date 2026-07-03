@@ -1,0 +1,14 @@
+{
+    "src/lib/lwan-request.c": {
+        "entities": [
+            "function_parse_headers",
+            "function_identify_http_path"
+        ],
+        "lines": [
+            568,
+            553,
+            602,
+            503
+        ]
+    }
+}

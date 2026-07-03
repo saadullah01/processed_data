@@ -1,0 +1,16 @@
+{
+    "gdb/cp-support.c": {
+        "entities": [
+            "function_gdb_demangle"
+        ],
+        "lines": [
+            1506
+        ]
+    },
+    "gdb/gdbsupport/gdb_setjmp.h": {
+        "entities": [],
+        "lines": [
+            1
+        ]
+    }
+}

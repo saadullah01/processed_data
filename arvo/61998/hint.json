@@ -1,0 +1,36 @@
+{
+    "encoder/iusace_fd_qc_adjthr.h": {
+        "entities": [],
+        "lines": [
+            46
+        ]
+    },
+    "encoder/ixheaace_fd_qc_adjthr.c": {
+        "entities": [
+            "function_iusace_improve_scf",
+            "function_iusace_estimate_scfs_chan"
+        ],
+        "lines": [
+            1192,
+            1614,
+            1212,
+            1174
+        ]
+    },
+    "encoder/ixheaace_qc_data.h": {
+        "entities": [],
+        "lines": [
+            83
+        ]
+    },
+    "encoder/ixheaace_sf_estimation.c": {
+        "entities": [
+            "function_iaace_estimate_scfs_chan",
+            "function_iaace_improve_scf"
+        ],
+        "lines": [
+            683,
+            284
+        ]
+    }
+}

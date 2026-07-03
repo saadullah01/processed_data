@@ -1,0 +1,10 @@
+{
+    "src/libopensc/pkcs15-pubkey.c": {
+        "entities": [
+            "function_sc_pkcs15_decode_pukdf_entry"
+        ],
+        "lines": [
+            351
+        ]
+    }
+}

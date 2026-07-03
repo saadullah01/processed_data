@@ -1,0 +1,18 @@
+{
+    "decoder/ih264d_sei.c": {
+        "entities": [
+            "function_ih264d_parse_fgc"
+        ],
+        "lines": [
+            853
+        ]
+    },
+    "decoder/mvc/imvcd_api.c": {
+        "entities": [
+            "function_imvcd_view_decode"
+        ],
+        "lines": [
+            737
+        ]
+    }
+}

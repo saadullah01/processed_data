@@ -1,0 +1,21 @@
+{
+    "Tests/LibGfx/TestICCProfile.cpp": {
+        "entities": [
+            "function_malformed_profile"
+        ],
+        "lines": [
+            262
+        ]
+    },
+    "Userland/Libraries/LibGfx/ICC/TagTypes.cpp": {
+        "entities": [
+            "method_TextDescriptionTagData::from_byte",
+            "function_TextDescriptionTagData::from_byte"
+        ],
+        "lines": [
+            1088,
+            1073,
+            1054
+        ]
+    }
+}

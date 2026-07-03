@@ -1,0 +1,25 @@
+Project: ndpi
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 2
+Severity: Medium
+
+Project: ndpi
+Fuzzing Engine: libFuzzer
+Fuzz Target: fuzz_process_packet
+Job Type: libfuzzer_asan_ndpi
+Platform Id: linux
+Crash Type: Heap-buffer-overflow READ 2
+Crash Address: 0x60c0000005f9
+Crash State:
+  processClientServerHello
+  processTLSBlock
+  ndpi_search_tls_udp
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+
+This crash occurs very frequently on linux platform and is likely preventing the fuzzer fuzz_process_packet from making much progress. Fixing this will allow more bugs to be found.
+
+ClusterFuzz testcase 4562459038449664 is verified as fixed
+
+This bug has been fixed. It has been opened to the public.

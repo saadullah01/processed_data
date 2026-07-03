@@ -1,0 +1,16 @@
+Project: libxml2
+Fuzzing Engine: libFuzzer
+Fuzz Target: xpath
+Job Type: libfuzzer_msan_libxml2
+Platform Id: linux
+
+Crash Type: Use-of-uninitialized-value
+Crash Address: 
+Crash State:
+  xmlXPathLangFunction
+  xmlXPathCompOpEval
+  xmlXPathCompOpEvalToBoolean
+  
+Sanitizer: memory (MSAN)
+
+Recommended Security Severity: Medium

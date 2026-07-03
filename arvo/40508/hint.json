@@ -1,0 +1,10 @@
+{
+    "snmplib/parse.c": {
+        "entities": [
+            "function_check_utc"
+        ],
+        "lines": [
+            3447
+        ]
+    }
+}

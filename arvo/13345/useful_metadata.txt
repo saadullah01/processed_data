@@ -1,0 +1,20 @@
+Project: openthread
+Fuzzer: afl_openthread_ncp-uart-received-fuzzer
+Fuzz target binary: ncp-uart-received-fuzzer
+Job Type: afl_asan_openthread
+Platform Id: linux
+
+Crash Type: UNKNOWN READ
+Crash Address: 0x00010284c07a
+Crash State:
+  ot::MessageQueue::GetTail
+  ot::Message::GetNext
+  ot::MeshForwarder::GetDirectTransmission
+
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+ClusterFuzz has detected this issue as fixed in range 201902260247:201902270249.
+
+ClusterFuzz testcase 5660081318789120 is verified as fixed, so closing issue as verified.

@@ -1,0 +1,36 @@
+Comment 1:
+Project: openthread
+Fuzzer: libFuzzer_openthread_ip6-send-fuzzer
+Fuzz target binary: ip6-send-fuzzer
+Job Type: libfuzzer_asan_openthread
+Platform Id: linux
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7f972866971f
+Crash State:
+  ot::MeshCoP::CommissionerSessionIdTlv::GetCommissionerSessionId
+  ot::NetworkData::Leader::HandleCommissioningSet
+  ot::Coap::Coap::ProcessReceivedRequest
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: 201708040449:201708050454
+Reproducer Testcase ID: 6738146924429312
+
+Comment 2:
+ClusterFuzz has detected this issue as fixed in range 201709150455:201709160458.
+Crash Type: Stack-buffer-overflow READ 2
+Crash Address: 0x7f972866971f
+Crash State:
+  ot::MeshCoP::CommissionerSessionIdTlv::GetCommissionerSessionId
+  ot::NetworkData::Leader::HandleCommissioningSet
+  ot::Coap::Coap::ProcessReceivedRequest
+Sanitizer: address (ASAN)
+Recommended Security Severity: Medium
+Regressed: 201708040449:201708050454
+Fixed: 201709150455:201709160458
+Reproducer Testcase ID: 6738146924429312
+
+Comment 3:
+ClusterFuzz testcase 6738146924429312 is verified as fixed, so closing issue as verified.
+
+Comment 4:
+This bug has been fixed for 30 days. It has been opened to the public.

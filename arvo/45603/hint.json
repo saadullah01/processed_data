@@ -1,0 +1,10 @@
+{
+    "src/protocols/dhcpv4/decode.c": {
+        "entities": [
+            "function_fr_dhcpv4_decode_option"
+        ],
+        "lines": [
+            682
+        ]
+    }
+}

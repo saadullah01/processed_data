@@ -1,0 +1,16 @@
+{
+    "src/common.h": {
+        "entities": [],
+        "lines": [
+            109
+        ]
+    },
+    "src/sndfile.c": {
+        "entities": [
+            "function_validate_sfinfo"
+        ],
+        "lines": [
+            2881
+        ]
+    }
+}

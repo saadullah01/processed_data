@@ -1,0 +1,11 @@
+{
+    "src/ua_types_encoding_json.c": {
+        "entities": [
+            "function_DECODE_JSON(ExtensionObject)"
+        ],
+        "lines": [
+            2824,
+            2321
+        ]
+    }
+}

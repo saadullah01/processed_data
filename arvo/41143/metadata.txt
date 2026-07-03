@@ -1,0 +1,54 @@
+Project: arrow
+Fuzzer: libfuzzer
+Sanitizer: asan
+Crash Type: Heap-buffer-overflow READ 4
+Severity: Medium
+
+Report Comments:
+--------------------
+
+-- Comment 1: """Detailed Report: https://oss-fuzz.com/testcase?key=4961281405222912
+
+Project: arrow
+Fuzzing Engine: libFuzzer
+Fuzz Target: arrow-ipc-stream-fuzz
+Job Type: libfuzzer_asan_arrow
+Platform Id: linux
+
+Crash Type: Heap-buffer-overflow READ 4
+Crash Address: 0x613000000368
+Crash State:
+  arrow::internal::ValidateArrayImpl::Visit
+  arrow::internal::ValidateArrayImpl::ValidateWithType
+  arrow::internal::ValidateArrayImpl::Validate
+  
+Sanitizer: address (ASAN)
+
+Recommended Security Severity: Medium
+
+Regressed: https://oss-fuzz.com/revisions?job=libfuzzer_asan_arrow&range=202111160608:202111180602
+
+Reproducer Testcase: https://oss-fuzz.com/download?testcase_id=4961281405222912
+
+Issue filed automatically.
+
+See https://google.github.io/oss-fuzz/advanced-topics/reproducing for instructions to reproduce this bug locally.
+When you fix this bug, please
+  * mention the fix revision(s).
+  * state whether the bug was a short-lived regression or an old bug in any stable releases.
+  * add any other useful information.
+This information can help downstream consumers.
+
+If you need to contact the OSS-Fuzz team with a question, concern, or any other feedback, please file an issue at https://github.com/google/oss-fuzz/issues. Comments on individual Monorail issues are not monitored.
+
+This bug is subject to a 90 day disclosure deadline. If 90 days elapse
+without an upstream patch, then the bug report will automatically
+become visible to the public."""
+
+-- Comment 2: """ClusterFuzz testcase 4961281405222912 is verified as fixed in https://oss-fuzz.com/revisions?job=libfuzzer_asan_arrow&range=202111220604:202111230602
+
+If this is incorrect, please file a bug on https://github.com/google/oss-fuzz/issues/new"""
+
+-- Comment 3: """This bug has been fixed. It has been opened to the public.
+
+- Your friendly Sheriffbot"""

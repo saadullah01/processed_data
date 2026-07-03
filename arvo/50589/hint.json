@@ -1,0 +1,24 @@
+{
+    "code/AssetLib/Ply/PlyParser.cpp": {
+        "entities": [
+            "function_PLY::DOM::ParseHeader"
+        ],
+        "lines": [
+            420
+        ]
+    },
+    "include/assimp/IOStreamBuffer.h": {
+        "entities": [
+            "method_IOStreamBuffer<T>::getNextLine"
+        ],
+        "lines": [
+            323
+        ]
+    },
+    "test/unit/utPLYImportExport.cpp": {
+        "entities": [],
+        "lines": [
+            125
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "src/PJ_geos.c": {
+        "entities": [
+            "struct_pj_opaque",
+            "function_PROJECTION(geos)"
+        ],
+        "lines": [
+            40,
+            191
+        ]
+    },
+    "src/pj_ctx.c": {
+        "entities": [
+            "function_pj_ctx_get_app_data",
+            "function_pj_ctx_set_debug",
+            "function_pj_ctx_set_app_data",
+            "function_pj_ctx_set_logger",
+            "function_pj_ctx_free",
+            "function_pj_set_ctx",
+            "function_pj_ctx_alloc",
+            "function_pj_ctx_get_fileapi",
+            "function_pj_ctx_set_fileapi"
+        ],
+        "lines": [
+            196,
+            166,
+            103,
+            206,
+            176,
+            116,
+            55,
+            186,
+            156,
+            126
+        ]
+    },
+    "src/pj_malloc.c": {
+        "entities": [
+            "function_pj_default_destructor"
+        ],
+        "lines": [
+            179,
+            158
+        ]
+    }
+}
